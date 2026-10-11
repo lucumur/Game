@@ -1,0 +1,28 @@
+{
+ "schema_version": 1,
+ "capa": "publica",
+ "nota": "Términos que el jugador descubre al leerlos en el diario o en sus papeles. Definiciones por verificar.",
+ "entradas": [
+  {"id":"lever","termino":"Lever","cat":"Corte","def":"Ceremonia del levantarse del rey. Se asiste por turnos según el rango: primero las entradas familiares, luego las grandes y las segundas entradas. Ver al rey a esa hora es un privilegio que se negocia."},
+  {"id":"coucher","termino":"Coucher","cat":"Corte","def":"Ceremonia del acostarse del rey. Sostener el candelero ese día es un honor que el rey concede en voz alta, delante de todos."},
+  {"id":"oeil-de-boeuf","termino":"Œil-de-Bœuf","cat":"Lugares","def":"Antecámara junto a la Cámara del Rey, llamada así por su ventana ovalada. Aquí esperan los cortesanos; aquí nacen y mueren los rumores."},
+  {"id":"patio-real","termino":"Patio Real","cat":"Lugares","def":"Patio de entrada del palacio. Entrar en él en carroza es un privilegio de rango."},
+  {"id":"galeria","termino":"Galería de los Espejos","cat":"Lugares","def":"Gran galería sobre los jardines, paso diario de la corte hacia los aposentos del rey."},
+  {"id":"gran-comun","termino":"Gran Común","cat":"Lugares","def":"Edificio de cocinas y alojamientos de los oficiales y la servidumbre de la casa del rey."},
+  {"id":"tabouret","termino":"Taburete","cat":"Corte","def":"Derecho a sentarse en un taburete en presencia de la reina, reservado a las duquesas. Sin reina en 1722, el privilegio espera."},
+  {"id":"menus-plaisirs","termino":"Menus-Plaisirs","cat":"Corte","def":"Servicio de la casa del rey que organiza fiestas, ceremonias y espectáculos."},
+  {"id":"principes-sangre","termino":"Príncipes de la sangre","cat":"Corte","def":"Miembros de las ramas legítimas de la casa real con derecho a la sucesión: Orleans, Condé, Conti."},
+  {"id":"legitimados","termino":"Legitimados","cat":"Corte","def":"Hijos naturales de Luis XIV con Madame de Montespan, reconocidos por el rey. Tras su muerte, su rango fue recortado."},
+  {"id":"regencia","termino":"Regencia","cat":"Política","def":"Gobierno del duque de Orleans durante la minoría de edad de Luis XV, desde 1715."},
+  {"id":"monsieur-le-duc","termino":"Monsieur le Duc","cat":"Personas","def":"Forma de nombrar al jefe de la casa de Condé. En 1722, Luis Enrique de Borbón."},
+  {"id":"madame","termino":"Madame","cat":"Personas","def":"Título de la esposa del hermano del rey. En 1722 lo lleva todavía Isabel Carlota del Palatinado, madre del Regente."},
+  {"id":"sistema-law","termino":"Sistema de Law","cat":"Política","def":"Banco y compañía de John Law, que emitió papel moneda y acciones. Quebró en 1720 y arruinó a muchos; enriqueció a otros."},
+  {"id":"quincampoix","termino":"Rue Quincampoix","cat":"Lugares","def":"Calle de París donde se especulaba con las acciones de Law."},
+  {"id":"unigenitus","termino":"Unigenitus","cat":"Ideas","def":"Bula papal de 1713 contra el jansenismo. Divide al clero y al Parlamento."},
+  {"id":"jansenismo","termino":"Jansenismo","cat":"Ideas","def":"Corriente católica rigorista, enfrentada a los jesuitas y condenada por Roma."},
+  {"id":"parlamento","termino":"Parlamento de París","cat":"Política","def":"Tribunal soberano que registra los edictos del rey y puede retrasarlos con sus protestas."},
+  {"id":"libra","termino":"Libra","cat":"Dinero","def":"Unidad de cuenta. Los pagos se hacen en luises de oro, escudos de plata o, desde Law, en papeles de valor dudoso."},
+  {"id":"nouvelles","termino":"Nouvelles à la main","cat":"Política","def":"Gacetas manuscritas que circulan de mano en mano con noticias y rumores, fuera de la censura oficial."},
+  {"id":"primer-medico","termino":"Primer médico del rey","cat":"Corte","def":"Jefe del servicio médico de la casa del rey. Su favor abre o cierra todas las carreras médicas en la corte."}
+ ]
+}
