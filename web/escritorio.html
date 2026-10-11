@@ -134,6 +134,25 @@ button.era:hover{background:var(--chip)}
 .doc.gazette{width:250px;background:repeating-linear-gradient(0deg,var(--sheet) 0 22px,color-mix(in srgb,var(--sheet) 94%,#000) 22px 23px)}
 .doc.gazette b{font-size:1.25rem;text-align:center}
 .doc.plan{border-top:4px double var(--sheet-ink)}
+/* Chismes: nube de cómic */
+.doc.rumor{background:transparent;box-shadow:none;padding:30px 34px 46px;width:236px}
+.doc.rumor>*:not(svg){position:relative}
+.doc.rumor svg.cloud{position:absolute;inset:0;width:100%;height:100%;overflow:visible;filter:drop-shadow(0 6px 10px rgb(0 0 0 / .35))}
+.cloud path,.cloud circle{fill:var(--sheet);stroke:var(--sheet-ink);stroke-width:1.6;vector-effect:non-scaling-stroke}
+.doc.rumor b{font-style:italic}
+.doc.rumor.urg::after{right:24px;top:20px}
+/* Avisos de palacio: carta formal */
+.doc.aviso{border:1px solid var(--sheet-ink);outline:3px double var(--sheet-ink);outline-offset:-7px;text-align:center;padding:16px 16px 18px}
+.doc.aviso .k{letter-spacing:.3em}
+.doc.aviso::before{content:"";justify-self:center;width:22px;height:22px;border-radius:50%;background:var(--accent);box-shadow:inset 0 0 0 3px rgb(0 0 0 / .18)}
+/* Gaceta impresa */
+.doc.gazette.impresa b{font-variant:small-caps;letter-spacing:.08em}
+.letter.rumor{border-radius:48% 52% 46% 54% / 18% 20% 16% 18%;padding-inline:clamp(28px,7vw,60px)}
+.letter.rumor .body{font-style:italic}
+.letter.aviso{text-align:center;outline:3px double var(--sheet-ink);outline-offset:-10px}
+.letter.aviso .body{text-align:justify}
+.letter.aviso .seal{background:var(--accent)}
+.letter .formula{font-family:var(--f-display);font-size:1.15rem;letter-spacing:.2em;text-transform:uppercase}
 .doc.sel{outline:2px solid var(--gilt)}
 .side{display:grid;gap:14px;align-content:start;min-width:0}
 .filters{display:flex;flex-wrap:wrap;gap:6px}
@@ -503,6 +522,18 @@ const DOCS = [
   txt:"Lo repiten dos secretarios del ala de los Ministros. Uno de ellos añade que el mariscal de Villeroy «no lo consentirá»."},
  {id:"r2",tipo:"rumor",tit:"Una disputa en el Gran Común",de:"Oído a un lacayo · fiabilidad baja",
   txt:"Los oficiales de boca se pelean por los alojamientos. Dicen que el reparto lo decide alguien de la casa de [[monsieur-le-duc|Monsieur le Duc]]."},
+ {id:"r3",tipo:"rumor",tit:"La marquesa no saluda a nadie de Orleans",de:"Oído en la capilla · fiabilidad media",
+  txt:"Una dama asegura que la marquesa de Prie volvió la cara al pasar el duque de Chartres. Otra dice que solo estaba mirando el órgano."},
+ {id:"a1",tipo:"aviso",tit:"Reparto de alojamientos",de:"Versalles, 15 de junio",firma:"Le Grand Maréchal des Logis",sello:"⚜",formula:"Avis",
+  txt:"Los oficiales de la casa del rey que no hayan recibido alojamiento se presentarán en el [[gran-comun|Gran Común]] ante los aposentadores. Las reclamaciones se atenderán hasta el sábado; pasado ese día, las puertas marcadas con tiza se tendrán por asignadas."},
+ {id:"a2",tipo:"aviso",tit:"Orden de la jornada",de:"Versalles, 16 de junio",firma:"Pour le Premier Gentilhomme de la Chambre",sello:"⚜",formula:"Avis",
+  txt:"Mañana el [[lever|lever]] del rey será a la hora acostumbrada. Solo pasarán a la cámara las personas con entrada. Los demás aguardarán en el [[oeil-de-boeuf|Œil-de-Bœuf]] sin obstruir el paso."},
+ {id:"g2",tipo:"gazette",impresa:true,tit:"Gazette",de:"De Paris, le 13 juin 1722",
+  arts:[
+   {where:"De Paris",h:"El rey se prepara para Versalles",t:"Su Majestad partirá de París el lunes. La corte lo seguirá; varios ministros ya han enviado su equipaje."},
+   {where:"De Madrid",h:"Noticias de la corte de España",t:"Las cartas de Madrid alaban la salud de la princesa de Asturias y la alegría de Sus Majestades Católicas."},
+   {where:"De Londres",h:"El Parlamento se separa",t:"El rey Jorge se dispone a pasar el verano en Hannover."}
+  ]},
  {id:"o1",tipo:"oblig",urg:true,tit:"Presentarse ante el primer médico del rey",de:"Antes del domingo",
   txt:"Sin esta visita, su carta de recomendación no vale nada. El [[primer-medico|primer médico]] recibe después del [[lever|lever]]."},
  {id:"o2",tipo:"oblig",tit:"Deuda con un boticario",de:"48 libras · vence a fin de mes",
@@ -577,23 +608,37 @@ function buildBar(){
 }
 
 /* ---------- Escritorio ---------- */
-const KIND={carta:"Carta",rumor:"Rumor",oblig:"Obligación",gazette:"Gaceta",plan:"Plan"};
+const KIND={carta:"Carta",rumor:"Chisme",aviso:"Aviso de palacio",oblig:"Obligación",gazette:"Gaceta",plan:"Plan"};
+const FILTROS=[["rumor","Chismes"],["aviso","Avisos"],["gazette","Gacetas"],["carta","Cartas"],["oblig","Obligaciones"]];
 let deskState=store.get("vg_docs",{}); // id -> {x,y,r,z,arch}
-let filtro=new Set(["carta","rumor","oblig","gazette"]);
+let filtro=new Set(FILTROS.map(f=>f[0]));
 let zTop=10;
 function docState(d,i){
-  if(!deskState[d.id]){const cols=4;deskState[d.id]={x:4+(i%cols)*23+Math.random()*3,y:4+Math.floor(i/cols)*42+Math.random()*4,r:(Math.random()*6-3).toFixed(1),z:i+1,arch:false}}
+  if(!deskState[d.id]){const cols=4;deskState[d.id]={x:1.5+(i%cols)*23+Math.random()*2,y:3+Math.floor(i/cols)*31+Math.random()*3,r:(Math.random()*6-3).toFixed(1),z:i+1,arch:false}}
   return deskState[d.id];
 }
 function saveDesk(){store.set("vg_docs",deskState)}
+/* Nube de cómic: elipse de arcos hacia fuera + dos burbujas de pensamiento. */
+function cloudSVG(seed){
+  const svgNS="http://www.w3.org/2000/svg", s=document.createElementNS(svgNS,"svg");
+  s.setAttribute("class","cloud"); s.setAttribute("viewBox","0 0 200 130"); s.setAttribute("preserveAspectRatio","none"); s.setAttribute("aria-hidden","true");
+  const N=12, cx=100, cy=56, rx=95, ry=53; let rnd=seed; const r=()=>(rnd=(rnd*9301+49297)%233280)/233280;
+  const pts=[...Array(N)].map((_,i)=>{const a=i/N*2*Math.PI+0.3;return [cx+rx*Math.cos(a),cy+ry*Math.sin(a)]});
+  let d=`M${pts[0][0].toFixed(1)} ${pts[0][1].toFixed(1)}`;
+  pts.forEach((p,i)=>{const q=pts[(i+1)%N], dist=Math.hypot(q[0]-p[0],q[1]-p[1]), rad=(dist*(0.55+r()*0.12)).toFixed(1);d+=` A${rad} ${rad} 0 0 1 ${q[0].toFixed(1)} ${q[1].toFixed(1)}`});
+  const path=document.createElementNS(svgNS,"path"); path.setAttribute("d",d+"Z"); s.append(path);
+  [[38,114,7],[24,126,4]].forEach(([x,y,rr])=>{const c=document.createElementNS(svgNS,"circle");c.setAttribute("cx",x);c.setAttribute("cy",y);c.setAttribute("r",rr);s.append(c)});
+  return s;
+}
 function plainText(t){return t.replace(/\[\[[\w-]+\|([^\]]+)\]\]/g,"$1").replace(/\[\[([\w-]+)\]\]/g,(m,id)=>glById[id]?.termino||id)}
 function drawDesk(){
   const desk=$("#desk"); desk.querySelectorAll(".doc").forEach(n=>n.remove());
   DOCS.forEach((d,i)=>{
     const s=docState(d,i); if(s.arch||!filtro.has(d.tipo))return;
     zTop=Math.max(zTop,s.z);
-    const card=el("div",{class:"doc "+d.tipo+(d.urg?" urg":""),tabindex:0,role:"button","aria-label":KIND[d.tipo]+": "+d.tit},
-      el("span",{class:"k"},KIND[d.tipo]),el("b",{},d.tipo==="gazette"?d.tit:d.tit),el("span",{class:"from"},d.de));
+    const card=el("div",{class:"doc "+d.tipo+(d.impresa?" impresa":"")+(d.urg?" urg":""),tabindex:0,role:"button","aria-label":KIND[d.tipo]+": "+d.tit},
+      d.tipo==="rumor"?cloudSVG(i*37+11):null,
+      el("span",{class:"k"},d.tipo==="gazette"?(d.impresa?"Gaceta impresa":"Gaceta manuscrita"):d.tipo==="aviso"?d.formula||"Avis":KIND[d.tipo]),el("b",{},d.tit),el("span",{class:"from"},d.de));
     card.style.left=s.x+"%"; card.style.top=s.y+"%"; card.style.transform=`rotate(${s.r}deg)`; card.style.zIndex=s.z;
     let drag=null;
     card.addEventListener("pointerdown",e=>{
@@ -619,9 +664,9 @@ function drawDesk(){
 }
 function drawFilters(){
   const f=$("#filters"); f.innerHTML="";
-  ["carta","rumor","oblig","gazette"].forEach(t=>{
+  FILTROS.forEach(([t,label])=>{
     const n=DOCS.filter(d=>d.tipo===t&&!docState(d,0).arch).length;
-    f.append(el("button",{"aria-pressed":String(filtro.has(t)),onclick:()=>{filtro.has(t)?filtro.delete(t):filtro.add(t);drawDesk()}},KIND[t]+" · "+n));
+    f.append(el("button",{"aria-pressed":String(filtro.has(t)),onclick:()=>{filtro.has(t)?filtro.delete(t):filtro.add(t);drawDesk()}},label+" · "+n));
   });
 }
 function drawArchive(){
@@ -643,12 +688,13 @@ function openDoc(d){
     const cols=el("div",{class:"gz-cols"});
     d.arts.forEach(a=>cols.append(el("article",{class:"gz-art"},el("span",{class:"where"},a.where),el("h3",{},a.h),el("p",{},a.t))));
     sheet=el("article",{class:"letter",role:"dialog","aria-label":d.tit},
-      el("header",{class:"gz-mast"},el("span",{class:"k"},"Gaceta manuscrita · circula de mano en mano"),el("h2",{},d.tit),el("span",{class:"k"},d.de)),cols,acts);
-    unlock("nouvelles");
+      el("header",{class:"gz-mast"},el("span",{class:"k"},d.impresa?"Gaceta impresa · con privilegio del rey":"Gaceta manuscrita · circula de mano en mano"),el("h2",{},d.tit),el("span",{class:"k"},d.de)),cols,acts);
+    if(!d.impresa)unlock("nouvelles");
   } else {
-    sheet=el("article",{class:"letter",role:"dialog","aria-label":d.tit},
+    sheet=el("article",{class:"letter "+d.tipo,role:"dialog","aria-label":d.tit},
       d.sello?el("span",{class:"seal","aria-hidden":"true"},d.sello):null,
-      el("span",{class:"k"},KIND[d.tipo]+" · "+d.de),el("h2",{},d.tit),el("p",{class:"body"},rich(d.txt)),
+      d.formula?el("span",{class:"formula"},d.formula):null,
+      el("span",{class:"k"},(d.tipo==="rumor"?"Se dice que…":KIND[d.tipo])+" · "+d.de),el("h2",{},d.tit),el("p",{class:"body"},rich(d.txt)),
       d.firma?el("span",{class:"sign"},d.firma):null,acts);
   }
   L.append(sheet); L.hidden=false; sheet.querySelector(".acts .btn").focus();
