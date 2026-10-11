@@ -18,10 +18,10 @@
    "nacimiento": "1710-02-15",
    "edad_jun_1722": 12,
    "parentesco": "Bisnieto de Luis XIV",
-   "situacion_1722": "Rey menor de edad; mayoría legal en febrero de 1723",
+   "situacion_1722": "Rey menor de edad",
    "presencia_versalles": "reside",
    "verificacion": "por verificar",
-   "notas": "Vuelve a Versalles el 15 jun 1722 (verificado).",
+   "notas": "Vuelve a Versalles el 15 jun 1722.",
    "historico": true
   },
   {
@@ -35,7 +35,7 @@
    "situacion_1722": "Prometida de Luis XV; gobernanta: Madame de Ventadour",
    "presencia_versalles": "por verificar",
    "verificacion": "verificado",
-   "notas": "Llega a París el 2 mar 1722; residencia documentada en el Louvre. Devuelta a España en 1725.",
+   "notas": "Llega a París el 2 mar 1722; residencia documentada en el Louvre.",
    "historico": true
   },
   {
@@ -77,7 +77,7 @@
    "situacion_1722": "Viuda; vive sobre todo en Saint-Cloud",
    "presencia_versalles": "ocasional",
    "verificacion": "por verificar",
-   "notas": "Muere el 8 dic 1722.",
+   "notas": "",
    "historico": true
   },
   {
@@ -259,7 +259,7 @@
    "situacion_1722": "Religiosa",
    "presencia_versalles": "ausente",
    "verificacion": "por verificar",
-   "notas": "En 1725 su hermano la propone como esposa del rey (verificado).",
+   "notas": "",
    "historico": true
   },
   {
@@ -400,6 +400,20 @@
    "presencia_versalles": "frecuenta",
    "verificacion": "por verificar",
    "notas": "Residencia principal: Rambouillet.",
+   "historico": true
+  },
+  {
+   "id": "anne-henriette",
+   "nombre": "Ana Enriqueta del Palatinado",
+   "titulo": "Madame la Princesse; princesa viuda de Condé",
+   "rama": "Condé",
+   "nacimiento": "1648-03-13",
+   "edad_jun_1722": 74,
+   "parentesco": "Abuela de Monsieur le Duc; madre de la duquesa de Maine y de la princesa viuda de Conti",
+   "situacion_1722": "Viuda",
+   "presencia_versalles": "ocasional",
+   "verificacion": "por verificar",
+   "notas": "",
    "historico": true
   }
  ]

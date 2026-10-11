@@ -1,0 +1,37 @@
+{
+ "schema_version": 1,
+ "capa": "narrador",
+ "nota": "Hechos posteriores a la fecha de juego. No se muestran al jugador.",
+ "eventos": [
+  {
+   "fecha": "1722-12-08",
+   "evento": "Muere Isabel Carlota del Palatinado (Madame) en Saint-Cloud.",
+   "verificacion": "por verificar"
+  },
+  {
+   "fecha": "1725-03-11",
+   "evento": "La infanta Mariana Victoria es devuelta a España por decisión de Monsieur le Duc.",
+   "verificacion": "verificado"
+  },
+  {
+   "fecha": "1725",
+   "evento": "Monsieur le Duc propone a su hermana, Mlle de Vermandois, como esposa del rey.",
+   "verificacion": "verificado"
+  },
+  {
+   "fecha": "1722-08",
+   "evento": "Dubois es nombrado primer ministro; Villeroy es apartado del rey.",
+   "verificacion": "por verificar"
+  },
+  {
+   "fecha": "1723-02",
+   "evento": "Mayoría legal de Luis XV.",
+   "verificacion": "por verificar"
+  },
+  {
+   "fecha": "1723-12-02",
+   "evento": "Muere el Regente; Monsieur le Duc pasa a primer ministro.",
+   "verificacion": "verificado"
+  }
+ ]
+}

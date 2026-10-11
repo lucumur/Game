@@ -1,0 +1,633 @@
+{
+ "schema_version": 1,
+ "capa": "publica",
+ "fecha_referencia": "1722-06-15",
+ "nota": "Solo hechos conocidos en la corte en junio de 1722. Fechas por verificar.",
+ "referencias": {
+  "luis-xiii": {
+   "nombre": "Luis XIII",
+   "nacimiento": "1601",
+   "muerte": "1643",
+   "nota": "Rey de Francia"
+  },
+  "ana-austria": {
+   "nombre": "Ana de Austria",
+   "nacimiento": "1601",
+   "muerte": "1666",
+   "nota": "Reina de Francia"
+  },
+  "luis-xiv": {
+   "nombre": "Luis XIV",
+   "nacimiento": "1638",
+   "muerte": "1715",
+   "nota": "Rey de Francia"
+  },
+  "maria-teresa": {
+   "nombre": "María Teresa de Austria",
+   "nacimiento": "1638",
+   "muerte": "1683",
+   "nota": "Reina de Francia"
+  },
+  "montespan": {
+   "nombre": "Madame de Montespan",
+   "nacimiento": "1640",
+   "muerte": "1707",
+   "nota": "Favorita de Luis XIV"
+  },
+  "maintenon": {
+   "nombre": "Madame de Maintenon",
+   "nacimiento": "1635",
+   "muerte": "1719",
+   "nota": "Esposa morganática de Luis XIV"
+  },
+  "monsieur": {
+   "nombre": "Felipe I de Orleans, Monsieur",
+   "nacimiento": "1640",
+   "muerte": "1701",
+   "nota": "Hermano de Luis XIV"
+  },
+  "henriette-angleterre": {
+   "nombre": "Enriqueta de Inglaterra",
+   "nacimiento": "1644",
+   "muerte": "1670",
+   "nota": "Primera esposa de Monsieur"
+  },
+  "elector-palatino": {
+   "nombre": "Carlos I Luis, elector palatino",
+   "nacimiento": "1617",
+   "muerte": "1680",
+   "nota": ""
+  },
+  "charlotte-hesse": {
+   "nombre": "Carlota de Hesse-Kassel",
+   "nacimiento": "1627",
+   "muerte": "1686",
+   "nota": ""
+  },
+  "gran-delfin": {
+   "nombre": "Luis, el Gran Delfín",
+   "nacimiento": "1661",
+   "muerte": "1711",
+   "nota": "Hijo de Luis XIV"
+  },
+  "mav-baviera": {
+   "nombre": "María Ana Victoria de Baviera",
+   "nacimiento": "1660",
+   "muerte": "1690",
+   "nota": "Delfina"
+  },
+  "borgona": {
+   "nombre": "Luis, duque de Borgoña",
+   "nacimiento": "1682",
+   "muerte": "1712",
+   "nota": "Delfín"
+  },
+  "maria-adelaida": {
+   "nombre": "María Adelaida de Saboya",
+   "nacimiento": "1685",
+   "muerte": "1712",
+   "nota": "Delfina"
+  },
+  "bretana": {
+   "nombre": "Luis, duque de Bretaña",
+   "nacimiento": "1707",
+   "muerte": "1712",
+   "nota": "Hermano mayor de Luis XV"
+  },
+  "berry": {
+   "nombre": "Carlos, duque de Berry",
+   "nacimiento": "1686",
+   "muerte": "1714",
+   "nota": "Nieto de Luis XIV"
+  },
+  "duquesa-berry": {
+   "nombre": "María Luisa Isabel de Orleans, duquesa de Berry",
+   "nacimiento": "1695",
+   "muerte": "1719",
+   "nota": "Hija mayor del Regente"
+  },
+  "felipe-v": {
+   "nombre": "Felipe V de España",
+   "nacimiento": "1683",
+   "muerte": null,
+   "nota": "Rey de España; nieto de Luis XIV"
+  },
+  "maria-luisa-saboya": {
+   "nombre": "María Luisa Gabriela de Saboya",
+   "nacimiento": "1688",
+   "muerte": "1714",
+   "nota": "Primera esposa de Felipe V"
+  },
+  "isabel-farnesio": {
+   "nombre": "Isabel de Farnesio",
+   "nacimiento": "1692",
+   "muerte": null,
+   "nota": "Reina de España"
+  },
+  "victor-amadeo": {
+   "nombre": "Víctor Amadeo II",
+   "nacimiento": "1666",
+   "muerte": null,
+   "nota": "Rey de Cerdeña, duque de Saboya"
+  },
+  "ana-maria-orleans": {
+   "nombre": "Ana María de Orleans",
+   "nacimiento": "1669",
+   "muerte": null,
+   "nota": "Reina de Cerdeña; hija de Monsieur"
+  },
+  "duquesa-lorena": {
+   "nombre": "Isabel Carlota de Orleans",
+   "nacimiento": "1676",
+   "muerte": null,
+   "nota": "Duquesa de Lorena; hermana del Regente"
+  },
+  "luis-asturias": {
+   "nombre": "Luis, príncipe de Asturias",
+   "nacimiento": "1707",
+   "muerte": null,
+   "nota": "Heredero de España"
+  },
+  "francesco-este": {
+   "nombre": "Francisco de Este",
+   "nacimiento": "1698",
+   "muerte": null,
+   "nota": "Príncipe heredero de Módena"
+  },
+  "gran-conde": {
+   "nombre": "Luis II de Borbón, el Gran Condé",
+   "nacimiento": "1621",
+   "muerte": "1686",
+   "nota": ""
+  },
+  "henri-jules": {
+   "nombre": "Enrique Julio de Borbón-Condé",
+   "nacimiento": "1643",
+   "muerte": "1709",
+   "nota": "Príncipe de Condé"
+  },
+  "luis-iii-conde": {
+   "nombre": "Luis III de Borbón-Condé",
+   "nacimiento": "1668",
+   "muerte": "1710",
+   "nota": "Príncipe de Condé"
+  },
+  "mlle-bourbon": {
+   "nombre": "María Ana Gabriela de Borbón-Condé",
+   "nacimiento": "1690",
+   "muerte": null,
+   "nota": "Mademoiselle de Bourbon; religiosa"
+  },
+  "armand-conti": {
+   "nombre": "Armando de Borbón, príncipe de Conti",
+   "nacimiento": "1629",
+   "muerte": "1666",
+   "nota": ""
+  },
+  "martinozzi": {
+   "nombre": "Ana María Martinozzi",
+   "nacimiento": "1637",
+   "muerte": "1672",
+   "nota": "Sobrina de Mazarino"
+  },
+  "francois-louis-conti": {
+   "nombre": "Francisco Luis, príncipe de Conti",
+   "nacimiento": "1664",
+   "muerte": "1709",
+   "nota": ""
+  },
+  "marie-anne-conti": {
+   "nombre": "María Ana de Borbón-Conti",
+   "nacimiento": "1689",
+   "muerte": "1720",
+   "nota": "Primera esposa de Monsieur le Duc"
+  },
+  "louis-francois-conti": {
+   "nombre": "Luis Francisco de Borbón-Conti",
+   "nacimiento": "1717",
+   "muerte": null,
+   "nota": "Hijo del príncipe de Conti"
+  },
+  "mlle-du-maine": {
+   "nombre": "Luisa Francisca de Borbón",
+   "nacimiento": "1707",
+   "muerte": null,
+   "nota": "Mademoiselle du Maine"
+  },
+  "ventadour": {
+   "nombre": "Madame de Ventadour",
+   "nacimiento": "1654",
+   "muerte": null,
+   "nota": "Gobernanta de los Hijos de Francia"
+  },
+  "villeroy": {
+   "nombre": "Mariscal de Villeroy",
+   "nacimiento": "1644",
+   "muerte": null,
+   "nota": "Gobernador del rey"
+  },
+  "fleury": {
+   "nombre": "André-Hercule de Fleury",
+   "nacimiento": "1653",
+   "muerte": null,
+   "nota": "Obispo; preceptor del rey"
+  },
+  "dubois": {
+   "nombre": "Cardenal Dubois",
+   "nacimiento": "1656",
+   "muerte": null,
+   "nota": "Antiguo preceptor del Regente; ministro"
+  },
+  "prie": {
+   "nombre": "Marquesa de Prie",
+   "nacimiento": "1698",
+   "muerte": null,
+   "nota": "Amante de Monsieur le Duc"
+  }
+ },
+ "padres": {
+  "luis-xiv": [
+   "luis-xiii",
+   "ana-austria"
+  ],
+  "monsieur": [
+   "luis-xiii",
+   "ana-austria"
+  ],
+  "gran-delfin": [
+   "luis-xiv",
+   "maria-teresa"
+  ],
+  "francoise-marie-blois": [
+   "luis-xiv",
+   "montespan"
+  ],
+  "louise-francoise-duchesse": [
+   "luis-xiv",
+   "montespan"
+  ],
+  "duc-du-maine": [
+   "luis-xiv",
+   "montespan"
+  ],
+  "comte-de-toulouse": [
+   "luis-xiv",
+   "montespan"
+  ],
+  "liselotte": [
+   "elector-palatino",
+   "charlotte-hesse"
+  ],
+  "felipe-ii-orleans": [
+   "monsieur",
+   "liselotte"
+  ],
+  "duquesa-lorena": [
+   "monsieur",
+   "liselotte"
+  ],
+  "ana-maria-orleans": [
+   "monsieur",
+   "henriette-angleterre"
+  ],
+  "borgona": [
+   "gran-delfin",
+   "mav-baviera"
+  ],
+  "felipe-v": [
+   "gran-delfin",
+   "mav-baviera"
+  ],
+  "berry": [
+   "gran-delfin",
+   "mav-baviera"
+  ],
+  "maria-adelaida": [
+   "victor-amadeo",
+   "ana-maria-orleans"
+  ],
+  "luis-xv": [
+   "borgona",
+   "maria-adelaida"
+  ],
+  "bretana": [
+   "borgona",
+   "maria-adelaida"
+  ],
+  "mariana-victoria": [
+   "felipe-v",
+   "isabel-farnesio"
+  ],
+  "luis-asturias": [
+   "felipe-v",
+   "maria-luisa-saboya"
+  ],
+  "duquesa-berry": [
+   "felipe-ii-orleans",
+   "francoise-marie-blois"
+  ],
+  "louise-adelaide-chelles": [
+   "felipe-ii-orleans",
+   "francoise-marie-blois"
+  ],
+  "charlotte-aglae": [
+   "felipe-ii-orleans",
+   "francoise-marie-blois"
+  ],
+  "luis-orleans-chartres": [
+   "felipe-ii-orleans",
+   "francoise-marie-blois"
+  ],
+  "louise-elisabeth-montpensier": [
+   "felipe-ii-orleans",
+   "francoise-marie-blois"
+  ],
+  "philippine-elisabeth-beaujolais": [
+   "felipe-ii-orleans",
+   "francoise-marie-blois"
+  ],
+  "louise-diane": [
+   "felipe-ii-orleans",
+   "francoise-marie-blois"
+  ],
+  "henri-jules": [
+   "gran-conde",
+   null
+  ],
+  "luis-iii-conde": [
+   "henri-jules",
+   "anne-henriette"
+  ],
+  "marie-therese-conti": [
+   "henri-jules",
+   "anne-henriette"
+  ],
+  "duchesse-du-maine": [
+   "henri-jules",
+   "anne-henriette"
+  ],
+  "mlle-bourbon": [
+   "luis-iii-conde",
+   "louise-francoise-duchesse"
+  ],
+  "luis-enrique-borbon": [
+   "luis-iii-conde",
+   "louise-francoise-duchesse"
+  ],
+  "louise-elisabeth-conti": [
+   "luis-iii-conde",
+   "louise-francoise-duchesse"
+  ],
+  "louise-anne-charolais": [
+   "luis-iii-conde",
+   "louise-francoise-duchesse"
+  ],
+  "marie-anne-clermont": [
+   "luis-iii-conde",
+   "louise-francoise-duchesse"
+  ],
+  "charles-charolais": [
+   "luis-iii-conde",
+   "louise-francoise-duchesse"
+  ],
+  "henriette-vermandois": [
+   "luis-iii-conde",
+   "louise-francoise-duchesse"
+  ],
+  "elisabeth-sens": [
+   "luis-iii-conde",
+   "louise-francoise-duchesse"
+  ],
+  "louis-clermont": [
+   "luis-iii-conde",
+   "louise-francoise-duchesse"
+  ],
+  "francois-louis-conti": [
+   "armand-conti",
+   "martinozzi"
+  ],
+  "marie-anne-conti": [
+   "francois-louis-conti",
+   "marie-therese-conti"
+  ],
+  "louis-armand-conti": [
+   "francois-louis-conti",
+   "marie-therese-conti"
+  ],
+  "louise-adelaide-roche": [
+   "francois-louis-conti",
+   "marie-therese-conti"
+  ],
+  "louis-francois-conti": [
+   "louis-armand-conti",
+   "louise-elisabeth-conti"
+  ],
+  "prince-de-dombes": [
+   "duc-du-maine",
+   "duchesse-du-maine"
+  ],
+  "comte-d-eu": [
+   "duc-du-maine",
+   "duchesse-du-maine"
+  ],
+  "mlle-du-maine": [
+   "duc-du-maine",
+   "duchesse-du-maine"
+  ]
+ },
+ "consortes": [
+  {
+   "a": "luis-xiii",
+   "b": "ana-austria",
+   "desde": "1615",
+   "hasta": "1643",
+   "estado": "viudez"
+  },
+  {
+   "a": "luis-xiv",
+   "b": "maria-teresa",
+   "desde": "1660",
+   "hasta": "1683",
+   "estado": "viudez"
+  },
+  {
+   "a": "luis-xiv",
+   "b": "maintenon",
+   "desde": "1683",
+   "hasta": "1715",
+   "estado": "muerte"
+  },
+  {
+   "a": "monsieur",
+   "b": "henriette-angleterre",
+   "desde": "1661",
+   "hasta": "1670",
+   "estado": "viudez"
+  },
+  {
+   "a": "monsieur",
+   "b": "liselotte",
+   "desde": "1671",
+   "hasta": "1701",
+   "estado": "viudez"
+  },
+  {
+   "a": "elector-palatino",
+   "b": "charlotte-hesse",
+   "desde": "1650",
+   "hasta": "1680",
+   "estado": "muerte"
+  },
+  {
+   "a": "gran-delfin",
+   "b": "mav-baviera",
+   "desde": "1680",
+   "hasta": "1690",
+   "estado": "viudez"
+  },
+  {
+   "a": "borgona",
+   "b": "maria-adelaida",
+   "desde": "1697",
+   "hasta": "1712",
+   "estado": "muerte"
+  },
+  {
+   "a": "berry",
+   "b": "duquesa-berry",
+   "desde": "1710",
+   "hasta": "1714",
+   "estado": "viudez"
+  },
+  {
+   "a": "felipe-v",
+   "b": "maria-luisa-saboya",
+   "desde": "1701",
+   "hasta": "1714",
+   "estado": "viudez"
+  },
+  {
+   "a": "felipe-v",
+   "b": "isabel-farnesio",
+   "desde": "1714",
+   "hasta": null,
+   "estado": "vigente"
+  },
+  {
+   "a": "victor-amadeo",
+   "b": "ana-maria-orleans",
+   "desde": "1684",
+   "hasta": null,
+   "estado": "vigente"
+  },
+  {
+   "a": "felipe-ii-orleans",
+   "b": "francoise-marie-blois",
+   "desde": "1692",
+   "hasta": null,
+   "estado": "vigente"
+  },
+  {
+   "a": "luis-xv",
+   "b": "mariana-victoria",
+   "desde": "1721",
+   "hasta": null,
+   "estado": "prometidos"
+  },
+  {
+   "a": "luis-asturias",
+   "b": "louise-elisabeth-montpensier",
+   "desde": "1722",
+   "hasta": null,
+   "estado": "vigente"
+  },
+  {
+   "a": "francesco-este",
+   "b": "charlotte-aglae",
+   "desde": "1720",
+   "hasta": null,
+   "estado": "vigente"
+  },
+  {
+   "a": "henri-jules",
+   "b": "anne-henriette",
+   "desde": "1663",
+   "hasta": "1709",
+   "estado": "viudez"
+  },
+  {
+   "a": "luis-iii-conde",
+   "b": "louise-francoise-duchesse",
+   "desde": "1685",
+   "hasta": "1710",
+   "estado": "viudez"
+  },
+  {
+   "a": "armand-conti",
+   "b": "martinozzi",
+   "desde": "1654",
+   "hasta": "1666",
+   "estado": "viudez"
+  },
+  {
+   "a": "francois-louis-conti",
+   "b": "marie-therese-conti",
+   "desde": "1688",
+   "hasta": "1709",
+   "estado": "viudez"
+  },
+  {
+   "a": "luis-enrique-borbon",
+   "b": "marie-anne-conti",
+   "desde": "1713",
+   "hasta": "1720",
+   "estado": "viudez"
+  },
+  {
+   "a": "louis-armand-conti",
+   "b": "louise-elisabeth-conti",
+   "desde": "1713",
+   "hasta": null,
+   "estado": "vigente"
+  },
+  {
+   "a": "duc-du-maine",
+   "b": "duchesse-du-maine",
+   "desde": "1692",
+   "hasta": null,
+   "estado": "vigente"
+  }
+ ],
+ "especiales": [
+  {
+   "de": "luis-xv",
+   "a": "ventadour",
+   "tipo": "Su antigua gobernanta"
+  },
+  {
+   "de": "luis-xv",
+   "a": "villeroy",
+   "tipo": "Gobernador"
+  },
+  {
+   "de": "luis-xv",
+   "a": "fleury",
+   "tipo": "Preceptor"
+  },
+  {
+   "de": "mariana-victoria",
+   "a": "ventadour",
+   "tipo": "Gobernanta"
+  },
+  {
+   "de": "felipe-ii-orleans",
+   "a": "dubois",
+   "tipo": "Antiguo preceptor; ministro"
+  },
+  {
+   "de": "luis-enrique-borbon",
+   "a": "prie",
+   "tipo": "Amante"
+  }
+ ]
+}
