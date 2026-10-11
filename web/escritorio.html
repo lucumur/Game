@@ -22,6 +22,7 @@
   --gilt:#c9a24f; --accent:#93a8e2; --seal:#d4705f; --chip:#222a38;
   --desk:#1f2b24; --desk-edge:#16201a; --sheet:#e4dfd0; --sheet-ink:#1f2430; --sheet-muted:#5d636d; color-scheme:dark}
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html,body{height:100%}
 body{background:var(--paper);color:var(--ink);font:17px/1.45 var(--f-body);padding-inline:16px;padding-block:0 84px}
 h1,h2,h3{font-family:var(--f-display);font-weight:400;text-wrap:balance;margin:0}
@@ -137,6 +138,8 @@ button{cursor:pointer}
 .compass{font:11px var(--f-display);fill:var(--muted)}
 .city{fill:var(--ink);cursor:pointer} .city.sel{fill:var(--gilt)}
 .coast{fill:var(--chip);stroke:var(--muted);stroke-width:1}
+.zone.road{fill:var(--line);stroke:var(--muted);stroke-width:.6}
+.road-line{fill:none;stroke:var(--gilt);stroke-width:1.2;stroke-dasharray:4 3}
 .map-info{display:grid;gap:4px;min-height:5.5rem}
 .map-info h3{font-size:1.15rem}
 
@@ -542,38 +545,75 @@ function drawObjetos(){const b=$("#objetos");b.innerHTML="";OBJETOS.forEach(([n,
 /* ---------- Mapas ---------- */
 const NS="http://www.w3.org/2000/svg";
 const sv=(t,a={},txt)=>{const e=document.createElementNS(NS,t);for(const[k,v]of Object.entries(a))e.setAttribute(k,v);if(txt)e.textContent=txt;return e};
+
+/* Orientación de ambos planos, como en los planos de época: jardines (oeste) arriba, ciudad y avenidas abajo;
+   sur a la izquierda (aposentos de la reina), norte a la derecha (Grandes Aposentos del Rey).
+   Tupla: [id, nombre, etiqueta corta, x, y, w, h, clase, descripción]  ·  polígono: x = "puntos", y = [lx,ly] posición de la etiqueta. */
 const PALACIO = [
- // id, nombre, x,y,w,h, clase, descripción
- ["galerie","Galería de los Espejos",200,150,16,120,"","Terminada en 1684. Paso diario de la corte hacia los aposentos del rey: aquí se ve y se es visto."],
- ["gar","Grandes Aposentos del Rey",216,150,114,24,"","Salones de aparato (Abundancia, Venus, Diana, Marte, Mercurio, Apolo). Recepciones y veladas de corte."],
- ["gareine","Aposentos de la Reina",216,246,114,24,"","Sin reina en 1722: el rey está prometido a una infanta de cuatro años."],
- ["interieur","Aposentos interiores y Œil-de-Bœuf",216,174,30,72,"","Gabinetes y antecámaras alrededor del Patio de Mármol. En la antecámara del Œil-de-Bœuf esperan los cortesanos."],
- ["chambre","Cámara del Rey",246,196,16,28,"","Centro ceremonial del palacio: aquí se celebran el lever y el coucher."],
- ["marbre","Patio de Mármol",262,182,68,56,"open","Patio de honor ante la Cámara del Rey."],
- ["nord","Ala Norte",200,40,36,110,"","Alojamientos de cortesanos."],
- ["chapelle","Capilla Real",236,104,42,40,"","Consagrada en 1710. Misa diaria del rey: asistir es dejarse ver."],
- ["midi","Ala Sur (de los Príncipes)",200,270,36,110,"","Alojamientos de los príncipes de la sangre."],
- ["ministres-n","Ala de los Ministros (norte)",330,150,70,18,"","Secretarías de Estado."],
- ["ministres-s","Ala de los Ministros (sur)",330,252,70,18,"","Secretarías de Estado."],
- ["royale","Patio Real",330,168,70,84,"open","Entrada de carrozas; el acceso en carroza es privilegio de rango."],
- ["commun","Gran Común",262,300,66,58,"","Cocinas y alojamiento de oficiales y servidumbre de la casa del rey."],
- ["gecurie","Gran Caballeriza",500,96,80,64,"","Caballos de silla, pajes, picadero."],
- ["pecurie","Pequeña Caballeriza",500,260,80,64,"","Caballos de tiro y carrozas."],
- ["armes","Plaza de Armas",410,150,84,120,"open","Explanada entre el palacio y las caballerizas."]
+ // Patios (se dibujan primero)
+ ["royale","Patio Real","Patio Real",165,280,275,425,"open","Entrada de carrozas desde la Plaza de Armas. El acceso en carroza es privilegio de rango."],
+ ["marbre","Patio de Mármol","Patio de Mármol",255,130,135,150,"open","Patio de honor ante la Cámara del Rey."],
+ // Fachada de los jardines
+ ["paix","Salón de la Paz","Paz",55,40,55,55,"","Extremo sur de la Galería; da paso a los aposentos de la reina."],
+ ["galerie","Galería de los Espejos","Galería de los Espejos",110,40,370,55,"","Terminada en 1684. Paso diario de la corte hacia los aposentos del rey: aquí se ve y se es visto."],
+ ["guerre","Salón de la Guerra","Guerra",480,40,55,55,"","Extremo norte de la Galería; abre los Grandes Aposentos del Rey."],
+ // Aposentos de la Reina (sur)
+ ["chreine","Cámara de la Reina","Cámara de la Reina",55,95,95,55,"","Sin reina en 1722: el rey está prometido a una infanta de cuatro años."],
+ ["nobles","Gran Gabinete de la Reina","Gran Gabinete",55,150,95,60,"","Sala de audiencias de la reina."],
+ ["antreine","Antecámara de la Reina","Antecámara",55,210,95,65,"","Antecámara de los aposentos de la reina."],
+ ["gardesreine","Sala de Guardias de la Reina","Guardias Reina",55,275,95,60,"","Guardia de los aposentos de la reina."],
+ ["grandegardes","Gran Sala de Guardias","Gran Sala de Guardias",55,335,110,70,"","Sala principal de guardias, en lo alto de la Escalera de la Reina."],
+ ["cabreine","Gabinetes interiores de la Reina","Gabinetes",150,95,60,170,"","Pequeños gabinetes y patio interior: la vida privada de los aposentos."],
+ ["escreine","Escalera de la Reina","Escalera Reina",165,265,55,60,"","Subida habitual desde el Patio de Mármol hacia los aposentos del rey y de la reina."],
+ // Aposentos del Rey (centro)
+ ["gardesroi","Sala de Guardias del Rey","Guardias",210,195,45,70,"","Primera sala del rey tras la Escalera de la Reina."],
+ ["premiere","Primera Antecámara","1ª Antecámara",210,130,45,65,"","Antecámara donde el rey come en público."],
+ ["oeil","Antecámara del Œil-de-Bœuf","Œil-de-Bœuf",210,95,85,35,"","Antecámara con ventana ovalada. Aquí esperan los cortesanos antes del lever; aquí nacen los rumores."],
+ ["chambre","Cámara del Rey","Cámara",295,95,45,35,"","Centro ceremonial del palacio: aquí se celebran el lever y el coucher."],
+ ["conseil","Gabinete del Consejo","Consejo",340,95,50,35,"","Donde el rey reúne a sus consejos."],
+ ["cabroi","Gabinetes interiores del Rey","Gabinetes del Rey",390,95,80,190,"","Gabinetes, patio interior y piezas privadas. Solo entra quien es llamado."],
+ ["ambassadeurs","Escalera de los Embajadores","Escalera Embajadores",390,285,80,75,"","Escalera monumental de acceso a los Grandes Aposentos del Rey."],
+ // Grandes Aposentos del Rey (norte)
+ ["apollon","Salón de Apolo","Apolo",470,95,70,50,"","Sala del trono."],
+ ["mercure","Salón de Mercurio","Mercurio",470,145,70,50,"","Antigua cámara de aparato."],
+ ["mars","Salón de Marte","Marte",470,195,70,55,"","Sala de guardias y de conciertos."],
+ ["diane","Salón de Diana","Diana",470,250,70,50,"","Sala del billar en las veladas de corte."],
+ ["venus","Salón de Venus","Venus",470,300,70,50,"","Colaciones durante las veladas de corte."],
+ ["abondance","Salón de la Abundancia","Abundancia",470,350,70,40,"","Antesala del gabinete de curiosidades del rey."],
+ ["hercule","Antigua capilla","Antigua capilla",470,390,85,50,"","Capilla de 1682 a 1710, en obras desde entonces. Paso hacia la nueva Capilla Real y el ala norte."],
+ // Alas del Patio Real
+ ["aile-s","Ala sur del Patio Real","Alojamientos",55,405,95,300,"","Alojamientos de cortesanos y oficiales. Un apartamento aquí se disputa durante años."],
+ ["aile-n","Ala norte del Patio Real","Alojamientos",440,440,95,265,"","Alojamientos de cortesanos y oficiales."]
 ];
 const DOMINIO = [
- ["chateau","Palacio",300,170,40,70,"","El palacio, con la ciudad a su espalda y los jardines al frente."],
- ["parterres","Parterres y Orangerie",230,165,70,80,"green","Parterres de agua, del norte y del mediodía; la Orangerie al sur."],
- ["bosquets","Bosquetes",150,120,80,170,"green","Salones de verdor y fuentes: lugares para hablar sin testigos."],
- ["canal","Gran Canal",30,195,120,20,"water","Paseos en góndola en verano."],
- ["canaln","Brazo del Trianon",85,95,14,100,"water","Brazo norte del canal."],
- ["trianon","Gran Trianon",62,55,60,36,"","Palacio de mármol rosa, retiro del rey."],
- ["canals","Brazo de la Ménagerie",85,215,14,100,"water","Brazo sur del canal."],
- ["menagerie","Ménagerie",62,318,60,36,"","Colección de animales exóticos."],
- ["ville","Ciudad de Versalles",380,120,150,170,"","Posadas, hôtels de la nobleza, mercados y la avenida de París."],
- ["avparis","Avenida de París",530,195,60,20,"open","Camino a París, a unas cuatro leguas."]
+ // Agua y jardines
+ ["canal","Gran Canal","Gran Canal","285,40 315,40 315,120 460,120 460,145 315,145 315,285 285,285 285,145 140,145 140,120 285,120","water","Paseos en góndola en verano. Sus brazos llevan al Trianon y a la Ménagerie.",[300,70]],
+ ["trianon","Gran Trianon","Trianon",470,95,85,60,"","Palacio de mármol rosa al extremo norte del canal. Retiro del rey."],
+ ["menagerie","Ménagerie","Ménagerie",45,95,85,60,"","Colección de animales exóticos al extremo sur del canal."],
+ ["apolo","Fuente de Apolo","Apolo",270,285,60,18,"water","Cabecera del canal."],
+ ["bosquets","Bosquetes","Bosquetes",150,305,300,110,"green","Salones de verdor y fuentes entre setos: lugares para hablar sin testigos."],
+ ["parterres","Parterres","Parterres",215,415,170,55,"green","Parterres de agua frente a la Galería."],
+ ["suisses","Estanque de los Suizos","Suizos",20,300,120,45,"water","Gran estanque al sur, excavado por un regimiento suizo."],
+ ["orangerie","Orangerie","Orangerie",95,410,115,45,"","Naranjos y palmeras en cajones; se sacan al sol en verano."],
+ ["potager","Huerto del Rey","Huerto",20,470,85,70,"green","Frutas y hortalizas para la mesa del rey."],
+ // Palacio
+ ["midi","Ala Sur (de los Príncipes)","Ala Sur",110,480,130,32,"","Alojamientos de los príncipes de la sangre."],
+ ["corps","Cuerpo central","Palacio",240,470,120,60,"","Aposentos del rey y de la reina y Galería de los Espejos. Ver la pestaña Palacio."],
+ ["nord","Ala Norte y Capilla Real","Ala Norte",360,480,130,32,"","Alojamientos de cortesanos; la Capilla Real, consagrada en 1710, junto al cuerpo central."],
+ ["commun","Gran Común","Gran Común",160,530,75,50,"","Cocinas y alojamiento de oficiales y servidumbre de la casa del rey."],
+ ["patios","Patio Real y de Mármol","Patios",255,530,90,60,"open","Entrada al palacio desde la Plaza de Armas."],
+ ["armes","Plaza de Armas","Plaza de Armas","220,590 380,590 400,640 200,640","open","Explanada donde convergen las tres avenidas.",[300,620]],
+ ["gecurie","Gran Caballeriza","Gran Caballeriza",335,648,80,42,"","Caballos de silla, pajes, picadero."],
+ ["pecurie","Pequeña Caballeriza","Pequeña Caballeriza",185,648,80,42,"","Caballos de tiro y carrozas."],
+ // Avenidas (la «pata de oca»)
+ ["av-paris","Avenida de París","Av. de París","292,640 308,640 318,760 282,760","road","Hacia París, a unas cuatro leguas. Por aquí llegan las cartas, los acreedores y las noticias.",[300,735]],
+ ["av-stcloud","Avenida de Saint-Cloud","Av. de Saint-Cloud","318,640 332,640 575,752 548,760","road","Hacia Saint-Cloud, residencia de la casa de Orleans.",[470,710]],
+ ["av-sceaux","Avenida de Sceaux","Av. de Sceaux","268,640 282,640 52,760 25,752","road","Hacia Sceaux, donde la duquesa de Maine tiene su propia corte.",[130,710]],
+ // Ciudad
+ ["ville-n","Barrio de Notre-Dame","Barrio Notre-Dame",440,530,145,110,"","Mercado, parroquia y hôtels de la nobleza al norte de la ciudad."],
+ ["ville-s","Barrio de Saint-Louis","Barrio Saint-Louis",15,560,150,80,"","El «Viejo Versalles» al sur: posadas, artesanos, el parque de los ciervos."]
 ];
-const CIUDADES = [ // lon, lat, ciudad, provincia
+const CIUDADES = [ // lon, lat, ciudad, provincia, nota
  [2.35,48.86,"París","Île-de-France","Sede del Parlamento; el Palais-Royal del Regente."],
  [4.03,49.26,"Reims","Champagne","Ciudad de la consagración de los reyes."],
  [3.06,50.63,"Lille","Flandre","Plaza fuerte de la frontera norte."],
@@ -589,6 +629,8 @@ const CIUDADES = [ // lon, lat, ciudad, provincia
  [5.72,45.19,"Grenoble","Dauphiné","Parlamento del Delfinado."],
  [6.02,47.24,"Besanzón","Franche-Comté","Provincia francesa desde 1678."]
 ];
+/* Grandes caminos desde París (esquemáticos): índices en CIUDADES, con paradas intermedias. */
+const CAMINOS = [[0,1],[0,2],[0,3],[0,4],[0,10,9,8],[9,12],[0,6],[0,5],[6,7,8],[0,11],[10,13]];
 const CONTORNO = [[2.37,51.03],[1.6,50.7],[1.6,50.2],[1.08,49.92],[0.1,49.49],[-1.2,49.35],[-1.9,49.7],[-1.5,48.64],[-2.0,48.65],[-3.0,48.8],[-4.5,48.4],[-4.7,48.04],[-3.37,47.75],[-2.2,47.27],[-1.15,46.16],[-1.03,45.62],[-1.17,44.66],[-1.47,43.49],[-1.78,43.36],[-0.5,42.8],[0.7,42.7],[1.7,42.5],[3.17,42.43],[3.05,42.7],[3.1,43.1],[3.7,43.4],[4.6,43.4],[5.37,43.3],[5.93,43.12],[6.7,43.4],[7.2,43.7],[6.9,44.4],[6.9,45.1],[6.2,45.4],[5.8,45.7],[5.95,46.2],[6.1,46.4],[6.8,47.3],[7.5,47.6],[7.8,48.5],[8.2,48.97],[6.9,49.2],[6.0,49.5],[4.9,49.8],[4.2,49.95],[3.6,50.4],[2.6,50.8]];
 
 let mapSel=null;
@@ -596,50 +638,71 @@ function mapInfo(titulo,texto,extra){
   const b=$("#map-info"); b.innerHTML="";
   b.append(el("h3",{},titulo),el("p",{},texto)); if(extra)b.append(extra);
 }
-function drawRooms(svg,rooms,vb){
-  svg.setAttribute("viewBox",vb);
-  rooms.forEach(r=>{
-    const [id,n,x,y,w,h,cls,d]=r;
-    const rect=sv("rect",{x,y,width:w,height:h,class:"zone "+cls,tabindex:0,role:"button","aria-label":n});
-    const pick=()=>{svg.querySelectorAll(".zone").forEach(z=>z.classList.remove("sel"));rect.classList.add("sel");mapSel=id;mapInfo(n,d,el("div",{class:"note"},"Nadie a la vista por ahora. Los presentes aparecerán aquí conforme avance la partida."))};
-    rect.addEventListener("click",pick); rect.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();pick()}});
-    svg.append(rect);
-    if(w>40||h>40){const t=sv("text",{x:x+w/2,y:y+h/2+4,"text-anchor":"middle",class:"mlabel"+(w<60?" s":"")},n.split(" (")[0]);if(h>w*1.6&&w<50){t.setAttribute("transform",`rotate(-90 ${x+w/2} ${y+h/2})`)}svg.append(t)}
-  });
+function pickable(node,svg,n,d){
+  const pick=()=>{svg.querySelectorAll(".zone").forEach(z=>z.classList.remove("sel"));node.classList.add("sel");mapInfo(n,d,el("div",{class:"note"},"Nadie a la vista por ahora. Los presentes aparecerán aquí conforme avance la partida."))};
+  node.setAttribute("tabindex",0); node.setAttribute("role","button"); node.setAttribute("aria-label",n);
+  node.addEventListener("click",pick); node.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();pick()}});
 }
+function drawRooms(svg,rooms){
+  const labels=[];
+  rooms.forEach(r=>{
+    if(typeof r[3]==="string"){ // polígono
+      const [id,n,short,pts,cls,d,[lx,ly]]=r;
+      const poly=sv("polygon",{points:pts,class:"zone "+cls}); pickable(poly,svg,n,d); svg.append(poly);
+      labels.push(sv("text",{x:lx,y:ly,"text-anchor":"middle",class:"mlabel s"},short));
+      return;
+    }
+    const [id,n,short,x,y,w,h,cls,d]=r;
+    const rect=sv("rect",{x,y,width:w,height:h,class:"zone "+cls}); pickable(rect,svg,n,d); svg.append(rect);
+    const vertical=h>w*1.8&&w<60, size=Math.min(vertical?h:w,200);
+    if(size<38)return;
+    const t=sv("text",{x:x+w/2,y:y+h/2+4,"text-anchor":"middle",class:"mlabel"+(size<90||cls==="open"?" s":"")},short);
+    if(vertical)t.setAttribute("transform",`rotate(-90 ${x+w/2} ${y+h/2})`);
+    labels.push(t);
+  });
+  labels.forEach(t=>svg.append(t)); // etiquetas encima de las zonas
+}
+function note(svg,x,y,txt,anchor="middle"){svg.append(sv("text",{x,y,"text-anchor":anchor,class:"compass"},txt))}
 function drawMap(kind){
   const box=$("#map-box"); box.innerHTML="";
   const svg=sv("svg",{role:"img"});
   if(kind==="palacio"){
-    svg.setAttribute("aria-label","Plano esquemático del palacio");
-    svg.append(sv("text",{x:100,y:215,"text-anchor":"middle",class:"mlabel s"},"← Jardines"));
-    drawRooms(svg,PALACIO,"0 0 600 400");
-    svg.append(sv("text",{x:16,y:24,class:"compass"},"N ↑ · Oeste a la izquierda"));
-    mapInfo("Palacio de Versalles","Toca una estancia para ver qué es y quién suele estar en ella.");
+    svg.setAttribute("aria-label","Plano del primer piso del cuerpo central del palacio");
+    svg.setAttribute("viewBox","0 0 600 760");
+    note(svg,300,24,"↑ Jardines (oeste)");
+    drawRooms(svg,PALACIO);
+    note(svg,52,470,"← Ala Sur","end"); note(svg,560,420,"Capilla y Ala Norte →","start");
+    svg.setAttribute("viewBox","-60 0 720 760");
+    note(svg,300,740,"↓ Plaza de Armas · avenidas de París, Saint-Cloud y Sceaux");
+    note(svg,-50,24,"Sur ←  · Primer piso","start");
+    mapInfo("Palacio · primer piso","Cuerpo central como en los planos de época: la Galería sobre los jardines, los aposentos de la reina al sur y los Grandes Aposentos del Rey al norte. Toca una estancia.");
   } else if(kind==="dominio"){
-    svg.setAttribute("aria-label","Plano esquemático del dominio");
-    drawRooms(svg,DOMINIO,"0 0 600 400");
-    svg.append(sv("text",{x:16,y:24,class:"compass"},"N ↑"));
-    mapInfo("El dominio","Jardines, canal, Trianon y ciudad. Los bosquetes son buenos para hablar sin testigos.");
+    svg.setAttribute("aria-label","Plano del dominio de Versalles");
+    svg.setAttribute("viewBox","0 0 600 770");
+    note(svg,300,24,"↑ Oeste · sur a la izquierda, norte a la derecha");
+    drawRooms(svg,DOMINIO);
+    note(svg,300,768,"↓ París");note(svg,590,744,"Saint-Cloud ↘","end");note(svg,10,744,"↙ Sceaux","start");
+    mapInfo("El dominio","Jardines y canal arriba, el palacio en el centro y, abajo, las tres avenidas que salen de la Plaza de Armas hacia París, Saint-Cloud y Sceaux. Toca un lugar.");
   } else {
     svg.setAttribute("aria-label","Mapa aproximado de Francia");
     const W=600,H=520, lon0=-5.2,lon1=8.6,lat0=42.2,lat1=51.3, k=Math.cos(46.5*Math.PI/180);
-    const sx=W/((lon1-lon0)*k), sy=H/(lat1-lat0), s=Math.min(sx,sy);
-    const P=([lo,la])=>[((lo-lon0)*k*s).toFixed(1),((lat1-la)*s).toFixed(1)];
+    const s=Math.min(W/((lon1-lon0)*k),H/(lat1-lat0));
+    const P=([lo,la])=>[+((lo-lon0)*k*s).toFixed(1),+((lat1-la)*s).toFixed(1)];
     svg.setAttribute("viewBox",`0 0 ${W} ${H}`);
     svg.append(sv("polygon",{points:CONTORNO.map(p=>P(p).join(",")).join(" "),class:"coast"}));
+    CAMINOS.forEach(path=>svg.append(sv("polyline",{points:path.map(i=>P(CIUDADES[i]).join(",")).join(" "),class:"road-line"})));
     CIUDADES.forEach(c=>{
-      const [x,y]=P(c); const dot=sv("circle",{cx:x,cy:y,r:5,class:"city",tabindex:0,role:"button","aria-label":c[2]});
+      const [x,y]=P(c); const dot=sv("circle",{cx:x,cy:y,r:5,class:"city zone"});
       const pick=()=>{svg.querySelectorAll(".city").forEach(z=>z.classList.remove("sel"));dot.classList.add("sel");mapInfo(c[2]+" · "+c[3],c[4],el("div",{class:"note"},"Sin noticias de esta provincia todavía."))};
+      dot.setAttribute("tabindex",0);dot.setAttribute("role","button");dot.setAttribute("aria-label",c[2]);
       dot.addEventListener("click",pick);dot.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();pick()}});
-      svg.append(dot, sv("text",{x:+x+8,y:+y+4,class:"mlabel s"},c[2]));
+      svg.append(dot, sv("text",{x:x+8,y:y+4,class:"mlabel s"},c[2]));
     });
     const [vx,vy]=P([2.13,48.80]); svg.append(sv("circle",{cx:vx,cy:vy,r:3.5,fill:"var(--gilt)"}));
-    mapInfo("Reino de Francia","Contorno aproximado de 1722 (incluye la Lorena, que aún no era francesa). Toca una ciudad para ver su provincia.");
+    mapInfo("Reino de Francia","Contorno aproximado de 1722 (incluye la Lorena, que aún no era francesa). Las líneas punteadas son los grandes caminos que salen de París. Toca una ciudad.");
   }
   box.append(svg);
 }
-
 
 
 /* ---------- Caras ---------- */

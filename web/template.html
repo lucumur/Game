@@ -22,6 +22,7 @@
   --gilt:#c9a24f; --accent:#93a8e2; --seal:#d4705f; --chip:#222a38;
   --desk:#1f2b24; --desk-edge:#16201a; --sheet:#e4dfd0; --sheet-ink:#1f2430; --sheet-muted:#5d636d; color-scheme:dark}
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html,body{height:100%}
 body{background:var(--paper);color:var(--ink);font:17px/1.45 var(--f-body);padding-inline:16px;padding-block:0 84px}
 h1,h2,h3{font-family:var(--f-display);font-weight:400;text-wrap:balance;margin:0}
@@ -137,6 +138,8 @@ button{cursor:pointer}
 .compass{font:11px var(--f-display);fill:var(--muted)}
 .city{fill:var(--ink);cursor:pointer} .city.sel{fill:var(--gilt)}
 .coast{fill:var(--chip);stroke:var(--muted);stroke-width:1}
+.zone.road{fill:var(--line);stroke:var(--muted);stroke-width:.6}
+.road-line{fill:none;stroke:var(--gilt);stroke-width:1.2;stroke-dasharray:4 3}
 .map-info{display:grid;gap:4px;min-height:5.5rem}
 .map-info h3{font-size:1.15rem}
 
