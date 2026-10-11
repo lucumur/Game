@@ -29,10 +29,10 @@ Cinco ejes, cinco grados cada uno. En pantalla se muestran con palabras; el valo
 | **Discreción** | Secret | Discret | Réservé | Causeur | Bavard |
 | **Ego** (solidez ante el desaire) | Quebradizo | Susceptible | Firme | Flexible | Maleable |
 
-- **[Canónico] Lucidez** decide cuánto y con qué fidelidad percibe el personaje (ver §6). Baja lucidez produce creencias erróneas sin aviso.
-- **[Canónico] Moral — Pervers:** aparenta bondad y hace el movimiento sucio si nadie lo ve. Depende de la regla de testigos (§5).
+- **[Canónico] Lucidez** decide cuánto y con qué fidelidad percibe el personaje (ver §7). Baja lucidez produce creencias erróneas sin aviso.
+- **[Canónico] Moral — Pervers:** aparenta bondad y hace el movimiento sucio si nadie lo ve. Depende de la regla de testigos (§6).
 - **[Canónico] Deriva:** actuar contra el propio eje no está prohibido; lo mueve un grado hacia el acto cometido. El personaje termina siendo lo que hizo. La deriva de los personajes no jugadores es invisible.
-- **[Canónico]** Religiosidad y costumbres (devoto/libertino) **no son eje**: son afiliación del trasfondo (§3). Un devoto puede ser Pervers (Tartufo); un libertino puede ser Juste.
+- **[Canónico]** Religiosidad y costumbres (devoto/libertino) **no son eje**: son afiliación del trasfondo (§4). Un devoto puede ser Pervers (Tartufo); un libertino puede ser Juste.
 
 ---
 
@@ -72,9 +72,30 @@ Flexible y Maleable absorben el golpe: pierden estima, no acumulan rencor.
 
 ---
 
-## 3. Posición y trasfondo
+## 3. Motivaciones y necesidades [Provisional]
 
-### 3.1 Catálogo de posiciones [Provisional]
+Capa distinta de los ejes: los ejes dicen *cómo* actúa alguien; esta, *qué persigue* y *qué teme perder*.
+
+### 3.1 Jerarquía (de abajo arriba)
+1. **Basal** — salud, hambre, duelo, miedo físico. Si está afectada, **todo lo demás se pausa** (o se ejecuta mal).
+2. **Mantenimiento** — no perder cargo, fortuna ni rango. Aversión a la pérdida.
+3. **Reconocimiento** — lugar dentro de los propios grupos (amigos, salón, cuerpo de oficio, iguales de rango). No es ascender: es posición en un ranking. Requiere paz mental y amistades.
+4. **Aspiración**, tres variantes:
+   - *Estatus esperado*: alcanzar lo que el propio estamento permite.
+   - *Ascenso*: cambiar de estamento (comprar un título, ennoblecerse).
+   - *Fama*: ser conocido, al margen del estamento.
+
+### 3.2 Funcionamiento
+- **Impulso dominante** (rasgo; verdad para los PNJ): nivel hacia el que tiende cada personaje cuando los inferiores están cubiertos — conservar, ser reconocido o subir (y en qué variante). Se cruza con Audacia: el audaz arriesga lo que tiene por lo que quiere.
+- **Estado de necesidades** (dinámico): cada nivel está `cubierto`, `amenazado` o `perdido`. **Domina el nivel más bajo amenazado.**
+- **Grupos:** cada personaje pertenece a uno o varios grupos y ocupa un lugar en cada uno (verdad). El jugador percibe su propio lugar solo de forma aproximada.
+- Las crisis basales (enfermedad, duelo, ruina súbita) reordenan las prioridades de cualquiera, incluido el jugador.
+
+---
+
+## 4. Posición y trasfondo
+
+### 4.1 Catálogo de posiciones [Provisional]
 Cada posición da **accesos** (lugares, personas), **recursos** y **movimientos propios**, y sugiere ambiciones.
 
 | Estamento | Posición | Movimientos propios |
@@ -97,7 +118,7 @@ Cada posición da **accesos** (lugares, personas), **recursos** y **movimientos 
 
 Ambiciones de ejemplo: obtener el taburete o un cargo, casar bien a una hija, recuperar lo perdido con Law, ser primer médico, vengar una afrenta. El jugador elige una o la define.
 
-### 3.2 Trasfondo invisible [Provisional]
+### 4.2 Trasfondo invisible [Provisional]
 No se muestra como número; se nota en lo que el personaje puede hacer.
 - **Educación:** colegio jesuita (retórica, latín, red de exalumnos, +Lucidez) · oratorianos de tendencia jansenista (rigor; sospechoso para jesuitas) · facultad (p. ej. medicina de Montpellier) · autodidacta de salones · sin estudios.
 - **Ideas / afiliaciones** (se adquieren o pierden jugando): devoto (sincero o de conveniencia) · libertino · jansenista · ilustrado (p. ej. tras leer las *Cartas persas*, 1721) · galicano. Abren opciones, aliados y enemigos.
@@ -106,7 +127,7 @@ No se muestra como número; se nota en lo que el personaje puede hacer.
 
 ---
 
-## 4. Resolución de acciones inciertas [Provisional]
+## 5. Resolución de acciones inciertas [Provisional]
 
 **2d6 + modificadores.**
 - Modificadores: valor del eje pertinente (−2 a +2), posición o acceso (−1 a +1), circunstancias (−2 a +2).
@@ -116,19 +137,19 @@ No se muestra como número; se nota en lo que el personaje puede hacer.
 
 ---
 
-## 5. Testigos [Canónico]
+## 6. Testigos [Canónico]
 
 Cada acción relevante registra quién la vio. Un movimiento oculto solo rinde si nadie lo vio; si alguien lo vio, ese alguien tiene un arma contra el autor (registrado en la verdad).
 
 ---
 
-## 6. Percepción y conocimiento [Canónico]
+## 7. Percepción y conocimiento [Canónico]
 
 Lo que el jugador sabe de otro personaje son **observaciones**, cada una con origen (`visto`, `oído`, `rumor`, `documento`, `impresión`) y fiabilidad. La lucidez del personaje del jugador modula qué se le narra y con qué fidelidad. El jugador puede anotar libremente sus conclusiones.
 
 ---
 
-## 7. Generación de personajes [Canónico]
+## 8. Generación de personajes [Canónico]
 
 1. **Figuras clave**, a mano, rasgo por rasgo (Luis XV, Orleans, Dubois, Fleury, Borbón y ~10–20 más). Sus rasgos internos son **interpretación** a partir de fuentes y se marcan así.
 2. **Secundarios con nombre**, generados con tablas de probabilidad por estamento (`narrador/tablas/`) mediante script con semilla.
@@ -136,7 +157,7 @@ Lo que el jugador sabe de otro personaje son **observaciones**, cada una con ori
 
 ---
 
-## 8. Estructura de datos y repositorio [Provisional]
+## 9. Estructura de datos y repositorio [Provisional]
 
 - Estado vivo del juego: base de datos del artifact. Al cerrar cada capítulo se exporta a este repositorio en un solo commit.
 - `REGLAS.md` — este documento.
@@ -146,7 +167,7 @@ Lo que el jugador sabe de otro personaje son **observaciones**, cada una con ori
 
 ---
 
-## 9. Abierto
+## 10. Abierto
 
 - Apertura: llegada de la corte a Versalles, junio de 1722.
 - Escritorio: mapa (palacio y dominio por secciones; Francia por provincias), libro de caras, tres pilas de papeles (cartas, rumores, obligaciones), reloj de la jornada del rey, indicadores (favor, dinero/deuda, reputación, salud).
