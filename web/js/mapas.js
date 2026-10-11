@@ -139,22 +139,72 @@ function drawMap(kind){
     note(svg,300,768,"↓ París");note(svg,590,744,"Saint-Cloud ↘","end");note(svg,10,744,"↙ Sceaux","start");
     mapInfo("El dominio","Jardines y canal arriba, el palacio en el centro y, abajo, las tres avenidas que salen de la Plaza de Armas hacia París, Saint-Cloud y Sceaux. Toca un lugar.");
   } else {
-    svg.setAttribute("aria-label","Mapa aproximado de Francia");
-    const W=600,H=520, lon0=-5.2,lon1=8.6,lat0=42.2,lat1=51.3, k=Math.cos(46.5*Math.PI/180);
-    const s=Math.min(W/((lon1-lon0)*k),H/(lat1-lat0));
-    const P=([lo,la])=>[+((lo-lon0)*k*s).toFixed(1),+((lat1-la)*s).toFixed(1)];
-    svg.setAttribute("viewBox",`0 0 ${W} ${H}`);
-    svg.append(sv("polygon",{points:CONTORNO.map(p=>P(p).join(",")).join(" "),class:"coast"}));
-    CAMINOS.forEach(path=>svg.append(sv("polyline",{points:path.map(i=>P(CIUDADES[i]).join(",")).join(" "),class:"road-line"})));
-    CIUDADES.forEach(c=>{
-      const [x,y]=P(c); const dot=sv("circle",{cx:x,cy:y,r:5,class:"city zone"});
-      const pick=()=>{svg.querySelectorAll(".city").forEach(z=>z.classList.remove("sel"));dot.classList.add("sel");mapInfo(c[2]+" · "+c[3],c[4],el("div",{class:"note"},"Sin noticias de esta provincia todavía."))};
-      dot.setAttribute("tabindex",0);dot.setAttribute("role","button");dot.setAttribute("aria-label",c[2]);
-      dot.addEventListener("click",pick);dot.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();pick()}});
-      svg.append(dot, sv("text",{x:x+8,y:y+4,class:"mlabel s"},c[2]));
-    });
-    const [vx,vy]=P([2.13,48.80]); svg.append(sv("circle",{cx:vx,cy:vy,r:3.5,fill:"var(--gilt)"}));
-    mapInfo("Reino de Francia","Contorno aproximado de 1722 (incluye la Lorena, que aún no era francesa). Las líneas punteadas son los grandes caminos que salen de París. Toca una ciudad.");
+    drawProvinces(box);
+    return;
   }
   box.append(svg);
+}
+
+/* ---------- Francia: mapa de provincias al estilo Clausewitz ----------
+   mapa/provinces.png: un color RGB exacto por provincia. Se lee píxel a píxel para saber
+   qué provincia hay bajo el dedo y para trazar fronteras donde cambia el color. */
+const PROV_DEF = __PROVDEF__;
+const PROV_PNG = "__PROVPNG__";
+const GEO = {lon0:-5.2, lon1:8.6, lat1:51.3, k:Math.cos(46.5*Math.PI/180)};
+let provState=null, provSel=-1;
+async function loadProvinces(){
+  if(provState)return provState;
+  const img=new Image(); img.src=PROV_PNG; await img.decode();
+  const w=img.width,h=img.height,c=document.createElement("canvas"); c.width=w;c.height=h;
+  const x=c.getContext("2d",{willReadFrequently:true}); x.drawImage(img,0,0);
+  const px=x.getImageData(0,0,w,h).data, key=new Map(PROV_DEF.map((r,i)=>[(r.r<<16)|(r.g<<8)|r.b,i]));
+  const ids=new Int16Array(w*h); for(let i=0;i<w*h;i++){const k=(px[i*4]<<16)|(px[i*4+1]<<8)|px[i*4+2];ids[i]=key.has(k)?key.get(k):-1}
+  const edge=new Uint8Array(w*h); for(let y=0;y<h;y++)for(let x2=0;x2<w;x2++){const i=y*w+x2,a=ids[i];if((x2+1<w&&ids[i+1]!==a)||(y+1<h&&ids[i+w]!==a))edge[i]=1}
+  const s=w/((GEO.lon1-GEO.lon0)*GEO.k);
+  provState={w,h,ids,edge,P:([lo,la])=>[(lo-GEO.lon0)*GEO.k*s,(GEO.lat1-la)*s]};
+  return provState;
+}
+function tokenRGB(name){const v=getComputedStyle(document.documentElement).getPropertyValue(name).trim();const m=v.match(/^#([0-9a-f]{6})$/i);if(m){const n=parseInt(m[1],16);return [n>>16,(n>>8)&255,n&255]}return [128,128,128]}
+const mix=(a,b,t)=>a.map((v,i)=>Math.round(v*(1-t)+b[i]*t));
+function renderProvinces(canvas){
+  const {w,h,ids,edge,P}=provState, ctx=canvas.getContext("2d"), im=ctx.createImageData(w,h), d=im.data;
+  const chip=tokenRGB("--chip"),line=tokenRGB("--line"),muted=tokenRGB("--muted"),gilt=tokenRGB("--gilt"),paper=tokenRGB("--paper"),ink=tokenRGB("--ink");
+  const fills=PROV_DEF.map((r,i)=>r.tipo==="reino"?mix(chip,line,[0,.35,.7][i%3]):r.tipo==="extranjero"?paper:null);
+  for(let i=0;i<w*h;i++){
+    const id=ids[i]; let c=id>=0?fills[id]:null, a=255;
+    if(!c){a=0;c=paper}
+    else{
+      if(PROV_DEF[id].tipo==="extranjero"&&((i%w)+Math.floor(i/w))%9<2)c=line;
+      if(id===provSel)c=mix(c,gilt,.45);
+      if(edge[i])c=muted;
+    }
+    const o=i*4; d[o]=c[0];d[o+1]=c[1];d[o+2]=c[2];d[o+3]=a;
+  }
+  ctx.putImageData(im,0,0);
+  ctx.save(); ctx.strokeStyle=`rgb(${gilt})`; ctx.lineWidth=2; ctx.setLineDash([7,5]);
+  CAMINOS.forEach(path=>{ctx.beginPath();path.forEach((ci,j)=>{const [x,y]=P(CIUDADES[ci]);j?ctx.lineTo(x,y):ctx.moveTo(x,y)});ctx.stroke()});
+  ctx.restore();
+  ctx.font=`20px ${getComputedStyle(document.body).fontFamily}`; ctx.fillStyle=`rgb(${ink})`;
+  CIUDADES.forEach(c=>{const [x,y]=P(c);ctx.beginPath();ctx.arc(x,y,6,0,7);ctx.fill();const tw=ctx.measureText(c[2]).width;ctx.fillText(c[2],x+10+tw>w?x-10-tw:x+10,y+6)});
+  const [vx,vy]=P([2.13,48.80]); ctx.fillStyle=`rgb(${gilt})`; ctx.beginPath(); ctx.arc(vx,vy,5,0,7); ctx.fill();
+}
+function provInfo(i){
+  provSel=i; const r=PROV_DEF[i];
+  const ciudades=CIUDADES.filter(c=>{const [x,y]=provState.P(c);return provState.ids[Math.round(y)*provState.w+Math.round(x)]===i}).map(c=>c[2]);
+  mapInfo(r.nombre,(r.tipo==="extranjero"?"Fuera del reino en 1722. ":"")+(r.capital?"Capital: "+r.capital+". ":"")+(r.nota||""),
+    el("div",{class:"note"},(ciudades.length?"Ciudades en el mapa: "+ciudades.join(", ")+". ":"")+"Fronteras provisionales: el mapa se corregirá a mano."));
+}
+async function drawProvinces(box){
+  mapInfo("Reino de Francia","Cargando provincias…");
+  try{await loadProvinces()}catch(e){mapInfo("Reino de Francia","No se pudo cargar el mapa de provincias.");return}
+  const {w,h}=provState;
+  const canvas=el("canvas",{width:w,height:h,role:"img","aria-label":"Mapa de provincias de Francia en 1722",style:"display:block;width:100%;height:auto;cursor:pointer"});
+  const sel=el("select",{id:"prov-sel","aria-label":"Ir a una provincia",style:"margin:8px;max-width:calc(100% - 16px)"},el("option",{value:""},"Ir a una provincia…"),
+    ...PROV_DEF.map((r,i)=>r.tipo==="fuera"?null:el("option",{value:i},r.nombre+(r.tipo==="extranjero"?" (no francés)":""))).filter(Boolean));
+  box.append(canvas,sel);
+  const pick=i=>{if(i<0||PROV_DEF[i].tipo==="fuera")return;provInfo(i);renderProvinces(canvas);sel.value=String(i)};
+  canvas.addEventListener("click",e=>{const r=canvas.getBoundingClientRect();const x=Math.floor((e.clientX-r.left)*w/r.width),y=Math.floor((e.clientY-r.top)*h/r.height);pick(provState.ids[y*w+x])});
+  sel.onchange=()=>{if(sel.value!=="")pick(+sel.value)};
+  renderProvinces(canvas);
+  if(provSel>=0)provInfo(provSel); else mapInfo("Reino de Francia","Gobiernos generales en 1722, en un mapa provisional generado a partir de sus capitales. Las zonas rayadas no eran francesas: la Lorena, el principado de Dombes y el Condado Venesino. Toca una provincia.");
 }

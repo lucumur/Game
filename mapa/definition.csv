@@ -1,0 +1,37 @@
+id;r;g;b;nombre;tipo;capital;nota
+fuera;0;0;0;Fuera del reino;fuera;;
+ile-de-france;93;137;191;Île-de-France;reino;París;Gobierno de la capital y de Versalles.
+picardie;146;234;142;Picardía;reino;Amiens;
+flandre;199;131;93;Flandes y Henao;reino;Lille;Frontera norte, plazas fuertes.
+artois;52;228;44;Artois;reino;Arras;
+champagne;105;125;195;Champaña;reino;Troyes;Reims, ciudad de la consagración.
+trois-eveches;158;222;146;Metz y Verdún (Tres Obispados);reino;Metz;Enclaves franceses dentro de la Lorena.
+lorraine;211;119;97;Ducado de Lorena;extranjero;Nancy;Ducado soberano. Francés solo desde 1766.
+alsace;64;216;48;Alsacia;reino;Estrasburgo;Francesa desde el siglo XVII.
+normandie;117;113;199;Normandía;reino;Ruan;
+bretagne;170;210;150;Bretaña;reino;Rennes;Estados provinciales propios.
+maine;223;107;101;Maine y Perche;reino;Le Mans;
+anjou;76;204;52;Anjou;reino;Angers;
+touraine;129;101;203;Turena;reino;Tours;
+orleanais;182;198;154;Orleanesado;reino;Orleans;
+berry;235;95;105;Berry;reino;Bourges;
+nivernais;88;192;56;Nivernés;reino;Nevers;
+bourgogne;141;89;207;Borgoña;reino;Dijon;Estados de Borgoña.
+dombes;194;186;158;Principado de Dombes;extranjero;Trévoux;Principado soberano del duque de Maine.
+franche-comte;47;83;109;Franco Condado;reino;Besanzón;Francés desde 1678.
+poitou;100;180;60;Poitou;reino;Poitiers;
+aunis;153;77;211;Aunis;reino;La Rochelle;
+saintonge;206;174;162;Saintonge y Angoumois;reino;Saintes;
+limousin;59;71;113;Lemosín;reino;Limoges;
+marche;112;168;64;La Marche;reino;Guéret;
+bourbonnais;165;65;215;Borbonés;reino;Moulins;
+auvergne;218;162;166;Auvernia;reino;Clermont;
+lyonnais;71;59;117;Lionesado;reino;Lyon;Sedas y banca.
+dauphine;124;156;68;Delfinado;reino;Grenoble;
+guyenne;177;53;219;Guyena y Gascuña;reino;Burdeos;El gobierno más extenso del reino.
+bearn;230;150;170;Bearne y Navarra;reino;Pau;
+foix;83;47;121;Condado de Foix;reino;Foix;
+roussillon;136;144;72;Rosellón;reino;Perpiñán;Francés desde 1659.
+languedoc;189;41;223;Languedoc;reino;Toulouse;"Estados de Languedoc; Montpellier y su facultad."
+comtat;42;138;174;Condado Venesino y Aviñón;extranjero;Aviñón;Territorio del papa.
+provence;95;235;125;Provenza;reino;Aix;Sale de la peste de 1720.
