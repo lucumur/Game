@@ -56,6 +56,34 @@ button{cursor:pointer}
 .sel-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 20px}
 .hint{font-size:.85rem;color:var(--muted);font-style:italic;min-height:1.2em}
 
+/* ---------- Épocas ---------- */
+#epocas{max-width:980px;margin-inline:auto;padding-block:28px 40px;display:grid;gap:22px}
+.eras{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.era{display:grid;gap:4px;align-content:start;text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px;min-width:0}
+.era .yr{font-family:var(--f-display);font-size:2rem;line-height:1}
+.era .st{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gilt)}
+.era p{font-size:.92rem;color:var(--muted)}
+button.era{border-color:var(--gilt)}
+button.era:hover{background:var(--chip)}
+.era.off{opacity:.55;cursor:not-allowed}
+.era .soon{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.back{border:0;background:none;color:var(--muted);text-decoration:underline;text-underline-offset:3px;justify-self:center}
+
+/* ---------- Calendario ---------- */
+.cal-h{display:flex;justify-content:space-between;align-items:center;gap:6px}
+.cal-h h3{font-size:1.05rem}
+.cal-h button{border:1px solid var(--line);background:var(--paper);border-radius:var(--r);width:28px;height:28px;line-height:1}
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:2px;font-variant-numeric:tabular-nums}
+.cal .dow{font-size:.68rem;text-align:center;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.cal button{border:1px solid transparent;background:none;border-radius:3px;padding:3px 0;font-size:.85rem;position:relative;min-width:0}
+.cal button.fe{color:var(--seal)}
+.cal button.ev::after{content:"";position:absolute;left:50%;bottom:1px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:var(--gilt)}
+.cal button.today{border-color:var(--gilt);background:var(--chip);font-weight:600}
+.cal button.sel{outline:1px solid var(--accent)}
+.cal button.past{color:var(--muted)}
+.cal-list{display:grid;gap:4px;font-size:.88rem}
+.cal-list .f{color:var(--seal)}
+
 /* ---------- Barra ---------- */
 #game{padding-block:10px 20px;display:grid;gap:14px}
 .bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);display:grid;gap:8px;padding-block:10px 0;border-bottom:1px solid var(--line)}
@@ -234,12 +262,23 @@ button.kin:hover{border-color:var(--gilt)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 
+<!-- ================= ÉPOCAS ================= -->
+<main id="epocas" class="wrap" hidden>
+  <header class="sel-head">
+    <span class="label">Versalles · 1682–1789</span>
+    <h1>Les âges de Versailles</h1>
+    <p>Cada época es una partida distinta, con su propia corte y sus propios personajes.</p>
+    <div class="rule"></div>
+  </header>
+  <div class="eras" id="eras"></div>
+</main>
+
 <!-- ================= SELECTOR ================= -->
 <main id="selector" class="wrap" hidden>
   <header class="sel-head">
-    <span class="label">Versalles · junio de 1722</span>
+    <span class="label" id="sel-label"></span>
     <h1>Lettre d’introduction</h1>
-    <p>La corte vuelve a Versalles tras siete años en París. ¿Quién eres al cruzar el Patio Real?</p>
+    <p id="sel-sub"></p>
     <div class="rule"></div>
   </header>
   <div class="sel-grid">
@@ -249,6 +288,7 @@ button.kin:hover{border-color:var(--gilt)}
     <div class="field"><label class="label" for="f-edu">Educación</label><select id="f-edu"></select></div>
   </div>
   <div style="display:flex;justify-content:center"><button class="btn primary" id="b-entrar">Entrar en Versalles</button></div>
+  <button class="back" id="b-epocas">Cambiar de época</button>
 </main>
 
 <!-- ================= JUEGO ================= -->
@@ -271,6 +311,11 @@ button.kin:hover{border-color:var(--gilt)}
     <div class="desk-wrap">
       <div class="desk" id="desk" aria-label="Escritorio"><span class="desk-legend">Arrastra los papeles; tócalos para leerlos.</span></div>
       <div class="side">
+        <section class="pane" aria-label="Calendario">
+          <div class="cal-h"><button id="cal-prev" aria-label="Mes anterior">‹</button><h3 id="cal-title"></h3><button id="cal-next" aria-label="Mes siguiente">›</button></div>
+          <div class="cal" id="cal"></div>
+          <div class="cal-list" id="cal-list"></div>
+        </section>
         <section class="pane">
           <div class="pane-h"><h2>Sobre la mesa</h2><span class="tag ej">Ejemplo</span></div>
           <div class="filters" id="filters"></div>
@@ -355,7 +400,38 @@ button.kin:hover{border-color:var(--gilt)}
 const PERSONAJES = __PERSONAJES__;
 const LINAJE = __LINAJE__;
 const GLOSARIO = __GLOSARIO__;
-const FECHA = "lundi 15 juin 1722";
+/* ---------- Épocas ---------- */
+const EPOCAS = [
+ {id:"1682",etapa:"Prisca",año:1682,ev:"Luis XIV instala oficialmente la corte en Versalles (mayo)."},
+ {id:"1705",etapa:"Temprana",año:1705,ev:"Apogeo del reinado, diez años antes de la muerte de Luis XIV."},
+ {id:"1722",etapa:"Segunda etapa",año:1722,fecha:"1722-06-15",lugar:"Patio Real",jugable:true,ev:"La corte vuelve a Versalles tras siete años en París. ¿Quién eres al cruzar el Patio Real?"},
+ {id:"1743",etapa:"Segunda etapa",año:1743,ev:"Muere el cardenal Fleury; Luis XV gobierna sin primer ministro."},
+ {id:"1765",etapa:"Segunda etapa tardía",año:1765,ev:"Muere el delfín Luis Fernando."},
+ {id:"1770",etapa:"Tercera etapa",año:1770,ev:"Llega María Antonieta."},
+ {id:"1774",etapa:"Cuarta etapa",año:1774,ev:"Luis XVI llega al trono."},
+ {id:"1780",etapa:"Final",año:1780,ev:"Acontecimiento por definir."},
+ {id:"1789",etapa:"Último año",año:1789,ev:"El último año de la corte en Versalles."}
+];
+let epoca=EPOCAS.find(e=>e.id===(()=>{try{return JSON.parse(localStorage.getItem("vg_epoca"))}catch(e){return null}})())||null;
+
+/* ---------- Fechas ---------- */
+const JOURS=["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
+const MOIS=["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+const MESES=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+const D=s=>{const[y,m,d]=s.split("-").map(Number);return new Date(Date.UTC(y,m-1,d))};
+const iso=d=>d.toISOString().slice(0,10);
+const addDays=(d,n)=>new Date(d.getTime()+n*864e5);
+const fmtFr=d=>`${JOURS[d.getUTCDay()]} ${d.getUTCDate()} ${MOIS[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
+function easter(y){const a=y%19,b=Math.floor(y/100),c=y%100,d=Math.floor(b/4),e=b%4,f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3),h=(19*a+b-d-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),mo=Math.floor((h+l-7*m+114)/31),da=((h+l-7*m+114)%31)+1;return new Date(Date.UTC(y,mo-1,da))}
+function feasts(y){
+  const e=easter(y), out={};
+  [[-46,"Miércoles de Ceniza"],[-7,"Domingo de Ramos"],[-2,"Viernes Santo"],[0,"Pascua"],[39,"Ascensión"],[49,"Pentecostés"],[60,"Corpus Christi (Fête-Dieu)"]].forEach(([n,t])=>out[iso(addDays(e,n))]=t);
+  [["01-01","Año Nuevo"],["01-06","Epifanía"],["02-02","Candelaria"],["03-25","Anunciación"],["06-24","San Juan"],["06-29","San Pedro y San Pablo"],["08-15","Asunción"],["08-25","San Luis, santo del rey"],["09-08","Natividad de la Virgen"],["11-01","Todos los Santos"],["11-02","Fieles Difuntos"],["12-08","Inmaculada Concepción"],["12-25","Navidad"]].forEach(([md,t])=>out[y+"-"+md]=t);
+  return out;
+}
+/* Citas de la partida (ejemplo, ligadas a los papeles del escritorio) */
+const CITAS = {"1722-06-15":"Llegada de la corte a Versalles","1722-06-18":"Cena con el abate de Saint-Pierre","1722-06-21":"Límite para presentarse ante el primer médico","1722-06-30":"Vence la deuda con el boticario"};
+let hoy=null, calMes=null, calSel=null;
 
 /* ---------- Catálogos ---------- */
 const POSICIONES = [
@@ -456,7 +532,7 @@ function buildSelector(){
 function buildBar(){
   const p=player||EJEMPLO;
   $("#who").innerHTML=""; $("#who").append(p.nombre," ",el("small",{},"· "+POSICIONES[p.pos][1]));
-  $("#fecha").textContent=FECHA+" · Patio Real";
+  $("#fecha").textContent=fmtFr(hoy)+" · "+(epoca.lugar||"Versalles");
   const c=$("#clock"); c.innerHTML=""; JORNADA.forEach((j,i)=>c.append(el("span",{class:i===4?"now":null},j)));
   const g=$("#gauges"); g.innerHTML="";
   [["Favor real",1],["Dinero",2],["Reputación",2],["Salud",4]].forEach(([n,v])=>{const pips=el("span",{class:"pips","aria-label":n+": "+v+" de 5"});for(let i=0;i<5;i++)pips.append(el("i",{class:i<v?"on":null}));g.append(el("span",{class:"gauge"},n,pips))});
@@ -661,6 +737,37 @@ function newPlanForm(){
 }
 $("#b-newplan").onclick=newPlanForm;
 
+/* ---------- Calendario ---------- */
+function drawCal(){
+  const y=calMes.getUTCFullYear(), m=calMes.getUTCMonth(), fe=feasts(y);
+  $("#cal-title").textContent=MESES[m]+" de "+y;
+  const g=$("#cal"); g.innerHTML="";
+  ["lu","ma","mi","ju","vi","sá","do"].forEach(d=>g.append(el("span",{class:"dow"},d)));
+  const first=new Date(Date.UTC(y,m,1)), pad=(first.getUTCDay()+6)%7, days=new Date(Date.UTC(y,m+1,0)).getUTCDate();
+  for(let i=0;i<pad;i++)g.append(el("span",{}));
+  for(let d=1;d<=days;d++){
+    const k=iso(new Date(Date.UTC(y,m,d)));
+    const cls=[fe[k]?"fe":"",CITAS[k]?"ev":"",k===iso(hoy)?"today":"",k===calSel?"sel":"",k<iso(hoy)?"past":""].filter(Boolean).join(" ");
+    g.append(el("button",{class:cls||null,"aria-label":d+" de "+MESES[m]+(fe[k]?", "+fe[k]:"")+(CITAS[k]?", "+CITAS[k]:""),onclick:()=>{calSel=k;drawCal()}},String(d)));
+  }
+  const L=$("#cal-list"); L.innerHTML="";
+  const monthKeys=[...new Set([...Object.keys(fe),...Object.keys(CITAS)])].filter(k=>k.startsWith(y+"-"+String(m+1).padStart(2,"0"))).sort();
+  const keys=calSel?[calSel]:monthKeys.filter(k=>k>=iso(hoy)||!monthKeys.some(x=>x>=iso(hoy))).slice(0,5);
+  keys.forEach(k=>{const dd=D(k).getUTCDate();if(fe[k])L.append(el("span",{class:"f"},dd+" · "+fe[k]));if(CITAS[k])L.append(el("span",{},dd+" · "+CITAS[k]))});
+  if(!L.children.length)L.append(el("span",{class:"note"},calSel?"Nada señalado ese día.":"Nada señalado este mes."));
+}
+$("#cal-prev").onclick=()=>{calMes=new Date(Date.UTC(calMes.getUTCFullYear(),calMes.getUTCMonth()-1,1));calSel=null;drawCal()};
+$("#cal-next").onclick=()=>{calMes=new Date(Date.UTC(calMes.getUTCFullYear(),calMes.getUTCMonth()+1,1));calSel=null;drawCal()};
+
+/* ---------- Épocas: pantalla ---------- */
+function buildEras(){
+  const g=$("#eras"); g.innerHTML="";
+  EPOCAS.forEach(e=>g.append(e.jugable
+    ?el("button",{class:"era",onclick:()=>{epoca=e;store.set("vg_epoca",e.id);show(player?"game":"selector")}},el("span",{class:"st"},e.etapa),el("span",{class:"yr"},String(e.año)),el("p",{},e.ev))
+    :el("div",{class:"era off","aria-disabled":"true"},el("span",{class:"st"},e.etapa),el("span",{class:"yr"},String(e.año)),el("p",{},e.ev),el("span",{class:"soon"},"En preparación"))));
+}
+$("#b-epocas").onclick=()=>show("epocas");
+
 /* ---------- Navegación ---------- */
 const VIEWS=[["escritorio","Escritorio"],["mapa","Mapa"],["caras","Caras"],["diario","Diario"],["planes","Planes"]];
 let current="escritorio";
@@ -668,13 +775,17 @@ function go(v){
   current=v;
   document.querySelectorAll("[data-view]").forEach(s=>s.hidden=s.dataset.view!==v);
   document.querySelectorAll("#views button,#mnav button").forEach(b=>b.setAttribute("aria-current",String(b.dataset.go===v)));
-  if(v==="escritorio")drawDesk(); if(v==="mapa")drawMap(document.querySelector("#map-tabs [aria-selected=true]").dataset.map);
+  if(v==="escritorio"){drawDesk();drawCal()} if(v==="mapa")drawMap(document.querySelector("#map-tabs [aria-selected=true]").dataset.map);
   if(v==="caras"){drawUnknown();drawFaces()} if(v==="diario")drawBook(); if(v==="planes")drawPlans();
   try{location.hash=v}catch(e){}
 }
 function buildNav(){for(const id of ["#views","#mnav"]){const n=$(id);n.innerHTML="";VIEWS.forEach(([k,t])=>n.append(el("button",{"data-go":k,onclick:()=>{go(k);window.scrollTo(0,0)}},t)))}}
 function show(v){
-  $("#selector").hidden=v!=="selector"; $("#game").hidden=v!=="game"; $("#mnav").hidden=v!=="game";
+  if(!epoca&&v!=="epocas")v="epocas";
+  $("#epocas").hidden=v!=="epocas"; $("#selector").hidden=v!=="selector"; $("#game").hidden=v!=="game"; $("#mnav").hidden=v!=="game";
+  if(epoca){hoy=D(store.get("vg_fecha",epoca.fecha));calMes=new Date(Date.UTC(hoy.getUTCFullYear(),hoy.getUTCMonth(),1))}
+  if(v==="epocas"){buildEras();window.scrollTo(0,0);return}
+  if(v==="selector"){$("#sel-label").textContent="Versalles · "+MESES[hoy.getUTCMonth()]+" de "+hoy.getUTCFullYear();$("#sel-sub").textContent=epoca.ev}
   if(v==="game"){buildBar();buildNav();drawObjetos();const h=(location.hash||"").slice(1);go(VIEWS.some(x=>x[0]===h)?h:"escritorio")} else buildSelector();
   window.scrollTo(0,0);
 }
