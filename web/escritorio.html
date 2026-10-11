@@ -122,7 +122,7 @@ button.era:hover{background:var(--chip)}
 .desk{position:relative;height:620px;border-radius:6px;background:
   radial-gradient(120% 90% at 50% 40%,transparent 60%,rgb(0 0 0 / .25)),
   repeating-linear-gradient(90deg,rgb(255 255 255 / .018) 0 2px,transparent 2px 6px),var(--desk);
-  border:8px solid var(--desk-edge);overflow:hidden;touch-action:pan-y}
+  border:8px solid var(--desk-edge);overflow:hidden;touch-action:pan-y;isolation:isolate}
 .desk-legend{position:absolute;left:12px;bottom:8px;font-size:.78rem;color:rgb(255 255 255 / .55);font-style:italic;pointer-events:none}
 .doc{position:absolute;width:220px;background:var(--sheet);color:var(--sheet-ink);padding:12px 14px 14px;border-radius:2px;
   box-shadow:0 1px 0 rgb(0 0 0 / .08),0 8px 18px rgb(0 0 0 / .35);cursor:grab;user-select:none;touch-action:none;display:grid;gap:4px}
@@ -166,7 +166,7 @@ button.era:hover{background:var(--chip)}
 .archive button{border:0;background:none;padding:0;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px;text-align:left}
 
 /* Atril: lectura de un documento */
-.overlay{position:fixed;inset:0;z-index:30;background:rgb(10 12 18 / .55);display:grid;place-items:center;padding:calc(16px + env(safe-area-inset-top,0px)) 16px calc(16px + env(safe-area-inset-bottom,0px));overflow-y:auto}
+.overlay{position:fixed;inset:0;z-index:100;background:rgb(10 12 18 / .55);display:grid;place-items:center;padding:calc(16px + env(safe-area-inset-top,0px)) 16px calc(16px + env(safe-area-inset-bottom,0px));overflow-y:auto}
 .letter{width:min(620px,100%);background:var(--sheet);color:var(--sheet-ink);padding:28px clamp(18px,5vw,44px);border-radius:2px;box-shadow:0 20px 50px rgb(0 0 0 / .45);display:grid;gap:12px;position:relative}
 .letter .k{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sheet-muted)}
 .letter h2{font-size:1.6rem}
