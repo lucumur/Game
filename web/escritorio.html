@@ -156,14 +156,7 @@ button{cursor:pointer}
     <div class="field"><label class="label" for="f-pos">Posición</label><select id="f-pos"></select><div class="hint" id="h-pos"></div></div>
     <div class="field"><label class="label" for="f-origen">Origen</label><select id="f-origen"></select></div>
     <div class="field"><label class="label" for="f-edu">Educación</label><select id="f-edu"></select></div>
-    <div class="field"><label class="label" for="f-asp">Aspiración</label><select id="f-asp"></select></div>
-    <div class="field"><label class="label" for="f-amb">Ambición concreta</label><input id="f-amb" autocomplete="off"></div>
   </div>
-  <section class="ejes" aria-label="Carácter">
-    <span class="label">Carácter</span>
-    <div id="ejes"></div>
-    <div class="note">Los demás personajes tienen los mismos ejes, pero nunca los verás: solo lo que tu personaje alcance a percibir.</div>
-  </section>
   <div class="sel-actions">
     <button class="btn primary" id="b-entrar">Entrar en Versalles</button>
   </div>
@@ -271,7 +264,7 @@ const EJES = [
 ];
 const JORNADA = ["Lever","Messe","Conseil","Dîner","Promenade","Souper","Coucher"];
 
-const EJEMPLO = {nombre:"Antoine Fabre", pos:8, origen:1, edu:2, asp:0, amb:"Llegar a primer médico del rey", ejes:[3,1,1,1,2]};
+const EJEMPLO = {nombre:"Antoine Fabre", pos:8, origen:1, edu:2};
 
 /* ---------- Almacenamiento local (solo comodidad del visor) ---------- */
 const store = {
@@ -289,18 +282,11 @@ function buildSelector(){
   const grp = {}; const sp=$("#f-pos"); sp.innerHTML="";
   POSICIONES.forEach((x,i)=>{(grp[x[0]] ||= el("optgroup",{label:x[0]})).append(el("option",{value:i},x[1]))});
   Object.values(grp).forEach(g=>sp.append(g));
-  fillSelect("#f-origen",ORIGENES); fillSelect("#f-edu",EDUCACION); fillSelect("#f-asp",ASPIRACION);
-  $("#f-nombre").value=p.nombre; sp.value=p.pos; $("#f-origen").value=p.origen; $("#f-edu").value=p.edu; $("#f-asp").value=p.asp; $("#f-amb").value=p.amb;
+  fillSelect("#f-origen",ORIGENES); fillSelect("#f-edu",EDUCACION);
+  $("#f-nombre").value=p.nombre; sp.value=p.pos; $("#f-origen").value=p.origen; $("#f-edu").value=p.edu;
   const hp=()=>{$("#h-pos").textContent="Movimientos propios: "+POSICIONES[sp.value][2]}; sp.onchange=hp; hp();
-  const box=$("#ejes"); box.innerHTML="";
-  const vals=[...p.ejes];
-  EJES.forEach(([n,grados],i)=>{
-    const seg=el("div",{class:"seg",role:"group","aria-label":n});
-    grados.forEach((g,j)=>seg.append(el("button",{type:"button","aria-pressed":String(vals[i]===j),title:g,onclick:()=>{vals[i]=j;[...seg.children].forEach((b,k)=>b.setAttribute("aria-pressed",String(k===j)))}},g)));
-    box.append(el("div",{class:"eje"},el("span",{class:"label"},n),seg));
-  });
   $("#b-entrar").onclick=()=>{
-    player={nombre:$("#f-nombre").value.trim()||EJEMPLO.nombre,pos:+sp.value,origen:+$("#f-origen").value,edu:+$("#f-edu").value,asp:+$("#f-asp").value,amb:$("#f-amb").value.trim(),ejes:vals};
+    player={nombre:$("#f-nombre").value.trim()||EJEMPLO.nombre,pos:+sp.value,origen:+$("#f-origen").value,edu:+$("#f-edu").value};
     store.set("vg_player",player); show("desk");
   };
 }
@@ -311,7 +297,7 @@ function buildBar(){
   $("#who").innerHTML=""; $("#who").append(p.nombre," ",el("small",{},"· "+POSICIONES[p.pos][1]+(player?"":" (ejemplo)")));
   $("#fecha").textContent=FECHA+" · Patio Real";
   const c=$("#clock"); c.innerHTML=""; JORNADA.forEach((j,i)=>c.append(el("span",{class:i===4?"now":""},j)));
-  const G=[["Favor real",1],["Dinero",2],["Reputación",2],["Salud",4],["Tensión",3,true]];
+  const G=[["Favor real",1],["Dinero",2],["Reputación",2],["Salud",4]];
   const g=$("#gauges"); g.innerHTML="";
   G.forEach(([n,v,alert])=>{const pips=el("span",{class:"pips","aria-label":n+": "+v+" de 5"});for(let i=0;i<5;i++)pips.append(el("i",{class:i<v?"on":""}));g.append(el("span",{class:"gauge"+(alert&&v>=3?" alert":"")},n,pips))});
 }
