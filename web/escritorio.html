@@ -84,6 +84,19 @@ button.era:hover{background:var(--chip)}
 .cal-list{display:grid;gap:4px;font-size:.88rem}
 .cal-list .f{color:var(--seal)}
 
+/* ---------- Partida (guardar / cargar) ---------- */
+.menu{width:min(560px,100%);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:grid;gap:12px;box-shadow:0 20px 50px rgb(0 0 0 / .35)}
+.menu .row{display:flex;gap:8px;flex-wrap:wrap;align-items:end}
+.menu .row .field{flex:1 1 14rem}
+.saves{display:grid;gap:6px;margin:0;padding:0;list-style:none}
+.save{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 10px;border:1px solid var(--line);border-radius:var(--r);padding:8px 10px;background:var(--paper)}
+.save.cur{border-color:var(--gilt)}
+.save b{font-weight:500;overflow-wrap:anywhere}
+.save .meta{grid-column:1;font-size:.82rem;color:var(--muted)}
+.save .acts{grid-row:1/3;grid-column:2;display:flex;gap:6px;align-items:center}
+.status{font-size:.85rem;color:var(--muted)}
+.btn.danger{border-color:var(--seal);color:var(--seal)}
+
 /* ---------- Barra ---------- */
 #game{padding-block:10px 20px;display:grid;gap:14px}
 .bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);display:grid;gap:8px;padding-block:10px 0;border-bottom:1px solid var(--line)}
@@ -298,7 +311,8 @@ button.kin:hover{border-color:var(--gilt)}
       <div class="who" id="who"></div>
       <div style="display:flex;gap:12px;align-items:baseline;flex-wrap:wrap">
         <span class="date" id="fecha"></span>
-        <button class="btn sm" id="b-perso">Cambiar personaje</button>
+        <button class="btn sm" id="b-back">‹ Épocas</button>
+        <button class="btn sm primary" id="b-partida">Partida</button>
       </div>
     </div>
     <div class="clock" id="clock" aria-label="Jornada del rey"></div>
@@ -394,6 +408,29 @@ button.kin:hover{border-color:var(--gilt)}
 
 <aside id="ficha" hidden aria-label="Ficha"></aside>
 <div class="overlay" id="lectern" hidden></div>
+<div class="overlay" id="partida" hidden>
+  <section class="menu" role="dialog" aria-label="Partida">
+    <div class="pane-h"><h2>Partida</h2><button class="x" id="p-close" aria-label="Cerrar">×</button></div>
+    <div class="row">
+      <div class="field"><label class="label" for="p-nombre">Nombre de la partida</label><input id="p-nombre" autocomplete="off"></div>
+      <button class="btn primary" id="p-save">Guardar</button>
+    </div>
+    <span class="status" id="p-status"></span>
+    <span class="label">Partidas guardadas</span>
+    <ul class="saves" id="p-list"></ul>
+    <div class="rule"></div>
+    <div class="row">
+      <button class="btn sm" id="p-export">Exportar archivo</button>
+      <label class="btn sm" for="p-import" style="cursor:pointer">Importar archivo</label>
+      <input type="file" id="p-import" accept=".json,application/json" hidden>
+    </div>
+    <div class="row">
+      <button class="btn sm" id="p-perso">Cambiar personaje</button>
+      <button class="btn sm" id="p-epocas">Volver a las épocas</button>
+      <button class="btn sm danger" id="p-new">Nueva partida</button>
+    </div>
+  </section>
+</div>
 <nav class="mnav" id="mnav" hidden aria-label="Secciones"></nav>
 
 <script>
@@ -499,7 +536,8 @@ const TIPOS_PLAN = ["Ganar favor","Obtener un cargo","Desacreditar","Averiguar u
 const PASOS = ["Preparar","Acercarse","Actuar","Consumar"];
 
 /* ---------- Utilidades ---------- */
-const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const MEM={};
+const store={get(k,d){try{const v=localStorage.getItem(k);if(v!=null)return JSON.parse(v)}catch(e){}return k in MEM?MEM[k]:d},set(k,v){if(v==null)return store.del(k);MEM[k]=v;try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}},del(k){delete MEM[k];try{localStorage.removeItem(k)}catch(e){}}};
 let player=store.get("vg_player",null);
 const $=s=>document.querySelector(s);
 const el=(t,a={},...c)=>{const e=document.createElement(t);for(const[k,v]of Object.entries(a)){if(v==null)continue;if(k==="class")e.className=v;else if(k.startsWith("on"))e.addEventListener(k.slice(2),v);else e.setAttribute(k,v)}for(const x of c)if(x!=null&&x!=="")e.append(x);return e};
@@ -962,6 +1000,66 @@ function buildEras(){
 }
 $("#b-epocas").onclick=()=>show("epocas");
 
+/* ---------- Partidas: guardar, cargar, exportar ---------- */
+const KEYS=["vg_epoca","vg_player","vg_docs","vg_notas","vg_guess","vg_planes","vg_diario","vg_glosario","vg_fecha"];
+let db=null, downloads=null, sesion=store.get("vg_sesion",null);
+const ready=(async()=>{try{if(window.claude?.use){[db,downloads]=await Promise.all([claude.use("db").catch(()=>null),claude.use("downloads").catch(()=>null)])}}catch(e){}})();
+function snapshot(){const o={};KEYS.forEach(k=>o[k]=store.get(k,null));
+  o.vg_epoca=epoca?.id||null;o.vg_player=player;o.vg_docs=deskState;o.vg_guess=guesses;o.vg_planes=planes;o.vg_glosario=[...unlocked];return o}
+function restore(o){
+  KEYS.forEach(k=>store.set(k,o[k]));
+  epoca=EPOCAS.find(e=>e.id===o.vg_epoca)||null; player=o.vg_player||null; deskState=o.vg_docs||{}; guesses=o.vg_guess||{};
+  planes=o.vg_planes||[PLAN_EJEMPLO]; unlocked=new Set(o.vg_glosario||[]);
+}
+function defaultName(){return (player||EJEMPLO).nombre.split(" ").slice(-1)[0]+" · "+(epoca?.año||"")}
+async function listSaves(){
+  await ready;
+  if(db){try{const q=await db.collection("partidas").orderBy("guardado","desc").limit(50).get();return q.docs.map(d=>({id:d.id,...d.data()}))}catch(e){setStatus("No se pudo leer la lista de partidas ("+(e.code||"error")+").");return []}}
+  return store.get("vg_partidas",[]);
+}
+function setStatus(t){$("#p-status").textContent=t}
+async function saveSession(){
+  await ready;
+  const id=sesion||("p"+Date.now().toString(36));
+  const doc={nombre:$("#p-nombre").value.trim()||defaultName(),epoca:epoca?.id||null,personaje:(player||EJEMPLO).nombre,fecha_juego:iso(hoy),guardado:new Date().toISOString(),estado:snapshot()};
+  try{
+    if(db)await db.collection("partidas").doc(id).set(doc);
+    else{const l=store.get("vg_partidas",[]).filter(s=>s.id!==id);l.unshift({id,...doc});store.set("vg_partidas",l)}
+    sesion=id;store.set("vg_sesion",id);setStatus("Guardada: "+doc.nombre+(db?" · en tu cuenta":" · solo en este navegador"));drawSaves();
+  }catch(e){setStatus(e.code==="quota_exceeded"?"No queda espacio para más partidas: borra alguna antigua y vuelve a guardar.":e.code==="not_granted"?"Sin permiso para guardar en tu cuenta. Revisa los permisos del artifact.":"No se pudo guardar ("+(e.code||e.message)+").")}
+}
+async function drawSaves(){
+  const ul=$("#p-list"); ul.innerHTML=""; const list=await listSaves();
+  if(!list.length){ul.append(el("li",{class:"note"},"Aún no hay partidas guardadas."));return}
+  list.forEach(s=>{
+    const ep=EPOCAS.find(e=>e.id===s.epoca), when=new Date(s.guardado);
+    const del=el("button",{class:"btn sm danger",onclick:async()=>{
+      if(del.dataset.armed!=="1"){del.dataset.armed="1";del.textContent="¿Borrar?";return}
+      try{if(db)await db.collection("partidas").doc(s.id).delete();else store.set("vg_partidas",store.get("vg_partidas",[]).filter(x=>x.id!==s.id));if(sesion===s.id){sesion=null;store.set("vg_sesion",null)}drawSaves()}catch(e){setStatus("No se pudo borrar ("+(e.code||e.message)+").")}
+    }},"Borrar");
+    ul.append(el("li",{class:"save"+(s.id===sesion?" cur":"")},el("b",{},s.nombre),
+      el("span",{class:"meta"},(ep?ep.año+" · ":"")+s.personaje+" · día "+s.fecha_juego.split("-").reverse().join("/")+" · guardada el "+when.toLocaleDateString("es")+" "+when.toLocaleTimeString("es",{hour:"2-digit",minute:"2-digit"})),
+      el("span",{class:"acts"},el("button",{class:"btn sm",onclick:()=>{restore(s.estado);sesion=s.id;store.set("vg_sesion",s.id);closeMenu();show(epoca?(player?"game":"selector"):"epocas")}},"Cargar"),del)));
+  });
+}
+function openMenu(){$("#p-nombre").value=defaultName();setStatus(db?"Las partidas se guardan en tu cuenta de Claude.":"Las partidas se guardan en este navegador.");$("#partida").hidden=false;drawSaves();$("#p-save").focus()}
+function closeMenu(){$("#partida").hidden=true}
+$("#b-partida").onclick=openMenu; $("#p-close").onclick=closeMenu; $("#p-save").onclick=saveSession;
+$("#partida").addEventListener("click",e=>{if(e.target.id==="partida")closeMenu()});
+$("#b-back").onclick=()=>show("epocas");
+$("#p-epocas").onclick=()=>{closeMenu();show("epocas")};
+$("#p-perso").onclick=()=>{closeMenu();show("selector")};
+$("#p-new").onclick=e=>{const b=e.currentTarget;if(b.dataset.armed!=="1"){b.dataset.armed="1";b.textContent="¿Empezar de cero? Lo no guardado se pierde";return}
+  b.dataset.armed="";b.textContent="Nueva partida";restore({});sesion=null;store.set("vg_sesion",null);closeMenu();show("epocas")};
+$("#p-export").onclick=async()=>{
+  await ready; const data=JSON.stringify({formato:"versalles-partida",version:1,nombre:$("#p-nombre").value.trim()||defaultName(),estado:snapshot()},null,1);
+  if(!downloads){setStatus("Exportar no está disponible en esta vista.");return}
+  try{const r=await downloads.save({filename:"versalles-"+defaultName().replace(/[^\w]+/g,"-")+".json",data});setStatus(r==="saved"||r?.status==="saved"?"Archivo exportado.":"Exportación cancelada.")}catch(e){setStatus("No se pudo exportar ("+(e.code||e.message)+").")}
+};
+$("#p-import").onchange=async e=>{const f=e.target.files[0];if(!f)return;
+  try{const o=JSON.parse(await f.text());if(o.formato!=="versalles-partida")throw new Error("no es un archivo de partida");restore(o.estado);sesion=null;store.set("vg_sesion",null);closeMenu();show(epoca?(player?"game":"selector"):"epocas")}
+  catch(err){setStatus("No se pudo importar: "+err.message)} e.target.value=""};
+
 /* ---------- Navegación ---------- */
 const VIEWS=[["escritorio","Escritorio"],["mapa","Mapa"],["caras","Caras"],["diario","Diario"],["planes","Planes"]];
 let current="escritorio";
@@ -985,7 +1083,6 @@ function show(v){
 }
 $("#map-tabs").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;[...e.currentTarget.children].forEach(x=>x.setAttribute("aria-selected",String(x===b)));drawMap(b.dataset.map)});
 $("#q").addEventListener("input",drawFaces); $("#f-pres").addEventListener("change",drawFaces);
-$("#b-perso").onclick=()=>show("selector");
-document.addEventListener("keydown",e=>{if(e.key==="Escape"){$("#ficha").hidden=true;closeLectern()}});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){$("#ficha").hidden=true;closeLectern();closeMenu()}});
 show(player?"game":"selector");
 </script>
