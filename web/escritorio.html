@@ -1,0 +1,487 @@
+<title>Escritorio de Versalles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Concepto: el escritorio de un cortesano en 1722 — boiserie gris verdosa, tinta azul real, filetes dorados; sello de lacre solo para lo urgente. */
+:root{
+  --paper:#eceee8; --panel:#f7f7f3; --ink:#1c2333; --muted:#5b6270; --line:#c8cabf;
+  --gilt:#8d6a22; --accent:#2b3d78; --seal:#8a2e2e; --chip:#e1e4dc;
+  --f-display:"IM Fell French Canon","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --f-body:"EB Garamond",Garamond,"Times New Roman",serif;
+  --r:4px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#10141c; --panel:#171c27; --ink:#e7e3d7; --muted:#9ba1ad; --line:#2c3342;
+  --gilt:#c9a24f; --accent:#93a8e2; --seal:#d4705f; --chip:#222a38; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#10141c; --panel:#171c27; --ink:#e7e3d7; --muted:#9ba1ad; --line:#2c3342;
+  --gilt:#c9a24f; --accent:#93a8e2; --seal:#d4705f; --chip:#222a38; color-scheme:dark}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{background:var(--paper);color:var(--ink);font:17px/1.45 var(--f-body);padding-inline:16px;padding-block:0 84px}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;text-wrap:balance;margin:0}
+h2{font-size:1.35rem}
+.label{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+button,select,input,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1280px;margin-inline:auto}
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:1px 7px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+.tag.ej{border-color:var(--gilt);color:var(--gilt)}
+.btn{border:1px solid var(--ink);background:transparent;padding:.45rem 1rem;border-radius:var(--r)}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.rule{height:1px;background:linear-gradient(90deg,transparent,var(--gilt),transparent);margin-block:4px}
+
+/* ---------- Selector ---------- */
+#selector{max-width:860px;margin-inline:auto;padding-block:28px 40px;display:grid;gap:22px}
+.sel-head{text-align:center;display:grid;gap:6px}
+.sel-head h1{font-size:clamp(2rem,6vw,3.2rem)}
+.sel-head p{margin:0;color:var(--muted);font-style:italic}
+.sel-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 20px}
+.field{display:grid;gap:4px;min-width:0}
+.field select,.field input{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:.45rem .6rem;width:100%}
+.hint{font-size:.85rem;color:var(--muted);font-style:italic;min-height:1.2em}
+.ejes{display:grid;gap:10px}
+.eje{display:grid;grid-template-columns:7.5rem 1fr;gap:10px;align-items:center}
+.seg{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.seg button{border:0;border-left:1px solid var(--line);background:var(--panel);padding:.35rem .2rem;font-size:.85rem;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.seg button:first-child{border-left:0}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.sel-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+
+/* ---------- Escritorio ---------- */
+#desk{padding-block:10px 20px;display:grid;gap:14px}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);display:grid;gap:8px;padding-block:10px;border-bottom:1px solid var(--line)}
+.bar-top{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline;justify-content:space-between}
+.who{font-family:var(--f-display);font-size:1.3rem}
+.who small{font-family:var(--f-body);font-size:.9rem;color:var(--muted);font-style:italic}
+.date{font-style:italic;color:var(--muted)}
+.clock{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.clock span{flex:0 0 auto;font-size:.8rem;padding:2px 9px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+.clock span.now{border-color:var(--gilt);color:var(--ink);background:var(--chip)}
+.gauges{display:flex;flex-wrap:wrap;gap:4px 16px}
+.gauge{display:flex;align-items:center;gap:6px;font-size:.85rem}
+.pips{display:inline-flex;gap:2px}
+.pips i{width:7px;height:7px;border:1px solid var(--gilt);border-radius:50%}
+.pips i.on{background:var(--gilt)}
+.gauge.alert .pips i{border-color:var(--seal)} .gauge.alert .pips i.on{background:var(--seal)}
+
+.desk-grid{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);gap:14px}
+.pane{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px;display:grid;gap:10px;align-content:start;min-width:0}
+.pane-h{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.tabs{display:flex;gap:2px;border-bottom:1px solid var(--line)}
+.tabs button{border:0;background:none;padding:.3rem .7rem;border-bottom:2px solid transparent;color:var(--muted)}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--gilt)}
+.side{display:grid;gap:14px;align-content:start;min-width:0}
+
+/* Mapa */
+.map-box{border:1px solid var(--line);border-radius:var(--r);background:var(--paper);overflow:hidden}
+.map-box svg{display:block;width:100%;height:auto}
+.zone{fill:var(--chip);stroke:var(--muted);stroke-width:1;cursor:pointer;transition:fill .15s}
+.zone:hover,.zone:focus{fill:var(--line);outline:none}
+.zone.sel{fill:var(--gilt);fill-opacity:.35;stroke:var(--gilt);stroke-width:1.6}
+.zone.open{fill:transparent;stroke-dasharray:3 3}
+.zone.water{fill:var(--accent);fill-opacity:.18}
+.zone.green{fill:var(--gilt);fill-opacity:.08}
+.mlabel{font:12px var(--f-body);fill:var(--ink);pointer-events:none}
+.mlabel.s{font-size:10px;fill:var(--muted)}
+.compass{font:11px var(--f-display);fill:var(--muted)}
+.city{fill:var(--ink);cursor:pointer} .city.sel{fill:var(--gilt)}
+.coast{fill:var(--chip);stroke:var(--muted);stroke-width:1}
+.map-info{display:grid;gap:4px;min-height:5.5rem}
+.map-info h3{font-size:1.15rem}
+.map-info p{margin:0}
+.note{font-size:.82rem;color:var(--muted);font-style:italic}
+
+/* Papeles */
+.paper{border-left:2px solid var(--line);padding:4px 0 4px 10px;display:grid;gap:2px}
+.paper.urg{border-left-color:var(--seal)}
+.paper b{font-weight:600}
+.paper .from{font-size:.85rem;color:var(--muted)}
+.paper p{margin:0;font-size:.95rem}
+.list{display:grid;gap:10px}
+.obj{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding-block:6px;border-bottom:1px solid var(--line)}
+.obj:last-child{border-bottom:0}
+.obj .d{grid-column:1/-1;font-size:.88rem;color:var(--muted)}
+
+/* Libro de caras */
+.faces-tools{display:flex;gap:8px;flex-wrap:wrap}
+.faces-tools input,.faces-tools select{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:.35rem .6rem;min-width:0}
+.faces-tools input{flex:1 1 14rem}
+.rama{display:grid;gap:8px}
+.rama h3{font-size:1.05rem;color:var(--gilt)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px}
+.card{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:center;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:8px}
+.card:hover{border-color:var(--gilt)}
+.card.away{opacity:.55}
+.medal{width:44px;height:44px;border-radius:50%;border:1px solid var(--gilt);display:grid;place-items:center;font-family:var(--f-display);font-size:1.05rem;color:var(--gilt)}
+.card b{display:block;font-weight:500;line-height:1.2}
+.card span{font-size:.82rem;color:var(--muted);display:block;line-height:1.25}
+
+/* Ficha */
+#ficha{position:fixed;inset:0 0 0 auto;width:min(440px,100%);background:var(--panel);border-left:1px solid var(--line);z-index:20;overflow-y:auto;padding:calc(18px + env(safe-area-inset-top,0px)) 18px calc(18px + env(safe-area-inset-bottom,0px));display:grid;gap:12px;align-content:start;box-shadow:-8px 0 24px rgb(0 0 0 / .18)}
+#ficha dl{display:grid;grid-template-columns:8.5rem 1fr;gap:6px 10px;margin:0}
+#ficha dt{color:var(--muted);font-size:.85rem}
+#ficha dd{margin:0}
+#ficha textarea{width:100%;min-height:7rem;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:.5rem}
+.x{justify-self:end;border:0;background:none;font-size:1.6rem;line-height:1}
+
+/* Navegación móvil */
+.mnav{display:none}
+@media (max-width:860px){
+  body{font-size:16px}
+  .sel-grid{grid-template-columns:1fr}
+  .eje{grid-template-columns:1fr}
+  .desk-grid{grid-template-columns:1fr}
+  #desk [data-pane]{display:none}
+  #desk [data-pane].show{display:grid}
+  .side{display:contents}
+  .mnav{display:grid;grid-template-columns:repeat(4,1fr);position:fixed;left:0;right:0;bottom:0;z-index:10;background:var(--panel);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+  .mnav button{border:0;background:none;padding:.7rem .2rem;color:var(--muted);font-size:.9rem}
+  .mnav button[aria-current="true"]{color:var(--ink);box-shadow:inset 0 2px 0 var(--gilt)}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<!-- ================= SELECTOR ================= -->
+<main id="selector" class="wrap" hidden>
+  <header class="sel-head">
+    <span class="label">Versalles · junio de 1722</span>
+    <h1>Lettre d’introduction</h1>
+    <p>La corte vuelve a Versalles tras siete años en París. ¿Quién eres al cruzar el Patio Real?</p>
+    <div class="rule"></div>
+  </header>
+  <div class="sel-grid">
+    <div class="field"><label class="label" for="f-nombre">Nombre</label><input id="f-nombre" autocomplete="off"></div>
+    <div class="field"><label class="label" for="f-pos">Posición</label><select id="f-pos"></select><div class="hint" id="h-pos"></div></div>
+    <div class="field"><label class="label" for="f-origen">Origen</label><select id="f-origen"></select></div>
+    <div class="field"><label class="label" for="f-edu">Educación</label><select id="f-edu"></select></div>
+    <div class="field"><label class="label" for="f-asp">Aspiración</label><select id="f-asp"></select></div>
+    <div class="field"><label class="label" for="f-amb">Ambición concreta</label><input id="f-amb" autocomplete="off"></div>
+  </div>
+  <section class="ejes" aria-label="Carácter">
+    <span class="label">Carácter</span>
+    <div id="ejes"></div>
+    <div class="note">Los demás personajes tienen los mismos ejes, pero nunca los verás: solo lo que tu personaje alcance a percibir.</div>
+  </section>
+  <div class="sel-actions">
+    <button class="btn primary" id="b-entrar">Entrar en Versalles</button>
+  </div>
+</main>
+
+<!-- ================= ESCRITORIO ================= -->
+<div id="desk" class="wrap" hidden>
+  <header class="bar">
+    <div class="bar-top">
+      <div class="who" id="who"></div>
+      <div style="display:flex;gap:12px;align-items:baseline;flex-wrap:wrap">
+        <span class="date" id="fecha"></span>
+        <button class="btn" id="b-perso" style="padding:.15rem .6rem;font-size:.85rem">Cambiar personaje</button>
+      </div>
+    </div>
+    <div class="clock" id="clock" aria-label="Jornada del rey"></div>
+    <div class="gauges" id="gauges"></div>
+  </header>
+
+  <div class="desk-grid">
+    <section class="pane show" data-pane="mapa" aria-label="Mapa">
+      <div class="pane-h"><h2>Mapa</h2><span class="note">Planos esquemáticos, no a escala</span></div>
+      <div class="tabs" role="tablist" id="map-tabs">
+        <button role="tab" data-map="palacio" aria-selected="true">Palacio</button>
+        <button role="tab" data-map="dominio" aria-selected="false">Dominio</button>
+        <button role="tab" data-map="francia" aria-selected="false">Francia</button>
+      </div>
+      <div class="map-box" id="map-box"></div>
+      <div class="map-info" id="map-info"></div>
+    </section>
+
+    <div class="side">
+      <section class="pane" data-pane="papeles" aria-label="Papeles">
+        <div class="pane-h"><h2>Papeles</h2><span class="tag ej">Ejemplo</span></div>
+        <div class="tabs" role="tablist" id="pap-tabs">
+          <button role="tab" data-p="carta" aria-selected="true">Cartas</button>
+          <button role="tab" data-p="rumor" aria-selected="false">Rumores</button>
+          <button role="tab" data-p="oblig" aria-selected="false">Obligaciones</button>
+        </div>
+        <div class="list" id="papeles"></div>
+      </section>
+      <section class="pane" data-pane="papeles" aria-label="Objetos">
+        <div class="pane-h"><h2>Objetos</h2><span class="tag ej">Ejemplo</span></div>
+        <div id="objetos"></div>
+      </section>
+    </div>
+  </div>
+
+  <section class="pane" data-pane="caras" aria-label="Libro de caras">
+    <div class="pane-h"><h2>Libro de caras</h2><span class="note" id="faces-count"></span></div>
+    <div class="faces-tools">
+      <input id="q" type="search" placeholder="Buscar por nombre o título" aria-label="Buscar">
+      <select id="f-pres" aria-label="Presencia">
+        <option value="">Toda presencia</option>
+        <option value="reside">Reside en el palacio</option>
+        <option value="frecuenta">Frecuenta la corte</option>
+        <option value="ocasional">Visitas ocasionales</option>
+        <option value="ausente">Fuera de Versalles</option>
+      </select>
+    </div>
+    <div id="faces" class="list"></div>
+  </section>
+</div>
+
+<aside id="ficha" hidden aria-label="Ficha"></aside>
+
+<nav class="mnav" id="mnav" hidden>
+  <button data-go="mapa" aria-current="true">Mapa</button>
+  <button data-go="caras">Caras</button>
+  <button data-go="papeles">Papeles</button>
+  <button data-go="yo">Yo</button>
+</nav>
+
+<script>
+const PERSONAJES = [{"id": "luis-xv", "nombre": "Luis XV", "titulo": "Rey de Francia y de Navarra", "rama": "Real", "nacimiento": "1710-02-15", "edad_jun_1722": 12, "parentesco": "Bisnieto de Luis XIV", "situacion_1722": "Rey menor de edad; mayoría legal en febrero de 1723", "presencia_versalles": "reside", "verificacion": "por verificar", "notas": "Vuelve a Versalles el 15 jun 1722 (verificado).", "historico": true}, {"id": "mariana-victoria", "nombre": "Mariana Victoria de Borbón", "titulo": "Infanta de España, prometida del rey", "rama": "Borbón de España", "nacimiento": "1718-03-31", "edad_jun_1722": 4, "parentesco": "Hija de Felipe V de España", "situacion_1722": "Prometida de Luis XV; gobernanta: Madame de Ventadour", "presencia_versalles": "por verificar", "verificacion": "verificado", "notas": "Llega a París el 2 mar 1722; residencia documentada en el Louvre. Devuelta a España en 1725.", "historico": true}, {"id": "felipe-ii-orleans", "nombre": "Felipe II de Orleans", "titulo": "Duque de Orleans; Regente", "rama": "Orleans", "nacimiento": "1674-08-02", "edad_jun_1722": 47, "parentesco": "Sobrino de Luis XIV; primer príncipe de la sangre", "situacion_1722": "Regente del reino", "presencia_versalles": "reside", "verificacion": "por verificar", "notas": "", "historico": true}, {"id": "francoise-marie-blois", "nombre": "Francisca María de Borbón", "titulo": "Duquesa de Orleans", "rama": "Legitimados / Orleans", "nacimiento": "1677-05-04", "edad_jun_1722": 45, "parentesco": "Hija legitimada de Luis XIV y Madame de Montespan; esposa del Regente", "situacion_1722": "Duquesa de Orleans", "presencia_versalles": "frecuenta", "verificacion": "por verificar", "notas": "", "historico": true}, {"id": "liselotte", "nombre": "Isabel Carlota del Palatinado", "titulo": "Madame; duquesa viuda de Orleans", "rama": "Orleans", "nacimiento": "1652-05-27", "edad_jun_1722": 70, "parentesco": "Madre del Regente; viuda de Monsieur", "situacion_1722": "Viuda; vive sobre todo en Saint-Cloud", "presencia_versalles": "ocasional", "verificacion": "por verificar", "notas": "Muere el 8 dic 1722.", "historico": true}, {"id": "luis-orleans-chartres", "nombre": "Luis de Orleans", "titulo": "Duque de Chartres", "rama": "Orleans", "nacimiento": "1703-08-04", "edad_jun_1722": 18, "parentesco": "Hijo del Regente", "situacion_1722": "Heredero de la casa de Orleans", "presencia_versalles": "reside", "verificacion": "por verificar", "notas": "", "historico": true}, {"id": "louise-elisabeth-montpensier", "nombre": "Luisa Isabel de Orleans", "titulo": "Mademoiselle de Montpensier; princesa de Asturias", "rama": "Orleans", "nacimiento": "1709-12-11", "edad_jun_1722": 12, "parentesco": "Hija del Regente", "situacion_1722": "Casada con el príncipe de Asturias", "presencia_versalles": "ausente", "verificacion": "por verificar", "notas": "En España tras el intercambio de princesas (1722).", "historico": true}, {"id": "philippine-elisabeth-beaujolais", "nombre": "Felipa Isabel de Orleans", "titulo": "Mademoiselle de Beaujolais", "rama": "Orleans", "nacimiento": "1714-12-18", "edad_jun_1722": 7, "parentesco": "Hija del Regente", "situacion_1722": "Prometida del infante Carlos", "presencia_versalles": "ausente", "verificacion": "por verificar", "notas": "Enviada a España.", "historico": true}, {"id": "charlotte-aglae", "nombre": "Carlota Aglaé de Orleans", "titulo": "Princesa heredera de Módena", "rama": "Orleans", "nacimiento": "1700-10-20", "edad_jun_1722": 21, "parentesco": "Hija del Regente", "situacion_1722": "Casada en Módena (1720)", "presencia_versalles": "ausente", "verificacion": "por verificar", "notas": "", "historico": true}, {"id": "louise-adelaide-chelles", "nombre": "Luisa Adelaida de Orleans", "titulo": "Abadesa de Chelles", "rama": "Orleans", "nacimiento": "1698-08-13", "edad_jun_1722": 23, "parentesco": "Hija del Regente", "situacion_1722": "Abadesa", "presencia_versalles": "ausente", "verificacion": "por verificar", "notas": "", "historico": true}, {"id": "louise-diane", "nombre": "Luisa Diana de Orleans", "titulo": "Mademoiselle de Chartres", "rama": "Orleans", "nacimiento": "1716-06-27", "edad_jun_1722": 5, "parentesco": "Hija menor del Regente", "situacion_1722": "Niña", "presencia_versalles": "por verificar", "verificacion": "por verificar", "notas": "", "historico": true}, {"id": "luis-enrique-borbon", "nombre": "Luis Enrique de Borbón-Condé", "titulo": "Monsieur le Duc; duque de Borbón, príncipe de Condé", "rama": "Condé", "nacimiento": "1692-08-18", "edad_jun_1722": 29, "parentesco": "Bisnieto del Gran Condé; nieto materno de Luis XIV", "situacion_1722": "Consejo de Regencia; superintendente de la educación del rey (desde 1718)", "presencia_versalles": "reside", "verificacion": "verificado", "notas": "Viudo desde 1720. Amante: marquesa de Prie. Enriquecido con el sistema de Law.", "historico": true}, {"id": "louise-francoise-duchesse", "nombre": "Luisa Francisca de Borbón", "titulo": "Madame la Duchesse (viuda)", "rama": "Legitimados / Condé", "nacimiento": "1673-06-01", "edad_jun_1722": 49, "parentesco": "Hija legitimada de Luis XIV y Madame de Montespan; madre de Monsieur le Duc", "situacion_1722": "Princesa viuda de Condé", "presencia_versalles": "ocasional", "verificacion": "por verificar", "notas": "Residencia en París (Palais-Bourbon).", "historico": true}, {"id": "charles-charolais", "nombre": "Carlos de Borbón-Condé", "titulo": "Conde de Charolais", "rama": "Condé", "nacimiento": "1700-06-19", "edad_jun_1722": 21, "parentesco": "Hermano de Monsieur le Duc", "situacion_1722": "Príncipe de la sangre", "presencia_versalles": "frecuenta", "verificacion": "por verificar", "notas": "", "historico": true}, {"id": "louis-clermont", "nombre": "Luis de Borbón-Condé", "titulo": "Conde de Clermont", "rama": "Condé", "nacimiento": "1709-06-15", "edad_jun_1722": 13, "parentesco": "Hermano de Monsieur le Duc", "situacion_1722": "Príncipe de la sangre; destinado a la Iglesia", "presencia_versalles": "frecuenta", "verificacion": "por verificar", "notas": "", "historico": true}, {"id": "louise-anne-charolais", "nombre": "Luisa Ana de Borbón-Condé", "titulo": "Mademoiselle de Charolais", "rama": "Condé", "nacimiento": "1695-06-23", "edad_jun_1722": 26, "parentesco": "Hermana de Monsieur le Duc", "situacion_1722": "Soltera", "presencia_versalles": "frecuenta", "verificacion": "por verificar", "notas": "", "historico": true}, {"id": "marie-anne-clermont", "nombre": "María Ana de Borbón-Condé", "titulo": "Mademoiselle de Clermont", "rama": "Condé", "nacimiento": "1697-10-16", "edad_jun_1722": 24, "parentesco": "Hermana de Monsieur le Duc", "situacion_1722": "Soltera", "presencia_versalles": "frecuenta", "verificacion": "por verificar", "notas": "", "historico": true}, {"id": "henriette-vermandois", "nombre": "Enriqueta Luisa de Borbón-Condé", "titulo": "Mademoiselle de Vermandois", "rama": "Condé", "nacimiento": "1703-01-15", "edad_jun_1722": 19, "parentesco": "Hermana de Monsieur le Duc", "situacion_1722": "Religiosa", "presencia_versalles": "ausente", "verificacion": "por verificar", "notas": "En 1725 su hermano la propone como esposa del rey (verificado).", "historico": true}, {"id": "elisabeth-sens", "nombre": "Isabel Alejandrina de Borbón-Condé", "titulo": "Mademoiselle de Sens", "rama": "Condé", "nacimiento": "1705-09-15", "edad_jun_1722": 16, "parentesco": "Hermana de Monsieur le Duc", "situacion_1722": "Soltera", "presencia_versalles": "frecuenta", "verificacion": "por verificar", "notas": "", "historico": true}, {"id": "louise-elisabeth-conti", "nombre": "Luisa Isabel de Borbón-Condé", "titulo": "Princesa de Conti", "rama": "Condé / Conti", "nacimiento": "1693-11-22", "edad_jun_1722": 28, "parentesco": "Hermana de Monsieur le Duc; esposa del príncipe de Conti", "situacion_1722": "Princesa de Conti", "presencia_versalles": "frecuenta", "verificacion": "por verificar", "notas": "", "historico": true}, {"id": "louis-armand-conti", "nombre": "Luis Armando II de Borbón", "titulo": "Príncipe de Conti", "rama": "Conti", "nacimiento": "1695-11-10", "edad_jun_1722": 26, "parentesco": "Príncipe de la sangre", "situacion_1722": "Jefe de la casa de Conti", "presencia_versalles": "frecuenta", "verificacion": "por verificar", "notas": "", "historico": true}, {"id": "marie-therese-conti", "nombre": "María Teresa de Borbón-Condé", "titulo": "Princesa viuda de Conti", "rama": "Conti", "nacimiento": "1666-02-01", "edad_jun_1722": 56, "parentesco": "Madre del príncipe de Conti", "situacion_1722": "Viuda", "presencia_versalles": "ocasional", "verificacion": "por verificar", "notas": "", "historico": true}, {"id": "louise-adelaide-roche", "nombre": "Luisa Adelaida de Borbón-Conti", "titulo": "Mademoiselle de La Roche-sur-Yon", "rama": "Conti", "nacimiento": "1696-11-02", "edad_jun_1722": 25, "parentesco": "Hermana del príncipe de Conti", "situacion_1722": "Soltera", "presencia_versalles": "frecuenta", "verificacion": "por verificar", "notas": "", "historico": true}, {"id": "duc-du-maine", "nombre": "Luis Augusto de Borbón", "titulo": "Duque de Maine", "rama": "Legitimados", "nacimiento": "1670-03-31", "edad_jun_1722": 52, "parentesco": "Hijo legitimado de Luis XIV y Madame de Montespan", "situacion_1722": "Apartado del poder tras la anulación del testamento (1715) y la conspiración de Cellamare (1718)", "presencia_versalles": "ocasional", "verificacion": "por verificar", "notas": "Residencia principal: Sceaux.", "historico": true}, {"id": "duchesse-du-maine", "nombre": "Ana Luisa Benedicta de Borbón-Condé", "titulo": "Duquesa de Maine", "rama": "Condé / Legitimados", "nacimiento": "1676-11-08", "edad_jun_1722": 45, "parentesco": "Esposa del duque de Maine; nieta del Gran Condé", "situacion_1722": "Encarcelada tras Cellamare, liberada en 1720", "presencia_versalles": "ocasional", "verificacion": "por verificar", "notas": "Corte propia en Sceaux.", "historico": true}, {"id": "prince-de-dombes", "nombre": "Luis Augusto de Borbón", "titulo": "Príncipe de Dombes", "rama": "Legitimados", "nacimiento": "1700-03-04", "edad_jun_1722": 22, "parentesco": "Hijo mayor del duque de Maine", "situacion_1722": "", "presencia_versalles": "frecuenta", "verificacion": "por verificar", "notas": "", "historico": true}, {"id": "comte-d-eu", "nombre": "Luis Carlos de Borbón", "titulo": "Conde de Eu", "rama": "Legitimados", "nacimiento": "1701-10-15", "edad_jun_1722": 20, "parentesco": "Hijo del duque de Maine", "situacion_1722": "", "presencia_versalles": "frecuenta", "verificacion": "por verificar", "notas": "", "historico": true}, {"id": "comte-de-toulouse", "nombre": "Luis Alejandro de Borbón", "titulo": "Conde de Toulouse", "rama": "Legitimados", "nacimiento": "1678-06-06", "edad_jun_1722": 44, "parentesco": "Hijo legitimado de Luis XIV y Madame de Montespan", "situacion_1722": "Almirante de Francia", "presencia_versalles": "frecuenta", "verificacion": "por verificar", "notas": "Residencia principal: Rambouillet.", "historico": true}];
+const FECHA = "lundi 15 juin 1722";
+
+/* ---------- Catálogos (REGLAS.md §1, §3, §4) ---------- */
+const POSICIONES = [
+ ["Espada","Duque y par","Reclamar precedencia; proteger o hundir con su sola presencia"],
+ ["Espada","Cortesano sin cargo","Asistir a todo; tejer y vender presentaciones"],
+ ["Espada","Oficial de la guardia","Controlar quién pasa por una puerta; ver quién entra de noche"],
+ ["Toga","Magistrado del Parlamento","Retrasar o desaparecer un expediente"],
+ ["Toga","Consejero de Estado","Redactar informes que deciden carreras"],
+ ["Clero","Obispo cortesano","Predicar ante el rey; otorgar beneficios"],
+ ["Clero","Confesor","Oír secretos; condicionar la absolución"],
+ ["Clero","Abate de salón","Circular libremente; difundir ideas y libelos"],
+ ["Casa del rey","Médico de la corte","Diagnosticar u ocultar un diagnóstico; acceso a los cuerpos"],
+ ["Casa del rey","Ayuda de cámara","Presente en el lever y el coucher; oír"],
+ ["Casa del rey","Intendente de los Menus-Plaisirs","Organizar fiestas: decidir quién luce"],
+ ["Fuera de jerarquía","Financiero","Prestar; comprar deudas ajenas y cobrarlas en favores"],
+ ["Fuera de jerarquía","Artista de las obras reales","Retratar: intimidad y halago"],
+ ["Fuera de jerarquía","Embajador extranjero","Correo diplomático; pagar informantes"],
+ ["Casa de una princesa","Dama de compañía","Llevar mensajes; concertar matrimonios"]
+];
+const ORIGENES = ["Parisino","Provinciano","Provinciano arruinado por Law","Enriquecido por Law","De familia conversa (protestante oculta)","Bastardo reconocido"];
+const EDUCACION = ["Colegio jesuita","Oratorianos (tendencia jansenista)","Facultad de medicina de Montpellier","Facultad de derecho","Autodidacta de salones","Sin estudios"];
+const ASPIRACION = ["Cumplir el estatus esperado","Ascender de estamento","Fama","Conservar lo que tengo","Reconocimiento en mi círculo"];
+const EJES = [
+ ["Lucidez",["Naïf","Crédule","Moyen","Avisé","Lucide"]],
+ ["Moral",["Juste","Droit","Accommodant","Retors","Pervers"]],
+ ["Audacia",["Prudent","Mesuré","Pondéré","Hardi","Audacieux"]],
+ ["Discreción",["Secret","Discret","Réservé","Causeur","Bavard"]],
+ ["Ego",["Quebradizo","Susceptible","Firme","Flexible","Maleable"]]
+];
+const JORNADA = ["Lever","Messe","Conseil","Dîner","Promenade","Souper","Coucher"];
+
+const EJEMPLO = {nombre:"Antoine Fabre", pos:8, origen:1, edu:2, asp:0, amb:"Llegar a primer médico del rey", ejes:[3,1,1,1,2]};
+
+/* ---------- Almacenamiento local (solo comodidad del visor) ---------- */
+const store = {
+  get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},
+  set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+};
+let player = store.get("vg_player", null);
+const $ = s => document.querySelector(s);
+const el = (t,a={},...c)=>{const e=document.createElement(t);for(const[k,v]of Object.entries(a)){if(k==="class")e.className=v;else if(k.startsWith("on"))e.addEventListener(k.slice(2),v);else e.setAttribute(k,v)}for(const x of c)e.append(x);return e};
+
+/* ---------- Selector ---------- */
+function fillSelect(id,items,fmt){const s=$(id);s.innerHTML="";items.forEach((it,i)=>s.append(el("option",{value:i},fmt?fmt(it):it)))}
+function buildSelector(){
+  const p = player || EJEMPLO;
+  const grp = {}; const sp=$("#f-pos"); sp.innerHTML="";
+  POSICIONES.forEach((x,i)=>{(grp[x[0]] ||= el("optgroup",{label:x[0]})).append(el("option",{value:i},x[1]))});
+  Object.values(grp).forEach(g=>sp.append(g));
+  fillSelect("#f-origen",ORIGENES); fillSelect("#f-edu",EDUCACION); fillSelect("#f-asp",ASPIRACION);
+  $("#f-nombre").value=p.nombre; sp.value=p.pos; $("#f-origen").value=p.origen; $("#f-edu").value=p.edu; $("#f-asp").value=p.asp; $("#f-amb").value=p.amb;
+  const hp=()=>{$("#h-pos").textContent="Movimientos propios: "+POSICIONES[sp.value][2]}; sp.onchange=hp; hp();
+  const box=$("#ejes"); box.innerHTML="";
+  const vals=[...p.ejes];
+  EJES.forEach(([n,grados],i)=>{
+    const seg=el("div",{class:"seg",role:"group","aria-label":n});
+    grados.forEach((g,j)=>seg.append(el("button",{type:"button","aria-pressed":String(vals[i]===j),title:g,onclick:()=>{vals[i]=j;[...seg.children].forEach((b,k)=>b.setAttribute("aria-pressed",String(k===j)))}},g)));
+    box.append(el("div",{class:"eje"},el("span",{class:"label"},n),seg));
+  });
+  $("#b-entrar").onclick=()=>{
+    player={nombre:$("#f-nombre").value.trim()||EJEMPLO.nombre,pos:+sp.value,origen:+$("#f-origen").value,edu:+$("#f-edu").value,asp:+$("#f-asp").value,amb:$("#f-amb").value.trim(),ejes:vals};
+    store.set("vg_player",player); show("desk");
+  };
+}
+
+/* ---------- Escritorio: barra ---------- */
+function buildBar(){
+  const p=player||EJEMPLO;
+  $("#who").innerHTML=""; $("#who").append(p.nombre," ",el("small",{},"· "+POSICIONES[p.pos][1]+(player?"":" (ejemplo)")));
+  $("#fecha").textContent=FECHA+" · Patio Real";
+  const c=$("#clock"); c.innerHTML=""; JORNADA.forEach((j,i)=>c.append(el("span",{class:i===4?"now":""},j)));
+  const G=[["Favor real",1],["Dinero",2],["Reputación",2],["Salud",4],["Tensión",3,true]];
+  const g=$("#gauges"); g.innerHTML="";
+  G.forEach(([n,v,alert])=>{const pips=el("span",{class:"pips","aria-label":n+": "+v+" de 5"});for(let i=0;i<5;i++)pips.append(el("i",{class:i<v?"on":""}));g.append(el("span",{class:"gauge"+(alert&&v>=3?" alert":"")},n,pips))});
+}
+
+/* ---------- Mapas ---------- */
+const NS="http://www.w3.org/2000/svg";
+const sv=(t,a={},txt)=>{const e=document.createElementNS(NS,t);for(const[k,v]of Object.entries(a))e.setAttribute(k,v);if(txt)e.textContent=txt;return e};
+const PALACIO = [
+ // id, nombre, x,y,w,h, clase, descripción
+ ["galerie","Galería de los Espejos",200,150,16,120,"","Terminada en 1684. Paso diario de la corte hacia los aposentos del rey: aquí se ve y se es visto."],
+ ["gar","Grandes Aposentos del Rey",216,150,114,24,"","Salones de aparato (Abundancia, Venus, Diana, Marte, Mercurio, Apolo). Recepciones y veladas de corte."],
+ ["gareine","Aposentos de la Reina",216,246,114,24,"","Sin reina en 1722: el rey está prometido a una infanta de cuatro años."],
+ ["interieur","Aposentos interiores y Œil-de-Bœuf",216,174,30,72,"","Gabinetes y antecámaras alrededor del Patio de Mármol. En la antecámara del Œil-de-Bœuf esperan los cortesanos."],
+ ["chambre","Cámara del Rey",246,196,16,28,"","Centro ceremonial del palacio: aquí se celebran el lever y el coucher."],
+ ["marbre","Patio de Mármol",262,182,68,56,"open","Patio de honor ante la Cámara del Rey."],
+ ["nord","Ala Norte",200,40,36,110,"","Alojamientos de cortesanos."],
+ ["chapelle","Capilla Real",236,104,42,40,"","Consagrada en 1710. Misa diaria del rey: asistir es dejarse ver."],
+ ["midi","Ala Sur (de los Príncipes)",200,270,36,110,"","Alojamientos de los príncipes de la sangre."],
+ ["ministres-n","Ala de los Ministros (norte)",330,150,70,18,"","Secretarías de Estado."],
+ ["ministres-s","Ala de los Ministros (sur)",330,252,70,18,"","Secretarías de Estado."],
+ ["royale","Patio Real",330,168,70,84,"open","Entrada de carrozas; el acceso en carroza es privilegio de rango."],
+ ["commun","Gran Común",262,300,66,58,"","Cocinas y alojamiento de oficiales y servidumbre de la casa del rey."],
+ ["gecurie","Gran Caballeriza",500,96,80,64,"","Caballos de silla, pajes, picadero."],
+ ["pecurie","Pequeña Caballeriza",500,260,80,64,"","Caballos de tiro y carrozas."],
+ ["armes","Plaza de Armas",410,150,84,120,"open","Explanada entre el palacio y las caballerizas."]
+];
+const DOMINIO = [
+ ["chateau","Palacio",300,170,40,70,"","El palacio, con la ciudad a su espalda y los jardines al frente."],
+ ["parterres","Parterres y Orangerie",230,165,70,80,"green","Parterres de agua, del norte y del mediodía; la Orangerie al sur."],
+ ["bosquets","Bosquetes",150,120,80,170,"green","Salones de verdor y fuentes: lugares para hablar sin testigos."],
+ ["canal","Gran Canal",30,195,120,20,"water","Paseos en góndola en verano."],
+ ["canaln","Brazo del Trianon",85,95,14,100,"water","Brazo norte del canal."],
+ ["trianon","Gran Trianon",62,55,60,36,"","Palacio de mármol rosa, retiro del rey."],
+ ["canals","Brazo de la Ménagerie",85,215,14,100,"water","Brazo sur del canal."],
+ ["menagerie","Ménagerie",62,318,60,36,"","Colección de animales exóticos."],
+ ["ville","Ciudad de Versalles",380,120,150,170,"","Posadas, hôtels de la nobleza, mercados y la avenida de París."],
+ ["avparis","Avenida de París",530,195,60,20,"open","Camino a París, a unas cuatro leguas."]
+];
+const CIUDADES = [ // lon, lat, ciudad, provincia
+ [2.35,48.86,"París","Île-de-France","Sede del Parlamento; el Palais-Royal del Regente."],
+ [4.03,49.26,"Reims","Champagne","Ciudad de la consagración de los reyes."],
+ [3.06,50.63,"Lille","Flandre","Plaza fuerte de la frontera norte."],
+ [1.10,49.44,"Ruan","Normandie","Parlamento de Normandía."],
+ [-1.68,48.11,"Rennes","Bretagne","Estados de Bretaña; ciudad devastada por el incendio de 1720."],
+ [-0.58,44.84,"Burdeos","Guyenne","Puerto del vino y del comercio con las Antillas."],
+ [1.44,43.60,"Toulouse","Languedoc","Parlamento de Toulouse."],
+ [3.88,43.61,"Montpellier","Languedoc","Facultad de medicina de gran prestigio."],
+ [5.37,43.30,"Marsella","Provence","Sale de la gran peste de 1720."],
+ [4.84,45.76,"Lyon","Lyonnais","Sedas y banca."],
+ [5.04,47.32,"Dijon","Bourgogne","Estados de Borgoña."],
+ [7.75,48.58,"Estrasburgo","Alsace","Ciudad del Rin, francesa desde 1681."],
+ [5.72,45.19,"Grenoble","Dauphiné","Parlamento del Delfinado."],
+ [6.02,47.24,"Besanzón","Franche-Comté","Provincia francesa desde 1678."]
+];
+const CONTORNO = [[2.37,51.03],[1.6,50.7],[1.6,50.2],[1.08,49.92],[0.1,49.49],[-1.2,49.35],[-1.9,49.7],[-1.5,48.64],[-2.0,48.65],[-3.0,48.8],[-4.5,48.4],[-4.7,48.04],[-3.37,47.75],[-2.2,47.27],[-1.15,46.16],[-1.03,45.62],[-1.17,44.66],[-1.47,43.49],[-1.78,43.36],[-0.5,42.8],[0.7,42.7],[1.7,42.5],[3.17,42.43],[3.05,42.7],[3.1,43.1],[3.7,43.4],[4.6,43.4],[5.37,43.3],[5.93,43.12],[6.7,43.4],[7.2,43.7],[6.9,44.4],[6.9,45.1],[6.2,45.4],[5.8,45.7],[5.95,46.2],[6.1,46.4],[6.8,47.3],[7.5,47.6],[7.8,48.5],[8.2,48.97],[6.9,49.2],[6.0,49.5],[4.9,49.8],[4.2,49.95],[3.6,50.4],[2.6,50.8]];
+
+let mapSel=null;
+function mapInfo(titulo,texto,extra){
+  const b=$("#map-info"); b.innerHTML="";
+  b.append(el("h3",{},titulo),el("p",{},texto)); if(extra)b.append(extra);
+}
+function drawRooms(svg,rooms,vb){
+  svg.setAttribute("viewBox",vb);
+  rooms.forEach(r=>{
+    const [id,n,x,y,w,h,cls,d]=r;
+    const rect=sv("rect",{x,y,width:w,height:h,class:"zone "+cls,tabindex:0,role:"button","aria-label":n});
+    const pick=()=>{svg.querySelectorAll(".zone").forEach(z=>z.classList.remove("sel"));rect.classList.add("sel");mapSel=id;mapInfo(n,d,el("div",{class:"note"},"Nadie a la vista por ahora. Los presentes aparecerán aquí conforme avance la partida."))};
+    rect.addEventListener("click",pick); rect.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();pick()}});
+    svg.append(rect);
+    if(w>40||h>40){const t=sv("text",{x:x+w/2,y:y+h/2+4,"text-anchor":"middle",class:"mlabel"+(w<60?" s":"")},n.split(" (")[0]);if(h>w*1.6&&w<50){t.setAttribute("transform",`rotate(-90 ${x+w/2} ${y+h/2})`)}svg.append(t)}
+  });
+}
+function drawMap(kind){
+  const box=$("#map-box"); box.innerHTML="";
+  const svg=sv("svg",{role:"img"});
+  if(kind==="palacio"){
+    svg.setAttribute("aria-label","Plano esquemático del palacio");
+    svg.append(sv("text",{x:100,y:215,"text-anchor":"middle",class:"mlabel s"},"← Jardines"));
+    drawRooms(svg,PALACIO,"0 0 600 400");
+    svg.append(sv("text",{x:16,y:24,class:"compass"},"N ↑ · Oeste a la izquierda"));
+    mapInfo("Palacio de Versalles","Toca una estancia para ver qué es y quién suele estar en ella.");
+  } else if(kind==="dominio"){
+    svg.setAttribute("aria-label","Plano esquemático del dominio");
+    drawRooms(svg,DOMINIO,"0 0 600 400");
+    svg.append(sv("text",{x:16,y:24,class:"compass"},"N ↑"));
+    mapInfo("El dominio","Jardines, canal, Trianon y ciudad. Los bosquetes son buenos para hablar sin testigos.");
+  } else {
+    svg.setAttribute("aria-label","Mapa aproximado de Francia");
+    const W=600,H=520, lon0=-5.2,lon1=8.6,lat0=42.2,lat1=51.3, k=Math.cos(46.5*Math.PI/180);
+    const sx=W/((lon1-lon0)*k), sy=H/(lat1-lat0), s=Math.min(sx,sy);
+    const P=([lo,la])=>[((lo-lon0)*k*s).toFixed(1),((lat1-la)*s).toFixed(1)];
+    svg.setAttribute("viewBox",`0 0 ${W} ${H}`);
+    svg.append(sv("polygon",{points:CONTORNO.map(p=>P(p).join(",")).join(" "),class:"coast"}));
+    CIUDADES.forEach(c=>{
+      const [x,y]=P(c); const dot=sv("circle",{cx:x,cy:y,r:5,class:"city",tabindex:0,role:"button","aria-label":c[2]});
+      const pick=()=>{svg.querySelectorAll(".city").forEach(z=>z.classList.remove("sel"));dot.classList.add("sel");mapInfo(c[2]+" · "+c[3],c[4],el("div",{class:"note"},"Sin noticias de esta provincia todavía."))};
+      dot.addEventListener("click",pick);dot.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();pick()}});
+      svg.append(dot, sv("text",{x:+x+8,y:+y+4,class:"mlabel s"},c[2]));
+    });
+    const [vx,vy]=P([2.13,48.80]); svg.append(sv("circle",{cx:vx,cy:vy,r:3.5,fill:"var(--gilt)"}));
+    mapInfo("Reino de Francia","Contorno aproximado de 1722 (incluye la Lorena, que aún no era francesa). Toca una ciudad para ver su provincia.");
+  }
+  box.append(svg);
+}
+
+/* ---------- Papeles y objetos (ejemplo) ---------- */
+const PAPELES = [
+ {t:"carta",urg:true,tit:"Del intendente de sus tierras",de:"Montpellier, 2 de junio",txt:"Las rentas del semestre no alcanzarán para pagar al prestamista de la rue Quincampoix. Pide instrucciones."},
+ {t:"carta",tit:"Del abate de Saint-Pierre",de:"París, 10 de junio",txt:"Lo invita a cenar el jueves. Dice tener «amigos interesados en la medicina»."},
+ {t:"rumor",tit:"El cardenal Dubois será primer ministro antes del otoño",de:"Oído en la galería · fiabilidad desconocida",txt:"Lo repiten dos secretarios del ala de los Ministros."},
+ {t:"rumor",tit:"El mariscal de Villeroy no soporta a Dubois",de:"Oído a un lacayo · fiabilidad baja",txt:"Se habla de una escena delante del rey."},
+ {t:"oblig",urg:true,tit:"Presentarse ante el primer médico del rey",de:"Antes del domingo",txt:"Sin esta visita, su carta de recomendación no vale nada."},
+ {t:"oblig",tit:"Deuda con un boticario de la rue Saint-Honoré",de:"48 libras",txt:"Vence a fin de mes."}
+];
+const OBJETOS = [
+ ["Carta de recomendación","1","Firmada por un antiguo profesor de Montpellier. Su valor depende de quién la lea."],
+ ["Estuche de lancetas","1","Plata y concha. Herramienta de oficio."],
+ ["Frasco de láudano","1","De un boticario de la rue Saint-Honoré. Potencia desconocida."],
+ ["Bolsa","120 libras","Lo que queda tras el viaje."]
+];
+let papTab="carta";
+function drawPapeles(){const b=$("#papeles");b.innerHTML="";PAPELES.filter(p=>p.t===papTab).forEach(p=>b.append(el("div",{class:"paper"+(p.urg?" urg":"")},el("b",{},p.tit),el("span",{class:"from"},p.de),el("p",{},p.txt))))}
+function drawObjetos(){const b=$("#objetos");b.innerHTML="";OBJETOS.forEach(([n,c,d])=>b.append(el("div",{class:"obj"},el("span",{},n),el("span",{class:"note"},c),el("span",{class:"d"},d))))}
+
+/* ---------- Libro de caras ---------- */
+const PRES={reside:"Reside en el palacio",frecuenta:"Frecuenta la corte",ocasional:"Visitas ocasionales",ausente:"Fuera de Versalles","por verificar":"Presencia sin confirmar"};
+function initials(n){return n.replace(/\b(de|del|la|II)\b/g,"").split(/\s+/).filter(Boolean).slice(0,2).map(w=>w[0]).join("")}
+function drawFaces(){
+  const q=$("#q").value.trim().toLowerCase(), fp=$("#f-pres").value;
+  const list=PERSONAJES.filter(p=>(!fp||p.presencia_versalles===fp)&&(!q||(p.nombre+" "+p.titulo).toLowerCase().includes(q)));
+  $("#faces-count").textContent=list.length+" de "+PERSONAJES.length+" personas";
+  const b=$("#faces"); b.innerHTML="";
+  const ramas={}; list.forEach(p=>(ramas[p.rama.split(" / ")[0]] ||= []).push(p));
+  for(const [r,ps] of Object.entries(ramas)){
+    const cards=el("div",{class:"cards"});
+    ps.forEach(p=>cards.append(el("button",{class:"card"+(p.presencia_versalles==="ausente"?" away":""),onclick:()=>openFicha(p)},el("span",{class:"medal","aria-hidden":"true"},initials(p.nombre)),el("span",{},el("b",{},p.nombre),el("span",{},p.titulo),el("span",{},p.edad_jun_1722+" años")))));
+    b.append(el("div",{class:"rama"},el("h3",{},"Casa de "+r.replace("Real","Francia")),cards));
+  }
+  if(!list.length)b.append(el("p",{class:"note"},"Nadie coincide con la búsqueda."));
+}
+function openFicha(p){
+  const f=$("#ficha"); f.innerHTML="";
+  const notas=store.get("vg_notas",{});
+  const ta=el("textarea",{id:"nota-"+p.id,placeholder:"Lo que piensas de esta persona. Solo tú lo ves."}); ta.value=notas[p.id]||"";
+  ta.addEventListener("input",()=>{const n=store.get("vg_notas",{});n[p.id]=ta.value;store.set("vg_notas",n)});
+  const dl=el("dl",{});
+  [["Título",p.titulo],["Edad",p.edad_jun_1722+" años (n. "+p.nacimiento.split("-").reverse().join("/")+")"],["Parentesco",p.parentesco],["Situación",p.situacion_1722||"—"],["Presencia",PRES[p.presencia_versalles]],["Notas",p.notas||"—"]].forEach(([k,v])=>dl.append(el("dt",{},k),el("dd",{},v)));
+  f.append(el("button",{class:"x","aria-label":"Cerrar",onclick:()=>{f.hidden=true}},"×"),
+    el("span",{class:"label"},"Libro de caras"),el("h2",{},p.nombre),el("div",{class:"rule"}),dl,
+    el("span",{class:"label"},"Lo que sabes"),el("p",{class:"note",style:"margin:0"},"Todavía no has observado nada de esta persona."),
+    el("label",{class:"label",for:"nota-"+p.id},"Tus notas"),ta,
+    el("span",{class:p.verificacion==="verificado"?"tag":"tag ej"},p.verificacion==="verificado"?"Datos verificados":"Datos por verificar"));
+  f.hidden=false; f.querySelector(".x").focus();
+}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")$("#ficha").hidden=true});
+
+/* ---------- Navegación ---------- */
+function show(v){
+  $("#selector").hidden=v!=="selector"; $("#desk").hidden=v!=="desk"; $("#mnav").hidden=v!=="desk";
+  if(v==="desk"){buildBar();drawMap("palacio");drawPapeles();drawObjetos();drawFaces()} else buildSelector();
+  window.scrollTo(0,0);
+}
+$("#map-tabs").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;[...e.currentTarget.children].forEach(x=>x.setAttribute("aria-selected",String(x===b)));drawMap(b.dataset.map)});
+$("#pap-tabs").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;[...e.currentTarget.children].forEach(x=>x.setAttribute("aria-selected",String(x===b)));papTab=b.dataset.p;drawPapeles()});
+$("#q").addEventListener("input",drawFaces); $("#f-pres").addEventListener("change",drawFaces);
+$("#b-perso").onclick=()=>show("selector");
+$("#mnav").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
+  if(b.dataset.go==="yo"){show("selector");return}
+  [...e.currentTarget.children].forEach(x=>x.setAttribute("aria-current",String(x===b)));
+  document.querySelectorAll("#desk [data-pane]").forEach(p=>p.classList.toggle("show",p.dataset.pane===b.dataset.go));window.scrollTo(0,0)});
+
+show(player ? "desk" : "selector");
+</script>
