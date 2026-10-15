@@ -276,6 +276,12 @@ button.plate:hover{border-color:var(--gilt)}
 button.kin:hover{border-color:var(--gilt)}
 .kin.dead{opacity:.7} .kin.empty{border-style:dashed;color:var(--muted)} .kin.self{border-color:var(--gilt);min-width:60%;text-align:center}
 .kgroup{display:grid;gap:4px}
+.bio dl{display:grid;grid-template-columns:minmax(120px,max-content) 1fr;gap:6px 18px;margin:0}
+.bio dt{color:var(--muted);font-size:.85rem}
+.bio dd{margin:0}
+.bio .bio-h{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.bio .bio-h h3{margin:0;font-family:var(--f-display);font-size:1.5rem}
+@media(max-width:520px){.bio dl{grid-template-columns:1fr}.bio dd{margin-bottom:6px}}
 .kgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px}
 
 /* ---------- Diario (a la Pentiment) ---------- */
@@ -487,6 +493,18 @@ button.kin:hover{border-color:var(--gilt)}
     <section class="pane new-plan" id="new-plan" hidden></section>
     <div class="plans" id="plans"></div>
   </section>
+
+  <!-- Biografía -->
+  <section class="view" data-view="bio" hidden>
+    <div class="pane-h"><h2>Biografía</h2></div>
+    <section class="pane bio" id="bio"></section>
+  </section>
+
+  <!-- Relaciones -->
+  <section class="view" data-view="rel" hidden>
+    <div class="pane-h"><h2>Relaciones</h2></div>
+    <section class="pane" id="rel"></section>
+  </section>
 </div>
 
 <aside id="ficha" hidden aria-label="Ficha"></aside>
@@ -556,6 +574,7 @@ let hoy=null, calMes=null, calSel=null;
 /* ---------- Catálogos ---------- */
 /*__MOD_NOMBRES__*/
 /*__MOD_CREACION__*/
+/*__MOD_FAMILIA__*/
 const JORNADA = ["Lever","Messe","Conseil","Dîner","Promenade","Souper","Coucher"];
 const EJEMPLO = {nombre:"Antoine Fabre",sexo:"M",proc:"provincia",region:"Languedoc",cuna:"burguesia",destino:{filiacion:"directa",edu:2,dinero:"menos",condicion:"ninguna",lugar:"segundon",confesion:"catolico"},pos:"medico"};
 
@@ -652,7 +671,7 @@ function buildSelector(){
   $("#f-cuna").onchange=e=>{draft.cuna=e.target.value;renombrar()};
   $("#b-tirar").onclick=()=>{if(draft.destino)return;draft.destino=tirarDestino(draft);renderDestino()};
   $("#b-reset").onclick=()=>{draft=freshDraft();sync();renderDestino()};
-  $("#b-entrar").onclick=()=>{if(!draft.pos)return;draft.nombre=draft.nombre.trim()||generarNombre(draft);player=draft;store.set("vg_player",player);show("game")};
+  $("#b-entrar").onclick=()=>{if(!draft.pos)return;draft.nombre=draft.nombre.trim()||generarNombre(draft);draft.familia=generarFamilia(draft);player=draft;store.set("vg_player",player);show("game")};
   renderDestino();
 }
 function renderDestino(){
@@ -1009,15 +1028,36 @@ $("#p-import").onchange=async e=>{const f=e.target.files[0];if(!f)return;
   try{const o=JSON.parse(await f.text());if(o.formato!=="versalles-partida")throw new Error("no es un archivo de partida");restore(o.estado);sesion=null;store.set("vg_sesion",null);closeMenu();show(epoca?(player?"game":"selector"):"epocas")}
   catch(err){setStatus("No se pudo importar: "+err.message)} e.target.value=""};
 
+/* ---------- Biografía y relaciones ---------- */
+function familia(){if(!player.familia){player.familia=generarFamilia(player);store.set("vg_player",player)}return player.familia}
+const PROC_T=p=>p.proc==="paris"?"París":p.proc==="extranjero"?(p.region||"Extranjero")+" (extranjero)":(p.region||"Provincia");
+function drawBio(){
+  const b=$("#bio"),f=familia(),d=player.destino||{};b.innerHTML="";
+  const rows=[["Nacimiento",f.nac+" · "+f.edad+" años"],["Sexo",player.sexo==="F"?"Mujer":"Hombre"],["Procedencia",PROC_T(player)],["Cuna",CUNA_N[player.cuna]],["Posición",posName(player)],
+    ["Filiación",FIL_N[d.filiacion]],["Educación",EDUCACIONES[d.edu]],["Fortuna",DINERO_N[d.dinero]],["Condición",CONDICION_N[d.condicion]],["Lugar en la familia",LUGAR_N[d.lugar]],["Confesión",CONF_N[d.confesion]]];
+  const cy=f.miembros.find(m=>/^Espos/.test(m.rol));
+  rows.push(["Estado",cy?(cy.vivo?(player.sexo==="F"?"Casada":"Casado"):(player.sexo==="F"?"Viuda":"Viudo")):(POS_ID[player.pos]?.g==="Clero"?"Célibe (estado eclesiástico)":(player.sexo==="F"?"Soltera":"Soltero"))]);
+  b.append(el("div",{class:"bio-h"},el("h3",{},player.nombre)),el("dl",{},...rows.filter(r=>r[1]).flatMap(([k,v])=>[el("dt",{},k),el("dd",{},v)])));
+}
+function drawRel(){
+  const b=$("#rel"),f=familia();b.innerHTML="";
+  const card=m=>m.desconocido?el("span",{class:"kin empty"},el("small",{},m.rol),"Desconocido",el("small",{},m.nota||""))
+    :el("span",{class:"kin"+(m.vivo?"":" dead")},el("small",{},m.rol+(m.mayor===true?" mayor":m.mayor===false?" menor":"")),m.nombre,
+      el("small",{},(m.vivo?"n. "+m.nac+" · "+(AÑO()-m.nac)+" años":m.nac+"–"+m.muerte+" †")+(m.nota?" · "+m.nota:"")));
+  const G=[["Padres",/^(Padre|Madre)/],["Hermanos",/^Herman/],["Cónyuge",/^Espos/],["Hijos",/^Hij/],["Amantes",/^Amante/]];
+  for(const [t,re] of G){const xs=f.miembros.filter(m=>re.test(m.rol));
+    b.append(el("span",{class:"label"},t),xs.length?el("div",{class:"kgrid"},...xs.map(card)):el("p",{class:"note"},"Ninguno."))}
+}
+
 /* ---------- Navegación ---------- */
-const VIEWS=[["escritorio","Escritorio"],["mapa","Mapa"],["caras","Caras"],["diario","Diario"],["planes","Planes"]];
+const VIEWS=[["escritorio","Escritorio"],["mapa","Mapa"],["caras","Caras"],["diario","Diario"],["planes","Planes"],["bio","Biografía"],["rel","Relaciones"]];
 let current="escritorio";
 function go(v){
   current=v;
   document.querySelectorAll("[data-view]").forEach(s=>s.hidden=s.dataset.view!==v);
   document.querySelectorAll("#views button,#mnav button").forEach(b=>b.setAttribute("aria-current",String(b.dataset.go===v)));
   if(v==="escritorio"){drawDesk();drawCal()} if(v==="mapa")drawMap(document.querySelector("#map-tabs [aria-selected=true]").dataset.map);
-  if(v==="caras"){drawUnknown();drawFaces()} if(v==="diario")drawBook(); if(v==="planes")drawPlans();
+  if(v==="caras"){drawUnknown();drawFaces()} if(v==="diario")drawBook(); if(v==="planes")drawPlans(); if(v==="bio")drawBio(); if(v==="rel")drawRel();
   try{location.hash=v}catch(e){}
 }
 function buildNav(){for(const id of ["#views","#mnav"]){const n=$(id);n.innerHTML="";VIEWS.forEach(([k,t])=>n.append(el("button",{"data-go":k,onclick:()=>{go(k);window.scrollTo(0,0)}},t)))}}

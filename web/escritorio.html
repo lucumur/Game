@@ -276,6 +276,12 @@ button.plate:hover{border-color:var(--gilt)}
 button.kin:hover{border-color:var(--gilt)}
 .kin.dead{opacity:.7} .kin.empty{border-style:dashed;color:var(--muted)} .kin.self{border-color:var(--gilt);min-width:60%;text-align:center}
 .kgroup{display:grid;gap:4px}
+.bio dl{display:grid;grid-template-columns:minmax(120px,max-content) 1fr;gap:6px 18px;margin:0}
+.bio dt{color:var(--muted);font-size:.85rem}
+.bio dd{margin:0}
+.bio .bio-h{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.bio .bio-h h3{margin:0;font-family:var(--f-display);font-size:1.5rem}
+@media(max-width:520px){.bio dl{grid-template-columns:1fr}.bio dd{margin-bottom:6px}}
 .kgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px}
 
 /* ---------- Diario (a la Pentiment) ---------- */
@@ -487,6 +493,18 @@ button.kin:hover{border-color:var(--gilt)}
     <section class="pane new-plan" id="new-plan" hidden></section>
     <div class="plans" id="plans"></div>
   </section>
+
+  <!-- Biografía -->
+  <section class="view" data-view="bio" hidden>
+    <div class="pane-h"><h2>Biografía</h2></div>
+    <section class="pane bio" id="bio"></section>
+  </section>
+
+  <!-- Relaciones -->
+  <section class="view" data-view="rel" hidden>
+    <div class="pane-h"><h2>Relaciones</h2></div>
+    <section class="pane" id="rel"></section>
+  </section>
 </div>
 
 <aside id="ficha" hidden aria-label="Ficha"></aside>
@@ -580,8 +598,8 @@ const TOP = { // [prefijos, sufijos] para nombres de tierra
   norte:[["Haut","Fres","Ber","Ver","Hon","Wa","Ro","Cour"],["court","ghem","becque","ricourt","val","mont","linghem"]],
   central:[["Mont","Beau","Ville","Bois","Fon","Roche","Chante","Bel"],["morin","mont","ville","fort","lieu","ray","ceaux","val","loup","ronde"]],
   este:[["Chas","Ver","Mar","Bel","Vau","Cor","Mon","Sau"],["ey","ay","enay","olles","eney","igny","ot"]],
-  occitana:[["Castel","Mont","Puy","Roque","Ville","Lau","Bel","Saint-Martin-de-"],["ac","ignac","ous","an","astre","ès","ade","erre"]],
-  provenzal:[["Castel","Roque","Ma","Vi","Bel","Saint-"],["argues","ignan","ane","olles","aude","ière","auron"]],
+  occitana:[["Castel","Mont","Puy","Roque","Ville","Lau","Bel","Mira"],["ac","ignac","ous","an","astre","ès","ade","erre"]],
+  provenzal:[["Castel","Roque","Ma","Vi","Bel","Sain"],["argues","ignan","ane","olles","aude","ière","auron"]],
   alpina:[["Mont","Cha","Vau","Bel","Pont","Ro"],["oz","az","ieu","ens","ard","ier"]],
   alemana:[["Ober","Nieder","Rot","Weiss","Hoh","Lich","Wald"],["heim","berg","bach","stein","feld","hausen"]],
   catalana:[["Cast","Vila","Mont","Sant ","Bell"],["ell","franca","ral","oles","ach","lloc"]]
@@ -622,7 +640,14 @@ const EXT = {
 const EXT_GRUPO = {"Saboya":"alpina","Lorena":"este","Dombes":"alpina","Aviñón y Condado Venesino":"provenzal","Génova":"italiana","Toscana":"italiana","Venecia":"italiana","Milán":"italiana","Nápoles":"italiana","Estados Pontificios":"italiana",
   "España":"espanola","Portugal":"portuguesa","Suiza (cantones)":"suiza","Estados alemanes":"alemana_ext","Provincias Unidas":"neerlandesa","Países Bajos austríacos":"valona","Principado de Lieja":"valona",
   "Inglaterra":"inglesa","Irlanda (jacobita)":"irlandesa","Escocia (jacobita)":"escocesa","Polonia":"polaca","Suecia":"sueca","Dinamarca":"danesa","Rusia":"rusa"};
-const topo = ([pre,suf]) => { const p=R(pre); let s=R(suf), n=0; while(n++<5&&p.toLowerCase().replace(/[- ]/g,"").endsWith(s.toLowerCase().slice(0,3)))s=R(suf); return p.endsWith("-")||p.endsWith(" ") ? p+s.charAt(0).toUpperCase()+s.slice(1) : p+s; };
+const topo = ([pre,suf]) => {
+  let p=R(pre), s=R(suf), n=0;
+  const V=/[aeiouyéèê]/i, eco=x=>p.toLowerCase().replace(/[- ]/g,"").endsWith(x.toLowerCase().slice(0,3));
+  while(n++<12&&eco(s))s=R(suf);
+  if(/[- ]$/.test(p)) return p+s.charAt(0).toUpperCase()+s.slice(1);
+  if(V.test(p.slice(-1))&&V.test(s[0])) p=(/[ea]$/i.test(p)||p.slice(-1)===s[0])?p.slice(0,-1):p+"r";
+  return (p+s).replace(/(.)\1\1+/g,"$1$1");
+};
 const de = t => /^[AEIOUÉÈY]/.test(t) ? "d'"+t : "de "+t;
 const NOBLE = c => c==="espada"||c==="toga"||c==="nuevo";
 function generarNombre(p){
@@ -790,6 +815,93 @@ function tensiones(p,q){
 }
 function posName(p){return POS_ID[p?.pos]?.n||"Sin posición"}
 
+/* ---------- Familia del jugador ----------
+   Se genera una vez al entrar, coherente con el destino (filiación, condición, lugar) y la posición. */
+const AÑO = () => (typeof epoca!=="undefined"&&epoca?.año)||1722;
+const rnd = (a,b) => a+Math.floor(Math.random()*(b-a+1));
+const nombreDe = n => n.split(" ")[0];
+const apellidoDe = n => n.split(" ").slice(1).join(" ");
+const vivoA = edad => Math.random() > Math.max(0, Math.min(.95, (edad-38)/38));
+function persona(rol, nombre, edad, extra={}){
+  const vivo = extra.vivo ?? vivoA(edad);
+  const p = {rol, nombre, nac: AÑO()-edad, vivo, ...extra};
+  if(!vivo && p.muerte==null) p.muerte = rnd(Math.max(p.nac+1, AÑO()-15), AÑO()-1);
+  return p;
+}
+function generarFamilia(p){
+  const d = p.destino||{}, q = POS_ID[p.pos]||{}, sx = p.sexo==="F"?"F":"M";
+  const clero = q.g==="Clero";
+  const viudo = d.lugar==="viudo"||d.lugar==="viuda";
+  const huer = d.condicion==="huerfano"||d.lugar==="huerfano"||d.lugar==="huerfana";
+  const otro = (sexo, extra={}) => generarNombre({...p, sexo, ...extra});
+  let edad = 18 + Math.floor(Math.pow(Math.random(),1.4)*37);
+  if(["obispo","consejero-estado","duque","embajador","confesor"].includes(p.pos)) edad = Math.max(edad, rnd(38,58));
+  if(viudo) edad = Math.max(edad, rnd(26,45));
+  const ape = apellidoDe(p.nombre), fam = [];
+  /* Padres */
+  const eP = edad+rnd(24,38), eM = edad+rnd(18,30);
+  const madreN = otro("F");
+  if(d.condicion==="exposito"){
+    fam.push({rol:"Padre",desconocido:true,nota:"Expósito: nadie sabe quién fue"},{rol:"Madre",desconocido:true,nota:"Te dejaron en el torno del hospital"});
+  } else if(d.condicion==="no_reconocido"){
+    fam.push({rol:"Padre",desconocido:true,nota:"Nunca te reconoció; tu madre no dijo su nombre"},
+             persona("Madre", nombreDe(madreN)+" "+ape, eM, huer?{vivo:false}:{}));
+  } else if(d.filiacion==="bastardo"){
+    fam.push(persona("Padre", nombreDe(otro("M"))+" "+ape, eP, {nota:"Te reconoció; no estaba casado con tu madre", ...(huer?{vivo:false}:{})}),
+             persona("Madre", otro("F",{cuna:p.cuna==="espada"?"burguesia":"pueblo"}), eM, {nota:"Amante de tu padre", ...(huer?{vivo:false}:{})}));
+  } else if(d.filiacion==="materna"){
+    fam.push(persona("Padre", otro("M",{cuna:p.cuna==="espada"?"toga":p.cuna==="pueblo"?"pueblo":"burguesia"}), eP, {nota:"Llevas el apellido y los bienes de tu madre", ...(huer?{vivo:false}:{})}),
+             persona("Madre", nombreDe(madreN)+" "+ape, eM, {nota:"De ella viene tu casa", ...(huer?{vivo:false}:{})}));
+  } else {
+    fam.push(persona("Padre", nombreDe(otro("M"))+" "+ape, eP, huer?{vivo:false}:{}),
+             persona("Madre", madreN, eM, {nota:"Casada con tu padre; "+apellidoDe(madreN)+" de soltera", ...(huer?{vivo:false}:{})}));
+  }
+  /* Hermanos */
+  if(d.condicion!=="exposito"&&d.condicion!=="no_reconocido"&&!["unico","unica"].includes(d.lugar)){
+    let mayores=0, menores=0;
+    if(d.lugar==="primogenito"||d.lugar==="primogenita") menores=rnd(0,3);
+    else if(d.lugar==="segundon"){ mayores=rnd(1,2); menores=rnd(0,2); }
+    else if(d.lugar==="benjamin"||d.lugar==="benjamina") mayores=rnd(1,4);
+    else { mayores=rnd(0,2); menores=rnd(0,2); }
+    const DEST = {M:["heredero de la casa","en el ejército","en la Iglesia","en el comercio familiar","en las colonias"],F:["casada","en un convento","soltera, en casa"]};
+    const her = (i,mayor) => {
+      const s = (d.lugar==="segundon"&&mayor&&i===0) ? "M" : (Math.random()<.5?"M":"F");
+      const e = mayor ? edad+rnd(1,4)*(i+1) : Math.max(1, edad-rnd(1,4)*(i+1));
+      let nota = s==="M" ? (mayor&&i===0?DEST.M[0]:DEST.M[rnd(1, p.cuna==="espada"?2:4)]) : DEST.F[rnd(0,2)];
+      if(e<14) nota = "aún niño";
+      return persona(s==="M"?"Hermano":"Hermana", nombreDe(otro(s))+" "+ape, e, {mayor, nota, vivo: e<14 ? Math.random()>.1 : vivoA(e+10)});
+    };
+    for(let i=0;i<mayores;i++) fam.push(her(i,true));
+    for(let i=0;i<menores;i++) fam.push(her(i,false));
+  }
+  /* Cónyuge */
+  let casado = false;
+  if(!clero){
+    const pr = sx==="M" ? (edad<25?.2:edad<35?.55:.75) : (edad<20?.35:.75);
+    casado = viudo || Math.random() < pr*(d.lugar==="sin_dote"?.3:1);
+    if(casado){
+      const s2 = sx==="M"?"F":"M", eC = Math.max(16, edad + (sx==="M"?-rnd(2,12):rnd(2,15)));
+      fam.push(persona(viudo?(s2==="F"?"Esposa difunta":"Esposo difunto"):(s2==="F"?"Esposa":"Esposo"), otro(s2), eC,
+        viudo?{vivo:false, muerte:AÑO()-rnd(0,6)}:{vivo:true}));
+    }
+  }
+  /* Hijos */
+  if(casado){
+    const n = Math.min(6, rnd(0, Math.max(0, Math.floor((edad-19)/3))));
+    for(let i=0;i<n;i++){
+      const s = Math.random()<.5?"M":"F", e = Math.max(0, edad-rnd(19,23)-i*rnd(1,3));
+      const muerto = Math.random()<.3;
+      fam.push(persona(s==="M"?"Hijo":"Hija", nombreDe(otro(s))+" "+ape, e, {vivo:!muerto, ...(muerto?{muerte:rnd(AÑO()-e, AÑO())}:{}), nota:e<7?"en la nodriza o en casa":""}));
+    }
+  }
+  /* Amantes */
+  if(Math.random() < (clero?.1:p.cuna==="espada"?.35:.2)){
+    const s2 = sx==="M"?"F":"M", cunas=["espada","toga","nuevo","burguesia","pueblo"];
+    fam.push(persona(s2==="F"?"Amante":"Amante", otro(s2,{cuna:cunas[rnd(0,4)]}), Math.max(17, edad+rnd(-12,8)), {vivo:true, nota:casado||clero?"en secreto":"discreta, pero no tanto"}));
+  }
+  return {edad, nac: AÑO()-edad, miembros: fam};
+}
+
 const JORNADA = ["Lever","Messe","Conseil","Dîner","Promenade","Souper","Coucher"];
 const EJEMPLO = {nombre:"Antoine Fabre",sexo:"M",proc:"provincia",region:"Languedoc",cuna:"burguesia",destino:{filiacion:"directa",edu:2,dinero:"menos",condicion:"ninguna",lugar:"segundon",confesion:"catolico"},pos:"medico"};
 
@@ -886,7 +998,7 @@ function buildSelector(){
   $("#f-cuna").onchange=e=>{draft.cuna=e.target.value;renombrar()};
   $("#b-tirar").onclick=()=>{if(draft.destino)return;draft.destino=tirarDestino(draft);renderDestino()};
   $("#b-reset").onclick=()=>{draft=freshDraft();sync();renderDestino()};
-  $("#b-entrar").onclick=()=>{if(!draft.pos)return;draft.nombre=draft.nombre.trim()||generarNombre(draft);player=draft;store.set("vg_player",player);show("game")};
+  $("#b-entrar").onclick=()=>{if(!draft.pos)return;draft.nombre=draft.nombre.trim()||generarNombre(draft);draft.familia=generarFamilia(draft);player=draft;store.set("vg_player",player);show("game")};
   renderDestino();
 }
 function renderDestino(){
@@ -1487,15 +1599,36 @@ $("#p-import").onchange=async e=>{const f=e.target.files[0];if(!f)return;
   try{const o=JSON.parse(await f.text());if(o.formato!=="versalles-partida")throw new Error("no es un archivo de partida");restore(o.estado);sesion=null;store.set("vg_sesion",null);closeMenu();show(epoca?(player?"game":"selector"):"epocas")}
   catch(err){setStatus("No se pudo importar: "+err.message)} e.target.value=""};
 
+/* ---------- Biografía y relaciones ---------- */
+function familia(){if(!player.familia){player.familia=generarFamilia(player);store.set("vg_player",player)}return player.familia}
+const PROC_T=p=>p.proc==="paris"?"París":p.proc==="extranjero"?(p.region||"Extranjero")+" (extranjero)":(p.region||"Provincia");
+function drawBio(){
+  const b=$("#bio"),f=familia(),d=player.destino||{};b.innerHTML="";
+  const rows=[["Nacimiento",f.nac+" · "+f.edad+" años"],["Sexo",player.sexo==="F"?"Mujer":"Hombre"],["Procedencia",PROC_T(player)],["Cuna",CUNA_N[player.cuna]],["Posición",posName(player)],
+    ["Filiación",FIL_N[d.filiacion]],["Educación",EDUCACIONES[d.edu]],["Fortuna",DINERO_N[d.dinero]],["Condición",CONDICION_N[d.condicion]],["Lugar en la familia",LUGAR_N[d.lugar]],["Confesión",CONF_N[d.confesion]]];
+  const cy=f.miembros.find(m=>/^Espos/.test(m.rol));
+  rows.push(["Estado",cy?(cy.vivo?(player.sexo==="F"?"Casada":"Casado"):(player.sexo==="F"?"Viuda":"Viudo")):(POS_ID[player.pos]?.g==="Clero"?"Célibe (estado eclesiástico)":(player.sexo==="F"?"Soltera":"Soltero"))]);
+  b.append(el("div",{class:"bio-h"},el("h3",{},player.nombre)),el("dl",{},...rows.filter(r=>r[1]).flatMap(([k,v])=>[el("dt",{},k),el("dd",{},v)])));
+}
+function drawRel(){
+  const b=$("#rel"),f=familia();b.innerHTML="";
+  const card=m=>m.desconocido?el("span",{class:"kin empty"},el("small",{},m.rol),"Desconocido",el("small",{},m.nota||""))
+    :el("span",{class:"kin"+(m.vivo?"":" dead")},el("small",{},m.rol+(m.mayor===true?" mayor":m.mayor===false?" menor":"")),m.nombre,
+      el("small",{},(m.vivo?"n. "+m.nac+" · "+(AÑO()-m.nac)+" años":m.nac+"–"+m.muerte+" †")+(m.nota?" · "+m.nota:"")));
+  const G=[["Padres",/^(Padre|Madre)/],["Hermanos",/^Herman/],["Cónyuge",/^Espos/],["Hijos",/^Hij/],["Amantes",/^Amante/]];
+  for(const [t,re] of G){const xs=f.miembros.filter(m=>re.test(m.rol));
+    b.append(el("span",{class:"label"},t),xs.length?el("div",{class:"kgrid"},...xs.map(card)):el("p",{class:"note"},"Ninguno."))}
+}
+
 /* ---------- Navegación ---------- */
-const VIEWS=[["escritorio","Escritorio"],["mapa","Mapa"],["caras","Caras"],["diario","Diario"],["planes","Planes"]];
+const VIEWS=[["escritorio","Escritorio"],["mapa","Mapa"],["caras","Caras"],["diario","Diario"],["planes","Planes"],["bio","Biografía"],["rel","Relaciones"]];
 let current="escritorio";
 function go(v){
   current=v;
   document.querySelectorAll("[data-view]").forEach(s=>s.hidden=s.dataset.view!==v);
   document.querySelectorAll("#views button,#mnav button").forEach(b=>b.setAttribute("aria-current",String(b.dataset.go===v)));
   if(v==="escritorio"){drawDesk();drawCal()} if(v==="mapa")drawMap(document.querySelector("#map-tabs [aria-selected=true]").dataset.map);
-  if(v==="caras"){drawUnknown();drawFaces()} if(v==="diario")drawBook(); if(v==="planes")drawPlans();
+  if(v==="caras"){drawUnknown();drawFaces()} if(v==="diario")drawBook(); if(v==="planes")drawPlans(); if(v==="bio")drawBio(); if(v==="rel")drawRel();
   try{location.hash=v}catch(e){}
 }
 function buildNav(){for(const id of ["#views","#mnav"]){const n=$(id);n.innerHTML="";VIEWS.forEach(([k,t])=>n.append(el("button",{"data-go":k,onclick:()=>{go(k);window.scrollTo(0,0)}},t)))}}

@@ -24,8 +24,8 @@ const TOP = { // [prefijos, sufijos] para nombres de tierra
   norte:[["Haut","Fres","Ber","Ver","Hon","Wa","Ro","Cour"],["court","ghem","becque","ricourt","val","mont","linghem"]],
   central:[["Mont","Beau","Ville","Bois","Fon","Roche","Chante","Bel"],["morin","mont","ville","fort","lieu","ray","ceaux","val","loup","ronde"]],
   este:[["Chas","Ver","Mar","Bel","Vau","Cor","Mon","Sau"],["ey","ay","enay","olles","eney","igny","ot"]],
-  occitana:[["Castel","Mont","Puy","Roque","Ville","Lau","Bel","Saint-Martin-de-"],["ac","ignac","ous","an","astre","ès","ade","erre"]],
-  provenzal:[["Castel","Roque","Ma","Vi","Bel","Saint-"],["argues","ignan","ane","olles","aude","ière","auron"]],
+  occitana:[["Castel","Mont","Puy","Roque","Ville","Lau","Bel","Mira"],["ac","ignac","ous","an","astre","ès","ade","erre"]],
+  provenzal:[["Castel","Roque","Ma","Vi","Bel","Sain"],["argues","ignan","ane","olles","aude","ière","auron"]],
   alpina:[["Mont","Cha","Vau","Bel","Pont","Ro"],["oz","az","ieu","ens","ard","ier"]],
   alemana:[["Ober","Nieder","Rot","Weiss","Hoh","Lich","Wald"],["heim","berg","bach","stein","feld","hausen"]],
   catalana:[["Cast","Vila","Mont","Sant ","Bell"],["ell","franca","ral","oles","ach","lloc"]]
@@ -66,7 +66,14 @@ const EXT = {
 const EXT_GRUPO = {"Saboya":"alpina","Lorena":"este","Dombes":"alpina","Aviñón y Condado Venesino":"provenzal","Génova":"italiana","Toscana":"italiana","Venecia":"italiana","Milán":"italiana","Nápoles":"italiana","Estados Pontificios":"italiana",
   "España":"espanola","Portugal":"portuguesa","Suiza (cantones)":"suiza","Estados alemanes":"alemana_ext","Provincias Unidas":"neerlandesa","Países Bajos austríacos":"valona","Principado de Lieja":"valona",
   "Inglaterra":"inglesa","Irlanda (jacobita)":"irlandesa","Escocia (jacobita)":"escocesa","Polonia":"polaca","Suecia":"sueca","Dinamarca":"danesa","Rusia":"rusa"};
-const topo = ([pre,suf]) => { const p=R(pre); let s=R(suf), n=0; while(n++<5&&p.toLowerCase().replace(/[- ]/g,"").endsWith(s.toLowerCase().slice(0,3)))s=R(suf); return p.endsWith("-")||p.endsWith(" ") ? p+s.charAt(0).toUpperCase()+s.slice(1) : p+s; };
+const topo = ([pre,suf]) => {
+  let p=R(pre), s=R(suf), n=0;
+  const V=/[aeiouyéèê]/i, eco=x=>p.toLowerCase().replace(/[- ]/g,"").endsWith(x.toLowerCase().slice(0,3));
+  while(n++<12&&eco(s))s=R(suf);
+  if(/[- ]$/.test(p)) return p+s.charAt(0).toUpperCase()+s.slice(1);
+  if(V.test(p.slice(-1))&&V.test(s[0])) p=(/[ea]$/i.test(p)||p.slice(-1)===s[0])?p.slice(0,-1):p+"r";
+  return (p+s).replace(/(.)\1\1+/g,"$1$1");
+};
 const de = t => /^[AEIOUÉÈY]/.test(t) ? "d'"+t : "de "+t;
 const NOBLE = c => c==="espada"||c==="toga"||c==="nuevo";
 function generarNombre(p){
