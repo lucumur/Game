@@ -55,6 +55,24 @@ button{cursor:pointer}
 .sel-head p{color:var(--muted);font-style:italic}
 .sel-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 20px}
 .hint{font-size:.85rem;color:var(--muted);font-style:italic;min-height:1.2em}
+.step{display:grid;gap:12px;border-top:1px solid var(--line);padding-top:16px}
+.step h2{font-size:1.3rem}
+.sel-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.field select:disabled,.field input:disabled{opacity:.7}
+.fate{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.fate .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:10px 12px;display:grid;gap:2px}
+.fate .card b{font-family:var(--f-display);font-weight:400;font-size:1.1rem}
+.pos-list{display:grid;gap:14px}
+.pos-group{display:grid;gap:8px}
+.pos-group h3{font-size:1.02rem;color:var(--gilt)}
+.pos-opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px}
+.pos-opt{text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:10px 12px;display:grid;gap:4px;min-width:0}
+.pos-opt:hover{border-color:var(--gilt)}
+.pos-opt[aria-pressed="true"]{border-color:var(--gilt);box-shadow:inset 0 0 0 1px var(--gilt);background:var(--chip)}
+.pos-opt b{font-weight:500}
+.pos-opt .mv{font-size:.85rem;color:var(--muted)}
+.pos-opt .warn{font-size:.82rem;color:var(--seal)}
 
 /* ---------- Épocas ---------- */
 #epocas{max-width:980px;margin-inline:auto;padding-block:28px 40px;display:grid;gap:22px}
@@ -327,13 +345,33 @@ button.kin:hover{border-color:var(--gilt)}
     <p id="sel-sub"></p>
     <div class="rule"></div>
   </header>
-  <div class="sel-grid">
-    <div class="field"><label class="label" for="f-nombre">Nombre</label><input id="f-nombre" autocomplete="off"></div>
-    <div class="field"><label class="label" for="f-pos">Posición</label><select id="f-pos"></select><div class="hint" id="h-pos"></div></div>
-    <div class="field"><label class="label" for="f-origen">Origen</label><select id="f-origen"></select></div>
-    <div class="field"><label class="label" for="f-edu">Educación</label><select id="f-edu"></select></div>
+  <section class="step">
+    <h2>I. Quién eres</h2>
+    <div class="sel-grid" id="elegible">
+      <div class="field"><label class="label" for="f-nombre">Nombre</label><input id="f-nombre" autocomplete="off" placeholder="Nombre y apellido"></div>
+      <div class="field"><label class="label" for="f-sexo">Sexo</label><select id="f-sexo"><option value="M">Hombre</option><option value="F">Mujer</option></select></div>
+      <div class="field"><label class="label" for="f-proc">Procedencia</label><select id="f-proc"><option value="paris">París</option><option value="provincia">Provincia</option><option value="extranjero">Extranjero</option></select></div>
+      <div class="field" id="w-region"><label class="label" for="f-region">De dónde, exactamente</label><select id="f-region"></select></div>
+      <div class="field"><label class="label" for="f-cuna">Cuna</label><select id="f-cuna"></select></div>
+      <div class="field"><label class="label" for="f-fil">Filiación</label><select id="f-fil"></select></div>
+      <div class="field"><label class="label" for="f-edu">Educación</label><select id="f-edu"></select></div>
+    </div>
+  </section>
+  <section class="step">
+    <h2>II. Lo que te tocó</h2>
+    <p class="note">Esto no se elige: fortuna, condición, lugar en la familia y confesión salen de una sola tirada.</p>
+    <div><button class="btn" id="b-tirar">Echar los dados del destino</button></div>
+    <div class="fate" id="fate"></div>
+  </section>
+  <section class="step" id="step3" hidden>
+    <h2>III. Tu posición en Versalles</h2>
+    <p class="note">Solo aparecen las que tu cuna, tu sexo y tu procedencia permiten. Algunas traen tensiones con tu destino.</p>
+    <div id="pos-list" class="pos-list"></div>
+  </section>
+  <div class="sel-actions">
+    <button class="btn primary" id="b-entrar" disabled>Entrar en Versalles</button>
+    <button class="btn" id="b-reset">Empezar de nuevo</button>
   </div>
-  <div style="display:flex;justify-content:center"><button class="btn primary" id="b-entrar">Entrar en Versalles</button></div>
   <button class="back" id="b-epocas">Cambiar de época</button>
 </main>
 
@@ -510,27 +548,9 @@ const CITAS = {"1722-06-15":"Llegada de la corte a Versalles","1722-06-18":"Cena
 let hoy=null, calMes=null, calSel=null;
 
 /* ---------- Catálogos ---------- */
-const POSICIONES = [
- ["Espada","Duque y par","Reclamar precedencia; proteger o hundir con su sola presencia"],
- ["Espada","Cortesano sin cargo","Asistir a todo; tejer y vender presentaciones"],
- ["Espada","Oficial de la guardia","Controlar quién pasa por una puerta; ver quién entra de noche"],
- ["Toga","Magistrado del Parlamento","Retrasar o desaparecer un expediente"],
- ["Toga","Consejero de Estado","Redactar informes que deciden carreras"],
- ["Clero","Obispo cortesano","Predicar ante el rey; otorgar beneficios"],
- ["Clero","Confesor","Oír secretos; condicionar la absolución"],
- ["Clero","Abate de salón","Circular libremente; difundir ideas y libelos"],
- ["Casa del rey","Médico de la corte","Diagnosticar u ocultar un diagnóstico; acceso a los cuerpos"],
- ["Casa del rey","Ayuda de cámara","Presente en el lever y el coucher; oír"],
- ["Casa del rey","Intendente de los Menus-Plaisirs","Organizar fiestas: decidir quién luce"],
- ["Fuera de jerarquía","Financiero","Prestar; comprar deudas ajenas y cobrarlas en favores"],
- ["Fuera de jerarquía","Artista de las obras reales","Retratar: intimidad y halago"],
- ["Fuera de jerarquía","Embajador extranjero","Correo diplomático; pagar informantes"],
- ["Casa de una princesa","Dama de compañía","Llevar mensajes; concertar matrimonios"]
-];
-const ORIGENES = ["Parisino","Provinciano","Provinciano arruinado por Law","Enriquecido por Law","De familia conversa (protestante oculta)","Bastardo reconocido"];
-const EDUCACION = ["Colegio jesuita","Oratorianos (tendencia jansenista)","Facultad de medicina de Montpellier","Facultad de derecho","Autodidacta de salones","Sin estudios"];
+/*__MOD_CREACION__*/
 const JORNADA = ["Lever","Messe","Conseil","Dîner","Promenade","Souper","Coucher"];
-const EJEMPLO = {nombre:"Antoine Fabre", pos:8, origen:1, edu:2};
+const EJEMPLO = {nombre:"Antoine Fabre",sexo:"M",proc:"provincia",region:"Languedoc",cuna:"burguesia",filiacion:"directa",edu:2,destino:{dinero:"menos",condicion:"ninguna",lugar:"segundon",confesion:"catolico"},pos:"medico"};
 
 /* ---------- Contenido de ejemplo ---------- */
 const DOCS = [
@@ -606,21 +626,57 @@ function rich(text){
 }
 
 /* ---------- Selector ---------- */
-function fillSelect(id,items){const s=$(id);s.innerHTML="";items.forEach((it,i)=>s.append(el("option",{value:i},it)))}
+function opts(sel,items){const s=$(sel);s.innerHTML="";items.forEach(([v,t])=>s.append(el("option",{value:v},t)))}
+let draft=null;
+function freshDraft(){return {nombre:"",sexo:"M",proc:"provincia",region:"Languedoc",cuna:"burguesia",filiacion:"directa",edu:0,destino:null,pos:null}}
 function buildSelector(){
-  const p=player||EJEMPLO, sp=$("#f-pos"), grp={}; sp.innerHTML="";
-  POSICIONES.forEach((x,i)=>{(grp[x[0]] ||= el("optgroup",{label:x[0]})).append(el("option",{value:i},x[1]))});
-  Object.values(grp).forEach(g=>sp.append(g));
-  fillSelect("#f-origen",ORIGENES); fillSelect("#f-edu",EDUCACION);
-  $("#f-nombre").value=p.nombre; sp.value=p.pos; $("#f-origen").value=p.origen; $("#f-edu").value=p.edu;
-  const hp=()=>{$("#h-pos").textContent="Movimientos propios: "+POSICIONES[sp.value][2]}; sp.onchange=hp; hp();
-  $("#b-entrar").onclick=()=>{player={nombre:$("#f-nombre").value.trim()||EJEMPLO.nombre,pos:+sp.value,origen:+$("#f-origen").value,edu:+$("#f-edu").value};store.set("vg_player",player);show("game")};
+  draft = player&&typeof player.pos==="string" ? JSON.parse(JSON.stringify(player)) : freshDraft();
+  opts("#f-cuna",CUNAS); opts("#f-fil",FILIACIONES); opts("#f-edu",EDUCACIONES.map((e,i)=>[i,e]));
+  const regiones=()=>draft.proc==="provincia"?PROV_DEF.filter(r=>r.tipo==="reino").map(r=>[r.nombre,r.nombre]):draft.proc==="extranjero"?EXTRANJEROS.map(e=>[e,e]):[];
+  const syncRegion=()=>{const r=regiones();$("#w-region").hidden=!r.length;opts("#f-region",r);if(r.length&&!r.some(x=>x[0]===draft.region))draft.region=r[0][0];$("#f-region").value=draft.region||""};
+  $("#f-nombre").value=draft.nombre;$("#f-sexo").value=draft.sexo;$("#f-proc").value=draft.proc;$("#f-cuna").value=draft.cuna;$("#f-fil").value=draft.filiacion;$("#f-edu").value=draft.edu;
+  syncRegion();
+  $("#f-nombre").oninput=e=>draft.nombre=e.target.value;
+  $("#f-sexo").onchange=e=>draft.sexo=e.target.value;
+  $("#f-proc").onchange=e=>{draft.proc=e.target.value;if(draft.proc==="paris")draft.region="";syncRegion()};
+  $("#f-region").onchange=e=>draft.region=e.target.value;
+  $("#f-cuna").onchange=e=>draft.cuna=e.target.value;
+  $("#f-fil").onchange=e=>draft.filiacion=e.target.value;
+  $("#f-edu").onchange=e=>draft.edu=+e.target.value;
+  $("#b-tirar").onclick=()=>{if(draft.destino)return;draft.destino=tirarDestino(draft);renderDestino()};
+  $("#b-reset").onclick=()=>{draft=freshDraft();buildSelectorFromDraft()};
+  $("#b-entrar").onclick=()=>{if(!draft.pos)return;draft.nombre=draft.nombre.trim()||(draft.sexo==="F"?"Marie Fabre":"Antoine Fabre");player=draft;store.set("vg_player",player);show("game")};
+  renderDestino();
+  function buildSelectorFromDraft(){$("#f-nombre").value="";$("#f-sexo").value="M";$("#f-proc").value=draft.proc;$("#f-cuna").value=draft.cuna;$("#f-fil").value=draft.filiacion;$("#f-edu").value=0;syncRegion();renderDestino()}
+}
+function renderDestino(){
+  const d=draft.destino, locked=!!d;
+  document.querySelectorAll("#elegible select,#elegible input").forEach(x=>{if(x.id!=="f-nombre")x.disabled=locked});
+  $("#b-tirar").disabled=locked; $("#b-tirar").textContent=locked?"El destino está echado":"Echar los dados del destino";
+  const f=$("#fate"); f.innerHTML="";
+  if(d){
+    [["Fortuna",DINERO_N[d.dinero]],["Condición",CONDICION_N[d.condicion]],["Lugar en la familia",LUGAR_N[d.lugar]],["Confesión",CONF_N[d.confesion]]]
+      .forEach(([k,v])=>f.append(el("div",{class:"card"},el("span",{class:"label"},k),el("b",{},v))));
+  }
+  $("#step3").hidden=!locked; renderPosiciones();
+}
+function renderPosiciones(){
+  const box=$("#pos-list"); box.innerHTML=""; if(!draft.destino){$("#b-entrar").disabled=true;return}
+  const list=posibles(draft); if(!list.some(q=>q.id===draft.pos))draft.pos=null;
+  const grupos={}; list.forEach(q=>(grupos[q.g] ||= []).push(q));
+  for(const[g,qs]of Object.entries(grupos)){
+    const o=el("div",{class:"pos-opts"});
+    qs.forEach(q=>{const t=tensiones(draft,q);o.append(el("button",{type:"button",class:"pos-opt","aria-pressed":String(draft.pos===q.id),onclick:()=>{draft.pos=q.id;renderPosiciones()}},el("b",{},q.n),el("span",{class:"mv"},q.m),...t.map(w=>el("span",{class:"warn"},"⚠ "+w))))});
+    box.append(el("div",{class:"pos-group"},el("h3",{},g),o));
+  }
+  if(!list.length)box.append(el("p",{class:"note"},"Ninguna posición encaja con este perfil. Empieza de nuevo con otra cuna o procedencia."));
+  $("#b-entrar").disabled=!draft.pos;
 }
 
 /* ---------- Barra ---------- */
 function buildBar(){
   const p=player||EJEMPLO;
-  $("#who").innerHTML=""; $("#who").append(p.nombre," ",el("small",{},POSICIONES[p.pos][1]));
+  $("#who").innerHTML=""; $("#who").append(p.nombre," ",el("small",{},posName(p)));
   const pr=$("#portrait"), src=store.get("vg_retrato",null); pr.innerHTML="";
   pr.append(src?el("img",{src,alt:""}):bust());
   $("#fecha").textContent=fmtFr(hoy)+" · "+(epoca.lugar||"Versalles");
