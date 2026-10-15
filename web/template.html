@@ -102,6 +102,13 @@ button.era:hover{background:var(--chip)}
 .bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);display:grid;gap:8px;padding-block:10px 0;border-bottom:1px solid var(--line)}
 .bar-top{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline;justify-content:space-between}
 .who{font-family:var(--f-display);font-size:1.3rem}
+.ident{display:flex;gap:12px;align-items:center;min-width:0}
+.portrait{flex:none;width:58px;height:72px;border-radius:50%;border:1.5px solid var(--gilt);box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--line);overflow:hidden;background:var(--chip);display:grid;place-items:center;padding:0}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.portrait svg{width:100%;height:100%}
+.portrait .bust-frame{display:none}
+.portrait:hover{border-color:var(--accent)}
+@media (max-width:640px){.portrait{width:46px;height:56px}}
 .who small{font-family:var(--f-body);font-size:.9rem;color:var(--muted);font-style:italic}
 .date{font-style:italic;color:var(--muted)}
 .clock{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
@@ -327,7 +334,11 @@ button.kin:hover{border-color:var(--gilt)}
 <div id="game" class="wrap" hidden>
   <header class="bar">
     <div class="bar-top">
-      <div class="who" id="who"></div>
+      <div class="ident">
+        <button class="portrait" id="portrait" title="Cambiar retrato" aria-label="Retrato del personaje. Toca para cambiarlo."></button>
+        <input type="file" id="portrait-file" accept="image/*" hidden>
+        <div class="who" id="who"></div>
+      </div>
       <div style="display:flex;gap:12px;align-items:baseline;flex-wrap:wrap">
         <span class="date" id="fecha"></span>
         <button class="btn sm" id="b-back">‹ Épocas</button>
@@ -601,11 +612,26 @@ function buildSelector(){
 function buildBar(){
   const p=player||EJEMPLO;
   $("#who").innerHTML=""; $("#who").append(p.nombre," ",el("small",{},"· "+POSICIONES[p.pos][1]));
+  const pr=$("#portrait"), src=store.get("vg_retrato",null); pr.innerHTML="";
+  pr.append(src?el("img",{src,alt:""}):bust());
   $("#fecha").textContent=fmtFr(hoy)+" · "+(epoca.lugar||"Versalles");
   const c=$("#clock"); c.innerHTML=""; JORNADA.forEach((j,i)=>c.append(el("span",{class:i===4?"now":null},j)));
   const g=$("#gauges"); g.innerHTML="";
   [["Favor real",1],["Dinero",2],["Reputación",2],["Salud",4]].forEach(([n,v])=>{const pips=el("span",{class:"pips","aria-label":n+": "+v+" de 5"});for(let i=0;i<5;i++)pips.append(el("i",{class:i<v?"on":null}));g.append(el("span",{class:"gauge"},n,pips))});
 }
+
+/* Retrato: se recorta a 180×225 y se guarda como JPEG ligero dentro de la partida. */
+$("#portrait").onclick=()=>$("#portrait-file").click();
+$("#portrait-file").onchange=async e=>{
+  const f=e.target.files[0]; e.target.value=""; if(!f)return;
+  try{
+    const img=new Image(); img.src=URL.createObjectURL(f); await img.decode();
+    const W=180,H=225,c=document.createElement("canvas"); c.width=W;c.height=H;
+    const r=Math.max(W/img.width,H/img.height), w=img.width*r, h=img.height*r;
+    c.getContext("2d").drawImage(img,(W-w)/2,(H-h)/2*0.6,w,h);
+    store.set("vg_retrato",c.toDataURL("image/jpeg",0.82)); URL.revokeObjectURL(img.src); buildBar();
+  }catch(err){}
+};
 
 /* ---------- Escritorio ---------- */
 const KIND={carta:"Carta",rumor:"Chisme",aviso:"Aviso de palacio",oblig:"Obligación",gazette:"Gaceta",plan:"Plan"};
@@ -853,7 +879,7 @@ function buildEras(){
 $("#b-epocas").onclick=()=>show("epocas");
 
 /* ---------- Partidas: guardar, cargar, exportar ---------- */
-const KEYS=["vg_epoca","vg_player","vg_docs","vg_notas","vg_guess","vg_planes","vg_diario","vg_glosario","vg_fecha"];
+const KEYS=["vg_retrato","vg_epoca","vg_player","vg_docs","vg_notas","vg_guess","vg_planes","vg_diario","vg_glosario","vg_fecha"];
 let db=null, downloads=null, sesion=store.get("vg_sesion",null);
 const ready=(async()=>{try{if(window.claude?.use){[db,downloads]=await Promise.all([claude.use("db").catch(()=>null),claude.use("downloads").catch(()=>null)])}}catch(e){}})();
 function snapshot(){const o={};KEYS.forEach(k=>o[k]=store.get(k,null));
