@@ -4,7 +4,7 @@
    Después: posición compatible con el perfil, con avisos de tensión. */
 const EXTRANJEROS = ["Saboya","Lorena","Dombes","Aviñón y Condado Venesino","Génova","Toscana","Venecia","Milán","Nápoles","Estados Pontificios","España","Portugal","Suiza (cantones)","Estados alemanes","Provincias Unidas","Países Bajos austríacos","Principado de Lieja","Inglaterra","Irlanda (jacobita)","Escocia (jacobita)","Polonia","Suecia","Dinamarca","Rusia"];
 const CUNAS = [["espada","Nobleza de espada"],["toga","Nobleza de toga"],["nuevo","Hombre nuevo (recién ennoblecido)"],["burguesia","Burguesía"],["pueblo","Pueblo"]];
-const FILIACIONES = [["directa","Línea directa"],["materna","Línea indirecta (apellido por vía materna)"],["bastardo","Bastardo reconocido"]];
+const FILIACIONES = [["directa","Legítimo, por línea paterna"],["materna","Legítimo, apellido y bienes por vía materna"],["bastardo","Bastardo reconocido"]];
 const EDUCACIONES = ["Colegio jesuita","Oratorianos (tendencia jansenista)","Facultad de medicina de Montpellier","Facultad de medicina de París","Facultad de derecho","Academia militar o paje de una gran casa","Convento (educación de señorita)","Taller o aprendizaje de oficio","Autodidacta de salones","Sin estudios"];
 const CUNA_N = Object.fromEntries(CUNAS), FIL_N = Object.fromEntries(FILIACIONES);
 
@@ -18,7 +18,7 @@ const DINERO_W = { // pesos de juego, no estadística histórica
   pueblo:   [["ruina",55],["menos",25],["holgada",15],["rica",2],["arruinada_law",1],["enriquecida_law",2]]
 };
 const CONDICION_N = {ninguna:"Ninguna",no_reconocido:"Bastardo no reconocido",exposito:"Expósito",huerfano:"Huérfano"};
-const LUGAR_N = {primogenito:"Primogénito",segundon:"Segundón",primogenita:"Hija con dote",sin_dote:"Hija sin dote",viudo:"Viudo",viuda:"Viuda",huerfano:"Huérfano",huerfana:"Huérfana"};
+const LUGAR_N = {primogenito:"Primogénito",segundon:"Segundón",primogenita:"Hija con dote",sin_dote:"Hija sin dote",viudo:"Viudo",viuda:"Viuda",huerfano:"Huérfano",huerfana:"Huérfana",benjamin:"Hijo menor",benjamina:"Hija menor",unico:"Hijo único",unica:"Hija única"};
 const CONF_N = {catolico:"Católica",jansenista:"Familia jansenista",convertido:"Protestante convertido",secreto:"Protestante en secreto",declarado:"Protestante declarado (extranjero)",judio:"Judía"};
 const PROT_REG = ["Languedoc","Poitou","Saintonge y Angoumois","Delfinado","Guyena y Gascuña","Bearne y Navarra","Aunis"];
 const JUD_REG = ["Alsacia","Metz y Verdún (Tres Obispados)","Guyena y Gascuña","Condado Venesino y Aviñón"];
@@ -39,8 +39,8 @@ function tirarDestino(p){
   d.dinero = pick(DINERO_W[p.cuna]);
   d.condicion = pick([["ninguna",90],...(d.filiacion==="bastardo"?[]:[["no_reconocido",3]]),["exposito",2],["huerfano",5]]);
   const orf = d.condicion==="huerfano" ? 0 : 1; // si ya es huérfano por condición, el lugar es otro
-  d.lugar = p.sexo==="F" ? pick([["primogenita",36],["sin_dote",40],["viuda",15],["huerfana",9*orf]])
-    : pick([["primogenito",35],["segundon",50],["viudo",8],["huerfano",7*orf]]);
+  d.lugar = p.sexo==="F" ? pick([["primogenita",28],["sin_dote",32],["benjamina",15],["unica",6],["viuda",12],["huerfana",7*orf]])
+    : pick([["primogenito",28],["segundon",36],["benjamin",16],["unico",7],["viudo",7],["huerfano",6*orf]]);
   let w = {catolico:89.5,jansenista:6,convertido:3,secreto:1,judio:.5,declarado:0};
   if (p.proc==="paris") w.jansenista *= 1.8;
   if (p.proc==="provincia" && PROT_REG.includes(p.region)) { w.convertido *= 3; w.secreto *= 3; }
@@ -133,6 +133,7 @@ function tensiones(p,q){
   if(["ruina","arruinada_law"].includes(d.dinero)&&["duque","duquesa","embajador","cortesano","dama-palacio"].includes(q.id))t.push("Mantener el rango te endeudará.");
   if(d.lugar==="sin_dote"&&["dama-palacio","duquesa"].includes(q.id))t.push("Sin dote: tu futuro depende de un protector.");
   if(p.proc==="extranjero"&&!q.x&&["Toga","Casa del rey"].includes(q.g))t.push("Extranjero en un cargo francés: necesitarás cartas de naturalización o un protector.");
+  if(d.lugar==="benjamin"&&["duque","cortesano"].includes(q.id))t.push("Hijo menor: lo normal habría sido la Iglesia o un regimiento.");
   if(d.lugar==="segundon"&&q.id==="duque")t.push("Eres segundón: el título debería ser de tu hermano mayor. ¿Qué pasó con él?");
   return t;
 }
