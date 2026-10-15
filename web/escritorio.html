@@ -103,12 +103,19 @@ button.era:hover{background:var(--chip)}
 .bar-top{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline;justify-content:space-between}
 .who{font-family:var(--f-display);font-size:1.3rem}
 .ident{display:flex;gap:12px;align-items:center;min-width:0}
-.portrait{flex:none;width:58px;height:72px;border-radius:50%;border:1.5px solid var(--gilt);box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--line);overflow:hidden;background:var(--chip);display:grid;place-items:center;padding:0}
+.portrait{flex:none;width:104px;height:130px;border-radius:50%;border:1.5px solid var(--gilt);box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--line);overflow:hidden;background:var(--chip);display:grid;place-items:center;padding:0}
 .portrait img{width:100%;height:100%;object-fit:cover}
 .portrait svg{width:100%;height:100%}
 .portrait .bust-frame{display:none}
 .portrait:hover{border-color:var(--accent)}
-@media (max-width:640px){.portrait{width:46px;height:56px}}
+.bar-top{align-items:center}
+.bar-right{display:grid;gap:8px;justify-items:end;min-width:0}
+.bar-meta{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;justify-content:flex-end}
+.bar-right .clock,.bar-right .gauges{justify-content:flex-end;max-width:100%}
+.who{font-size:1.6rem;line-height:1.15}
+.who small{display:block}
+@media (max-width:760px){.bar-right{justify-items:start}.bar-meta,.bar-right .clock,.bar-right .gauges{justify-content:flex-start}}
+@media (max-width:640px){.portrait{width:72px;height:90px}.who{font-size:1.3rem}}
 .who small{font-family:var(--f-body);font-size:.9rem;color:var(--muted);font-style:italic}
 .date{font-style:italic;color:var(--muted)}
 .clock{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
@@ -339,14 +346,16 @@ button.kin:hover{border-color:var(--gilt)}
         <input type="file" id="portrait-file" accept="image/*" hidden>
         <div class="who" id="who"></div>
       </div>
-      <div style="display:flex;gap:12px;align-items:baseline;flex-wrap:wrap">
-        <span class="date" id="fecha"></span>
-        <button class="btn sm" id="b-back">‹ Épocas</button>
-        <button class="btn sm primary" id="b-partida">Partida</button>
+      <div class="bar-right">
+        <div class="bar-meta">
+          <span class="date" id="fecha"></span>
+          <button class="btn sm" id="b-back">‹ Épocas</button>
+          <button class="btn sm primary" id="b-partida">Partida</button>
+        </div>
+        <div class="clock" id="clock" aria-label="Jornada del rey"></div>
+        <div class="gauges" id="gauges"></div>
       </div>
     </div>
-    <div class="clock" id="clock" aria-label="Jornada del rey"></div>
-    <div class="gauges" id="gauges"></div>
     <nav class="views" id="views" aria-label="Secciones"></nav>
   </header>
 
@@ -611,7 +620,7 @@ function buildSelector(){
 /* ---------- Barra ---------- */
 function buildBar(){
   const p=player||EJEMPLO;
-  $("#who").innerHTML=""; $("#who").append(p.nombre," ",el("small",{},"· "+POSICIONES[p.pos][1]));
+  $("#who").innerHTML=""; $("#who").append(p.nombre," ",el("small",{},POSICIONES[p.pos][1]));
   const pr=$("#portrait"), src=store.get("vg_retrato",null); pr.innerHTML="";
   pr.append(src?el("img",{src,alt:""}):bust());
   $("#fecha").textContent=fmtFr(hoy)+" · "+(epoca.lugar||"Versalles");
