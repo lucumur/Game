@@ -57,6 +57,12 @@ button{cursor:pointer}
 .hint{font-size:.85rem;color:var(--muted);font-style:italic;min-height:1.2em}
 .step{display:grid;gap:12px;border-top:1px solid var(--line);padding-top:16px}
 .step h2{font-size:1.3rem}
+.name-row{display:flex;gap:8px}
+.name-row input{flex:1;min-width:0;font-family:var(--f-display);font-size:1.15rem}
+.dice{flex:none;width:44px;border:1px solid var(--gilt);background:var(--panel);border-radius:var(--r);font-size:1.6rem;line-height:1;color:var(--gilt)}
+.dice:hover{background:var(--chip)}
+.dice.roll{animation:roll .4s ease}
+@keyframes roll{50%{transform:rotate(180deg) scale(1.15)}}
 .sel-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 .btn[disabled]{opacity:.45;cursor:not-allowed}
 .field select:disabled,.field input:disabled{opacity:.7}
@@ -348,18 +354,18 @@ button.kin:hover{border-color:var(--gilt)}
   <section class="step">
     <h2>I. Quién eres</h2>
     <div class="sel-grid" id="elegible">
-      <div class="field"><label class="label" for="f-nombre">Nombre</label><input id="f-nombre" autocomplete="off" placeholder="Nombre y apellido"></div>
       <div class="field"><label class="label" for="f-sexo">Sexo</label><select id="f-sexo"><option value="M">Hombre</option><option value="F">Mujer</option></select></div>
       <div class="field"><label class="label" for="f-proc">Procedencia</label><select id="f-proc"><option value="paris">París</option><option value="provincia">Provincia</option><option value="extranjero">Extranjero</option></select></div>
       <div class="field" id="w-region"><label class="label" for="f-region">De dónde, exactamente</label><select id="f-region"></select></div>
       <div class="field"><label class="label" for="f-cuna">Cuna</label><select id="f-cuna"></select></div>
-      <div class="field"><label class="label" for="f-fil">Filiación</label><select id="f-fil"></select></div>
-      <div class="field"><label class="label" for="f-edu">Educación</label><select id="f-edu"></select></div>
+      <div class="field" style="grid-column:1/-1"><label class="label" for="f-nombre">Nombre</label>
+        <div class="name-row"><input id="f-nombre" autocomplete="off"><button type="button" class="dice" id="b-dado" title="Otro nombre" aria-label="Proponer otro nombre">⚄</button></div>
+        <div class="hint">Propuesto según tu cuna y tu tierra. Puedes escribir el que prefieras.</div></div>
     </div>
   </section>
   <section class="step">
     <h2>II. Lo que te tocó</h2>
-    <p class="note">Esto no se elige: fortuna, condición, lugar en la familia y confesión salen de una sola tirada.</p>
+    <p class="note">Esto no se elige: filiación, educación, fortuna, condición, lugar en la familia y confesión salen de una sola tirada.</p>
     <div><button class="btn" id="b-tirar">Echar los dados del destino</button></div>
     <div class="fate" id="fate"></div>
   </section>
@@ -548,9 +554,10 @@ const CITAS = {"1722-06-15":"Llegada de la corte a Versalles","1722-06-18":"Cena
 let hoy=null, calMes=null, calSel=null;
 
 /* ---------- Catálogos ---------- */
+/*__MOD_NOMBRES__*/
 /*__MOD_CREACION__*/
 const JORNADA = ["Lever","Messe","Conseil","Dîner","Promenade","Souper","Coucher"];
-const EJEMPLO = {nombre:"Antoine Fabre",sexo:"M",proc:"provincia",region:"Languedoc",cuna:"burguesia",filiacion:"directa",edu:2,destino:{dinero:"menos",condicion:"ninguna",lugar:"segundon",confesion:"catolico"},pos:"medico"};
+const EJEMPLO = {nombre:"Antoine Fabre",sexo:"M",proc:"provincia",region:"Languedoc",cuna:"burguesia",destino:{filiacion:"directa",edu:2,dinero:"menos",condicion:"ninguna",lugar:"segundon",confesion:"catolico"},pos:"medico"};
 
 /* ---------- Contenido de ejemplo ---------- */
 const DOCS = [
@@ -628,34 +635,33 @@ function rich(text){
 /* ---------- Selector ---------- */
 function opts(sel,items){const s=$(sel);s.innerHTML="";items.forEach(([v,t])=>s.append(el("option",{value:v},t)))}
 let draft=null;
-function freshDraft(){return {nombre:"",sexo:"M",proc:"provincia",region:"Languedoc",cuna:"burguesia",filiacion:"directa",edu:0,destino:null,pos:null}}
+function freshDraft(){const d={nombre:"",nombreManual:false,sexo:"M",proc:"provincia",region:"Languedoc",cuna:"burguesia",destino:null,pos:null};d.nombre=generarNombre(d);return d}
 function buildSelector(){
   draft = player&&typeof player.pos==="string" ? JSON.parse(JSON.stringify(player)) : freshDraft();
-  opts("#f-cuna",CUNAS); opts("#f-fil",FILIACIONES); opts("#f-edu",EDUCACIONES.map((e,i)=>[i,e]));
-  const regiones=()=>draft.proc==="provincia"?PROV_DEF.filter(r=>r.tipo==="reino").map(r=>[r.nombre,r.nombre]):draft.proc==="extranjero"?EXTRANJEROS.map(e=>[e,e]):[];
+  opts("#f-cuna",CUNAS);
+  const regiones=()=>draft.proc==="provincia"?PROV_DEF.filter(r=>r.tipo==="reino").map(r=>[r.nombre,r.nombre]).sort((a,b)=>a[0].localeCompare(b[0])):draft.proc==="extranjero"?EXTRANJEROS.map(e=>[e,e]):[];
   const syncRegion=()=>{const r=regiones();$("#w-region").hidden=!r.length;opts("#f-region",r);if(r.length&&!r.some(x=>x[0]===draft.region))draft.region=r[0][0];$("#f-region").value=draft.region||""};
-  $("#f-nombre").value=draft.nombre;$("#f-sexo").value=draft.sexo;$("#f-proc").value=draft.proc;$("#f-cuna").value=draft.cuna;$("#f-fil").value=draft.filiacion;$("#f-edu").value=draft.edu;
-  syncRegion();
-  $("#f-nombre").oninput=e=>draft.nombre=e.target.value;
-  $("#f-sexo").onchange=e=>draft.sexo=e.target.value;
-  $("#f-proc").onchange=e=>{draft.proc=e.target.value;if(draft.proc==="paris")draft.region="";syncRegion()};
-  $("#f-region").onchange=e=>draft.region=e.target.value;
-  $("#f-cuna").onchange=e=>draft.cuna=e.target.value;
-  $("#f-fil").onchange=e=>draft.filiacion=e.target.value;
-  $("#f-edu").onchange=e=>draft.edu=+e.target.value;
+  const renombrar=()=>{if(!draft.nombreManual){draft.nombre=generarNombre(draft);$("#f-nombre").value=draft.nombre}};
+  const sync=()=>{$("#f-nombre").value=draft.nombre;$("#f-sexo").value=draft.sexo;$("#f-proc").value=draft.proc;$("#f-cuna").value=draft.cuna;syncRegion()};
+  sync();
+  $("#f-nombre").oninput=e=>{draft.nombre=e.target.value;draft.nombreManual=true};
+  $("#b-dado").onclick=e=>{draft.nombreManual=false;renombrar();e.currentTarget.classList.remove("roll");void e.currentTarget.offsetWidth;e.currentTarget.classList.add("roll")};
+  $("#f-sexo").onchange=e=>{draft.sexo=e.target.value;renombrar()};
+  $("#f-proc").onchange=e=>{draft.proc=e.target.value;if(draft.proc==="paris")draft.region="";syncRegion();renombrar()};
+  $("#f-region").onchange=e=>{draft.region=e.target.value;renombrar()};
+  $("#f-cuna").onchange=e=>{draft.cuna=e.target.value;renombrar()};
   $("#b-tirar").onclick=()=>{if(draft.destino)return;draft.destino=tirarDestino(draft);renderDestino()};
-  $("#b-reset").onclick=()=>{draft=freshDraft();buildSelectorFromDraft()};
-  $("#b-entrar").onclick=()=>{if(!draft.pos)return;draft.nombre=draft.nombre.trim()||(draft.sexo==="F"?"Marie Fabre":"Antoine Fabre");player=draft;store.set("vg_player",player);show("game")};
+  $("#b-reset").onclick=()=>{draft=freshDraft();sync();renderDestino()};
+  $("#b-entrar").onclick=()=>{if(!draft.pos)return;draft.nombre=draft.nombre.trim()||generarNombre(draft);player=draft;store.set("vg_player",player);show("game")};
   renderDestino();
-  function buildSelectorFromDraft(){$("#f-nombre").value="";$("#f-sexo").value="M";$("#f-proc").value=draft.proc;$("#f-cuna").value=draft.cuna;$("#f-fil").value=draft.filiacion;$("#f-edu").value=0;syncRegion();renderDestino()}
 }
 function renderDestino(){
   const d=draft.destino, locked=!!d;
-  document.querySelectorAll("#elegible select,#elegible input").forEach(x=>{if(x.id!=="f-nombre")x.disabled=locked});
+  document.querySelectorAll("#elegible select").forEach(x=>x.disabled=locked);
   $("#b-tirar").disabled=locked; $("#b-tirar").textContent=locked?"El destino está echado":"Echar los dados del destino";
   const f=$("#fate"); f.innerHTML="";
   if(d){
-    [["Fortuna",DINERO_N[d.dinero]],["Condición",CONDICION_N[d.condicion]],["Lugar en la familia",LUGAR_N[d.lugar]],["Confesión",CONF_N[d.confesion]]]
+    [["Filiación",FIL_N[d.filiacion]],["Educación",EDUCACIONES[d.edu]],["Fortuna",DINERO_N[d.dinero]],["Condición",CONDICION_N[d.condicion]],["Lugar en la familia",LUGAR_N[d.lugar]],["Confesión",CONF_N[d.confesion]]]
       .forEach(([k,v])=>f.append(el("div",{class:"card"},el("span",{class:"label"},k),el("b",{},v))));
   }
   $("#step3").hidden=!locked; renderPosiciones();

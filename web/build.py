@@ -6,7 +6,7 @@ t = (W / "template.html").read_text(encoding="utf-8")
 per = json.loads((R / "canon/personajes.json").read_text(encoding="utf-8"))["personajes"]
 lin = json.loads((R / "canon/linaje.json").read_text(encoding="utf-8"))
 glo = json.loads((R / "canon/glosario.json").read_text(encoding="utf-8"))["entradas"]
-for name in ("mapas", "linaje", "creacion"):
+for name in ("mapas", "linaje", "nombres", "creacion"):
     t = t.replace(f"/*__MOD_{name.upper()}__*/", (W / "js" / f"{name}.js").read_text(encoding="utf-8"))
 import base64, csv
 rows = list(csv.DictReader((R / "mapa/definition.csv").read_text(encoding="utf-8").splitlines(), delimiter=";"))

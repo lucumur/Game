@@ -1,8 +1,8 @@
 /* ---------- Creación de personaje ----------
-   Elegible: nombre, sexo, procedencia, cuna, filiación, educación.
-   Fortuito (una sola tirada): fortuna, condición, lugar en la familia, confesión.
+   Elegible: sexo, procedencia, cuna (el nombre se propone según el perfil y es editable).
+   Fortuito (una sola tirada): filiación, educación, fortuna, condición, lugar en la familia, confesión.
    Después: posición compatible con el perfil, con avisos de tensión. */
-const EXTRANJEROS = ["Saboya","Lorena","Génova","Toscana","Estados Pontificios","España","Portugal","Suiza (cantones)","Estados alemanes","Provincias Unidas","Inglaterra","Irlanda (jacobita)","Escocia (jacobita)","Polonia"];
+const EXTRANJEROS = ["Saboya","Lorena","Dombes","Aviñón y Condado Venesino","Génova","Toscana","Venecia","Milán","Nápoles","Estados Pontificios","España","Portugal","Suiza (cantones)","Estados alemanes","Provincias Unidas","Países Bajos austríacos","Principado de Lieja","Inglaterra","Irlanda (jacobita)","Escocia (jacobita)","Polonia","Suecia","Dinamarca","Rusia"];
 const CUNAS = [["espada","Nobleza de espada"],["toga","Nobleza de toga"],["nuevo","Hombre nuevo (recién ennoblecido)"],["burguesia","Burguesía"],["pueblo","Pueblo"]];
 const FILIACIONES = [["directa","Línea directa"],["materna","Línea indirecta (apellido por vía materna)"],["bastardo","Bastardo reconocido"]];
 const EDUCACIONES = ["Colegio jesuita","Oratorianos (tendencia jansenista)","Facultad de medicina de Montpellier","Facultad de medicina de París","Facultad de derecho","Academia militar o paje de una gran casa","Convento (educación de señorita)","Taller o aprendizaje de oficio","Autodidacta de salones","Sin estudios"];
@@ -24,13 +24,23 @@ const PROT_REG = ["Languedoc","Poitou","Saintonge y Angoumois","Delfinado","Guye
 const JUD_REG = ["Alsacia","Metz y Verdún (Tres Obispados)","Guyena y Gascuña","Condado Venesino y Aviñón"];
 const PROT_EXT = ["Suiza (cantones)","Estados alemanes","Provincias Unidas","Inglaterra"];
 
+const EDU_W = { // índices de EDUCACIONES
+  F:{espada:[[6,60],[8,30],[9,10]],toga:[[6,60],[8,25],[9,15]],nuevo:[[6,55],[8,25],[9,20]],burguesia:[[6,45],[8,10],[9,35],[7,10]],pueblo:[[9,65],[6,15],[7,20]]},
+  M:{espada:[[0,45],[5,35],[1,10],[8,10]],toga:[[0,40],[1,25],[4,30],[8,5]],nuevo:[[0,35],[4,20],[1,15],[3,10],[2,5],[8,15]],
+     burguesia:[[0,25],[1,15],[4,15],[2,8],[3,7],[7,20],[8,10]],pueblo:[[9,55],[7,35],[0,5],[8,5]]}
+};
+const SUR = ["Languedoc","Provenza","Guyena y Gascuña","Rosellón","Condado de Foix","Delfinado","Bearne y Navarra"];
 function tirarDestino(p){
   const d = {};
+  d.filiacion = pick({espada:[["directa",88],["materna",5],["bastardo",7]],toga:[["directa",92],["materna",5],["bastardo",3]],nuevo:[["directa",90],["materna",6],["bastardo",4]],burguesia:[["directa",92],["materna",6],["bastardo",2]],pueblo:[["directa",85],["materna",12],["bastardo",3]]}[p.cuna]);
+  let ew = EDU_W[p.sexo==="F"?"F":"M"][p.cuna].map(x=>[...x]);
+  if (p.proc==="provincia" && SUR.includes(p.region)) ew = ew.map(([k,w])=>[k, k===2?w*2.5:k===3?w*0.4:w]);
+  d.edu = +pick(ew);
   d.dinero = pick(DINERO_W[p.cuna]);
-  d.condicion = pick([["ninguna",90],...(p.filiacion==="bastardo"?[]:[["no_reconocido",3]]),["exposito",2],["huerfano",5]]);
-  d.lugar = d.condicion==="huerfano" ? (p.sexo==="F"?"huerfana":"huerfano")
-    : p.sexo==="F" ? pick([["primogenita",36],["sin_dote",40],["viuda",15],["huerfana",9]])
-    : pick([["primogenito",35],["segundon",50],["viudo",8],["huerfano",7]]);
+  d.condicion = pick([["ninguna",90],...(d.filiacion==="bastardo"?[]:[["no_reconocido",3]]),["exposito",2],["huerfano",5]]);
+  const orf = d.condicion==="huerfano" ? 0 : 1; // si ya es huérfano por condición, el lugar es otro
+  d.lugar = p.sexo==="F" ? pick([["primogenita",36],["sin_dote",40],["viuda",15],["huerfana",9*orf]])
+    : pick([["primogenito",35],["segundon",50],["viudo",8],["huerfano",7*orf]]);
   let w = {catolico:89.5,jansenista:6,convertido:3,secreto:1,judio:.5,declarado:0};
   if (p.proc==="paris") w.jansenista *= 1.8;
   if (p.proc==="provincia" && PROT_REG.includes(p.region)) { w.convertido *= 3; w.secreto *= 3; }
@@ -104,7 +114,7 @@ const POSICIONES2 = [
 const POS_ID = Object.fromEntries(POSICIONES2.map(p=>[p.id,p]));
 
 function posibles(p){
-  return POSICIONES2.filter(q=>q.c.includes(p.cuna)&&(!q.s||q.s===p.sexo)&&(!q.f||q.f===p.filiacion)
+  return POSICIONES2.filter(q=>q.c.includes(p.cuna)&&(!q.s||q.s===p.sexo)&&(!q.f||q.f===(p.destino?.filiacion||"directa"))
     &&(!q.x||(p.proc==="extranjero"&&(q.x===true||q.x.includes(p.region)))));
 }
 function tensiones(p,q){
@@ -113,7 +123,11 @@ function tensiones(p,q){
   if(cl&&d.confesion==="declarado")t.push("Un protestante declarado no puede ejercer en la Iglesia sin convertirse.");
   if(d.confesion==="convertido"&&(cl||q.g==="Toga"))t.push("Familia de conversos: vigilarán tu ortodoxia.");
   if(d.confesion==="jansenista"&&["obispo","confesor","capellan"].includes(q.id))t.push("Tu familia jansenista choca con la bula Unigenitus: los jesuitas te vigilarán.");
-  if(p.filiacion==="bastardo"&&q.g==="Espada")t.push("Rango discutido: algunos te negarán la precedencia.");
+  const MED=[2,3];
+  if(["medico"].includes(q.id)&&!MED.includes(d.edu))t.push("Sin estudios de medicina: tendrás que fingir el título o comprarlo.");
+  if(["parlamento","abogado","maitre-requetes","consejero-estado"].includes(q.id)&&d.edu!==4)t.push("Sin estudios de derecho: dependerás de tus secretarios.");
+  if(q.g==="Clero"&&[7,9].includes(d.edu)&&["obispo","abate","canonigo","capellan","confesor"].includes(q.id))t.push("Sin estudios: un clérigo ignorante será objeto de burla.");
+  if(d.filiacion==="bastardo"&&q.g==="Espada")t.push("Rango discutido: algunos te negarán la precedencia.");
   if(d.condicion==="exposito"&&["espada","toga"].includes(p.cuna))t.push("Nadie conoce tu cuna: tu nobleza es una sospecha que tendrás que probar.");
   if(d.condicion==="no_reconocido")t.push("Tu padre no te reconoce: un secreto que otros pueden usar.");
   if(["ruina","arruinada_law"].includes(d.dinero)&&["duque","duquesa","embajador","cortesano","dama-palacio"].includes(q.id))t.push("Mantener el rango te endeudará.");
