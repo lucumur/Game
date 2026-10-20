@@ -501,7 +501,40 @@ function liderCard(pid, titularFallback, cargoFallback){
   return card;
 }
 
-function renderEscudoSVG(esc, tipoMapa="ducados"){
+let ESCUDOS_DB = {src:{}, commons:{}, imgs:{}};
+
+async function loadEscudosDB(){
+  if(Object.keys(ESCUDOS_DB.src).length) return;
+  try{
+    const r = await fetch("datos/escudos.json");
+    if(!r.ok) return;
+    const j = await r.json();
+    const files = j.files || {}, map = j.map || {};
+    const imgCache = {};
+    await Promise.all(Object.entries(files).map(([cname, dataUri])=>{
+      return new Promise(res=>{
+        const im = new Image();
+        im.onload = ()=>{imgCache[cname]=im; res()};
+        im.onerror = ()=>res();
+        im.src = dataUri;
+      });
+    }));
+    Object.entries(map).forEach(([eid, cname])=>{
+      ESCUDOS_DB.commons[eid] = cname;
+      ESCUDOS_DB.src[eid] = files[cname];
+      if(imgCache[cname]) ESCUDOS_DB.imgs[eid] = imgCache[cname];
+    });
+  }catch(e){}
+}
+
+function renderEscudoSVG(esc, tipoMapa="ducados", entityId=""){
+  if(entityId && ESCUDOS_DB.src[entityId]){
+    const wrap=el("div",{class:"escudo-svg-wrap"});
+    const cname=ESCUDOS_DB.commons[entityId]||"";
+    const img=el("img",{src:ESCUDOS_DB.src[entityId],alt:"Escudo heráldico ("+cname+")",title:"Wikimedia Commons · Projet Blasons: "+cname,style:"width:68px;height:76px;object-fit:contain;display:block"});
+    wrap.append(img);
+    return wrap;
+  }
   const bg=esc.bg||"#1c386b", fg=esc.fg||"#e0ba54", acc=esc.acc||"#b02828", pat=esc.pat||"lis";
   let charges="";
   if(pat==="lis"||pat==="orleans"||pat==="conde"||pat==="conti"||pat==="maine"||pat==="toulouse"){
@@ -568,19 +601,32 @@ function renderEscudoSVG(esc, tipoMapa="ducados"){
   return wrap;
 }
 
-function drawEmblemCanvas(ctx, x, y, esc, tipoMapa, isSel){
+function drawEmblemCanvas(ctx, x, y, esc, tipoMapa, isSel, entityId=""){
   ctx.save();
   ctx.translate(x, y);
-  const sc=isSel?1.28:1.0;
+  const sc=isSel?1.32:1.0;
   ctx.scale(sc, sc);
 
   if(isSel){
-    ctx.beginPath(); ctx.arc(0,0,17,0,7);
-    ctx.fillStyle="rgba(218,176,76,0.34)"; ctx.fill();
-    ctx.strokeStyle="#9e2a28"; ctx.lineWidth=2.2; ctx.stroke();
+    ctx.beginPath(); ctx.arc(0,0,19,0,7);
+    ctx.fillStyle="rgba(218,176,76,0.38)"; ctx.fill();
+    ctx.strokeStyle="#9e2a28"; ctx.lineWidth=2.4; ctx.stroke();
   }
 
-  // Sombra y forma de escudo francés antiguo
+  const wikiImg = entityId && ESCUDOS_DB.imgs[entityId];
+  if(wikiImg){
+    const iw=wikiImg.naturalWidth||100, ih=wikiImg.naturalHeight||115;
+    const targetH = tipoMapa==="ducados" ? 28 : 32;
+    const targetW = Math.round(targetH * (iw / ih));
+    ctx.shadowColor="rgba(0,0,0,0.38)";
+    ctx.shadowBlur=4;
+    ctx.shadowOffsetY=1.5;
+    ctx.drawImage(wikiImg, -targetW/2, -targetH/2, targetW, targetH);
+    ctx.restore();
+    return;
+  }
+
+  // Sombra y forma de escudo francés antiguo (respaldo vectorial)
   ctx.beginPath();
   ctx.moveTo(-10,-9); ctx.lineTo(10,-9); ctx.lineTo(10,2);
   ctx.bezierCurveTo(10,10, 0,14, 0,14);
@@ -660,6 +706,7 @@ function drawEmblemCanvas(ctx, x, y, esc, tipoMapa, isSel){
 
 /* ---------- PREPROCESADO DEL MAPA DE FRANCIA EN SUS 4 DIVISIONES ---------- */
 async function loadProvinces(){
+  await loadEscudosDB();
   if(provState)return provState;
   const img=new Image(); img.src=PROV_PNG; await img.decode();
   const w=img.width,h=img.height,c=document.createElement("canvas"); c.width=w;c.height=h;
@@ -812,44 +859,44 @@ function renderProvinces(canvas){
   if(capaFrancia==="ducados"){
     FEUDOS.forEach((f,fi)=>{
       const {fx:x,fy:y}=feudoPts[fi], isSel=fi===selDucado;
-      drawEmblemCanvas(ctx,x,y,f.escudo,"ducados",isSel);
+      drawEmblemCanvas(ctx,x,y,f.escudo,"ducados",isSel,f.id);
       ctx.font=`${isSel?"700 15.5px":"600 13px"} ${fam}`;
       ctx.textAlign="left"; ctx.textBaseline="middle";
       const tw=ctx.measureText(f.corto).width;
-      const lx=x+14+tw>w-8?x-14-tw:x+14, ly=y+(fi%2===0?-5:6);
+      const lx=x+16+tw>w-8?x-16-tw:x+16, ly=y+(fi%2===0?-5:6);
       ctx.strokeStyle=`rgba(${paper},.92)`; ctx.lineWidth=3.2; ctx.strokeText(f.corto,lx,ly);
       ctx.fillStyle=isSel?"#8b2020":`rgb(${ink})`; ctx.fillText(f.corto,lx,ly);
     });
   } else if(capaFrancia==="parlamentos"){
     PARLAMENTOS_LIST.forEach((p,pi)=>{
       const {fx:x,fy:y}=parlPts[pi], isSel=p.id===selParl;
-      drawEmblemCanvas(ctx,x,y,p.emblema,"parlamentos",isSel);
+      drawEmblemCanvas(ctx,x,y,p.emblema,"parlamentos",isSel,p.id);
       ctx.font=`${isSel?"700 16.5px":"600 14.5px"} ${fam}`;
       ctx.textAlign="left"; ctx.textBaseline="middle";
       const tw=ctx.measureText(p.corto).width;
-      const lx=x+15+tw>w-8?x-15-tw:x+15;
+      const lx=x+17+tw>w-8?x-17-tw:x+17;
       ctx.strokeStyle=`rgba(${paper},.94)`; ctx.lineWidth=3.6; ctx.strokeText(p.corto,lx,y);
       ctx.fillStyle=isSel?"#8b2020":`rgb(${ink})`; ctx.fillText(p.corto,lx,y);
     });
   } else if(capaFrancia==="diocesis"){
     DIOCESIS_LIST.forEach((dioc,di)=>{
       const {fx:x,fy:y}=diocPts[di], isSel=dioc.id===selDioc;
-      drawEmblemCanvas(ctx,x,y,dioc.emblema,"diocesis",isSel);
+      drawEmblemCanvas(ctx,x,y,dioc.emblema,"diocesis",isSel,dioc.id);
       ctx.font=`${isSel?"700 16px":"600 14px"} ${fam}`;
       ctx.textAlign="left"; ctx.textBaseline="middle";
       const tw=ctx.measureText(dioc.corto).width;
-      const lx=x+15+tw>w-8?x-15-tw:x+15;
+      const lx=x+17+tw>w-8?x-17-tw:x+17;
       ctx.strokeStyle=`rgba(${paper},.94)`; ctx.lineWidth=3.5; ctx.strokeText(dioc.corto,lx,y);
       ctx.fillStyle=isSel?"#8b2020":`rgb(${ink})`; ctx.fillText(dioc.corto,lx,y);
     });
   } else if(capaFrancia==="apanajes"){
     APANAJES_LIST.forEach((ap,ai)=>{
       const {fx:x,fy:y}=apanPts[ai], isSel=ap.id===selApanaje;
-      drawEmblemCanvas(ctx,x,y,ap.escudo,"apanajes",isSel);
+      drawEmblemCanvas(ctx,x,y,ap.escudo,"apanajes",isSel,ap.id);
       ctx.font=`${isSel?"700 17px":"600 15px"} ${fam}`;
       ctx.textAlign="left"; ctx.textBaseline="middle";
       const tw=ctx.measureText(ap.corto).width;
-      const lx=x+16+tw>w-8?x-16-tw:x+16;
+      const lx=x+18+tw>w-8?x-18-tw:x+18;
       ctx.strokeStyle=`rgba(${paper},.94)`; ctx.lineWidth=3.8; ctx.strokeText(ap.corto,lx,y);
       ctx.fillStyle=isSel?"#8b2020":`rgb(${ink})`; ctx.fillText(ap.corto,lx,y);
     });
@@ -864,12 +911,12 @@ function showFranciaSelection(){
     const provObj=PROV_DEF.find(r=>r.id===f.prov);
     wrap.append(
       el("div",{class:"emblema-header"},
-        renderEscudoSVG(f.escudo,"ducados"),
+        renderEscudoSVG(f.escudo,"ducados",f.id),
         el("div",{class:"emblema-meta"},
           el("span",{class:"tag ej"},f.rango),
           el("div",{},el("b",{},"Casa señorial: "),f.casa),
           provObj?el("div",{class:"note"},"Gobierno histórico: "+provObj.nombre):null,
-          el("div",{class:"note blason-txt"},el("b",{},"Blasón del escudo: "),f.escudo.blason)
+          el("div",{class:"note blason-txt"},el("b",{},"Blasón histórico: "),f.escudo.blason)
         )
       ),
       liderCard(f.pid, f.titular, f.rango+" · "+f.casa),
@@ -878,16 +925,16 @@ function showFranciaSelection(){
       el("span",{class:"label"},"Peso político en la corte de Versalles"),
       el("p",{class:"note"},f.nota)
     );
-    mapInfo(f.nombre, "Mapa 1 · Los Ducados y Señoríos de Francia (cada uno con su escudo heráldico y su señor).", wrap);
+    mapInfo(f.nombre, "Mapa 1 · Los Ducados y Señoríos de Francia (cada uno con su escudo heráldico real y su señor).", wrap);
   } else if(capaFrancia==="parlamentos"){
     const p=PARLAMENTOS_LIST.find(x=>x.id===selParl)||PARLAMENTOS_LIST[0];
     wrap.append(
       el("div",{class:"emblema-header"},
-        renderEscudoSVG(p.emblema,"parlamentos"),
+        renderEscudoSVG(p.emblema,"parlamentos",p.id),
         el("div",{class:"emblema-meta"},
           el("span",{class:"tag"},"⚖ Corte Soberana de Justicia"),
           el("div",{},el("b",{},"Sede del Tribunal: "),p.n.replace("Parlamento de ","").replace("Consejo Soberano de ","")),
-          el("div",{class:"note blason-txt"},el("b",{},"Emblema: "),p.emblema.lema)
+          el("div",{class:"note blason-txt"},el("b",{},"Armas de la jurisdicción: "),p.emblema.lema)
         )
       ),
       liderCard(p.pid, p.titular, p.cargo),
@@ -898,17 +945,17 @@ function showFranciaSelection(){
       el("span",{class:"label"},"Uso en intrigas y pleitos"),
       el("p",{class:"note"},p.uso)
     );
-    mapInfo(p.n, "Mapa 2 · Los 13 Parlamentos y Consejos Soberanos de Francia (con sus emblemas y Primeros Presidentes).", wrap);
+    mapInfo(p.n, "Mapa 2 · Los 13 Parlamentos y Consejos Soberanos de Francia (con sus emblemas históricos y Primeros Presidentes).", wrap);
   } else if(capaFrancia==="diocesis"){
     const d=DIOCESIS_LIST.find(x=>x.id===selDioc)||DIOCESIS_LIST[0];
     const part=DIOCESIS_PARTIDOS[d.partido];
     wrap.append(
       el("div",{class:"emblema-header"},
-        renderEscudoSVG(d.emblema,"diocesis"),
+        renderEscudoSVG(d.emblema,"diocesis",d.id),
         el("div",{class:"emblema-meta"},
           el("span",{class:"tag"},part?part.n:"Diócesis del Reino"),
           d.par?el("span",{class:"tag ej",style:"margin-left:6px"},"Par Eclesiástico de Francia"):null,
-          el("div",{class:"note blason-txt"},el("b",{},"Emblema episcopal: "),d.emblema.lema)
+          el("div",{class:"note blason-txt"},el("b",{},"Armas episcopales / cardenalicias: "),d.emblema.lema)
         )
       ),
       liderCard(d.pid, d.titular, d.cargo),
@@ -917,12 +964,12 @@ function showFranciaSelection(){
       el("span",{class:"label"},"Alineamiento ante la Bula Unigenitus y el Sacre de Reims"),
       el("p",{class:"note"},d.nota)
     );
-    mapInfo(d.n, "Mapa 3 · Las Diócesis y Provincias Eclesiásticas de Francia (con sus emblemas y prelados).", wrap);
+    mapInfo(d.n, "Mapa 3 · Las Diócesis y Provincias Eclesiásticas de Francia (con sus emblemas reales y prelados).", wrap);
   } else if(capaFrancia==="apanajes"){
     const ap=APANAJES_LIST.find(x=>x.id===selApanaje)||APANAJES_LIST[0];
     wrap.append(
       el("div",{class:"emblema-header"},
-        renderEscudoSVG(ap.escudo,"apanajes"),
+        renderEscudoSVG(ap.escudo,"apanajes",ap.id),
         el("div",{class:"emblema-meta"},
           el("span",{class:"tag ej"},"⚜ Armas de Sangre Real"),
           el("div",{class:"note blason-txt"},el("b",{},"Blasón y brisura: "),ap.escudo.blason)
@@ -934,7 +981,7 @@ function showFranciaSelection(){
       el("span",{class:"label"},"Rentas y peso en la Regencia"),
       el("p",{},ap.rentas+" "+ap.nota)
     );
-    mapInfo(ap.n, "Mapa 4 · Los Apanajes de la Sangre y Dominios de la Casa Real (con sus escudos de flores de lis y su líder).", wrap);
+    mapInfo(ap.n, "Mapa 4 · Los Apanajes de la Sangre y Dominios de la Casa Real (con sus escudos de armas reales y su líder).", wrap);
   }
 }
 
