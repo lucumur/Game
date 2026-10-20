@@ -601,10 +601,13 @@ function renderEscudoSVG(esc, tipoMapa="ducados", entityId=""){
   return wrap;
 }
 
+/* Escala de escudos y nombres: el lienzo se dibuja a la resolución del mapa base y el navegador lo reduce;
+   FR_K compensa para que se lean al tamaño en pantalla (se calcula en cada dibujo). */
+let FR_K=1.6;
 function drawEmblemCanvas(ctx, x, y, esc, tipoMapa, isSel, entityId=""){
   ctx.save();
   ctx.translate(x, y);
-  const sc=isSel?1.32:1.0;
+  const sc=(isSel?1.32:1.0)*FR_K;
   ctx.scale(sc, sc);
 
   if(isSel){
@@ -856,48 +859,49 @@ function renderProvinces(canvas){
   const fam=getComputedStyle(document.body).fontFamily;
 
   // Dibujar únicamente los escudos/emblemas y etiquetas del mapa activo
+  {const cw=ctx.canvas.clientWidth||0; FR_K=Math.min(3.2,Math.max(1.4,cw?(w/cw)*1.05:1.8));}
   if(capaFrancia==="ducados"){
     FEUDOS.forEach((f,fi)=>{
       const {fx:x,fy:y}=feudoPts[fi], isSel=fi===selDucado;
       drawEmblemCanvas(ctx,x,y,f.escudo,"ducados",isSel,f.id);
-      ctx.font=`${isSel?"700 15.5px":"600 13px"} ${fam}`;
+      ctx.font=`${isSel?`700 ${(15.5*FR_K).toFixed(1)}px`:`600 ${(13*FR_K).toFixed(1)}px`} ${fam}`;
       ctx.textAlign="left"; ctx.textBaseline="middle";
       const tw=ctx.measureText(f.corto).width;
-      const lx=x+16+tw>w-8?x-16-tw:x+16, ly=y+(fi%2===0?-5:6);
-      ctx.strokeStyle=`rgba(${paper},.92)`; ctx.lineWidth=3.2; ctx.strokeText(f.corto,lx,ly);
+      const lx=x+16*FR_K+tw>w-8?x-16*FR_K-tw:x+16*FR_K, ly=y+(fi%2===0?-5:6)*FR_K;
+      ctx.strokeStyle=`rgba(${paper},.92)`; ctx.lineWidth=3.2*FR_K; ctx.strokeText(f.corto,lx,ly);
       ctx.fillStyle=isSel?"#8b2020":`rgb(${ink})`; ctx.fillText(f.corto,lx,ly);
     });
   } else if(capaFrancia==="parlamentos"){
     PARLAMENTOS_LIST.forEach((p,pi)=>{
       const {fx:x,fy:y}=parlPts[pi], isSel=p.id===selParl;
       drawEmblemCanvas(ctx,x,y,p.emblema,"parlamentos",isSel,p.id);
-      ctx.font=`${isSel?"700 16.5px":"600 14.5px"} ${fam}`;
+      ctx.font=`${isSel?`700 ${(16.5*FR_K).toFixed(1)}px`:`600 ${(14.5*FR_K).toFixed(1)}px`} ${fam}`;
       ctx.textAlign="left"; ctx.textBaseline="middle";
       const tw=ctx.measureText(p.corto).width;
-      const lx=x+17+tw>w-8?x-17-tw:x+17;
-      ctx.strokeStyle=`rgba(${paper},.94)`; ctx.lineWidth=3.6; ctx.strokeText(p.corto,lx,y);
+      const lx=x+17*FR_K+tw>w-8?x-17*FR_K-tw:x+17*FR_K;
+      ctx.strokeStyle=`rgba(${paper},.94)`; ctx.lineWidth=3.6*FR_K; ctx.strokeText(p.corto,lx,y);
       ctx.fillStyle=isSel?"#8b2020":`rgb(${ink})`; ctx.fillText(p.corto,lx,y);
     });
   } else if(capaFrancia==="diocesis"){
     DIOCESIS_LIST.forEach((dioc,di)=>{
       const {fx:x,fy:y}=diocPts[di], isSel=dioc.id===selDioc;
       drawEmblemCanvas(ctx,x,y,dioc.emblema,"diocesis",isSel,dioc.id);
-      ctx.font=`${isSel?"700 16px":"600 14px"} ${fam}`;
+      ctx.font=`${isSel?`700 ${(16*FR_K).toFixed(1)}px`:`600 ${(14*FR_K).toFixed(1)}px`} ${fam}`;
       ctx.textAlign="left"; ctx.textBaseline="middle";
       const tw=ctx.measureText(dioc.corto).width;
-      const lx=x+17+tw>w-8?x-17-tw:x+17;
-      ctx.strokeStyle=`rgba(${paper},.94)`; ctx.lineWidth=3.5; ctx.strokeText(dioc.corto,lx,y);
+      const lx=x+17*FR_K+tw>w-8?x-17*FR_K-tw:x+17*FR_K;
+      ctx.strokeStyle=`rgba(${paper},.94)`; ctx.lineWidth=3.5*FR_K; ctx.strokeText(dioc.corto,lx,y);
       ctx.fillStyle=isSel?"#8b2020":`rgb(${ink})`; ctx.fillText(dioc.corto,lx,y);
     });
   } else if(capaFrancia==="apanajes"){
     APANAJES_LIST.forEach((ap,ai)=>{
       const {fx:x,fy:y}=apanPts[ai], isSel=ap.id===selApanaje;
       drawEmblemCanvas(ctx,x,y,ap.escudo,"apanajes",isSel,ap.id);
-      ctx.font=`${isSel?"700 17px":"600 15px"} ${fam}`;
+      ctx.font=`${isSel?`700 ${(17*FR_K).toFixed(1)}px`:`600 ${(15*FR_K).toFixed(1)}px`} ${fam}`;
       ctx.textAlign="left"; ctx.textBaseline="middle";
       const tw=ctx.measureText(ap.corto).width;
-      const lx=x+18+tw>w-8?x-18-tw:x+18;
-      ctx.strokeStyle=`rgba(${paper},.94)`; ctx.lineWidth=3.8; ctx.strokeText(ap.corto,lx,y);
+      const lx=x+18*FR_K+tw>w-8?x-18*FR_K-tw:x+18*FR_K;
+      ctx.strokeStyle=`rgba(${paper},.94)`; ctx.lineWidth=3.8*FR_K; ctx.strokeText(ap.corto,lx,y);
       ctx.fillStyle=isSel?"#8b2020":`rgb(${ink})`; ctx.fillText(ap.corto,lx,y);
     });
   }
@@ -1075,7 +1079,7 @@ async function drawProvinces(box){
     const idx=y*w+x;
 
     if(capaFrancia==="ducados"){
-      let bestFi=-1, bestD=28*28;
+      let bestFi=-1, bestD=(28*FR_K)*(28*FR_K);
       provState.feudoPts.forEach((pt,fi)=>{
         const dx=x-pt.fx, dy=y-pt.fy, d2=dx*dx+dy*dy;
         if(d2<bestD){bestD=d2;bestFi=fi}
@@ -1083,7 +1087,7 @@ async function drawProvinces(box){
       if(bestFi<0&&provState.feudoIds[idx]>=0) bestFi=provState.feudoIds[idx];
       if(bestFi>=0){selDucado=bestFi; selDrop.value=String(bestFi); renderProvinces(canvas); showFranciaSelection();}
     } else if(capaFrancia==="parlamentos"){
-      let bestPi=-1, bestD=30*30;
+      let bestPi=-1, bestD=(30*FR_K)*(30*FR_K);
       provState.parlPts.forEach((pt,pi)=>{
         const dx=x-pt.fx, dy=y-pt.fy, d2=dx*dx+dy*dy;
         if(d2<bestD){bestD=d2;bestPi=pi}
@@ -1091,7 +1095,7 @@ async function drawProvinces(box){
       if(bestPi<0&&provState.parlIds[idx]>=0) bestPi=provState.parlIds[idx];
       if(bestPi>=0){selParl=PARLAMENTOS_LIST[bestPi].id; selDrop.value=selParl; renderProvinces(canvas); showFranciaSelection();}
     } else if(capaFrancia==="diocesis"){
-      let bestDi=-1, bestD=30*30;
+      let bestDi=-1, bestD=(30*FR_K)*(30*FR_K);
       provState.diocPts.forEach((pt,di)=>{
         const dx=x-pt.fx, dy=y-pt.fy, d2=dx*dx+dy*dy;
         if(d2<bestD){bestD=d2;bestDi=di}
