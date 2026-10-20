@@ -1,7 +1,8 @@
 # Cómo colaborar en el Escritorio de Versalles
 
-Este repositorio es la copia de trabajo compartida. Pueden editarlo Claude, ChatGPT, Gemini, Grok o una persona.
-La versión jugable con base de datos en vivo está en Claude (artifact); esta es la misma interfaz partida en archivos legibles.
+Este repositorio es **la versión principal** del juego. Pueden editarlo Claude, ChatGPT, Gemini, Grok o una persona.
+Se juega en **https://lucumur.github.io/Game/web/** (GitHub Pages publica cada cambio en `main` en un par de minutos).
+El artifact de Claude es solo una copia de respaldo y ya no se sincroniza.
 
 ## Reglas para quien edite
 1. Lee [REGLAS.md](REGLAS.md) antes de tocar mecánicas o datos. **La base es la autoridad.**
@@ -35,5 +36,7 @@ Los scripts se cargan en orden en `index.html`. Una función declarada en un mó
 Sirve la carpeta: `cd web && python3 -m http.server` y abre `http://localhost:8000`. (Abrir el archivo con doble clic no carga `datos/`.)
 Con GitHub Pages activado (Settings → Pages → rama `main`, carpeta raíz) queda en `https://lucumur.github.io/Game/web/`.
 
-## Volver a Claude
-`python3 herramientas/empaquetar.py` genera `dist/escritorio.html` (un solo archivo) que Claude publica en el artifact. Los cambios de datos (personajes, retratos, ocupantes) se suben a la base del artifact por separado.
+## Datos e imágenes
+En GitHub no hay base de datos en vivo: todo se edita en `web/datos/`. Un retrato nuevo va en `web/datos/retratos/<id>.jpg` y su nombre de archivo se añade a `web/datos/indice.json`; igual para `estancias/`. Las partidas se guardan solo en el navegador de quien juega (exportables a archivo).
+
+`herramientas/empaquetar.py` sigue generando un archivo único (`dist/escritorio.html`) por si se quiere volver a publicar en Claude.
