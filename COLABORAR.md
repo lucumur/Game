@@ -5,6 +5,7 @@ Se juega en **https://lucumur.github.io/Game/web/** (GitHub Pages publica cada c
 El artifact de Claude es solo una copia de respaldo y ya no se sincroniza.
 
 ## Reglas para quien edite
+0. **Antes de empezar y antes de cada push: `git pull --rebase`.** Varios agentes y el editor web hacen commits en `main`; trabajar sobre una copia vieja borra el trabajo de otros. Edita las partes que cambias; no reescribas un archivo completo a partir de una versión que tenías guardada. Nunca `git push --force`.
 1. Lee [REGLAS.md](REGLAS.md) antes de tocar mecánicas o datos. **La base es la autoridad.**
 2. Exactitud histórica: todo dato nuevo de 1722 lleva nivel de confianza (confirmado / probable / dudoso). No inventes ocupantes, fechas ni cargos.
 3. Si tocas `web/css` o `web/js`, corre `python3 herramientas/version.py` antes del commit (evita que los navegadores sigan usando la versión vieja).
