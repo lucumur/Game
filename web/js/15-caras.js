@@ -60,7 +60,15 @@ function openFichaL(c){
     .forEach(([k,v])=>{if(v&&v!=="—")dl.append(el("dt",{},k),el("dd",{},String(v)))});
   const nom=(c.nombre_nac||c.nombre)+((c.apodos||[]).length?" «"+c.apodos.join("» «")+"»":"");
   f.append(el("button",{class:"x","aria-label":"Cerrar",onclick:()=>{f.hidden=true}},"×"),
-    el("span",{class:"label"},"Libro de caras"),retratoEl(c),el("h2",{},nom),el("div",{class:"rule"}),dl);
+    el("span",{class:"label"},"Libro de caras"),retratoEl(c));
+  if(OWNER&&(db||GH_OK)){ /* Solo el dueño: subir o cambiar el retrato desde la ficha */
+    const msg=el("span",{class:"note","aria-live":"polite"}), inp=el("input",{type:"file",accept:"image/*",hidden:""});
+    inp.onchange=async()=>{const fl=inp.files[0];inp.value="";if(!fl)return;msg.textContent="Guardando retrato…";
+      try{const img=await achicarImg(fl,700);await (db||GH).doc("retratos/"+c.id).set({img});RETR[c.id]=img;openFichaL(c);try{drawFaces()}catch(e){}}
+      catch(e){msg.textContent="No se pudo guardar: "+(e&&e.message||e)}};
+    f.append(el("div",{class:"ficha-up"},inp,el("button",{class:"btn sm",onclick:()=>inp.click()},RETR[c.id]?"Cambiar retrato":"Subir retrato"),msg));
+  }
+  f.append(el("h2",{},nom),el("div",{class:"rule"}),dl);
   if(c.escritorio_id&&LINAJE.padres)f.append(el("span",{class:"label"},"Familia"),familyBlock(c.escritorio_id));
   f.append(el("span",{class:"label"},"Lo que sabes"),el("p",{class:"note"},"Todavía no has observado nada de esta persona."),
     el("label",{class:"label",for:"nota-"+key},"Tus notas"),ta,
