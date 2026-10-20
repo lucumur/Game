@@ -425,10 +425,10 @@ button.kin:hover{border-color:var(--gilt)}
 .scheme dt{color:var(--sheet-muted);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;padding-top:3px}
 .scheme dd{margin:0}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
-.step{display:grid;justify-items:center;gap:3px;font-size:.75rem;color:var(--sheet-muted);text-align:center}
-.step i{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--sheet-muted)}
-.step.done i{background:var(--seal);border-color:var(--seal)}
-.step.done{color:var(--sheet-ink)}
+.steps .step{display:grid;justify-items:center;gap:3px;border-top:0;padding-top:0;font-size:.75rem;color:var(--sheet-muted);text-align:center}
+.steps .step i{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--sheet-muted)}
+.steps .step.done i{background:var(--seal);border-color:var(--seal)}
+.steps .step.done{color:var(--sheet-ink)}
 .risk{display:inline-flex;gap:3px;vertical-align:middle}
 .risk i{width:10px;height:10px;border:1px solid var(--seal);transform:rotate(45deg)}
 .risk i.on{background:var(--seal)}
@@ -453,3 +453,19 @@ button.kin:hover{border-color:var(--gilt)}
   .desk-legend{position:static}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* ---------- Selector: modo de entrada y personajes de la corte ---------- */
+.modos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.modo{display:grid;gap:4px;align-content:start;text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;min-width:0}
+.modo:hover{border-color:var(--gilt)}
+.modo[aria-pressed="true"]{border-color:var(--gilt);box-shadow:inset 0 0 0 1px var(--gilt);background:var(--chip)}
+.modo .st{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gilt)}
+.modo b{font-family:var(--f-display);font-weight:400;font-size:1.25rem}
+.modo span:last-child{font-size:.92rem;color:var(--muted)}
+#modo-nuevo{display:grid;gap:22px}
+.filtros-p{display:grid;gap:10px}
+.fgrp{display:grid;gap:4px}
+.pj{grid-template-columns:56px minmax(0,1fr);align-items:center;column-gap:12px}
+.pj>img,.pj>svg{grid-row:1/5;width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:center top;border:1px solid var(--gilt)}
+.pj>svg{border:0}
+.bio-h img.pt,.bio-h>svg{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:center top;border:1px solid var(--gilt)}
