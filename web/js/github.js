@@ -9,14 +9,23 @@ const GH=(()=>{
   const api=(path,opt={})=>fetch("https://api.github.com/repos/"+REPO+path,{...opt,headers:{Accept:"application/vnd.github+json",Authorization:"Bearer "+tok(),...(opt.headers||{})}});
   const b64=s=>{const u=new TextEncoder().encode(s);let r="";for(let i=0;i<u.length;i+=0x8000)r+=String.fromCharCode(...u.subarray(i,i+0x8000));return btoa(r)};
   const unb64=s=>new TextDecoder().decode(Uint8Array.from(atob(s.replace(/\s/g,"")),c=>c.charCodeAt(0)));
-  async function leer(ruta){const r=await api("/contents/"+ruta+"?ref="+RAMA);if(r.status===404)return null;if(!r.ok)throw new Error("GitHub "+r.status);return r.json()}
-  async function escribir(ruta,contenido64,msg){const prev=await leer(ruta);
-    const r=await api("/contents/"+ruta,{method:"PUT",body:JSON.stringify({message:msg,content:contenido64,branch:RAMA,...(prev?{sha:prev.sha}:{})})});
-    if(!r.ok)throw new Error("GitHub "+r.status+(r.status===403||r.status===401?" (revisa la llave y su permiso de escritura)":""))}
+  async function leer(ruta){const r=await api("/contents/"+ruta+"?ref="+RAMA+"&t="+Date.now(),{cache:"no-store"});if(r.status===404)return null;if(!r.ok)throw new Error("GitHub "+r.status);return r.json()}
+  async function escribir(ruta,contenido64,msg){
+    for(let intento=0;intento<3;intento++){ /* 409/422 = el archivo cambió entre leer y escribir: releer y reintentar */
+      const prev=await leer(ruta);
+      const r=await api("/contents/"+ruta,{method:"PUT",body:JSON.stringify({message:msg,content:contenido64,branch:RAMA,...(prev?{sha:prev.sha}:{})})});
+      if(r.ok)return;
+      if((r.status===409||r.status===422)&&intento<2){await new Promise(z=>setTimeout(z,800*(intento+1)));continue}
+      throw new Error("GitHub "+r.status+(r.status===403||r.status===401?" (revisa la llave y su permiso de escritura)":r.status===409?" (el archivo cambió mientras se guardaba; vuelve a intentarlo)":""))}}
   async function borrar(ruta,msg){const prev=await leer(ruta);if(!prev)return;
     const r=await api("/contents/"+ruta,{method:"DELETE",body:JSON.stringify({message:msg,sha:prev.sha,branch:RAMA})});if(!r.ok)throw new Error("GitHub "+r.status)}
-  async function json(ruta,cambio,msg){const prev=await leer(ruta);const v=prev?JSON.parse(unb64(prev.content)):{};cambio(v);
-    await escribir(ruta,b64(JSON.stringify(v,null,1)+"\n"),msg)}
+  async function json(ruta,cambio,msg){ /* leer-modificar-escribir con el mismo sha; si otro cambió el archivo, rehacer */
+    for(let intento=0;intento<3;intento++){
+      const prev=await leer(ruta);const v=prev?JSON.parse(unb64(prev.content)):{};cambio(v);
+      const r=await api("/contents/"+ruta,{method:"PUT",body:JSON.stringify({message:msg,content:b64(JSON.stringify(v,null,1)+"\n"),branch:RAMA,...(prev?{sha:prev.sha}:{})})});
+      if(r.ok)return;
+      if((r.status===409||r.status===422)&&intento<2){await new Promise(z=>setTimeout(z,800*(intento+1)));continue}
+      throw new Error("GitHub "+r.status)}}
   let cola=Promise.resolve(); const enCola=f=>(cola=cola.then(f,f));
   const avisar=(c,id,d)=>{try{window.ghCambio&&window.ghCambio(c,id,d)}catch(e){}};
   function doc(path){const [col,id]=path.split("/");
