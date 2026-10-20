@@ -1,4 +1,4 @@
-/* ---------- Buscador de lugares (palacio, los tres pisos, y dominio) ---------- */
+/* ---------- Buscador de lugares (palacio, los tres pisos, dominio y señoríos de Francia) ---------- */
 const normTxt=t=>String(t||"").replace(/[œŒ]/g,"oe").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
 function lugaresIndex(){
   const out=[];
@@ -6,8 +6,23 @@ function lugaresIndex(){
     const oc=(typeof ocupantes==="function"?ocupantes(id):[]).map(o=>o[0]).filter(n=>n&&n!=="Vacante");
     out.push({tipo:"palacio",id,n:e.n,code:e.s&&e.s.length<=4?e.s:"",d:e.d||"",pisos:e.p.slice().sort(),sector:sectorOf(id),oc});
   });
-  DOMINIO.forEach(r=>{const [id,n,short]=r;const d=typeof r[3]==="string"?r[5]:r[8];
-    out.push({tipo:"dominio",id,n,code:"",alias:short,d:d||"",pisos:[],sector:"Dominio",oc:[]})});
+  DOMINIO.forEach(r=>{
+    const [id,n,short]=r; const d=typeof r[3]==="string"?r[5]:r[8];
+    const oc=(typeof ocupantes==="function"?ocupantes(id):[]).map(o=>o[0]).filter(x=>x&&x!=="Vacante");
+    out.push({tipo:"dominio",id,n,code:"",alias:short,d:d||"",pisos:[],sector:sectorOf(id),oc});
+  });
+  if(typeof FEUDOS!=="undefined"){
+    FEUDOS.forEach((f,fi)=>{
+      const pr=typeof PROV_DEF!=="undefined"?PROV_DEF.find(p=>p.id===f.prov):null;
+      out.push({tipo:"francia",id:f.id,feudoIdx:fi,provSlug:f.prov,n:f.nombre,code:"",alias:f.corto,d:f.rentas+" "+f.nota,pisos:[],sector:pr?pr.nombre:"Francia",oc:[f.titular,f.casa].filter(Boolean)});
+    });
+  }
+  if(typeof PROV_DEF!=="undefined"){
+    PROV_DEF.forEach((r,pi)=>{
+      if(r.tipo==="fuera")return;
+      out.push({tipo:"francia",id:r.id,provIdx:pi,feudoIdx:-1,n:r.nombre,code:"",alias:r.capital||"",d:r.nota||"",pisos:[],sector:"Gobierno General",oc:r.capital?[r.capital]:[]});
+    });
+  }
   return out;
 }
 function buscarLugares(q){
@@ -30,13 +45,28 @@ function buscarLugares(q){
   });
   return res.sort((a,b)=>b.sc-a.sc||a.n.localeCompare(b.n,"es"));
 }
-function irALugar(L){
+async function irALugar(L){
   const tabs=$("#map-tabs");
   [...tabs.children].forEach(x=>x.setAttribute("aria-selected",String(x.dataset.map===L.tipo)));
   if(L.tipo==="palacio"){
     if(!L.pisos.includes(PISO_PAL))PISO_PAL=L.pisos.includes(2)?2:L.pisos[0];
     mapSel=null; drawMap("palacio");
-  } else drawMap("dominio");
+  } else if(L.tipo==="dominio"){
+    if(typeof CAM_DOM!=="undefined")CAM_DOM="todo";
+    drawMap("dominio");
+  } else if(L.tipo==="francia"){
+    drawMap("francia");
+    if(typeof loadProvinces==="function"){
+      const st=await loadProvinces();
+      const pi=L.provIdx!=null?L.provIdx:(st.provIdxBySlug?.[L.provSlug]??-1);
+      if(pi>=0&&typeof provInfo==="function"){
+        provInfo(pi,L.feudoIdx??-1);
+        const cv=document.querySelector("#map-box canvas");
+        if(cv&&typeof renderProvinces==="function")renderProvinces(cv);
+      }
+    }
+    return;
+  }
   const z=document.querySelector('#map-box .zone[data-id="'+L.id+'"]');
   if(z){z.dispatchEvent(new MouseEvent("click",{bubbles:true}));z.focus({preventScroll:true});
     const bb=z.getBoundingClientRect(); if(bb.top<80||bb.bottom>innerHeight)z.scrollIntoView({block:"center",behavior:"smooth"})}
@@ -52,10 +82,10 @@ function irALugar(L){
     const all=buscarLugares(q); items=all.slice(0,MAX);
     if(!items.length)ul.append(el("li",{class:"vacio"},"Ningún lugar coincide."));
     items.forEach((L,i)=>{
-      const donde=L.tipo==="palacio"?[L.code||null,L.pisos.map(p=>"Piso "+p).join(" / "),L.sector].filter(Boolean).join(" · "):"Dominio";
+      const donde=L.tipo==="palacio"?[L.code||null,L.pisos.map(p=>"Piso "+p).join(" / "),L.sector].filter(Boolean).join(" · "):L.tipo==="francia"?"Francia · "+L.sector:L.sector||"Dominio";
       const sub=el("span",{class:"sub"},donde);
       if(L.porOc)sub.append(" · ",el("em",{},L.porOc));
-      else if(L.oc.length&&L.tipo==="palacio")sub.append(" · "+L.oc.slice(0,2).join(", ")+(L.oc.length>2?"…":""));
+      else if(L.oc.length)sub.append(" · "+L.oc.slice(0,2).join(", ")+(L.oc.length>2?"…":""));
       ul.append(el("li",{role:"option",id:"ms-o"+i,"aria-selected":"false",onmousedown:e=>{e.preventDefault();elegir(i)}},el("b",{},L.n),sub));
     });
     if(all.length>MAX)ul.append(el("li",{class:"mas"},"y "+(all.length-MAX)+" más; afina la búsqueda"));
