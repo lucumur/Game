@@ -13,14 +13,22 @@ function lugaresIndex(){
   });
   if(typeof FEUDOS!=="undefined"){
     FEUDOS.forEach((f,fi)=>{
-      const pr=typeof PROV_DEF!=="undefined"?PROV_DEF.find(p=>p.id===f.prov):null;
-      out.push({tipo:"francia",id:f.id,feudoIdx:fi,provSlug:f.prov,n:f.nombre,code:"",alias:f.corto,d:f.rentas+" "+f.nota,pisos:[],sector:pr?pr.nombre:"Francia",oc:[f.titular,f.casa].filter(Boolean)});
+      out.push({tipo:"francia",subMapa:"ducados",id:f.id,feudoIdx:fi,n:f.nombre,code:"",alias:f.corto,d:f.rentas+" "+f.nota,pisos:[],sector:"Mapa 1 · Ducados y Señoríos",oc:[f.titular,f.casa].filter(Boolean)});
     });
   }
-  if(typeof PROV_DEF!=="undefined"){
-    PROV_DEF.forEach((r,pi)=>{
-      if(r.tipo==="fuera")return;
-      out.push({tipo:"francia",id:r.id,provIdx:pi,feudoIdx:-1,n:r.nombre,code:"",alias:r.capital||"",d:r.nota||"",pisos:[],sector:"Gobierno General",oc:r.capital?[r.capital]:[]});
+  if(typeof PARLAMENTOS_LIST!=="undefined"){
+    PARLAMENTOS_LIST.forEach(p=>{
+      out.push({tipo:"francia",subMapa:"parlamentos",id:p.id,n:p.n,code:"",alias:p.corto,d:p.ressort+" "+p.actitud,pisos:[],sector:"Mapa 2 · Los Parlamentos",oc:[p.titular,p.cargo].filter(Boolean)});
+    });
+  }
+  if(typeof DIOCESIS_LIST!=="undefined"){
+    DIOCESIS_LIST.forEach(d=>{
+      out.push({tipo:"francia",subMapa:"diocesis",id:d.id,n:d.n,code:"",alias:d.corto,d:d.rentas+" "+d.nota,pisos:[],sector:"Mapa 3 · Las Diócesis",oc:[d.titular,d.cargo].filter(Boolean)});
+    });
+  }
+  if(typeof APANAJES_LIST!=="undefined"){
+    APANAJES_LIST.forEach(a=>{
+      out.push({tipo:"francia",subMapa:"apanajes",id:a.id,n:a.n,code:"",alias:a.corto,d:a.dominios+" "+a.rentas,pisos:[],sector:"Mapa 4 · Apanajes de la Sangre",oc:[a.titular,a.cargo].filter(Boolean)});
     });
   }
   return out;
@@ -55,16 +63,14 @@ async function irALugar(L){
     if(typeof CAM_DOM!=="undefined")CAM_DOM="todo";
     drawMap("dominio");
   } else if(L.tipo==="francia"){
-    drawMap("francia");
-    if(typeof loadProvinces==="function"){
-      const st=await loadProvinces();
-      const pi=L.provIdx!=null?L.provIdx:(st.provIdxBySlug?.[L.provSlug]??-1);
-      if(pi>=0&&typeof provInfo==="function"){
-        provInfo(pi,L.feudoIdx??-1);
-        const cv=document.querySelector("#map-box canvas");
-        if(cv&&typeof renderProvinces==="function")renderProvinces(cv);
-      }
+    if(L.subMapa){
+      capaFrancia=L.subMapa;
+      if(L.subMapa==="ducados"&&L.feudoIdx!=null) selDucado=L.feudoIdx;
+      else if(L.subMapa==="parlamentos") selParl=L.id;
+      else if(L.subMapa==="diocesis") selDioc=L.id;
+      else if(L.subMapa==="apanajes") selApanaje=L.id;
     }
+    drawMap("francia");
     return;
   }
   const z=document.querySelector('#map-box .zone[data-id="'+L.id+'"]');
