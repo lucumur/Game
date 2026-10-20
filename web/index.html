@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Escritorio de Versalles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&display=swap">
+<link rel="stylesheet" href="css/escritorio.css">
+</head>
+<body>
+
+<!-- ================= ÉPOCAS ================= -->
+<main id="epocas" class="wrap" hidden>
+  <header class="sel-head">
+    <span class="label">Versalles · 1682–1789</span>
+    <h1>Les âges de Versailles</h1>
+    <p>Cada época es una partida distinta, con su propia corte y sus propios personajes.</p>
+    <div class="rule"></div>
+  </header>
+  <div class="eras" id="eras"></div>
+</main>
+
+<!-- ================= SELECTOR ================= -->
+<main id="selector" class="wrap" hidden>
+  <header class="sel-head">
+    <span class="label" id="sel-label"></span>
+    <h1>Lettre d’introduction</h1>
+    <p id="sel-sub"></p>
+    <div class="rule"></div>
+  </header>
+  <section class="step">
+    <h2>I. Quién eres</h2>
+    <div class="sel-grid" id="elegible">
+      <div class="field"><label class="label" for="f-sexo">Sexo</label><select id="f-sexo"><option value="M">Hombre</option><option value="F">Mujer</option></select></div>
+      <div class="field"><label class="label" for="f-proc">Procedencia</label><select id="f-proc"><option value="paris">París</option><option value="provincia">Provincia</option><option value="extranjero">Extranjero</option></select></div>
+      <div class="field" id="w-region"><label class="label" for="f-region">De dónde, exactamente</label><select id="f-region"></select></div>
+      <div class="field"><label class="label" for="f-cuna">Cuna</label><select id="f-cuna"></select></div>
+      <div class="field" style="grid-column:1/-1"><label class="label" for="f-nombre">Nombre</label>
+        <div class="name-row"><input id="f-nombre" autocomplete="off"><button type="button" class="dice" id="b-dado" title="Otro nombre" aria-label="Proponer otro nombre">⚄</button></div>
+        <div class="hint">Propuesto según tu cuna y tu tierra. Puedes escribir el que prefieras.</div></div>
+    </div>
+  </section>
+  <section class="step">
+    <h2>II. Lo que te tocó</h2>
+    <p class="note">Esto no se elige: filiación, educación, fortuna, condición, lugar en la familia y confesión salen de una sola tirada.</p>
+    <div><button class="btn" id="b-tirar">Echar los dados del destino</button></div>
+    <div class="fate" id="fate"></div>
+  </section>
+  <section class="step" id="step3" hidden>
+    <h2>III. Tu posición en Versalles</h2>
+    <p class="note">Solo aparecen las que tu cuna, tu sexo y tu procedencia permiten. Algunas traen tensiones con tu destino.</p>
+    <div id="pos-list" class="pos-list"></div>
+  </section>
+  <div class="sel-actions">
+    <button class="btn primary" id="b-entrar" disabled>Entrar en Versalles</button>
+    <button class="btn" id="b-reset">Empezar de nuevo</button>
+  </div>
+  <button class="back" id="b-epocas">Cambiar de época</button>
+</main>
+
+<!-- ================= JUEGO ================= -->
+<div id="game" class="wrap" hidden>
+  <header class="bar">
+    <div class="bar-top">
+      <div class="ident">
+        <button class="portrait" id="portrait" title="Cambiar retrato" aria-label="Retrato del personaje. Toca para cambiarlo."></button>
+        <input type="file" id="portrait-file" accept="image/*" hidden>
+        <div class="who" id="who"></div>
+      </div>
+      <div class="bar-right">
+        <div class="bar-meta">
+          <span class="date" id="fecha"></span>
+          <button class="btn sm" id="b-back">‹ Épocas</button>
+          <button class="btn sm primary" id="b-partida">Partida</button>
+        </div>
+        <div class="clock" id="clock" aria-label="Jornada del rey"></div>
+        <div class="gauges" id="gauges"></div>
+      </div>
+    </div>
+    <nav class="views" id="views" aria-label="Secciones"></nav>
+  </header>
+
+  <!-- Escritorio -->
+  <section class="view" data-view="escritorio">
+    <div class="desk-wrap">
+      <div class="desk" id="desk" aria-label="Escritorio"><span class="desk-legend">Arrastra los papeles; tócalos para leerlos.</span></div>
+      <div class="side">
+        <section class="pane" aria-label="Calendario">
+          <div class="cal-h"><button id="cal-prev" aria-label="Mes anterior">‹</button><h3 id="cal-title"></h3><button id="cal-next" aria-label="Mes siguiente">›</button></div>
+          <div class="cal" id="cal"></div>
+          <div class="cal-list" id="cal-list"></div>
+        </section>
+        <section class="pane">
+          <div class="pane-h"><h2>Sobre la mesa</h2><span class="tag ej">Ejemplo</span></div>
+          <div class="filters" id="filters"></div>
+        </section>
+        <section class="pane">
+          <div class="pane-h"><h2>Objetos</h2><span class="tag ej">Ejemplo</span></div>
+          <div id="objetos"></div>
+        </section>
+        <section class="pane">
+          <div class="pane-h"><h2>Archivo</h2></div>
+          <ol class="archive" id="archivo"></ol>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mapa -->
+  <section class="view" data-view="mapa" hidden>
+    <div class="map-layout">
+      <div class="pane">
+        <div class="tabs" role="tablist" id="map-tabs">
+          <button role="tab" data-map="palacio" aria-selected="true">Palacio</button>
+          <button role="tab" data-map="dominio" aria-selected="false">Dominio</button>
+          <button role="tab" data-map="francia" aria-selected="false">Francia</button>
+        </div>
+        <div class="msearch">
+          <svg class="lupa" aria-hidden="true" width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6.8" cy="6.8" r="4.8"/><path d="M10.4 10.4 14.5 14.5" stroke-linecap="round"/></svg>
+          <input id="msearch" type="search" placeholder="Buscar estancia, lugar o quién vive ahí…" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="msearch-res" aria-label="Buscar un lugar del palacio o del dominio">
+          <ul id="msearch-res" role="listbox" hidden></ul>
+        </div>
+        <div class="map-box" id="map-box"></div>
+        <span class="note">Planos esquemáticos, no a escala.</span>
+      </div>
+      <div class="pane"><div class="map-info" id="map-info"></div></div>
+    </div>
+  </section>
+
+  <!-- Caras -->
+  <section class="view" data-view="caras" hidden>
+    <section class="pane">
+      <div class="pane-h"><h2>Rostros sin nombre</h2><span class="tag ej">Ejemplo</span></div>
+      <p class="note">Gente que has visto sin saber quién es. Escribe tu conjetura: el narrador confirma los aciertos de tres en tres, sin decirte cuál falló.</p>
+      <div class="plates" id="unknown"></div>
+      <div class="note" id="guess-count"></div>
+    </section>
+    <section class="pane">
+      <div class="pane-h"><h2>Libro de caras</h2><span class="note" id="faces-count"></span><a class="note" href="libro.html" style="color:inherit">Abrir el libro completo →</a></div>
+      <div class="faces-tools">
+        <input id="q" type="search" placeholder="Buscar por nombre o título" aria-label="Buscar">
+        <select id="f-pres" aria-label="Presencia">
+          <option value="">Toda presencia</option>
+          <option value="reside">Reside en el palacio</option>
+          <option value="frecuenta">Frecuenta la corte</option>
+          <option value="ocasional">Visitas ocasionales</option>
+          <option value="ausente">Fuera de Versalles</option>
+        </select>
+      </div>
+      <div id="faces" style="display:grid;gap:14px"></div>
+    </section>
+  </section>
+
+  <!-- Diario -->
+  <section class="view" data-view="diario" hidden>
+    <div class="journal">
+      <div class="book" id="book"></div>
+      <section class="pane">
+        <div class="pane-h"><h2>Glosario</h2><span class="note" id="gl-count"></span></div>
+        <div class="tabs" role="tablist" id="gl-tabs"></div>
+        <div class="glossary" id="glossary"></div>
+      </section>
+    </div>
+  </section>
+
+  <!-- Planes -->
+  <section class="view" data-view="planes" hidden>
+    <div class="pane-h"><h2>Planes</h2><button class="btn sm" id="b-newplan">Nuevo plan</button></div>
+    <section class="pane new-plan" id="new-plan" hidden></section>
+    <div class="plans" id="plans"></div>
+  </section>
+
+  <!-- Biografía -->
+  <section class="view" data-view="bio" hidden>
+    <div class="pane-h"><h2>Biografía</h2></div>
+    <section class="pane bio" id="bio"></section>
+  </section>
+
+  <!-- Relaciones -->
+  <section class="view" data-view="rel" hidden>
+    <div class="pane-h"><h2>Relaciones</h2></div>
+    <section class="pane" id="rel"></section>
+  </section>
+</div>
+
+<aside id="ficha" hidden aria-label="Ficha"></aside>
+<div class="overlay" id="lectern" hidden></div>
+<div class="overlay" id="partida" hidden>
+  <section class="menu" role="dialog" aria-label="Partida">
+    <div class="pane-h"><h2>Partida</h2><button class="x" id="p-close" aria-label="Cerrar">×</button></div>
+    <div class="row">
+      <div class="field"><label class="label" for="p-nombre">Nombre de la partida</label><input id="p-nombre" autocomplete="off"></div>
+      <button class="btn primary" id="p-save">Guardar</button>
+    </div>
+    <span class="status" id="p-status"></span>
+    <span class="label">Partidas guardadas</span>
+    <ul class="saves" id="p-list"></ul>
+    <div class="rule"></div>
+    <div class="row">
+      <button class="btn sm" id="p-export">Exportar archivo</button>
+      <label class="btn sm" for="p-import" style="cursor:pointer">Importar archivo</label>
+      <input type="file" id="p-import" accept=".json,application/json" hidden>
+    </div>
+    <div class="row">
+      <button class="btn sm" id="p-perso">Cambiar personaje</button>
+      <button class="btn sm" id="p-epocas">Volver a las épocas</button>
+      <button class="btn sm danger" id="p-new">Nueva partida</button>
+    </div>
+  </section>
+</div>
+<nav class="mnav" id="mnav" hidden aria-label="Secciones"></nav>
+
+<script src="js/00-datos.js"></script>
+<script src="js/01-epocas.js"></script>
+<script src="js/02-fechas.js"></script>
+<script src="js/03-catalogos.js"></script>
+<script src="js/04-nombres-de-epoca.js"></script>
+<script src="js/05-creacion-de-personaje.js"></script>
+<script src="js/06-familia-del-jugador.js"></script>
+<script src="js/07-contenido-de-ejemplo.js"></script>
+<script src="js/08-utilidades.js"></script>
+<script src="js/09-selector.js"></script>
+<script src="js/10-barra.js"></script>
+<script src="js/11-escritorio.js"></script>
+<script src="js/12-mapas.js"></script>
+<script src="js/13-buscador-de-lugares.js"></script>
+<script src="js/14-francia-mapa-de-provincias-a.js"></script>
+<script src="js/15-caras.js"></script>
+<script src="js/16-linaje.js"></script>
+<script src="js/17-diario-y-glosario.js"></script>
+<script src="js/18-planes.js"></script>
+<script src="js/19-calendario.js"></script>
+<script src="js/20-epocas-pantalla.js"></script>
+<script src="js/21-partidas-guardar-cargar-expo.js"></script>
+<script src="js/22-biografia-y-relaciones.js"></script>
+<script src="js/23-navegacion.js"></script>
+<script src="js/99-estatico.js"></script>
+
+
+</body></html>

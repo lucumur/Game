@@ -32,3 +32,20 @@ function familyBlock(id){
   group("Relaciones conocidas",LINAJE.especiales.filter(e=>e.de===id).map(e=>kin(e.a,e.tipo)));
   return out;
 }
+
+function openFicha(p){
+  const L=libroDe(p.id); if(L)return openFichaL(L);
+  const f=$("#ficha"); f.innerHTML="";
+  const notas=store.get("vg_notas",{});
+  const ta=el("textarea",{id:"nota-"+p.id,placeholder:"Lo que piensas de esta persona. Solo tú lo ves."}); ta.value=notas[p.id]||"";
+  ta.addEventListener("input",()=>{const n=store.get("vg_notas",{});n[p.id]=ta.value;store.set("vg_notas",n)});
+  const dl=el("dl",{});
+  [["Título",p.titulo],["Edad",p.edad_jun_1722+" años (n. "+p.nacimiento.split("-").reverse().join("/")+")"],["Parentesco",p.parentesco],["Situación",p.situacion_1722||"—"],["Presencia",PRES[p.presencia_versalles]],["Notas",p.notas||"—"]].forEach(([k,v])=>dl.append(el("dt",{},k),el("dd",{},v)));
+  f.append(el("button",{class:"x","aria-label":"Cerrar",onclick:()=>{f.hidden=true}},"×"),
+    el("span",{class:"label"},"Libro de caras"),el("h2",{},p.nombre),el("div",{class:"rule"}),dl,
+    el("span",{class:"label"},"Familia"),familyBlock(p.id),
+    el("span",{class:"label"},"Lo que sabes"),el("p",{class:"note"},"Todavía no has observado nada de esta persona."),
+    el("label",{class:"label",for:"nota-"+p.id},"Tus notas"),ta,
+    el("span",{class:p.verificacion==="verificado"?"tag":"tag ej"},p.verificacion==="verificado"?"Datos verificados":"Datos por verificar"));
+  f.hidden=false; f.querySelector(".x").focus();
+}

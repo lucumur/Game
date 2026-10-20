@@ -84,3 +84,6 @@ function generarFamilia(p){
   }
   return {edad, nac: AÑO()-edad, miembros: fam};
 }
+
+const JORNADA = ["Lever","Messe","Conseil","Dîner","Promenade","Souper","Coucher"];
+const EJEMPLO = {nombre:"Antoine Fabre",sexo:"M",proc:"provincia",region:"Languedoc",cuna:"burguesia",destino:{filiacion:"directa",edu:2,dinero:"menos",condicion:"ninguna",lugar:"segundon",confesion:"catolico"},pos:"medico"};

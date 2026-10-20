@@ -1,0 +1,4860 @@
+[
+ {
+  "aficiones": [
+   {
+    "doc": true,
+    "n": "Caza a caballo",
+    "v": 4
+   },
+   {
+    "doc": true,
+    "n": "Geografía y cartografía",
+    "v": 3
+   },
+   {
+    "doc": false,
+    "n": "Torno de madera",
+    "v": 2
+   }
+  ],
+  "anio": 1710,
+  "anterior": "duc d'Anjou",
+  "apodos": [
+   "le Roi"
+  ],
+  "cargo": "Rey (menor de edad hasta febrero de 1723)",
+  "casa": "Borbón (Casa Real de Francia)",
+  "conyuge": "Soltero; prometido a la infanta Mariana Victoria",
+  "cualidades": {
+   "belleza": 5,
+   "constitucion": 4,
+   "estatura": "media(niño)",
+   "intelecto": 4,
+   "memoria": 5
+  },
+  "cualidades_doc": [
+   "belleza",
+   "memoria"
+  ],
+  "edad": "12",
+  "educacion": "En palacio: preceptor Fleury (latín, historia, religión), gobernador Villeroy (etiqueta y porte), geografía con Guillaume Delisle",
+  "escritorio_id": "luis-xv",
+  "estatus": "verificado",
+  "estatus_familia": "Casa Real",
+  "faccion": "Corona",
+  "habilidades": {
+   "armas": 4,
+   "devocion": 6,
+   "diplomacia": 3,
+   "erudicion": 5,
+   "galanteria": 2,
+   "intriga": 2
+  },
+  "hijos": "—",
+  "hitos": "Regresa a Versalles 15/06/1722; coronación en Reims 25/10/1722; mayoría 16/02/1723",
+  "idiomas": [
+   {
+    "doc": true,
+    "n": "Latín",
+    "v": 3
+   }
+  ],
+  "innatos": {
+   "aspecto": "Niño muy bello, ojos oscuros",
+   "intelecto": "Despierto, buena memoria",
+   "salud": "Robusta pese a una fiebre grave en 1721",
+   "temperamento": "Tímido, reservado, melancólico"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Nacido en la corte; Vincennes y Tullerías 1715–1722; vuelve a Versalles en junio de 1722",
+  "lugar_familia": "Tercer hijo; único superviviente de sus padres",
+  "madre": "María Adelaida de Saboya (†1712)",
+  "muerte": "10/05/1774, Versalles",
+  "nacimiento": "15/02/1710, Versalles",
+  "nombre": "Luis XV",
+  "nombre_nac": "Louis XV de France",
+  "oculta": "Miedo y desconfianza tras perder a toda su familia",
+  "orden": 1,
+  "padre": "Luis, duque de Borgoña (†1712)",
+  "prompt": "Louis XV of France as a slender 12-year-old beardless boy king, 1722, childlike soft features. His own natural dark chestnut hair, smooth on top, swept back from a high bare forehead, falling to the shoulders and turning into loose soft waves only at the ends. Delicate narrow oval face, pale porcelain skin, faint rosy cheeks, large dark brown almond eyes with long lashes, small mouth. Reserved, slightly melancholic expression. Royal blue velvet coat embroidered in gold, the wide light-blue moiré sash of the Order of the Holy Spirit, silver star with white dove on the left breast, white lace cravat. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no wig, tight ringlets, black neck ribbon, teenager, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Rey (menor de edad hasta febrero de 1723)",
+  "quiere": "Afecto estable, cazar, que no lo usen como pieza",
+  "rango": 100,
+  "rasgos": {
+   "amb": 1,
+   "ani": 1,
+   "com": 2,
+   "cre": 2,
+   "cst": 4,
+   "cur": 4,
+   "dis": 4,
+   "obe": 4,
+   "pie": 4,
+   "soc": 1
+  },
+  "rasgos_doc": [],
+  "relacion_rey": "—",
+  "religion": "Católica",
+  "riqueza": 10,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Fisonomista",
+    "v": 3
+   }
+  ],
+  "titulo": "Rey de Francia",
+  "titulo_nob": "Rey de Francia y de Navarra",
+  "ubicacion": "Versalles",
+  "vocacion": "Corona",
+  "id": "p01"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": false,
+    "n": "Baile",
+    "v": 1
+   },
+   {
+    "doc": false,
+    "n": "Animales exóticos",
+    "v": 1
+   }
+  ],
+  "anio": 1718,
+  "apodos": [
+   "l'Infante-Reine"
+  ],
+  "cargo": "Prometida del rey",
+  "casa": "Borbón (Casa Real de España)",
+  "conyuge": "Prometida a Luis XV",
+  "cualidades": {
+   "belleza": 3,
+   "constitucion": 4,
+   "estatura": "niña pequeña",
+   "intelecto": 3
+  },
+  "cualidades_doc": [],
+  "edad": "4",
+  "educacion": "Criada por la duquesa de Ventadour en la corte francesa",
+  "escritorio_id": "mariana-victoria",
+  "estatus": "verificado",
+  "estatus_familia": "Casa Real",
+  "faccion": "España",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 3,
+   "diplomacia": 1,
+   "erudicion": 1,
+   "galanteria": 1,
+   "intriga": 0
+  },
+  "hijos": "—",
+  "hitos": "Llegó a París en marzo de 1722; será devuelta a España en 1725",
+  "idiomas": [
+   {
+    "doc": true,
+    "n": "Francés",
+    "v": 3
+   }
+  ],
+  "innatos": {
+   "aspecto": "Niña menuda de mejillas redondas",
+   "intelecto": "Despierta para su edad",
+   "salud": "Buena",
+   "temperamento": "Viva, alegre, mimada"
+  },
+  "lengua": "Español (aprende francés)",
+  "llegada_corte": "Llega a Francia en marzo de 1722",
+  "lugar_familia": "Primera hija de Isabel de Farnesio",
+  "madre": "Isabel de Farnesio",
+  "muerte": "15/01/1781, Lisboa",
+  "nacimiento": "31/03/1718, Madrid (Real Alcázar)",
+  "nombre": "Mariana Victoria de Borbón",
+  "nombre_nac": "María Ana Victoria de Borbón y Farnesio",
+  "oculta": "—",
+  "orden": 2,
+  "padre": "Felipe V de España",
+  "prompt": "Mariana Victoria of Spain, the Infanta-Queen, a small 4-year-old Spanish princess, 1722, round rosy cheeks, large dark eyes, tiny mouth. Shy, curious expression. Dark hair dressed close to the head with a small jeweled aigrette and pearls, stiff silver brocade court gown with a lace tucker and a tiny ermine-trimmed mantle. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no adult, makeup, teenager, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Prometida del rey",
+  "quiere": "Jugar, ser querida",
+  "rango": 95,
+  "rasgos": {
+   "ani": 5,
+   "hum": 4,
+   "obe": 2,
+   "soc": 5,
+   "tem": 2
+  },
+  "rasgos_doc": [],
+  "relacion_rey": "Prometida; el rey la ignora casi por completo",
+  "religion": "Católica",
+  "riqueza": 5,
+  "talentos": [],
+  "titulo": "Infanta de España",
+  "titulo_nob": "Infanta de España",
+  "ubicacion": "Versalles",
+  "vocacion": "Corona",
+  "id": "p02"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": true,
+    "n": "Libertinaje",
+    "v": 7
+   },
+   {
+    "doc": true,
+    "n": "Pintura al óleo",
+    "v": 5
+   },
+   {
+    "doc": true,
+    "n": "Química",
+    "v": 5
+   },
+   {
+    "doc": true,
+    "n": "Composición",
+    "v": 5
+   }
+  ],
+  "anio": 1674,
+  "apodos": [
+   "le Régent",
+   "Monsieur le duc d'Orléans"
+  ],
+  "cargo": "Regente de Francia",
+  "casa": "Orleans",
+  "conyuge": "Francisca María de Borbón (1692)",
+  "cualidades": {
+   "belleza": 2,
+   "constitucion": 1,
+   "estatura": "media",
+   "fertilidad": 4,
+   "intelecto": 5,
+   "memoria": 4,
+   "oido": true,
+   "taras": "Vista muy débil"
+  },
+  "cualidades_doc": [
+   "constitucion",
+   "taras"
+  ],
+  "edad": "47",
+  "educacion": "Preceptor: el abad Dubois. Ciencias, química, pintura y música; formado también en la guerra",
+  "escritorio_id": "felipe-ii-orleans",
+  "estatus": "verificado",
+  "estatus_familia": "Casa Real · nieto de Francia",
+  "faccion": "Orleans",
+  "habilidades": {
+   "armas": 7,
+   "devocion": 1,
+   "diplomacia": 7,
+   "erudicion": 8,
+   "galanteria": 9,
+   "intriga": 7
+  },
+  "hijos": "8 hijos; entre ellos Luis, duque de Chartres, y Luisa Isabel, princesa de Asturias",
+  "hitos": "Muere de apoplejía 02/12/1723",
+  "idiomas": [
+   {
+    "doc": false,
+    "n": "Latín",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Italiano",
+    "v": 3
+   }
+  ],
+  "innatos": {
+   "aspecto": "Grueso, rubicundo, ojos cansados",
+   "intelecto": "Brillante y culto",
+   "salud": "Deteriorada: vista débil, apoplético",
+   "temperamento": "Afable, libertino, indolente"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Nacido en la corte",
+  "lugar_familia": "Hijo mayor superviviente",
+  "madre": "Isabel Carlota del Palatinado",
+  "muerte": "02/12/1723, Versalles",
+  "nacimiento": "02/08/1674, Saint-Cloud",
+  "nombre": "Felipe II de Orleans",
+  "nombre_nac": "Philippe d'Orléans",
+  "oculta": "Agotamiento y salud deteriorada; carga con rumores de haber envenenado a los herederos",
+  "orden": 3,
+  "padre": "Felipe I de Orleans, Monsieur (†1701)",
+  "prompt": "Philippe d'Orléans, Regent of France, a heavy-set 47-year-old man, 1722, double chin, ruddy complexion, full lips, tired heavy-lidded eyes. Worldly, neutral expression, clean shaven. Full powdered Regency wig, crimson velvet coat embroidered in gold over the edge of a steel breastplate, the wide light-blue moiré sash of the Order of the Holy Spirit, lace cravat. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, thin face, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Regente de Francia",
+  "quiere": "Entregar el reino intacto al rey",
+  "rango": 92,
+  "rasgos": {
+   "amb": 2,
+   "ani": 2,
+   "cel": 1,
+   "cer": 1,
+   "cmp": 4,
+   "com": 2,
+   "cre": 4,
+   "cst": 1,
+   "cur": 5,
+   "dis": 4,
+   "esp": 5,
+   "fra": 4,
+   "gas": 5,
+   "gen": 5,
+   "hos": 4,
+   "hum": 4,
+   "obe": 1,
+   "org": 2,
+   "pie": 1,
+   "ren": 1,
+   "sen": 5,
+   "soc": 5,
+   "tem": 4,
+   "val": 5,
+   "van": 2
+  },
+  "rasgos_doc": [
+   "ren",
+   "val",
+   "pie",
+   "sen"
+  ],
+  "relacion_rey": "Tío segundo y regente; el rey le tiene respeto",
+  "religion": "Católica (escéptico)",
+  "riqueza": 9,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Narrador",
+    "v": 5
+   }
+  ],
+  "titulo": "Duque de Orleans",
+  "titulo_nob": "Duque de Orleans, de Valois, de Chartres, de Nemours y de Montpensier",
+  "ubicacion": "Versalles / Palais-Royal",
+  "vocacion": "Armas → gobierno",
+  "id": "p03"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": true,
+    "n": "Vinos",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Lansquenet",
+    "v": 3
+   },
+   {
+    "doc": false,
+    "n": "Novela",
+    "v": 3
+   }
+  ],
+  "anio": 1677,
+  "apodos": [
+   "Mademoiselle de Blois",
+   "Madame la duchesse d'Orléans"
+  ],
+  "cargo": "Esposa del regente",
+  "casa": "Borbón (legitimados)",
+  "conyuge": "Felipe II de Orleans, el regente",
+  "cualidades": {
+   "belleza": 3,
+   "constitucion": 3,
+   "fertilidad": 5,
+   "intelecto": 3,
+   "memoria": 3
+  },
+  "cualidades_doc": [
+   "fertilidad"
+  ],
+  "edad": "45",
+  "educacion": "Criada en casa de Madame de Maintenon; educación de corte",
+  "escritorio_id": "francoise-marie-blois",
+  "estatus": "verificado",
+  "estatus_familia": "Legitimada de Francia (1681)",
+  "faccion": "Orleans",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 4,
+   "diplomacia": 3,
+   "erudicion": 3,
+   "galanteria": 3,
+   "intriga": 5
+  },
+  "hijos": "8 hijos",
+  "hitos": "—",
+  "idiomas": [],
+  "innatos": {
+   "aspecto": "Blanca, robusta",
+   "intelecto": "Medio",
+   "salud": "Regular, aficionada al vino",
+   "temperamento": "Altiva, indolente (pasa el día recostada)"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Nacida en la corte",
+  "lugar_familia": "Hija menor de Luis XIV y Montespan",
+  "madre": "Madame de Montespan",
+  "muerte": "01/02/1749, París",
+  "nacimiento": "04/05/1677, cerca de Maintenon (lugar incierto)",
+  "nombre": "Francisca María de Borbón",
+  "nombre_nac": "Françoise-Marie de Bourbon",
+  "oculta": "Orgullo herido por su origen ilegítimo",
+  "orden": 4,
+  "padre": "Luis XIV",
+  "prompt": "Françoise-Marie de Bourbon, Duchess of Orléans, a plump 45-year-old woman, 1722, very pale skin, haughty languid gaze. Indolent, proud expression. Dark hair dressed close to the head with lace and pearls, gold brocade gown, ermine-lined blue mantle with gold fleurs-de-lis, pearl necklace. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no modern makeup, young woman, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Esposa del regente",
+  "quiere": "Rango y buenos matrimonios para sus hijos",
+  "rango": 88,
+  "rasgos": {
+   "ani": 2,
+   "cer": 4,
+   "esp": 2,
+   "gen": 2,
+   "hos": 2,
+   "lab": 1,
+   "obe": 2,
+   "org": 5,
+   "sen": 2,
+   "soc": 2,
+   "tem": 4,
+   "van": 4
+  },
+  "rasgos_doc": [],
+  "relacion_rey": "Tía abuela por vía legitimada",
+  "religion": "Católica",
+  "riqueza": 7,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Disimulo",
+    "v": 3
+   }
+  ],
+  "titulo": "Duquesa de Orleans",
+  "titulo_nob": "Duquesa de Orleans; legitimada de Francia",
+  "ubicacion": "Versalles / Palais-Royal",
+  "vocacion": "Corte",
+  "id": "p04"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": true,
+    "n": "Correspondencia",
+    "v": 10
+   },
+   {
+    "doc": false,
+    "n": "Teatro de aficionados",
+    "v": 3
+   },
+   {
+    "doc": true,
+    "n": "Numismática",
+    "v": 5
+   },
+   {
+    "doc": true,
+    "n": "Caza a caballo",
+    "v": 3
+   }
+  ],
+  "anio": 1652,
+  "apodos": [
+   "Liselotte",
+   "Madame",
+   "Madame Palatine"
+  ],
+  "cargo": "Madre del regente",
+  "casa": "Wittelsbach (Palatinado)",
+  "conyuge": "Felipe I de Orleans (1671), viuda desde 1701",
+  "cualidades": {
+   "belleza": 1,
+   "constitucion": 2,
+   "estatura": "media",
+   "fertilidad": 3,
+   "intelecto": 4,
+   "marcas": "Viruela (1693)",
+   "memoria": 4
+  },
+  "cualidades_doc": [
+   "belleza",
+   "marcas"
+  ],
+  "edad": "70",
+  "educacion": "En Hannover con su tía Sofía, electora de Hannover",
+  "escritorio_id": "liselotte",
+  "estatus": "verificado",
+  "estatus_familia": "Casa electoral alemana",
+  "faccion": "Orleans",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 4,
+   "diplomacia": 4,
+   "erudicion": 8,
+   "galanteria": 1,
+   "intriga": 3
+  },
+  "hijos": "Felipe II de Orleans (el regente); Isabel Carlota, duquesa de Lorena",
+  "hitos": "Muere en Saint-Cloud 08/12/1722",
+  "idiomas": [
+   {
+    "doc": true,
+    "n": "Francés",
+    "v": 7
+   }
+  ],
+  "innatos": {
+   "aspecto": "Robusta, rostro ancho y rojizo",
+   "intelecto": "Agudo; escribe miles de cartas",
+   "salud": "Declinante; muere en diciembre de 1722",
+   "temperamento": "Franca, mordaz, leal"
+  },
+  "lengua": "Alemán",
+  "llegada_corte": "Llega a Francia en 1671",
+  "lugar_familia": "Hija única del matrimonio",
+  "madre": "Carlota de Hesse-Kassel",
+  "muerte": "08/12/1722, Saint-Cloud",
+  "nacimiento": "27/05/1652, Heidelberg",
+  "nombre": "Isabel Carlota del Palatinado",
+  "nombre_nac": "Elisabeth Charlotte von der Pfalz",
+  "oculta": "Desprecio por la corte francesa (lo vuelca en miles de cartas)",
+  "orden": 5,
+  "padre": "Carlos I Luis, elector palatino",
+  "prompt": "Elisabeth Charlotte, Madame Palatine, a stout 70-year-old German-born princess, 1722, broad ruddy face, small sharp eyes, frank mouth. Sardonic, plain-spoken expression. Grey hair under a black widow's hood with black lace, severe black velvet gown, ermine-lined black mantle. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no modern makeup, young woman, thin, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Madre del regente",
+  "quiere": "Que su hijo no caiga en manos de Dubois",
+  "rango": 92,
+  "rasgos": {
+   "amb": 1,
+   "com": 2,
+   "cre": 2,
+   "cst": 5,
+   "cur": 4,
+   "dis": 1,
+   "esp": 4,
+   "fra": 5,
+   "gas": 2,
+   "hum": 5,
+   "lab": 4,
+   "lea": 5,
+   "obe": 2,
+   "org": 5,
+   "ren": 4,
+   "sen": 1,
+   "soc": 2,
+   "tem": 2,
+   "val": 4,
+   "van": 1
+  },
+  "rasgos_doc": [
+   "dis",
+   "van",
+   "org",
+   "ren",
+   "sen",
+   "fra"
+  ],
+  "relacion_rey": "Bisabuela política; figura del viejo Versalles",
+  "religion": "Calvinista convertida al catolicismo (1671)",
+  "riqueza": 6,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Narrador",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Chismes",
+    "v": 5
+   }
+  ],
+  "titulo": "Madame Palatina",
+  "titulo_nob": "Duquesa viuda de Orleans; princesa palatina",
+  "ubicacion": "Saint-Cloud",
+  "vocacion": "Corte",
+  "id": "p05"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": false,
+    "n": "Teología y controversia",
+    "v": 4
+   },
+   {
+    "doc": false,
+    "n": "Bibliofilia",
+    "v": 3
+   },
+   {
+    "doc": false,
+    "n": "Botánica",
+    "v": 2
+   }
+  ],
+  "anio": 1703,
+  "apodos": [
+   "Monsieur le duc de Chartres"
+  ],
+  "cargo": "Coronel general de la infantería",
+  "casa": "Orleans",
+  "conyuge": "Soltero (casará en 1724 con Augusta de Baden-Baden)",
+  "cualidades": {
+   "belleza": 2,
+   "constitucion": 2,
+   "fertilidad": 3,
+   "intelecto": 4,
+   "memoria": 4
+  },
+  "cualidades_doc": [],
+  "edad": "18",
+  "educacion": "Tutores en palacio; coronel general de la infantería desde 1721",
+  "escritorio_id": "luis-orleans-chartres",
+  "estatus": "verificado",
+  "estatus_familia": "Casa Real · primer príncipe de la sangre",
+  "faccion": "Orleans",
+  "habilidades": {
+   "armas": 3,
+   "devocion": 6,
+   "diplomacia": 3,
+   "erudicion": 6,
+   "galanteria": 2,
+   "intriga": 2
+  },
+  "hijos": "—",
+  "hitos": "—",
+  "idiomas": [
+   {
+    "doc": false,
+    "n": "Latín",
+    "v": 4
+   }
+  ],
+  "innatos": {
+   "aspecto": "Delgado, pálido",
+   "intelecto": "Estudioso",
+   "salud": "Delicada",
+   "temperamento": "Tímido, escrupuloso, cada vez más devoto"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Nacido en la corte",
+  "lugar_familia": "Único hijo varón",
+  "madre": "Francisca María de Borbón",
+  "muerte": "04/02/1752, París (abadía de Santa Genoveva)",
+  "nacimiento": "04/08/1703, Versalles",
+  "nombre": "Luis de Orleans",
+  "nombre_nac": "Louis d'Orléans",
+  "oculta": "Timidez y devoción religiosa creciente",
+  "orden": 6,
+  "padre": "Felipe II de Orleans, el regente",
+  "prompt": "Louis d'Orléans, Duke of Chartres, a thin 18-year-old prince, 1722, long pale face, downcast eyes. Timid, pious expression, clean shaven. Light-brown powdered Regency wig, dark blue velvet coat, steel gorget, the wide light-blue moiré sash of the Order of the Holy Spirit. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Coronel general de la infantería",
+  "quiere": "Escapar de la sombra de su padre",
+  "rango": 85,
+  "rasgos": {
+   "amb": 1,
+   "ani": 2,
+   "cmp": 4,
+   "com": 1,
+   "cre": 4,
+   "cst": 4,
+   "cur": 5,
+   "dis": 4,
+   "esp": 2,
+   "fra": 5,
+   "gas": 1,
+   "hos": 2,
+   "hum": 1,
+   "lab": 4,
+   "lea": 4,
+   "pie": 4,
+   "pru": 4,
+   "ren": 2,
+   "sen": 2,
+   "soc": 1,
+   "van": 1
+  },
+  "rasgos_doc": [
+   "pie"
+  ],
+  "relacion_rey": "Primo; poco cercano",
+  "religion": "Católica",
+  "riqueza": 8,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Cronista",
+    "v": 3
+   }
+  ],
+  "titulo": "Duque de Chartres",
+  "titulo_nob": "Duque de Chartres; primer príncipe de la sangre",
+  "ubicacion": "Versalles / Palais-Royal",
+  "vocacion": "Armas (sin vocación)",
+  "id": "p06"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": false,
+    "n": "Correspondencia",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Bibliofilia",
+    "v": 3
+   }
+  ],
+  "anio": 1656,
+  "apodos": [
+   "l'abbé Dubois",
+   "le Cardinal"
+  ],
+  "cargo": "Secretario de Asuntos Exteriores; primer ministro desde el 23/08/1722",
+  "casa": "Dubois (plebeyo)",
+  "conyuge": "Rumor de un matrimonio secreto en su juventud",
+  "cualidades": {
+   "belleza": 1,
+   "constitucion": 1,
+   "estatura": "baja",
+   "intelecto": 5,
+   "memoria": 5
+  },
+  "cualidades_doc": [
+   "belleza",
+   "constitucion"
+  ],
+  "edad": "65",
+  "educacion": "Colegio de los Doctrinarios de Brive; colegio Saint-Michel de París como becario y criado",
+  "estatus": "verificado",
+  "estatus_familia": "Burguesía provincial",
+  "faccion": "Orleans",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 1,
+   "diplomacia": 9,
+   "erudicion": 7,
+   "galanteria": 4,
+   "intriga": 10
+  },
+  "hijos": "—",
+  "hitos": "Muere 10/08/1723",
+  "idiomas": [
+   {
+    "doc": true,
+    "n": "Latín",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Inglés",
+    "v": 3
+   }
+  ],
+  "innatos": {
+   "aspecto": "Flaco, cara de hurón",
+   "intelecto": "Muy agudo",
+   "salud": "Mala: dolencia de vejiga",
+   "temperamento": "Astuto, colérico, trabajador infatigable"
+  },
+  "lengua": "Francés (y occitano de Lemosín)",
+  "llegada_corte": "Preceptor de Orleans desde 1687",
+  "lugar_familia": "Hijo de familia modesta",
+  "madre": "Marie de Joyet",
+  "muerte": "10/08/1723, Versalles",
+  "nacimiento": "06/09/1656, Brive-la-Gaillarde",
+  "nombre": "Guillaume Dubois",
+  "nombre_nac": "Guillaume Dubois",
+  "oculta": "Origen humilde (hijo de boticario) y rumores de un matrimonio secreto",
+  "orden": 7,
+  "padre": "Jean Dubois, boticario y médico",
+  "prompt": "Cardinal Guillaume Dubois, a thin wiry 65-year-old Frenchman, 1722, sharp pointed ferret-like face, narrow cunning eyes, sallow skin. Shrewd, guarded expression, clean shaven, short grey hair. Scarlet cardinal's mozzetta, scarlet zucchetto, white lace rochet, gold pectoral cross. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, wig, plump, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Secretario de Asuntos Exteriores; primer ministro desde el 23/08/1722",
+  "quiere": "Consolidar su poder",
+  "rango": 64,
+  "rasgos": {
+   "amb": 5,
+   "cer": 2,
+   "cmp": 2,
+   "com": 5,
+   "cre": 1,
+   "cur": 4,
+   "dis": 4,
+   "fra": 1,
+   "gen": 2,
+   "lab": 5,
+   "obe": 2,
+   "org": 1,
+   "pie": 1,
+   "pru": 4,
+   "ren": 4,
+   "tem": 1,
+   "van": 4
+  },
+  "rasgos_doc": [
+   "tem",
+   "amb",
+   "pie",
+   "lab"
+  ],
+  "relacion_rey": "El rey lo tolera; no lo quiere",
+  "religion": "Católica",
+  "riqueza": 7,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Disimulo",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Chismes",
+    "v": 5
+   }
+  ],
+  "titulo": "Cardenal; arzobispo de Cambrai",
+  "titulo_nob": "Cardenal; arzobispo de Cambrai",
+  "ubicacion": "Versalles",
+  "vocacion": "Iglesia y diplomacia",
+  "id": "p07"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": false,
+    "n": "Devoción práctica",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Correspondencia",
+    "v": 4
+   }
+  ],
+  "anio": 1653,
+  "apodos": [
+   "Monsieur de Fréjus"
+  ],
+  "cargo": "Preceptor del rey",
+  "casa": "Fleury",
+  "conyuge": "—",
+  "cualidades": {
+   "belleza": 3,
+   "constitucion": 5,
+   "estatura": "alta",
+   "intelecto": 4,
+   "memoria": 4
+  },
+  "cualidades_doc": [
+   "constitucion"
+  ],
+  "edad": "68",
+  "educacion": "Colegio de Clermont (jesuitas, París), colegio de Harcourt; doctor en teología por la Sorbona",
+  "estatus": "verificado",
+  "estatus_familia": "Nobleza menor del Languedoc",
+  "faccion": "Fleury",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 7,
+   "diplomacia": 8,
+   "erudicion": 7,
+   "galanteria": 3,
+   "intriga": 8
+  },
+  "hijos": "—",
+  "hitos": "Su influencia crece tras la caída de Villeroy",
+  "idiomas": [
+   {
+    "doc": true,
+    "n": "Latín",
+    "v": 5
+   }
+  ],
+  "innatos": {
+   "aspecto": "Alto, delgado, rostro amable",
+   "intelecto": "Muy fino",
+   "salud": "Excelente para su edad",
+   "temperamento": "Paciente, modesto en apariencia, ambicioso"
+  },
+  "lengua": "Francés (y occitano)",
+  "llegada_corte": "Limosnero de la reina desde 1675; obispo de Fréjus 1698–1715; preceptor desde 1715",
+  "lugar_familia": "Uno de varios hijos",
+  "madre": "Diane de La Treilhe",
+  "muerte": "29/01/1743, Issy",
+  "nacimiento": "22/06/1653, Lodève",
+  "nombre": "André-Hercule de Fleury",
+  "nombre_nac": "André-Hercule de Fleury",
+  "oculta": "Ambición detrás de su modestia",
+  "orden": 8,
+  "padre": "Jean de Fleury, recaudador de diezmos",
+  "prompt": "André-Hercule de Fleury, former Bishop of Fréjus, a tall lean 68-year-old French priest, 1722, gentle long face, soft eyes, faint polite smile. Calm, benevolent expression masking ambition, clean shaven, own short white hair. Black clerical cassock with white bands, violet skullcap, gold pectoral cross. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, wig, red cardinal robes, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Preceptor del rey",
+  "quiere": "Gobernar algún día a través del rey",
+  "rango": 42,
+  "rasgos": {
+   "amb": 5,
+   "ani": 4,
+   "cer": 4,
+   "com": 2,
+   "cre": 2,
+   "cst": 5,
+   "dis": 5,
+   "esp": 4,
+   "fra": 2,
+   "gas": 1,
+   "gen": 1,
+   "lab": 4,
+   "lea": 4,
+   "org": 2,
+   "pie": 4,
+   "pru": 5,
+   "ren": 2,
+   "sen": 2,
+   "tem": 5,
+   "val": 2,
+   "van": 2
+  },
+  "rasgos_doc": [
+   "amb",
+   "gen",
+   "gas"
+  ],
+  "relacion_rey": "La persona de mayor confianza del rey",
+  "religion": "Católica",
+  "riqueza": 3,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Disimulo",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Fisonomista",
+    "v": 5
+   }
+  ],
+  "titulo": "Antiguo obispo de Fréjus",
+  "titulo_nob": "Antiguo obispo de Fréjus",
+  "ubicacion": "Versalles",
+  "vocacion": "Iglesia",
+  "id": "p08"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": true,
+    "n": "Moda",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Baile",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Lansquenet",
+    "v": 4
+   }
+  ],
+  "anio": 1644,
+  "apodos": [
+   "le Charmant",
+   "le maréchal de Villeroy"
+  ],
+  "cargo": "Gobernador del rey (hasta agosto de 1722)",
+  "casa": "Neufville de Villeroy",
+  "conyuge": "Marguerite Marie de Cossé-Brissac (†1708)",
+  "cualidades": {
+   "belleza": 2,
+   "constitucion": 4,
+   "estatura": "alta",
+   "intelecto": 2,
+   "memoria": 3
+  },
+  "cualidades_doc": [],
+  "edad": "78",
+  "educacion": "Criado junto a Luis XIV; formación de corte y armas",
+  "estatus": "verificado",
+  "estatus_familia": "Nobleza de espada, ducal",
+  "faccion": "Viejo régimen",
+  "habilidades": {
+   "armas": 4,
+   "devocion": 5,
+   "diplomacia": 4,
+   "erudicion": 3,
+   "galanteria": 7,
+   "intriga": 4
+  },
+  "hijos": "Varios; entre ellos el duque de Retz",
+  "hitos": "Arrestado y exiliado a Lyon 10-13/08/1722",
+  "idiomas": [],
+  "innatos": {
+   "aspecto": "Alto, apuesto en su juventud, peluca enorme",
+   "intelecto": "Medio",
+   "salud": "Buena para 78 años",
+   "temperamento": "Vanidoso, ceremonioso, desconfiado"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Nacido en la corte de Luis XIV",
+  "lugar_familia": "Hijo; compañero de infancia de Luis XIV",
+  "madre": "Madeleine de Créquy",
+  "muerte": "18/07/1730, París",
+  "nacimiento": "07/04/1644, Lyon",
+  "nombre": "François de Neufville",
+  "nombre_nac": "François de Neufville",
+  "oculta": "Desconfianza obsesiva hacia el regente (vigila la comida del rey)",
+  "orden": 9,
+  "padre": "Nicolas de Neufville, mariscal de Villeroy, gobernador de Luis XIV",
+  "prompt": "François de Neufville, Marshal-Duke of Villeroy, a tall haughty 78-year-old marshal, 1722, deeply lined proud face, aquiline nose. Stern, vigilant expression, clean shaven. Massive old-fashioned full-bottomed white wig in the style of Louis XIV, gold-embroidered coat over a steel breastplate, the wide light-blue moiré sash of the Order of the Holy Spirit. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, young man, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Gobernador del rey (hasta agosto de 1722)",
+  "quiere": "Proteger al rey (y su propio puesto)",
+  "rango": 55,
+  "rasgos": {
+   "amb": 4,
+   "cer": 5,
+   "com": 5,
+   "cre": 2,
+   "cst": 4,
+   "cur": 1,
+   "dis": 1,
+   "esp": 2,
+   "gas": 5,
+   "gen": 4,
+   "hos": 4,
+   "hum": 2,
+   "lab": 2,
+   "lea": 5,
+   "obe": 2,
+   "org": 5,
+   "pru": 2,
+   "ren": 4,
+   "soc": 5,
+   "tem": 2,
+   "val": 4,
+   "van": 5
+  },
+  "rasgos_doc": [
+   "dis",
+   "van",
+   "cer"
+  ],
+  "relacion_rey": "Lo cuida desde 1717; el rey le tiene apego",
+  "religion": "Católica",
+  "riqueza": 7,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Narrador",
+    "v": 4
+   }
+  ],
+  "titulo": "Duque de Villeroy; mariscal",
+  "titulo_nob": "Duque de Villeroy; par y mariscal de Francia",
+  "ubicacion": "Versalles",
+  "vocacion": "Armas y corte",
+  "id": "p09"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": false,
+    "n": "Equitación de escuela",
+    "v": 4
+   },
+   {
+    "doc": false,
+    "n": "Caza con escopeta",
+    "v": 3
+   },
+   {
+    "doc": false,
+    "n": "Devoción práctica",
+    "v": 4
+   }
+  ],
+  "anio": 1663,
+  "apodos": [
+   "le duc de Charost"
+  ],
+  "cargo": "Capitán de los guardias de corps; gobernador del rey desde agosto de 1722",
+  "casa": "Béthune",
+  "conyuge": "—",
+  "cualidades": {
+   "belleza": 2,
+   "constitucion": 4,
+   "intelecto": 3,
+   "memoria": 3
+  },
+  "cualidades_doc": [],
+  "edad": "58–59",
+  "educacion": "Formación militar; capitán de los guardias de corps",
+  "estatus": "verificado",
+  "estatus_familia": "Nobleza de espada antigua (rama de Sully)",
+  "faccion": "Neutral",
+  "habilidades": {
+   "armas": 5,
+   "devocion": 6,
+   "diplomacia": 5,
+   "erudicion": 4,
+   "galanteria": 3,
+   "intriga": 3
+  },
+  "hijos": "—",
+  "hitos": "Nombrado tras el exilio de Villeroy",
+  "idiomas": [],
+  "innatos": {
+   "aspecto": "Rostro largo y grave",
+   "intelecto": "Medio",
+   "salud": "Buena",
+   "temperamento": "Prudente, gris"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Cortesano de larga data",
+  "lugar_familia": "—",
+  "madre": "—",
+  "muerte": "1747",
+  "nacimiento": "1663 (fecha incierta)",
+  "nombre": "Armand de Béthune",
+  "nombre_nac": "Armand de Béthune",
+  "oculta": "Que es un sustituto de compromiso",
+  "orden": 10,
+  "padre": "—",
+  "prompt": "Armand de Béthune, Duke of Charost, a grave 58-year-old French duke, 1722, long sober face, heavy-lidded eyes. Cautious, neutral expression, clean shaven. Grey powdered Regency wig, dark blue coat of the King's Bodyguard trimmed with silver lace, silver-laced shoulder belt, lace cravat. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Capitán de los guardias de corps; gobernador del rey desde agosto de 1722",
+  "quiere": "Cumplir sin hacerse enemigos",
+  "rango": 52,
+  "rasgos": {
+   "amb": 2,
+   "cer": 4,
+   "com": 2,
+   "cst": 4,
+   "dis": 4,
+   "fra": 4,
+   "lab": 4,
+   "lea": 4,
+   "obe": 5,
+   "pie": 4,
+   "pru": 5,
+   "tem": 4,
+   "van": 2
+  },
+  "rasgos_doc": [],
+  "relacion_rey": "Reemplaza a Villeroy; relación fría al inicio",
+  "religion": "Católica",
+  "riqueza": 5,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Fisonomista",
+    "v": 4
+   }
+  ],
+  "titulo": "Duque de Charost",
+  "titulo_nob": "Duque de Charost; par de Francia",
+  "ubicacion": "Versalles",
+  "vocacion": "Armas y corte",
+  "id": "p10"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": false,
+    "n": "Bordado y tapicería",
+    "v": 4
+   },
+   {
+    "doc": false,
+    "n": "Devoción práctica",
+    "v": 4
+   }
+  ],
+  "anio": 1654,
+  "apodos": [
+   "Madame de Ventadour",
+   "Maman Doudour"
+  ],
+  "cargo": "Aya de los hijos de Francia (cuida a la infanta)",
+  "casa": "La Motte-Houdancourt",
+  "conyuge": "Louis Charles de Lévis, duque de Ventadour (separados)",
+  "cualidades": {
+   "belleza": 2,
+   "constitucion": 4,
+   "fertilidad": 2,
+   "intelecto": 3,
+   "memoria": 4
+  },
+  "cualidades_doc": [],
+  "edad": "67–68",
+  "educacion": "Educación de corte; dama de honor de Madame Palatina",
+  "estatus": "verificado",
+  "estatus_familia": "Nobleza de espada",
+  "faccion": "Corona",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 6,
+   "diplomacia": 5,
+   "erudicion": 3,
+   "galanteria": 3,
+   "intriga": 4
+  },
+  "hijos": "Una hija, la princesa de Rohan",
+  "hitos": "—",
+  "idiomas": [
+   {
+    "doc": false,
+    "n": "Español",
+    "v": 2
+   }
+  ],
+  "innatos": {
+   "aspecto": "Señora digna de rostro amable",
+   "intelecto": "Práctico",
+   "salud": "Buena",
+   "temperamento": "Maternal, firme, protectora"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "En la corte desde joven",
+  "lugar_familia": "Hija",
+  "madre": "Louise de Prie, aya de los hijos de Francia",
+  "muerte": "15/12/1744, París",
+  "nacimiento": "1654 (fecha incierta)",
+  "nombre": "Charlotte de La Motte-Houdancourt",
+  "nombre_nac": "Charlotte de La Motte-Houdancourt",
+  "oculta": "Que le salvó la vida en 1712 escondiéndolo de los médicos",
+  "orden": 11,
+  "padre": "Philippe de La Motte-Houdancourt, mariscal de Francia",
+  "prompt": "Charlotte de La Motte-Houdancourt, Duchess of Ventadour, royal governess, a dignified 68-year-old Frenchwoman, 1722, kind wrinkled face, warm eyes. Tender, protective expression. Grey hair under a black lace headdress, dark silk gown with a lace collar, small gold cross. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no modern makeup, young woman, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Aya de los hijos de Francia (cuida a la infanta)",
+  "quiere": "Seguir cerca del niño que salvó",
+  "rango": 50,
+  "rasgos": {
+   "amb": 2,
+   "ani": 4,
+   "cer": 4,
+   "cmp": 5,
+   "com": 2,
+   "cst": 5,
+   "dis": 4,
+   "fra": 4,
+   "gen": 4,
+   "hos": 5,
+   "lab": 4,
+   "lea": 5,
+   "pie": 4,
+   "ren": 2,
+   "sen": 2,
+   "soc": 4,
+   "tem": 4,
+   "van": 2
+  },
+  "rasgos_doc": [
+   "cmp"
+  ],
+  "relacion_rey": "El rey la llama 'mamá'; afecto genuino",
+  "religion": "Católica",
+  "riqueza": 5,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Remedios caseros",
+    "v": 4
+   }
+  ],
+  "titulo": "Duquesa de Ventadour",
+  "titulo_nob": "Duquesa de Ventadour",
+  "ubicacion": "Versalles",
+  "vocacion": "Corte (aya real)",
+  "id": "p11"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": true,
+    "n": "Caza a caballo",
+    "v": 5
+   },
+   {
+    "doc": true,
+    "n": "Cría de caballos",
+    "v": 6
+   },
+   {
+    "doc": true,
+    "n": "Especulación en acciones",
+    "v": 5
+   }
+  ],
+  "anio": 1692,
+  "apodos": [
+   "Monsieur le Duc"
+  ],
+  "cargo": "Jefe del Consejo de Regencia; superintendente de la educación del rey; gran maestre de Francia",
+  "casa": "Borbón-Condé",
+  "conyuge": "Viudo de María Ana de Borbón-Conti (†1720)",
+  "cualidades": {
+   "belleza": 1,
+   "constitucion": 4,
+   "estatura": "alta",
+   "fertilidad": 2,
+   "intelecto": 2,
+   "memoria": 3,
+   "taras": "Tuerto (accidente de caza, 1712)"
+  },
+  "cualidades_doc": [
+   "taras"
+  ],
+  "edad": "29",
+  "educacion": "Tutores de la casa de Condé",
+  "escritorio_id": "luis-enrique-borbon",
+  "estatus": "verificado",
+  "estatus_familia": "Príncipe de la sangre",
+  "faccion": "Borbón-Condé",
+  "habilidades": {
+   "armas": 4,
+   "devocion": 2,
+   "diplomacia": 3,
+   "erudicion": 3,
+   "galanteria": 5,
+   "intriga": 5
+  },
+  "hijos": "—",
+  "hitos": "Primer ministro tras la muerte de Orleans (dic 1723)",
+  "idiomas": [],
+  "innatos": {
+   "aspecto": "Alto, flaco, un ojo nublado",
+   "intelecto": "Limitado",
+   "salud": "Buena; tuerto desde un accidente de caza en 1712",
+   "temperamento": "Frío, terco, codicioso"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Nacido en la corte",
+  "lugar_familia": "Hijo mayor",
+  "madre": "Luisa Francisca de Borbón, Madame la Duchesse",
+  "muerte": "27/01/1740, Chantilly",
+  "nacimiento": "18/08/1692, Versalles",
+  "nombre": "Luis Enrique de Borbón",
+  "nombre_nac": "Louis-Henri de Bourbon",
+  "oculta": "Fortuna enorme hecha con el Sistema de Law",
+  "orden": 12,
+  "padre": "Luis III, príncipe de Condé (†1710)",
+  "prompt": "Louis-Henri de Bourbon, Duke of Bourbon, a tall gaunt 29-year-old French prince, 1722, long thin face, his left eye blind and clouded milky white. Cold, ambitious expression, clean shaven. Brown powdered Regency wig, rich gold-embroidered coat, the wide light-blue moiré sash of the Order of the Holy Spirit, lace cravat. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, eyepatch, plump, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Jefe del Consejo de Regencia; superintendente de la educación del rey; gran maestre de Francia",
+  "quiere": "Suceder a Orleans como primer ministro",
+  "rango": 80,
+  "rasgos": {
+   "amb": 5,
+   "cer": 4,
+   "cmp": 2,
+   "com": 4,
+   "cre": 4,
+   "cst": 2,
+   "cur": 2,
+   "dis": 2,
+   "esp": 1,
+   "gas": 4,
+   "gen": 1,
+   "hos": 2,
+   "hum": 1,
+   "lab": 2,
+   "lea": 2,
+   "obe": 2,
+   "org": 5,
+   "pie": 2,
+   "pru": 2,
+   "ren": 4,
+   "sen": 4,
+   "soc": 2,
+   "tem": 2,
+   "van": 4
+  },
+  "rasgos_doc": [
+   "amb",
+   "gen"
+  ],
+  "relacion_rey": "Lo trata con deferencia; el rey no lo aprecia mucho",
+  "religion": "Católica",
+  "riqueza": 9,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Regateo",
+    "v": 4
+   }
+  ],
+  "titulo": "Duque de Borbón (Monsieur le Duc)",
+  "titulo_nob": "Duque de Borbón; príncipe de Condé; príncipe de la sangre",
+  "ubicacion": "Versalles / Chantilly",
+  "vocacion": "Corte y finanzas",
+  "id": "p12"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": false,
+    "n": "Moda",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Lansquenet",
+    "v": 4
+   },
+   {
+    "doc": false,
+    "n": "Música (clavecín)",
+    "v": 3
+   }
+  ],
+  "anio": 1698,
+  "apodos": [
+   "Madame de Prie"
+  ],
+  "cargo": "Sin cargo; amante de Monsieur le Duc",
+  "casa": "Berthelot de Pléneuf",
+  "conyuge": "Louis, marqués de Prie (embajador en Turín)",
+  "cualidades": {
+   "belleza": 5,
+   "constitucion": 4,
+   "intelecto": 5,
+   "memoria": 4
+  },
+  "cualidades_doc": [
+   "belleza"
+  ],
+  "edad": "23–24",
+  "educacion": "Convento; luego la corte de Turín (1713–1719)",
+  "estatus": "verificado",
+  "estatus_familia": "Finanzas, nobleza reciente",
+  "faccion": "Borbón-Condé",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 1,
+   "diplomacia": 6,
+   "erudicion": 5,
+   "galanteria": 9,
+   "intriga": 9
+  },
+  "hijos": "Ninguno",
+  "hitos": "Su poder crece a partir de 1723",
+  "idiomas": [
+   {
+    "doc": false,
+    "n": "Italiano",
+    "v": 5
+   }
+  ],
+  "innatos": {
+   "aspecto": "Esbelta y elegante",
+   "intelecto": "Muy aguda",
+   "salud": "Buena",
+   "temperamento": "Ambiciosa, encantadora, vengativa"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Llega a Versalles hacia 1719",
+  "lugar_familia": "Hija",
+  "madre": "Agnès Rioult de Douilly",
+  "muerte": "07/10/1727, Courbépine (Normandía)",
+  "nacimiento": "1698, París",
+  "nombre": "Agnès Berthelot de Pléneuf",
+  "nombre_nac": "Agnès Berthelot de Pléneuf",
+  "oculta": "Ambición política y odio a los Orleans",
+  "orden": 13,
+  "padre": "Jean-Étienne Berthelot de Pléneuf, financiero y proveedor del ejército",
+  "prompt": "Agnès Berthelot de Pléneuf, Marquise de Prie, a slender elegant 23-year-old Frenchwoman, 1722, fine delicate features, lively bright eyes. Calculating, charming half-smile. Dark hair dressed close to the head with small flowers and pearls, pale rose silk gown with lace at the neckline. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no modern makeup, tall hairstyle, powdered pouf, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Sin cargo; amante de Monsieur le Duc",
+  "quiere": "Gobernar a través de Borbón",
+  "rango": 34,
+  "rasgos": {
+   "amb": 5,
+   "ani": 4,
+   "cmp": 1,
+   "com": 5,
+   "cre": 1,
+   "cst": 2,
+   "cur": 4,
+   "dis": 4,
+   "esp": 5,
+   "fra": 1,
+   "gas": 5,
+   "gen": 2,
+   "hos": 4,
+   "hum": 4,
+   "lab": 4,
+   "lea": 2,
+   "obe": 1,
+   "pie": 1,
+   "ren": 5,
+   "sen": 4,
+   "soc": 5,
+   "tem": 4,
+   "val": 4,
+   "van": 4
+  },
+  "rasgos_doc": [
+   "amb",
+   "ren",
+   "esp"
+  ],
+  "relacion_rey": "Ninguna directa todavía",
+  "religion": "Católica",
+  "riqueza": 6,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Disimulo",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Chismes",
+    "v": 5
+   }
+  ],
+  "titulo": "Marquesa de Prie",
+  "titulo_nob": "Marquesa de Prie",
+  "ubicacion": "Versalles / Chantilly",
+  "vocacion": "Corte e intriga",
+  "id": "p13"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": true,
+    "n": "Epigramas y canciones satíricas",
+    "v": 7
+   },
+   {
+    "doc": false,
+    "n": "Lansquenet",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Teatro de aficionados",
+    "v": 4
+   }
+  ],
+  "anio": 1673,
+  "apodos": [
+   "Mademoiselle de Nantes",
+   "Madame la Duchesse"
+  ],
+  "cargo": "Sin cargo; madre de Monsieur le Duc",
+  "casa": "Borbón (legitimados)",
+  "conyuge": "Luis III, príncipe de Condé (†1710)",
+  "cualidades": {
+   "belleza": 4,
+   "constitucion": 4,
+   "fertilidad": 5,
+   "intelecto": 4,
+   "memoria": 4
+  },
+  "cualidades_doc": [
+   "belleza",
+   "fertilidad"
+  ],
+  "edad": "49",
+  "educacion": "Criada en casa de Madame de Maintenon; educación de corte",
+  "escritorio_id": "louise-francoise-duchesse",
+  "estatus": "verificado",
+  "estatus_familia": "Legitimada de Francia (1673)",
+  "faccion": "Borbón-Condé",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 2,
+   "diplomacia": 4,
+   "erudicion": 4,
+   "galanteria": 8,
+   "intriga": 7
+  },
+  "hijos": "9 hijos; entre ellos el duque de Borbón, Charolais y Mademoiselle de Clermont",
+  "hitos": "—",
+  "idiomas": [],
+  "innatos": {
+   "aspecto": "Todavía hermosa, ojos grandes",
+   "intelecto": "Viva; compone canciones satíricas",
+   "salud": "Buena",
+   "temperamento": "Ingeniosa, burlona, coqueta"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Nacida en la corte",
+  "lugar_familia": "Hija mayor superviviente de Luis XIV y Montespan",
+  "madre": "Madame de Montespan",
+  "muerte": "16/06/1743, París",
+  "nacimiento": "01/06/1673, Tournai",
+  "nombre": "Luisa Francisca de Borbón",
+  "nombre_nac": "Louise-Françoise de Bourbon",
+  "oculta": "Rivalidad con su hermana la duquesa de Orleans",
+  "orden": 14,
+  "padre": "Luis XIV",
+  "prompt": "Louise-Françoise de Bourbon, Madame la Duchesse, a still-beautiful 49-year-old French princess, 1722, large dark eyes, sharp witty smile. Ironic, disdainful expression. Dark hair dressed close with jewels, crimson brocade gown, ermine-lined mantle, pearl necklace. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no modern makeup, young woman, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Sin cargo; madre de Monsieur le Duc",
+  "quiere": "Poder para sus hijos",
+  "rango": 76,
+  "rasgos": {
+   "amb": 4,
+   "ani": 4,
+   "cmp": 2,
+   "com": 4,
+   "cre": 2,
+   "cst": 2,
+   "dis": 2,
+   "esp": 5,
+   "fra": 2,
+   "gas": 4,
+   "hos": 4,
+   "hum": 5,
+   "lea": 2,
+   "obe": 1,
+   "org": 4,
+   "pie": 2,
+   "ren": 4,
+   "sen": 4,
+   "soc": 5,
+   "van": 4
+  },
+  "rasgos_doc": [
+   "esp",
+   "hum"
+  ],
+  "relacion_rey": "Tía abuela por vía legitimada",
+  "religion": "Católica",
+  "riqueza": 7,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Chismes",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Narrador",
+    "v": 5
+   }
+  ],
+  "titulo": "Duquesa de Borbón viuda (Madame la Duchesse)",
+  "titulo_nob": "Princesa de Condé viuda; legitimada de Francia",
+  "ubicacion": "Versalles / París",
+  "vocacion": "Corte",
+  "id": "p14"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": true,
+    "n": "Libertinaje",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Caza a caballo",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Esgrima",
+    "v": 4
+   },
+   {
+    "doc": false,
+    "n": "Caza con escopeta",
+    "v": 4
+   }
+  ],
+  "anio": 1700,
+  "apodos": [
+   "Monsieur de Charolais"
+  ],
+  "cargo": "Sin cargo",
+  "casa": "Borbón-Condé",
+  "conyuge": "Soltero",
+  "cualidades": {
+   "belleza": 2,
+   "constitucion": 4,
+   "intelecto": 2,
+   "memoria": 3
+  },
+  "cualidades_doc": [],
+  "edad": "21",
+  "educacion": "Tutores; sirvió con el príncipe Eugenio contra los turcos (Belgrado, 1717)",
+  "escritorio_id": "charles-charolais",
+  "estatus": "verificado",
+  "estatus_familia": "Príncipe de la sangre",
+  "faccion": "Borbón-Condé",
+  "habilidades": {
+   "armas": 6,
+   "devocion": 1,
+   "diplomacia": 1,
+   "erudicion": 2,
+   "galanteria": 4,
+   "intriga": 3
+  },
+  "hijos": "—",
+  "hitos": "—",
+  "idiomas": [
+   {
+    "doc": false,
+    "n": "Alemán",
+    "v": 2
+   }
+  ],
+  "innatos": {
+   "aspecto": "Rostro duro, ojos claros",
+   "intelecto": "Medio",
+   "salud": "Buena",
+   "temperamento": "Violento, impulsivo, cruel"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Nacido en la corte",
+  "lugar_familia": "Segundo hijo varón",
+  "madre": "Luisa Francisca de Borbón",
+  "muerte": "23/07/1760, París",
+  "nacimiento": "19/06/1700, Chantilly",
+  "nombre": "Carlos de Borbón",
+  "nombre_nac": "Charles de Bourbon",
+  "oculta": "Fama de violento y cruel",
+  "orden": 15,
+  "padre": "Luis III, príncipe de Condé",
+  "prompt": "Charles de Bourbon, Count of Charolais, a hard-faced 21-year-old French prince, 1722, cold pale eyes, cruel thin mouth. Menacing, contemptuous sneer, clean shaven. Dark powdered Regency wig, black velvet coat, the wide light-blue moiré sash of the Order of the Holy Spirit. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, smiling, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Sin cargo",
+  "quiere": "Libertad sin límites",
+  "rango": 75,
+  "rasgos": {
+   "amb": 2,
+   "cer": 2,
+   "cmp": 1,
+   "com": 5,
+   "cst": 1,
+   "cur": 2,
+   "dis": 1,
+   "esp": 2,
+   "fra": 4,
+   "gas": 4,
+   "gen": 2,
+   "hum": 2,
+   "lab": 1,
+   "lea": 2,
+   "obe": 1,
+   "org": 5,
+   "pie": 1,
+   "pru": 1,
+   "ren": 4,
+   "sen": 5,
+   "tem": 1,
+   "val": 5,
+   "van": 4
+  },
+  "rasgos_doc": [
+   "tem",
+   "cmp"
+  ],
+  "relacion_rey": "Primo lejano",
+  "religion": "Católica",
+  "riqueza": 6,
+  "talentos": [],
+  "titulo": "Conde de Charolais",
+  "titulo_nob": "Conde de Charolais; príncipe de la sangre",
+  "ubicacion": "Versalles / París",
+  "vocacion": "Armas",
+  "id": "p15"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": false,
+    "n": "Baile",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Novela",
+    "v": 4
+   },
+   {
+    "doc": false,
+    "n": "Música (clavecín)",
+    "v": 3
+   }
+  ],
+  "anio": 1697,
+  "apodos": [
+   "Mademoiselle de Clermont"
+  ],
+  "cargo": "Sin cargo",
+  "casa": "Borbón-Condé",
+  "conyuge": "Soltera (se le atribuye una unión secreta con el duque de Melun)",
+  "cualidades": {
+   "belleza": 5,
+   "constitucion": 4,
+   "intelecto": 3,
+   "memoria": 3
+  },
+  "cualidades_doc": [
+   "belleza"
+  ],
+  "edad": "24",
+  "educacion": "Educación de corte y convento",
+  "escritorio_id": "marie-anne-clermont",
+  "estatus": "verificado",
+  "estatus_familia": "Princesa de la sangre",
+  "faccion": "Borbón-Condé",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 4,
+   "diplomacia": 4,
+   "erudicion": 4,
+   "galanteria": 6,
+   "intriga": 3
+  },
+  "hijos": "—",
+  "hitos": "—",
+  "idiomas": [],
+  "innatos": {
+   "aspecto": "Bonita, ojos soñadores",
+   "intelecto": "Medio",
+   "salud": "Buena",
+   "temperamento": "Dulce, romántica"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Nacida en la corte",
+  "lugar_familia": "Hija",
+  "madre": "Luisa Francisca de Borbón",
+  "muerte": "11/08/1741, París",
+  "nacimiento": "16/10/1697, París",
+  "nombre": "María Ana de Borbón",
+  "nombre_nac": "Marie-Anne de Bourbon",
+  "oculta": "Relaciones sentimentales discretas",
+  "orden": 16,
+  "padre": "Luis III, príncipe de Condé",
+  "prompt": "Marie-Anne de Bourbon, Mademoiselle de Clermont, a pretty 24-year-old French princess, 1722, soft features, dreamy dark eyes. Gentle, wistful expression. Dark hair with a small lace cap and ribbons, sky-blue silk gown with lace sleeves. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no modern makeup, powdered pouf, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Sin cargo",
+  "quiere": "Amor y libertad fuera del rango",
+  "rango": 74,
+  "rasgos": {
+   "amb": 1,
+   "cmp": 4,
+   "com": 2,
+   "cst": 4,
+   "gen": 4,
+   "lea": 4,
+   "obe": 2,
+   "ren": 1,
+   "sen": 4,
+   "soc": 4,
+   "tem": 4
+  },
+  "rasgos_doc": [],
+  "relacion_rey": "Prima lejana",
+  "religion": "Católica",
+  "riqueza": 4,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Disimulo",
+    "v": 4
+   }
+  ],
+  "titulo": "Mademoiselle de Clermont",
+  "titulo_nob": "Princesa de la sangre",
+  "ubicacion": "Versalles",
+  "vocacion": "Corte",
+  "id": "p16"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": true,
+    "n": "Especulación en acciones",
+    "v": 6
+   },
+   {
+    "doc": false,
+    "n": "Lansquenet",
+    "v": 4
+   }
+  ],
+  "anio": 1695,
+  "apodos": [
+   "Monsieur le prince de Conti"
+  ],
+  "cargo": "Sin cargo de corte",
+  "casa": "Borbón-Conti",
+  "conyuge": "Luisa Isabel de Borbón-Condé",
+  "cualidades": {
+   "belleza": 1,
+   "constitucion": 2,
+   "fertilidad": 3,
+   "intelecto": 4,
+   "memoria": 4
+  },
+  "cualidades_doc": [
+   "belleza"
+  ],
+  "edad": "26",
+  "educacion": "Tutores de la casa de Conti",
+  "escritorio_id": "louis-armand-conti",
+  "estatus": "verificado",
+  "estatus_familia": "Príncipe de la sangre",
+  "faccion": "Borbón-Condé",
+  "habilidades": {
+   "armas": 4,
+   "devocion": 2,
+   "diplomacia": 3,
+   "erudicion": 4,
+   "galanteria": 3,
+   "intriga": 5
+  },
+  "hijos": "Varios; entre ellos el futuro príncipe de Conti",
+  "hitos": "—",
+  "idiomas": [],
+  "innatos": {
+   "aspecto": "Poco agraciado, enclenque",
+   "intelecto": "Agudo",
+   "salud": "Delicada",
+   "temperamento": "Avaro, celoso, malicioso"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Nacido en la corte",
+  "lugar_familia": "Único hijo varón superviviente",
+  "madre": "María Teresa de Borbón-Condé",
+  "muerte": "04/05/1727, Issy",
+  "nacimiento": "10/11/1695, París",
+  "nombre": "Luis Armando II de Borbón",
+  "nombre_nac": "Louis-Armand de Bourbon",
+  "oculta": "Enriquecimiento con el Sistema de Law",
+  "orden": 17,
+  "padre": "Francisco Luis, príncipe de Conti, el Gran Conti (†1709)",
+  "prompt": "Louis-Armand de Bourbon, Prince of Conti, a slight 26-year-old French prince, 1722, sharp narrow plain face, small shrewd eyes, slightly hunched shoulders. Sly, greedy expression, clean shaven. Powdered Regency wig, gold-embroidered coat, the wide light-blue moiré sash of the Order of the Holy Spirit. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, handsome, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Sin cargo de corte",
+  "quiere": "Prestigio y dinero",
+  "rango": 75,
+  "rasgos": {
+   "amb": 4,
+   "ani": 2,
+   "cel": 5,
+   "cmp": 1,
+   "com": 4,
+   "cre": 2,
+   "esp": 4,
+   "fra": 2,
+   "gas": 2,
+   "gen": 1,
+   "hum": 4,
+   "lab": 2,
+   "lea": 2,
+   "obe": 2,
+   "org": 5,
+   "pie": 2,
+   "ren": 4,
+   "soc": 2,
+   "tem": 2,
+   "val": 2,
+   "van": 4
+  },
+  "rasgos_doc": [
+   "gen",
+   "cel"
+  ],
+  "relacion_rey": "Primo lejano",
+  "religion": "Católica",
+  "riqueza": 8,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Regateo",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Chismes",
+    "v": 4
+   }
+  ],
+  "titulo": "Príncipe de Conti",
+  "titulo_nob": "Príncipe de Conti; príncipe de la sangre",
+  "ubicacion": "Versalles / París",
+  "vocacion": "Corte y armas",
+  "id": "p17"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": true,
+    "n": "Traducción e idiomas",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Bibliofilia",
+    "v": 4
+   },
+   {
+    "doc": false,
+    "n": "Teología y controversia",
+    "v": 4
+   },
+   {
+    "doc": false,
+    "n": "Teatro de aficionados",
+    "v": 3
+   }
+  ],
+  "anio": 1670,
+  "apodos": [
+   "Monsieur du Maine"
+  ],
+  "cargo": "Gran maestre de la artillería",
+  "casa": "Borbón (legitimados)",
+  "conyuge": "Ana Luisa Benedicta de Borbón-Condé",
+  "cualidades": {
+   "belleza": 3,
+   "constitucion": 3,
+   "fertilidad": 3,
+   "intelecto": 4,
+   "memoria": 4,
+   "taras": "Cojera de nacimiento"
+  },
+  "cualidades_doc": [
+   "taras"
+  ],
+  "edad": "52",
+  "educacion": "Criado por Madame de Maintenon, su favorito; muy culto",
+  "escritorio_id": "duc-du-maine",
+  "estatus": "verificado",
+  "estatus_familia": "Legitimado; degradado de rango en 1718",
+  "faccion": "Legitimados",
+  "habilidades": {
+   "armas": 3,
+   "devocion": 6,
+   "diplomacia": 4,
+   "erudicion": 7,
+   "galanteria": 3,
+   "intriga": 5
+  },
+  "hijos": "Príncipe de Dombes, conde de Eu, Mademoiselle du Maine",
+  "hitos": "—",
+  "idiomas": [
+   {
+    "doc": true,
+    "n": "Latín",
+    "v": 5
+   }
+  ],
+  "innatos": {
+   "aspecto": "Refinado, pálido",
+   "intelecto": "Culto",
+   "salud": "Cojo de nacimiento",
+   "temperamento": "Tímido, devoto, rencoroso en silencio"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Nacido en la corte",
+  "lugar_familia": "Hijo mayor superviviente de Luis XIV y Montespan",
+  "madre": "Madame de Montespan",
+  "muerte": "14/05/1736, Sceaux",
+  "nacimiento": "31/03/1670, Saint-Germain-en-Laye",
+  "nombre": "Luis Augusto de Borbón",
+  "nombre_nac": "Louis-Auguste de Bourbon",
+  "oculta": "Resentimiento tras la conspiración de Cellamare",
+  "orden": 18,
+  "padre": "Luis XIV",
+  "prompt": "Louis-Auguste de Bourbon, Duke of Maine, a refined 52-year-old French prince, 1722, gentle pale face, melancholic eyes. Resigned, wary expression, clean shaven. Full powdered wig, dark velvet coat, the wide light-blue moiré sash of the Order of the Holy Spirit, lace cravat. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Gran maestre de la artillería",
+  "quiere": "Recuperar el rango perdido",
+  "rango": 66,
+  "rasgos": {
+   "ani": 2,
+   "cer": 4,
+   "com": 2,
+   "cst": 4,
+   "cur": 4,
+   "dis": 5,
+   "esp": 4,
+   "fra": 1,
+   "gen": 2,
+   "lea": 4,
+   "obe": 4,
+   "org": 5,
+   "pie": 5,
+   "pru": 5,
+   "ren": 5,
+   "sen": 1,
+   "soc": 2,
+   "tem": 4,
+   "val": 1
+  },
+  "rasgos_doc": [
+   "org",
+   "val",
+   "pie"
+  ],
+  "relacion_rey": "Tío legitimado; antes fue su superintendente de educación",
+  "religion": "Católica",
+  "riqueza": 7,
+  "talentos": [],
+  "titulo": "Duque del Maine",
+  "titulo_nob": "Duque del Maine; legitimado de Francia",
+  "ubicacion": "Sceaux",
+  "vocacion": "Armas (gran maestre de la artillería) y letras",
+  "id": "p18"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": true,
+    "n": "Teatro de aficionados",
+    "v": 8
+   },
+   {
+    "doc": true,
+    "n": "Poesía",
+    "v": 5
+   },
+   {
+    "doc": true,
+    "n": "Astronomía",
+    "v": 4
+   }
+  ],
+  "anio": 1676,
+  "apodos": [
+   "Madame du Maine",
+   "la poupée du sang"
+  ],
+  "cargo": "Señora de la corte de Sceaux",
+  "casa": "Borbón-Condé",
+  "conyuge": "Luis Augusto, duque del Maine",
+  "cualidades": {
+   "belleza": 2,
+   "constitucion": 4,
+   "estatura": "muy baja",
+   "fertilidad": 3,
+   "intelecto": 5,
+   "memoria": 4
+  },
+  "cualidades_doc": [
+   "estatura"
+  ],
+  "edad": "45",
+  "educacion": "Tutores; mecenas de letras y teatro (las Grandes Noches de Sceaux)",
+  "escritorio_id": "duchesse-du-maine",
+  "estatus": "verificado",
+  "estatus_familia": "Princesa de la sangre",
+  "faccion": "Legitimados",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 2,
+   "diplomacia": 5,
+   "erudicion": 7,
+   "galanteria": 6,
+   "intriga": 8
+  },
+  "hijos": "Príncipe de Dombes, conde de Eu, Mademoiselle du Maine",
+  "hitos": "—",
+  "idiomas": [],
+  "innatos": {
+   "aspecto": "Diminuta, ojos brillantes",
+   "intelecto": "Muy culta",
+   "salud": "Buena",
+   "temperamento": "Imperiosa, teatral, incansable"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Nacida en la corte; encarcelada 1718–1720 por la conspiración de Cellamare",
+  "lugar_familia": "Hija",
+  "madre": "Ana Enriqueta del Palatinado",
+  "muerte": "23/01/1753, París",
+  "nacimiento": "08/11/1676, París",
+  "nombre": "Ana Luisa Benedicta de Borbón",
+  "nombre_nac": "Anne-Louise-Bénédicte de Bourbon",
+  "oculta": "Contactos pasados con España (Cellamare)",
+  "orden": 19,
+  "padre": "Enrique Julio, príncipe de Condé",
+  "prompt": "Anne-Louise-Bénédicte de Bourbon, Duchess of Maine, a tiny doll-like 45-year-old French princess, 1722, sharp bright eyes, proud chin. Defiant, imperious expression. Dark hair dressed close with jewels, extravagant gold brocade gown, pearls. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no modern makeup, tall woman, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Señora de la corte de Sceaux",
+  "quiere": "Restaurar a su marido y conspirar si hace falta",
+  "rango": 74,
+  "rasgos": {
+   "amb": 5,
+   "ani": 5,
+   "cer": 4,
+   "cmp": 2,
+   "com": 5,
+   "cst": 4,
+   "cur": 5,
+   "dis": 2,
+   "esp": 5,
+   "fra": 2,
+   "gas": 5,
+   "gen": 4,
+   "hos": 5,
+   "hum": 4,
+   "lab": 5,
+   "lea": 4,
+   "obe": 1,
+   "org": 5,
+   "pie": 2,
+   "pru": 1,
+   "ren": 4,
+   "soc": 5,
+   "tem": 2,
+   "val": 4,
+   "van": 5
+  },
+  "rasgos_doc": [
+   "hos",
+   "amb",
+   "org",
+   "gas",
+   "pru",
+   "esp",
+   "lab"
+  ],
+  "relacion_rey": "Lejana; desconfianza mutua con el regente",
+  "religion": "Católica",
+  "riqueza": 6,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Narrador",
+    "v": 5
+   }
+  ],
+  "titulo": "Duquesa del Maine",
+  "titulo_nob": "Duquesa del Maine; princesa de la sangre",
+  "ubicacion": "Sceaux",
+  "vocacion": "Corte e intriga",
+  "id": "p19"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": true,
+    "n": "Caza a caballo",
+    "v": 7
+   },
+   {
+    "doc": true,
+    "n": "Cría de perros",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Devoción práctica",
+    "v": 4
+   }
+  ],
+  "anio": 1678,
+  "apodos": [
+   "Monsieur le comte de Toulouse"
+  ],
+  "cargo": "Almirante de Francia; gobernador de Bretaña",
+  "casa": "Borbón (legitimados)",
+  "conyuge": "Soltero (casará en secreto con Marie-Victoire de Noailles en 1723)",
+  "cualidades": {
+   "belleza": 4,
+   "constitucion": 4,
+   "intelecto": 3,
+   "memoria": 3
+  },
+  "cualidades_doc": [],
+  "edad": "44",
+  "educacion": "Formación naval; almirante de Francia desde los 5 años; vencedor en Vélez-Málaga (1704)",
+  "escritorio_id": "comte-de-toulouse",
+  "estatus": "verificado",
+  "estatus_familia": "Legitimado",
+  "faccion": "Legitimados",
+  "habilidades": {
+   "armas": 7,
+   "devocion": 6,
+   "diplomacia": 6,
+   "erudicion": 5,
+   "galanteria": 4,
+   "intriga": 2
+  },
+  "hijos": "—",
+  "hitos": "Matrimonio secreto en 1723",
+  "idiomas": [],
+  "innatos": {
+   "aspecto": "Apuesto, rostro regular",
+   "intelecto": "Sensato",
+   "salud": "Buena",
+   "temperamento": "Sereno, honrado, discreto"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Nacido en la corte",
+  "lugar_familia": "Hijo menor de Luis XIV y Montespan",
+  "madre": "Madame de Montespan",
+  "muerte": "01/12/1737, Rambouillet",
+  "nacimiento": "06/06/1678, Versalles",
+  "nombre": "Luis Alejandro de Borbón",
+  "nombre_nac": "Louis-Alexandre de Bourbon",
+  "oculta": "Relación con Marie-Victoire de Noailles (se casarán en secreto en 1723)",
+  "orden": 20,
+  "padre": "Luis XIV",
+  "prompt": "Louis-Alexandre de Bourbon, Count of Toulouse, Admiral of France, a handsome dignified 44-year-old man, 1722, calm regular face. Serene, honest expression, clean shaven. Full brown wig, blue velvet coat over a steel cuirass, the wide light-blue moiré sash of the Order of the Holy Spirit. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Almirante de Francia; gobernador de Bretaña",
+  "quiere": "Paz y respeto; se mantuvo leal al regente",
+  "rango": 70,
+  "rasgos": {
+   "amb": 1,
+   "ani": 4,
+   "cmp": 4,
+   "com": 2,
+   "cst": 5,
+   "dis": 5,
+   "fra": 5,
+   "gen": 4,
+   "hos": 4,
+   "lab": 4,
+   "lea": 5,
+   "pie": 4,
+   "pru": 4,
+   "ren": 1,
+   "sen": 2,
+   "tem": 5,
+   "val": 5,
+   "van": 1
+  },
+  "rasgos_doc": [
+   "tem",
+   "val",
+   "lea"
+  ],
+  "relacion_rey": "Tío legitimado; el rey lo aprecia",
+  "religion": "Católica",
+  "riqueza": 8,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Disimulo",
+    "v": 3
+   }
+  ],
+  "titulo": "Conde de Toulouse",
+  "titulo_nob": "Conde de Toulouse; duque de Penthièvre; legitimado de Francia",
+  "ubicacion": "Versalles / Rambouillet",
+  "vocacion": "Armas (marina)",
+  "id": "p20"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": true,
+    "n": "Jardinería y naranjos",
+    "v": 6
+   },
+   {
+    "doc": true,
+    "n": "Arquitectura y obras",
+    "v": 5
+   },
+   {
+    "doc": true,
+    "n": "Lansquenet",
+    "v": 5
+   }
+  ],
+  "anio": 1665,
+  "apodos": [
+   "Monsieur d'Antin"
+  ],
+  "cargo": "Director general de los Edificios del Rey",
+  "casa": "Pardaillan de Gondrin",
+  "conyuge": "Julie Françoise de Crussol d'Uzès",
+  "cualidades": {
+   "belleza": 3,
+   "constitucion": 4,
+   "intelecto": 4,
+   "memoria": 4
+  },
+  "cualidades_doc": [],
+  "edad": "56",
+  "educacion": "Formación de corte y armas",
+  "estatus": "verificado",
+  "estatus_familia": "Nobleza de espada, ducal desde 1711",
+  "faccion": "Neutral",
+  "habilidades": {
+   "armas": 4,
+   "devocion": 3,
+   "diplomacia": 7,
+   "erudicion": 5,
+   "galanteria": 6,
+   "intriga": 6
+  },
+  "hijos": "Varios",
+  "hitos": "Deja el Consejo de Regencia el 22/02/1722 (protesta contra Dubois); prepara el regreso de la corte a Versalles",
+  "idiomas": [],
+  "innatos": {
+   "aspecto": "Elegante, rostro afable",
+   "intelecto": "Muy hábil",
+   "salud": "Buena",
+   "temperamento": "Servicial, adulador, hábil"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Cortesano desde su juventud",
+  "lugar_familia": "Único hijo legítimo",
+  "madre": "Madame de Montespan",
+  "muerte": "02/11/1736, París",
+  "nacimiento": "05/09/1665, París",
+  "nombre": "Louis-Antoine de Pardaillan",
+  "nombre_nac": "Louis-Antoine de Pardaillan de Gondrin",
+  "oculta": "Ser hijo legítimo de Madame de Montespan le dio todo y nada",
+  "orden": 21,
+  "padre": "Louis Henri de Pardaillan, marqués de Montespan",
+  "prompt": "Louis-Antoine de Pardaillan, Duke of Antin, a polished 56-year-old French courtier, 1722, smooth genial face, attentive eyes. Obliging courtier's smile, clean shaven. Full powdered wig, brocade coat, lace cravat. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Director general de los Edificios del Rey",
+  "quiere": "Favor y permanencia",
+  "rango": 52,
+  "rasgos": {
+   "amb": 4,
+   "ani": 4,
+   "cer": 4,
+   "cst": 2,
+   "dis": 4,
+   "esp": 4,
+   "fra": 1,
+   "gas": 4,
+   "gen": 4,
+   "hos": 5,
+   "hum": 4,
+   "lab": 4,
+   "obe": 5,
+   "org": 2,
+   "pie": 2,
+   "pru": 4,
+   "ren": 1,
+   "soc": 5,
+   "tem": 5
+  },
+  "rasgos_doc": [
+   "hos",
+   "fra",
+   "obe"
+  ],
+  "relacion_rey": "Cortesano útil; conoce cada rincón del palacio",
+  "religion": "Católica",
+  "riqueza": 6,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Disimulo",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Fisonomista",
+    "v": 4
+   }
+  ],
+  "titulo": "Duque de Antin",
+  "titulo_nob": "Duque de Antin; par de Francia",
+  "ubicacion": "Versalles",
+  "vocacion": "Corte",
+  "id": "p21"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": true,
+    "n": "Memorias secretas",
+    "v": 9
+   },
+   {
+    "doc": true,
+    "n": "Historia y genealogía",
+    "v": 7
+   },
+   {
+    "doc": false,
+    "n": "Correspondencia",
+    "v": 4
+   }
+  ],
+  "anio": 1675,
+  "apodos": [
+   "Monsieur de Saint-Simon",
+   "le petit duc"
+  ],
+  "cargo": "Miembro del Consejo de Regencia",
+  "casa": "Rouvroy de Saint-Simon",
+  "conyuge": "Marie Gabrielle de Durfort de Lorges",
+  "cualidades": {
+   "belleza": 2,
+   "constitucion": 4,
+   "estatura": "baja",
+   "intelecto": 5,
+   "memoria": 5
+  },
+  "cualidades_doc": [
+   "estatura"
+  ],
+  "edad": "47",
+  "educacion": "Tutores en casa; mosquetero en 1691; embajador extraordinario en Madrid 1721–1722",
+  "estatus": "verificado",
+  "estatus_familia": "Nobleza ducal reciente",
+  "faccion": "Orleans",
+  "habilidades": {
+   "armas": 3,
+   "devocion": 7,
+   "diplomacia": 4,
+   "erudicion": 8,
+   "galanteria": 2,
+   "intriga": 6
+  },
+  "hijos": "Dos hijos varones",
+  "hitos": "Pierde influencia con el ascenso de Dubois",
+  "idiomas": [
+   {
+    "doc": false,
+    "n": "Español",
+    "v": 3
+   }
+  ],
+  "innatos": {
+   "aspecto": "Pequeño, ojos penetrantes",
+   "intelecto": "Excepcional",
+   "salud": "Buena",
+   "temperamento": "Orgulloso, observador, rencoroso"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "En la corte desde 1691",
+  "lugar_familia": "Hijo único",
+  "madre": "Charlotte de L'Aubespine",
+  "muerte": "02/03/1755, París",
+  "nacimiento": "16/01/1675, París",
+  "nombre": "Louis de Rouvroy",
+  "nombre_nac": "Louis de Rouvroy",
+  "oculta": "Toma notas de todo y de todos",
+  "orden": 22,
+  "padre": "Claude de Rouvroy, primer duque de Saint-Simon (favorito de Luis XIII)",
+  "prompt": "Louis de Rouvroy, Duke of Saint-Simon, a small slight 47-year-old French duke, 1722, sharp observant face, piercing eyes. Critical, watchful expression, clean shaven. Dark powdered wig, black velvet ducal coat, lace cravat. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, tall man, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Miembro del Consejo de Regencia",
+  "quiere": "Defender el rango de los duques",
+  "rango": 52,
+  "rasgos": {
+   "ani": 2,
+   "cel": 1,
+   "cer": 5,
+   "cmp": 2,
+   "com": 4,
+   "cre": 2,
+   "cst": 5,
+   "cur": 5,
+   "dis": 5,
+   "esp": 4,
+   "lab": 5,
+   "lea": 5,
+   "obe": 2,
+   "org": 5,
+   "pie": 4,
+   "ren": 5,
+   "sen": 1,
+   "soc": 2,
+   "tem": 2,
+   "van": 4
+  },
+  "rasgos_doc": [
+   "dis",
+   "org",
+   "cer",
+   "ren",
+   "lea",
+   "lab"
+  ],
+  "relacion_rey": "Lejana",
+  "religion": "Católica (jansenizante)",
+  "riqueza": 5,
+  "talentos": [
+   {
+    "doc": true,
+    "n": "Cronista o documentalista",
+    "v": 7
+   },
+   {
+    "doc": true,
+    "n": "Fisonomista",
+    "v": 5
+   }
+  ],
+  "titulo": "Duque de Saint-Simon",
+  "titulo_nob": "Duque de Saint-Simon; par de Francia; grande de España",
+  "ubicacion": "Versalles / París",
+  "vocacion": "Corte y letras",
+  "id": "p22"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": false,
+    "n": "Equitación de escuela",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Caza a caballo",
+    "v": 4
+   },
+   {
+    "doc": false,
+    "n": "Lansquenet",
+    "v": 3
+   }
+  ],
+  "anio": 1653,
+  "apodos": [
+   "le maréchal de Villars",
+   "le vainqueur de Denain"
+  ],
+  "cargo": "Gobernador de Provenza; fuera del Consejo de Regencia desde febrero de 1722",
+  "casa": "Villars",
+  "conyuge": "Jeanne Angélique Roque de Varengeville",
+  "cualidades": {
+   "belleza": 3,
+   "constitucion": 5,
+   "intelecto": 3,
+   "memoria": 4
+  },
+  "cualidades_doc": [],
+  "edad": "69",
+  "educacion": "Pajes de la Gran Caballeriza; carrera militar desde joven",
+  "estatus": "verificado",
+  "estatus_familia": "Nobleza de espada media; ascenso propio",
+  "faccion": "Viejo régimen",
+  "habilidades": {
+   "armas": 10,
+   "devocion": 4,
+   "diplomacia": 6,
+   "erudicion": 4,
+   "galanteria": 6,
+   "intriga": 4
+  },
+  "hijos": "Un hijo",
+  "hitos": "Abandona el Consejo de Regencia el 22/02/1722 en protesta por la precedencia del cardenal Dubois",
+  "idiomas": [
+   {
+    "doc": true,
+    "n": "Alemán",
+    "v": 4
+   }
+  ],
+  "innatos": {
+   "aspecto": "Recio, mandíbula fuerte",
+   "intelecto": "Práctico",
+   "salud": "Robusta",
+   "temperamento": "Vanidoso, audaz, jactancioso"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "En la corte desde joven",
+  "lugar_familia": "Hijo mayor",
+  "madre": "Marie Gigault de Bellefonds",
+  "muerte": "17/06/1734, Turín",
+  "nacimiento": "08/05/1653, Moulins",
+  "nombre": "Claude Louis Hector de Villars",
+  "nombre_nac": "Claude-Louis-Hector de Villars",
+  "oculta": "Vanidad enorme",
+  "orden": 23,
+  "padre": "Pierre de Villars, diplomático",
+  "prompt": "Claude-Louis-Hector de Villars, Marshal of France, a robust weathered 69-year-old soldier, 1722, bold proud face, strong jaw. Vainglorious, confident expression, clean shaven. Full white wig, steel cuirass, the wide light-blue moiré sash of the Order of the Holy Spirit, the tip of a marshal's baton visible. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Gobernador de Provenza; fuera del Consejo de Regencia desde febrero de 1722",
+  "quiere": "Reconocimiento a su gloria militar",
+  "rango": 55,
+  "rasgos": {
+   "amb": 4,
+   "ani": 5,
+   "cel": 5,
+   "com": 5,
+   "cre": 4,
+   "cur": 2,
+   "dis": 1,
+   "esp": 4,
+   "fra": 4,
+   "hos": 4,
+   "hum": 4,
+   "lab": 4,
+   "lea": 4,
+   "obe": 2,
+   "org": 4,
+   "pie": 2,
+   "pru": 2,
+   "ren": 2,
+   "sen": 4,
+   "soc": 5,
+   "val": 5,
+   "van": 5
+  },
+  "rasgos_doc": [
+   "van",
+   "val",
+   "cel"
+  ],
+  "relacion_rey": "Héroe de Denain; el rey lo respeta",
+  "religion": "Católica",
+  "riqueza": 7,
+  "talentos": [
+   {
+    "doc": true,
+    "n": "Narrador",
+    "v": 5
+   }
+  ],
+  "titulo": "Duque y mariscal de Francia",
+  "titulo_nob": "Duque de Villars; par y mariscal de Francia",
+  "ubicacion": "Versalles / Vaux",
+  "vocacion": "Armas",
+  "id": "p23"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": false,
+    "n": "Correspondencia",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Bibliofilia",
+    "v": 4
+   }
+  ],
+  "anio": 1678,
+  "apodos": [
+   "Monsieur de Noailles"
+  ],
+  "cargo": "Sin cargo de gobierno desde febrero de 1722",
+  "casa": "Noailles",
+  "conyuge": "Françoise Charlotte d'Aubigné, sobrina de Madame de Maintenon",
+  "cualidades": {
+   "belleza": 3,
+   "constitucion": 4,
+   "intelecto": 4,
+   "memoria": 4
+  },
+  "cualidades_doc": [],
+  "edad": "43",
+  "educacion": "Formación militar; sirvió en Cataluña",
+  "estatus": "verificado",
+  "estatus_familia": "Nobleza de espada, ducal",
+  "faccion": "Viejo régimen",
+  "habilidades": {
+   "armas": 6,
+   "devocion": 5,
+   "diplomacia": 6,
+   "erudicion": 5,
+   "galanteria": 4,
+   "intriga": 6
+  },
+  "hijos": "Varios",
+  "hitos": "Abandona el Consejo de Regencia el 22/02/1722 junto con Villars y Antin, en protesta por la precedencia del cardenal Dubois",
+  "idiomas": [
+   {
+    "doc": false,
+    "n": "Español",
+    "v": 4
+   }
+  ],
+  "innatos": {
+   "aspecto": "Rostro inteligente y alerta",
+   "intelecto": "Agudo",
+   "salud": "Buena",
+   "temperamento": "Enérgico, ambicioso, inquieto"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "En la corte desde joven",
+  "lugar_familia": "Hijo mayor",
+  "madre": "Marie Françoise de Bournonville",
+  "muerte": "24/06/1766, París",
+  "nacimiento": "29/09/1678, París",
+  "nombre": "Adrien Maurice de Noailles",
+  "nombre_nac": "Adrien-Maurice de Noailles",
+  "oculta": "Enemistad con Dubois",
+  "orden": 24,
+  "padre": "Anne Jules, mariscal duque de Noailles",
+  "prompt": "Adrien-Maurice de Noailles, Duke of Noailles, an energetic 43-year-old French duke, 1722, intelligent alert face. Ambitious, restless expression, clean shaven. Brown powdered Regency wig, dark coat, the wide light-blue moiré sash of the Order of the Holy Spirit. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Sin cargo de gobierno desde febrero de 1722",
+  "quiere": "Volver al poder",
+  "rango": 52,
+  "rasgos": {
+   "amb": 5,
+   "com": 4,
+   "cre": 2,
+   "cst": 2,
+   "cur": 4,
+   "esp": 4,
+   "fra": 2,
+   "lab": 5,
+   "lea": 2,
+   "obe": 2,
+   "org": 4,
+   "pru": 2,
+   "ren": 4,
+   "sen": 2,
+   "soc": 4,
+   "tem": 2,
+   "val": 4
+  },
+  "rasgos_doc": [
+   "amb",
+   "ren"
+  ],
+  "relacion_rey": "Lejana",
+  "religion": "Católica",
+  "riqueza": 7,
+  "talentos": [
+   {
+    "doc": true,
+    "n": "Cronista o documentalista",
+    "v": 5
+   }
+  ],
+  "titulo": "Duque de Noailles",
+  "titulo_nob": "Duque de Noailles; par de Francia",
+  "ubicacion": "París / sus tierras",
+  "vocacion": "Armas y finanzas",
+  "id": "p24"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": false,
+    "n": "Jardinería y naranjos",
+    "v": 4
+   },
+   {
+    "doc": false,
+    "n": "Trictrac",
+    "v": 3
+   },
+   {
+    "doc": false,
+    "n": "Bibliofilia",
+    "v": 3
+   }
+  ],
+  "anio": 1661,
+  "apodos": [
+   "Monsieur le Garde des sceaux"
+  ],
+  "cargo": "Guardasellos de Francia",
+  "casa": "Fleuriau",
+  "conyuge": "—",
+  "cualidades": {
+   "belleza": 2,
+   "constitucion": 3,
+   "intelecto": 3,
+   "memoria": 3
+  },
+  "cualidades_doc": [],
+  "edad": "60–61",
+  "educacion": "Derecho; carrera en las finanzas y la administración",
+  "estatus": "verificado",
+  "estatus_familia": "Nobleza de toga",
+  "faccion": "Orleans",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 5,
+   "diplomacia": 5,
+   "erudicion": 6,
+   "galanteria": 2,
+   "intriga": 4
+  },
+  "hijos": "Charles Jean-Baptiste, conde de Morville (secretario de Marina en 1722)",
+  "hitos": "—",
+  "idiomas": [
+   {
+    "doc": false,
+    "n": "Latín",
+    "v": 5
+   }
+  ],
+  "innatos": {
+   "aspecto": "Rostro pesado y serio",
+   "intelecto": "Sólido",
+   "salud": "Regular",
+   "temperamento": "Grave, prudente"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Ministro desde 1722",
+  "lugar_familia": "Hijo",
+  "madre": "—",
+  "muerte": "27/11/1728, castillo de Madrid (Bois de Boulogne)",
+  "nacimiento": "1661, París",
+  "nombre": "Joseph Fleuriau d'Armenonville",
+  "nombre_nac": "Joseph-Jean-Baptiste Fleuriau d'Armenonville",
+  "oculta": "Que ocupa el puesto del canciller exiliado d'Aguesseau",
+  "orden": 25,
+  "padre": "—",
+  "prompt": "Joseph Fleuriau d'Armenonville, Keeper of the Seals of France, a sober 60-year-old magistrate, 1722, heavy serious face. Grave, neutral expression, clean shaven. Long full wig, black velvet magistrate's robe, white bands. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Guardasellos de Francia",
+  "quiere": "Sostener la justicia del regente",
+  "rango": 30,
+  "rasgos": {
+   "cer": 4,
+   "com": 2,
+   "cst": 4,
+   "dis": 4,
+   "esp": 2,
+   "lab": 4,
+   "obe": 4,
+   "pru": 4,
+   "soc": 2,
+   "tem": 4
+  },
+  "rasgos_doc": [],
+  "relacion_rey": "Ninguna",
+  "religion": "Católica",
+  "riqueza": 5,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Regateo",
+    "v": 3
+   }
+  ],
+  "titulo": "—",
+  "titulo_nob": "Señor de Armenonville",
+  "ubicacion": "Versalles / París",
+  "vocacion": "Toga",
+  "id": "p25"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": false,
+    "n": "Arquitectura y obras",
+    "v": 4
+   },
+   {
+    "doc": false,
+    "n": "Trictrac",
+    "v": 3
+   }
+  ],
+  "anio": 1679,
+  "apodos": [
+   "Monsieur le Contrôleur général"
+  ],
+  "cargo": "Interventor general de Finanzas",
+  "casa": "Dodun",
+  "conyuge": "—",
+  "cualidades": {
+   "belleza": 2,
+   "constitucion": 4,
+   "intelecto": 3,
+   "memoria": 3
+  },
+  "cualidades_doc": [],
+  "edad": "42–43",
+  "educacion": "Derecho; presidente de sala en el Parlamento de París",
+  "estatus": "verificado",
+  "estatus_familia": "Nobleza de toga",
+  "faccion": "Orleans",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 4,
+   "diplomacia": 4,
+   "erudicion": 6,
+   "galanteria": 2,
+   "intriga": 4
+  },
+  "hijos": "—",
+  "hitos": "—",
+  "idiomas": [
+   {
+    "doc": false,
+    "n": "Latín",
+    "v": 5
+   }
+  ],
+  "innatos": {
+   "aspecto": "Rostro cuadrado",
+   "intelecto": "Sólido",
+   "salud": "Buena",
+   "temperamento": "Ansioso, calculador"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Ministro desde 1722",
+  "lugar_familia": "Hijo",
+  "madre": "—",
+  "muerte": "1736",
+  "nacimiento": "1679, París",
+  "nombre": "Charles Gaspard Dodun",
+  "nombre_nac": "Charles-Gaspard Dodun",
+  "oculta": "Lo frágil que está el tesoro",
+  "orden": 26,
+  "padre": "—",
+  "prompt": "Charles-Gaspard Dodun, Controller General of Finances, a stocky 42-year-old Frenchman, 1722, square careful face. Anxious, calculating expression, clean shaven. Powdered Regency wig, black velvet coat, lace cravat. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Interventor general de Finanzas",
+  "quiere": "Sanear las finanzas tras la quiebra de Law",
+  "rango": 30,
+  "rasgos": {
+   "amb": 4,
+   "ani": 2,
+   "dis": 4,
+   "gas": 2,
+   "lab": 5,
+   "obe": 4,
+   "pru": 5,
+   "soc": 2,
+   "tem": 2
+  },
+  "rasgos_doc": [],
+  "relacion_rey": "Ninguna",
+  "religion": "Católica",
+  "riqueza": 5,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Regateo",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Cronista o documentalista",
+    "v": 4
+   }
+  ],
+  "titulo": "Marqués de Herbault",
+  "titulo_nob": "Marqués de Herbault",
+  "ubicacion": "París / Versalles",
+  "vocacion": "Toga (finanzas)",
+  "id": "p26"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": false,
+    "n": "Cocina y petits soupers",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Lansquenet",
+    "v": 4
+   },
+   {
+    "doc": false,
+    "n": "Vinos",
+    "v": 4
+   }
+  ],
+  "anio": 1669,
+  "apodos": [
+   "Monsieur Le Blanc"
+  ],
+  "cargo": "Secretario de Estado de la Guerra",
+  "casa": "Le Blanc",
+  "conyuge": "—",
+  "cualidades": {
+   "belleza": 2,
+   "constitucion": 4,
+   "intelecto": 4,
+   "memoria": 4
+  },
+  "cualidades_doc": [],
+  "edad": "52–53",
+  "educacion": "Derecho; intendente en Flandes",
+  "estatus": "verificado",
+  "estatus_familia": "Nobleza de toga",
+  "faccion": "Orleans",
+  "habilidades": {
+   "armas": 3,
+   "devocion": 3,
+   "diplomacia": 5,
+   "erudicion": 5,
+   "galanteria": 4,
+   "intriga": 6
+  },
+  "hijos": "—",
+  "hitos": "Destituido en 1723",
+  "idiomas": [],
+  "innatos": {
+   "aspecto": "Robusto, rubicundo",
+   "intelecto": "Hábil",
+   "salud": "Buena",
+   "temperamento": "Jovial, audaz"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Ministro desde 1718",
+  "lugar_familia": "Hijo",
+  "madre": "—",
+  "muerte": "1728, Versalles",
+  "nacimiento": "1669, París",
+  "nombre": "Claude Le Blanc",
+  "nombre_nac": "Claude Le Blanc",
+  "oculta": "Irregularidades financieras en su departamento (caso La Jonchère)",
+  "orden": 27,
+  "padre": "Louis Le Blanc, intendente",
+  "prompt": "Claude Le Blanc, Secretary of State for War, a burly 52-year-old Frenchman, 1722, ruddy bold face. Confident, hearty expression, clean shaven. Full powdered wig, dark blue coat, lace cravat. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Secretario de Estado de la Guerra",
+  "quiere": "Mantener el ministerio",
+  "rango": 27,
+  "rasgos": {
+   "amb": 4,
+   "ani": 5,
+   "com": 4,
+   "esp": 4,
+   "fra": 4,
+   "gas": 4,
+   "hos": 4,
+   "hum": 5,
+   "lab": 5,
+   "lea": 4,
+   "pie": 2,
+   "pru": 2,
+   "soc": 5,
+   "val": 4
+  },
+  "rasgos_doc": [],
+  "relacion_rey": "Ninguna",
+  "religion": "Católica",
+  "riqueza": 5,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Narrador",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Chismes",
+    "v": 5
+   }
+  ],
+  "titulo": "—",
+  "titulo_nob": "Sin título (nobleza de toga)",
+  "ubicacion": "Versalles",
+  "vocacion": "Toga (guerra)",
+  "id": "p27"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": true,
+    "n": "Epigramas y canciones satíricas",
+    "v": 6
+   },
+   {
+    "doc": false,
+    "n": "Astronomía",
+    "v": 3
+   }
+  ],
+  "anio": 1701,
+  "apodos": [
+   "Monsieur de Maurepas"
+  ],
+  "cargo": "Secretario de Estado de la Casa del Rey",
+  "casa": "Phélypeaux",
+  "conyuge": "Marie Jeanne Phélypeaux de La Vrillière (1718)",
+  "cualidades": {
+   "belleza": 3,
+   "constitucion": 4,
+   "intelecto": 5,
+   "memoria": 5
+  },
+  "cualidades_doc": [],
+  "edad": "20",
+  "educacion": "Formado en la secretaría bajo la tutela de La Vrillière, su suegro",
+  "estatus": "verificado",
+  "estatus_familia": "Dinastía ministerial (toga)",
+  "faccion": "Neutral",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 3,
+   "diplomacia": 6,
+   "erudicion": 6,
+   "galanteria": 5,
+   "intriga": 7
+  },
+  "hijos": "—",
+  "hitos": "—",
+  "idiomas": [],
+  "innatos": {
+   "aspecto": "Juvenil, ojos vivos",
+   "intelecto": "Muy agudo",
+   "salud": "Buena",
+   "temperamento": "Ingenioso, burlón, ligero"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Nacido en la corte; secretario de Estado desde los 14 años",
+  "lugar_familia": "Hijo",
+  "madre": "Éléonore de La Rochefoucauld-Roye",
+  "muerte": "21/11/1781, Versalles",
+  "nacimiento": "09/07/1701, Versalles",
+  "nombre": "Jean-Frédéric Phélypeaux",
+  "nombre_nac": "Jean-Frédéric Phélypeaux",
+  "oculta": "Ingenio satírico peligroso",
+  "orden": 28,
+  "padre": "Jérôme Phélypeaux, conde de Pontchartrain",
+  "prompt": "Jean-Frédéric Phélypeaux, Count of Maurepas, a youthful 20-year-old French Secretary of State, 1722, witty mischievous face, bright eyes. Amused, ironic smile, clean shaven. Light powdered wig, pale silk coat, lace cravat. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, child, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Secretario de Estado de la Casa del Rey",
+  "quiere": "Demostrar que es más que un heredero del cargo",
+  "rango": 31,
+  "rasgos": {
+   "ani": 5,
+   "cre": 2,
+   "cst": 2,
+   "cur": 5,
+   "dis": 2,
+   "esp": 5,
+   "hos": 4,
+   "hum": 5,
+   "pie": 2,
+   "sen": 2,
+   "soc": 5,
+   "tem": 4,
+   "val": 2
+  },
+  "rasgos_doc": [
+   "esp",
+   "hum"
+  ],
+  "relacion_rey": "Joven cercano al rey en edad",
+  "religion": "Católica",
+  "riqueza": 5,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Chismes",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Narrador",
+    "v": 5
+   },
+   {
+    "doc": true,
+    "n": "Cronista o documentalista",
+    "v": 5
+   }
+  ],
+  "titulo": "Conde de Maurepas",
+  "titulo_nob": "Conde de Maurepas",
+  "ubicacion": "Versalles",
+  "vocacion": "Toga (ministerio)",
+  "id": "p28"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": false,
+    "n": "Correspondencia",
+    "v": 4
+   },
+   {
+    "doc": false,
+    "n": "Trictrac",
+    "v": 3
+   }
+  ],
+  "anio": 1672,
+  "apodos": [
+   "Monsieur de La Vrillière"
+  ],
+  "cargo": "Secretario de Estado",
+  "casa": "Phélypeaux",
+  "conyuge": "—",
+  "cualidades": {
+   "belleza": 2,
+   "constitucion": 3,
+   "intelecto": 3,
+   "memoria": 4
+  },
+  "cualidades_doc": [],
+  "edad": "49–50",
+  "educacion": "Formado en la secretaría de Estado familiar",
+  "estatus": "verificado",
+  "estatus_familia": "Dinastía ministerial (toga)",
+  "faccion": "Neutral",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 5,
+   "diplomacia": 5,
+   "erudicion": 4,
+   "galanteria": 2,
+   "intriga": 5
+  },
+  "hijos": "Louis (futuro conde de Saint-Florentin); Marie Jeanne, esposa de Maurepas",
+  "hitos": "—",
+  "idiomas": [],
+  "innatos": {
+   "aspecto": "Robusto, rostro insulso",
+   "intelecto": "Medio",
+   "salud": "Regular",
+   "temperamento": "Cauto, gris"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Secretario de Estado desde 1700",
+  "lugar_familia": "Hijo",
+  "madre": "—",
+  "muerte": "07/09/1725",
+  "nacimiento": "1672",
+  "nombre": "Louis Phélypeaux",
+  "nombre_nac": "Louis Phélypeaux",
+  "oculta": "—",
+  "orden": 29,
+  "padre": "Balthazar Phélypeaux, marqués de Châteauneuf",
+  "prompt": "Louis Phélypeaux, Marquis de La Vrillière, a stout 49-year-old Secretary of State of the noblesse de robe, 1722, pale indoor complexion, full cheeks, slight double chin, faint shadows under watchful eyes. Guarded, appraising expression with tightly closed lips, clean shaven. Densely curled powdered Regency wig, black velvet coat over a discreet brocade waistcoat, fine lace cravat, sober and rich without military insignia. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, armor, sash, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Secretario de Estado",
+  "quiere": "Conservar el poder de la familia Phélypeaux",
+  "rango": 32,
+  "rasgos": {
+   "cer": 4,
+   "cmp": 2,
+   "com": 2,
+   "cre": 1,
+   "cst": 4,
+   "dis": 5,
+   "esp": 2,
+   "fra": 2,
+   "hum": 1,
+   "lab": 4,
+   "obe": 5,
+   "pru": 5,
+   "soc": 2,
+   "tem": 4,
+   "van": 2
+  },
+  "rasgos_doc": [],
+  "relacion_rey": "Ninguna",
+  "religion": "Católica",
+  "riqueza": 5,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Cronista o documentalista",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Disimulo",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Fisonomista",
+    "v": 4
+   }
+  ],
+  "titulo": "Marqués de La Vrillière",
+  "titulo_nob": "Marqués de La Vrillière",
+  "ubicacion": "Versalles",
+  "vocacion": "Toga (ministerio)",
+  "id": "p29"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": false,
+    "n": "Equitación de escuela",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Geografía y cartografía",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Esgrima",
+    "v": 4
+   },
+   {
+    "doc": false,
+    "n": "Correspondencia",
+    "v": 4
+   }
+  ],
+  "anio": 1684,
+  "apodos": [
+   "Monsieur de Belle-Isle"
+  ],
+  "cargo": "Oficial general de dragones",
+  "casa": "Fouquet",
+  "conyuge": "Soltero",
+  "cualidades": {
+   "belleza": 3,
+   "constitucion": 4,
+   "estatura": "alta",
+   "intelecto": 5,
+   "memoria": 5
+  },
+  "cualidades_doc": [],
+  "edad": "37",
+  "educacion": "Mosqueteros; coronel de dragones",
+  "estatus": "verificado",
+  "estatus_familia": "Nobleza caída en desgracia",
+  "faccion": "Orleans",
+  "habilidades": {
+   "armas": 8,
+   "devocion": 3,
+   "diplomacia": 7,
+   "erudicion": 6,
+   "galanteria": 4,
+   "intriga": 7
+  },
+  "hijos": "—",
+  "hitos": "Encarcelado en la Bastilla en 1723-24",
+  "idiomas": [
+   {
+    "doc": false,
+    "n": "Alemán",
+    "v": 3
+   }
+  ],
+  "innatos": {
+   "aspecto": "Alto, rostro alargado",
+   "intelecto": "Muy inteligente",
+   "salud": "Buena",
+   "temperamento": "Ambicioso, tenaz, calculador"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "En la corte desde 1710 aprox.",
+  "lugar_familia": "Hijo mayor; nieto del superintendente Fouquet",
+  "madre": "Catherine Agnès de Lévis",
+  "muerte": "26/01/1761, Versalles",
+  "nacimiento": "22/09/1684, Villefranche-de-Rouergue",
+  "nombre": "Charles Louis Auguste Fouquet",
+  "nombre_nac": "Charles-Louis-Auguste Fouquet",
+  "oculta": "Vínculos con el caso financiero de La Jonchère",
+  "orden": 30,
+  "padre": "Louis Fouquet, marqués de Belle-Isle",
+  "prompt": "Charles-Louis-Auguste Fouquet, Count of Belle-Isle, a lean intense 37-year-old French officer, 1722, long intelligent face, determined eyes. Ambitious, resolute expression, clean shaven. Powdered Regency wig, officer's blue coat with silver lace, steel gorget. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Oficial general de dragones",
+  "quiere": "Restaurar el nombre de su familia",
+  "rango": 35,
+  "rasgos": {
+   "amb": 5,
+   "ani": 4,
+   "com": 5,
+   "cre": 2,
+   "cst": 5,
+   "cur": 4,
+   "dis": 4,
+   "esp": 4,
+   "fra": 2,
+   "lab": 5,
+   "lea": 4,
+   "obe": 2,
+   "org": 4,
+   "pru": 4,
+   "sen": 2,
+   "soc": 4,
+   "tem": 4,
+   "val": 5
+  },
+  "rasgos_doc": [
+   "amb",
+   "lab"
+  ],
+  "relacion_rey": "Ninguna",
+  "religion": "Católica",
+  "riqueza": 4,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Cronista o documentalista",
+    "v": 5
+   }
+  ],
+  "titulo": "Conde de Belle-Isle",
+  "titulo_nob": "Conde de Belle-Isle",
+  "ubicacion": "París / Versalles",
+  "vocacion": "Armas",
+  "id": "p30"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": false,
+    "n": "Equitación de escuela",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Caza a caballo",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Jeu de paume",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Esgrima",
+    "v": 5
+   }
+  ],
+  "anio": 1684,
+  "apodos": [
+   "le prince Charles",
+   "Monsieur le Grand"
+  ],
+  "cargo": "Gran caballerizo de Francia",
+  "casa": "Lorena (rama Armagnac)",
+  "conyuge": "Françoise Adélaïde de Noailles (separados)",
+  "cualidades": {
+   "belleza": 4,
+   "constitucion": 5,
+   "intelecto": 2,
+   "memoria": 3
+  },
+  "cualidades_doc": [],
+  "edad": "38",
+  "educacion": "Formación de corte y armas",
+  "estatus": "verificado",
+  "estatus_familia": "Príncipe extranjero (Casa de Lorena)",
+  "faccion": "Neutral",
+  "habilidades": {
+   "armas": 6,
+   "devocion": 3,
+   "diplomacia": 4,
+   "erudicion": 3,
+   "galanteria": 6,
+   "intriga": 4
+  },
+  "hijos": "—",
+  "hitos": "—",
+  "idiomas": [],
+  "innatos": {
+   "aspecto": "Atlético",
+   "intelecto": "Medio",
+   "salud": "Buena",
+   "temperamento": "Altivo, deportista"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Nacido en la corte",
+  "lugar_familia": "Hijo; sobrino de Villeroy",
+  "madre": "Catherine de Neufville, hermana de Villeroy",
+  "muerte": "29/12/1751",
+  "nacimiento": "22/02/1684",
+  "nombre": "Carlos de Lorena",
+  "nombre_nac": "Charles de Lorraine",
+  "oculta": "—",
+  "orden": 31,
+  "padre": "Luis de Lorena, conde de Armagnac, gran caballerizo",
+  "prompt": "Charles de Lorraine, Count of Armagnac, Grand Equerry of France, a proud athletic 38-year-old prince, 1722, strong face. Haughty, composed expression, clean shaven. Powdered Regency wig, embroidered riding coat, lace cravat. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Gran caballerizo de Francia",
+  "quiere": "Prestigio de su casa",
+  "rango": 62,
+  "rasgos": {
+   "amb": 2,
+   "cer": 5,
+   "com": 5,
+   "esp": 2,
+   "lab": 2,
+   "obe": 2,
+   "org": 5,
+   "pie": 2,
+   "sen": 4,
+   "soc": 4,
+   "val": 4,
+   "van": 4
+  },
+  "rasgos_doc": [
+   "org",
+   "cer"
+  ],
+  "relacion_rey": "Clave: el rey adora cazar",
+  "religion": "Católica",
+  "riqueza": 6,
+  "talentos": [],
+  "titulo": "Conde de Armagnac",
+  "titulo_nob": "Conde de Armagnac; príncipe extranjero (Casa de Lorena)",
+  "ubicacion": "Versalles (Gran Caballeriza)",
+  "vocacion": "Corte",
+  "id": "p31"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": true,
+    "n": "Bibliofilia",
+    "v": 7
+   },
+   {
+    "doc": false,
+    "n": "Arquitectura y obras",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Moda",
+    "v": 4
+   }
+  ],
+  "anio": 1674,
+  "apodos": [
+   "le cardinal de Rohan"
+  ],
+  "cargo": "Gran limosnero de Francia",
+  "casa": "Rohan-Soubise",
+  "conyuge": "—",
+  "cualidades": {
+   "belleza": 5,
+   "constitucion": 4,
+   "intelecto": 4,
+   "memoria": 4
+  },
+  "cualidades_doc": [
+   "belleza"
+  ],
+  "edad": "47",
+  "educacion": "Doctor en teología por la Sorbona; príncipe-obispo de Estrasburgo desde 1704; cardenal en 1712",
+  "estatus": "verificado",
+  "estatus_familia": "Príncipe extranjero (Casa de Rohan)",
+  "faccion": "Neutral",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 4,
+   "diplomacia": 7,
+   "erudicion": 6,
+   "galanteria": 6,
+   "intriga": 6
+  },
+  "hijos": "—",
+  "hitos": "—",
+  "idiomas": [
+   {
+    "doc": true,
+    "n": "Latín",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Alemán",
+    "v": 4
+   }
+  ],
+  "innatos": {
+   "aspecto": "Muy apuesto",
+   "intelecto": "Culto",
+   "salud": "Buena",
+   "temperamento": "Suave, mundano, seductor"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "En la corte desde joven",
+  "lugar_familia": "Hijo",
+  "madre": "Anne de Rohan-Chabot (se dice amante de Luis XIV)",
+  "muerte": "19/07/1749, París",
+  "nacimiento": "26/06/1674, París",
+  "nombre": "Armand Gaston de Rohan",
+  "nombre_nac": "Armand-Gaston-Maximilien de Rohan",
+  "oculta": "Rumores sobre su paternidad real (supuesto hijo de Luis XIV)",
+  "orden": 32,
+  "padre": "François de Rohan, príncipe de Soubise",
+  "prompt": "Cardinal Armand-Gaston de Rohan, Grand Almoner of France, a strikingly handsome 47-year-old prince-bishop, 1722, fine regular features, elegant bearing. Suave, confident expression, clean shaven. Scarlet cardinal's mozzetta, scarlet zucchetto, white lace rochet, gold pectoral cross. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, wig, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Gran limosnero de Francia",
+  "quiere": "Influencia religiosa y política",
+  "rango": 63,
+  "rasgos": {
+   "amb": 4,
+   "ani": 4,
+   "cer": 4,
+   "dis": 4,
+   "esp": 4,
+   "fra": 2,
+   "gas": 5,
+   "gen": 4,
+   "hos": 5,
+   "lab": 2,
+   "obe": 2,
+   "org": 5,
+   "pie": 2,
+   "pru": 4,
+   "sen": 4,
+   "soc": 5,
+   "tem": 5,
+   "van": 4
+  },
+  "rasgos_doc": [
+   "org"
+  ],
+  "relacion_rey": "Preside la vida religiosa de la corte",
+  "religion": "Católica",
+  "riqueza": 8,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Disimulo",
+    "v": 5
+   }
+  ],
+  "titulo": "Cardenal de Rohan",
+  "titulo_nob": "Príncipe-obispo de Estrasburgo; cardenal",
+  "ubicacion": "Versalles / Estrasburgo",
+  "vocacion": "Iglesia",
+  "id": "p32"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": false,
+    "n": "Historia y genealogía",
+    "v": 4
+   },
+   {
+    "doc": false,
+    "n": "Devoción práctica",
+    "v": 3
+   }
+  ],
+  "anio": 1695,
+  "apodos": [
+   "Monsieur de Reims"
+  ],
+  "cargo": "Arzobispo de Reims; consagrará al rey",
+  "casa": "Rohan-Guéméné",
+  "conyuge": "—",
+  "cualidades": {
+   "belleza": 4,
+   "constitucion": 4,
+   "intelecto": 3,
+   "memoria": 3,
+   "voz": 4
+  },
+  "cualidades_doc": [],
+  "edad": "27",
+  "educacion": "Doctor en teología por la Sorbona",
+  "estatus": "verificado",
+  "estatus_familia": "Príncipe extranjero (Casa de Rohan)",
+  "faccion": "Neutral",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 5,
+   "diplomacia": 4,
+   "erudicion": 5,
+   "galanteria": 3,
+   "intriga": 3
+  },
+  "hijos": "—",
+  "hitos": "Corona al rey 25/10/1722",
+  "idiomas": [
+   {
+    "doc": true,
+    "n": "Latín",
+    "v": 5
+   }
+  ],
+  "innatos": {
+   "aspecto": "Rostro aristocrático y liso",
+   "intelecto": "Medio",
+   "salud": "Buena",
+   "temperamento": "Solemne, correcto"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Arzobispo de Reims desde 1722",
+  "lugar_familia": "Hijo menor",
+  "madre": "Charlotte Élisabeth de Cochefilet",
+  "muerte": "28/08/1762",
+  "nacimiento": "10/02/1695, París",
+  "nombre": "Armand Jules de Rohan-Guéméné",
+  "nombre_nac": "Armand-Jules de Rohan-Guéméné",
+  "oculta": "—",
+  "orden": 33,
+  "padre": "Carlos III de Rohan-Guéméné",
+  "prompt": "Armand-Jules de Rohan-Guéméné, Archbishop of Reims, a young 27-year-old French archbishop, 1722, smooth aristocratic face. Solemn, composed expression, clean shaven, short dark hair. Violet mozzetta, white lace rochet, gold pectoral cross. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, red cardinal robes, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Arzobispo de Reims; consagrará al rey",
+  "quiere": "Prestigio de su casa",
+  "rango": 61,
+  "rasgos": {
+   "cer": 5,
+   "esp": 2,
+   "hum": 2,
+   "obe": 4,
+   "org": 5,
+   "pie": 4,
+   "tem": 4,
+   "van": 4
+  },
+  "rasgos_doc": [],
+  "relacion_rey": "Lo corona",
+  "religion": "Católica",
+  "riqueza": 6,
+  "talentos": [],
+  "titulo": "Arzobispo de Reims",
+  "titulo_nob": "Arzobispo-duque de Reims; par de Francia",
+  "ubicacion": "Reims",
+  "vocacion": "Iglesia",
+  "id": "p33"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": false,
+    "n": "Jardinería y naranjos",
+    "v": 3
+   },
+   {
+    "doc": false,
+    "n": "Anatomía",
+    "v": 4
+   }
+  ],
+  "anio": 1658,
+  "apodos": [
+   "Monsieur Mareschal"
+  ],
+  "cargo": "Primer cirujano del rey",
+  "casa": "Mareschal (plebeyo ennoblecido)",
+  "conyuge": "—",
+  "cualidades": {
+   "belleza": 2,
+   "constitucion": 5,
+   "intelecto": 4,
+   "memoria": 4
+  },
+  "cualidades_doc": [],
+  "edad": "63–64",
+  "educacion": "Barbero-cirujano formado en el hospital de la Caridad de París",
+  "estatus": "verificado",
+  "estatus_familia": "Plebeyo; ennoblecido por servicio",
+  "faccion": "Casa del Rey",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 5,
+   "diplomacia": 4,
+   "erudicion": 7,
+   "galanteria": 2,
+   "intriga": 2
+  },
+  "hijos": "—",
+  "hitos": "—",
+  "idiomas": [
+   {
+    "doc": false,
+    "n": "Latín",
+    "v": 3
+   }
+  ],
+  "innatos": {
+   "aspecto": "Rostro curtido",
+   "intelecto": "Muy hábil en su oficio",
+   "salud": "Robusta",
+   "temperamento": "Franco, sereno"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Primer cirujano del rey desde 1703",
+  "lugar_familia": "Hijo",
+  "madre": "—",
+  "muerte": "13/12/1736, castillo de Bièvres",
+  "nacimiento": "1658, Calais",
+  "nombre": "Georges Mareschal",
+  "nombre_nac": "Georges Mareschal",
+  "oculta": "Estuvo en el lecho de muerte de Luis XIV",
+  "orden": 34,
+  "padre": "—",
+  "prompt": "Georges Mareschal, First Surgeon to the King, a sturdy 63-year-old Frenchman, 1722, frank weathered face, steady eyes. Calm, professional expression, clean shaven. Grey wig, plain black coat, white cravat. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, embroidery, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Primer cirujano del rey",
+  "quiere": "Proteger la salud del rey",
+  "rango": 22,
+  "rasgos": {
+   "amb": 2,
+   "ani": 4,
+   "cer": 2,
+   "cmp": 4,
+   "com": 2,
+   "cre": 2,
+   "cst": 5,
+   "cur": 5,
+   "dis": 5,
+   "fra": 5,
+   "gen": 4,
+   "lab": 5,
+   "lea": 5,
+   "obe": 4,
+   "org": 1,
+   "pie": 4,
+   "pru": 4,
+   "tem": 5,
+   "val": 4,
+   "van": 1
+  },
+  "rasgos_doc": [],
+  "relacion_rey": "Trato diario",
+  "religion": "Católica",
+  "riqueza": 4,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Arreglar objetos",
+    "v": 5
+   }
+  ],
+  "titulo": "—",
+  "titulo_nob": "Señor de Bièvres (ennoblecido)",
+  "ubicacion": "Versalles",
+  "vocacion": "Cirugía",
+  "id": "p34"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": false,
+    "n": "Botánica",
+    "v": 4
+   }
+  ],
+  "anio": 1664,
+  "apodos": [
+   "Monsieur Dodart"
+  ],
+  "cargo": "Primer médico del rey",
+  "casa": "Dodart",
+  "conyuge": "—",
+  "cualidades": {
+   "belleza": 2,
+   "constitucion": 3,
+   "intelecto": 4,
+   "memoria": 4
+  },
+  "cualidades_doc": [],
+  "edad": "57–58",
+  "educacion": "Facultad de Medicina de París",
+  "estatus": "plausible",
+  "estatus_familia": "Burguesía médica",
+  "faccion": "Casa del Rey",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 5,
+   "diplomacia": 3,
+   "erudicion": 7,
+   "galanteria": 1,
+   "intriga": 2
+  },
+  "hijos": "—",
+  "hitos": "—",
+  "idiomas": [
+   {
+    "doc": true,
+    "n": "Latín",
+    "v": 5
+   }
+  ],
+  "innatos": {
+   "aspecto": "Delgado, rostro cuidadoso",
+   "intelecto": "Culto",
+   "salud": "Regular",
+   "temperamento": "Prudente, nervioso"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Primer médico del rey desde 1718",
+  "lugar_familia": "Hijo",
+  "madre": "—",
+  "muerte": "1730",
+  "nacimiento": "1664, París",
+  "nombre": "Claude Jean-Baptiste Dodart",
+  "nombre_nac": "Claude-Jean-Baptiste Dodart",
+  "oculta": "Presión enorme: cualquier enfermedad del rey es crisis de Estado",
+  "orden": 35,
+  "padre": "Denis Dodart, médico y botánico de la Academia de Ciencias",
+  "prompt": "Claude-Jean-Baptiste Dodart, First Physician to the King, a learned 57-year-old Frenchman, 1722, thin careful face. Worried, attentive expression, clean shaven. Full grey wig, black physician's robe, white bands. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Primer médico del rey",
+  "quiere": "Proteger la salud del rey",
+  "rango": 12,
+  "rasgos": {
+   "amb": 2,
+   "ani": 2,
+   "com": 2,
+   "cur": 4,
+   "dis": 5,
+   "lab": 4,
+   "obe": 4,
+   "pie": 4,
+   "pru": 5,
+   "soc": 2,
+   "tem": 2
+  },
+  "rasgos_doc": [],
+  "relacion_rey": "Trato diario",
+  "religion": "Católica",
+  "riqueza": 3,
+  "talentos": [],
+  "titulo": "—",
+  "titulo_nob": "Sin título",
+  "ubicacion": "Versalles",
+  "vocacion": "Medicina",
+  "id": "p35"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": true,
+    "n": "Dibujo y grabado",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Jardinería y naranjos",
+    "v": 4
+   },
+   {
+    "doc": false,
+    "n": "Colección",
+    "v": 4
+   }
+  ],
+  "anio": 1656,
+  "apodos": [
+   "Monsieur de Cotte"
+  ],
+  "cargo": "Primer arquitecto del rey",
+  "casa": "De Cotte",
+  "conyuge": "Catherine Bodin, cuñada de Jules Hardouin-Mansart",
+  "cualidades": {
+   "belleza": 3,
+   "constitucion": 4,
+   "intelecto": 4,
+   "memoria": 4
+  },
+  "cualidades_doc": [],
+  "edad": "65–66",
+  "educacion": "Taller de Jules Hardouin-Mansart, su cuñado y maestro; Academia Real de Arquitectura",
+  "estatus": "verificado",
+  "estatus_familia": "Artesanos ennoblecidos por servicio",
+  "faccion": "Casa del Rey",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 4,
+   "diplomacia": 3,
+   "erudicion": 7,
+   "galanteria": 2,
+   "intriga": 2
+  },
+  "hijos": "Jules-Robert de Cotte, arquitecto",
+  "hitos": "—",
+  "idiomas": [
+   {
+    "doc": false,
+    "n": "Italiano",
+    "v": 3
+   }
+  ],
+  "innatos": {
+   "aspecto": "Digno, rostro reflexivo",
+   "intelecto": "Brillante en su arte",
+   "salud": "Buena",
+   "temperamento": "Sereno, metódico"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Primer arquitecto del rey desde 1708",
+  "lugar_familia": "Hijo",
+  "madre": "—",
+  "muerte": "15/07/1735, París",
+  "nacimiento": "1656, París",
+  "nombre": "Robert de Cotte",
+  "nombre_nac": "Robert de Cotte",
+  "oculta": "—",
+  "orden": 36,
+  "padre": "Familia de arquitectos y maestros de obras",
+  "prompt": "Robert de Cotte, First Architect to the King, a dignified 65-year-old Frenchman, 1722, thoughtful lined face. Composed, intelligent expression, clean shaven. Full grey wig, dark brown coat, lace cravat. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Primer arquitecto del rey",
+  "quiere": "Terminar sus obras en palacio",
+  "rango": 21,
+  "rasgos": {
+   "com": 2,
+   "cst": 5,
+   "cur": 4,
+   "dis": 4,
+   "lab": 5,
+   "pru": 4,
+   "tem": 5
+  },
+  "rasgos_doc": [],
+  "relacion_rey": "Ninguna",
+  "religion": "Católica",
+  "riqueza": 4,
+  "talentos": [],
+  "titulo": "—",
+  "titulo_nob": "Caballero de la Orden de San Miguel",
+  "ubicacion": "Versalles / París",
+  "vocacion": "Artes (arquitectura)",
+  "id": "p36"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": true,
+    "n": "Composición",
+    "v": 10
+   },
+   {
+    "doc": true,
+    "n": "Música (violín)",
+    "v": 5
+   },
+   {
+    "doc": true,
+    "n": "Órgano",
+    "v": 5
+   }
+  ],
+  "anio": 1657,
+  "apodos": [
+   "Monsieur de Lalande",
+   "le Lully latin"
+  ],
+  "cargo": "Superintendente de la música de la cámara y la capilla",
+  "casa": "Lalande",
+  "conyuge": "Anne Rebel, cantante (muere en 1722)",
+  "cualidades": {
+   "belleza": 2,
+   "constitucion": 3,
+   "intelecto": 4,
+   "memoria": 4,
+   "oido": true,
+   "voz": 4
+  },
+  "cualidades_doc": [],
+  "edad": "64",
+  "educacion": "Niño de coro en Saint-Germain-l'Auxerrois",
+  "estatus": "verificado",
+  "estatus_familia": "Artesanos parisinos",
+  "faccion": "Casa del Rey",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 6,
+   "diplomacia": 3,
+   "erudicion": 6,
+   "galanteria": 2,
+   "intriga": 1
+  },
+  "hijos": "Dos hijas, muertas de viruela en 1711",
+  "hitos": "—",
+  "idiomas": [],
+  "innatos": {
+   "aspecto": "Corpulento, rostro redondo",
+   "intelecto": "Gran músico",
+   "salud": "Regular",
+   "temperamento": "Afable, digno; de luto en 1722"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "En la corte desde 1683",
+  "lugar_familia": "Decimoquinto hijo",
+  "madre": "—",
+  "muerte": "18/06/1726, Versalles",
+  "nacimiento": "15/12/1657, París",
+  "nombre": "Michel-Richard de Lalande",
+  "nombre_nac": "Michel Richard Delalande",
+  "oculta": "—",
+  "orden": 37,
+  "padre": "Michel Lalande, sastre",
+  "prompt": "Michel-Richard de Lalande, Superintendent of the King's Music, a portly 64-year-old Frenchman in mourning, 1722, round genial face, sad eyes. Dignified, grieving expression, clean shaven. Full powdered wig, black mourning coat, plain white cravat. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, smiling, bright colors, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Superintendente de la música de la cámara y la capilla",
+  "quiere": "Mantener vivo el estilo de Luis XIV",
+  "rango": 10,
+  "rasgos": {
+   "ani": 2,
+   "cst": 5,
+   "hos": 4,
+   "lab": 5,
+   "obe": 4,
+   "pie": 5,
+   "sen": 2,
+   "soc": 4,
+   "tem": 4
+  },
+  "rasgos_doc": [
+   "ani"
+  ],
+  "relacion_rey": "Música diaria en la capilla",
+  "religion": "Católica",
+  "riqueza": 3,
+  "talentos": [],
+  "titulo": "—",
+  "titulo_nob": "Sin título",
+  "ubicacion": "Versalles",
+  "vocacion": "Música",
+  "id": "p37"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": true,
+    "n": "Clavecín",
+    "v": 10
+   },
+   {
+    "doc": true,
+    "n": "Órgano",
+    "v": 8
+   },
+   {
+    "doc": true,
+    "n": "Composición",
+    "v": 8
+   }
+  ],
+  "anio": 1668,
+  "apodos": [
+   "Couperin le Grand"
+  ],
+  "cargo": "Organista de la Capilla Real; maestro de clavecín de la corte",
+  "casa": "Couperin",
+  "conyuge": "Marie-Anne Ansault",
+  "cualidades": {
+   "belleza": 2,
+   "constitucion": 2,
+   "intelecto": 4,
+   "memoria": 4,
+   "oido": true,
+   "voz": 3
+  },
+  "cualidades_doc": [
+   "belleza"
+  ],
+  "edad": "53",
+  "educacion": "Formado en la familia y por Jacques Thomelin, organista del rey",
+  "estatus": "verificado",
+  "estatus_familia": "Dinastía de músicos",
+  "faccion": "Casa del Rey",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 5,
+   "diplomacia": 2,
+   "erudicion": 6,
+   "galanteria": 3,
+   "intriga": 1
+  },
+  "hijos": "Marguerite-Antoinette, clavecinista; otros",
+  "hitos": "—",
+  "idiomas": [
+   {
+    "doc": false,
+    "n": "Italiano",
+    "v": 3
+   }
+  ],
+  "innatos": {
+   "aspecto": "Rollizo, labios gruesos",
+   "intelecto": "Gran músico",
+   "salud": "Delicada",
+   "temperamento": "Sensible, reservado"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Organista del rey desde 1693",
+  "lugar_familia": "Hijo único",
+  "madre": "Marie Guérin",
+  "muerte": "11/09/1733, París",
+  "nacimiento": "10/11/1668, París",
+  "nombre": "François Couperin",
+  "nombre_nac": "François Couperin",
+  "oculta": "—",
+  "orden": 38,
+  "padre": "Charles Couperin, organista de Saint-Gervais",
+  "prompt": "François Couperin, organist of the Royal Chapel, a plump 53-year-old Frenchman, 1722, round sensitive face, full lips. Gentle, reflective expression, clean shaven. Full brown wig, brown silk coat, lace cravat. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Organista de la Capilla Real; maestro de clavecín de la corte",
+  "quiere": "Reconocimiento como compositor",
+  "rango": 16,
+  "rasgos": {
+   "cst": 4,
+   "dis": 4,
+   "hum": 4,
+   "lab": 5,
+   "obe": 4,
+   "pie": 4,
+   "sen": 2,
+   "soc": 2,
+   "tem": 4
+  },
+  "rasgos_doc": [
+   "hum"
+  ],
+  "relacion_rey": "Ninguna directa",
+  "religion": "Católica",
+  "riqueza": 2,
+  "talentos": [],
+  "titulo": "—",
+  "titulo_nob": "Caballero de la Orden de Letrán",
+  "ubicacion": "Versalles / París",
+  "vocacion": "Música",
+  "id": "p38"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": true,
+    "n": "Colección",
+    "v": 6
+   },
+   {
+    "doc": false,
+    "n": "Correspondencia",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Piquet",
+    "v": 4
+   }
+  ],
+  "anio": 1690,
+  "apodos": [
+   "Sir Luke"
+  ],
+  "cargo": "Embajador de Gran Bretaña",
+  "casa": "Schaub (suizo)",
+  "conyuge": "—",
+  "cualidades": {
+   "belleza": 3,
+   "constitucion": 4,
+   "intelecto": 4,
+   "memoria": 5
+  },
+  "cualidades_doc": [],
+  "edad": "31–32",
+  "educacion": "Universidad de Basilea; secretario de Stanhope",
+  "estatus": "verificado",
+  "estatus_familia": "Burguesía de Basilea",
+  "faccion": "Extranjero (Gran Bretaña)",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 3,
+   "diplomacia": 8,
+   "erudicion": 6,
+   "galanteria": 4,
+   "intriga": 7
+  },
+  "hijos": "—",
+  "hitos": "—",
+  "idiomas": [
+   {
+    "doc": true,
+    "n": "Francés",
+    "v": 7
+   },
+   {
+    "doc": true,
+    "n": "Inglés",
+    "v": 6
+   },
+   {
+    "doc": false,
+    "n": "Latín",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Italiano",
+    "v": 4
+   }
+  ],
+  "innatos": {
+   "aspecto": "Rostro estrecho, ojos agudos",
+   "intelecto": "Agudo",
+   "salud": "Buena",
+   "temperamento": "Pulido, inescrutable"
+  },
+  "lengua": "Alemán y francés; habla inglés",
+  "llegada_corte": "Embajador en París desde 1721",
+  "lugar_familia": "Hijo",
+  "madre": "—",
+  "muerte": "1758, Londres",
+  "nacimiento": "1690, Basilea",
+  "nombre": "Luke Schaub",
+  "nombre_nac": "Lukas Schaub",
+  "oculta": "Informes al gobierno británico sobre todo lo que ve",
+  "orden": 39,
+  "padre": "—",
+  "prompt": "Sir Luke Schaub, British ambassador to France, a sharp-eyed 32-year-old Swiss-born diplomat, 1722, narrow clever face. Polite, inscrutable expression, clean shaven. Powdered Regency wig, dark diplomatic coat, lace cravat. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Embajador de Gran Bretaña",
+  "quiere": "Mantener la alianza anglo-francesa",
+  "rango": 15,
+  "rasgos": {
+   "amb": 4,
+   "ani": 4,
+   "cre": 1,
+   "cst": 4,
+   "cur": 5,
+   "dis": 5,
+   "esp": 4,
+   "fra": 1,
+   "lab": 5,
+   "lea": 4,
+   "obe": 4,
+   "org": 1,
+   "pru": 5,
+   "soc": 4,
+   "tem": 5,
+   "van": 2
+  },
+  "rasgos_doc": [],
+  "relacion_rey": "Ninguna",
+  "religion": "Protestante",
+  "riqueza": 3,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Disimulo",
+    "v": 6
+   },
+   {
+    "doc": false,
+    "n": "Fisonomista",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Chismes",
+    "v": 5
+   }
+  ],
+  "titulo": "Sir",
+  "titulo_nob": "Caballero (knight)",
+  "ubicacion": "París / Versalles",
+  "vocacion": "Diplomacia",
+  "id": "p39"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": true,
+    "n": "Caza a caballo",
+    "v": 6
+   },
+   {
+    "doc": true,
+    "n": "Devoción práctica",
+    "v": 5
+   }
+  ],
+  "anio": 1683,
+  "apodos": [
+   "el Animoso",
+   "le duc d'Anjou"
+  ],
+  "cargo": "Rey de España; tío del rey",
+  "casa": "Borbón (Casa Real de España)",
+  "conyuge": "Isabel de Farnesio (viudo de María Luisa de Saboya)",
+  "cualidades": {
+   "belleza": 3,
+   "constitucion": 3,
+   "estatura": "alta",
+   "fertilidad": 5,
+   "intelecto": 3,
+   "memoria": 3
+  },
+  "cualidades_doc": [
+   "fertilidad",
+   "estatura"
+  ],
+  "edad": "38",
+  "educacion": "Preceptor Fénelon, gobernador Beauvilliers",
+  "estatus": "verificado",
+  "estatus_familia": "Casa Real",
+  "faccion": "España",
+  "habilidades": {
+   "armas": 6,
+   "devocion": 9,
+   "diplomacia": 4,
+   "erudicion": 4,
+   "galanteria": 2,
+   "intriga": 2
+  },
+  "hijos": "Luis, príncipe de Asturias; Fernando; Carlos; Mariana Victoria; otros",
+  "hitos": "Personaje fuera de escena",
+  "idiomas": [
+   {
+    "doc": false,
+    "n": "Español",
+    "v": 5
+   }
+  ],
+  "innatos": {
+   "aspecto": "Alto, enjuto, mirada triste",
+   "intelecto": "Medio",
+   "salud": "Crisis depresivas",
+   "temperamento": "Melancólico, escrupuloso, dominado por su esposa"
+  },
+  "lengua": "Francés y español",
+  "llegada_corte": "Dejó Versalles en 1700 para reinar en España",
+  "lugar_familia": "Segundo hijo (duque de Anjou)",
+  "madre": "María Ana Victoria de Baviera",
+  "muerte": "09/07/1746, Madrid",
+  "nacimiento": "19/12/1683, Versalles",
+  "nombre": "Felipe V",
+  "nombre_nac": "Philippe de France",
+  "oculta": "Inestabilidad mental",
+  "orden": 40,
+  "padre": "Luis, el Gran Delfín",
+  "prompt": "Philip V of Spain, a gaunt 38-year-old Bourbon king, 1722, long melancholic face, heavy-lidded sad eyes, prominent Bourbon nose. Brooding, troubled expression, clean shaven. Full dark wig, black Spanish court coat, the gold collar of the Order of the Golden Fleece. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, Spanish court of Madrid, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Jean Ranc::0.6 --ar 1:1 --s 250 --no beard, crown, smiling, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Rey de España; tío del rey",
+  "quiere": "Sus derechos al trono francés si muere Luis XV",
+  "rango": 98,
+  "rasgos": {
+   "amb": 2,
+   "ani": 1,
+   "cel": 4,
+   "cer": 4,
+   "com": 2,
+   "cst": 5,
+   "cur": 2,
+   "esp": 2,
+   "fra": 4,
+   "hum": 1,
+   "lab": 1,
+   "lea": 4,
+   "obe": 5,
+   "org": 5,
+   "pie": 5,
+   "sen": 5,
+   "soc": 1,
+   "tem": 2,
+   "val": 5
+  },
+  "rasgos_doc": [
+   "val",
+   "pie",
+   "sen",
+   "ani",
+   "obe"
+  ],
+  "relacion_rey": "Tío; el gran rival potencial de Orleans",
+  "religion": "Católica",
+  "riqueza": 10,
+  "talentos": [],
+  "titulo": "Rey de España",
+  "titulo_nob": "Rey de España",
+  "ubicacion": "Madrid",
+  "vocacion": "Corona",
+  "id": "p40"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": false,
+    "n": "Baile",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Teatro de aficionados",
+    "v": 4
+   },
+   {
+    "doc": false,
+    "n": "Caza a caballo",
+    "v": 3
+   }
+  ],
+  "anio": 1708,
+  "apodos": [
+   "Monsieur de La Trémoille"
+  ],
+  "cargo": "Primer gentilhombre de cámara",
+  "casa": "La Trémoille",
+  "conyuge": "Soltero",
+  "cualidades": {
+   "belleza": 5,
+   "constitucion": 4,
+   "intelecto": 4,
+   "memoria": 4
+  },
+  "cualidades_doc": [],
+  "edad": "14",
+  "educacion": "Educación de corte; heredó joven el cargo de primer gentilhombre de cámara",
+  "estatus": "plausible",
+  "estatus_familia": "Alta nobleza (pretende rango de príncipe extranjero)",
+  "faccion": "Neutral",
+  "habilidades": {
+   "armas": 2,
+   "devocion": 3,
+   "diplomacia": 3,
+   "erudicion": 4,
+   "galanteria": 6,
+   "intriga": 4
+  },
+  "hijos": "—",
+  "hitos": "—",
+  "idiomas": [],
+  "innatos": {
+   "aspecto": "Bello, piel clara",
+   "intelecto": "Vivo",
+   "salud": "Buena",
+   "temperamento": "Encantador, vivaz"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Nacido en la corte",
+  "lugar_familia": "Hijo mayor",
+  "madre": "Marie Madeleine Motier de La Fayette",
+  "muerte": "23/05/1741, París",
+  "nacimiento": "14/01/1708, París",
+  "nombre": "Charles Armand René de La Trémoille",
+  "nombre_nac": "Charles-Armand-René de La Trémoille",
+  "oculta": "—",
+  "orden": 41,
+  "padre": "Charles Louis Bretagne, duque de La Trémoille",
+  "prompt": "Charles-Armand-René de La Trémoille, Duke of La Trémoille, a handsome 14-year-old French boy duke, 1722, fair skin, lively eyes. Eager, charming smile. Own light-brown hair tied back at the nape, pale silk coat, lace cravat. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no adult, beard, wig, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Primer gentilhombre de cámara",
+  "quiere": "Ser el favorito del rey",
+  "rango": 54,
+  "rasgos": {
+   "ani": 5,
+   "com": 4,
+   "cst": 2,
+   "cur": 4,
+   "esp": 4,
+   "gen": 4,
+   "hum": 4,
+   "lab": 2,
+   "org": 4,
+   "soc": 5,
+   "van": 4
+  },
+  "rasgos_doc": [],
+  "relacion_rey": "Amigo de su edad",
+  "religion": "Católica",
+  "riqueza": 7,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Narrador",
+    "v": 3
+   }
+  ],
+  "titulo": "Duque de La Trémoille",
+  "titulo_nob": "Duque de La Trémoille y de Thouars; par de Francia",
+  "ubicacion": "Versalles",
+  "vocacion": "Corte",
+  "id": "p41"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": true,
+    "n": "Vinos",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Bailes de máscaras",
+    "v": 5
+   },
+   {
+    "doc": true,
+    "n": "Libertinaje",
+    "v": 5
+   }
+  ],
+  "anio": 1693,
+  "apodos": [
+   "Madame de Parabère"
+  ],
+  "cargo": "Sin cargo",
+  "casa": "La Vieuville",
+  "conyuge": "Viuda del conde de Parabère (†1716)",
+  "cualidades": {
+   "belleza": 4,
+   "constitucion": 5,
+   "intelecto": 3,
+   "memoria": 3
+  },
+  "cualidades_doc": [
+   "belleza"
+  ],
+  "edad": "28",
+  "educacion": "Educación de corte",
+  "estatus": "plausible",
+  "estatus_familia": "Nobleza de espada",
+  "faccion": "Orleans",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 2,
+   "diplomacia": 4,
+   "erudicion": 3,
+   "galanteria": 9,
+   "intriga": 5
+  },
+  "hijos": "Varios",
+  "hitos": "—",
+  "idiomas": [],
+  "innatos": {
+   "aspecto": "Morena, ojos chispeantes",
+   "intelecto": "Medio",
+   "salud": "Buena",
+   "temperamento": "Alegre, sensual, discreta"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "En la corte desde joven",
+  "lugar_familia": "Hija",
+  "madre": "Marie Louise de La Chaussée d'Eu, dama de la duquesa de Berry",
+  "muerte": "13/08/1755, París",
+  "nacimiento": "06/10/1693, París",
+  "nombre": "Marie-Madeleine de La Vieuville",
+  "nombre_nac": "Marie-Madeleine de La Vieuville",
+  "oculta": "Lo que sabe de las noches del Palais-Royal",
+  "orden": 42,
+  "padre": "René François, marqués de La Vieuville",
+  "prompt": "Marie-Madeleine de La Vieuville, Countess of Parabère, a voluptuous 28-year-old French brunette, 1722, dark sparkling eyes, sensual mouth. Knowing, playful smile. Dark hair dressed close with pearls, rose silk gown with lace at the neckline. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no modern makeup, powdered pouf, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Sin cargo",
+  "quiere": "Conservar su posición social",
+  "rango": 34,
+  "rasgos": {
+   "amb": 2,
+   "ani": 5,
+   "cel": 2,
+   "cmp": 4,
+   "com": 2,
+   "cst": 2,
+   "dis": 5,
+   "esp": 4,
+   "gas": 4,
+   "gen": 4,
+   "hos": 4,
+   "hum": 5,
+   "lab": 1,
+   "lea": 4,
+   "obe": 2,
+   "pie": 1,
+   "sen": 5,
+   "soc": 5,
+   "tem": 4
+  },
+  "rasgos_doc": [
+   "dis",
+   "sen"
+  ],
+  "relacion_rey": "Ninguna",
+  "religion": "Católica",
+  "riqueza": 4,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Catador",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Disimulo",
+    "v": 5
+   }
+  ],
+  "titulo": "Condesa de Parabère",
+  "titulo_nob": "Condesa de Parabère",
+  "ubicacion": "París",
+  "vocacion": "Corte",
+  "id": "p42"
+ },
+ {
+  "aficiones": [
+   {
+    "doc": false,
+    "n": "Devoción práctica",
+    "v": 5
+   },
+   {
+    "doc": false,
+    "n": "Teología y controversia",
+    "v": 5
+   }
+  ],
+  "anio": "c. 1658",
+  "apodos": [
+   "le Père de Linières"
+  ],
+  "cargo": "Confesor del rey",
+  "casa": "Taschereau de Linières",
+  "conyuge": "— (jesuita)",
+  "cualidades": {
+   "belleza": 2,
+   "constitucion": 4,
+   "intelecto": 4,
+   "memoria": 4
+  },
+  "cualidades_doc": [],
+  "edad": "c. 63–64",
+  "educacion": "Compañía de Jesús; antes confesor de Madame Palatina",
+  "estatus": "plausible",
+  "estatus_familia": "Nobleza de toga de Turena",
+  "faccion": "Fleury",
+  "habilidades": {
+   "armas": 0,
+   "devocion": 8,
+   "diplomacia": 4,
+   "erudicion": 6,
+   "galanteria": 0,
+   "intriga": 4
+  },
+  "hijos": "—",
+  "hitos": "Sustituye al abad Fleury como confesor",
+  "idiomas": [
+   {
+    "doc": true,
+    "n": "Latín",
+    "v": 5
+   }
+  ],
+  "innatos": {
+   "aspecto": "Rostro enjuto y severo",
+   "intelecto": "Culto",
+   "salud": "Buena",
+   "temperamento": "Austero, discreto"
+  },
+  "lengua": "Francés",
+  "llegada_corte": "Confesor del rey desde 1722",
+  "lugar_familia": "—",
+  "madre": "—",
+  "muerte": "1746",
+  "nacimiento": "c. 1658 (incierto)",
+  "nombre": "Padre de Linières",
+  "nombre_nac": "Claude-Bertrand Taschereau de Linières",
+  "oculta": "Lo que el rey le confiesa",
+  "orden": 43,
+  "padre": "—",
+  "prompt": "Father Claude-Bertrand Taschereau de Linières, Jesuit confessor to the King, an austere 63-year-old French priest, 1722, thin severe face. Grave, discreet expression, clean shaven, own short grey hair. Black Jesuit cassock with white collar. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, wig, colorful robes, modern photograph, studio flash, modern clothing, text, watermark",
+  "puesto": "Confesor del rey",
+  "quiere": "Formar la conciencia del rey",
+  "rango": 20,
+  "rasgos": {
+   "amb": 2,
+   "com": 1,
+   "cst": 5,
+   "dis": 5,
+   "esp": 2,
+   "hum": 1,
+   "lab": 4,
+   "lea": 5,
+   "obe": 5,
+   "org": 2,
+   "pie": 5,
+   "sen": 1,
+   "soc": 2,
+   "tem": 5,
+   "van": 1
+  },
+  "rasgos_doc": [
+   "dis"
+  ],
+  "relacion_rey": "Confesor",
+  "religion": "Católica",
+  "riqueza": 1,
+  "talentos": [
+   {
+    "doc": false,
+    "n": "Fisonomista",
+    "v": 4
+   }
+  ],
+  "titulo": "—",
+  "titulo_nob": "Sacerdote jesuita",
+  "ubicacion": "Versalles",
+  "vocacion": "Iglesia",
+  "id": "p44"
+ }
+]

@@ -1,0 +1,20 @@
+/* ---------- Biografía y relaciones ---------- */
+function familia(){if(!player.familia){player.familia=generarFamilia(player);store.set("vg_player",player)}return player.familia}
+const PROC_T=p=>p.proc==="paris"?"París":p.proc==="extranjero"?(p.region||"Extranjero")+" (extranjero)":(p.region||"Provincia");
+function drawBio(){
+  const b=$("#bio"),f=familia(),d=player.destino||{};b.innerHTML="";
+  const rows=[["Nacimiento",f.nac+" · "+f.edad+" años"],["Sexo",player.sexo==="F"?"Mujer":"Hombre"],["Procedencia",PROC_T(player)],["Cuna",CUNA_N[player.cuna]],["Posición",posName(player)],
+    ["Filiación",FIL_N[d.filiacion]],["Educación",EDUCACIONES[d.edu]],["Fortuna",DINERO_N[d.dinero]],["Condición",CONDICION_N[d.condicion]],["Lugar en la familia",LUGAR_N[d.lugar]],["Confesión",CONF_N[d.confesion]]];
+  const cy=f.miembros.find(m=>/^Espos/.test(m.rol));
+  rows.push(["Estado",cy?(cy.vivo?(player.sexo==="F"?"Casada":"Casado"):(player.sexo==="F"?"Viuda":"Viudo")):(POS_ID[player.pos]?.g==="Clero"?"Célibe (estado eclesiástico)":(player.sexo==="F"?"Soltera":"Soltero"))]);
+  b.append(el("div",{class:"bio-h"},el("h3",{},player.nombre)),el("dl",{},...rows.filter(r=>r[1]).flatMap(([k,v])=>[el("dt",{},k),el("dd",{},v)])));
+}
+function drawRel(){
+  const b=$("#rel"),f=familia();b.innerHTML="";
+  const card=m=>m.desconocido?el("span",{class:"kin empty"},el("small",{},m.rol),"Desconocido",el("small",{},m.nota||""))
+    :el("span",{class:"kin"+(m.vivo?"":" dead")},el("small",{},m.rol+(m.mayor===true?" mayor":m.mayor===false?" menor":"")),m.nombre,
+      el("small",{},(m.vivo?"n. "+m.nac+" · "+(AÑO()-m.nac)+" años":m.nac+"–"+m.muerte+" †")+(m.nota?" · "+m.nota:"")));
+  const G=[["Padres",/^(Padre|Madre)/],["Hermanos",/^Herman/],["Cónyuge",/^Espos/],["Hijos",/^Hij/],["Amantes",/^Amante/]];
+  for(const [t,re] of G){const xs=f.miembros.filter(m=>re.test(m.rol));
+    b.append(el("span",{class:"label"},t),xs.length?el("div",{class:"kgrid"},...xs.map(card)):el("p",{class:"note"},"Ninguno."))}
+}

@@ -1,0 +1,250 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Libro de Caras de Versalles</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Spectral:wght@400;600&family=IBM+Plex+Mono&display=swap">
+<style>
+/* Layout: frontispicio sobrio, filtros por casa, retícula de retratos 1:1, ficha lateral que se abre sobre la retícula */
+:root{
+  --bg:#eceff3;--paper:#fafbfc;--ink:#1a2232;--muted:#5b6578;--line:#d2d8e2;
+  --royal:#22407a;--gold:#9c7a2a;--veil:rgba(20,26,38,.45);
+  --display:'IM Fell English',Garamond,'Times New Roman',serif;
+  --body:'Spectral',Georgia,serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#10141c;--paper:#191f2a;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3344;
+  --royal:#93ade3;--gold:#d2b267;--veil:rgba(0,0,0,.6);color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10141c;--paper:#191f2a;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3344;
+  --royal:#93ade3;--gold:#d2b267;--veil:rgba(0,0,0,.6);color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5}
+.wrap{max-width:1180px;margin:0 auto;padding-block:28px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{display:grid;gap:6px;border-bottom:1px solid var(--line);padding-bottom:18px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(2rem,5vw,3.2rem);line-height:1.05;margin:0;text-wrap:balance}
+h1 em{color:var(--royal)}
+.sub{color:var(--muted);margin:0;max-width:62ch}
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:20px 0 6px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:13px var(--body);border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:4px 11px;border-radius:999px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--royal);border-color:var(--royal);color:var(--paper)}
+input[type=search]{font:15px var(--body);padding:6px 12px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);min-width:0;flex:1 1 200px;max-width:320px}
+.count{font-family:var(--mono);font-size:12px;color:var(--muted);margin:8px 0 16px;font-variant-numeric:tabular-nums}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:18px}
+.card{all:unset;cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr);gap:8px;align-content:start;min-width:0}
+.card:focus-visible .face{outline:2px solid var(--royal);outline-offset:3px}
+.face{aspect-ratio:1;max-width:100%;border:1px solid var(--gold);background:var(--paper);display:grid;place-items:center;overflow:hidden;position:relative}
+.face img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.mono{font-family:var(--display);font-size:2.4rem;color:var(--gold);opacity:.8}
+.card:hover .face{box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 30%,transparent)}
+.cname{font-weight:600;line-height:1.25;font-size:15px}
+.ctitle{color:var(--muted);font-size:13px;line-height:1.3}
+.cpuesto{font-size:13px;line-height:1.3;color:var(--royal)}
+.drop{cursor:pointer}
+.ov{position:absolute;left:0;right:0;bottom:0;padding:8px;text-align:center;font:13px var(--body);background:color-mix(in srgb,var(--paper) 85%,transparent);color:var(--royal);opacity:0}
+.ov.show,.drop:hover .ov,.drop:focus-within .ov{opacity:1}
+.face.over{outline:3px dashed var(--royal);outline-offset:3px}
+@media (prefers-reduced-motion:no-preference){.ov{transition:opacity .2s}}
+.apodo{font-style:italic;font-weight:400;color:var(--gold)}
+.anio{font-weight:400;color:var(--muted);font-variant-numeric:tabular-nums}
+aside .anio{font-size:.7em}
+.plaus{position:absolute;top:6px;right:6px;font:10px var(--mono);letter-spacing:.06em;text-transform:uppercase;background:var(--paper);color:var(--muted);border:1px solid var(--line);padding:1px 5px}
+.empty{border:1px dashed var(--line);padding:28px;color:var(--muted);text-align:center;background:var(--paper)}
+/* ficha */
+.veil{position:fixed;inset:0;background:var(--veil);z-index:5}
+aside{position:fixed;top:0;right:0;bottom:0;width:min(500px,100%);background:var(--paper);z-index:6;overflow-y:auto;border-left:1px solid var(--line);
+  padding-top:calc(20px + env(safe-area-inset-top,0px));padding-bottom:calc(32px + env(safe-area-inset-bottom,0px));
+  padding-left:22px;padding-right:max(22px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:16px}
+aside>*{flex:none;min-width:0}
+.close{align-self:flex-end;font:13px var(--mono);background:none;border:1px solid var(--line);color:var(--muted);padding:4px 10px;border-radius:4px;cursor:pointer}
+aside .face{width:440px;max-width:100%;height:auto;aspect-ratio:1}
+aside h2{font-family:var(--display);font-weight:400;font-size:1.9rem;line-height:1.1;margin:0;text-wrap:balance}
+.row{display:flex;flex-wrap:wrap;gap:8px}
+.btn{font:14px var(--body);border:1px solid var(--royal);color:var(--royal);background:none;padding:6px 12px;border-radius:5px;cursor:pointer}
+.btn.solid{background:var(--royal);color:var(--paper)}
+.btn:focus-visible,.chip:focus-visible,.close:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.msg{font-size:13px;color:var(--muted);min-height:1.2em}
+dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:0}
+dt{font:11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--gold);padding-top:4px}
+dd{margin:0;min-width:0}
+.sec{font:400 1.15rem var(--display);margin:6px 0 8px;padding-bottom:4px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.sec span{font:10px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+#fdata{display:grid;gap:6px}
+.bar{display:flex;align-items:center;gap:8px;padding-top:6px}
+.bar i{display:block;height:6px;background:var(--royal);border-radius:3px;min-width:2px}
+.bar b{font:12px var(--mono);color:var(--muted);font-weight:400;font-variant-numeric:tabular-nums}
+.prompt{font:12px/1.5 var(--mono);color:var(--muted);background:var(--bg);border:1px solid var(--line);padding:10px;white-space:pre-wrap;word-break:break-word}
+@media (prefers-reduced-motion:no-preference){.face img{transition:opacity .3s}}
+.bar.elite i{background:var(--gold)}
+.bar.elite b{color:var(--gold)}
+.dots{display:flex;align-items:center;gap:4px;padding-top:5px;flex-wrap:wrap}
+.dots i{width:9px;height:9px;border-radius:50%;border:1px solid var(--muted);flex:none}
+.dots i.on{background:var(--royal);border-color:var(--royal)}
+.dots span{font-size:13px;color:var(--muted);margin-left:4px}
+.doc{font:10px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--gold);margin-left:4px;white-space:nowrap}
+.toprow{display:flex;justify-content:space-between;align-items:baseline;gap:8px 16px;flex-wrap:wrap}
+.back{font:13px var(--body);color:var(--royal);text-decoration:none;border-bottom:1px solid currentColor}
+.back:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.leyenda{font-size:12px;color:var(--muted);margin:2px 0 0}
+select{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink)}
+.sortlbl{display:flex;align-items:center;gap:6px;font:11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.cval{font:12px var(--mono);color:var(--gold);font-variant-numeric:tabular-nums}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="toprow"><div class="eyebrow">Tras bambalinas · Junio de 1722</div><a class="back" href="index.html">← Volver al Escritorio de Versalles</a></div>
+    <h1>Libro de caras de la <em>Corte de Versalles</em></h1>
+    <p class="sub">Los personajes del juego con sus datos, lo que quieren y lo que ocultan. Abre una ficha para ver todo lo que se sabe de cada uno.</p>
+  </header>
+  <div class="tools">
+    <input type="search" id="q" placeholder="Buscar por nombre, cargo o título" aria-label="Buscar personaje">
+    <label class="sortlbl">Ordenar<select id="orden"><option value="">Original</option><option value="riqueza">Dinero</option><option value="edad">Edad</option><option value="rango">Nobleza / rango</option></select></label>
+    <div class="chips" id="chips" role="group" aria-label="Filtrar por facción"></div>
+  </div>
+  <div class="count" id="count"></div>
+  <div class="msg" id="gmsg" aria-live="polite"></div>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty" hidden>La corte todavía no tiene personajes cargados. Aparecerán aquí en cuanto se añadan a la base del juego.</div>
+</div>
+
+<div class="veil" id="veil" hidden></div>
+<aside id="ficha" hidden role="dialog" aria-modal="true" aria-labelledby="fname">
+  <button class="close" id="close">Cerrar</button>
+  <label class="face drop" id="fface" for="file"></label>
+  <div>
+    <div class="eyebrow" id="fhouse"></div>
+    <h2 id="fname"></h2>
+    <div class="ctitle" id="ftitle"></div>
+    <div class="cpuesto" id="fpuesto"></div>
+  </div>
+  <div class="row" id="uprow">
+    <input type="file" id="file" accept="image/*" hidden>
+    <button class="btn" id="quitar" hidden>Quitar retrato</button>
+  </div>
+  <div class="msg" id="msg" aria-live="polite"></div>
+  <div id="fdata"></div>
+  <div id="promptbox" hidden>
+    <div class="row" style="justify-content:space-between;align-items:center;margin-bottom:6px">
+      <dt style="padding:0">Prompt del retrato</dt>
+      <button class="btn" id="copy">Copiar</button>
+    </div>
+    <div class="prompt" id="fprompt"></div>
+  </div>
+</aside>
+
+<script>
+const $=id=>document.getElementById(id);
+let chars=[],filtro='Todas',q='',sel=null,db=null,owner=false,orden='',RET={};
+const nac=c=>{const m=String(c.anio||'').match(/\d{4}/);return m?+m[0]:9999};
+const KEY={riqueza:c=>+c.riqueza||0,edad:c=>-nac(c),rango:c=>+c.rango||0};
+const VAL={riqueza:c=>'Fortuna '+(c.riqueza??'?')+'/10',edad:c=>(c.edad||'?')+' años',rango:c=>c.estatus_familia||''};
+const ini=n=>n.replace(/^(Padre|Sir) /,'').split(/\s+/).filter(w=>/^[A-ZÁÉÍÓÚ]/.test(w)).slice(0,2).map(w=>w[0]).join('');
+const src=c=>RET[c.id]||null;
+function face(el,c){el.textContent='';const s=src(c);
+  if(s){const i=new Image();i.alt='Retrato de '+c.nombre;i.src=s;i.onerror=()=>{el.textContent='';const m=document.createElement('span');m.className='mono';m.textContent=ini(c.nombre);el.append(m)};el.append(i)}
+  else{const m=document.createElement('span');m.className='mono';m.textContent=ini(c.nombre);el.append(m)}}
+function render(){
+  const fac=['Todas',...new Set(chars.map(c=>c.faccion).filter(Boolean))];
+  $('chips').textContent='';
+  fac.forEach(f=>{const b=document.createElement('button');b.className='chip';b.textContent=f;b.setAttribute('aria-pressed',f===filtro);b.onclick=()=>{filtro=f;render()};$('chips').append(b)});
+  const t=q.toLowerCase();
+  const vis=chars.filter(c=>(filtro==='Todas'||c.faccion===filtro)&&(!t||[c.nombre,c.nombre_nac,(c.apodos||[]).join(' '),c.titulo_nob,c.puesto].join(' ').toLowerCase().includes(t)));
+  if(orden){const k=KEY[orden];vis.sort((a,b)=>k(b)-k(a)||(a.orden||0)-(b.orden||0))}
+  const conR=chars.filter(c=>RET[c.id]).length;
+  $('count').textContent=chars.length?`${vis.length} de ${chars.length} personajes · ${conR} con retrato`:'';
+  $('empty').hidden=chars.length>0;
+  $('grid').textContent='';
+  vis.forEach(c=>{const b=document.createElement('button');b.className='card';
+    const f=document.createElement('div');f.className='face';face(f,c);
+    if(c.estatus==='plausible'){const p=document.createElement('span');p.className='plaus';p.textContent='plausible';f.append(p)}
+    const n=document.createElement('div');n.className='cname';nombreEn(n,c);
+    const s=document.createElement('div');s.className='ctitle';s.textContent=c.titulo_nob||c.titulo||'';
+    const p=document.createElement('div');p.className='cpuesto';p.textContent=c.puesto||c.cargo||'';
+    b.append(f,n,s,p);if(orden){const v=document.createElement('div');v.className='cval';v.textContent=VAL[orden](c);b.append(v)}b.onclick=()=>abrir(c.id);zona(f,()=>c.id);$('grid').append(b)});
+}
+const SECC=[
+ ['Origen',[['nacimiento','Nació'],['muerte','Muere'],['casa','Casa'],['estatus_familia','Rango familiar'],['padre','Padre'],['madre','Madre'],['lugar_familia','Lugar en la familia'],['religion','Religión'],['lengua','Lengua']]],
+ ['Familia propia',[['conyuge','Cónyuge'],['hijos','Hijos']]],
+ ['Formación',[['educacion','Estudios'],['vocacion','Vocación'],['llegada_corte','En la corte']]],
+ ['En 1722',[['faccion','Facción'],['ubicacion','Dónde vive'],['quiere','Quiere'],['oculta','Oculta'],['relacion_rey','Con el rey'],['hitos','1722–23'],['estatus','Datos']]]];
+const HAB=[['intriga','Intriga'],['diplomacia','Diplomacia'],['armas','Armas'],['erudicion','Erudición'],['devocion','Devoción'],['galanteria','Galantería']];
+const INN=[['temperamento','Temperamento'],['salud','Salud'],['aspecto','Aspecto'],['intelecto','Intelecto']];
+const RAS=[['soc','Sociabilidad','Retraído','Gregario'],['hos','Hospitalidad','Frío','Anfitrión'],['tem','Templanza','Colérico','Imperturbable'],['com','Competitividad','Conformista','Debe ser el primero'],['amb','Ambición','Satisfecho','Insaciable'],['dis','Discreción','Indiscreto','Tumba'],['van','Vanidad','Modesto','Vanidoso'],['org','Orgullo de sangre','Llano','Obsesionado con el rango'],['cer','Ceremonia','Desenvuelto','Puntilloso'],['ren','Rencor','Olvida','Nunca perdona'],['gen','Generosidad','Avaro','Pródigo con otros'],['gas','Gasto','Austero','Derrochador'],['cre','Credulidad','Desconfiado','Crédulo'],['val','Valor','Cobarde','Temerario'],['pru','Prudencia','Impulsivo','Calculador'],['pie','Piedad','Libertino','Devoto'],['sen','Sensualidad','Casto','Voluptuoso'],['esp','Esprit','Torpe','Ingenioso'],['hum','Humor','Grave','Burlón'],['lea','Lealtad','Veleta','Fiel hasta caer'],['fra','Franqueza','Taimado','Sincero'],['cmp','Compasión','Cruel','Compasivo'],['ani','Ánimo','Melancólico','Optimista'],['lab','Laboriosidad','Indolente','Infatigable'],['cur','Curiosidad','Indiferente','Curioso'],['cst','Constancia','Voluble','Constante'],['cel','Celos','Confiado','Celoso'],['obe','Obediencia','Rebelde','Sumiso']];
+const CUAL=[['belleza','Belleza'],['constitucion','Constitución'],['fertilidad','Fertilidad'],['intelecto','Intelecto'],['memoria','Memoria'],['voz','Voz'],['oido','Oído musical'],['estatura','Estatura'],['marcas','Marcas'],['taras','Taras']];
+function docMark(){const s=document.createElement('span');s.className='doc';s.textContent='◆ doc.';s.title='Documentado en fuentes';return s}
+function dots(v,word,doc){const w=document.createElement('div');w.className='dots';for(let i=1;i<=5;i++){const d=document.createElement('i');if(i<=v)d.className='on';w.append(d)}w.setAttribute('aria-label',v+' de 5'+(word?', '+word:''));if(word){const s=document.createElement('span');s.textContent=word;w.append(s)}if(doc)w.append(docMark());return w}
+function nivel(x){const w=document.createElement('div');w.className='bar'+(x.v>=6?' elite':'');w.setAttribute('aria-label',x.n+': '+x.v+' de 10');const f=document.createElement('i');f.style.width=x.v*10+'%';const s=document.createElement('b');s.textContent=x.v;w.append(f,s);if(x.doc)w.append(docMark());return w}
+function nombreEn(el,c){el.textContent='';el.append(document.createTextNode(c.nombre_nac||c.nombre));(c.apodos||[]).forEach(a=>{const s=document.createElement('span');s.className='apodo';s.textContent=' «'+a+'»';el.append(s)});if(c.anterior){const s=document.createElement('span');s.className='apodo';s.textContent=' (anteriormente «'+c.anterior+'»)';el.append(s)}if(c.anio){const s=document.createElement('span');s.className='anio';s.textContent=' '+c.anio+(c.edad?' ('+c.edad+')':'');el.append(s)}}
+function add(dl,l,v){const dt=document.createElement('dt');dt.textContent=l;const dd=document.createElement('dd');if(v instanceof Node)dd.append(v);else dd.textContent=v;dl.append(dt,dd)}
+function head(t,n){const h=document.createElement('h3');h.className='sec';h.textContent=t;if(n){const s=document.createElement('span');s.textContent=n;h.append(s)}$('fdata').append(h);const dl=document.createElement('dl');$('fdata').append(dl);return dl}
+function ficha(){
+  const c=chars.find(x=>x.id===sel);if(!c){cerrar();return}
+  face($('fface'),c);
+  if(owner){const o=document.createElement('span');o.className='ov'+(RET[c.id]?'':' show');o.textContent=RET[c.id]?'Cambiar retrato':'Subir retrato';$('fface').append(o);$('fface').htmlFor='file'}else{$('fface').htmlFor=''}
+  $('fhouse').textContent=c.faccion||'';nombreEn($('fname'),c);$('ftitle').textContent=c.titulo_nob||c.titulo||'';$('fpuesto').textContent=c.puesto||c.cargo||'';
+  $('fdata').textContent='';
+  SECC.forEach(([t,fs])=>{const vs=fs.filter(([k])=>c[k]&&c[k]!=='—');if(!vs.length)return;const dl=head(t);vs.forEach(([k,l])=>add(dl,l,k==='edad'?c[k]+' años':c[k]))});
+  if(c.innatos){const dl=head('Innatos','interpretación');INN.forEach(([k,l])=>c.innatos[k]&&add(dl,l,c.innatos[k]))}
+  if(c.habilidades){const dl=head('Habilidades','0–10 · interpretación');HAB.forEach(([k,l])=>{const n=+c.habilidades[k]||0;const w=document.createElement('div');w.className='bar';w.setAttribute('aria-label',l+': '+n+' de 10');const f=document.createElement('i');f.style.width=n*10+'%';const s=document.createElement('b');s.textContent=n;w.append(f,s);add(dl,l,w)})}
+  if(c.rasgos&&Object.keys(c.rasgos).length){const dl=head('Rasgos','1–5 · los demás, neutros');const rd=c.rasgos_doc||[];
+    RAS.forEach(([k,n,a,b])=>{const v=+c.rasgos[k];if(!v||v===3)return;add(dl,n,dots(v,v<3?a:b,rd.includes(k)))})}
+  if(c.cualidades){const cd=c.cualidades_doc||[];const vs=CUAL.filter(([k])=>c.cualidades[k]!=null&&c.cualidades[k]!=='');
+    if(vs.length){const dl=head('Cualidades','innatas');vs.forEach(([k,l])=>{const v=c.cualidades[k];
+      if(typeof v==='number')add(dl,l,dots(v,'',cd.includes(k)));
+      else{const s=document.createElement('span');s.textContent=v===true?'Sí':v;if(cd.includes(k))s.append(docMark());add(dl,l,s)}})}}
+  [['aficiones','Aficiones'],['talentos','Talentos'],['idiomas','Idiomas']].forEach(([k,t])=>{const xs=c[k]||[];if(!xs.length)return;
+    const dl=head(t,k==='idiomas'?'1–10 · además de la lengua materna':'1–10 · 6+ es élite');xs.forEach(x=>add(dl,x.n,nivel(x)))});
+  $('fprompt').textContent=c.prompt||'Sin prompt.';
+  $('uprow').hidden=!owner;
+  $('quitar').hidden=!RET[c.id];$('promptbox').hidden=!owner;
+}
+function abrir(id){sel=id;$('msg').textContent='';ficha();$('ficha').hidden=false;$('veil').hidden=false;$('close').focus()}
+function cerrar(){sel=null;$('ficha').hidden=true;$('veil').hidden=true}
+$('close').onclick=cerrar;$('veil').onclick=cerrar;
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&sel)cerrar()});
+$('q').oninput=e=>{q=e.target.value;render()};
+$('orden').onchange=e=>{orden=e.target.value;try{localStorage.setItem('orden',orden)}catch{}render()};
+try{orden=localStorage.getItem('orden')||'';$('orden').value=orden}catch{}
+$('copy').onclick=async()=>{const t=$('fprompt').textContent;
+  try{await navigator.clipboard.writeText(t);$('msg').textContent='Prompt copiado.'}
+  catch{const r=document.createRange();r.selectNodeContents($('fprompt'));const s=getSelection();s.removeAllRanges();s.addRange(r);$('msg').textContent='Texto seleccionado: cópialo con el teclado.'}};
+function achicar(f){return new Promise((ok,ko)=>{const u=URL.createObjectURL(f),i=new Image();
+  i.onload=()=>{const n=Math.min(i.naturalWidth,i.naturalHeight),c=document.createElement('canvas');c.width=c.height=480;
+    c.getContext('2d').drawImage(i,(i.naturalWidth-n)/2,0,n,n,0,0,480,480);URL.revokeObjectURL(u);let q=.8,out=c.toDataURL('image/jpeg',q);while(out.length>150000&&q>.35){q-=.1;out=c.toDataURL('image/jpeg',q)}ok(out)};
+  i.onerror=()=>{URL.revokeObjectURL(u);ko(new Error('No se pudo leer la imagen'))};i.src=u})}
+async function subir(id,f){const say=t=>{if(sel===id)$('msg').textContent=t;else{const c=chars.find(x=>x.id===id);$('gmsg').textContent=(c?(c.nombre_nac||c.nombre)+': ':'')+t}};
+  if(!owner||!f)return;
+  if(!/^image\//.test(f.type)){say('Ese archivo no es una imagen.');return}
+  if(f.size>20*1024*1024){say('La imagen pesa más de 20 MB. Redúcela y vuelve a intentarlo.');return}
+  say('Subiendo retrato…');
+  try{const img=await achicar(f);await db.doc('retratos/'+id).set({img});say('Retrato guardado.')}
+  catch(err){say('No se pudo guardar el retrato: '+(err&&err.message||err))}}
+function zona(el,getId){
+  el.addEventListener('dragover',e=>{if(!owner)return;e.preventDefault();el.classList.add('over')});
+  el.addEventListener('dragleave',()=>el.classList.remove('over'));
+  el.addEventListener('drop',e=>{if(!owner)return;e.preventDefault();el.classList.remove('over');const f=e.dataTransfer.files[0];subir(getId(),f)})}
+zona($('fface'),()=>sel);
+$('file').onchange=e=>{const f=e.target.files[0];e.target.value='';if(f&&sel)subir(sel,f)};
+$('quitar').onclick=async()=>{if(!sel)return;try{await db.doc('retratos/'+sel).delete();$('msg').textContent='Retrato quitado.'}catch(err){$('msg').textContent='No se pudo quitar: '+(err&&err.message||err)}};
+
+render();
+(async()=>{
+  if(!window.claude){ /* Modo estático: datos/ del repositorio */
+    try{const [per,idx]=await Promise.all([fetch('datos/personajes.json').then(r=>r.json()),fetch('datos/indice.json').then(r=>r.json())]);
+      chars=per;RET={};(idx.retratos||[]).forEach(f=>{RET[f.replace(/\.\w+$/,'')]='datos/retratos/'+f});render();
+      const h=decodeURIComponent(location.hash.slice(1));if(h&&chars.some(c=>c.id===h))abrir(h);
+    }catch(e){$('empty').textContent='No se pudieron cargar los datos del repositorio.';$('empty').hidden=false}
+    return}
+  const user=await claude.use('user');db=await claude.use('db');
+  try{owner=!!(user&&await user.isOwner())}catch{owner=false}
+  if(!db){$('empty').textContent='Inicia sesión en Claude para ver la base de personajes.';$('empty').hidden=false;return}
+  db.collection('retratos').onSnapshot(s=>{RET={};s.docs.forEach(d=>{if(d.exists){const v=d.data();if(v&&v.img)RET[d.id]=v.img}});render();if(sel)ficha()},()=>{});
+  db.collection('personajes').onSnapshot(s=>{
+    chars=s.docs.filter(d=>d.exists).map(d=>({id:d.id,...d.data()})).sort((a,b)=>(a.orden||0)-(b.orden||0));
+    render();if(sel)ficha();
+    const h=decodeURIComponent(location.hash.slice(1));if(h&&!sel&&!window._hashOpened&&chars.some(c=>c.id===h)){window._hashOpened=1;abrir(h)}
+  },err=>{$('empty').textContent='No se pudo leer la base de personajes: '+(err&&err.message||'error desconocido');$('empty').hidden=false});
+})();
+</script>
+</body></html>
