@@ -3,7 +3,7 @@ const KEYS=["vg_retrato","vg_epoca","vg_player","vg_docs","vg_notas","vg_guess",
 let db=null, downloads=null, sesion=store.get("vg_sesion",null);
 const ready=(async()=>{try{if(window.claude?.use){[db,downloads]=await Promise.all([claude.use("db").catch(()=>null),claude.use("downloads").catch(()=>null)])}}catch(e){}})();
 ready.then(()=>{if(!db)return;
-  const redraw=()=>{try{drawFaces()}catch(e){}};
+  const redraw=()=>{try{drawFaces()}catch(e){};try{if(!$("#selector").hidden&&modo==="existente")renderExistentes();if(!$("#game").hidden&&player?.existente)buildBar()}catch(e){}};
   db.collection("personajes").onSnapshot(s=>{LIBRO=s.docs.filter(d=>d.exists).map(d=>({id:d.id,...d.data()})).sort((a,b)=>(a.orden||0)-(b.orden||0));redraw()},()=>{});
   db.collection("estancias").onSnapshot(s=>{ESTANCIAS={};s.docs.forEach(d=>{if(d.exists){const v=d.data();if(v&&v.img)ESTANCIAS[d.id]=v.img}});
     if(mapSel&&mapSel.id&&document.querySelector(".zone.sel"))showRoom(mapSel.id,mapSel.n,mapSel.d)},()=>{});

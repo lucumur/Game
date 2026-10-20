@@ -29,6 +29,24 @@
     <p id="sel-sub"></p>
     <div class="rule"></div>
   </header>
+  <section class="step" id="step0">
+    <h2>¿Quién entra en Versalles?</h2>
+    <div class="modos" id="modos">
+      <button type="button" class="modo" data-modo="existente" aria-pressed="false"><span class="st">Personaje de la corte</span><b>Alguien que ya está aquí</b><span>Juegas a una persona real de la corte, con su familia, su historia y sus deudas.</span></button>
+      <button type="button" class="modo" data-modo="nuevo" aria-pressed="false"><span class="st">Recién llegado</span><b>Alguien que acaba de llegar</b><span>Eliges tu origen; los dados deciden el resto. Nadie te conoce todavía.</span></button>
+    </div>
+  </section>
+  <section class="step" id="modo-existente" hidden>
+    <h2>I. Busca a tu personaje</h2>
+    <div class="filtros-p">
+      <div class="fgrp"><span class="label">Sexo</span><div class="filters" id="fx-sexo"></div></div>
+      <div class="fgrp"><span class="label">Edad en 1722</span><div class="filters" id="fx-edad"></div></div>
+      <div class="fgrp"><span class="label">Rango</span><div class="filters" id="fx-rango"></div></div>
+    </div>
+    <p class="note" id="fx-cuenta"></p>
+    <div class="pos-opts" id="fx-lista"></div>
+  </section>
+  <div id="modo-nuevo" hidden>
   <section class="step">
     <h2>I. Quién eres</h2>
     <div class="sel-grid" id="elegible">
@@ -52,6 +70,7 @@
     <p class="note">Solo aparecen las que tu cuna, tu sexo y tu procedencia permiten. Algunas traen tensiones con tu destino.</p>
     <div id="pos-list" class="pos-list"></div>
   </section>
+  </div>
   <div class="sel-actions">
     <button class="btn primary" id="b-entrar" disabled>Entrar en Versalles</button>
     <button class="btn" id="b-reset">Empezar de nuevo</button>

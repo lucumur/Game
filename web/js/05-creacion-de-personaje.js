@@ -137,4 +137,4 @@ function tensiones(p,q){
   if(d.lugar==="segundon"&&q.id==="duque")t.push("Eres segundón: el título debería ser de tu hermano mayor. ¿Qué pasó con él?");
   return t;
 }
-function posName(p){return POS_ID[p?.pos]?.n||"Sin posición"}
+function posName(p){if(p?.existente)return p.cargo||"";return POS_ID[p?.pos]?.n||"Sin posición"}

@@ -9,5 +9,6 @@ ready.then(async()=>{
     RETR={};(idx.retratos||[]).forEach(f=>{RETR[f.replace(/\.\w+$/,"")]="datos/retratos/"+f});
     ESTANCIAS={};(idx.estancias||[]).forEach(f=>{ESTANCIAS[f.replace(/\.\w+$/,"")]="datos/estancias/"+f});
     try{drawFaces()}catch(e){}
+    try{if(!$("#selector").hidden&&modo==="existente")renderExistentes();if(!$("#game").hidden&&player?.existente)buildBar()}catch(e){}
   }catch(e){console.warn("Modo estático: no se pudieron cargar los datos",e)}
 });

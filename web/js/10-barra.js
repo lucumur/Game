@@ -2,7 +2,7 @@
 function buildBar(){
   const p=player||EJEMPLO;
   $("#who").innerHTML=""; $("#who").append(p.nombre," ",el("small",{},posName(p)));
-  const pr=$("#portrait"), src=store.get("vg_retrato",null); pr.innerHTML="";
+  const pr=$("#portrait"), src=store.get("vg_retrato",null)||(p.existente&&RETR[p.existente])||null; pr.innerHTML="";
   pr.append(src?el("img",{src,alt:""}):bust());
   $("#fecha").textContent=fmtFr(hoy)+" · "+(epoca.lugar||"Versalles");
   const c=$("#clock"); c.innerHTML=""; JORNADA.forEach((j,i)=>c.append(el("span",{class:i===4?"now":null},j)));
