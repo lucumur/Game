@@ -221,6 +221,15 @@
       <label class="btn sm" for="p-import" style="cursor:pointer">Importar archivo</label>
       <input type="file" id="p-import" accept=".json,application/json" hidden>
     </div>
+    <div class="rule"></div>
+    <span class="label">Edición del juego (solo el dueño)</span>
+    <div class="row">
+      <div class="field"><label class="label" for="p-llave">Llave de GitHub</label><input id="p-llave" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…"></div>
+      <button class="btn sm" id="p-llave-ok">Guardar llave</button>
+      <button class="btn sm danger" id="p-llave-x">Quitar llave</button>
+    </div>
+    <span class="status" id="p-llave-st"></span>
+    <div class="rule"></div>
     <div class="row">
       <button class="btn sm" id="p-perso">Cambiar personaje</button>
       <button class="btn sm" id="p-epocas">Volver a las épocas</button>
@@ -254,6 +263,7 @@
 <script src="js/21-partidas-guardar-cargar-expo.js"></script>
 <script src="js/22-biografia-y-relaciones.js"></script>
 <script src="js/23-navegacion.js"></script>
+<script src="js/github.js"></script>
 <script src="js/99-estatico.js"></script>
 
 

@@ -37,6 +37,6 @@ Sirve la carpeta: `cd web && python3 -m http.server` y abre `http://localhost:80
 Con GitHub Pages activado (Settings → Pages → rama `main`, carpeta raíz) queda en `https://lucumur.github.io/Game/web/`.
 
 ## Datos e imágenes
-En GitHub no hay base de datos en vivo: todo se edita en `web/datos/`. Un retrato nuevo va en `web/datos/retratos/<id>.jpg` y su nombre de archivo se añade a `web/datos/indice.json`; igual para `estancias/`. Las partidas se guardan solo en el navegador de quien juega (exportables a archivo).
+En GitHub no hay base de datos en vivo: todo se edita en `web/datos/`. El dueño puede subir retratos, imágenes de estancias y ocupantes desde la propia página pegando su llave de GitHub en *Partida → Llave de GitHub* (`js/github.js` hace los commits). A mano: Un retrato nuevo va en `web/datos/retratos/<id>.jpg` y su nombre de archivo se añade a `web/datos/indice.json`; igual para `estancias/`. Las partidas se guardan solo en el navegador de quien juega (exportables a archivo).
 
 `herramientas/empaquetar.py` sigue generando un archivo único (`dist/escritorio.html`) por si se quiere volver a publicar en Claude.

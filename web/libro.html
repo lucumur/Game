@@ -133,6 +133,7 @@ select{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);borde
   </div>
 </aside>
 
+<script src="js/github.js"></script>
 <script>
 const $=id=>document.getElementById(id);
 let chars=[],filtro='Todas',q='',sel=null,db=null,owner=false,orden='',RET={};
@@ -218,7 +219,7 @@ async function subir(id,f){const say=t=>{if(sel===id)$('msg').textContent=t;else
   if(!/^image\//.test(f.type)){say('Ese archivo no es una imagen.');return}
   if(f.size>20*1024*1024){say('La imagen pesa más de 20 MB. Redúcela y vuelve a intentarlo.');return}
   say('Subiendo retrato…');
-  try{const img=await achicar(f);await db.doc('retratos/'+id).set({img});say('Retrato guardado.')}
+  try{const img=await achicar(f);await (db||GH).doc('retratos/'+id).set({img});say('Retrato guardado.')}
   catch(err){say('No se pudo guardar el retrato: '+(err&&err.message||err))}}
 function zona(el,getId){
   el.addEventListener('dragover',e=>{if(!owner)return;e.preventDefault();el.classList.add('over')});
@@ -226,13 +227,15 @@ function zona(el,getId){
   el.addEventListener('drop',e=>{if(!owner)return;e.preventDefault();el.classList.remove('over');const f=e.dataTransfer.files[0];subir(getId(),f)})}
 zona($('fface'),()=>sel);
 $('file').onchange=e=>{const f=e.target.files[0];e.target.value='';if(f&&sel)subir(sel,f)};
-$('quitar').onclick=async()=>{if(!sel)return;try{await db.doc('retratos/'+sel).delete();$('msg').textContent='Retrato quitado.'}catch(err){$('msg').textContent='No se pudo quitar: '+(err&&err.message||err)}};
+$('quitar').onclick=async()=>{if(!sel)return;try{await (db||GH).doc('retratos/'+sel).delete();$('msg').textContent='Retrato quitado.'}catch(err){$('msg').textContent='No se pudo quitar: '+(err&&err.message||err)}};
 
 render();
 (async()=>{
   if(!window.claude){ /* Modo estático: datos/ del repositorio */
     try{const [per,idx]=await Promise.all([fetch('datos/personajes.json').then(r=>r.json()),fetch('datos/indice.json').then(r=>r.json())]);
       chars=per;RET={};(idx.retratos||[]).forEach(f=>{RET[f.replace(/\.\w+$/,'')]='datos/retratos/'+f});render();
+      window.ghCambio=(col,id,d)=>{if(col!=='retratos')return;if(d)RET[id]=d.img;else delete RET[id];render();if(sel)ficha()};
+      owner=await GH.comprobar();render();if(sel)ficha();
       const h=decodeURIComponent(location.hash.slice(1));if(h&&chars.some(c=>c.id===h))abrir(h);
     }catch(e){$('empty').textContent='No se pudieron cargar los datos del repositorio.';$('empty').hidden=false}
     return}
