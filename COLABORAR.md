@@ -7,9 +7,10 @@ El artifact de Claude es solo una copia de respaldo y ya no se sincroniza.
 ## Reglas para quien edite
 1. Lee [REGLAS.md](REGLAS.md) antes de tocar mecánicas o datos. **La base es la autoridad.**
 2. Exactitud histórica: todo dato nuevo de 1722 lleva nivel de confianza (confirmado / probable / dudoso). No inventes ocupantes, fechas ni cargos.
-3. Cambios pequeños y revisables: un tema por commit, mensaje en español que diga qué y por qué.
-4. No renombres funciones ni variables globales sin buscar todos sus usos: los módulos comparten ámbito global.
-5. No cambies datos de `web/datos/` a mano salvo para corregir un error documentado; son la exportación de la base de Claude.
+3. Si tocas `web/css` o `web/js`, corre `python3 herramientas/version.py` antes del commit (evita que los navegadores sigan usando la versión vieja).
+4. Cambios pequeños y revisables: un tema por commit, mensaje en español que diga qué y por qué.
+5. No renombres funciones ni variables globales sin buscar todos sus usos: los módulos comparten ámbito global.
+6. No cambies datos de `web/datos/` a mano salvo para corregir un error documentado; son la exportación de la base de Claude.
 
 ## Estructura de `web/`
 | Archivo | Contenido |

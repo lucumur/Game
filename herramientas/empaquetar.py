@@ -7,9 +7,8 @@ En Claude los datos vienen de la base del artifact; en GitHub, de web/datos/.
 import re, pathlib
 R = pathlib.Path(__file__).resolve().parents[1]; W = R / "web"
 html = (W / "index.html").read_text(encoding="utf-8")
-html = html.replace('<link rel="stylesheet" href="css/escritorio.css">',
-                    "<style>\n" + (W / "css/escritorio.css").read_text(encoding="utf-8") + "</style>")
-srcs = re.findall(r'<script src="(js/[^"]+)"></script>\n?', html)
+html = re.sub(r'<link rel="stylesheet" href="css/escritorio.css(\?v=\d+)?">', lambda m: "<style>\n" + (W / "css/escritorio.css").read_text(encoding="utf-8") + "</style>", html)
+srcs = re.findall(r'<script src="(js/[^"?]+)(?:\?v=\d+)?"></script>\n?', html)
 code = "\n".join((W / s).read_text(encoding="utf-8") for s in srcs)
 html = re.sub(r'(<script src="js/[^"]+"></script>\n?)+', lambda m: "<script>\n" + code + "</script>\n", html, count=1)
 (R / "dist").mkdir(exist_ok=True)
