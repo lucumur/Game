@@ -500,3 +500,9 @@ button.kin:hover{border-color:var(--gilt)}
 /* Ficha: el busto vacío no debe crecer sobre el texto */
 #ficha>svg{width:150px;height:182px;min-height:182px;justify-self:center;overflow:visible}
 .ficha-up{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap}
+
+/* Marco de los escudos: más grande, y el escudo siempre cabe dentro */
+.emblema-header{grid-template-columns:100px minmax(0,1fr)}
+.escudo-svg-wrap{width:100px;height:112px;padding:8px;box-sizing:border-box;overflow:hidden}
+.escudo-svg-wrap img{width:100%!important;height:100%!important;object-fit:contain!important}
+.escudo-svg-wrap svg{max-width:100%;max-height:100%}
