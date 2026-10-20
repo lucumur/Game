@@ -391,7 +391,7 @@ function catCls(id){const L=ocupantes(id).filter(o=>o[0]!=="Vacante");return L.l
 function ocupEditor(id){
   const L=ocupantes(id).map(o=>({n:o[0],pid:o[1],conf:o[2],nota:o[3],cat:o[4]}));
   const msg=el("span",{class:"note","aria-live":"polite"});
-  const guardar=async lista=>{msg.textContent="Guardando…";try{await db.doc("ocupantes/"+id).set({lista});OCUP_DB[id]={lista};goRoom(id)}catch(e){msg.textContent="No se pudo guardar."}};
+  const guardar=async lista=>{msg.textContent="Guardando…";try{await (db||GH).doc("ocupantes/"+id).set({lista});OCUP_DB[id]={lista};goRoom(id)}catch(e){msg.textContent="No se pudo guardar."}};
   const nom=el("input",{type:"text",placeholder:"Nombre del ocupante","aria-label":"Nombre del ocupante"});
   const cat=el("select",{"aria-label":"Categoría"}); Object.entries(CATS).forEach(([k,v])=>{const o=el("option",{value:k},v);if(k==="hombre")o.selected=true;cat.append(o)});
   const conf=el("select",{"aria-label":"Confianza"}); [["a","confirmado"],["m","probable"],["b","dudoso"]].forEach(([k,v])=>{const o=el("option",{value:k},v);if(k==="m")o.selected=true;conf.append(o)});
@@ -762,7 +762,7 @@ function mapInfo(titulo,texto,extra){
   const b=$("#map-info"); b.innerHTML="";
   b.append(el("h3",{},titulo),el("p",{},texto)); if(extra)b.append(extra);
 }
-let OWNER=false,ESTANCIAS={};
+let OWNER=false,ESTANCIAS={},GH_OK=false;
 function achicarImg(f,max){return new Promise((ok,ko)=>{const u=URL.createObjectURL(f),i=new Image();
   i.onload=()=>{const k=Math.min(1,max/Math.max(i.naturalWidth,i.naturalHeight)),c=document.createElement("canvas");c.width=Math.round(i.naturalWidth*k);c.height=Math.round(i.naturalHeight*k);
     let w=c.width,h=c.height,q=.8,out;URL.revokeObjectURL(u);
@@ -866,16 +866,16 @@ function roomInfo(id,n,d){
     });
     box.append(el("span",{class:"label"},esDom?"Caminos y lugares contiguos":"Puertas y escaleras contiguas"),row);
   }
-  if(OWNER&&db&&ESTNOM[id])box.append(el("span",{class:"label"},"Asignar ocupantes (solo tú)"),ocupEditor(id));
+  if(OWNER&&(db||GH_OK)&&ESTNOM[id])box.append(el("span",{class:"label"},"Asignar ocupantes (solo tú)"),ocupEditor(id));
   box.append(el("span",{class:"label"},"Presentes ahora"),el("div",{class:"note"},"Nadie a la vista. Aparecerán aquí conforme avance la partida."));
-  if(OWNER&&db){
+  if(OWNER&&(db||GH_OK)){
     const msg=el("span",{class:"note","aria-live":"polite"});
     const inp=el("input",{type:"file",accept:"image/*",hidden:""});
     inp.onchange=async()=>{const f=inp.files[0];inp.value="";if(!f)return;msg.textContent="Guardando imagen…";
-      try{const img=await achicarImg(f,1100);await db.doc("estancias/"+id).set({img});msg.textContent="Imagen guardada."}catch(e){msg.textContent="No se pudo guardar: "+(e&&e.message||e)}};
+      try{const img=await achicarImg(f,1100);await (db||GH).doc("estancias/"+id).set({img});msg.textContent="Imagen guardada."}catch(e){msg.textContent="No se pudo guardar: "+(e&&e.message||e)}};
     const row=el("div",{style:"display:flex;gap:8px;flex-wrap:wrap;align-items:center"},inp,
       el("button",{class:"btn sm",onclick:()=>inp.click()},src?"Cambiar imagen":"Agregar imagen"));
-    if(src)row.append(el("button",{class:"btn sm danger",onclick:async()=>{try{await db.doc("estancias/"+id).delete();msg.textContent="Imagen quitada."}catch(e){msg.textContent="No se pudo quitar."}}},"Quitar"));
+    if(src)row.append(el("button",{class:"btn sm danger",onclick:async()=>{try{await (db||GH).doc("estancias/"+id).delete();msg.textContent="Imagen quitada."}catch(e){msg.textContent="No se pudo quitar."}}},"Quitar"));
     row.append(msg); izq.append(row);
   }
   return grid;
