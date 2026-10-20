@@ -35,7 +35,13 @@ const GH=(()=>{
         else if(col==="ocupantes")await json(RAIZ+"ocupantes.json",v=>{delete v[id]},"Ocupantes: quitar "+id);
         avisar(col,id,null)})}}
   const escritor=(ruta,c64,msg)=>escribir(ruta,c64,msg);
-  async function comprobar(){if(!tok())return false;try{const r=await api("");if(!r.ok)return false;const j=await r.json();return !!(j.permissions&&j.permissions.push)}catch(e){return false}}
-  return {doc,comprobar,tiene:()=>!!tok(),
+  let ultimo="";
+  async function comprobar(){ultimo="";if(!tok()){ultimo="sin llave";return false}
+    try{const r=await api("");
+      if(!r.ok){ultimo={401:"GitHub rechaza la llave (401): está mal copiada, caducó o fue borrada.",403:"GitHub niega el acceso (403): la llave no tiene permiso sobre este repositorio.",404:"GitHub no muestra el repositorio con esta llave (404): en 'Repository access' no incluiste lucumur/Game."}[r.status]||("GitHub respondió "+r.status+".");return false}
+      const j=await r.json(); if(j.permissions&&j.permissions.push===false){ultimo="La llave puede leer pero no escribir: en Permissions → Contents elige 'Read and write'.";return false}
+      return true}
+    catch(e){ultimo="No se pudo contactar con GitHub ("+(e&&e.message||e)+"). Revisa la conexión o un bloqueador de anuncios.";return false}}
+  return {doc,comprobar,error:()=>ultimo,tiene:()=>!!tok(),
     guardar:t=>{try{localStorage.setItem(KEY,t.trim())}catch(e){}},quitar:()=>{try{localStorage.removeItem(KEY)}catch(e){}}};
 })();

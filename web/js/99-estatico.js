@@ -20,7 +20,7 @@ async function activarEditorGH(){
   if(!GH.tiene()){GH_OK=OWNER=false;st.textContent="Sin llave: solo lectura.";return}
   st.textContent="Comprobando la llave…";
   GH_OK=OWNER=await GH.comprobar();
-  st.textContent=GH_OK?"Llave válida: puedes subir imágenes y asignar ocupantes. Los cambios tardan unos minutos en verse en otros dispositivos.":"La llave no tiene permiso de escritura sobre lucumur/Game (o caducó).";
+  st.textContent=GH_OK?"Llave válida: puedes subir imágenes y asignar ocupantes. Los cambios tardan unos minutos en verse en otros dispositivos.":GH.error();
   if(mapSel&&mapSel.id&&document.querySelector(".zone.sel"))showRoom(mapSel.id,mapSel.n,mapSel.d);
 }
 window.ghCambio=(col,id,d)=>{
