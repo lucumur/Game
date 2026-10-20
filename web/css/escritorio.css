@@ -469,11 +469,3 @@ button.kin:hover{border-color:var(--gilt)}
 .pj>img,.pj>svg{grid-row:1/5;width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:center top;border:1px solid var(--gilt)}
 .pj>svg{border:0}
 .bio-h img.pt,.bio-h>svg{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:center top;border:1px solid var(--gilt)}
-
-/* ---------- Panel lateral en tres tercios (pantallas anchas) ---------- */
-@media (min-width:1100px){
-  :root{--ficha-w:clamp(380px,33.333vw,640px)}
-  #ficha{width:var(--ficha-w);box-shadow:none}
-  body.con-ficha{padding-right:calc(var(--ficha-w) + 16px)}
-  body.con-ficha .wrap{max-width:none}
-}
