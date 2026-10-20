@@ -1,4 +1,14 @@
 /* ---------- Barra ---------- */
+/* Indicadores (1–5). Personaje de la corte: de su ficha. Recién llegado: de su destino y su cuna. */
+function indicadores(p){
+  const k=(v,a,b)=>Math.max(a,Math.min(b,Math.round(v)));
+  if(p?.existente){const c=(LIBRO||[]).find(x=>x.id===p.existente);
+    if(c)return [["Favor real",k(c.favor||1,1,5)],["Dinero",k(Math.ceil((c.riqueza||2)/2),1,5)],["Reputación",k(1+Math.floor((c.rango||0)/25),1,5)],["Salud",k((c.cualidades||{}).constitucion||3,1,5)]]}
+  const d=p?.destino;
+  if(d)return [["Favor real",1],["Dinero",{ruina:1,arruinada_law:1,menos:2,holgada:3,rica:4,enriquecida_law:4}[d.dinero]||2],
+    ["Reputación",{espada:2,toga:2,nuevo:1,burguesia:1,pueblo:1}[p.cuna]||1],["Salud",4]];
+  return [["Favor real",1],["Dinero",2],["Reputación",2],["Salud",4]];
+}
 function buildBar(){
   const p=player||EJEMPLO;
   $("#who").innerHTML=""; $("#who").append(p.nombre," ",el("small",{},posName(p)));
@@ -7,7 +17,7 @@ function buildBar(){
   $("#fecha").textContent=fmtFr(hoy)+" · "+(epoca.lugar||"Versalles");
   const c=$("#clock"); c.innerHTML=""; JORNADA.forEach((j,i)=>c.append(el("span",{class:i===4?"now":null},j)));
   const g=$("#gauges"); g.innerHTML="";
-  [["Favor real",1],["Dinero",2],["Reputación",2],["Salud",4]].forEach(([n,v])=>{const pips=el("span",{class:"pips","aria-label":n+": "+v+" de 5"});for(let i=0;i<5;i++)pips.append(el("i",{class:i<v?"on":null}));g.append(el("span",{class:"gauge"},n,pips))});
+  indicadores(p).forEach(([n,v])=>{const pips=el("span",{class:"pips","aria-label":n+": "+v+" de 5"});for(let i=0;i<5;i++)pips.append(el("i",{class:i<v?"on":null}));g.append(el("span",{class:"gauge"},n,pips))});
 }
 
 /* Retrato: se recorta a 180×225 y se guarda como JPEG ligero dentro de la partida. */

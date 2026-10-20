@@ -111,7 +111,8 @@
   "sexo": "M",
   "rangos": [
    "sang"
-  ]
+  ],
+  "favor": 5
  },
  {
   "aficiones": [
@@ -204,7 +205,8 @@
   "sexo": "F",
   "rangos": [
    "sang"
-  ]
+  ],
+  "favor": 1
  },
  {
   "aficiones": [
@@ -351,7 +353,8 @@
   "sexo": "M",
   "rangos": [
    "sang"
-  ]
+  ],
+  "favor": 4
  },
  {
   "aficiones": [
@@ -460,7 +463,8 @@
   "sexo": "F",
   "rangos": [
    "legitime"
-  ]
+  ],
+  "favor": 2
  },
  {
   "aficiones": [
@@ -604,7 +608,8 @@
   "sexo": "F",
   "rangos": [
    "sang"
-  ]
+  ],
+  "favor": 2
  },
  {
   "aficiones": [
@@ -727,7 +732,8 @@
   "sexo": "M",
   "rangos": [
    "sang"
-  ]
+  ],
+  "favor": 2
  },
  {
   "aficiones": [
@@ -857,7 +863,8 @@
   "sexo": "M",
   "rangos": [
    "eglise"
-  ]
+  ],
+  "favor": 2
  },
  {
   "aficiones": [
@@ -983,7 +990,8 @@
   "sexo": "M",
   "rangos": [
    "eglise"
-  ]
+  ],
+  "favor": 5
  },
  {
   "aficiones": [
@@ -1103,7 +1111,8 @@
   "sexo": "M",
   "rangos": [
    "epee"
-  ]
+  ],
+  "favor": 4
  },
  {
   "aficiones": [
@@ -1208,7 +1217,8 @@
   "sexo": "M",
   "rangos": [
    "epee"
-  ]
+  ],
+  "favor": 2
  },
  {
   "aficiones": [
@@ -1323,7 +1333,8 @@
   "sexo": "F",
   "rangos": [
    "epee"
-  ]
+  ],
+  "favor": 5
  },
  {
   "aficiones": [
@@ -1448,7 +1459,8 @@
   "sexo": "M",
   "rangos": [
    "sang"
-  ]
+  ],
+  "favor": 2
  },
  {
   "aficiones": [
@@ -1581,7 +1593,8 @@
   "sexo": "F",
   "rangos": [
    "epee"
-  ]
+  ],
+  "favor": 1
  },
  {
   "aficiones": [
@@ -1707,7 +1720,8 @@
   "sexo": "F",
   "rangos": [
    "legitime"
-  ]
+  ],
+  "favor": 2
  },
  {
   "aficiones": [
@@ -1831,7 +1845,8 @@
   "sexo": "M",
   "rangos": [
    "sang"
-  ]
+  ],
+  "favor": 1
  },
  {
   "aficiones": [
@@ -1937,7 +1952,8 @@
   "sexo": "F",
   "rangos": [
    "sang"
-  ]
+  ],
+  "favor": 1
  },
  {
   "aficiones": [
@@ -2057,7 +2073,8 @@
   "sexo": "M",
   "rangos": [
    "sang"
-  ]
+  ],
+  "favor": 1
  },
  {
   "aficiones": [
@@ -2182,7 +2199,8 @@
   "sexo": "M",
   "rangos": [
    "legitime"
-  ]
+  ],
+  "favor": 3
  },
  {
   "aficiones": [
@@ -2313,7 +2331,8 @@
   "sexo": "F",
   "rangos": [
    "sang"
-  ]
+  ],
+  "favor": 1
  },
  {
   "aficiones": [
@@ -2428,7 +2447,8 @@
   "sexo": "M",
   "rangos": [
    "legitime"
-  ]
+  ],
+  "favor": 4
  },
  {
   "aficiones": [
@@ -2548,7 +2568,8 @@
   "sexo": "M",
   "rangos": [
    "epee"
-  ]
+  ],
+  "favor": 3
  },
  {
   "aficiones": [
@@ -2682,7 +2703,8 @@
   "sexo": "M",
   "rangos": [
    "epee"
-  ]
+  ],
+  "favor": 1
  },
  {
   "aficiones": [
@@ -2807,7 +2829,8 @@
   "sexo": "M",
   "rangos": [
    "epee"
-  ]
+  ],
+  "favor": 3
  },
  {
   "aficiones": [
@@ -2920,7 +2943,8 @@
   "sexo": "M",
   "rangos": [
    "epee"
-  ]
+  ],
+  "favor": 1
  },
  {
   "aficiones": [
@@ -3028,7 +3052,8 @@
   "sexo": "M",
   "rangos": [
    "robe"
-  ]
+  ],
+  "favor": 1
  },
  {
   "aficiones": [
@@ -3135,7 +3160,8 @@
   "sexo": "M",
   "rangos": [
    "robe"
-  ]
+  ],
+  "favor": 1
  },
  {
   "aficiones": [
@@ -3246,7 +3272,8 @@
   "sexo": "M",
   "rangos": [
    "robe"
-  ]
+  ],
+  "favor": 1
  },
  {
   "aficiones": [
@@ -3359,7 +3386,8 @@
   "sexo": "M",
   "rangos": [
    "robe"
-  ]
+  ],
+  "favor": 2
  },
  {
   "aficiones": [
@@ -3471,7 +3499,8 @@
   "sexo": "M",
   "rangos": [
    "robe"
-  ]
+  ],
+  "favor": 1
  },
  {
   "aficiones": [
@@ -3596,7 +3625,8 @@
   "sexo": "M",
   "rangos": [
    "epee"
-  ]
+  ],
+  "favor": 1
  },
  {
   "aficiones": [
@@ -3703,7 +3733,8 @@
   "sexo": "M",
   "rangos": [
    "etranger"
-  ]
+  ],
+  "favor": 4
  },
  {
   "aficiones": [
@@ -3829,7 +3860,8 @@
   "rangos": [
    "etranger",
    "eglise"
-  ]
+  ],
+  "favor": 3
  },
  {
   "aficiones": [
@@ -3926,7 +3958,8 @@
   "rangos": [
    "etranger",
    "eglise"
-  ]
+  ],
+  "favor": 3
  },
  {
   "aficiones": [
@@ -4039,7 +4072,8 @@
   "sexo": "M",
   "rangos": [
    "service"
-  ]
+  ],
+  "favor": 3
  },
  {
   "aficiones": [
@@ -4132,7 +4166,8 @@
   "sexo": "M",
   "rangos": [
    "service"
-  ]
+  ],
+  "favor": 3
  },
  {
   "aficiones": [
@@ -4231,7 +4266,8 @@
   "sexo": "M",
   "rangos": [
    "service"
-  ]
+  ],
+  "favor": 1
  },
  {
   "aficiones": [
@@ -4331,7 +4367,8 @@
   "sexo": "M",
   "rangos": [
    "service"
-  ]
+  ],
+  "favor": 2
  },
  {
   "aficiones": [
@@ -4438,7 +4475,8 @@
   "sexo": "M",
   "rangos": [
    "service"
-  ]
+  ],
+  "favor": 1
  },
  {
   "aficiones": [
@@ -4577,7 +4615,8 @@
   "sexo": "M",
   "rangos": [
    "ambassade"
-  ]
+  ],
+  "favor": 1
  },
  {
   "aficiones": [
@@ -4695,7 +4734,8 @@
   "sexo": "M",
   "rangos": [
    "sang"
-  ]
+  ],
+  "favor": 3
  },
  {
   "aficiones": [
@@ -4798,7 +4838,8 @@
   "sexo": "M",
   "rangos": [
    "etranger"
-  ]
+  ],
+  "favor": 4
  },
  {
   "aficiones": [
@@ -4919,7 +4960,8 @@
   "sexo": "F",
   "rangos": [
    "epee"
-  ]
+  ],
+  "favor": 1
  },
  {
   "aficiones": [
@@ -5029,6 +5071,7 @@
   "sexo": "M",
   "rangos": [
    "eglise"
-  ]
+  ],
+  "favor": 3
  }
 ]
