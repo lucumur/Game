@@ -47,12 +47,18 @@ function generarFamilia(p){
     else if(d.lugar==="benjamin"||d.lugar==="benjamina") mayores=rnd(1,4);
     else { mayores=rnd(0,2); menores=rnd(0,2); }
     const DEST = {M:["heredero de la casa","en el ejército","en la Iglesia","en el comercio familiar","en las colonias"],F:["casada","en un convento","soltera, en casa"]};
+    const usados = new Set([nombreDe(p.nombre)]);
+    const nombreHermano = s => {
+      let n;
+      for(let k=0;k<20;k++){ n = nombreDe(otro(s)); if(!usados.has(n)) break; }
+      usados.add(n); return n;
+    };
     const her = (i,mayor) => {
       const s = (d.lugar==="segundon"&&mayor&&i===0) ? "M" : (Math.random()<.5?"M":"F");
       const e = mayor ? edad+rnd(1,4)*(i+1) : Math.max(1, edad-rnd(1,4)*(i+1));
       let nota = s==="M" ? (mayor&&i===0?DEST.M[0]:DEST.M[rnd(1, p.cuna==="espada"?2:4)]) : DEST.F[rnd(0,2)];
       if(e<14) nota = "aún niño";
-      return persona(s==="M"?"Hermano":"Hermana", nombreDe(otro(s))+" "+ape, e, {mayor, nota, vivo: e<14 ? Math.random()>.1 : vivoA(e+10)});
+      return persona(s==="M"?"Hermano":"Hermana", nombreHermano(s)+" "+ape, e, {mayor, nota, vivo: e<14 ? Math.random()>.1 : vivoA(e+10)});
     };
     for(let i=0;i<mayores;i++) fam.push(her(i,true));
     for(let i=0;i<menores;i++) fam.push(her(i,false));
