@@ -3,13 +3,36 @@ function opts(sel,items){const s=$(sel);s.innerHTML="";items.forEach(([v,t])=>s.
 let draft=null;
 function freshDraft(){const d={nombre:"",nombreManual:false,sexo:"M",proc:"provincia",region:"Languedoc",cuna:"burguesia",destino:null,pos:null};d.nombre=generarNombre(d);return d}
 /* Dos entradas: un personaje real de la corte o un recién llegado. */
-const RANGOS=[["sang","Du sang"],["legitime","Légitimés"],["etranger","Princes étrangers"],["epee","Épée"],["robe","Robe"],["eglise","Église"],["service","Service du Roi"],["ambassade","Ambassades"]];
-const RANGO_N=Object.fromEntries(RANGOS);
+const RANGOS=[
+  ["sang","Du sang","Príncipes de la sangre"],
+  ["legitime","Légitimés","Príncipes legitimados"],
+  ["etranger","Princes étrangers","Príncipes extranjeros"],
+  ["pair","Pairs de France","Pares de Francia"],
+  ["epee","Épée","Nobleza de espada"],
+  ["robe","Robe","Nobleza de toga"],
+  ["eglise","Église","Alto clero"],
+  ["service","Service du Roi","Casa y servicio del Rey"],
+  ["finance","Finance","Finanzas y hacienda"],
+  ["ambassade","Ambassades","Cuerpo diplomático"]
+];
+const RANGO_N=Object.fromEntries(RANGOS.map(([k,fr])=>[k,fr]));
+const RANGO_ES=Object.fromEntries(RANGOS.map(([k,,es])=>[k,es]));
+function rangosEl(rs,inter=true){
+  const s=el("span",{class:"rangos-list"});
+  (rs||[]).forEach((r,i)=>{
+    if(i)s.append(" · ");
+    const fr=RANGO_N[r]||r, es=RANGO_ES[r]||"";
+    const t=el("span",{class:"rango-tag",title:es||null,"data-es":es||null,tabindex:inter&&es?"0":null},fr);
+    if(inter&&es)t.onclick=e=>{e.stopPropagation();const on=t.classList.toggle("tip-on");document.querySelectorAll(".rango-tag.tip-on").forEach(x=>{if(x!==t)x.classList.remove("tip-on")});if(!on)t.blur()};
+    s.append(t);
+  });
+  return s;
+}
 const EDADES=[["m18","Menos de 18",0,17],["18","18–25",18,25],["26","26–40",26,40],["41","41–60",41,60],["61","61 o más",61,999]];
 let modo=null, elegido=null; const fx={sexo:"",edad:"",rango:""};
 function edadPj(c){const n=parseInt(c.edad,10);if(!isNaN(n))return n;const y=parseInt(String(c.anio).replace(/\D/g,""),10);return isNaN(y)?null:AÑO()-y}
 function chipsFx(id,key,items){const box=$(id);box.innerHTML="";
-  [["","Todos"],...items].forEach(([v,t])=>box.append(el("button",{type:"button","aria-pressed":String(fx[key]===v),onclick:()=>{fx[key]=v;elegido=null;chipsFx(id,key,items);renderExistentes()}},t)))}
+  [["","Todos",""],...items].forEach(([v,t,es])=>box.append(el("button",{type:"button","aria-pressed":String(fx[key]===v),title:es||null,"data-es":es||null,onclick:()=>{fx[key]=v;elegido=null;chipsFx(id,key,items);renderExistentes()}},t)))}
 function filtrarCorte(){const E=EDADES.find(e=>e[0]===fx.edad);
   return (LIBRO||[]).filter(c=>(!fx.sexo||c.sexo===fx.sexo)&&(!fx.rango||(c.rangos||[]).includes(fx.rango))&&(!E||((a=>a!=null&&a>=E[2]&&a<=E[3])(edadPj(c)))))}
 function renderExistentes(){
@@ -17,8 +40,11 @@ function renderExistentes(){
   if(!LIBRO){$("#fx-cuenta").textContent="Cargando la corte…";$("#b-entrar").disabled=true;return}
   const xs=filtrarCorte(); if(!xs.some(c=>c.id===elegido))elegido=null;
   $("#fx-cuenta").textContent=xs.length?xs.length+(xs.length===1?" persona":" personas")+" de la corte":"Nadie en la corte con ese perfil.";
-  xs.forEach(c=>{const a=edadPj(c);box.append(el("button",{type:"button",class:"pos-opt pj","aria-pressed":String(elegido===c.id),onclick:()=>{elegido=c.id;renderExistentes()}},
-    retratoEl(c),el("b",{},c.nombre),el("span",{class:"mv"},c.cargo||c.titulo||""),el("span",{class:"mv"},[a!=null?a+" años":"",(c.rangos||[]).map(r=>RANGO_N[r]).join(" · "),c.ubicacion||""].filter(Boolean).join(" · "))))});
+  xs.forEach(c=>{const a=edadPj(c),meta=el("span",{class:"mv"});
+    const parts=[]; if(a!=null)parts.push(a+" años"); if((c.rangos||[]).length)parts.push(rangosEl(c.rangos,false)); if(c.ubicacion)parts.push(c.ubicacion);
+    parts.forEach((p,i)=>{if(i)meta.append(" · ");meta.append(p)});
+    box.append(el("button",{type:"button",class:"pos-opt pj","aria-pressed":String(elegido===c.id),onclick:()=>{elegido=c.id;renderExistentes()}},
+      retratoEl(c),el("b",{},c.nombre),el("span",{class:"mv"},c.cargo||c.titulo||""),meta))});
   $("#b-entrar").disabled=!elegido;
 }
 function setModo(m){modo=m;

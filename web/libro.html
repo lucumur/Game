@@ -89,6 +89,8 @@ dd{margin:0;min-width:0}
 select{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink)}
 .sortlbl{display:flex;align-items:center;gap:6px;font:11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .cval{font:12px var(--mono);color:var(--gold);font-variant-numeric:tabular-nums}
+.rango-tag{border-bottom:1px dotted var(--gold);cursor:help;position:relative}
+.rango-tag:hover::after,.rango-tag:focus-visible::after,.rango-tag.tip-on::after{content:attr(data-es);position:absolute;left:0;bottom:calc(100% + 5px);background:var(--ink);color:var(--paper);font:12px/1.25 var(--body);padding:4px 8px;border-radius:4px;white-space:nowrap;z-index:20;pointer-events:none;box-shadow:0 4px 12px rgb(0 0 0 / .28)}
 </style>
 
 <div class="wrap">
@@ -133,7 +135,7 @@ select{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);borde
   </div>
 </aside>
 
-<script src="js/github.js?v=202611161615"></script>
+<script src="js/github.js?v=202611161648"></script>
 <script>
 const $=id=>document.getElementById(id);
 let chars=[],filtro='Todas',q='',sel=null,db=null,owner=false,orden='',RET={};
@@ -173,6 +175,9 @@ const HAB=[['intriga','Intriga'],['diplomacia','Diplomacia'],['armas','Armas'],[
 const INN=[['temperamento','Temperamento'],['salud','Salud'],['aspecto','Aspecto'],['intelecto','Intelecto']];
 const RAS=[['soc','Sociabilidad','Retraído','Gregario'],['hos','Hospitalidad','Frío','Anfitrión'],['tem','Templanza','Colérico','Imperturbable'],['com','Competitividad','Conformista','Debe ser el primero'],['amb','Ambición','Satisfecho','Insaciable'],['dis','Discreción','Indiscreto','Tumba'],['van','Vanidad','Modesto','Vanidoso'],['org','Orgullo de sangre','Llano','Obsesionado con el rango'],['cer','Ceremonia','Desenvuelto','Puntilloso'],['ren','Rencor','Olvida','Nunca perdona'],['gen','Generosidad','Avaro','Pródigo con otros'],['gas','Gasto','Austero','Derrochador'],['cre','Credulidad','Desconfiado','Crédulo'],['val','Valor','Cobarde','Temerario'],['pru','Prudencia','Impulsivo','Calculador'],['pie','Piedad','Libertino','Devoto'],['sen','Sensualidad','Casto','Voluptuoso'],['esp','Esprit','Torpe','Ingenioso'],['hum','Humor','Grave','Burlón'],['lea','Lealtad','Veleta','Fiel hasta caer'],['fra','Franqueza','Taimado','Sincero'],['cmp','Compasión','Cruel','Compasivo'],['ani','Ánimo','Melancólico','Optimista'],['lab','Laboriosidad','Indolente','Infatigable'],['cur','Curiosidad','Indiferente','Curioso'],['cst','Constancia','Voluble','Constante'],['cel','Celos','Confiado','Celoso'],['obe','Obediencia','Rebelde','Sumiso']];
 const CUAL=[['belleza','Belleza'],['constitucion','Constitución'],['fertilidad','Fertilidad'],['intelecto','Intelecto'],['memoria','Memoria'],['voz','Voz'],['oido','Oído musical'],['estatura','Estatura'],['marcas','Marcas'],['taras','Taras']];
+const RANGO_FR={sang:'Du sang',legitime:'Légitimés',etranger:'Princes étrangers',pair:'Pairs de France',epee:'Épée',robe:'Robe',eglise:'Église',service:'Service du Roi',finance:'Finance',ambassade:'Ambassades'};
+const RANGO_ES={sang:'Príncipes de la sangre',legitime:'Príncipes legitimados',etranger:'Príncipes extranjeros',pair:'Pares de Francia',epee:'Nobleza de espada',robe:'Nobleza de toga',eglise:'Alto clero',service:'Casa y servicio del Rey',finance:'Finanzas y hacienda',ambassade:'Cuerpo diplomático'};
+function rangosLibro(rs){const w=document.createElement('span');(rs||[]).forEach((r,i)=>{if(i)w.append(' · ');const s=document.createElement('span');s.className='rango-tag';const es=RANGO_ES[r]||'';s.textContent=RANGO_FR[r]||r;if(es){s.title=es;s.setAttribute('data-es',es);s.tabIndex=0;s.onclick=()=>{const on=s.classList.toggle('tip-on');document.querySelectorAll('.rango-tag.tip-on').forEach(x=>{if(x!==s)x.classList.remove('tip-on')});if(!on)s.blur()}}w.append(s)});return w}
 function docMark(){const s=document.createElement('span');s.className='doc';s.textContent='◆ doc.';s.title='Documentado en fuentes';return s}
 function dots(v,word,doc){const w=document.createElement('div');w.className='dots';for(let i=1;i<=5;i++){const d=document.createElement('i');if(i<=v)d.className='on';w.append(d)}w.setAttribute('aria-label',v+' de 5'+(word?', '+word:''));if(word){const s=document.createElement('span');s.textContent=word;w.append(s)}if(doc)w.append(docMark());return w}
 function nivel(x){const w=document.createElement('div');w.className='bar'+(x.v>=6?' elite':'');w.setAttribute('aria-label',x.n+': '+x.v+' de 10');const f=document.createElement('i');f.style.width=x.v*10+'%';const s=document.createElement('b');s.textContent=x.v;w.append(f,s);if(x.doc)w.append(docMark());return w}
@@ -185,7 +190,7 @@ function ficha(){
   if(owner){const o=document.createElement('span');o.className='ov'+(RET[c.id]?'':' show');o.textContent=RET[c.id]?'Cambiar retrato':'Subir retrato';$('fface').append(o);$('fface').htmlFor='file'}else{$('fface').htmlFor=''}
   $('fhouse').textContent=c.faccion||'';nombreEn($('fname'),c);$('ftitle').textContent=c.titulo_nob||c.titulo||'';$('fpuesto').textContent=c.puesto||c.cargo||'';
   $('fdata').textContent='';
-  SECC.forEach(([t,fs])=>{const vs=fs.filter(([k])=>c[k]&&c[k]!=='—');if(!vs.length)return;const dl=head(t);vs.forEach(([k,l])=>add(dl,l,k==='edad'?c[k]+' años':c[k]))});
+  SECC.forEach(([t,fs],idx)=>{const vs=fs.filter(([k])=>c[k]&&c[k]!=='—');const hasR=idx===0&&(c.rangos||[]).length;if(!vs.length&&!hasR)return;const dl=head(t);if(hasR)add(dl,'Rango',rangosLibro(c.rangos));vs.forEach(([k,l])=>add(dl,l,k==='edad'?c[k]+' años':c[k]))});
   if(c.innatos){const dl=head('Innatos','interpretación');INN.forEach(([k,l])=>c.innatos[k]&&add(dl,l,c.innatos[k]))}
   if(c.habilidades){const dl=head('Habilidades','0–10 · interpretación');HAB.forEach(([k,l])=>{const n=+c.habilidades[k]||0;const w=document.createElement('div');w.className='bar';w.setAttribute('aria-label',l+': '+n+' de 10');const f=document.createElement('i');f.style.width=n*10+'%';const s=document.createElement('b');s.textContent=n;w.append(f,s);add(dl,l,w)})}
   if(c.rasgos&&Object.keys(c.rasgos).length){const dl=head('Rasgos','1–5 · los demás, neutros');const rd=c.rasgos_doc||[];

@@ -37,15 +37,15 @@ function drawFaces(){
   if(!list.length)b.append(el("p",{class:"note"},"Nadie coincide con la búsqueda."));
 }
 function drawFacesLibro(){
-  const q=$("#q").value.trim().toLowerCase();
-  $("#f-pres").hidden=true;
-  const list=LIBRO.filter(c=>!q||[c.nombre,c.nombre_nac,(c.apodos||[]).join(" "),c.titulo_nob,c.puesto].join(" ").toLowerCase().includes(q));
+  const q=$("#q").value.trim().toLowerCase(), fp=$("#f-pres").value;
+  $("#f-pres").hidden=false;
+  const list=LIBRO.filter(c=>(!fp||c.presencia_versalles===fp)&&(!q||[c.nombre,c.nombre_nac,(c.apodos||[]).join(" "),c.titulo_nob,c.puesto].join(" ").toLowerCase().includes(q)));
   $("#faces-count").textContent=list.length+" de "+LIBRO.length+" personas";
   const b=$("#faces"); b.innerHTML="";
   const grupos={}; list.forEach(c=>(grupos[c.faccion||"Sin facción"] ||= []).push(c));
   for(const[g,cs]of Object.entries(grupos)){
     const box=el("div",{class:"plates"});
-    cs.forEach(c=>box.append(el("button",{class:"plate",onclick:()=>openFichaL(c)},retratoEl(c),el("span",{class:"nm"},c.nombre_nac||c.nombre),el("span",{class:"tt"},c.titulo_nob||c.titulo||""),el("span",{class:"tt"},c.puesto||c.cargo||""))));
+    cs.forEach(c=>box.append(el("button",{class:"plate"+(c.presencia_versalles==="ausente"?" away":""),onclick:()=>openFichaL(c)},retratoEl(c),el("span",{class:"nm"},c.nombre_nac||c.nombre),el("span",{class:"tt"},c.titulo_nob||c.titulo||""),el("span",{class:"tt"},c.puesto||c.cargo||""))));
     b.append(el("div",{class:"rama"},el("h3",{},g),box));
   }
   if(!list.length)b.append(el("p",{class:"note"},"Nadie coincide con la búsqueda."));
@@ -56,8 +56,8 @@ function openFichaL(c){
   const ta=el("textarea",{id:"nota-"+key,placeholder:"Lo que piensas de esta persona. Solo tú lo ves."}); ta.value=notas[key]||"";
   ta.addEventListener("input",()=>{const n=store.get("vg_notas",{});n[key]=ta.value;store.set("vg_notas",n)});
   const dl=el("dl",{});
-  [["Título",c.titulo_nob||c.titulo],["Puesto",c.puesto||c.cargo],["Nació",c.nacimiento],["Edad",c.edad?c.edad+" años":""],["Casa",c.casa],["Cónyuge",c.conyuge],["Facción",c.faccion],["Dónde vive",c.ubicacion],["Con el rey",c.relacion_rey]]
-    .forEach(([k,v])=>{if(v&&v!=="—")dl.append(el("dt",{},k),el("dd",{},String(v)))});
+  [["Rango",(c.rangos||[]).length?rangosEl(c.rangos):""],["Título",c.titulo_nob||c.titulo],["Puesto",c.puesto||c.cargo],["Nació",c.nacimiento],["Edad",c.edad?c.edad+" años":""],["Casa",c.casa],["Cónyuge",c.conyuge],["Facción",c.faccion],["Presencia",PRES[c.presencia_versalles]||""],["Dónde vive",c.ubicacion],["Con el rey",c.relacion_rey]]
+    .forEach(([k,v])=>{if(v&&v!=="—")dl.append(el("dt",{},k),el("dd",{},v instanceof Node?v:String(v)))});
   const nom=(c.nombre_nac||c.nombre)+((c.apodos||[]).length?" «"+c.apodos.join("» «")+"»":"");
   f.append(el("button",{class:"x","aria-label":"Cerrar",onclick:()=>{f.hidden=true}},"×"),
     el("span",{class:"label"},"Libro de caras"),retratoEl(c));

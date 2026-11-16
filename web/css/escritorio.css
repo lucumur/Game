@@ -457,3 +457,13 @@ button.kin:hover{border-color:var(--gilt)}
 /* Ficha: el busto vacío no debe crecer sobre el texto */
 #ficha>svg{width:150px;height:182px;min-height:182px;justify-self:center;overflow:visible}
 .ficha-up{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap}
+
+/* Rangos en francés con traducción al pasar el mouse (y foco/toque) */
+.rango-tag,[data-es]{position:relative}
+.rango-tag{border-bottom:1px dotted var(--gilt);cursor:help}
+[data-es]:hover::after,[data-es]:focus-visible::after,[data-es].tip-on::after{
+  content:attr(data-es);position:absolute;left:50%;bottom:calc(100% + 6px);transform:translateX(-50%);
+  background:var(--ink);color:var(--paper);font:12px/1.25 var(--f-body);font-style:normal;letter-spacing:0;text-transform:none;
+  padding:4px 8px;border-radius:var(--r);white-space:nowrap;z-index:30;pointer-events:none;box-shadow:0 4px 12px rgb(0 0 0 / .28)
+}
+#ficha .rango-tag:hover::after,#ficha .rango-tag:focus-visible::after,#ficha .rango-tag.tip-on::after{left:0;transform:none}
