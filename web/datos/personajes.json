@@ -112,7 +112,8 @@
     "rangos": [
       "sang"
     ],
-    "favor": 5
+    "favor": 5,
+    "presencia_versalles": "reside"
   },
   {
     "aficiones": [
@@ -206,7 +207,8 @@
     "rangos": [
       "sang"
     ],
-    "favor": 1
+    "favor": 1,
+    "presencia_versalles": "por verificar"
   },
   {
     "aficiones": [
@@ -354,7 +356,8 @@
     "rangos": [
       "sang"
     ],
-    "favor": 4
+    "favor": 4,
+    "presencia_versalles": "reside"
   },
   {
     "aficiones": [
@@ -464,7 +467,8 @@
     "rangos": [
       "legitime"
     ],
-    "favor": 2
+    "favor": 2,
+    "presencia_versalles": "frecuenta"
   },
   {
     "aficiones": [
@@ -609,7 +613,8 @@
     "rangos": [
       "sang"
     ],
-    "favor": 2
+    "favor": 2,
+    "presencia_versalles": "ocasional"
   },
   {
     "aficiones": [
@@ -733,7 +738,8 @@
     "rangos": [
       "sang"
     ],
-    "favor": 2
+    "favor": 2,
+    "presencia_versalles": "reside"
   },
   {
     "aficiones": [
@@ -865,7 +871,8 @@
       "eglise"
     ],
     "favor": 2,
-    "escritorio_id": "dubois"
+    "escritorio_id": "dubois",
+    "presencia_versalles": "reside"
   },
   {
     "aficiones": [
@@ -993,7 +1000,8 @@
       "eglise"
     ],
     "favor": 5,
-    "escritorio_id": "fleury"
+    "escritorio_id": "fleury",
+    "presencia_versalles": "reside"
   },
   {
     "aficiones": [
@@ -1112,10 +1120,12 @@
     "id": "p09",
     "sexo": "M",
     "rangos": [
+      "pair",
       "epee"
     ],
     "favor": 4,
-    "escritorio_id": "villeroy"
+    "escritorio_id": "villeroy",
+    "presencia_versalles": "reside"
   },
   {
     "aficiones": [
@@ -1219,10 +1229,12 @@
     "id": "p10",
     "sexo": "M",
     "rangos": [
+      "pair",
       "epee"
     ],
     "favor": 2,
-    "escritorio_id": "charost"
+    "escritorio_id": "charost",
+    "presencia_versalles": "reside"
   },
   {
     "aficiones": [
@@ -1338,7 +1350,9 @@
     "rangos": [
       "epee"
     ],
-    "favor": 5
+    "favor": 5,
+    "escritorio_id": "ventadour",
+    "presencia_versalles": "reside"
   },
   {
     "aficiones": [
@@ -1464,7 +1478,8 @@
     "rangos": [
       "sang"
     ],
-    "favor": 2
+    "favor": 2,
+    "presencia_versalles": "reside"
   },
   {
     "aficiones": [
@@ -1598,7 +1613,9 @@
     "rangos": [
       "epee"
     ],
-    "favor": 1
+    "favor": 1,
+    "escritorio_id": "prie",
+    "presencia_versalles": "frecuenta"
   },
   {
     "aficiones": [
@@ -1725,7 +1742,8 @@
     "rangos": [
       "legitime"
     ],
-    "favor": 2
+    "favor": 2,
+    "presencia_versalles": "ocasional"
   },
   {
     "aficiones": [
@@ -1850,7 +1868,8 @@
     "rangos": [
       "sang"
     ],
-    "favor": 1
+    "favor": 1,
+    "presencia_versalles": "frecuenta"
   },
   {
     "aficiones": [
@@ -1957,7 +1976,8 @@
     "rangos": [
       "sang"
     ],
-    "favor": 1
+    "favor": 1,
+    "presencia_versalles": "frecuenta"
   },
   {
     "aficiones": [
@@ -2078,7 +2098,8 @@
     "rangos": [
       "sang"
     ],
-    "favor": 1
+    "favor": 1,
+    "presencia_versalles": "frecuenta"
   },
   {
     "aficiones": [
@@ -2204,7 +2225,8 @@
     "rangos": [
       "legitime"
     ],
-    "favor": 3
+    "favor": 3,
+    "presencia_versalles": "ocasional"
   },
   {
     "aficiones": [
@@ -2336,7 +2358,8 @@
     "rangos": [
       "sang"
     ],
-    "favor": 1
+    "favor": 1,
+    "presencia_versalles": "ocasional"
   },
   {
     "aficiones": [
@@ -2452,7 +2475,8 @@
     "rangos": [
       "legitime"
     ],
-    "favor": 4
+    "favor": 4,
+    "presencia_versalles": "frecuenta"
   },
   {
     "aficiones": [
@@ -2571,10 +2595,12 @@
     "id": "p21",
     "sexo": "M",
     "rangos": [
+      "pair",
       "epee"
     ],
     "favor": 3,
-    "escritorio_id": "antin"
+    "escritorio_id": "antin",
+    "presencia_versalles": "frecuenta"
   },
   {
     "aficiones": [
@@ -2707,10 +2733,12 @@
     "id": "p22",
     "sexo": "M",
     "rangos": [
+      "pair",
       "epee"
     ],
     "favor": 1,
-    "escritorio_id": "saint-simon"
+    "escritorio_id": "saint-simon",
+    "presencia_versalles": "reside"
   },
   {
     "aficiones": [
@@ -2834,10 +2862,12 @@
     "id": "p23",
     "sexo": "M",
     "rangos": [
+      "pair",
       "epee"
     ],
     "favor": 3,
-    "escritorio_id": "villars"
+    "escritorio_id": "villars",
+    "presencia_versalles": "reside"
   },
   {
     "aficiones": [
@@ -2949,10 +2979,12 @@
     "id": "p24",
     "sexo": "M",
     "rangos": [
+      "pair",
       "epee"
     ],
     "favor": 1,
-    "escritorio_id": "noailles"
+    "escritorio_id": "noailles",
+    "presencia_versalles": "reside"
   },
   {
     "aficiones": [
@@ -3061,7 +3093,9 @@
     "rangos": [
       "robe"
     ],
-    "favor": 1
+    "favor": 1,
+    "escritorio_id": "armenonville",
+    "presencia_versalles": "frecuenta"
   },
   {
     "aficiones": [
@@ -3169,7 +3203,9 @@
     "rangos": [
       "robe"
     ],
-    "favor": 1
+    "favor": 1,
+    "escritorio_id": "dodun",
+    "presencia_versalles": "frecuenta"
   },
   {
     "aficiones": [
@@ -3281,7 +3317,9 @@
     "rangos": [
       "robe"
     ],
-    "favor": 1
+    "favor": 1,
+    "escritorio_id": "le-blanc",
+    "presencia_versalles": "reside"
   },
   {
     "aficiones": [
@@ -3395,7 +3433,9 @@
     "rangos": [
       "robe"
     ],
-    "favor": 2
+    "favor": 2,
+    "escritorio_id": "maurepas",
+    "presencia_versalles": "reside"
   },
   {
     "aficiones": [
@@ -3508,7 +3548,9 @@
     "rangos": [
       "robe"
     ],
-    "favor": 1
+    "favor": 1,
+    "escritorio_id": "la-vrilliere",
+    "presencia_versalles": "reside"
   },
   {
     "aficiones": [
@@ -3634,7 +3676,9 @@
     "rangos": [
       "epee"
     ],
-    "favor": 1
+    "favor": 1,
+    "escritorio_id": "belle-isle",
+    "presencia_versalles": "frecuenta"
   },
   {
     "aficiones": [
@@ -3742,7 +3786,9 @@
     "rangos": [
       "etranger"
     ],
-    "favor": 4
+    "favor": 4,
+    "escritorio_id": "carlos-de-lorena",
+    "presencia_versalles": "reside"
   },
   {
     "aficiones": [
@@ -3870,7 +3916,8 @@
       "eglise"
     ],
     "favor": 3,
-    "escritorio_id": "cardenal-rohan"
+    "escritorio_id": "cardenal-rohan",
+    "presencia_versalles": "reside"
   },
   {
     "aficiones": [],
@@ -3919,10 +3966,13 @@
     "id": "p33",
     "sexo": "M",
     "rangos": [
-      "etranger"
+      "etranger",
+      "pair",
+      "epee"
     ],
     "favor": 2,
-    "escritorio_id": "rohan-guemene"
+    "escritorio_id": "rohan-guemene",
+    "presencia_versalles": "por verificar"
   },
   {
     "aficiones": [
@@ -4036,7 +4086,9 @@
     "rangos": [
       "service"
     ],
-    "favor": 3
+    "favor": 3,
+    "escritorio_id": "mareschal",
+    "presencia_versalles": "reside"
   },
   {
     "aficiones": [
@@ -4130,7 +4182,9 @@
     "rangos": [
       "service"
     ],
-    "favor": 3
+    "favor": 3,
+    "escritorio_id": "dodart",
+    "presencia_versalles": "reside"
   },
   {
     "aficiones": [
@@ -4230,7 +4284,9 @@
     "rangos": [
       "service"
     ],
-    "favor": 1
+    "favor": 1,
+    "escritorio_id": "robert-de-cotte",
+    "presencia_versalles": "frecuenta"
   },
   {
     "aficiones": [
@@ -4331,7 +4387,9 @@
     "rangos": [
       "service"
     ],
-    "favor": 2
+    "favor": 2,
+    "escritorio_id": "lalande",
+    "presencia_versalles": "reside"
   },
   {
     "aficiones": [
@@ -4439,7 +4497,9 @@
     "rangos": [
       "service"
     ],
-    "favor": 1
+    "favor": 1,
+    "escritorio_id": "couperin",
+    "presencia_versalles": "frecuenta"
   },
   {
     "aficiones": [
@@ -4579,7 +4639,9 @@
     "rangos": [
       "ambassade"
     ],
-    "favor": 1
+    "favor": 1,
+    "escritorio_id": "luke-schaub",
+    "presencia_versalles": "frecuenta"
   },
   {
     "aficiones": [
@@ -4698,7 +4760,9 @@
     "rangos": [
       "sang"
     ],
-    "favor": 3
+    "favor": 3,
+    "escritorio_id": "felipe-v",
+    "presencia_versalles": "ausente"
   },
   {
     "aficiones": [
@@ -4800,10 +4864,13 @@
     "id": "p41",
     "sexo": "M",
     "rangos": [
-      "etranger"
+      "etranger",
+      "pair",
+      "epee"
     ],
     "favor": 4,
-    "escritorio_id": "la-tremoille"
+    "escritorio_id": "la-tremoille",
+    "presencia_versalles": "reside"
   },
   {
     "aficiones": [
@@ -4925,7 +4992,9 @@
     "rangos": [
       "epee"
     ],
-    "favor": 1
+    "favor": 1,
+    "escritorio_id": "parabere",
+    "presencia_versalles": "ocasional"
   },
   {
     "aficiones": [
@@ -5036,7 +5105,9 @@
     "rangos": [
       "eglise"
     ],
-    "favor": 3
+    "favor": 3,
+    "escritorio_id": "linieres",
+    "presencia_versalles": "reside"
   },
   {
     "id": "p45",
@@ -5076,7 +5147,8 @@
     "rango": 84,
     "sexo": "M",
     "rangos": [
-      "par"
+      "pair",
+      "epee"
     ],
     "favor": 3,
     "innatos": {
@@ -5100,7 +5172,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "frecuenta"
   },
   {
     "id": "p46",
@@ -5140,7 +5213,8 @@
     "rango": 82,
     "sexo": "M",
     "rangos": [
-      "par"
+      "pair",
+      "epee"
     ],
     "favor": 3,
     "innatos": {
@@ -5164,7 +5238,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "frecuenta"
   },
   {
     "id": "p47",
@@ -5204,7 +5279,9 @@
     "rango": 88,
     "sexo": "M",
     "rangos": [
-      "par"
+      "etranger",
+      "pair",
+      "epee"
     ],
     "favor": 3,
     "innatos": {
@@ -5228,7 +5305,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "frecuenta"
   },
   {
     "id": "p48",
@@ -5268,7 +5346,7 @@
     "rango": 80,
     "sexo": "M",
     "rangos": [
-      "espada"
+      "epee"
     ],
     "favor": 3,
     "innatos": {
@@ -5292,7 +5370,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "frecuenta"
   },
   {
     "id": "p49",
@@ -5332,7 +5411,8 @@
     "rango": 83,
     "sexo": "M",
     "rangos": [
-      "espada"
+      "etranger",
+      "epee"
     ],
     "favor": 3,
     "innatos": {
@@ -5356,7 +5436,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "frecuenta"
   },
   {
     "id": "p50",
@@ -5396,7 +5477,8 @@
     "rango": 83,
     "sexo": "M",
     "rangos": [
-      "par"
+      "pair",
+      "epee"
     ],
     "favor": 3,
     "innatos": {
@@ -5420,7 +5502,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "frecuenta"
   },
   {
     "id": "p51",
@@ -5460,7 +5543,8 @@
     "rango": 86,
     "sexo": "M",
     "rangos": [
-      "par"
+      "pair",
+      "epee"
     ],
     "favor": 3,
     "innatos": {
@@ -5484,7 +5568,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "frecuenta"
   },
   {
     "id": "p52",
@@ -5524,7 +5609,8 @@
     "rango": 84,
     "sexo": "M",
     "rangos": [
-      "par"
+      "pair",
+      "epee"
     ],
     "favor": 3,
     "innatos": {
@@ -5548,7 +5634,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "frecuenta"
   },
   {
     "id": "p53",
@@ -5588,7 +5675,8 @@
     "rango": 84,
     "sexo": "M",
     "rangos": [
-      "par"
+      "pair",
+      "epee"
     ],
     "favor": 3,
     "innatos": {
@@ -5612,7 +5700,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "frecuenta"
   },
   {
     "id": "p54",
@@ -5652,7 +5741,9 @@
     "rango": 87,
     "sexo": "M",
     "rangos": [
-      "espada"
+      "etranger",
+      "pair",
+      "epee"
     ],
     "favor": 3,
     "innatos": {
@@ -5676,7 +5767,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "frecuenta"
   },
   {
     "id": "p55",
@@ -5716,7 +5808,8 @@
     "rango": 83,
     "sexo": "M",
     "rangos": [
-      "par"
+      "pair",
+      "epee"
     ],
     "favor": 3,
     "innatos": {
@@ -5740,7 +5833,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "frecuenta"
   },
   {
     "id": "p56",
@@ -5780,7 +5874,8 @@
     "rango": 83,
     "sexo": "M",
     "rangos": [
-      "par"
+      "pair",
+      "epee"
     ],
     "favor": 3,
     "innatos": {
@@ -5804,7 +5899,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "frecuenta"
   },
   {
     "id": "p57",
@@ -5844,7 +5940,8 @@
     "rango": 84,
     "sexo": "M",
     "rangos": [
-      "par"
+      "pair",
+      "epee"
     ],
     "favor": 3,
     "innatos": {
@@ -5868,7 +5965,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "frecuenta"
   },
   {
     "id": "p58",
@@ -5908,7 +6006,8 @@
     "rango": 85,
     "sexo": "M",
     "rangos": [
-      "par"
+      "pair",
+      "epee"
     ],
     "favor": 3,
     "innatos": {
@@ -5932,7 +6031,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "frecuenta"
   },
   {
     "id": "p59",
@@ -5972,7 +6072,7 @@
     "rango": 74,
     "sexo": "M",
     "rangos": [
-      "espada"
+      "epee"
     ],
     "favor": 3,
     "innatos": {
@@ -5996,7 +6096,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "frecuenta"
   },
   {
     "id": "p60",
@@ -6036,7 +6137,7 @@
     "rango": 78,
     "sexo": "M",
     "rangos": [
-      "toga"
+      "robe"
     ],
     "favor": 3,
     "innatos": {
@@ -6060,7 +6161,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p61",
@@ -6100,7 +6202,7 @@
     "rango": 72,
     "sexo": "M",
     "rangos": [
-      "toga"
+      "robe"
     ],
     "favor": 3,
     "innatos": {
@@ -6124,7 +6226,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p62",
@@ -6164,7 +6267,7 @@
     "rango": 71,
     "sexo": "M",
     "rangos": [
-      "toga"
+      "robe"
     ],
     "favor": 3,
     "innatos": {
@@ -6188,7 +6291,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p63",
@@ -6228,7 +6332,7 @@
     "rango": 72,
     "sexo": "M",
     "rangos": [
-      "toga"
+      "robe"
     ],
     "favor": 3,
     "innatos": {
@@ -6252,7 +6356,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p64",
@@ -6292,7 +6397,7 @@
     "rango": 70,
     "sexo": "M",
     "rangos": [
-      "toga"
+      "robe"
     ],
     "favor": 3,
     "innatos": {
@@ -6316,7 +6421,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p65",
@@ -6356,7 +6462,7 @@
     "rango": 71,
     "sexo": "M",
     "rangos": [
-      "toga"
+      "robe"
     ],
     "favor": 3,
     "innatos": {
@@ -6380,7 +6486,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p66",
@@ -6420,7 +6527,7 @@
     "rango": 74,
     "sexo": "M",
     "rangos": [
-      "toga"
+      "robe"
     ],
     "favor": 3,
     "innatos": {
@@ -6444,7 +6551,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p67",
@@ -6484,7 +6592,7 @@
     "rango": 71,
     "sexo": "M",
     "rangos": [
-      "toga"
+      "robe"
     ],
     "favor": 3,
     "innatos": {
@@ -6508,7 +6616,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p68",
@@ -6548,7 +6657,7 @@
     "rango": 69,
     "sexo": "M",
     "rangos": [
-      "toga"
+      "robe"
     ],
     "favor": 3,
     "innatos": {
@@ -6572,7 +6681,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p69",
@@ -6612,7 +6722,7 @@
     "rango": 70,
     "sexo": "M",
     "rangos": [
-      "toga"
+      "robe"
     ],
     "favor": 3,
     "innatos": {
@@ -6636,7 +6746,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p70",
@@ -6676,7 +6787,7 @@
     "rango": 69,
     "sexo": "M",
     "rangos": [
-      "toga"
+      "robe"
     ],
     "favor": 3,
     "innatos": {
@@ -6700,7 +6811,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p71",
@@ -6740,7 +6852,7 @@
     "rango": 70,
     "sexo": "M",
     "rangos": [
-      "toga"
+      "robe"
     ],
     "favor": 3,
     "innatos": {
@@ -6764,7 +6876,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p72",
@@ -6804,7 +6917,7 @@
     "rango": 69,
     "sexo": "M",
     "rangos": [
-      "toga"
+      "robe"
     ],
     "favor": 3,
     "innatos": {
@@ -6828,7 +6941,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p73",
@@ -6868,7 +6982,8 @@
     "rango": 89,
     "sexo": "M",
     "rangos": [
-      "par"
+      "pair",
+      "eglise"
     ],
     "favor": 3,
     "innatos": {
@@ -6892,7 +7007,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p74",
@@ -6932,7 +7048,9 @@
     "rango": 90,
     "sexo": "M",
     "rangos": [
-      "par"
+      "etranger",
+      "pair",
+      "eglise"
     ],
     "favor": 3,
     "innatos": {
@@ -6956,7 +7074,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p75",
@@ -6996,7 +7115,7 @@
     "rango": 86,
     "sexo": "M",
     "rangos": [
-      "clero"
+      "eglise"
     ],
     "favor": 3,
     "innatos": {
@@ -7020,7 +7139,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p76",
@@ -7060,7 +7180,7 @@
     "rango": 73,
     "sexo": "M",
     "rangos": [
-      "clero"
+      "eglise"
     ],
     "favor": 3,
     "innatos": {
@@ -7084,7 +7204,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p77",
@@ -7124,7 +7245,7 @@
     "rango": 76,
     "sexo": "M",
     "rangos": [
-      "clero"
+      "eglise"
     ],
     "favor": 3,
     "innatos": {
@@ -7148,7 +7269,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p78",
@@ -7188,7 +7310,7 @@
     "rango": 81,
     "sexo": "M",
     "rangos": [
-      "clero"
+      "eglise"
     ],
     "favor": 3,
     "innatos": {
@@ -7212,7 +7334,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p79",
@@ -7252,7 +7375,7 @@
     "rango": 83,
     "sexo": "M",
     "rangos": [
-      "clero"
+      "eglise"
     ],
     "favor": 3,
     "innatos": {
@@ -7276,7 +7399,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p80",
@@ -7316,7 +7440,7 @@
     "rango": 77,
     "sexo": "M",
     "rangos": [
-      "clero"
+      "eglise"
     ],
     "favor": 3,
     "innatos": {
@@ -7340,7 +7464,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p81",
@@ -7380,7 +7505,7 @@
     "rango": 78,
     "sexo": "M",
     "rangos": [
-      "clero"
+      "eglise"
     ],
     "favor": 3,
     "innatos": {
@@ -7404,7 +7529,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p82",
@@ -7444,7 +7570,7 @@
     "rango": 82,
     "sexo": "M",
     "rangos": [
-      "clero"
+      "eglise"
     ],
     "favor": 3,
     "innatos": {
@@ -7468,7 +7594,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "presencia_versalles": "ocasional"
   },
   {
     "id": "p83",
@@ -7508,7 +7635,7 @@
     "rango": 80,
     "sexo": "M",
     "rangos": [
-      "clero"
+      "eglise"
     ],
     "favor": 3,
     "innatos": {
@@ -7525,6 +7652,774 @@
       "devocion": 4,
       "galanteria": 6
     },
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": "",
+    "presencia_versalles": "ocasional"
+  },
+  {
+    "id": "p84",
+    "escritorio_id": "louise-elisabeth-montpensier",
+    "orden": 84,
+    "nombre": "Luisa Isabel de Orleans",
+    "nombre_nac": "Luisa Isabel de Orleans",
+    "apodos": [],
+    "anio": 1709,
+    "edad": "12",
+    "nacimiento": "11/12/1709",
+    "muerte": "—",
+    "casa": "Orleans",
+    "estatus_familia": "Princesa de la sangre",
+    "titulo": "Mademoiselle de Montpensier; princesa de Asturias",
+    "titulo_nob": "Mademoiselle de Montpensier; princesa de Asturias",
+    "puesto": "Casada con el príncipe de Asturias",
+    "cargo": "Casada con el príncipe de Asturias",
+    "padre": "Felipe II de Orleans (p03)",
+    "madre": "Francisca María de Borbón (p04)",
+    "lugar_familia": "Hija del Regente",
+    "conyuge": "Luis I, príncipe de Asturias (1722)",
+    "hijos": "—",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "—",
+    "vocacion": "Corte",
+    "llegada_corte": "Por nacimiento",
+    "faccion": "España",
+    "ubicacion": "Madrid (España)",
+    "quiere": "—",
+    "oculta": "—",
+    "relacion_rey": "Hija del Regente",
+    "hitos": "En España tras el intercambio de princesas (1722).",
+    "estatus": "por verificar",
+    "presencia_versalles": "ausente",
+    "riqueza": 8,
+    "rango": 90,
+    "sexo": "F",
+    "rangos": [
+      "sang"
+    ],
+    "favor": 3,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": ""
+  },
+  {
+    "id": "p85",
+    "escritorio_id": "philippine-elisabeth-beaujolais",
+    "orden": 85,
+    "nombre": "Felipa Isabel de Orleans",
+    "nombre_nac": "Felipa Isabel de Orleans",
+    "apodos": [],
+    "anio": 1714,
+    "edad": "7",
+    "nacimiento": "18/12/1714",
+    "muerte": "—",
+    "casa": "Orleans",
+    "estatus_familia": "Princesa de la sangre",
+    "titulo": "Mademoiselle de Beaujolais",
+    "titulo_nob": "Mademoiselle de Beaujolais",
+    "puesto": "Prometida del infante Carlos",
+    "cargo": "Prometida del infante Carlos",
+    "padre": "Felipe II de Orleans (p03)",
+    "madre": "Francisca María de Borbón (p04)",
+    "lugar_familia": "Hija del Regente",
+    "conyuge": "Prometida al infante Carlos de España",
+    "hijos": "—",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "—",
+    "vocacion": "Corte",
+    "llegada_corte": "Por nacimiento",
+    "faccion": "España",
+    "ubicacion": "España",
+    "quiere": "—",
+    "oculta": "—",
+    "relacion_rey": "Hija del Regente",
+    "hitos": "Enviada a España.",
+    "estatus": "por verificar",
+    "presencia_versalles": "ausente",
+    "riqueza": 8,
+    "rango": 88,
+    "sexo": "F",
+    "rangos": [
+      "sang"
+    ],
+    "favor": 2,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": ""
+  },
+  {
+    "id": "p86",
+    "escritorio_id": "charlotte-aglae",
+    "orden": 86,
+    "nombre": "Carlota Aglaé de Orleans",
+    "nombre_nac": "Carlota Aglaé de Orleans",
+    "apodos": [],
+    "anio": 1700,
+    "edad": "21",
+    "nacimiento": "20/10/1700",
+    "muerte": "—",
+    "casa": "Orleans",
+    "estatus_familia": "Princesa de la sangre",
+    "titulo": "Princesa heredera de Módena",
+    "titulo_nob": "Princesa heredera de Módena",
+    "puesto": "Casada en Módena (1720)",
+    "cargo": "Casada en Módena (1720)",
+    "padre": "Felipe II de Orleans (p03)",
+    "madre": "Francisca María de Borbón (p04)",
+    "lugar_familia": "Hija del Regente",
+    "conyuge": "Francisco III de Este, príncipe heredero de Módena (1720)",
+    "hijos": "—",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "—",
+    "vocacion": "Corte",
+    "llegada_corte": "Por nacimiento",
+    "faccion": "Orleans",
+    "ubicacion": "Módena (Italia)",
+    "quiere": "—",
+    "oculta": "—",
+    "relacion_rey": "Hija del Regente",
+    "hitos": "—",
+    "estatus": "por verificar",
+    "presencia_versalles": "ausente",
+    "riqueza": 8,
+    "rango": 89,
+    "sexo": "F",
+    "rangos": [
+      "sang"
+    ],
+    "favor": 2,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": ""
+  },
+  {
+    "id": "p87",
+    "escritorio_id": "louise-adelaide-chelles",
+    "orden": 87,
+    "nombre": "Luisa Adelaida de Orleans",
+    "nombre_nac": "Luisa Adelaida de Orleans",
+    "apodos": [],
+    "anio": 1698,
+    "edad": "23",
+    "nacimiento": "13/08/1698",
+    "muerte": "—",
+    "casa": "Orleans",
+    "estatus_familia": "Princesa de la sangre",
+    "titulo": "Abadesa de Chelles",
+    "titulo_nob": "Abadesa de Chelles",
+    "puesto": "Abadesa",
+    "cargo": "Abadesa",
+    "padre": "Felipe II de Orleans (p03)",
+    "madre": "Francisca María de Borbón (p04)",
+    "lugar_familia": "Hija del Regente",
+    "conyuge": "Voto monástico",
+    "hijos": "—",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "—",
+    "vocacion": "Iglesia",
+    "llegada_corte": "Por nacimiento",
+    "faccion": "Orleans",
+    "ubicacion": "Abadía de Chelles",
+    "quiere": "—",
+    "oculta": "—",
+    "relacion_rey": "Hija del Regente",
+    "hitos": "—",
+    "estatus": "por verificar",
+    "presencia_versalles": "ausente",
+    "riqueza": 7,
+    "rango": 88,
+    "sexo": "F",
+    "rangos": [
+      "sang",
+      "eglise"
+    ],
+    "favor": 2,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": ""
+  },
+  {
+    "id": "p88",
+    "escritorio_id": "louise-diane",
+    "orden": 88,
+    "nombre": "Luisa Diana de Orleans",
+    "nombre_nac": "Luisa Diana de Orleans",
+    "apodos": [],
+    "anio": 1716,
+    "edad": "5",
+    "nacimiento": "27/06/1716",
+    "muerte": "—",
+    "casa": "Orleans",
+    "estatus_familia": "Princesa de la sangre",
+    "titulo": "Mademoiselle de Chartres",
+    "titulo_nob": "Mademoiselle de Chartres",
+    "puesto": "Niña",
+    "cargo": "Niña",
+    "padre": "Felipe II de Orleans (p03)",
+    "madre": "Francisca María de Borbón (p04)",
+    "lugar_familia": "Hija menor del Regente",
+    "conyuge": "—",
+    "hijos": "—",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "—",
+    "vocacion": "Corte",
+    "llegada_corte": "Por nacimiento",
+    "faccion": "Orleans",
+    "ubicacion": "Por verificar (París / Palais-Royal)",
+    "quiere": "—",
+    "oculta": "—",
+    "relacion_rey": "Hija menor del Regente",
+    "hitos": "—",
+    "estatus": "por verificar",
+    "presencia_versalles": "por verificar",
+    "riqueza": 8,
+    "rango": 87,
+    "sexo": "F",
+    "rangos": [
+      "sang"
+    ],
+    "favor": 2,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": ""
+  },
+  {
+    "id": "p89",
+    "escritorio_id": "louis-clermont",
+    "orden": 89,
+    "nombre": "Luis de Borbón-Condé",
+    "nombre_nac": "Luis de Borbón-Condé",
+    "apodos": [],
+    "anio": 1709,
+    "edad": "13",
+    "nacimiento": "15/06/1709",
+    "muerte": "—",
+    "casa": "Borbón-Condé",
+    "estatus_familia": "Príncipe de la sangre",
+    "titulo": "Conde de Clermont",
+    "titulo_nob": "Conde de Clermont",
+    "puesto": "Príncipe de la sangre; destinado a la Iglesia",
+    "cargo": "Príncipe de la sangre; destinado a la Iglesia",
+    "padre": "Luis III de Borbón-Condé (†1710)",
+    "madre": "Luisa Francisca de Borbón (p14)",
+    "lugar_familia": "Hermano de Monsieur le Duc",
+    "conyuge": "—",
+    "hijos": "—",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "—",
+    "vocacion": "Iglesia (destinado)",
+    "llegada_corte": "Por nacimiento",
+    "faccion": "Borbón-Condé",
+    "ubicacion": "París / Versalles / Chantilly",
+    "quiere": "—",
+    "oculta": "—",
+    "relacion_rey": "Hermano de Monsieur le Duc",
+    "hitos": "—",
+    "estatus": "por verificar",
+    "presencia_versalles": "frecuenta",
+    "riqueza": 8,
+    "rango": 88,
+    "sexo": "M",
+    "rangos": [
+      "sang"
+    ],
+    "favor": 2,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": ""
+  },
+  {
+    "id": "p90",
+    "escritorio_id": "louise-anne-charolais",
+    "orden": 90,
+    "nombre": "Luisa Ana de Borbón-Condé",
+    "nombre_nac": "Luisa Ana de Borbón-Condé",
+    "apodos": [],
+    "anio": 1695,
+    "edad": "26",
+    "nacimiento": "23/06/1695",
+    "muerte": "—",
+    "casa": "Borbón-Condé",
+    "estatus_familia": "Princesa de la sangre",
+    "titulo": "Mademoiselle de Charolais",
+    "titulo_nob": "Mademoiselle de Charolais",
+    "puesto": "Soltera",
+    "cargo": "Soltera",
+    "padre": "Luis III de Borbón-Condé (†1710)",
+    "madre": "Luisa Francisca de Borbón (p14)",
+    "lugar_familia": "Hermana de Monsieur le Duc",
+    "conyuge": "—",
+    "hijos": "—",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "—",
+    "vocacion": "Corte",
+    "llegada_corte": "Por nacimiento",
+    "faccion": "Borbón-Condé",
+    "ubicacion": "Versalles / París",
+    "quiere": "—",
+    "oculta": "—",
+    "relacion_rey": "Hermana de Monsieur le Duc",
+    "hitos": "—",
+    "estatus": "por verificar",
+    "presencia_versalles": "frecuenta",
+    "riqueza": 8,
+    "rango": 88,
+    "sexo": "F",
+    "rangos": [
+      "sang"
+    ],
+    "favor": 3,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": ""
+  },
+  {
+    "id": "p91",
+    "escritorio_id": "henriette-vermandois",
+    "orden": 91,
+    "nombre": "Enriqueta Luisa de Borbón-Condé",
+    "nombre_nac": "Enriqueta Luisa de Borbón-Condé",
+    "apodos": [],
+    "anio": 1703,
+    "edad": "19",
+    "nacimiento": "15/01/1703",
+    "muerte": "—",
+    "casa": "Borbón-Condé",
+    "estatus_familia": "Princesa de la sangre",
+    "titulo": "Mademoiselle de Vermandois",
+    "titulo_nob": "Mademoiselle de Vermandois",
+    "puesto": "Religiosa",
+    "cargo": "Religiosa",
+    "padre": "Luis III de Borbón-Condé (†1710)",
+    "madre": "Luisa Francisca de Borbón (p14)",
+    "lugar_familia": "Hermana de Monsieur le Duc",
+    "conyuge": "Voto monástico",
+    "hijos": "—",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "—",
+    "vocacion": "Iglesia",
+    "llegada_corte": "Por nacimiento",
+    "faccion": "Borbón-Condé",
+    "ubicacion": "Abadía de Beaumont-lès-Tours",
+    "quiere": "—",
+    "oculta": "—",
+    "relacion_rey": "Hermana de Monsieur le Duc",
+    "hitos": "—",
+    "estatus": "por verificar",
+    "presencia_versalles": "ausente",
+    "riqueza": 7,
+    "rango": 87,
+    "sexo": "F",
+    "rangos": [
+      "sang",
+      "eglise"
+    ],
+    "favor": 2,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": ""
+  },
+  {
+    "id": "p92",
+    "escritorio_id": "elisabeth-sens",
+    "orden": 92,
+    "nombre": "Isabel Alejandrina de Borbón-Condé",
+    "nombre_nac": "Isabel Alejandrina de Borbón-Condé",
+    "apodos": [],
+    "anio": 1705,
+    "edad": "16",
+    "nacimiento": "15/09/1705",
+    "muerte": "—",
+    "casa": "Borbón-Condé",
+    "estatus_familia": "Princesa de la sangre",
+    "titulo": "Mademoiselle de Sens",
+    "titulo_nob": "Mademoiselle de Sens",
+    "puesto": "Soltera",
+    "cargo": "Soltera",
+    "padre": "Luis III de Borbón-Condé (†1710)",
+    "madre": "Luisa Francisca de Borbón (p14)",
+    "lugar_familia": "Hermana de Monsieur le Duc",
+    "conyuge": "—",
+    "hijos": "—",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "—",
+    "vocacion": "Corte",
+    "llegada_corte": "Por nacimiento",
+    "faccion": "Borbón-Condé",
+    "ubicacion": "Versalles / París",
+    "quiere": "—",
+    "oculta": "—",
+    "relacion_rey": "Hermana de Monsieur le Duc",
+    "hitos": "—",
+    "estatus": "por verificar",
+    "presencia_versalles": "frecuenta",
+    "riqueza": 8,
+    "rango": 87,
+    "sexo": "F",
+    "rangos": [
+      "sang"
+    ],
+    "favor": 2,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": ""
+  },
+  {
+    "id": "p93",
+    "escritorio_id": "louise-elisabeth-conti",
+    "orden": 93,
+    "nombre": "Luisa Isabel de Borbón-Condé",
+    "nombre_nac": "Luisa Isabel de Borbón-Condé",
+    "apodos": [],
+    "anio": 1693,
+    "edad": "28",
+    "nacimiento": "22/11/1693",
+    "muerte": "—",
+    "casa": "Borbón-Conti (nacida Condé)",
+    "estatus_familia": "Princesa de la sangre",
+    "titulo": "Princesa de Conti",
+    "titulo_nob": "Princesa de Conti",
+    "puesto": "Princesa de Conti",
+    "cargo": "Princesa de Conti",
+    "padre": "Luis III de Borbón-Condé (†1710)",
+    "madre": "Luisa Francisca de Borbón (p14)",
+    "lugar_familia": "Hermana de Monsieur le Duc; esposa del príncipe de Conti",
+    "conyuge": "Luis Armando II de Borbón, príncipe de Conti (p17)",
+    "hijos": "—",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "—",
+    "vocacion": "Corte",
+    "llegada_corte": "Por nacimiento",
+    "faccion": "Borbón-Condé",
+    "ubicacion": "Versalles / París",
+    "quiere": "—",
+    "oculta": "—",
+    "relacion_rey": "Hermana de Monsieur le Duc; esposa del príncipe de Conti",
+    "hitos": "—",
+    "estatus": "por verificar",
+    "presencia_versalles": "frecuenta",
+    "riqueza": 8,
+    "rango": 89,
+    "sexo": "F",
+    "rangos": [
+      "sang"
+    ],
+    "favor": 3,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": ""
+  },
+  {
+    "id": "p94",
+    "escritorio_id": "marie-therese-conti",
+    "orden": 94,
+    "nombre": "María Teresa de Borbón-Condé",
+    "nombre_nac": "María Teresa de Borbón-Condé",
+    "apodos": [],
+    "anio": 1666,
+    "edad": "56",
+    "nacimiento": "01/02/1666",
+    "muerte": "—",
+    "casa": "Borbón-Conti (nacida Condé)",
+    "estatus_familia": "Princesa de la sangre",
+    "titulo": "Princesa viuda de Conti",
+    "titulo_nob": "Princesa viuda de Conti",
+    "puesto": "Viuda",
+    "cargo": "Viuda",
+    "padre": "Enrique Julio de Borbón-Condé (†1709)",
+    "madre": "Ana Enriqueta del Palatinado (p98)",
+    "lugar_familia": "Madre del príncipe de Conti",
+    "conyuge": "Viuda de Francisco Luis de Borbón, príncipe de Conti (†1709)",
+    "hijos": "Marie-Anne de Borbón-Conti (†1720), Luis Armando II de Conti (p17), Luisa Adelaida de La Roche-sur-Yon (p95)",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "—",
+    "vocacion": "Corte",
+    "llegada_corte": "Por nacimiento",
+    "faccion": "Neutral",
+    "ubicacion": "París / L'Isle-Adam",
+    "quiere": "—",
+    "oculta": "—",
+    "relacion_rey": "Madre del príncipe de Conti",
+    "hitos": "—",
+    "estatus": "por verificar",
+    "presencia_versalles": "ocasional",
+    "riqueza": 8,
+    "rango": 89,
+    "sexo": "F",
+    "rangos": [
+      "sang"
+    ],
+    "favor": 2,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": ""
+  },
+  {
+    "id": "p95",
+    "escritorio_id": "louise-adelaide-roche",
+    "orden": 95,
+    "nombre": "Luisa Adelaida de Borbón-Conti",
+    "nombre_nac": "Luisa Adelaida de Borbón-Conti",
+    "apodos": [],
+    "anio": 1696,
+    "edad": "25",
+    "nacimiento": "02/11/1696",
+    "muerte": "—",
+    "casa": "Borbón-Conti",
+    "estatus_familia": "Princesa de la sangre",
+    "titulo": "Mademoiselle de La Roche-sur-Yon",
+    "titulo_nob": "Mademoiselle de La Roche-sur-Yon",
+    "puesto": "Soltera",
+    "cargo": "Soltera",
+    "padre": "Francisco Luis de Borbón, príncipe de Conti (†1709)",
+    "madre": "María Teresa de Borbón-Condé (p94)",
+    "lugar_familia": "Hermana del príncipe de Conti",
+    "conyuge": "—",
+    "hijos": "—",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "—",
+    "vocacion": "Corte",
+    "llegada_corte": "Por nacimiento",
+    "faccion": "Neutral",
+    "ubicacion": "Versalles / París",
+    "quiere": "—",
+    "oculta": "—",
+    "relacion_rey": "Hermana del príncipe de Conti",
+    "hitos": "—",
+    "estatus": "por verificar",
+    "presencia_versalles": "frecuenta",
+    "riqueza": 7,
+    "rango": 87,
+    "sexo": "F",
+    "rangos": [
+      "sang"
+    ],
+    "favor": 2,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": ""
+  },
+  {
+    "id": "p96",
+    "escritorio_id": "prince-de-dombes",
+    "orden": 96,
+    "nombre": "Luis Augusto de Borbón",
+    "nombre_nac": "Luis Augusto de Borbón",
+    "apodos": [],
+    "anio": 1700,
+    "edad": "22",
+    "nacimiento": "04/03/1700",
+    "muerte": "—",
+    "casa": "Borbón-Maine",
+    "estatus_familia": "Príncipe legitimado (hijo del duque de Maine)",
+    "titulo": "Príncipe de Dombes",
+    "titulo_nob": "Príncipe de Dombes",
+    "puesto": "Príncipe de Dombes",
+    "cargo": "Príncipe de Dombes",
+    "padre": "Luis Augusto de Borbón, duque de Maine (p18)",
+    "madre": "Ana Luisa Benedicta de Borbón-Condé (p19)",
+    "lugar_familia": "Hijo mayor del duque de Maine",
+    "conyuge": "—",
+    "hijos": "—",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "—",
+    "vocacion": "Corte",
+    "llegada_corte": "Por nacimiento",
+    "faccion": "Legitimados",
+    "ubicacion": "Sceaux / Versalles",
+    "quiere": "—",
+    "oculta": "—",
+    "relacion_rey": "Hijo mayor del duque de Maine",
+    "hitos": "—",
+    "estatus": "por verificar",
+    "presencia_versalles": "frecuenta",
+    "riqueza": 8,
+    "rango": 83,
+    "sexo": "M",
+    "rangos": [
+      "legitime"
+    ],
+    "favor": 2,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": ""
+  },
+  {
+    "id": "p97",
+    "escritorio_id": "comte-d-eu",
+    "orden": 97,
+    "nombre": "Luis Carlos de Borbón",
+    "nombre_nac": "Luis Carlos de Borbón",
+    "apodos": [],
+    "anio": 1701,
+    "edad": "20",
+    "nacimiento": "15/10/1701",
+    "muerte": "—",
+    "casa": "Borbón-Maine",
+    "estatus_familia": "Príncipe legitimado (hijo del duque de Maine)",
+    "titulo": "Conde de Eu",
+    "titulo_nob": "Conde de Eu",
+    "puesto": "Conde de Eu",
+    "cargo": "Conde de Eu",
+    "padre": "Luis Augusto de Borbón, duque de Maine (p18)",
+    "madre": "Ana Luisa Benedicta de Borbón-Condé (p19)",
+    "lugar_familia": "Hijo del duque de Maine",
+    "conyuge": "—",
+    "hijos": "—",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "—",
+    "vocacion": "Corte",
+    "llegada_corte": "Por nacimiento",
+    "faccion": "Legitimados",
+    "ubicacion": "Sceaux / Versalles",
+    "quiere": "—",
+    "oculta": "—",
+    "relacion_rey": "Hijo del duque de Maine",
+    "hitos": "—",
+    "estatus": "por verificar",
+    "presencia_versalles": "frecuenta",
+    "riqueza": 8,
+    "rango": 82,
+    "sexo": "M",
+    "rangos": [
+      "legitime"
+    ],
+    "favor": 2,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": ""
+  },
+  {
+    "id": "p98",
+    "escritorio_id": "anne-henriette",
+    "orden": 98,
+    "nombre": "Ana Enriqueta del Palatinado",
+    "nombre_nac": "Ana Enriqueta del Palatinado",
+    "apodos": [],
+    "anio": 1648,
+    "edad": "74",
+    "nacimiento": "13/03/1648",
+    "muerte": "—",
+    "casa": "Borbón-Condé (nacida Palatinado)",
+    "estatus_familia": "Princesa de la sangre (viuda)",
+    "titulo": "Madame la Princesse; princesa viuda de Condé",
+    "titulo_nob": "Madame la Princesse; princesa viuda de Condé",
+    "puesto": "Viuda",
+    "cargo": "Viuda",
+    "padre": "Eduardo del Palatinado (†1663)",
+    "madre": "Ana Gonzaga (†1684)",
+    "lugar_familia": "Abuela de Monsieur le Duc; madre de la duquesa de Maine y de la princesa viuda de Conti",
+    "conyuge": "Viuda de Enrique Julio de Borbón-Condé (†1709)",
+    "hijos": "Duquesa de Maine (p19), Princesa viuda de Conti (p94)",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "—",
+    "vocacion": "Corte",
+    "llegada_corte": "Por nacimiento",
+    "faccion": "Borbón-Condé",
+    "ubicacion": "París (Petit-Luxembourg)",
+    "quiere": "—",
+    "oculta": "—",
+    "relacion_rey": "Abuela de Monsieur le Duc; madre de la duquesa de Maine y de la princesa viuda de Conti",
+    "hitos": "—",
+    "estatus": "por verificar",
+    "presencia_versalles": "ocasional",
+    "riqueza": 8,
+    "rango": 90,
+    "sexo": "F",
+    "rangos": [
+      "sang"
+    ],
+    "favor": 2,
     "rasgos": {},
     "rasgos_doc": [],
     "cualidades": {},
