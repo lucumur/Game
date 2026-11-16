@@ -8810,9 +8810,9 @@
     "apodos": [
       "Barón de Pentenriedter"
     ],
-    "anio": null,
-    "edad": "Por verificar",
-    "nacimiento": "Por verificar",
+    "anio": 1678,
+    "edad": "c. 44",
+    "nacimiento": "c. 1678 (probable)",
     "muerte": "20/07/1728 (Soissons)",
     "casa": "Pentenriedter (Austria)",
     "estatus_familia": "Diplomático imperial (consejero áulico)",
@@ -8835,8 +8835,8 @@
     "quiere": "Defender las pretensiones imperiales y asesorar sobre los Países Bajos Austríacos en Cambrai",
     "oculta": "—",
     "relacion_rey": "Enviado del príncipe Eugenio y de Viena; en 1715 obligó a Luis XIV a oírlo gritando «L'Empereur, mon maître, Sire!»",
-    "hitos": "En su primera audiencia con Luis XIV (1715), tras ser interrumpido dos veces con «Plus haut, M. le Ministre!», gritó «L'Empereur, mon maître, Sire!» sin perder la compostura. Negociador firme y perspicaz en París y Cambrai (1722); muere en las conversaciones de Soissons con Fleury (1728) [confirmado por fuentes aportadas; nacimiento sin verificar]",
-    "estatus": "por verificar",
+    "hitos": "En su primera audiencia con Luis XIV (1715), tras ser interrumpido dos veces con «Plus haut, M. le Ministre!», gritó «L'Empereur, mon maître, Sire!» sin perder la compostura. Consejero áulico desde ~1714 (Utrecht/Rastatt/Baden), plenipotenciario en París y Cambrai (1722); muere en Soissons (1728) [nacimiento c. 1678 probable; resto confirmado]",
+    "estatus": "plausible",
     "presencia_versalles": "ocasional",
     "riqueza": 6,
     "rango": 54,
