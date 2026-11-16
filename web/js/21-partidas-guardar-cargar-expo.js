@@ -61,9 +61,17 @@ $("#p-perso").onclick=()=>{closeMenu();show("selector")};
 $("#p-new").onclick=e=>{const b=e.currentTarget;if(b.dataset.armed!=="1"){b.dataset.armed="1";b.textContent="¿Empezar de cero? Lo no guardado se pierde";return}
   b.dataset.armed="";b.textContent="Nueva partida";restore({});sesion=null;store.set("vg_sesion",null);closeMenu();show("epocas")};
 $("#p-export").onclick=async()=>{
-  await ready; const data=JSON.stringify({formato:"versalles-partida",version:1,nombre:$("#p-nombre").value.trim()||defaultName(),estado:snapshot()},null,1);
-  if(!downloads){setStatus("Exportar no está disponible en esta vista.");return}
-  try{const r=await downloads.save({filename:"versalles-"+defaultName().replace(/[^\w]+/g,"-")+".json",data});setStatus(r==="saved"||r?.status==="saved"?"Archivo exportado.":"Exportación cancelada.")}catch(e){setStatus("No se pudo exportar ("+(e.code||e.message)+").")}
+  await ready;
+  const filename="versalles-"+defaultName().replace(/[^\w]+/g,"-")+".json";
+  const data=JSON.stringify({formato:"versalles-partida",version:1,nombre:$("#p-nombre").value.trim()||defaultName(),estado:snapshot()},null,1);
+  if(!downloads){
+    const url=URL.createObjectURL(new Blob([data],{type:"application/json"}));
+    const a=el("a",{href:url,download:filename});
+    document.body.append(a); a.click(); a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),1000);
+    setStatus("Archivo exportado."); return;
+  }
+  try{const r=await downloads.save({filename,data});setStatus(r==="saved"||r?.status==="saved"?"Archivo exportado.":"Exportación cancelada.")}catch(e){setStatus("No se pudo exportar ("+(e.code||e.message)+").")}
 };
 $("#p-import").onchange=async e=>{const f=e.target.files[0];if(!f)return;
   try{const o=JSON.parse(await f.text());if(o.formato!=="versalles-partida")throw new Error("no es un archivo de partida");restore(o.estado);sesion=null;store.set("vg_sesion",null);closeMenu();show(epoca?(player?"game":"selector"):"epocas")}
