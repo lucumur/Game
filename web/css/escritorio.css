@@ -217,55 +217,9 @@ button.era:hover{background:var(--chip)}
 .gz-art h3{font-size:1.1rem}
 .gz-art .where{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sheet-muted)}
 
-/* ---------- Mapa ---------- */
-.map-layout{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:14px;align-items:start}
-.map-box{border:1px solid var(--line);border-radius:var(--r);background:var(--paper);overflow:hidden}
-.map-box svg{display:block;width:100%;height:auto}
-.zone{fill:var(--chip);stroke:var(--muted);stroke-width:1;cursor:pointer;transition:fill .15s}
-.zone:hover,.zone:focus{fill:var(--line);outline:none}
-.zone.cat-real{fill:#8a6fc4;fill-opacity:.55}.zone.cat-hombre{fill:#5b8fd6;fill-opacity:.45}.zone.cat-mujer{fill:#d97aa6;fill-opacity:.5}.zone.cat-cargo{fill:#d9a83a;fill-opacity:.5}
-.dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--chip);border:1px solid var(--muted);vertical-align:middle}
-.dot.cat-real{background:#8a6fc4}.dot.cat-hombre{background:#5b8fd6}.dot.cat-mujer{background:#d97aa6}.dot.cat-cargo{background:#d9a83a}
-.map-layout.ancho{grid-template-columns:1fr}
-.map-box svg.ancho .mlabel{font-size:19px}.map-box svg.ancho .mlabel.s{font-size:15px}.map-box svg.ancho .compass{font-size:19px}
-.map-head{display:grid;gap:2px;padding:4px 12px 8px;border-bottom:1px solid var(--line)}
-.map-head h3{font-size:1.25rem}
-.mlabel.code{font-weight:600;letter-spacing:.02em}
-.room-grid{display:grid;gap:14px}
-.room-img{display:grid;gap:8px;align-content:start}
-.room-img img{width:100%;border:1px solid var(--line);border-radius:var(--r);display:block}
-.room-ph{aspect-ratio:4/3;border:1px dashed var(--line);border-radius:var(--r);display:grid;place-items:center;color:var(--muted);font-style:italic;font-size:.9rem;text-align:center;padding:12px}
-.room-txt{display:grid;gap:8px;align-content:start;min-width:0}
-.room-txt h3{font-size:1.3rem}
-.map-layout.ancho .room-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.5fr)}
-@media (max-width:700px){.map-layout.ancho .room-grid{grid-template-columns:1fr}}
-.leyenda-map{display:flex;flex-wrap:wrap;gap:4px 14px;padding:6px 10px 10px;font-size:.82rem;color:var(--muted)}
-.leyenda-map span{display:inline-flex;gap:6px;align-items:center}
-.ocup-ed{display:grid;gap:6px}.ocup-ed .row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-.ocup-ed input,.ocup-ed select{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:.25rem .45rem;min-width:0}
-.ocup-ed input[type=text]{flex:1 1 12rem}
-.zone.sel{fill:var(--gilt);fill-opacity:.35;stroke:var(--gilt);stroke-width:1.6}
-.zone.open{fill:transparent;stroke-dasharray:3 3}
-.zone.water{fill:var(--accent);fill-opacity:.18}
-.zone.green{fill:var(--gilt);fill-opacity:.08}
-.mlabel{font:12px var(--f-body);fill:var(--ink);pointer-events:none}
-.mlabel.s{font-size:10px;fill:var(--muted)}
-.compass{font:11px var(--f-display);fill:var(--muted)}
+/* ---------- Mapa (Estilo Grabado Bâtiments du Roi 1722) ---------- */
 .city{fill:var(--ink);cursor:pointer} .city.sel{fill:var(--gilt)}
 .coast{fill:var(--chip);stroke:var(--muted);stroke-width:1}
-.zone.road{fill:var(--line);stroke:var(--muted);stroke-width:.6}
-.road-line{fill:none;stroke:var(--gilt);stroke-width:1.2;stroke-dasharray:4 3}
-.map-info{display:grid;gap:4px;min-height:5.5rem}
-.ocup{display:grid;gap:6px}
-.ocup .oc{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline}
-.ocup .oc b{font-weight:500}
-.conecta{display:flex;flex-wrap:wrap;gap:6px}
-.conecta .btn{border-color:var(--line);text-align:left}
-.conecta .btn:hover{border-color:var(--gilt)}
-.map-info p{font-size:.95rem}
-.pisos{display:flex;gap:6px;flex-wrap:wrap;padding:8px 8px 0}
-.pisos .btn[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
-.map-info h3{font-size:1.15rem}
 /* Buscador de lugares */
 .msearch{position:relative}
 .msearch input{width:100%;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:.45rem .7rem .45rem 2rem;font-family:var(--f-body)}
@@ -280,14 +234,14 @@ button.era:hover{background:var(--chip)}
 .msearch li.vacio{cursor:default;color:var(--muted);font-style:italic}
 .msearch li.mas{cursor:default;font-size:.82rem;color:var(--muted);text-align:center}
 
-/* ---------- Mapa (Estilo Grabado Bâtiments du Roi 1722) ---------- */
 .map-layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:14px;align-items:start}
 .map-box{border:1px solid var(--line);border-radius:var(--r);background:
   radial-gradient(circle at 50% 35%, transparent 55%, color-mix(in srgb, var(--ink) 6%, transparent) 100%),
   var(--paper);overflow:hidden;position:relative;box-shadow:inset 0 0 24px rgb(0 0 0 / .06)}
 .map-box svg{display:block;width:100%;height:auto}
-.map-toolbar{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;padding:8px 10px;border-bottom:1px solid var(--line);background:var(--panel)}
-.pisos,.sectores-bar{display:flex;gap:4px;flex-wrap:wrap;align-items:center}
+.map-toolbar{display:grid;gap:6px;padding:8px 10px;border-bottom:1px solid var(--line);background:var(--panel)}
+.pisos{display:flex;gap:4px;flex-wrap:wrap;align-items:center}
+.sectores-bar{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .pisos .btn[aria-pressed="true"],.sectores-bar .btn[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .zone{fill:var(--chip);stroke:var(--ink);stroke-width:1.6;cursor:pointer;transition:fill .15s,stroke-width .15s,fill-opacity .15s;stroke-linejoin:miter}
 .zone:hover,.zone:focus{fill:color-mix(in srgb,var(--gilt) 22%,var(--chip));outline:none}
@@ -379,6 +333,10 @@ button.plate:hover{border-color:var(--gilt)}
 
 /* Ficha */
 #ficha{position:fixed;inset:0 0 0 auto;width:min(460px,100%);background:var(--panel);border-left:1px solid var(--line);z-index:20;overflow-y:auto;padding:calc(18px + env(safe-area-inset-top,0px)) 18px calc(18px + env(safe-area-inset-bottom,0px));display:grid;gap:12px;align-content:start;box-shadow:-8px 0 24px rgb(0 0 0 / .18)}
+@media (min-width:1024px){
+  body.con-ficha{padding-right:max(16px,calc(33.333vw + 16px))}
+  body.con-ficha #ficha{width:33.333vw}
+}
 #ficha dl{display:grid;grid-template-columns:8.5rem 1fr;gap:6px 10px;margin:0}
 #ficha dt{color:var(--muted);font-size:.85rem}
 #ficha dd{margin:0}
@@ -443,8 +401,9 @@ button.kin:hover{border-color:var(--gilt)}
   body{font-size:16px}
   .sel-grid,.desk-wrap,.map-layout,.journal,.new-plan .row{grid-template-columns:1fr}
   .views{display:none}
-  .mnav{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:0;right:0;bottom:0;z-index:10;background:var(--panel);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
-  .mnav button{border:0;background:none;padding:.7rem .1rem;color:var(--muted);font-size:.85rem}
+  .mnav{display:flex;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;position:fixed;left:0;right:0;bottom:0;z-index:10;background:var(--panel);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+  .mnav::-webkit-scrollbar{display:none}
+  .mnav button{flex:1 0 auto;border:0;background:none;padding:.7rem .85rem;color:var(--muted);font-size:.85rem;white-space:nowrap}
   .mnav button[aria-current="true"]{color:var(--ink);box-shadow:inset 0 2px 0 var(--gilt)}
 }
 @media (max-width:640px){
@@ -471,15 +430,13 @@ button.kin:hover{border-color:var(--gilt)}
 .bio-h img.pt,.bio-h>svg{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:center top;border:1px solid var(--gilt)}
 
 /* ---------- Mejoras de Mapas: Dominio (Viajes) y los 4 Mapas de Francia (Escudos, Emblemas y Líderes) ---------- */
-.map-toolbar{display:grid;gap:6px;padding:8px 10px;border-bottom:1px solid var(--line);background:var(--panel)}
-.sectores-bar{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-.sectores-bar .btn[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .sectores-bar select{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:.28rem .55rem;font-size:.88rem;max-width:100%;flex:1 1 220px}
 .fr-tabs .btn{font-weight:600;padding:.35rem .75rem}
 .fr-tabs .btn[aria-pressed="true"]{background:var(--gilt);color:#18140c;border-color:var(--gilt)}
-.fr-info-wrap{display:grid;gap:10px;margin-top:6px}
-.emblema-header{display:grid;grid-template-columns:70px minmax(0,1fr);gap:12px;align-items:center;padding:10px 12px;background:var(--chip);border:1px solid var(--line);border-radius:var(--r)}
-.escudo-svg-wrap{display:grid;place-items:center;background:var(--paper);border:1px solid var(--gilt);border-radius:var(--r);padding:4px}
+.emblema-header{display:grid;grid-template-columns:100px minmax(0,1fr);gap:12px;align-items:center;padding:10px 12px;background:var(--chip);border:1px solid var(--line);border-radius:var(--r)}
+.escudo-svg-wrap{display:grid;place-items:center;background:var(--paper);border:1px solid var(--gilt);border-radius:var(--r);width:100px;height:112px;padding:8px;box-sizing:border-box;overflow:hidden}
+.escudo-svg-wrap img{width:100%!important;height:100%!important;object-fit:contain!important}
+.escudo-svg-wrap svg{max-width:100%;max-height:100%}
 .emblema-meta{display:grid;gap:4px;min-width:0}
 .blason-txt{font-size:.84rem;line-height:1.35}
 .lider-card{display:grid;grid-template-columns:64px minmax(0,1fr);gap:12px;align-items:center;padding:10px 12px;background:var(--panel);border:1px solid var(--gilt);border-radius:var(--r)}
@@ -500,9 +457,3 @@ button.kin:hover{border-color:var(--gilt)}
 /* Ficha: el busto vacío no debe crecer sobre el texto */
 #ficha>svg{width:150px;height:182px;min-height:182px;justify-self:center;overflow:visible}
 .ficha-up{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap}
-
-/* Marco de los escudos: más grande, y el escudo siempre cabe dentro */
-.emblema-header{grid-template-columns:100px minmax(0,1fr)}
-.escudo-svg-wrap{width:100px;height:112px;padding:8px;box-sizing:border-box;overflow:hidden}
-.escudo-svg-wrap img{width:100%!important;height:100%!important;object-fit:contain!important}
-.escudo-svg-wrap svg{max-width:100%;max-height:100%}
