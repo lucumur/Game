@@ -158,7 +158,8 @@ function render(){
   $('chips').textContent='';
   fac.forEach(f=>{const b=document.createElement('button');b.className='chip';b.textContent=f;b.setAttribute('aria-pressed',f===filtro);b.onclick=()=>{filtro=f;render()};$('chips').append(b)});
   const t=q.toLowerCase();
-  const vis=chars.filter(c=>(filtro==='Todas'||c.faccion===filtro)&&(!res||c.residencia===res)&&(!t||[c.nombre,c.nombre_nac,(c.apodos||[]).join(' '),c.titulo_nob,c.puesto].join(' ').toLowerCase().includes(t)));
+  const resDe=c=>Array.isArray(c.residencia)?c.residencia:c.residencia?[c.residencia]:[];
+  const vis=chars.filter(c=>(filtro==='Todas'||c.faccion===filtro)&&(!res||resDe(c).includes(res))&&(!t||[c.nombre,c.nombre_nac,(c.apodos||[]).join(' '),c.titulo_nob,c.puesto].join(' ').toLowerCase().includes(t)));
   if(orden){const k=KEY[orden];vis.sort((a,b)=>k(b)-k(a)||(a.orden||0)-(b.orden||0))}
   const conR=chars.filter(c=>RET[c.id]).length;
   $('count').textContent=chars.length?`${vis.length} de ${chars.length} personajes · ${conR} con retrato`:'';
@@ -166,7 +167,8 @@ function render(){
   $('grid').textContent='';
   vis.forEach(c=>{const b=document.createElement('button');b.className='card';
     const f=document.createElement('div');f.className='face';face(f,c);
-    if(c.residencia&&RES_SHORT[c.residencia]){const rt=document.createElement('span');rt.className='res-tag'+(c.residencia==='provinciano'||c.residencia==='extranjero'?' away':c.residencia==='por_verificar'?' unk':'');rt.textContent=RES_SHORT[c.residencia];rt.title=RES_FULL[c.residencia]||'';f.append(rt)}
+    const rs=resDe(c), rVis=rs.filter(r=>RES_SHORT[r]);
+    if(rVis.length){const rt=document.createElement('span');rt.className='res-tag'+(rVis.every(r=>r==='provinciano'||r==='extranjero')?' away':rVis.every(r=>r==='por_verificar')?' unk':'');rt.textContent=rVis.map(r=>RES_SHORT[r]).join(' · ');rt.title=rs.map(r=>RES_FULL[r]||r).join(' · ');f.append(rt)}
     if(c.estatus==='plausible'){const p=document.createElement('span');p.className='plaus';p.textContent='plausible';f.append(p)}
     const n=document.createElement('div');n.className='cname';nombreEn(n,c);
     const s=document.createElement('div');s.className='ctitle';s.textContent=c.titulo_nob||c.titulo||'';
@@ -197,7 +199,7 @@ function ficha(){
   if(owner){const o=document.createElement('span');o.className='ov'+(RET[c.id]?'':' show');o.textContent=RET[c.id]?'Cambiar retrato':'Subir retrato';$('fface').append(o);$('fface').htmlFor='file'}else{$('fface').htmlFor=''}
   $('fhouse').textContent=c.faccion||'';nombreEn($('fname'),c);$('ftitle').textContent=c.titulo_nob||c.titulo||'';$('fpuesto').textContent=c.puesto||c.cargo||'';
   $('fdata').textContent='';
-  SECC.forEach(([t,fs],idx)=>{const vs=fs.filter(([k])=>c[k]&&c[k]!=='—');const hasR=idx===0&&(c.rangos||[]).length;const hasRes=idx===3&&c.residencia;if(!vs.length&&!hasR&&!hasRes)return;const dl=head(t);if(hasR)add(dl,'Rango',rangosLibro(c.rangos));if(hasRes)add(dl,'Residencia',RES_FULL[c.residencia]||c.residencia);vs.forEach(([k,l])=>add(dl,l,k==='edad'?c[k]+' años':c[k]))});
+  SECC.forEach(([t,fs],idx)=>{const vs=fs.filter(([k])=>c[k]&&c[k]!=='—');const hasR=idx===0&&(c.rangos||[]).length;const rs=Array.isArray(c.residencia)?c.residencia:c.residencia?[c.residencia]:[];const hasRes=idx===3&&rs.length;if(!vs.length&&!hasR&&!hasRes)return;const dl=head(t);if(hasR)add(dl,'Rango',rangosLibro(c.rangos));if(hasRes)add(dl,'Residencia',rs.map(r=>RES_FULL[r]||r).join(' · '));vs.forEach(([k,l])=>add(dl,l,k==='edad'?c[k]+' años':c[k]))});
   if(c.innatos){const dl=head('Innatos','interpretación');INN.forEach(([k,l])=>c.innatos[k]&&add(dl,l,c.innatos[k]))}
   if(c.habilidades){const dl=head('Habilidades','0–10 · interpretación');HAB.forEach(([k,l])=>{const n=+c.habilidades[k]||0;const w=document.createElement('div');w.className='bar';w.setAttribute('aria-label',l+': '+n+' de 10');const f=document.createElement('i');f.style.width=n*10+'%';const s=document.createElement('b');s.textContent=n;w.append(f,s);add(dl,l,w)})}
   if(c.rasgos&&Object.keys(c.rasgos).length){const dl=head('Rasgos','1–5 · los demás, neutros');const rd=c.rasgos_doc||[];
