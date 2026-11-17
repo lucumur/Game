@@ -3873,102 +3873,55 @@
     "escritorio_id": "cardenal-rohan"
   },
   {
-    "aficiones": [
-      {
-        "doc": false,
-        "n": "Historia y genealogía",
-        "v": 4
-      },
-      {
-        "doc": false,
-        "n": "Devoción práctica",
-        "v": 3
-      }
-    ],
-    "anio": 1695,
+    "aficiones": [],
+    "anio": 1655,
     "apodos": [
-      "Monsieur de Reims"
+      "Príncipe de Guémené"
     ],
-    "cargo": "Arzobispo de Reims; consagrará al rey",
+    "cargo": "—",
     "casa": "Rohan-Guéméné",
-    "conyuge": "—",
-    "cualidades": {
-      "belleza": 4,
-      "constitucion": 4,
-      "intelecto": 3,
-      "memoria": 3,
-      "voz": 4
-    },
+    "conyuge": "Viudo de Charlotte Élisabeth de Cochefilet (†24/12/1719)",
+    "cualidades": {},
     "cualidades_doc": [],
-    "edad": "27",
-    "educacion": "Doctor en teología por la Sorbona",
+    "edad": "66",
+    "educacion": "—",
     "estatus": "verificado",
     "estatus_familia": "Príncipe extranjero (Casa de Rohan)",
     "faccion": "Neutral",
-    "habilidades": {
-      "armas": 0,
-      "devocion": 5,
-      "diplomacia": 4,
-      "erudicion": 5,
-      "galanteria": 3,
-      "intriga": 3
-    },
-    "hijos": "—",
-    "hitos": "Corona al rey 25/10/1722",
-    "idiomas": [
-      {
-        "doc": true,
-        "n": "Latín",
-        "v": 5
-      }
-    ],
-    "innatos": {
-      "aspecto": "Rostro aristocrático y liso",
-      "intelecto": "Medio",
-      "salud": "Buena",
-      "temperamento": "Solemne, correcto"
-    },
+    "hijos": "Armand-Jules de Rohan-Guémené (p74), entre otros",
+    "hitos": "Cabeza primogénita de la Casa de Rohan; padre de Armand-Jules de Rohan-Guémené (nombrado arzobispo de Reims en 1722)",
+    "idiomas": [],
     "lengua": "Francés",
-    "llegada_corte": "Arzobispo de Reims desde 1722",
-    "lugar_familia": "Hijo menor",
-    "madre": "Charlotte Élisabeth de Cochefilet",
-    "muerte": "28/08/1762",
-    "nacimiento": "10/02/1695, París",
-    "nombre": "Armand Jules de Rohan-Guéméné",
-    "nombre_nac": "Armand-Jules de Rohan-Guéméné",
+    "llegada_corte": "—",
+    "lugar_familia": "Primogénito; cabeza de la casa de Rohan-Guéméné",
+    "madre": "Jeanne Armande de Schomberg (†1706)",
+    "muerte": "10/10/1727",
+    "nacimiento": "30/09/1655",
+    "nombre": "Charles III de Rohan",
+    "nombre_nac": "Charles III de Rohan-Guéméné",
     "oculta": "—",
     "orden": 33,
-    "padre": "Carlos III de Rohan-Guéméné",
-    "prompt": "Armand-Jules de Rohan-Guéméné, Archbishop of Reims, a young 27-year-old French archbishop, 1722, smooth aristocratic face. Solemn, composed expression, clean shaven, short dark hair. Violet mozzetta, white lace rochet, gold pectoral cross. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, red cardinal robes, modern photograph, studio flash, modern clothing, text, watermark",
-    "puesto": "Arzobispo de Reims; consagrará al rey",
-    "quiere": "Prestigio de su casa",
+    "padre": "Charles II de Rohan, IV duque de Montbazon (†1699)",
+    "prompt": "",
+    "puesto": "Cabeza de la Casa de Rohan-Guéméné",
+    "quiere": "Defender el rango y precedencia de príncipe extranjero de la Casa de Rohan",
     "rango": 61,
-    "rasgos": {
-      "cer": 5,
-      "esp": 2,
-      "hum": 2,
-      "obe": 4,
-      "org": 5,
-      "pie": 4,
-      "tem": 4,
-      "van": 4
-    },
+    "rasgos": {},
     "rasgos_doc": [],
-    "relacion_rey": "Lo corona",
+    "relacion_rey": "Par de Francia; padre del consagrador de Reims",
     "religion": "Católica",
     "riqueza": 6,
     "talentos": [],
-    "titulo": "Arzobispo de Reims",
-    "titulo_nob": "Arzobispo-duque de Reims; par de Francia",
-    "ubicacion": "Reims",
-    "vocacion": "Iglesia",
+    "titulo": "Príncipe de Guémené y Duque de Montbazon",
+    "titulo_nob": "Príncipe de Guémené, V Duque de Montbazon, Par de Francia",
+    "ubicacion": "Por verificar (París / Turena / Bretaña)",
+    "vocacion": "Nobleza de espada / Par de Francia",
     "id": "p33",
     "sexo": "M",
     "rangos": [
-      "etranger",
-      "eglise"
+      "etranger"
     ],
-    "favor": 3,
+    "favor": 2,
     "escritorio_id": "rohan-guemene"
   },
   {
