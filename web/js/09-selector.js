@@ -32,13 +32,15 @@ let SIMBOLOS=[], SIM_IMG={};
 function simbolosEl(c,cls="simbolos-row"){
   const ids=c?.simbolos||[]; if(!ids.length)return null;
   const byId=Object.fromEntries((SIMBOLOS||[]).map(s=>[s.id,s]));
+  const conNombre=/\bficha-sims\b/.test(cls);
   const row=el("div",{class:cls,"aria-label":"Símbolos"});
   ids.forEach(id=>{
     const s=byId[id]||{id,nombre:id,desc:""}, tip=s.desc?s.nombre+" — "+s.desc:s.nombre;
     const item=el("span",{class:"sim-item",title:tip,"data-es":s.nombre});
     if(SIM_IMG[id])item.append(el("img",{src:SIM_IMG[id],alt:s.nombre}));
     else{const NS="http://www.w3.org/2000/svg",svg=document.createElementNS(NS,"svg");svg.setAttribute("viewBox","0 0 24 24");svg.setAttribute("aria-hidden","true");svg.innerHTML=s.svg||"<circle cx='12' cy='12' r='6'/>";item.append(svg)}
-    row.append(item);
+    if(!conNombre){row.append(item);return}
+    row.append(el("div",{class:"sim-medalla",title:tip},item,el("span",{class:"sim-nom"},s.nombre)));
   });
   return row;
 }

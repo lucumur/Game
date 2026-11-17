@@ -475,3 +475,11 @@ button.kin:hover{border-color:var(--gilt)}
 .sim-item img{width:18px;height:18px;object-fit:contain;display:block}
 .sim-item svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;display:block}
 .sim-item:hover{border-color:var(--gilt)}
+.bio .bio-h>div{flex:1 1 260px;min-width:0}
+.simbolos-row.ficha-sims{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:10px;margin-top:8px;width:100%}
+.sim-medalla{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:8px 6px;border:1px solid var(--line);border-radius:6px;background:var(--paper);cursor:help}
+.sim-medalla:hover{border-color:var(--gilt)}
+.sim-medalla .sim-item{width:58px;height:58px;border:1px solid var(--gilt);border-radius:6px;background:var(--panel)}
+.sim-medalla .sim-item img{width:46px;height:46px}
+.sim-medalla .sim-item svg{width:34px;height:34px}
+.sim-nom{font-size:12px;line-height:1.2;color:var(--ink)}

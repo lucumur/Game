@@ -112,6 +112,11 @@ select{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);borde
 .sim-ico svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;display:block}
 .sim-pill{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);border-radius:4px;background:var(--bg);padding:2px 7px 2px 4px;font-size:12px}
 .sim-pill .sim-ico{width:20px;height:20px;border:0;background:transparent}
+#fsims{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:10px;margin-top:10px}
+#fsims .sim-pill{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:8px 6px;border-radius:6px;font-size:12px;line-height:1.2}
+#fsims .sim-pill .sim-ico{width:58px;height:58px;border:1px solid var(--gold);border-radius:6px;background:var(--paper)}
+#fsims .sim-pill .sim-ico img{width:46px;height:46px}
+#fsims .sim-pill .sim-ico svg{width:34px;height:34px}
 .sim-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:16px}
 .sim-card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px;display:grid;grid-template-columns:64px 1fr;gap:10px 12px;align-items:start}
 .sim-box{width:64px;height:64px;border:1px solid var(--gold);border-radius:6px;background:var(--bg);display:grid;place-items:center;position:relative;overflow:hidden;cursor:pointer}
@@ -199,7 +204,7 @@ select{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);borde
   </div>
 </aside>
 
-<script src="js/github.js?v=202611162300"></script>
+<script src="js/github.js?v=202611170004"></script>
 <script>
 const $=id=>document.getElementById(id);
 let chars=[],sims=[],filtro='Todas',q='',res='',fsim='',vista='per',sel=null,db=null,owner=false,orden='',RET={},SIM_IMG={},SIM_LOCAL={};
