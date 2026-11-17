@@ -49,9 +49,6 @@ input[type=search]{font:15px var(--body);padding:6px 12px;border:1px solid var(-
 .anio{font-weight:400;color:var(--muted);font-variant-numeric:tabular-nums}
 aside .anio{font-size:.7em}
 .plaus{position:absolute;top:6px;right:6px;font:10px var(--mono);letter-spacing:.06em;text-transform:uppercase;background:var(--paper);color:var(--muted);border:1px solid var(--line);padding:1px 5px}
-.res-tag{position:absolute;top:6px;left:6px;font:10px var(--mono);letter-spacing:.04em;background:var(--paper);color:var(--royal);border:1px solid var(--line);padding:1px 5px}
-.res-tag.away{color:var(--muted)}
-.res-tag.unk{color:var(--gold)}
 .empty{border:1px dashed var(--line);padding:28px;color:var(--muted);text-align:center;background:var(--paper)}
 /* ficha */
 .veil{position:fixed;inset:0;background:var(--veil);z-index:5}
@@ -208,7 +205,6 @@ select{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);borde
 <script>
 const $=id=>document.getElementById(id);
 let chars=[],sims=[],filtro='Todas',q='',res='',fsim='',vista='per',sel=null,db=null,owner=false,orden='',RET={},SIM_IMG={},SIM_LOCAL={};
-const RES_SHORT={habitante_versalles:'Hab. Versalles',habitante_ile:"Hab. l'Île",habitante_paris:'Hab. París',provinciano:'Provinciano',extranjero:'Extranjero',por_verificar:'Por verificar'};
 const RES_FULL={residente_palacio:'Residente en Versalles (palacio, por gracia del rey)',habitante_versalles:'Habitante de Versalles (ciudad)',habitante_ile:"Habitante de l'Île (cercanías de la corte)",habitante_paris:'Habitante de París (visita Versalles)',provinciano:'Provinciano (vive en su provincia)',extranjero:'Extranjero (fuera del reino)',por_verificar:'Por verificar'};
 const nac=c=>{const m=String(c.anio||'').match(/\d{4}/);return m?+m[0]:9999};
 const KEY={riqueza:c=>+c.riqueza||0,edad:c=>-nac(c),rango:c=>+c.rango||0};
@@ -258,8 +254,6 @@ function render(){
   $('grid').textContent='';
   vis.forEach(c=>{const b=document.createElement('button');b.className='card';
     const f=document.createElement('div');f.className='face';face(f,c);
-    const rs=resDe(c), rVis=rs.filter(r=>RES_SHORT[r]);
-    if(rVis.length){const rt=document.createElement('span');rt.className='res-tag'+(rVis.every(r=>r==='provinciano'||r==='extranjero')?' away':rVis.every(r=>r==='por_verificar')?' unk':'');rt.textContent=rVis.map(r=>RES_SHORT[r]).join(' · ');rt.title=rs.map(r=>RES_FULL[r]||r).join(' · ');f.append(rt)}
     if(c.estatus==='plausible'){const p=document.createElement('span');p.className='plaus';p.textContent='plausible';f.append(p)}
     const n=document.createElement('div');n.className='cname';nombreEn(n,c);
     const s=document.createElement('div');s.className='ctitle';s.textContent=c.titulo_nob||c.titulo||'';
