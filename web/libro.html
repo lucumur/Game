@@ -94,11 +94,22 @@ select{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);borde
 .cval{font:12px var(--mono);color:var(--gold);font-variant-numeric:tabular-nums}
 .rango-tag{border-bottom:1px dotted var(--gold);cursor:help;position:relative}
 .rango-tag:hover::after,.rango-tag:focus-visible::after,.rango-tag.tip-on::after{content:attr(data-es);position:absolute;left:0;bottom:calc(100% + 5px);background:var(--ink);color:var(--paper);font:12px/1.25 var(--body);padding:4px 8px;border-radius:4px;white-space:nowrap;z-index:20;pointer-events:none;box-shadow:0 4px 12px rgb(0 0 0 / .28)}
+.guia-btn{font:12px var(--mono);border:1px solid var(--line);background:var(--paper);color:var(--royal);padding:4px 9px;border-radius:4px;cursor:pointer}
+.guia-btn:hover{border-color:var(--royal)}
+.modal{position:fixed;inset:50% auto auto 50%;transform:translate(-50%,-50%);width:min(760px,calc(100% - 24px));max-height:min(84vh,780px);overflow-y:auto;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:20px 22px;z-index:8;display:grid;gap:14px;box-shadow:0 20px 50px rgb(0 0 0 / .35)}
+.modal-h{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding-bottom:10px}
+.modal-h h2{font-family:var(--display);font-weight:400;font-size:1.5rem;margin:0}
+.hab-tabs{display:flex;flex-wrap:wrap;gap:6px}
+.hab-list{display:grid;gap:6px;margin:0;padding:0;list-style:none}
+.hab-list li{display:grid;grid-template-columns:28px 1fr;gap:8px;padding:6px 8px;border-bottom:1px solid var(--line);font-size:14px}
+.hab-list li b{font-family:var(--mono);color:var(--royal);font-weight:400}
+.hab-list li.elite b{color:var(--gold)}
+.bar[title]{cursor:help}
 </style>
 
 <div class="wrap">
   <header>
-    <div class="toprow"><div class="eyebrow">Tras bambalinas · Junio de 1722</div><a class="back" href="index.html">← Volver al Escritorio de Versalles</a></div>
+    <div class="toprow"><div class="eyebrow">Tras bambalinas · Junio de 1722</div><div class="row" style="align-items:center"><button class="guia-btn" id="guia-open" type="button">Guía de habilidades (0–10)</button><a class="back" href="index.html">← Volver al Escritorio de Versalles</a></div></div>
     <h1>Libro de caras de la <em>Corte de Versalles</em></h1>
     <p class="sub">Los personajes del juego con sus datos, lo que quieren y lo que ocultan. Abre una ficha para ver todo lo que se sabe de cada uno.</p>
   </header>
@@ -115,6 +126,11 @@ select{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);borde
 </div>
 
 <div class="veil" id="veil" hidden></div>
+<section class="modal" id="guia" hidden role="dialog" aria-modal="true" aria-labelledby="guia-tit">
+  <div class="modal-h"><h2 id="guia-tit">Escala de habilidades (0–10)</h2><button class="close" id="guia-close" type="button">Cerrar</button></div>
+  <div class="hab-tabs" id="guia-tabs" role="tablist"></div>
+  <ol class="hab-list" id="guia-list"></ol>
+</section>
 <aside id="ficha" hidden role="dialog" aria-modal="true" aria-labelledby="fname">
   <button class="close" id="close">Cerrar</button>
   <label class="face drop" id="fface" for="file"></label>
@@ -181,6 +197,95 @@ const SECC=[
  ['Formación',[['educacion','Estudios'],['vocacion','Vocación'],['llegada_corte','En la corte']]],
  ['En 1722',[['faccion','Facción'],['ubicacion','Dónde vive'],['quiere','Quiere'],['oculta','Oculta'],['relacion_rey','Con el rey'],['hitos','1722–23'],['estatus','Datos']]]];
 const HAB=[['intriga','Intriga'],['diplomacia','Diplomacia'],['armas','Armas'],['erudicion','Erudición'],['devocion','Devoción'],['galanteria','Galantería']];
+const HAB_ESCALA={
+  erudicion:[
+    'Rural analfabeto, sin letras ni nociones.',
+    'Sabe comportarse, es analfabeto/a.',
+    'Sabe leer, no escribe casi nada; no conoce autores, no estudió.',
+    'Sabe leer y escribir, como adolescente; conoce de la Biblia.',
+    'Lee la Biblia, conoce autores, lee panfletos.',
+    'Nivel adecuado: sabe un poco de otro idioma y un poquito de latín.',
+    'Sobre la media: sabe latín o 2 idiomas extra; escribe mucho.',
+    'Tiene pequeña biblioteca en casa, ha escrito alguna obra o sobresale como profesor.',
+    'Es escritor o profesor importante; su cargo y su nivel son sobresalientes.',
+    'Es famoso, escritor, reconocido por su sabiduría; especialista en algo único.',
+    'El más famoso, el mejor escritor, el más erudito, el mejor profesor.'
+  ],
+  intriga:[
+    'Inocencia total (niño o quien dice todo sin filtro).',
+    'Calla lo básico por educación, pero no detecta maquinaciones.',
+    'Nota chismes y favoritos, pero cae en engaños simples.',
+    'Lee alianzas visibles de su entorno y guarda un secreto propio.',
+    'Usa un rumor, devuelve un desaire con disimulo y evita trampas obvias.',
+    'Nivel adecuado: maneja confidentes o criados y lee el tablero de la corte.',
+    'Sobre la media: coordina maniobras entre varios bandos sin dejar rastro directo.',
+    'Tiende trampas políticas o de alcoba y coloca piezas en casas ajenas.',
+    'Mueve ministros, parlamentos o confesores sin mostrar la mano.',
+    'Maestro de camarillas enteras (Prie, Richelieu, Mesmes).',
+    'Artífice en la sombra a escala de Estado (Dubois).'
+  ],
+  diplomacia:[
+    'Torpeza absoluta; ofende rangos y rompe cualquier trato.',
+    'Sabe las reverencias básicas; cede o choca en cuanto hay conflicto.',
+    'Sostiene conversación formal en asuntos menores sin capacidad de pacto.',
+    'Cortesía firme ante iguales y superiores; pide favores sin insolencia.',
+    'Maneja precedencias, mediaciones familiares y compromisos locales.',
+    'Nivel adecuado: negocia acuerdos estables y representa con solvencia a su casa.',
+    'Sobre la media: desactiva choques graves de etiqueta o intereses sin ruptura.',
+    'Negociador de confianza en Estados provinciales, Parlamentos o legaciones.',
+    'Embajador de peso o mediador entre príncipes y potencias.',
+    'Gran diplomático del reino (Dubois, Beauvau).',
+    'Artífice histórico de tratados europeos y equilibrio entre coronas.'
+  ],
+  armas:[
+    'Nunca ha empuñado arma (niño, clérigo, civil ajeno a la milicia).',
+    'Porte básico de espada de gala o defensa instintiva, sin instrucción.',
+    'Monta y esgrime lo elemental de joven caballero, sin campaña real.',
+    'Academia o campaña menor; conoce el mando de compañía o un duelo formal.',
+    'Oficial fogueado; ha visto fuego y sostiene tropa o guardia.',
+    'Nivel adecuado: oficial competente de línea o guardia; domina táctica y duelo.',
+    'Sobre la media: jefe de regimiento o brigadier probado en combate.',
+    'Oficial general experimentado; dirige sitios, marchas y fronteras.',
+    'Teniente general victorioso en grandes campañas.',
+    'Mariscal de Francia de gran prestigio (Berwick).',
+    'El mayor capitán vivo del reino, vencedor de batallas decisivas (Villars).'
+  ],
+  devocion:[
+    'Irreligioso o impío abierto; ni siquiera finge las formas.',
+    'Cumple lo mínimo por apariencia social (Orleans, Dubois, Richelieu, Charolais).',
+    'Oye misa por costumbre de corte, sin lectura ni disciplina.',
+    'Practicante regular de sacramentos y ayunos corrientes.',
+    'Piedad sincera o austera; frecuenta sermones y dirección espiritual.',
+    'Nivel adecuado: observancia sólida y respetada; conoce liturgia y doctrina común.',
+    'Sobre la media: piedad ejemplar o militante (devoto, jansenista o jesuita activo).',
+    'Predica, escribe o dirige conciencias con autoridad reconocida.',
+    'Referente espiritual de una diócesis, orden o partido religioso.',
+    'Piedad extrema que rige su vida y gobierno (Felipe V, Colbert de Montpellier).',
+    'Autoridad espiritual venerada en todo el reino (Noailles, Soanen, Belsunce).'
+  ],
+  galanteria:[
+    'Desabrido o apartado por voto/edad de todo comercio mundano (Linières).',
+    'Grave, seco o torpe en salón; ajeno a los cumplidos de corte.',
+    'Etiqueta fría y correcta, sin chispa ni atractivo social.',
+    'Sostiene un cumplido, baila el minué y resulta agradable sin destacar.',
+    'Soltura de salón, conversación amena y buena presencia.',
+    'Nivel adecuado: cortesano pulido; domina el esprit, los madrigales y las veladas.',
+    'Sobre la media: seductor o anfitriona brillante cuya compañía se disputa.',
+    'Árbitro del gusto y del encanto en círculos selectos.',
+    'Célebre en la corte por sus conquistas, ingenio y magnetismo.',
+    'Figura mítica de la Regencia en salones y alcobas (Orleans, Prie, Parabère).',
+    'El seductor/encantador legendario de su siglo (Richelieu).'
+  ]
+};
+let guiaHab='erudicion';
+function renderGuia(){
+  $('guia-tabs').textContent='';
+  HAB.forEach(([k,l])=>{const b=document.createElement('button');b.className='chip';b.type='button';b.textContent=l;b.setAttribute('aria-pressed',k===guiaHab);b.onclick=()=>{guiaHab=k;renderGuia()};$('guia-tabs').append(b)});
+  $('guia-list').textContent='';
+  (HAB_ESCALA[guiaHab]||[]).forEach((txt,n)=>{const li=document.createElement('li');if(n>=6)li.className='elite';const b=document.createElement('b');b.textContent=n;const s=document.createElement('span');s.textContent=txt;li.append(b,s);$('guia-list').append(li)});
+}
+function abrirGuia(k){if(k)guiaHab=k;renderGuia();$('guia').hidden=false;$('veil').hidden=false;$('guia-close').focus()}
+function cerrarGuia(){$('guia').hidden=true;if(!sel)$('veil').hidden=true}
 const INN=[['temperamento','Temperamento'],['salud','Salud'],['aspecto','Aspecto'],['intelecto','Intelecto']];
 const RAS=[['soc','Sociabilidad','Retraído','Gregario'],['hos','Hospitalidad','Frío','Anfitrión'],['tem','Templanza','Colérico','Imperturbable'],['com','Competitividad','Conformista','Debe ser el primero'],['amb','Ambición','Satisfecho','Insaciable'],['dis','Discreción','Indiscreto','Tumba'],['van','Vanidad','Modesto','Vanidoso'],['org','Orgullo de sangre','Llano','Obsesionado con el rango'],['cer','Ceremonia','Desenvuelto','Puntilloso'],['ren','Rencor','Olvida','Nunca perdona'],['gen','Generosidad','Avaro','Pródigo con otros'],['gas','Gasto','Austero','Derrochador'],['cre','Credulidad','Desconfiado','Crédulo'],['val','Valor','Cobarde','Temerario'],['pru','Prudencia','Impulsivo','Calculador'],['pie','Piedad','Libertino','Devoto'],['sen','Sensualidad','Casto','Voluptuoso'],['esp','Esprit','Torpe','Ingenioso'],['hum','Humor','Grave','Burlón'],['lea','Lealtad','Veleta','Fiel hasta caer'],['fra','Franqueza','Taimado','Sincero'],['cmp','Compasión','Cruel','Compasivo'],['ani','Ánimo','Melancólico','Optimista'],['lab','Laboriosidad','Indolente','Infatigable'],['cur','Curiosidad','Indiferente','Curioso'],['cst','Constancia','Voluble','Constante'],['cel','Celos','Confiado','Celoso'],['obe','Obediencia','Rebelde','Sumiso']];
 const CUAL=[['belleza','Belleza'],['constitucion','Constitución'],['fertilidad','Fertilidad'],['intelecto','Intelecto'],['memoria','Memoria'],['voz','Voz'],['oido','Oído musical'],['estatura','Estatura'],['marcas','Marcas'],['taras','Taras']];
@@ -201,7 +306,7 @@ function ficha(){
   $('fdata').textContent='';
   SECC.forEach(([t,fs],idx)=>{const vs=fs.filter(([k])=>c[k]&&c[k]!=='—');const hasR=idx===0&&(c.rangos||[]).length;const rs=Array.isArray(c.residencia)?c.residencia:c.residencia?[c.residencia]:[];const hasRes=idx===3&&rs.length;if(!vs.length&&!hasR&&!hasRes)return;const dl=head(t);if(hasR)add(dl,'Rango',rangosLibro(c.rangos));if(hasRes)add(dl,'Residencia',rs.map(r=>RES_FULL[r]||r).join(' · '));vs.forEach(([k,l])=>add(dl,l,k==='edad'?c[k]+' años':c[k]))});
   if(c.innatos){const dl=head('Innatos','interpretación');INN.forEach(([k,l])=>c.innatos[k]&&add(dl,l,c.innatos[k]))}
-  if(c.habilidades){const dl=head('Habilidades','0–10 · interpretación');HAB.forEach(([k,l])=>{const n=+c.habilidades[k]||0;const w=document.createElement('div');w.className='bar';w.setAttribute('aria-label',l+': '+n+' de 10');const f=document.createElement('i');f.style.width=n*10+'%';const s=document.createElement('b');s.textContent=n;w.append(f,s);add(dl,l,w)})}
+  if(c.habilidades){const dl=head('Habilidades','0–10 · interpretación · pasar cursor para ver nivel');const h3=dl.previousElementSibling;const gb=document.createElement('button');gb.className='guia-btn';gb.type='button';gb.textContent='? Guía 0–10';gb.onclick=()=>abrirGuia('erudicion');h3.append(gb);HAB.forEach(([k,l])=>{const n=+c.habilidades[k]||0;const esc=(HAB_ESCALA[k]||[])[n]||'';const w=document.createElement('div');w.className='bar'+(n>=6?' elite':'');if(esc)w.title=n+': '+esc;w.setAttribute('aria-label',l+': '+n+' de 10'+(esc?' — '+esc:''));const f=document.createElement('i');f.style.width=n*10+'%';const s=document.createElement('b');s.textContent=n;w.append(f,s);add(dl,l,w)})}
   if(c.rasgos&&Object.keys(c.rasgos).length){const dl=head('Rasgos','1–5 · los demás, neutros');const rd=c.rasgos_doc||[];
     RAS.forEach(([k,n,a,b])=>{const v=+c.rasgos[k];if(!v||v===3)return;add(dl,n,dots(v,v<3?a:b,rd.includes(k)))})}
   if(c.cualidades){const cd=c.cualidades_doc||[];const vs=CUAL.filter(([k])=>c.cualidades[k]!=null&&c.cualidades[k]!=='');
@@ -214,10 +319,10 @@ function ficha(){
   $('uprow').hidden=!owner;
   $('quitar').hidden=!RET[c.id];$('promptbox').hidden=!owner;
 }
-function abrir(id){sel=id;$('msg').textContent='';ficha();$('ficha').hidden=false;$('veil').hidden=false;$('close').focus()}
-function cerrar(){sel=null;$('ficha').hidden=true;$('veil').hidden=true}
-$('close').onclick=cerrar;$('veil').onclick=cerrar;
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&sel)cerrar()});
+function abrir(id){cerrarGuia();sel=id;$('msg').textContent='';ficha();$('ficha').hidden=false;$('veil').hidden=false;$('close').focus()}
+function cerrar(){sel=null;$('ficha').hidden=true;if($('guia').hidden)$('veil').hidden=true}
+$('close').onclick=cerrar;$('guia-open').onclick=()=>abrirGuia();$('guia-close').onclick=cerrarGuia;$('veil').onclick=()=>{if(!$('guia').hidden)cerrarGuia();else cerrar()};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(!$('guia').hidden)cerrarGuia();else if(sel)cerrar()}});
 $('q').oninput=e=>{q=e.target.value;render()};
 $('res').onchange=e=>{res=e.target.value;render()};
 $('orden').onchange=e=>{orden=e.target.value;try{localStorage.setItem('orden',orden)}catch{}render()};
