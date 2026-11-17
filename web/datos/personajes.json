@@ -116,6 +116,11 @@
     "presencia_versalles": "reside",
     "residencia": [
       "residente_palacio"
+    ],
+    "simbolos": [
+      "rey",
+      "principe-sangre",
+      "versalles"
     ]
   },
   {
@@ -214,6 +219,11 @@
     "presencia_versalles": "reside",
     "residencia": [
       "residente_palacio"
+    ],
+    "simbolos": [
+      "principe-sangre",
+      "dama-corte",
+      "versalles"
     ]
   },
   {
@@ -367,6 +377,12 @@
     "residencia": [
       "residente_palacio",
       "habitante_paris"
+    ],
+    "simbolos": [
+      "principe-sangre",
+      "ministro",
+      "cortesano",
+      "versalles"
     ]
   },
   {
@@ -482,6 +498,11 @@
     "residencia": [
       "residente_palacio",
       "habitante_paris"
+    ],
+    "simbolos": [
+      "legitimado",
+      "dama-corte",
+      "versalles"
     ]
   },
   {
@@ -632,6 +653,11 @@
     "residencia": [
       "habitante_ile",
       "residente_palacio"
+    ],
+    "simbolos": [
+      "principe-sangre",
+      "dama-corte",
+      "ile-de-france"
     ]
   },
   {
@@ -761,6 +787,11 @@
     "residencia": [
       "residente_palacio",
       "habitante_paris"
+    ],
+    "simbolos": [
+      "principe-sangre",
+      "cortesano",
+      "versalles"
     ]
   },
   {
@@ -897,6 +928,12 @@
     "presencia_versalles": "reside",
     "residencia": [
       "residente_palacio"
+    ],
+    "simbolos": [
+      "cardenal",
+      "ministro",
+      "cortesano",
+      "versalles"
     ]
   },
   {
@@ -1029,6 +1066,11 @@
     "presencia_versalles": "reside",
     "residencia": [
       "residente_palacio"
+    ],
+    "simbolos": [
+      "obispo",
+      "casa-rey",
+      "versalles"
     ]
   },
   {
@@ -1156,6 +1198,12 @@
     "presencia_versalles": "reside",
     "residencia": [
       "residente_palacio"
+    ],
+    "simbolos": [
+      "duque",
+      "par",
+      "mariscal",
+      "versalles"
     ]
   },
   {
@@ -1268,6 +1316,12 @@
     "presencia_versalles": "reside",
     "residencia": [
       "residente_palacio"
+    ],
+    "simbolos": [
+      "duque",
+      "par",
+      "gobernador",
+      "versalles"
     ]
   },
   {
@@ -1389,6 +1443,12 @@
     "presencia_versalles": "reside",
     "residencia": [
       "residente_palacio"
+    ],
+    "simbolos": [
+      "duque",
+      "gobernador",
+      "dama-corte",
+      "versalles"
     ]
   },
   {
@@ -1520,6 +1580,12 @@
     "residencia": [
       "residente_palacio",
       "habitante_ile"
+    ],
+    "simbolos": [
+      "principe-sangre",
+      "ministro",
+      "cortesano",
+      "versalles"
     ]
   },
   {
@@ -1660,6 +1726,11 @@
     "residencia": [
       "habitante_paris",
       "habitante_ile"
+    ],
+    "simbolos": [
+      "duque",
+      "dama-corte",
+      "parisino"
     ]
   },
   {
@@ -1792,6 +1863,11 @@
     "residencia": [
       "residente_palacio",
       "habitante_paris"
+    ],
+    "simbolos": [
+      "legitimado",
+      "dama-corte",
+      "versalles"
     ]
   },
   {
@@ -1922,6 +1998,11 @@
     "residencia": [
       "residente_palacio",
       "habitante_paris"
+    ],
+    "simbolos": [
+      "principe-sangre",
+      "cortesano",
+      "versalles"
     ]
   },
   {
@@ -2033,6 +2114,11 @@
     "presencia_versalles": "frecuenta",
     "residencia": [
       "residente_palacio"
+    ],
+    "simbolos": [
+      "principe-sangre",
+      "dama-corte",
+      "versalles"
     ]
   },
   {
@@ -2159,6 +2245,11 @@
     "residencia": [
       "residente_palacio",
       "habitante_paris"
+    ],
+    "simbolos": [
+      "principe-sangre",
+      "cortesano",
+      "versalles"
     ]
   },
   {
@@ -2289,6 +2380,11 @@
     "presencia_versalles": "ocasional",
     "residencia": [
       "habitante_ile"
+    ],
+    "simbolos": [
+      "legitimado",
+      "cortesano",
+      "ile-de-france"
     ]
   },
   {
@@ -2425,6 +2521,11 @@
     "presencia_versalles": "ocasional",
     "residencia": [
       "habitante_ile"
+    ],
+    "simbolos": [
+      "principe-sangre",
+      "dama-corte",
+      "ile-de-france"
     ]
   },
   {
@@ -2547,6 +2648,12 @@
       "residente_palacio",
       "habitante_paris",
       "habitante_ile"
+    ],
+    "simbolos": [
+      "legitimado",
+      "gobernador",
+      "cortesano",
+      "versalles"
     ]
   },
   {
@@ -2674,6 +2781,12 @@
     "presencia_versalles": "frecuenta",
     "residencia": [
       "residente_palacio"
+    ],
+    "simbolos": [
+      "duque",
+      "par",
+      "cortesano",
+      "versalles"
     ]
   },
   {
@@ -2817,6 +2930,12 @@
       "habitante_ile",
       "residente_palacio",
       "habitante_paris"
+    ],
+    "simbolos": [
+      "duque",
+      "par",
+      "ministro",
+      "ile-de-france"
     ]
   },
   {
@@ -2950,6 +3069,12 @@
     "residencia": [
       "habitante_paris",
       "habitante_ile"
+    ],
+    "simbolos": [
+      "duque",
+      "par",
+      "mariscal",
+      "parisino"
     ]
   },
   {
@@ -3071,6 +3196,12 @@
     "residencia": [
       "residente_palacio",
       "habitante_paris"
+    ],
+    "simbolos": [
+      "duque",
+      "par",
+      "cortesano",
+      "versalles"
     ]
   },
   {
@@ -3186,6 +3317,12 @@
     "residencia": [
       "habitante_versalles",
       "habitante_paris"
+    ],
+    "simbolos": [
+      "noble-toga",
+      "ministro",
+      "cortesano",
+      "versalles"
     ]
   },
   {
@@ -3300,6 +3437,12 @@
     "residencia": [
       "habitante_versalles",
       "habitante_paris"
+    ],
+    "simbolos": [
+      "marques-conde",
+      "ministro",
+      "cortesano",
+      "versalles"
     ]
   },
   {
@@ -3417,6 +3560,12 @@
     "presencia_versalles": "reside",
     "residencia": [
       "habitante_versalles"
+    ],
+    "simbolos": [
+      "noble-toga",
+      "ministro",
+      "cortesano",
+      "versalles"
     ]
   },
   {
@@ -3536,6 +3685,12 @@
     "presencia_versalles": "reside",
     "residencia": [
       "habitante_versalles"
+    ],
+    "simbolos": [
+      "marques-conde",
+      "ministro",
+      "cortesano",
+      "versalles"
     ]
   },
   {
@@ -3654,6 +3809,12 @@
     "presencia_versalles": "reside",
     "residencia": [
       "habitante_versalles"
+    ],
+    "simbolos": [
+      "marques-conde",
+      "ministro",
+      "cortesano",
+      "versalles"
     ]
   },
   {
@@ -3785,6 +3946,12 @@
     "presencia_versalles": "frecuenta",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "marques-conde",
+      "militar",
+      "cortesano",
+      "parisino"
     ]
   },
   {
@@ -3898,6 +4065,11 @@
     "presencia_versalles": "reside",
     "residencia": [
       "residente_palacio"
+    ],
+    "simbolos": [
+      "principe-extranjero",
+      "cortesano",
+      "versalles"
     ]
   },
   {
@@ -4031,6 +4203,12 @@
     "residencia": [
       "residente_palacio",
       "provinciano"
+    ],
+    "simbolos": [
+      "cardenal",
+      "principe-extranjero",
+      "casa-rey",
+      "versalles"
     ]
   },
   {
@@ -4089,6 +4267,11 @@
     "presencia_versalles": "por verificar",
     "residencia": [
       "por_verificar"
+    ],
+    "simbolos": [
+      "principe-extranjero",
+      "duque",
+      "par"
     ]
   },
   {
@@ -4208,6 +4391,11 @@
     "presencia_versalles": "reside",
     "residencia": [
       "residente_palacio"
+    ],
+    "simbolos": [
+      "casa-rey",
+      "versalles",
+      "cortesano"
     ]
   },
   {
@@ -4307,6 +4495,11 @@
     "presencia_versalles": "reside",
     "residencia": [
       "residente_palacio"
+    ],
+    "simbolos": [
+      "casa-rey",
+      "versalles",
+      "cortesano"
     ]
   },
   {
@@ -4412,6 +4605,11 @@
     "presencia_versalles": "frecuenta",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "casa-rey",
+      "parisino",
+      "cortesano"
     ]
   },
   {
@@ -4518,6 +4716,11 @@
     "presencia_versalles": "reside",
     "residencia": [
       "residente_palacio"
+    ],
+    "simbolos": [
+      "casa-rey",
+      "versalles",
+      "cortesano"
     ]
   },
   {
@@ -4631,6 +4834,11 @@
     "presencia_versalles": "frecuenta",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "casa-rey",
+      "parisino",
+      "cortesano"
     ]
   },
   {
@@ -4776,6 +4984,11 @@
     "presencia_versalles": "frecuenta",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "embajador",
+      "parisino",
+      "extranjero"
     ]
   },
   {
@@ -4900,6 +5113,11 @@
     "presencia_versalles": "ausente",
     "residencia": [
       "extranjero"
+    ],
+    "simbolos": [
+      "rey",
+      "principe-sangre",
+      "extranjero"
     ]
   },
   {
@@ -5011,6 +5229,12 @@
     "presencia_versalles": "reside",
     "residencia": [
       "residente_palacio"
+    ],
+    "simbolos": [
+      "principe-extranjero",
+      "duque",
+      "par",
+      "versalles"
     ]
   },
   {
@@ -5138,6 +5362,11 @@
     "presencia_versalles": "ocasional",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "marques-conde",
+      "dama-corte",
+      "parisino"
     ]
   },
   {
@@ -5254,6 +5483,11 @@
     "presencia_versalles": "reside",
     "residencia": [
       "residente_palacio"
+    ],
+    "simbolos": [
+      "clero",
+      "cortesano",
+      "versalles"
     ]
   },
   {
@@ -5324,6 +5558,12 @@
     "residencia": [
       "habitante_versalles",
       "habitante_ile"
+    ],
+    "simbolos": [
+      "duque",
+      "par",
+      "salon-letras",
+      "versalles"
     ]
   },
   {
@@ -5394,6 +5634,12 @@
     "residencia": [
       "habitante_paris",
       "provinciano"
+    ],
+    "simbolos": [
+      "duque",
+      "par",
+      "cortesano",
+      "parisino"
     ]
   },
   {
@@ -5465,6 +5711,12 @@
     "residencia": [
       "residente_palacio",
       "habitante_paris"
+    ],
+    "simbolos": [
+      "principe-extranjero",
+      "duque",
+      "par",
+      "versalles"
     ]
   },
   {
@@ -5533,6 +5785,11 @@
     "presencia_versalles": "ocasional",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "duque",
+      "cortesano",
+      "parisino"
     ]
   },
   {
@@ -5602,6 +5859,12 @@
     "presencia_versalles": "frecuenta",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "principe-extranjero",
+      "militar",
+      "cortesano",
+      "parisino"
     ]
   },
   {
@@ -5672,6 +5935,12 @@
     "residencia": [
       "residente_palacio",
       "provinciano"
+    ],
+    "simbolos": [
+      "duque",
+      "par",
+      "militar",
+      "versalles"
     ]
   },
   {
@@ -5742,6 +6011,12 @@
     "residencia": [
       "habitante_paris",
       "provinciano"
+    ],
+    "simbolos": [
+      "duque",
+      "par",
+      "gobernador",
+      "parisino"
     ]
   },
   {
@@ -5811,6 +6086,12 @@
     "presencia_versalles": "frecuenta",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "duque",
+      "par",
+      "cortesano",
+      "parisino"
     ]
   },
   {
@@ -5880,6 +6161,12 @@
     "presencia_versalles": "por verificar",
     "residencia": [
       "por_verificar"
+    ],
+    "simbolos": [
+      "duque",
+      "par",
+      "gobernador",
+      "militar"
     ]
   },
   {
@@ -5950,6 +6237,12 @@
     "presencia_versalles": "frecuenta",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "principe-extranjero",
+      "duque",
+      "par",
+      "parisino"
     ]
   },
   {
@@ -6020,6 +6313,12 @@
     "residencia": [
       "residente_palacio",
       "provinciano"
+    ],
+    "simbolos": [
+      "duque",
+      "par",
+      "ministro",
+      "versalles"
     ]
   },
   {
@@ -6090,6 +6389,12 @@
     "residencia": [
       "residente_palacio",
       "provinciano"
+    ],
+    "simbolos": [
+      "duque",
+      "par",
+      "militar",
+      "versalles"
     ]
   },
   {
@@ -6159,6 +6464,12 @@
     "presencia_versalles": "reside",
     "residencia": [
       "residente_palacio"
+    ],
+    "simbolos": [
+      "duque",
+      "par",
+      "cortesano",
+      "versalles"
     ]
   },
   {
@@ -6229,6 +6540,12 @@
     "residencia": [
       "residente_palacio",
       "habitante_ile"
+    ],
+    "simbolos": [
+      "duque",
+      "par",
+      "cortesano",
+      "versalles"
     ]
   },
   {
@@ -6298,6 +6615,12 @@
     "residencia": [
       "habitante_paris",
       "provinciano"
+    ],
+    "simbolos": [
+      "duque",
+      "gobernador",
+      "militar",
+      "parisino"
     ]
   },
   {
@@ -6366,6 +6689,12 @@
     "presencia_versalles": "ocasional",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "marques-conde",
+      "parlamentario",
+      "salon-letras",
+      "parisino"
     ]
   },
   {
@@ -6433,6 +6762,11 @@
     "prompt": "",
     "presencia_versalles": "ausente",
     "residencia": [
+      "provinciano"
+    ],
+    "simbolos": [
+      "noble-toga",
+      "parlamentario",
       "provinciano"
     ]
   },
@@ -6502,6 +6836,11 @@
     "presencia_versalles": "ausente",
     "residencia": [
       "provinciano"
+    ],
+    "simbolos": [
+      "marques-conde",
+      "parlamentario",
+      "provinciano"
     ]
   },
   {
@@ -6569,6 +6908,11 @@
     "prompt": "",
     "presencia_versalles": "ausente",
     "residencia": [
+      "provinciano"
+    ],
+    "simbolos": [
+      "marques-conde",
+      "parlamentario",
       "provinciano"
     ]
   },
@@ -6638,6 +6982,12 @@
     "presencia_versalles": "ausente",
     "residencia": [
       "provinciano"
+    ],
+    "simbolos": [
+      "marques-conde",
+      "gobernador",
+      "parlamentario",
+      "provinciano"
     ]
   },
   {
@@ -6705,6 +7055,11 @@
     "prompt": "",
     "presencia_versalles": "ausente",
     "residencia": [
+      "provinciano"
+    ],
+    "simbolos": [
+      "noble-toga",
+      "parlamentario",
       "provinciano"
     ]
   },
@@ -6774,6 +7129,11 @@
     "presencia_versalles": "ausente",
     "residencia": [
       "provinciano"
+    ],
+    "simbolos": [
+      "marques-conde",
+      "parlamentario",
+      "provinciano"
     ]
   },
   {
@@ -6841,6 +7201,11 @@
     "prompt": "",
     "presencia_versalles": "ausente",
     "residencia": [
+      "provinciano"
+    ],
+    "simbolos": [
+      "noble-toga",
+      "parlamentario",
       "provinciano"
     ]
   },
@@ -6910,6 +7275,11 @@
     "presencia_versalles": "ausente",
     "residencia": [
       "provinciano"
+    ],
+    "simbolos": [
+      "noble-toga",
+      "parlamentario",
+      "provinciano"
     ]
   },
   {
@@ -6977,6 +7347,11 @@
     "prompt": "",
     "presencia_versalles": "ausente",
     "residencia": [
+      "provinciano"
+    ],
+    "simbolos": [
+      "noble-toga",
+      "parlamentario",
       "provinciano"
     ]
   },
@@ -7046,6 +7421,11 @@
     "presencia_versalles": "ausente",
     "residencia": [
       "provinciano"
+    ],
+    "simbolos": [
+      "noble-toga",
+      "parlamentario",
+      "provinciano"
     ]
   },
   {
@@ -7114,6 +7494,11 @@
     "presencia_versalles": "ausente",
     "residencia": [
       "provinciano"
+    ],
+    "simbolos": [
+      "noble-toga",
+      "parlamentario",
+      "provinciano"
     ]
   },
   {
@@ -7181,6 +7566,11 @@
     "prompt": "",
     "presencia_versalles": "ausente",
     "residencia": [
+      "provinciano"
+    ],
+    "simbolos": [
+      "marques-conde",
+      "parlamentario",
       "provinciano"
     ]
   },
@@ -7251,6 +7641,12 @@
     "presencia_versalles": "ocasional",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "cardenal",
+      "duque",
+      "par",
+      "parisino"
     ]
   },
   {
@@ -7321,6 +7717,11 @@
     "presencia_versalles": "ocasional",
     "residencia": [
       "por_verificar"
+    ],
+    "simbolos": [
+      "obispo",
+      "duque",
+      "par"
     ]
   },
   {
@@ -7390,6 +7791,11 @@
     "residencia": [
       "habitante_paris",
       "habitante_ile"
+    ],
+    "simbolos": [
+      "cardenal",
+      "cortesano",
+      "parisino"
     ]
   },
   {
@@ -7457,6 +7863,11 @@
     "prompt": "",
     "presencia_versalles": "ausente",
     "residencia": [
+      "provinciano"
+    ],
+    "simbolos": [
+      "obispo",
+      "clero",
       "provinciano"
     ]
   },
@@ -7526,6 +7937,11 @@
     "presencia_versalles": "ausente",
     "residencia": [
       "provinciano"
+    ],
+    "simbolos": [
+      "obispo",
+      "clero",
+      "provinciano"
     ]
   },
   {
@@ -7593,6 +8009,11 @@
     "prompt": "",
     "presencia_versalles": "ausente",
     "residencia": [
+      "provinciano"
+    ],
+    "simbolos": [
+      "obispo",
+      "clero",
       "provinciano"
     ]
   },
@@ -7662,6 +8083,11 @@
     "presencia_versalles": "por verificar",
     "residencia": [
       "por_verificar"
+    ],
+    "simbolos": [
+      "obispo",
+      "casa-rey",
+      "principe-extranjero"
     ]
   },
   {
@@ -7729,6 +8155,11 @@
     "prompt": "",
     "presencia_versalles": "ausente",
     "residencia": [
+      "provinciano"
+    ],
+    "simbolos": [
+      "obispo",
+      "clero",
       "provinciano"
     ]
   },
@@ -7798,6 +8229,11 @@
     "presencia_versalles": "ausente",
     "residencia": [
       "provinciano"
+    ],
+    "simbolos": [
+      "obispo",
+      "clero",
+      "provinciano"
     ]
   },
   {
@@ -7865,6 +8301,11 @@
     "prompt": "",
     "presencia_versalles": "ausente",
     "residencia": [
+      "provinciano"
+    ],
+    "simbolos": [
+      "obispo",
+      "clero",
       "provinciano"
     ]
   },
@@ -7935,6 +8376,12 @@
     "residencia": [
       "habitante_paris",
       "provinciano"
+    ],
+    "simbolos": [
+      "obispo",
+      "duque",
+      "casa-rey",
+      "parisino"
     ]
   },
   {
@@ -7988,6 +8435,11 @@
     "idiomas": [],
     "prompt": "",
     "residencia": [
+      "extranjero"
+    ],
+    "simbolos": [
+      "principe-sangre",
+      "dama-corte",
       "extranjero"
     ]
   },
@@ -8043,6 +8495,11 @@
     "prompt": "",
     "residencia": [
       "extranjero"
+    ],
+    "simbolos": [
+      "principe-sangre",
+      "dama-corte",
+      "extranjero"
     ]
   },
   {
@@ -8096,6 +8553,11 @@
     "idiomas": [],
     "prompt": "",
     "residencia": [
+      "extranjero"
+    ],
+    "simbolos": [
+      "principe-sangre",
+      "dama-corte",
       "extranjero"
     ]
   },
@@ -8152,6 +8614,11 @@
     "prompt": "",
     "residencia": [
       "provinciano"
+    ],
+    "simbolos": [
+      "principe-sangre",
+      "clero",
+      "provinciano"
     ]
   },
   {
@@ -8206,6 +8673,11 @@
     "prompt": "",
     "residencia": [
       "por_verificar"
+    ],
+    "simbolos": [
+      "principe-sangre",
+      "dama-corte",
+      "cortesano"
     ]
   },
   {
@@ -8260,6 +8732,11 @@
     "prompt": "",
     "residencia": [
       "por_verificar"
+    ],
+    "simbolos": [
+      "principe-sangre",
+      "marques-conde",
+      "cortesano"
     ]
   },
   {
@@ -8315,6 +8792,11 @@
     "residencia": [
       "residente_palacio",
       "habitante_paris"
+    ],
+    "simbolos": [
+      "principe-sangre",
+      "dama-corte",
+      "versalles"
     ]
   },
   {
@@ -8370,6 +8852,11 @@
     "prompt": "",
     "residencia": [
       "provinciano"
+    ],
+    "simbolos": [
+      "principe-sangre",
+      "clero",
+      "provinciano"
     ]
   },
   {
@@ -8424,6 +8911,11 @@
     "prompt": "",
     "residencia": [
       "por_verificar"
+    ],
+    "simbolos": [
+      "principe-sangre",
+      "dama-corte",
+      "cortesano"
     ]
   },
   {
@@ -8479,6 +8971,11 @@
     "residencia": [
       "residente_palacio",
       "habitante_paris"
+    ],
+    "simbolos": [
+      "principe-sangre",
+      "dama-corte",
+      "versalles"
     ]
   },
   {
@@ -8534,6 +9031,11 @@
     "residencia": [
       "habitante_paris",
       "habitante_ile"
+    ],
+    "simbolos": [
+      "principe-sangre",
+      "dama-corte",
+      "parisino"
     ]
   },
   {
@@ -8588,6 +9090,11 @@
     "prompt": "",
     "residencia": [
       "por_verificar"
+    ],
+    "simbolos": [
+      "principe-sangre",
+      "dama-corte",
+      "cortesano"
     ]
   },
   {
@@ -8642,6 +9149,11 @@
     "prompt": "",
     "residencia": [
       "habitante_ile"
+    ],
+    "simbolos": [
+      "legitimado",
+      "cortesano",
+      "ile-de-france"
     ]
   },
   {
@@ -8696,6 +9208,11 @@
     "prompt": "",
     "residencia": [
       "habitante_ile"
+    ],
+    "simbolos": [
+      "legitimado",
+      "cortesano",
+      "ile-de-france"
     ]
   },
   {
@@ -8750,6 +9267,11 @@
     "prompt": "",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "principe-sangre",
+      "dama-corte",
+      "parisino"
     ]
   },
   {
@@ -8806,6 +9328,11 @@
     "prompt": "",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "financiero",
+      "ministro",
+      "parisino"
     ]
   },
   {
@@ -8862,6 +9389,11 @@
     "prompt": "",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "financiero",
+      "ministro",
+      "parisino"
     ]
   },
   {
@@ -8918,6 +9450,10 @@
     "prompt": "",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "financiero",
+      "parisino"
     ]
   },
   {
@@ -8974,6 +9510,11 @@
     "prompt": "",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "financiero",
+      "salon-letras",
+      "parisino"
     ]
   },
   {
@@ -9029,6 +9570,11 @@
     "idiomas": [],
     "prompt": "",
     "residencia": [
+      "extranjero"
+    ],
+    "simbolos": [
+      "financiero",
+      "ministro",
       "extranjero"
     ]
   },
@@ -9086,6 +9632,11 @@
     "prompt": "",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "embajador",
+      "militar",
+      "parisino"
     ]
   },
   {
@@ -9143,6 +9694,11 @@
     "prompt": "",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "obispo",
+      "embajador",
+      "parisino"
     ]
   },
   {
@@ -9209,6 +9765,11 @@
     "prompt": "",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "marques-conde",
+      "embajador",
+      "parisino"
     ]
   },
   {
@@ -9263,6 +9824,11 @@
     "prompt": "",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "embajador",
+      "parisino",
+      "extranjero"
     ]
   },
   {
@@ -9319,6 +9885,12 @@
     "prompt": "",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "marques-conde",
+      "dama-corte",
+      "salon-letras",
+      "parisino"
     ]
   },
   {
@@ -9375,6 +9947,12 @@
     "prompt": "",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "noble-toga",
+      "dama-corte",
+      "salon-letras",
+      "parisino"
     ]
   },
   {
@@ -9431,6 +10009,11 @@
     "prompt": "",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "marques-conde",
+      "dama-corte",
+      "parisino"
     ]
   },
   {
@@ -9489,6 +10072,12 @@
     "sexo": "F",
     "residencia": [
       "por_verificar"
+    ],
+    "simbolos": [
+      "principe-extranjero",
+      "duque",
+      "par",
+      "dama-corte"
     ]
   },
   {
@@ -9545,6 +10134,12 @@
     "prompt": "",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "marques-conde",
+      "mariscal",
+      "dama-corte",
+      "parisino"
     ]
   },
   {
@@ -9601,6 +10196,11 @@
     "prompt": "",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "casa-rey",
+      "salon-letras",
+      "parisino"
     ]
   },
   {
@@ -9657,6 +10257,11 @@
     "prompt": "",
     "residencia": [
       "residente_palacio"
+    ],
+    "simbolos": [
+      "gobernador",
+      "casa-rey",
+      "versalles"
     ]
   },
   {
@@ -9713,6 +10318,11 @@
     "prompt": "",
     "residencia": [
       "residente_palacio"
+    ],
+    "simbolos": [
+      "casa-rey",
+      "versalles",
+      "cortesano"
     ]
   },
   {
@@ -9769,6 +10379,12 @@
     "prompt": "",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "duque",
+      "mariscal",
+      "militar",
+      "parisino"
     ]
   },
   {
@@ -9827,6 +10443,12 @@
     "residencia": [
       "habitante_paris",
       "habitante_ile"
+    ],
+    "simbolos": [
+      "duque",
+      "par",
+      "mariscal",
+      "parisino"
     ]
   },
   {
@@ -9883,6 +10505,11 @@
     "prompt": "",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "noble-toga",
+      "salon-letras",
+      "parisino"
     ]
   },
   {
@@ -9940,6 +10567,12 @@
     "residencia": [
       "habitante_paris",
       "provinciano"
+    ],
+    "simbolos": [
+      "marques-conde",
+      "salon-letras",
+      "cortesano",
+      "parisino"
     ]
   },
   {
@@ -9997,6 +10630,11 @@
     "prompt": "",
     "residencia": [
       "habitante_paris"
+    ],
+    "simbolos": [
+      "salon-letras",
+      "cortesano",
+      "parisino"
     ]
   }
 ]
