@@ -113,7 +113,10 @@
       "sang"
     ],
     "favor": 5,
-    "presencia_versalles": "reside"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio"
+    ]
   },
   {
     "aficiones": [
@@ -208,7 +211,10 @@
       "sang"
     ],
     "favor": 1,
-    "presencia_versalles": "por verificar"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio"
+    ]
   },
   {
     "aficiones": [
@@ -357,7 +363,11 @@
       "sang"
     ],
     "favor": 4,
-    "presencia_versalles": "reside"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio",
+      "habitante_paris"
+    ]
   },
   {
     "aficiones": [
@@ -468,7 +478,11 @@
       "legitime"
     ],
     "favor": 2,
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "frecuenta",
+    "residencia": [
+      "residente_palacio",
+      "habitante_paris"
+    ]
   },
   {
     "aficiones": [
@@ -614,7 +628,11 @@
       "sang"
     ],
     "favor": 2,
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ocasional",
+    "residencia": [
+      "habitante_ile",
+      "residente_palacio"
+    ]
   },
   {
     "aficiones": [
@@ -739,7 +757,11 @@
       "sang"
     ],
     "favor": 2,
-    "presencia_versalles": "reside"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio",
+      "habitante_paris"
+    ]
   },
   {
     "aficiones": [
@@ -872,7 +894,10 @@
     ],
     "favor": 2,
     "escritorio_id": "dubois",
-    "presencia_versalles": "reside"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio"
+    ]
   },
   {
     "aficiones": [
@@ -1001,7 +1026,10 @@
     ],
     "favor": 5,
     "escritorio_id": "fleury",
-    "presencia_versalles": "reside"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio"
+    ]
   },
   {
     "aficiones": [
@@ -1125,7 +1153,10 @@
     ],
     "favor": 4,
     "escritorio_id": "villeroy",
-    "presencia_versalles": "reside"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio"
+    ]
   },
   {
     "aficiones": [
@@ -1234,7 +1265,10 @@
     ],
     "favor": 2,
     "escritorio_id": "charost",
-    "presencia_versalles": "reside"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio"
+    ]
   },
   {
     "aficiones": [
@@ -1352,7 +1386,10 @@
     ],
     "favor": 5,
     "escritorio_id": "ventadour",
-    "presencia_versalles": "reside"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio"
+    ]
   },
   {
     "aficiones": [
@@ -1479,7 +1516,11 @@
       "sang"
     ],
     "favor": 2,
-    "presencia_versalles": "reside"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio",
+      "habitante_ile"
+    ]
   },
   {
     "aficiones": [
@@ -1615,7 +1656,11 @@
     ],
     "favor": 1,
     "escritorio_id": "prie",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "frecuenta",
+    "residencia": [
+      "habitante_paris",
+      "habitante_ile"
+    ]
   },
   {
     "aficiones": [
@@ -1743,7 +1788,11 @@
       "legitime"
     ],
     "favor": 2,
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ocasional",
+    "residencia": [
+      "residente_palacio",
+      "habitante_paris"
+    ]
   },
   {
     "aficiones": [
@@ -1869,7 +1918,11 @@
       "sang"
     ],
     "favor": 1,
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "frecuenta",
+    "residencia": [
+      "residente_palacio",
+      "habitante_paris"
+    ]
   },
   {
     "aficiones": [
@@ -1977,7 +2030,10 @@
       "sang"
     ],
     "favor": 1,
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "frecuenta",
+    "residencia": [
+      "residente_palacio"
+    ]
   },
   {
     "aficiones": [
@@ -2099,7 +2155,11 @@
       "sang"
     ],
     "favor": 1,
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "frecuenta",
+    "residencia": [
+      "residente_palacio",
+      "habitante_paris"
+    ]
   },
   {
     "aficiones": [
@@ -2226,7 +2286,10 @@
       "legitime"
     ],
     "favor": 3,
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ocasional",
+    "residencia": [
+      "habitante_ile"
+    ]
   },
   {
     "aficiones": [
@@ -2359,7 +2422,10 @@
       "sang"
     ],
     "favor": 1,
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ocasional",
+    "residencia": [
+      "habitante_ile"
+    ]
   },
   {
     "aficiones": [
@@ -2476,7 +2542,12 @@
       "legitime"
     ],
     "favor": 4,
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "frecuenta",
+    "residencia": [
+      "residente_palacio",
+      "habitante_paris",
+      "habitante_ile"
+    ]
   },
   {
     "aficiones": [
@@ -2600,7 +2671,10 @@
     ],
     "favor": 3,
     "escritorio_id": "antin",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "frecuenta",
+    "residencia": [
+      "residente_palacio"
+    ]
   },
   {
     "aficiones": [
@@ -2738,7 +2812,12 @@
     ],
     "favor": 1,
     "escritorio_id": "saint-simon",
-    "presencia_versalles": "reside"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "habitante_ile",
+      "residente_palacio",
+      "habitante_paris"
+    ]
   },
   {
     "aficiones": [
@@ -2867,7 +2946,11 @@
     ],
     "favor": 3,
     "escritorio_id": "villars",
-    "presencia_versalles": "reside"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "habitante_paris",
+      "habitante_ile"
+    ]
   },
   {
     "aficiones": [
@@ -2984,7 +3067,11 @@
     ],
     "favor": 1,
     "escritorio_id": "noailles",
-    "presencia_versalles": "reside"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio",
+      "habitante_paris"
+    ]
   },
   {
     "aficiones": [
@@ -3095,7 +3182,11 @@
     ],
     "favor": 1,
     "escritorio_id": "armenonville",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "frecuenta",
+    "residencia": [
+      "habitante_versalles",
+      "habitante_paris"
+    ]
   },
   {
     "aficiones": [
@@ -3205,7 +3296,11 @@
     ],
     "favor": 1,
     "escritorio_id": "dodun",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "frecuenta",
+    "residencia": [
+      "habitante_versalles",
+      "habitante_paris"
+    ]
   },
   {
     "aficiones": [
@@ -3319,7 +3414,10 @@
     ],
     "favor": 1,
     "escritorio_id": "le-blanc",
-    "presencia_versalles": "reside"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "habitante_versalles"
+    ]
   },
   {
     "aficiones": [
@@ -3435,7 +3533,10 @@
     ],
     "favor": 2,
     "escritorio_id": "maurepas",
-    "presencia_versalles": "reside"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "habitante_versalles"
+    ]
   },
   {
     "aficiones": [
@@ -3550,7 +3651,10 @@
     ],
     "favor": 1,
     "escritorio_id": "la-vrilliere",
-    "presencia_versalles": "reside"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "habitante_versalles"
+    ]
   },
   {
     "aficiones": [
@@ -3678,7 +3782,10 @@
     ],
     "favor": 1,
     "escritorio_id": "belle-isle",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "frecuenta",
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "aficiones": [
@@ -3788,7 +3895,10 @@
     ],
     "favor": 4,
     "escritorio_id": "carlos-de-lorena",
-    "presencia_versalles": "reside"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio"
+    ]
   },
   {
     "aficiones": [
@@ -3917,7 +4027,11 @@
     ],
     "favor": 3,
     "escritorio_id": "cardenal-rohan",
-    "presencia_versalles": "reside"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio",
+      "provinciano"
+    ]
   },
   {
     "aficiones": [],
@@ -3973,7 +4087,9 @@
     "favor": 2,
     "escritorio_id": "rohan-guemene",
     "presencia_versalles": "por verificar",
-    "residencia": "por_verificar"
+    "residencia": [
+      "por_verificar"
+    ]
   },
   {
     "aficiones": [
@@ -4089,7 +4205,10 @@
     ],
     "favor": 3,
     "escritorio_id": "mareschal",
-    "presencia_versalles": "reside"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio"
+    ]
   },
   {
     "aficiones": [
@@ -4185,7 +4304,10 @@
     ],
     "favor": 3,
     "escritorio_id": "dodart",
-    "presencia_versalles": "reside"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio"
+    ]
   },
   {
     "aficiones": [
@@ -4287,7 +4409,10 @@
     ],
     "favor": 1,
     "escritorio_id": "robert-de-cotte",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "frecuenta",
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "aficiones": [
@@ -4390,7 +4515,10 @@
     ],
     "favor": 2,
     "escritorio_id": "lalande",
-    "presencia_versalles": "reside"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio"
+    ]
   },
   {
     "aficiones": [
@@ -4500,7 +4628,10 @@
     ],
     "favor": 1,
     "escritorio_id": "couperin",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "frecuenta",
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "aficiones": [
@@ -4642,7 +4773,10 @@
     ],
     "favor": 1,
     "escritorio_id": "luke-schaub",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "frecuenta",
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "aficiones": [
@@ -4763,7 +4897,10 @@
     ],
     "favor": 3,
     "escritorio_id": "felipe-v",
-    "presencia_versalles": "ausente"
+    "presencia_versalles": "ausente",
+    "residencia": [
+      "extranjero"
+    ]
   },
   {
     "aficiones": [
@@ -4871,7 +5008,10 @@
     ],
     "favor": 4,
     "escritorio_id": "la-tremoille",
-    "presencia_versalles": "reside"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio"
+    ]
   },
   {
     "aficiones": [
@@ -4995,7 +5135,10 @@
     ],
     "favor": 1,
     "escritorio_id": "parabere",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ocasional",
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "aficiones": [
@@ -5108,7 +5251,10 @@
     ],
     "favor": 3,
     "escritorio_id": "linieres",
-    "presencia_versalles": "reside"
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio"
+    ]
   },
   {
     "id": "p45",
@@ -5174,7 +5320,11 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "frecuenta",
+    "residencia": [
+      "habitante_versalles",
+      "habitante_ile"
+    ]
   },
   {
     "id": "p46",
@@ -5240,7 +5390,11 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "frecuenta",
+    "residencia": [
+      "habitante_paris",
+      "provinciano"
+    ]
   },
   {
     "id": "p47",
@@ -5308,7 +5462,10 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "reside",
-    "residencia": "residente_palacio"
+    "residencia": [
+      "residente_palacio",
+      "habitante_paris"
+    ]
   },
   {
     "id": "p48",
@@ -5374,7 +5531,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "ocasional",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p49",
@@ -5441,7 +5600,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "frecuenta",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p50",
@@ -5508,7 +5669,10 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "reside",
-    "residencia": "residente_palacio"
+    "residencia": [
+      "residente_palacio",
+      "provinciano"
+    ]
   },
   {
     "id": "p51",
@@ -5575,7 +5739,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "frecuenta",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p52",
@@ -5642,7 +5808,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "frecuenta",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p53",
@@ -5709,7 +5877,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "por verificar",
-    "residencia": "por_verificar"
+    "residencia": [
+      "por_verificar"
+    ]
   },
   {
     "id": "p54",
@@ -5777,7 +5947,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "frecuenta",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p55",
@@ -5844,7 +6016,10 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "reside",
-    "residencia": "residente_palacio"
+    "residencia": [
+      "residente_palacio",
+      "provinciano"
+    ]
   },
   {
     "id": "p56",
@@ -5911,7 +6086,10 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "reside",
-    "residencia": "residente_palacio"
+    "residencia": [
+      "residente_palacio",
+      "provinciano"
+    ]
   },
   {
     "id": "p57",
@@ -5978,7 +6156,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "reside",
-    "residencia": "residente_palacio"
+    "residencia": [
+      "residente_palacio"
+    ]
   },
   {
     "id": "p58",
@@ -6045,7 +6225,10 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "reside",
-    "residencia": "residente_palacio"
+    "residencia": [
+      "residente_palacio",
+      "habitante_ile"
+    ]
   },
   {
     "id": "p59",
@@ -6111,7 +6294,10 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "frecuenta",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris",
+      "provinciano"
+    ]
   },
   {
     "id": "p60",
@@ -6177,7 +6363,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "ocasional",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p61",
@@ -6243,7 +6431,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "ausente",
-    "residencia": "provinciano"
+    "residencia": [
+      "provinciano"
+    ]
   },
   {
     "id": "p62",
@@ -6309,7 +6499,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "ausente",
-    "residencia": "provinciano"
+    "residencia": [
+      "provinciano"
+    ]
   },
   {
     "id": "p63",
@@ -6375,7 +6567,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "ausente",
-    "residencia": "provinciano"
+    "residencia": [
+      "provinciano"
+    ]
   },
   {
     "id": "p64",
@@ -6441,7 +6635,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "ausente",
-    "residencia": "provinciano"
+    "residencia": [
+      "provinciano"
+    ]
   },
   {
     "id": "p65",
@@ -6507,7 +6703,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "ausente",
-    "residencia": "provinciano"
+    "residencia": [
+      "provinciano"
+    ]
   },
   {
     "id": "p66",
@@ -6573,7 +6771,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "ausente",
-    "residencia": "provinciano"
+    "residencia": [
+      "provinciano"
+    ]
   },
   {
     "id": "p67",
@@ -6639,7 +6839,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "ausente",
-    "residencia": "provinciano"
+    "residencia": [
+      "provinciano"
+    ]
   },
   {
     "id": "p68",
@@ -6705,7 +6907,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "ausente",
-    "residencia": "provinciano"
+    "residencia": [
+      "provinciano"
+    ]
   },
   {
     "id": "p69",
@@ -6771,7 +6975,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "ausente",
-    "residencia": "provinciano"
+    "residencia": [
+      "provinciano"
+    ]
   },
   {
     "id": "p70",
@@ -6837,7 +7043,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "ausente",
-    "residencia": "provinciano"
+    "residencia": [
+      "provinciano"
+    ]
   },
   {
     "id": "p71",
@@ -6903,7 +7111,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "ausente",
-    "residencia": "provinciano"
+    "residencia": [
+      "provinciano"
+    ]
   },
   {
     "id": "p72",
@@ -6969,7 +7179,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "ausente",
-    "residencia": "provinciano"
+    "residencia": [
+      "provinciano"
+    ]
   },
   {
     "id": "p73",
@@ -7036,7 +7248,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "ocasional",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p74",
@@ -7103,7 +7317,10 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ocasional",
+    "residencia": [
+      "por_verificar"
+    ]
   },
   {
     "id": "p75",
@@ -7169,7 +7386,10 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "frecuenta",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris",
+      "habitante_ile"
+    ]
   },
   {
     "id": "p76",
@@ -7235,7 +7455,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "ausente",
-    "residencia": "provinciano"
+    "residencia": [
+      "provinciano"
+    ]
   },
   {
     "id": "p77",
@@ -7301,7 +7523,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "ausente",
-    "residencia": "provinciano"
+    "residencia": [
+      "provinciano"
+    ]
   },
   {
     "id": "p78",
@@ -7367,7 +7591,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "ausente",
-    "residencia": "provinciano"
+    "residencia": [
+      "provinciano"
+    ]
   },
   {
     "id": "p79",
@@ -7433,7 +7659,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "por verificar",
-    "residencia": "por_verificar"
+    "residencia": [
+      "por_verificar"
+    ]
   },
   {
     "id": "p80",
@@ -7499,7 +7727,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "ausente",
-    "residencia": "provinciano"
+    "residencia": [
+      "provinciano"
+    ]
   },
   {
     "id": "p81",
@@ -7565,7 +7795,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "ausente",
-    "residencia": "provinciano"
+    "residencia": [
+      "provinciano"
+    ]
   },
   {
     "id": "p82",
@@ -7631,7 +7863,9 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "ausente",
-    "residencia": "provinciano"
+    "residencia": [
+      "provinciano"
+    ]
   },
   {
     "id": "p83",
@@ -7697,7 +7931,10 @@
     "idiomas": [],
     "prompt": "",
     "presencia_versalles": "frecuenta",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris",
+      "provinciano"
+    ]
   },
   {
     "id": "p84",
@@ -7749,7 +7986,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "extranjero"
+    "residencia": [
+      "extranjero"
+    ]
   },
   {
     "id": "p85",
@@ -7801,7 +8040,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "extranjero"
+    "residencia": [
+      "extranjero"
+    ]
   },
   {
     "id": "p86",
@@ -7853,7 +8094,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "extranjero"
+    "residencia": [
+      "extranjero"
+    ]
   },
   {
     "id": "p87",
@@ -7906,7 +8149,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "provinciano"
+    "residencia": [
+      "provinciano"
+    ]
   },
   {
     "id": "p88",
@@ -7958,7 +8203,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "por_verificar"
+    "residencia": [
+      "por_verificar"
+    ]
   },
   {
     "id": "p89",
@@ -8010,7 +8257,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "por_verificar"
+    "residencia": [
+      "por_verificar"
+    ]
   },
   {
     "id": "p90",
@@ -8062,7 +8311,10 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "residente_palacio"
+    "residencia": [
+      "residente_palacio",
+      "habitante_paris"
+    ]
   },
   {
     "id": "p91",
@@ -8115,7 +8367,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "provinciano"
+    "residencia": [
+      "provinciano"
+    ]
   },
   {
     "id": "p92",
@@ -8167,7 +8421,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "por_verificar"
+    "residencia": [
+      "por_verificar"
+    ]
   },
   {
     "id": "p93",
@@ -8219,7 +8475,10 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "residente_palacio"
+    "residencia": [
+      "residente_palacio",
+      "habitante_paris"
+    ]
   },
   {
     "id": "p94",
@@ -8271,7 +8530,10 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris",
+      "habitante_ile"
+    ]
   },
   {
     "id": "p95",
@@ -8323,7 +8585,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "por_verificar"
+    "residencia": [
+      "por_verificar"
+    ]
   },
   {
     "id": "p96",
@@ -8375,7 +8639,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "habitante_ile"
+    "residencia": [
+      "habitante_ile"
+    ]
   },
   {
     "id": "p97",
@@ -8427,7 +8693,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "habitante_ile"
+    "residencia": [
+      "habitante_ile"
+    ]
   },
   {
     "id": "p98",
@@ -8479,7 +8747,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p99",
@@ -8533,7 +8803,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p100",
@@ -8587,7 +8859,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p101",
@@ -8641,7 +8915,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p102",
@@ -8695,7 +8971,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p103",
@@ -8749,7 +9027,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "extranjero"
+    "residencia": [
+      "extranjero"
+    ]
   },
   {
     "id": "p104",
@@ -8803,7 +9083,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p105",
@@ -8858,7 +9140,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p106",
@@ -8922,7 +9206,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p107",
@@ -8974,7 +9260,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p108",
@@ -9028,7 +9316,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p109",
@@ -9082,7 +9372,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p110",
@@ -9136,7 +9428,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p111",
@@ -9192,7 +9486,9 @@
     "idiomas": [],
     "prompt": "",
     "sexo": "F",
-    "residencia": "por_verificar"
+    "residencia": [
+      "por_verificar"
+    ]
   },
   {
     "id": "p112",
@@ -9246,7 +9542,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p113",
@@ -9300,7 +9598,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p114",
@@ -9354,7 +9654,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "residente_palacio"
+    "residencia": [
+      "residente_palacio"
+    ]
   },
   {
     "id": "p115",
@@ -9408,7 +9710,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "residente_palacio"
+    "residencia": [
+      "residente_palacio"
+    ]
   },
   {
     "id": "p116",
@@ -9462,7 +9766,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p117",
@@ -9517,7 +9823,10 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris",
+      "habitante_ile"
+    ]
   },
   {
     "id": "p118",
@@ -9571,7 +9880,9 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   },
   {
     "id": "p119",
@@ -9625,7 +9936,10 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris",
+      "provinciano"
+    ]
   },
   {
     "id": "p120",
@@ -9680,6 +9994,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "residencia": "habitante_paris"
+    "residencia": [
+      "habitante_paris"
+    ]
   }
 ]
