@@ -49,6 +49,9 @@ input[type=search]{font:15px var(--body);padding:6px 12px;border:1px solid var(-
 .anio{font-weight:400;color:var(--muted);font-variant-numeric:tabular-nums}
 aside .anio{font-size:.7em}
 .plaus{position:absolute;top:6px;right:6px;font:10px var(--mono);letter-spacing:.06em;text-transform:uppercase;background:var(--paper);color:var(--muted);border:1px solid var(--line);padding:1px 5px}
+.res-tag{position:absolute;top:6px;left:6px;font:10px var(--mono);letter-spacing:.04em;background:var(--paper);color:var(--royal);border:1px solid var(--line);padding:1px 5px}
+.res-tag.away{color:var(--muted)}
+.res-tag.unk{color:var(--gold)}
 .empty{border:1px dashed var(--line);padding:28px;color:var(--muted);text-align:center;background:var(--paper)}
 /* ficha */
 .veil{position:fixed;inset:0;background:var(--veil);z-index:5}
@@ -102,6 +105,7 @@ select{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);borde
   <div class="tools">
     <input type="search" id="q" placeholder="Buscar por nombre, cargo o título" aria-label="Buscar personaje">
     <label class="sortlbl">Ordenar<select id="orden"><option value="">Original</option><option value="riqueza">Dinero</option><option value="edad">Edad</option><option value="rango">Nobleza / rango</option></select></label>
+    <label class="sortlbl">Residencia<select id="res"><option value="">Todas</option><option value="residente_palacio">Residente en Versalles</option><option value="habitante_versalles">Habitante de Versalles</option><option value="habitante_ile">Habitante de l'Île</option><option value="habitante_paris">Habitante de París</option><option value="provinciano">Provinciano</option><option value="extranjero">Extranjero</option><option value="por_verificar">Por verificar</option></select></label>
     <div class="chips" id="chips" role="group" aria-label="Filtrar por facción"></div>
   </div>
   <div class="count" id="count"></div>
@@ -138,7 +142,9 @@ select{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);borde
 <script src="js/github.js?v=202611161648"></script>
 <script>
 const $=id=>document.getElementById(id);
-let chars=[],filtro='Todas',q='',sel=null,db=null,owner=false,orden='',RET={};
+let chars=[],filtro='Todas',q='',res='',sel=null,db=null,owner=false,orden='',RET={};
+const RES_SHORT={habitante_versalles:'Hab. Versalles',habitante_ile:"Hab. l'Île",habitante_paris:'Hab. París',provinciano:'Provinciano',extranjero:'Extranjero',por_verificar:'Por verificar'};
+const RES_FULL={residente_palacio:'Residente en Versalles (palacio, por gracia del rey)',habitante_versalles:'Habitante de Versalles (ciudad)',habitante_ile:"Habitante de l'Île (cercanías de la corte)",habitante_paris:'Habitante de París (visita Versalles)',provinciano:'Provinciano (vive en su provincia)',extranjero:'Extranjero (fuera del reino)',por_verificar:'Por verificar'};
 const nac=c=>{const m=String(c.anio||'').match(/\d{4}/);return m?+m[0]:9999};
 const KEY={riqueza:c=>+c.riqueza||0,edad:c=>-nac(c),rango:c=>+c.rango||0};
 const VAL={riqueza:c=>'Fortuna '+(c.riqueza??'?')+'/10',edad:c=>(c.edad||'?')+' años',rango:c=>c.estatus_familia||''};
@@ -152,7 +158,7 @@ function render(){
   $('chips').textContent='';
   fac.forEach(f=>{const b=document.createElement('button');b.className='chip';b.textContent=f;b.setAttribute('aria-pressed',f===filtro);b.onclick=()=>{filtro=f;render()};$('chips').append(b)});
   const t=q.toLowerCase();
-  const vis=chars.filter(c=>(filtro==='Todas'||c.faccion===filtro)&&(!t||[c.nombre,c.nombre_nac,(c.apodos||[]).join(' '),c.titulo_nob,c.puesto].join(' ').toLowerCase().includes(t)));
+  const vis=chars.filter(c=>(filtro==='Todas'||c.faccion===filtro)&&(!res||c.residencia===res)&&(!t||[c.nombre,c.nombre_nac,(c.apodos||[]).join(' '),c.titulo_nob,c.puesto].join(' ').toLowerCase().includes(t)));
   if(orden){const k=KEY[orden];vis.sort((a,b)=>k(b)-k(a)||(a.orden||0)-(b.orden||0))}
   const conR=chars.filter(c=>RET[c.id]).length;
   $('count').textContent=chars.length?`${vis.length} de ${chars.length} personajes · ${conR} con retrato`:'';
@@ -160,6 +166,7 @@ function render(){
   $('grid').textContent='';
   vis.forEach(c=>{const b=document.createElement('button');b.className='card';
     const f=document.createElement('div');f.className='face';face(f,c);
+    if(c.residencia&&RES_SHORT[c.residencia]){const rt=document.createElement('span');rt.className='res-tag'+(c.residencia==='provinciano'||c.residencia==='extranjero'?' away':c.residencia==='por_verificar'?' unk':'');rt.textContent=RES_SHORT[c.residencia];rt.title=RES_FULL[c.residencia]||'';f.append(rt)}
     if(c.estatus==='plausible'){const p=document.createElement('span');p.className='plaus';p.textContent='plausible';f.append(p)}
     const n=document.createElement('div');n.className='cname';nombreEn(n,c);
     const s=document.createElement('div');s.className='ctitle';s.textContent=c.titulo_nob||c.titulo||'';
@@ -190,7 +197,7 @@ function ficha(){
   if(owner){const o=document.createElement('span');o.className='ov'+(RET[c.id]?'':' show');o.textContent=RET[c.id]?'Cambiar retrato':'Subir retrato';$('fface').append(o);$('fface').htmlFor='file'}else{$('fface').htmlFor=''}
   $('fhouse').textContent=c.faccion||'';nombreEn($('fname'),c);$('ftitle').textContent=c.titulo_nob||c.titulo||'';$('fpuesto').textContent=c.puesto||c.cargo||'';
   $('fdata').textContent='';
-  SECC.forEach(([t,fs],idx)=>{const vs=fs.filter(([k])=>c[k]&&c[k]!=='—');const hasR=idx===0&&(c.rangos||[]).length;if(!vs.length&&!hasR)return;const dl=head(t);if(hasR)add(dl,'Rango',rangosLibro(c.rangos));vs.forEach(([k,l])=>add(dl,l,k==='edad'?c[k]+' años':c[k]))});
+  SECC.forEach(([t,fs],idx)=>{const vs=fs.filter(([k])=>c[k]&&c[k]!=='—');const hasR=idx===0&&(c.rangos||[]).length;const hasRes=idx===3&&c.residencia;if(!vs.length&&!hasR&&!hasRes)return;const dl=head(t);if(hasR)add(dl,'Rango',rangosLibro(c.rangos));if(hasRes)add(dl,'Residencia',RES_FULL[c.residencia]||c.residencia);vs.forEach(([k,l])=>add(dl,l,k==='edad'?c[k]+' años':c[k]))});
   if(c.innatos){const dl=head('Innatos','interpretación');INN.forEach(([k,l])=>c.innatos[k]&&add(dl,l,c.innatos[k]))}
   if(c.habilidades){const dl=head('Habilidades','0–10 · interpretación');HAB.forEach(([k,l])=>{const n=+c.habilidades[k]||0;const w=document.createElement('div');w.className='bar';w.setAttribute('aria-label',l+': '+n+' de 10');const f=document.createElement('i');f.style.width=n*10+'%';const s=document.createElement('b');s.textContent=n;w.append(f,s);add(dl,l,w)})}
   if(c.rasgos&&Object.keys(c.rasgos).length){const dl=head('Rasgos','1–5 · los demás, neutros');const rd=c.rasgos_doc||[];
@@ -210,6 +217,7 @@ function cerrar(){sel=null;$('ficha').hidden=true;$('veil').hidden=true}
 $('close').onclick=cerrar;$('veil').onclick=cerrar;
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&sel)cerrar()});
 $('q').oninput=e=>{q=e.target.value;render()};
+$('res').onchange=e=>{res=e.target.value;render()};
 $('orden').onchange=e=>{orden=e.target.value;try{localStorage.setItem('orden',orden)}catch{}render()};
 try{orden=localStorage.getItem('orden')||'';$('orden').value=orden}catch{}
 $('copy').onclick=async()=>{const t=$('fprompt').textContent;
