@@ -5682,9 +5682,9 @@
     "nombre_nac": "Jean-Charles de Crussol, VII duc d'Uzès",
     "apodos": [],
     "anio": 1675,
-    "edad": "47",
-    "nacimiento": "1675",
-    "muerte": "—",
+    "edad": "46",
+    "nacimiento": "29/12/1675, París",
+    "muerte": "19/07/1739, Uzès",
     "casa": "Crussol d'Uzès",
     "estatus_familia": "Primer Duque y Par Laico",
     "titulo": "Duque de Uzès, Primer Par de Francia",
@@ -5693,9 +5693,9 @@
     "cargo": "Gobernador de Saintonge y Angoumois · Decano de los Pares Laicos",
     "padre": "Emmanuel II de Crussol, VI duque de Uzès",
     "madre": "Marie-Julie de Sainte-Maure (hija del duque de Montausier)",
-    "lugar_familia": "Duque de Uzès, Primer Par de Francia",
-    "conyuge": "Anne-Marie-Marguerite de Bullion de Fervaques (2ª esposa, 1706)",
-    "hijos": "Charles-Emmanuel de Crussol, marqués de Florensac (1707)",
+    "lugar_familia": "Segundo hijo; heredó en 1693 al morir su hermano mayor Louis en la batalla de Neerwinden",
+    "conyuge": "1.ª Anne-Hippolyte Grimaldi (1696, †1700); 2.ª Anne-Marie-Marguerite de Bullion de Fervaques (1706)",
+    "hijos": "Charles-Emmanuel de Crussol (1707), Anne-Marie-Louise (1708), Louis-Emmanuel (1712), Anne-Julie-Françoise (1713, futura duquesa de La Vallière), Anne-Charlotte-Émilie (1717), entre otros",
     "religion": "Católica",
     "lengua": "Francés",
     "educacion": "Preceptores de su casa y colegios del Reino",
@@ -5706,7 +5706,7 @@
     "quiere": "Impedir que los Príncipes de la Sangre y los Legitimados usurpen el paso al Primer Par en el Sacre de Reims",
     "oculta": "Alianza táctica con Saint-Simon para defender el cuerpo de Duques y Pares",
     "relacion_rey": "Gobernador de Saintonge y Angoumois · Decano de los Pares Laicos",
-    "hitos": "Por ser su ducado-paría el más antiguo entre los laicos (1572), habla y firma en primer lugar en nombre de todos los Pares de Francia.",
+    "hitos": "El vizcondado de Uzès fue erigido en ducado (1565) y en ducado-paría (1572); al extinguirse las parías laicas anteriores del siglo XVI (como Montmorency o Guisa), Uzès quedó como la paría laica más antigua del reino. Ser Primer Par Laico implicaba precedencia absoluta sobre todos los demás duques y pares (inmediatamente tras los Príncipes de la Sangre y los pares eclesiásticos): hablar, sentarse y firmar primero en el Parlamento de París y ocupar el primer puesto laico tras la sangre real en la consagración de Luis XV en Reims (octubre de 1722). Heredó el título y el gobierno de Saintonge y Angoumois en 1693.",
     "estatus": "verificado",
     "riqueza": 7,
     "rango": 86,
@@ -5717,7 +5717,7 @@
     ],
     "favor": 3,
     "innatos": {
-      "temperamento": "Por ser su ducado-paría el más antiguo entre los laicos (1572), habla y firma en primer lugar en nombre de todos los Pares de Francia.",
+      "temperamento": "Celoso de la antigüedad y precedencia de su paría; tenaz en el protocolo",
       "salud": "Buena en junio de 1722",
       "aspecto": "Porte propio de su dignidad y estado",
       "intelecto": "Cultivado en el gobierno de sus tierras y jurisdicciones"
@@ -5740,7 +5740,8 @@
     "prompt": "",
     "presencia_versalles": "frecuenta",
     "residencia": [
-      "habitante_paris"
+      "habitante_paris",
+      "provinciano"
     ]
   },
   {

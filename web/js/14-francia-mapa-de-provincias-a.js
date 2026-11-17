@@ -181,7 +181,7 @@ const FEUDOS = [
    casa:"Casa de Crussol d'Uzès", clan:"ducal", pid:"jean-charles-uzes", titular:"Jean-Charles de Crussol, VII Duque de Uzès",
    escudo:{bg:"#b02828",fg:"#e0ba54",acc:"#1f3a68",pat:"uzes",crown:"ducal",blason:"Cuartelado: 1 y 4 fajado de oro y de sinople (Crussol); 2 y 3 de oro con tres cabrios de gules (Lévis); sobre el todo de gules con tres bandas de oro (Uzès)."},
    rentas:"Señoríos en el Gard y las Cévennes, con precedencia sobre todos los duques del Reino.",
-   nota:"Por antigüedad de creación (1572), el Duque de Uzès camina el primero de todos los Pares laicos en la Consagración de Reims."},
+   nota:"Vizcondado erigido en ducado (1565) y en ducado-paría (1572). Al extinguirse parías anteriores del siglo XVI, Uzès quedó como la paría laica más antigua del reino: da asiento y firma en primer lugar en el Parlamento y precede a todos los Pares laicos (inmediatamente tras la sangre real) en el Sacre de Reims."},
   {id:"baronias-lang", prov:"languedoc", lon:2.35, lat:43.45, corto:"M. de Castries y Baronías", nombre:"Marquesado de Castries y Baronías de los Estados de Languedoc", rango:"Marquesado y Baronía de Estados",
    casa:"Casa de La Croix de Castries", clan:"ducal", pid:"joseph-castries", titular:"Joseph-François de La Croix, Marqués de Castries",
    escudo:{bg:"#1f3a68",fg:"#e0ba54",acc:"#1f3a68",pat:"castries",crown:"conde",blason:"De azur con cruz de oro (el célebre blasón parlante de los La Croix, marqueses de Castries y barones del Languedoc)."},
