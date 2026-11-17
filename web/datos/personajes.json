@@ -3972,7 +3972,8 @@
     ],
     "favor": 2,
     "escritorio_id": "rohan-guemene",
-    "presencia_versalles": "por verificar"
+    "presencia_versalles": "por verificar",
+    "residencia": "por_verificar"
   },
   {
     "aficiones": [
@@ -5306,7 +5307,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "reside",
+    "residencia": "residente_palacio"
   },
   {
     "id": "p48",
@@ -5371,7 +5373,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "ocasional",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p49",
@@ -5437,7 +5440,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "frecuenta",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p50",
@@ -5503,7 +5507,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "reside",
+    "residencia": "residente_palacio"
   },
   {
     "id": "p51",
@@ -5569,7 +5574,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "frecuenta",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p52",
@@ -5635,7 +5641,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "frecuenta",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p53",
@@ -5701,7 +5708,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "por verificar",
+    "residencia": "por_verificar"
   },
   {
     "id": "p54",
@@ -5768,7 +5776,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "frecuenta",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p55",
@@ -5834,7 +5843,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "reside",
+    "residencia": "residente_palacio"
   },
   {
     "id": "p56",
@@ -5900,7 +5910,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "reside",
+    "residencia": "residente_palacio"
   },
   {
     "id": "p57",
@@ -5966,7 +5977,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "reside",
+    "residencia": "residente_palacio"
   },
   {
     "id": "p58",
@@ -6032,7 +6044,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "reside",
+    "residencia": "residente_palacio"
   },
   {
     "id": "p59",
@@ -6097,7 +6110,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "frecuenta"
+    "presencia_versalles": "frecuenta",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p60",
@@ -6162,7 +6176,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ocasional",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p61",
@@ -6227,7 +6242,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ausente",
+    "residencia": "provinciano"
   },
   {
     "id": "p62",
@@ -6292,7 +6308,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ausente",
+    "residencia": "provinciano"
   },
   {
     "id": "p63",
@@ -6357,7 +6374,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ausente",
+    "residencia": "provinciano"
   },
   {
     "id": "p64",
@@ -6422,7 +6440,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ausente",
+    "residencia": "provinciano"
   },
   {
     "id": "p65",
@@ -6487,7 +6506,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ausente",
+    "residencia": "provinciano"
   },
   {
     "id": "p66",
@@ -6552,7 +6572,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ausente",
+    "residencia": "provinciano"
   },
   {
     "id": "p67",
@@ -6617,7 +6638,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ausente",
+    "residencia": "provinciano"
   },
   {
     "id": "p68",
@@ -6682,7 +6704,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ausente",
+    "residencia": "provinciano"
   },
   {
     "id": "p69",
@@ -6747,7 +6770,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ausente",
+    "residencia": "provinciano"
   },
   {
     "id": "p70",
@@ -6812,7 +6836,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ausente",
+    "residencia": "provinciano"
   },
   {
     "id": "p71",
@@ -6877,7 +6902,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ausente",
+    "residencia": "provinciano"
   },
   {
     "id": "p72",
@@ -6942,7 +6968,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ausente",
+    "residencia": "provinciano"
   },
   {
     "id": "p73",
@@ -7008,7 +7035,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ocasional",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p74",
@@ -7140,7 +7168,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "frecuenta",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p76",
@@ -7205,7 +7234,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ausente",
+    "residencia": "provinciano"
   },
   {
     "id": "p77",
@@ -7270,7 +7300,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ausente",
+    "residencia": "provinciano"
   },
   {
     "id": "p78",
@@ -7335,7 +7366,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ausente",
+    "residencia": "provinciano"
   },
   {
     "id": "p79",
@@ -7400,7 +7432,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "por verificar",
+    "residencia": "por_verificar"
   },
   {
     "id": "p80",
@@ -7465,7 +7498,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ausente",
+    "residencia": "provinciano"
   },
   {
     "id": "p81",
@@ -7530,7 +7564,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ausente",
+    "residencia": "provinciano"
   },
   {
     "id": "p82",
@@ -7595,7 +7630,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "ausente",
+    "residencia": "provinciano"
   },
   {
     "id": "p83",
@@ -7660,7 +7696,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "presencia_versalles": "ocasional"
+    "presencia_versalles": "frecuenta",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p84",
@@ -7711,7 +7748,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "extranjero"
   },
   {
     "id": "p85",
@@ -7762,7 +7800,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "extranjero"
   },
   {
     "id": "p86",
@@ -7813,7 +7852,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "extranjero"
   },
   {
     "id": "p87",
@@ -7865,7 +7905,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "provinciano"
   },
   {
     "id": "p88",
@@ -7916,7 +7957,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "por_verificar"
   },
   {
     "id": "p89",
@@ -7952,7 +7994,7 @@
     "relacion_rey": "Hermano de Monsieur le Duc",
     "hitos": "—",
     "estatus": "por verificar",
-    "presencia_versalles": "frecuenta",
+    "presencia_versalles": "por verificar",
     "riqueza": 8,
     "rango": 88,
     "sexo": "M",
@@ -7967,7 +8009,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "por_verificar"
   },
   {
     "id": "p90",
@@ -8003,7 +8046,7 @@
     "relacion_rey": "Hermana de Monsieur le Duc",
     "hitos": "—",
     "estatus": "por verificar",
-    "presencia_versalles": "frecuenta",
+    "presencia_versalles": "reside",
     "riqueza": 8,
     "rango": 88,
     "sexo": "F",
@@ -8018,7 +8061,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "residente_palacio"
   },
   {
     "id": "p91",
@@ -8070,7 +8114,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "provinciano"
   },
   {
     "id": "p92",
@@ -8106,7 +8151,7 @@
     "relacion_rey": "Hermana de Monsieur le Duc",
     "hitos": "—",
     "estatus": "por verificar",
-    "presencia_versalles": "frecuenta",
+    "presencia_versalles": "por verificar",
     "riqueza": 8,
     "rango": 87,
     "sexo": "F",
@@ -8121,7 +8166,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "por_verificar"
   },
   {
     "id": "p93",
@@ -8157,7 +8203,7 @@
     "relacion_rey": "Hermana de Monsieur le Duc; esposa del príncipe de Conti",
     "hitos": "—",
     "estatus": "por verificar",
-    "presencia_versalles": "frecuenta",
+    "presencia_versalles": "reside",
     "riqueza": 8,
     "rango": 89,
     "sexo": "F",
@@ -8172,7 +8218,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "residente_palacio"
   },
   {
     "id": "p94",
@@ -8223,7 +8270,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p95",
@@ -8259,7 +8307,7 @@
     "relacion_rey": "Hermana del príncipe de Conti",
     "hitos": "—",
     "estatus": "por verificar",
-    "presencia_versalles": "frecuenta",
+    "presencia_versalles": "por verificar",
     "riqueza": 7,
     "rango": 87,
     "sexo": "F",
@@ -8274,7 +8322,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "por_verificar"
   },
   {
     "id": "p96",
@@ -8325,7 +8374,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "habitante_ile"
   },
   {
     "id": "p97",
@@ -8376,7 +8426,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "habitante_ile"
   },
   {
     "id": "p98",
@@ -8427,7 +8478,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p99",
@@ -8480,7 +8532,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p100",
@@ -8533,7 +8586,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p101",
@@ -8586,7 +8640,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p102",
@@ -8639,7 +8694,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p103",
@@ -8692,7 +8748,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "extranjero"
   },
   {
     "id": "p104",
@@ -8745,7 +8802,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p105",
@@ -8799,7 +8857,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p106",
@@ -8862,7 +8921,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p107",
@@ -8913,7 +8973,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p108",
@@ -8966,7 +9027,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p109",
@@ -9019,7 +9081,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p110",
@@ -9072,7 +9135,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p111",
@@ -9110,7 +9174,7 @@
     "relacion_rey": "Nieta de la aya real; sucederá a Ventadour en 1735",
     "hitos": "Casada en 1713 con el duque de Tallard; enlace clave entre Rohan y Ventadour [confirmado]",
     "estatus": "verificado",
-    "presencia_versalles": "frecuenta",
+    "presencia_versalles": "por verificar",
     "riqueza": 8,
     "rango": 78,
     "rangos": [
@@ -9127,7 +9191,8 @@
     "talentos": [],
     "idiomas": [],
     "prompt": "",
-    "sexo": "F"
+    "sexo": "F",
+    "residencia": "por_verificar"
   },
   {
     "id": "p112",
@@ -9165,7 +9230,7 @@
     "relacion_rey": "Frecuenta los salones; viaja a los Países Bajos con Voltaire en 1722",
     "hitos": "Inspiró la Épître à Uranie de Voltaire durante su viaje de 1722 [confirmado]",
     "estatus": "verificado",
-    "presencia_versalles": "frecuenta",
+    "presencia_versalles": "ocasional",
     "riqueza": 7,
     "rango": 58,
     "sexo": "F",
@@ -9180,7 +9245,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p113",
@@ -9233,7 +9299,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p114",
@@ -9286,7 +9353,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "residente_palacio"
   },
   {
     "id": "p115",
@@ -9339,7 +9407,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "residente_palacio"
   },
   {
     "id": "p116",
@@ -9392,7 +9461,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p117",
@@ -9430,7 +9500,7 @@
     "relacion_rey": "Gran estratega de la monarquía y par desde 1710",
     "hitos": "Mandó la campaña contra España en 1719–1722; primer mariscal de prestigio militar intacto [confirmado]",
     "estatus": "verificado",
-    "presencia_versalles": "frecuenta",
+    "presencia_versalles": "ocasional",
     "riqueza": 8,
     "rango": 84,
     "sexo": "M",
@@ -9446,7 +9516,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p118",
@@ -9499,7 +9570,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p119",
@@ -9552,7 +9624,8 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "habitante_paris"
   },
   {
     "id": "p120",
@@ -9606,6 +9679,7 @@
     "aficiones": [],
     "talentos": [],
     "idiomas": [],
-    "prompt": ""
+    "prompt": "",
+    "residencia": "habitante_paris"
   }
 ]
