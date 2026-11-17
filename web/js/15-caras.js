@@ -45,7 +45,7 @@ function drawFacesLibro(){
   const grupos={}; list.forEach(c=>(grupos[c.faccion||"Sin facción"] ||= []).push(c));
   for(const[g,cs]of Object.entries(grupos)){
     const box=el("div",{class:"plates"});
-    cs.forEach(c=>box.append(el("button",{class:"plate"+(c.presencia_versalles==="ausente"?" away":""),onclick:()=>openFichaL(c)},retratoEl(c),el("span",{class:"nm"},c.nombre_nac||c.nombre),el("span",{class:"tt"},c.titulo_nob||c.titulo||""),el("span",{class:"tt"},c.puesto||c.cargo||""))));
+    cs.forEach(c=>box.append(el("button",{class:"plate"+(c.presencia_versalles==="ausente"?" away":""),onclick:()=>openFichaL(c)},retratoEl(c),el("span",{class:"nm"},c.nombre_nac||c.nombre),el("span",{class:"tt"},c.titulo_nob||c.titulo||""),el("span",{class:"tt"},c.puesto||c.cargo||""),simbolosEl(c))));
     b.append(el("div",{class:"rama"},el("h3",{},g),box));
   }
   if(!list.length)b.append(el("p",{class:"note"},"Nadie coincide con la búsqueda."));
@@ -68,7 +68,7 @@ function openFichaL(c){
       catch(e){msg.textContent="No se pudo guardar: "+(e&&e.message||e)}};
     f.append(el("div",{class:"ficha-up"},inp,el("button",{class:"btn sm",onclick:()=>inp.click()},RETR[c.id]?"Cambiar retrato":"Subir retrato"),msg));
   }
-  f.append(el("h2",{},nom),el("div",{class:"rule"}),dl);
+  f.append(el("h2",{},nom),simbolosEl(c,"simbolos-row ficha-sims"),el("div",{class:"rule"}),dl);
   if(c.escritorio_id&&LINAJE.padres)f.append(el("span",{class:"label"},"Familia"),familyBlock(c.escritorio_id));
   f.append(el("span",{class:"label"},"Lo que sabes"),el("p",{class:"note"},"Todavía no has observado nada de esta persona."),
     el("label",{class:"label",for:"nota-"+key},"Tus notas"),ta,

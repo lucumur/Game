@@ -31,14 +31,15 @@ const GH=(()=>{
   function doc(path){const [col,id]=path.split("/");
     return {
       set:data=>enCola(async()=>{
-        if(col==="retratos"||col==="estancias"){const ext=/^data:image\/png/.test(data.img)?"png":"jpg",f=id+"."+ext;
-          await escritor(RAIZ+col+"/"+f,data.img.split(",")[1],"Subir "+(col==="retratos"?"retrato ":"imagen de estancia ")+id);
+        if(col==="retratos"||col==="estancias"||col==="simbolos"){const ext=/^data:image\/png/.test(data.img)?"png":"jpg",f=id+"."+ext;
+          const lbl=col==="retratos"?"retrato ":col==="simbolos"?"símbolo ":"imagen de estancia ";
+          await escritor(RAIZ+col+"/"+f,data.img.split(",")[1],"Subir "+lbl+id);
           await json(RAIZ+"indice.json",v=>{v[col]=(v[col]||[]).filter(x=>x.replace(/\.\w+$/,"")!==id);v[col].push(f);v[col].sort()},"Índice: "+col+"/"+f)}
         else if(col==="ocupantes")await json(RAIZ+"ocupantes.json",v=>{v[id]=data},"Ocupantes de "+id);
         else throw new Error("Colección no editable: "+col);
         avisar(col,id,data)}),
       delete:()=>enCola(async()=>{
-        if(col==="retratos"||col==="estancias"){let f=null;
+        if(col==="retratos"||col==="estancias"||col==="simbolos"){let f=null;
           await json(RAIZ+"indice.json",v=>{f=(v[col]||[]).find(x=>x.replace(/\.\w+$/,"")===id);v[col]=(v[col]||[]).filter(x=>x!==f)},"Índice: quitar "+col+"/"+id);
           if(f)await borrar(RAIZ+col+"/"+f,"Quitar "+col+"/"+f)}
         else if(col==="ocupantes")await json(RAIZ+"ocupantes.json",v=>{delete v[id]},"Ocupantes: quitar "+id);

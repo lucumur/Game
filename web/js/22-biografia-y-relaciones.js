@@ -6,7 +6,7 @@ function drawBioExistente(){const b=$("#bio"),c=pjLibro();b.innerHTML="";
   if(!c){b.append(el("p",{class:"note"},"Cargando la ficha…"));return}
   const rows=[["Nacimiento",[c.nacimiento,edadPj(c)!=null?edadPj(c)+" años":""].filter(Boolean).join(" · ")],["Sexo",c.sexo==="F"?"Mujer":"Hombre"],["Rango",(c.rangos||[]).length?rangosEl(c.rangos):""],
     ["Casa",c.casa],["Condición",c.estatus_familia],["Título",c.titulo_nob||c.titulo],["Cargo",c.cargo],["Educación",c.educacion],["Religión",c.religion],["Lengua",c.lengua],["Llegada a la corte",c.llegada_corte],["Residencia",c.ubicacion]];
-  b.append(el("div",{class:"bio-h"},retratoEl(c),el("h3",{},c.nombre)),el("dl",{},...rows.filter(r=>r[1]&&r[1]!=="—").flatMap(([k,v])=>[el("dt",{},k),el("dd",{},v)])));
+  b.append(el("div",{class:"bio-h"},retratoEl(c),el("div",{},el("h3",{},c.nombre),simbolosEl(c,"simbolos-row ficha-sims"))),el("dl",{},...rows.filter(r=>r[1]&&r[1]!=="—").flatMap(([k,v])=>[el("dt",{},k),el("dd",{},v)])));
 }
 function drawRelExistente(){const b=$("#rel"),c=pjLibro();b.innerHTML="";
   if(!c){b.append(el("p",{class:"note"},"Cargando la ficha…"));return}

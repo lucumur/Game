@@ -467,3 +467,11 @@ button.kin:hover{border-color:var(--gilt)}
   padding:4px 8px;border-radius:var(--r);white-space:nowrap;z-index:30;pointer-events:none;box-shadow:0 4px 12px rgb(0 0 0 / .28)
 }
 #ficha .rango-tag:hover::after,#ficha .rango-tag:focus-visible::after,#ficha .rango-tag.tip-on::after{left:0;transform:none}
+
+/* Símbolos de personaje */
+.simbolos-row{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;align-items:center;margin-top:2px}
+.pos-opt.pj .simbolos-row,.simbolos-row.ficha-sims{justify-content:flex-start}
+.sim-item{display:inline-grid;place-items:center;width:24px;height:24px;border:1px solid var(--line);border-radius:4px;background:var(--panel);color:var(--gilt);position:relative;cursor:help;flex:none}
+.sim-item img{width:18px;height:18px;object-fit:contain;display:block}
+.sim-item svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;display:block}
+.sim-item:hover{border-color:var(--gilt)}

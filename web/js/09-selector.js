@@ -28,6 +28,20 @@ function rangosEl(rs,inter=true){
   });
   return s;
 }
+let SIMBOLOS=[], SIM_IMG={};
+function simbolosEl(c,cls="simbolos-row"){
+  const ids=c?.simbolos||[]; if(!ids.length)return null;
+  const byId=Object.fromEntries((SIMBOLOS||[]).map(s=>[s.id,s]));
+  const row=el("div",{class:cls,"aria-label":"Símbolos"});
+  ids.forEach(id=>{
+    const s=byId[id]||{id,nombre:id,desc:""}, tip=s.desc?s.nombre+" — "+s.desc:s.nombre;
+    const item=el("span",{class:"sim-item",title:tip,"data-es":s.nombre});
+    if(SIM_IMG[id])item.append(el("img",{src:SIM_IMG[id],alt:s.nombre}));
+    else{const NS="http://www.w3.org/2000/svg",svg=document.createElementNS(NS,"svg");svg.setAttribute("viewBox","0 0 24 24");svg.setAttribute("aria-hidden","true");svg.innerHTML=s.svg||"<circle cx='12' cy='12' r='6'/>";item.append(svg)}
+    row.append(item);
+  });
+  return row;
+}
 const EDADES=[["m18","Menos de 18",0,17],["18","18–25",18,25],["26","26–40",26,40],["41","41–60",41,60],["61","61 o más",61,999]];
 let modo=null, elegido=null; const fx={sexo:"",edad:"",rango:""};
 function edadPj(c){const n=parseInt(c.edad,10);if(!isNaN(n))return n;const y=parseInt(String(c.anio).replace(/\D/g,""),10);return isNaN(y)?null:AÑO()-y}
@@ -44,7 +58,7 @@ function renderExistentes(){
     const parts=[]; if(a!=null)parts.push(a+" años"); if((c.rangos||[]).length)parts.push(rangosEl(c.rangos,false)); if(c.ubicacion)parts.push(c.ubicacion);
     parts.forEach((p,i)=>{if(i)meta.append(" · ");meta.append(p)});
     box.append(el("button",{type:"button",class:"pos-opt pj","aria-pressed":String(elegido===c.id),onclick:()=>{elegido=c.id;renderExistentes()}},
-      retratoEl(c),el("b",{},c.nombre),el("span",{class:"mv"},c.cargo||c.titulo||""),meta))});
+      retratoEl(c),el("b",{},c.nombre),el("span",{class:"mv"},c.cargo||c.titulo||""),simbolosEl(c),meta))});
   $("#b-entrar").disabled=!elegido;
 }
 function setModo(m){modo=m;

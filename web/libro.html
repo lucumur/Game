@@ -105,6 +105,26 @@ select{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);borde
 .hab-list li b{font-family:var(--mono);color:var(--royal);font-weight:400}
 .hab-list li.elite b{color:var(--gold)}
 .bar[title]{cursor:help}
+.ltabs{display:flex;gap:8px;margin-top:8px}
+.sims-row{display:flex;flex-wrap:wrap;gap:5px;align-items:center;margin-top:2px}
+.sim-ico{display:inline-grid;place-items:center;width:22px;height:22px;border:1px solid var(--line);border-radius:4px;background:var(--paper);color:var(--gold);flex:none}
+.sim-ico img{width:16px;height:16px;object-fit:contain;display:block}
+.sim-ico svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;display:block}
+.sim-pill{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);border-radius:4px;background:var(--bg);padding:2px 7px 2px 4px;font-size:12px}
+.sim-pill .sim-ico{width:20px;height:20px;border:0;background:transparent}
+.sim-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:16px}
+.sim-card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px;display:grid;grid-template-columns:64px 1fr;gap:10px 12px;align-items:start}
+.sim-box{width:64px;height:64px;border:1px solid var(--gold);border-radius:6px;background:var(--bg);display:grid;place-items:center;position:relative;overflow:hidden;cursor:pointer}
+.sim-box.over{outline:3px dashed var(--royal);outline-offset:2px}
+.sim-box img{width:48px;height:48px;object-fit:contain;display:block}
+.sim-box svg{width:34px;height:34px;fill:none;stroke:var(--gold);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.sim-meta{display:grid;gap:3px;min-width:0}
+.sim-meta b{font-size:15px}
+.sim-meta code{font:11px var(--mono);color:var(--muted)}
+.sim-meta p{margin:0;font-size:13px;color:var(--muted);line-height:1.35}
+.sim-acts{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.sim-new{margin-top:22px;padding:14px;background:var(--paper);border:1px solid var(--line);border-radius:6px;display:grid;gap:10px}
+.sim-new .row input{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);min-width:0;flex:1 1 160px}
 </style>
 
 <div class="wrap">
@@ -112,17 +132,40 @@ select{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);borde
     <div class="toprow"><div class="eyebrow">Tras bambalinas · Junio de 1722</div><div class="row" style="align-items:center"><button class="guia-btn" id="guia-open" type="button">Guía de habilidades (0–10)</button><a class="back" href="index.html">← Volver al Escritorio de Versalles</a></div></div>
     <h1>Libro de caras de la <em>Corte de Versalles</em></h1>
     <p class="sub">Los personajes del juego con sus datos, lo que quieren y lo que ocultan. Abre una ficha para ver todo lo que se sabe de cada uno.</p>
+    <div class="ltabs" role="tablist" aria-label="Vistas del libro">
+      <button class="chip" id="tab-per" type="button" aria-pressed="true">Personajes</button>
+      <button class="chip" id="tab-sim" type="button" aria-pressed="false">Símbolos</button>
+    </div>
   </header>
+  <div id="vista-personajes">
   <div class="tools">
     <input type="search" id="q" placeholder="Buscar por nombre, cargo o título" aria-label="Buscar personaje">
     <label class="sortlbl">Ordenar<select id="orden"><option value="">Original</option><option value="riqueza">Dinero</option><option value="edad">Edad</option><option value="rango">Nobleza / rango</option></select></label>
     <label class="sortlbl">Residencia<select id="res"><option value="">Todas</option><option value="residente_palacio">Residente en Versalles</option><option value="habitante_versalles">Habitante de Versalles</option><option value="habitante_ile">Habitante de l'Île</option><option value="habitante_paris">Habitante de París</option><option value="provinciano">Provinciano</option><option value="extranjero">Extranjero</option><option value="por_verificar">Por verificar</option></select></label>
+    <label class="sortlbl">Símbolo<select id="fsim"><option value="">Todos</option></select></label>
     <div class="chips" id="chips" role="group" aria-label="Filtrar por facción"></div>
   </div>
   <div class="count" id="count"></div>
   <div class="msg" id="gmsg" aria-live="polite"></div>
   <div class="grid" id="grid"></div>
   <div class="empty" id="empty" hidden>La corte todavía no tiene personajes cargados. Aparecerán aquí en cuanto se añadan a la base del juego.</div>
+  </div>
+  <div id="vista-simbolos" hidden>
+    <p class="sub" style="margin-top:16px">Iconos que aparecen debajo de la foto, el nombre y los títulos. Arrastra o sube un PNG/JPG sobre cada recuadro: con llave de GitHub se guarda directo en <code>datos/simbolos/</code>; en local puedes previsualizarlo y descargar el archivo <code>&lt;id&gt;.png</code> listo para copiar a la carpeta.</p>
+    <div class="msg" id="smsg" aria-live="polite" style="margin-top:8px"></div>
+    <div id="sim-wrap"></div>
+    <div class="sim-new">
+      <div class="eyebrow">Añadir nuevo símbolo al catálogo</div>
+      <div class="row">
+        <input id="ns-id" placeholder="id (ej. academico)" aria-label="ID del símbolo">
+        <input id="ns-nom" placeholder="Nombre visible (ej. Académico)" aria-label="Nombre del símbolo">
+        <input id="ns-grp" placeholder="Grupo (ej. Papel en la corte)" aria-label="Grupo del símbolo">
+        <input id="ns-desc" placeholder="Descripción corta" aria-label="Descripción del símbolo">
+        <button class="btn" id="ns-gen" type="button">Generar JSON</button>
+      </div>
+      <div class="prompt" id="ns-out" hidden></div>
+    </div>
+  </div>
 </div>
 
 <div class="veil" id="veil" hidden></div>
@@ -139,6 +182,7 @@ select{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);borde
     <h2 id="fname"></h2>
     <div class="ctitle" id="ftitle"></div>
     <div class="cpuesto" id="fpuesto"></div>
+    <div class="sims-row" id="fsims" style="margin-top:8px"></div>
   </div>
   <div class="row" id="uprow">
     <input type="file" id="file" accept="image/*" hidden>
@@ -155,10 +199,10 @@ select{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);borde
   </div>
 </aside>
 
-<script src="js/github.js?v=202611162246"></script>
+<script src="js/github.js?v=202611162300"></script>
 <script>
 const $=id=>document.getElementById(id);
-let chars=[],filtro='Todas',q='',res='',sel=null,db=null,owner=false,orden='',RET={};
+let chars=[],sims=[],filtro='Todas',q='',res='',fsim='',vista='per',sel=null,db=null,owner=false,orden='',RET={},SIM_IMG={},SIM_LOCAL={};
 const RES_SHORT={habitante_versalles:'Hab. Versalles',habitante_ile:"Hab. l'Île",habitante_paris:'Hab. París',provinciano:'Provinciano',extranjero:'Extranjero',por_verificar:'Por verificar'};
 const RES_FULL={residente_palacio:'Residente en Versalles (palacio, por gracia del rey)',habitante_versalles:'Habitante de Versalles (ciudad)',habitante_ile:"Habitante de l'Île (cercanías de la corte)",habitante_paris:'Habitante de París (visita Versalles)',provinciano:'Provinciano (vive en su provincia)',extranjero:'Extranjero (fuera del reino)',por_verificar:'Por verificar'};
 const nac=c=>{const m=String(c.anio||'').match(/\d{4}/);return m?+m[0]:9999};
@@ -169,13 +213,39 @@ const src=c=>RET[c.id]||null;
 function face(el,c){el.textContent='';const s=src(c);
   if(s){const i=new Image();i.alt='Retrato de '+c.nombre;i.src=s;i.onerror=()=>{el.textContent='';const m=document.createElement('span');m.className='mono';m.textContent=ini(c.nombre);el.append(m)};el.append(i)}
   else{const m=document.createElement('span');m.className='mono';m.textContent=ini(c.nombre);el.append(m)}}
+function simIco(id){
+  const s=sims.find(x=>x.id===id)||{id,nombre:id,desc:''};
+  const sp=document.createElement('span');sp.className='sim-ico';sp.title=s.desc?s.nombre+' — '+s.desc:s.nombre;
+  const imgSrc=SIM_IMG[id]||SIM_LOCAL[id];
+  if(imgSrc){const im=new Image();im.src=imgSrc;im.alt=s.nombre;sp.append(im)}
+  else{const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 24 24');svg.setAttribute('aria-hidden','true');svg.innerHTML=s.svg||"<circle cx='12' cy='12' r='6'/>";sp.append(svg)}
+  return sp;
+}
+function simRow(c,conTexto){
+  const ids=c.simbolos||[];if(!ids.length)return null;
+  const w=document.createElement('div');w.className='sims-row';
+  ids.forEach(id=>{
+    if(!conTexto){w.append(simIco(id));return}
+    const s=sims.find(x=>x.id===id)||{id,nombre:id,desc:''};
+    const p=document.createElement('span');p.className='sim-pill';p.title=s.desc||'';
+    const t=document.createElement('span');t.textContent=s.nombre;
+    p.append(simIco(id),t);w.append(p);
+  });
+  return w;
+}
+function renderSimFilter(){
+  const fs=$('fsim'), cur=fsim; fs.textContent='';
+  const o0=document.createElement('option');o0.value='';o0.textContent='Todos';fs.append(o0);
+  sims.forEach(s=>{const o=document.createElement('option');o.value=s.id;o.textContent=s.nombre;fs.append(o)});
+  fs.value=cur;
+}
 function render(){
   const fac=['Todas',...new Set(chars.map(c=>c.faccion).filter(Boolean))];
   $('chips').textContent='';
   fac.forEach(f=>{const b=document.createElement('button');b.className='chip';b.textContent=f;b.setAttribute('aria-pressed',f===filtro);b.onclick=()=>{filtro=f;render()};$('chips').append(b)});
   const t=q.toLowerCase();
   const resDe=c=>Array.isArray(c.residencia)?c.residencia:c.residencia?[c.residencia]:[];
-  const vis=chars.filter(c=>(filtro==='Todas'||c.faccion===filtro)&&(!res||resDe(c).includes(res))&&(!t||[c.nombre,c.nombre_nac,(c.apodos||[]).join(' '),c.titulo_nob,c.puesto].join(' ').toLowerCase().includes(t)));
+  const vis=chars.filter(c=>(filtro==='Todas'||c.faccion===filtro)&&(!res||resDe(c).includes(res))&&(!fsim||(c.simbolos||[]).includes(fsim))&&(!t||[c.nombre,c.nombre_nac,(c.apodos||[]).join(' '),c.titulo_nob,c.puesto].join(' ').toLowerCase().includes(t)));
   if(orden){const k=KEY[orden];vis.sort((a,b)=>k(b)-k(a)||(a.orden||0)-(b.orden||0))}
   const conR=chars.filter(c=>RET[c.id]).length;
   $('count').textContent=chars.length?`${vis.length} de ${chars.length} personajes · ${conR} con retrato`:'';
@@ -189,7 +259,7 @@ function render(){
     const n=document.createElement('div');n.className='cname';nombreEn(n,c);
     const s=document.createElement('div');s.className='ctitle';s.textContent=c.titulo_nob||c.titulo||'';
     const p=document.createElement('div');p.className='cpuesto';p.textContent=c.puesto||c.cargo||'';
-    b.append(f,n,s,p);if(orden){const v=document.createElement('div');v.className='cval';v.textContent=VAL[orden](c);b.append(v)}b.onclick=()=>abrir(c.id);zona(f,()=>c.id);$('grid').append(b)});
+    b.append(f,n,s,p);const sr=simRow(c,false);if(sr)b.append(sr);if(orden){const v=document.createElement('div');v.className='cval';v.textContent=VAL[orden](c);b.append(v)}b.onclick=()=>abrir(c.id);zona(f,()=>c.id);$('grid').append(b)});
 }
 const SECC=[
  ['Origen',[['nacimiento','Nació'],['muerte','Muere'],['casa','Casa'],['estatus_familia','Rango familiar'],['padre','Padre'],['madre','Madre'],['lugar_familia','Lugar en la familia'],['religion','Religión'],['lengua','Lengua']]],
@@ -303,6 +373,7 @@ function ficha(){
   face($('fface'),c);
   if(owner){const o=document.createElement('span');o.className='ov'+(RET[c.id]?'':' show');o.textContent=RET[c.id]?'Cambiar retrato':'Subir retrato';$('fface').append(o);$('fface').htmlFor='file'}else{$('fface').htmlFor=''}
   $('fhouse').textContent=c.faccion||'';nombreEn($('fname'),c);$('ftitle').textContent=c.titulo_nob||c.titulo||'';$('fpuesto').textContent=c.puesto||c.cargo||'';
+  $('fsims').textContent='';const fsr=simRow(c,true);if(fsr)$('fsims').append(...fsr.childNodes);
   $('fdata').textContent='';
   SECC.forEach(([t,fs],idx)=>{const vs=fs.filter(([k])=>c[k]&&c[k]!=='—');const hasR=idx===0&&(c.rangos||[]).length;const rs=Array.isArray(c.residencia)?c.residencia:c.residencia?[c.residencia]:[];const hasRes=idx===3&&rs.length;if(!vs.length&&!hasR&&!hasRes)return;const dl=head(t);if(hasR)add(dl,'Rango',rangosLibro(c.rangos));if(hasRes)add(dl,'Residencia',rs.map(r=>RES_FULL[r]||r).join(' · '));vs.forEach(([k,l])=>add(dl,l,k==='edad'?c[k]+' años':c[k]))});
   if(c.innatos){const dl=head('Innatos','interpretación');INN.forEach(([k,l])=>c.innatos[k]&&add(dl,l,c.innatos[k]))}
@@ -325,7 +396,91 @@ $('close').onclick=cerrar;$('guia-open').onclick=()=>abrirGuia();$('guia-close')
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(!$('guia').hidden)cerrarGuia();else if(sel)cerrar()}});
 $('q').oninput=e=>{q=e.target.value;render()};
 $('res').onchange=e=>{res=e.target.value;render()};
+$('fsim').onchange=e=>{fsim=e.target.value;render()};
 $('orden').onchange=e=>{orden=e.target.value;try{localStorage.setItem('orden',orden)}catch{}render()};
+function setVista(v){
+  vista=v;
+  $('vista-personajes').hidden=v!=='per'; $('vista-simbolos').hidden=v!=='sim';
+  $('tab-per').setAttribute('aria-pressed',v==='per'); $('tab-sim').setAttribute('aria-pressed',v==='sim');
+  if(v==='sim')renderSimbolos();
+}
+$('tab-per').onclick=()=>setVista('per');
+$('tab-sim').onclick=()=>setVista('sim');
+function achicarSimbolo(f){return new Promise((ok,ko)=>{const u=URL.createObjectURL(f),i=new Image();
+  i.onload=()=>{const n=Math.max(i.naturalWidth,i.naturalHeight),c=document.createElement('canvas');c.width=c.height=128;
+    const x=c.getContext('2d'),w=i.naturalWidth/n*128,h=i.naturalHeight/n*128;
+    x.drawImage(i,(128-w)/2,(128-h)/2,w,h);URL.revokeObjectURL(u);ok(c.toDataURL('image/png'))};
+  i.onerror=()=>{URL.revokeObjectURL(u);ko(new Error('No se pudo leer la imagen'))};i.src=u})}
+async function subirSimbolo(id,f){
+  if(!f)return;
+  if(!/^image\//.test(f.type)){$('smsg').textContent='Ese archivo no es una imagen.';return}
+  if(f.size>10*1024*1024){$('smsg').textContent='La imagen pesa demasiado.';return}
+  try{
+    const img=await achicarSimbolo(f);
+    SIM_LOCAL[id]=img;
+    if(owner&&(db||GH.tiene())){
+      $('smsg').textContent='Subiendo símbolo '+id+'…';
+      await (db||GH).doc('simbolos/'+id).set({img});
+      SIM_IMG[id]=img; $('smsg').textContent='Símbolo '+id+' guardado.';
+    } else {
+      $('smsg').textContent='Vista previa cargada para '+id+'. Descarga '+id+'.png y cópialo a web/datos/simbolos/.';
+    }
+    renderSimbolos(); render(); if(sel)ficha();
+  }catch(err){$('smsg').textContent='No se pudo procesar: '+(err&&err.message||err)}
+}
+function renderSimbolos(){
+  const wrap=$('sim-wrap'); wrap.textContent='';
+  if(!sims.length){wrap.append(Object.assign(document.createElement('p'),{className:'sub',textContent:'No se encontró datos/simbolos.json.'}));return}
+  const grupos=[...new Set(sims.map(s=>s.grupo||'Otros'))];
+  grupos.forEach(g=>{
+    const h=document.createElement('h3');h.className='sec';h.textContent=g;
+    const grid=document.createElement('div');grid.className='sim-grid';
+    sims.filter(s=>(s.grupo||'Otros')===g).forEach(s=>{
+      const card=document.createElement('div');card.className='sim-card';
+      const box=document.createElement('label');box.className='sim-box';box.title='Clic o arrastra una imagen para '+s.id;
+      const inp=document.createElement('input');inp.type='file';inp.accept='image/*';inp.hidden=true;
+      inp.onchange=e=>{const f=e.target.files[0];e.target.value='';if(f)subirSimbolo(s.id,f)};
+      box.addEventListener('dragover',e=>{e.preventDefault();box.classList.add('over')});
+      box.addEventListener('dragleave',()=>box.classList.remove('over'));
+      box.addEventListener('drop',e=>{e.preventDefault();box.classList.remove('over');const f=e.dataTransfer.files[0];subirSimbolo(s.id,f)});
+      const cur=SIM_IMG[s.id]||SIM_LOCAL[s.id];
+      if(cur){const im=new Image();im.src=cur;im.alt=s.nombre;box.append(im)}
+      else{const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 24 24');svg.innerHTML=s.svg||"<circle cx='12' cy='12' r='6'/>";box.append(svg)}
+      box.append(inp);
+      const meta=document.createElement('div');meta.className='sim-meta';
+      const b=document.createElement('b');b.textContent=s.nombre;
+      const cd=document.createElement('code');cd.textContent='datos/simbolos/'+s.id+'.png';
+      const p=document.createElement('p');p.textContent=s.desc||'';
+      meta.append(b,cd,p);
+      const acts=document.createElement('div');acts.className='sim-acts';
+      const nUsos=chars.filter(c=>(c.simbolos||[]).includes(s.id)).length;
+      const btnVer=document.createElement('button');btnVer.className='guia-btn';btnVer.type='button';btnVer.textContent=nUsos+' personajes';
+      btnVer.onclick=()=>{fsim=s.id;$('fsim').value=s.id;setVista('per');render()};
+      const btnUp=document.createElement('button');btnUp.className='guia-btn';btnUp.type='button';btnUp.textContent=cur?'Cambiar imagen':'Subir imagen';
+      btnUp.onclick=()=>inp.click();
+      acts.append(btnVer,btnUp);
+      if(SIM_LOCAL[s.id]){
+        const dl=document.createElement('a');dl.className='guia-btn';dl.href=SIM_LOCAL[s.id];dl.download=s.id+'.png';dl.textContent='Descargar '+s.id+'.png';dl.style.textDecoration='none';
+        acts.append(dl);
+      }
+      if(owner&&SIM_IMG[s.id]){
+        const q=document.createElement('button');q.className='guia-btn';q.type='button';q.textContent='Quitar';
+        q.onclick=async()=>{try{await (db||GH).doc('simbolos/'+s.id).delete();delete SIM_IMG[s.id];delete SIM_LOCAL[s.id];$('smsg').textContent='Símbolo '+s.id+' quitado.';renderSimbolos();render()}catch(err){$('smsg').textContent='No se pudo quitar: '+(err&&err.message||err)}};
+        acts.append(q);
+      }
+      card.append(box,meta,acts);grid.append(card);
+    });
+    wrap.append(h,grid);
+  });
+}
+$('ns-gen').onclick=()=>{
+  const id=$('ns-id').value.trim().toLowerCase().replace(/[^a-z0-9-]+/g,'-').replace(/^-|-$/g,'');
+  const nom=$('ns-nom').value.trim(), grp=$('ns-grp').value.trim()||'Papel en la corte', desc=$('ns-desc').value.trim();
+  if(!id||!nom){$('ns-out').hidden=false;$('ns-out').textContent='Escribe al menos un id y un nombre.';return}
+  const obj={id,nombre:nom,grupo:grp,desc:desc||nom};
+  $('ns-out').hidden=false;
+  $('ns-out').textContent='Añade esta entrada a web/datos/simbolos.json y guarda tu imagen en web/datos/simbolos/'+id+'.png (y en web/datos/indice.json):\n\n'+JSON.stringify(obj,null,2);
+};
 try{orden=localStorage.getItem('orden')||'';$('orden').value=orden}catch{}
 $('copy').onclick=async()=>{const t=$('fprompt').textContent;
   try{await navigator.clipboard.writeText(t);$('msg').textContent='Prompt copiado.'}
@@ -352,10 +507,15 @@ $('quitar').onclick=async()=>{if(!sel)return;try{await (db||GH).doc('retratos/'+
 render();
 (async()=>{
   if(!window.claude){ /* Modo estático: datos/ del repositorio */
-    try{const [per,idx]=await Promise.all([fetch('datos/personajes.json').then(r=>r.json()),fetch('datos/indice.json').then(r=>r.json())]);
-      chars=per;RET={};(idx.retratos||[]).forEach(f=>{RET[f.replace(/\.\w+$/,'')]='datos/retratos/'+f});render();
-      window.ghCambio=(col,id,d)=>{if(col!=='retratos')return;if(d)RET[id]=d.img;else delete RET[id];render();if(sel)ficha()};
-      owner=await GH.comprobar();render();if(sel)ficha();
+    try{const [per,idx,sim]=await Promise.all([fetch('datos/personajes.json').then(r=>r.json()),fetch('datos/indice.json').then(r=>r.json()),fetch('datos/simbolos.json').then(r=>r.ok?r.json():[]).catch(()=>[])]);
+      chars=per;sims=Array.isArray(sim)?sim:[];RET={};(idx.retratos||[]).forEach(f=>{RET[f.replace(/\.\w+$/,'')]='datos/retratos/'+f});
+      SIM_IMG={};(idx.simbolos||[]).forEach(f=>{SIM_IMG[f.replace(/\.\w+$/,'')]='datos/simbolos/'+f});
+      renderSimFilter();render();
+      window.ghCambio=(col,id,d)=>{
+        if(col==='retratos'){if(d)RET[id]=d.img;else delete RET[id];render();if(sel)ficha()}
+        if(col==='simbolos'){if(d)SIM_IMG[id]=d.img;else delete SIM_IMG[id];render();if(sel)ficha();if(vista==='sim')renderSimbolos()}
+      };
+      owner=await GH.comprobar();render();if(sel)ficha();if(vista==='sim')renderSimbolos();
       const h=decodeURIComponent(location.hash.slice(1));if(h&&chars.some(c=>c.id===h))abrir(h);
     }catch(e){$('empty').textContent='No se pudieron cargar los datos del repositorio.';$('empty').hidden=false}
     return}
