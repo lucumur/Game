@@ -154,6 +154,7 @@ select{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);borde
   </div>
   <div id="vista-simbolos" hidden>
     <p class="sub" style="margin-top:16px">Iconos que aparecen debajo de la foto, el nombre y los títulos. Arrastra o sube un PNG/JPG sobre cada recuadro: con llave de GitHub se guarda directo en <code>datos/simbolos/</code>; en local puedes previsualizarlo y descargar el archivo <code>&lt;id&gt;.png</code> listo para copiar a la carpeta.</p>
+    <div class="msg" id="gh-st" aria-live="polite" style="margin-top:6px"></div>
     <div class="msg" id="smsg" aria-live="polite" style="margin-top:8px"></div>
     <div id="sim-wrap"></div>
     <div class="sim-new">
@@ -217,7 +218,7 @@ function face(el,c){el.textContent='';const s=src(c);
 function simIco(id){
   const s=sims.find(x=>x.id===id)||{id,nombre:id,desc:''};
   const sp=document.createElement('span');sp.className='sim-ico';sp.title=s.desc?s.nombre+' — '+s.desc:s.nombre;
-  const imgSrc=SIM_IMG[id]||SIM_LOCAL[id];
+  const imgSrc=SIM_LOCAL[id]||SIM_IMG[id];
   if(imgSrc){const im=new Image();im.src=imgSrc;im.alt=s.nombre;sp.append(im)}
   else{const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 24 24');svg.setAttribute('aria-hidden','true');svg.innerHTML=s.svg||"<circle cx='12' cy='12' r='6'/>";sp.append(svg)}
   return sp;
@@ -406,9 +407,9 @@ function setVista(v){
 $('tab-per').onclick=()=>setVista('per');
 $('tab-sim').onclick=()=>setVista('sim');
 function achicarSimbolo(f){return new Promise((ok,ko)=>{const u=URL.createObjectURL(f),i=new Image();
-  i.onload=()=>{const n=Math.max(i.naturalWidth,i.naturalHeight),c=document.createElement('canvas');c.width=c.height=128;
-    const x=c.getContext('2d'),w=i.naturalWidth/n*128,h=i.naturalHeight/n*128;
-    x.drawImage(i,(128-w)/2,(128-h)/2,w,h);URL.revokeObjectURL(u);ok(c.toDataURL('image/png'))};
+  i.onload=()=>{const n=Math.max(i.naturalWidth,i.naturalHeight),c=document.createElement('canvas');c.width=c.height=256;
+    const x=c.getContext('2d'),w=i.naturalWidth/n*256,h=i.naturalHeight/n*256;
+    x.drawImage(i,(256-w)/2,(256-h)/2,w,h);URL.revokeObjectURL(u);ok(c.toDataURL('image/png'))};
   i.onerror=()=>{URL.revokeObjectURL(u);ko(new Error('No se pudo leer la imagen'))};i.src=u})}
 async function subirSimbolo(id,f){
   if(!f)return;
@@ -416,18 +417,21 @@ async function subirSimbolo(id,f){
   if(f.size>10*1024*1024){$('smsg').textContent='La imagen pesa demasiado.';return}
   try{
     const img=await achicarSimbolo(f);
-    SIM_LOCAL[id]=img;
     if(owner&&(db||GH.tiene())){
       $('smsg').textContent='Subiendo símbolo '+id+'…';
       await (db||GH).doc('simbolos/'+id).set({img});
-      SIM_IMG[id]=img; $('smsg').textContent='Símbolo '+id+' guardado.';
+      delete SIM_LOCAL[id]; SIM_IMG[id]=img;
+      try{sessionStorage.setItem('sim_pend_'+id,JSON.stringify({img,exp:Date.now()+180000}))}catch{}
+      $('smsg').textContent='Símbolo '+id+' guardado en GitHub (GitHub Pages tarda ~1 min en publicar el cambio).';
     } else {
-      $('smsg').textContent='Vista previa cargada para '+id+'. Descarga '+id+'.png y cópialo a web/datos/simbolos/.';
+      SIM_LOCAL[id]=img;
+      $('smsg').textContent='Vista previa local para '+id+' (sin llave de GitHub activa: se perderá al recargar). Descarga '+id+'.png y cópialo a web/datos/simbolos/.';
     }
     renderSimbolos(); render(); if(sel)ficha();
   }catch(err){$('smsg').textContent='No se pudo procesar: '+(err&&err.message||err)}
 }
 function renderSimbolos(){
+  $('gh-st').textContent=db?'Conectado con Claude: los cambios se guardan en la base.':owner?'Llave de GitHub activa: los cambios se guardan directo en el repositorio.':GH.tiene()?'Llave de GitHub no válida ('+(GH.error()||'sin permiso')+'): solo vista previa local.':'Sin llave de GitHub en este navegador: solo vista previa local (configura la llave en index.html).';
   const wrap=$('sim-wrap'); wrap.textContent='';
   if(!sims.length){wrap.append(Object.assign(document.createElement('p'),{className:'sub',textContent:'No se encontró datos/simbolos.json.'}));return}
   const grupos=[...new Set(sims.map(s=>s.grupo||'Otros'))];
@@ -442,7 +446,7 @@ function renderSimbolos(){
       box.addEventListener('dragover',e=>{e.preventDefault();box.classList.add('over')});
       box.addEventListener('dragleave',()=>box.classList.remove('over'));
       box.addEventListener('drop',e=>{e.preventDefault();box.classList.remove('over');const f=e.dataTransfer.files[0];subirSimbolo(s.id,f)});
-      const cur=SIM_IMG[s.id]||SIM_LOCAL[s.id];
+      const cur=SIM_LOCAL[s.id]||SIM_IMG[s.id];
       if(cur){const im=new Image();im.src=cur;im.alt=s.nombre;box.append(im)}
       else{const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 24 24');svg.innerHTML=s.svg||"<circle cx='12' cy='12' r='6'/>";box.append(svg)}
       box.append(inp);
@@ -464,7 +468,7 @@ function renderSimbolos(){
       }
       if(owner&&SIM_IMG[s.id]){
         const q=document.createElement('button');q.className='guia-btn';q.type='button';q.textContent='Quitar';
-        q.onclick=async()=>{try{await (db||GH).doc('simbolos/'+s.id).delete();delete SIM_IMG[s.id];delete SIM_LOCAL[s.id];$('smsg').textContent='Símbolo '+s.id+' quitado.';renderSimbolos();render()}catch(err){$('smsg').textContent='No se pudo quitar: '+(err&&err.message||err)}};
+        q.onclick=async()=>{try{await (db||GH).doc('simbolos/'+s.id).delete();delete SIM_IMG[s.id];delete SIM_LOCAL[s.id];try{sessionStorage.removeItem('sim_pend_'+s.id)}catch{}$('smsg').textContent='Símbolo '+s.id+' quitado.';renderSimbolos();render()}catch(err){$('smsg').textContent='No se pudo quitar: '+(err&&err.message||err)}};
         acts.append(q);
       }
       card.append(box,meta,acts);grid.append(card);
@@ -506,9 +510,11 @@ $('quitar').onclick=async()=>{if(!sel)return;try{await (db||GH).doc('retratos/'+
 render();
 (async()=>{
   if(!window.claude){ /* Modo estático: datos/ del repositorio */
-    try{const [per,idx,sim]=await Promise.all([fetch('datos/personajes.json').then(r=>r.json()),fetch('datos/indice.json').then(r=>r.json()),fetch('datos/simbolos.json').then(r=>r.ok?r.json():[]).catch(()=>[])]);
+    try{const bust='?t='+Date.now();
+      const [per,idx,sim]=await Promise.all([fetch('datos/personajes.json'+bust,{cache:'no-store'}).then(r=>r.json()),fetch('datos/indice.json'+bust,{cache:'no-store'}).then(r=>r.json()),fetch('datos/simbolos.json'+bust,{cache:'no-store'}).then(r=>r.ok?r.json():[]).catch(()=>[])]);
       chars=per;sims=Array.isArray(sim)?sim:[];RET={};(idx.retratos||[]).forEach(f=>{RET[f.replace(/\.\w+$/,'')]='datos/retratos/'+f});
-      SIM_IMG={};(idx.simbolos||[]).forEach(f=>{SIM_IMG[f.replace(/\.\w+$/,'')]='datos/simbolos/'+f});
+      SIM_IMG={};(idx.simbolos||[]).forEach(f=>{SIM_IMG[f.replace(/\.\w+$/,'')]='datos/simbolos/'+f+bust});
+      try{for(let i=sessionStorage.length-1;i>=0;i--){const k=sessionStorage.key(i);if(k&&k.startsWith('sim_pend_')){const id=k.slice(9),v=JSON.parse(sessionStorage.getItem(k)||'null');if(v&&v.img&&v.exp>Date.now())SIM_IMG[id]=v.img;else sessionStorage.removeItem(k)}}}catch{}
       renderSimFilter();render();
       window.ghCambio=(col,id,d)=>{
         if(col==='retratos'){if(d)RET[id]=d.img;else delete RET[id];render();if(sel)ficha()}
