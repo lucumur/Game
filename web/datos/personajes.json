@@ -8631,6 +8631,7 @@
     "simbolos": [
       "principe-sangre",
       "clero",
+      "dama-religiosa",
       "provinciano"
     ]
   },
@@ -8827,12 +8828,12 @@
     "estatus_familia": "Princesa de la sangre",
     "titulo": "Mademoiselle de Vermandois",
     "titulo_nob": "Mademoiselle de Vermandois",
-    "puesto": "Religiosa",
-    "cargo": "Religiosa",
+    "puesto": "En formación en la abadía",
+    "cargo": "En formación en la abadía",
     "padre": "Luis III de Borbón-Condé (†1710)",
     "madre": "Luisa Francisca de Borbón (p14)",
     "lugar_familia": "Hermana de Monsieur le Duc",
-    "conyuge": "Voto monástico",
+    "conyuge": "Soltera",
     "hijos": "—",
     "religion": "Católica",
     "lengua": "Francés",
@@ -8844,15 +8845,14 @@
     "quiere": "—",
     "oculta": "—",
     "relacion_rey": "Hermana de Monsieur le Duc",
-    "hitos": "—",
+    "hitos": "Documentada en la abadía de Beaumont-lès-Tours en marzo de 1722.",
     "estatus": "por verificar",
     "presencia_versalles": "ausente",
     "riqueza": 7,
     "rango": 87,
     "sexo": "F",
     "rangos": [
-      "sang",
-      "eglise"
+      "sang"
     ],
     "favor": 2,
     "rasgos": {},
@@ -8868,7 +8868,7 @@
     ],
     "simbolos": [
       "principe-sangre",
-      "clero",
+      "dama-religiosa",
       "provinciano"
     ]
   },

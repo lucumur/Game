@@ -434,6 +434,38 @@
     }
   },
   {
+    "id": "dama-religiosa",
+    "nombre": "Dama religiosa",
+    "grupo": "Papel en la corte",
+    "desc": "Dama o princesa ligada a la vida conventual, como residente, religiosa profesa o abadesa.",
+    "svg": "<path d='M12 16a6 6.5 0 1 1 0-13 6 6.5 0 0 1 0 13z' stroke-dasharray='0.35 2.2'/><path d='M12 16v6m-2-3h4'/>",
+    "ficha": {
+      "significado": "Identifica a damas y princesas cuya trayectoria está vinculada a una comunidad religiosa. La ficha de cada personaje indica su situación en 1722: residencia en una abadía, profesión religiosa o gobierno de la comunidad.",
+      "motivo": "Un rosario de azabache con una pequeña cruz de plata representa la oración y la vida conventual. El icono provisional dibuja el rosario y su cruz.",
+      "color": {
+        "nombre": "Azabache, plata y lavanda grisácea",
+        "muestra": "#837789",
+        "texto": "El terciopelo lavanda grisáceo es el fondo propuesto para que se distingan las cuentas negras y la cruz de plata."
+      },
+      "contexto": "Luisa Adelaida de Orleans profesó en 1718 y dirigía la abadía de Chelles desde 1719. Enriqueta Luisa de Borbón-Condé ya se encontraba en Beaumont-lès-Tours en marzo de 1722. Tomó el hábito en 1727 y fue abadesa desde 1733.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Archivos de Chelles · Luisa Adelaida de Orleans",
+          "url": "https://patrimoine-archives.chelles.fr/galerie/galerie/images/37/n:173"
+        },
+        {
+          "nombre": "Mathieu Marais · Diario de marzo de 1722",
+          "url": "https://fr.wikisource.org/wiki/Journal_et_m%C3%A9moires_de_Mathieu_Marais/1722/Mars"
+        },
+        {
+          "nombre": "Enriqueta Luisa de Borbón-Condé · Carta sobre su toma de hábito",
+          "url": "https://www.gazette-drouot.com/lots/6563708-henriette-louise-marie-francoise-gabrielle---"
+        }
+      ]
+    }
+  },
+  {
     "id": "ministro",
     "nombre": "Ministro / Consejo",
     "grupo": "Papel en la corte",
