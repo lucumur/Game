@@ -430,10 +430,12 @@ button.kin:hover{border-color:var(--gilt)}
 .pj>svg{border:0}
 .bio-h img.pt,.bio-h>svg{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:center top;border:1px solid var(--gilt)}
 
-/* ---------- Mejoras de Mapas: Dominio (Viajes) y los 4 Mapas de Francia (Escudos, Emblemas y Líderes) ---------- */
+/* ---------- Mejoras de Mapas: Dominio (Viajes) y los 6 Mapas de Francia (Escudos, Emblemas y Líderes) ---------- */
 .sectores-bar select{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:.28rem .55rem;font-size:.88rem;max-width:100%;flex:1 1 220px}
+.fr-tabs{display:flex;flex-wrap:wrap;gap:6px}
 .fr-tabs .btn{font-weight:600;padding:.35rem .75rem}
 .fr-tabs .btn[aria-pressed="true"]{background:var(--gilt);color:#18140c;border-color:var(--gilt)}
+.fr-src{font-size:.82rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .emblema-header{display:grid;grid-template-columns:100px minmax(0,1fr);gap:12px;align-items:center;padding:10px 12px;background:var(--chip);border:1px solid var(--line);border-radius:var(--r)}
 .escudo-svg-wrap{display:grid;place-items:center;background:var(--paper);border:1px solid var(--gilt);border-radius:var(--r);width:100px;height:112px;padding:8px;box-sizing:border-box;overflow:hidden}
 .escudo-svg-wrap img{width:100%!important;height:100%!important;object-fit:contain!important}

@@ -23,12 +23,22 @@ function lugaresIndex(){
   }
   if(typeof DIOCESIS_LIST!=="undefined"){
     DIOCESIS_LIST.forEach(d=>{
-      out.push({tipo:"francia",subMapa:"diocesis",id:d.id,n:d.n,code:"",alias:d.corto,d:d.rentas+" "+d.nota,pisos:[],sector:"Mapa 3 · Las Diócesis",oc:[d.titular,d.cargo].filter(Boolean)});
+      out.push({tipo:"francia",subMapa:"diocesis",id:d.id,n:d.n,code:"",alias:d.corto,d:(d.rentas||"")+" "+(d.nota||"")+" "+(d.sufraganeas||d.provinciaEcl||""),pisos:[],sector:"Mapa 3 · Las Diócesis",oc:[d.titular,d.cargo].filter(Boolean)});
     });
   }
   if(typeof APANAJES_LIST!=="undefined"){
     APANAJES_LIST.forEach(a=>{
-      out.push({tipo:"francia",subMapa:"apanajes",id:a.id,n:a.n,code:"",alias:a.corto,d:a.dominios+" "+a.rentas,pisos:[],sector:"Mapa 4 · Apanajes de la Sangre",oc:[a.titular,a.cargo].filter(Boolean)});
+      out.push({tipo:"francia",subMapa:"apanajes",id:a.id,n:a.n,code:"",alias:a.corto,d:a.dominios+" "+a.rentas,pisos:[],sector:"Mapa 4 · Apanajes y Patrimonios",oc:[a.titular,a.cargo].filter(Boolean)});
+    });
+  }
+  if(typeof GOBIERNOS_LIST!=="undefined"){
+    GOBIERNOS_LIST.forEach(g=>{
+      out.push({tipo:"francia",subMapa:"gobiernos",id:g.id,n:g.n,code:"",alias:g.corto,d:g.nota||"",pisos:[],sector:"Mapa 5 · Gobiernos Militares",oc:[g.titular,g.cargo].filter(Boolean)});
+    });
+  }
+  if(typeof INTENDENCIAS_LIST!=="undefined"){
+    INTENDENCIAS_LIST.forEach(it=>{
+      out.push({tipo:"francia",subMapa:"intendencias",id:it.id,n:it.n,code:"",alias:it.corto,d:it.nota||"",pisos:[],sector:"Mapa 6 · Intendencias",oc:[it.titular,it.cargo].filter(Boolean)});
     });
   }
   return out;
@@ -70,6 +80,8 @@ async function irALugar(L){
       else if(L.subMapa==="parlamentos") selParl=L.id;
       else if(L.subMapa==="diocesis") selDioc=L.id;
       else if(L.subMapa==="apanajes") selApanaje=L.id;
+      else if(L.subMapa==="gobiernos") selGob=L.id;
+      else if(L.subMapa==="intendencias") selInt=L.id;
     }
     drawMap("francia");
     return;

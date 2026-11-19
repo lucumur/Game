@@ -213,9 +213,10 @@ def validar(datos, canon_obj, pj00):
                 errores.append(f"12-mapas.js OCUP: pid {pid!r} no existe en datos")
 
     txt_fr = R_FRANCIA.read_text(encoding="utf-8")
-    for pid in sorted(set(re.findall(r'pid:"([^"]+)"', txt_fr))):
-        if pid not in d_by_eid:
-            errores.append(f"14-francia-mapa-de-provincias-a.js: pid {pid!r} no existe en datos")
+    for attr in ("pid", "refPid"):
+        for pid in sorted(set(re.findall(rf'\b{attr}:"([^"]+)"', txt_fr))):
+            if pid not in d_by_eid:
+                errores.append(f"14-francia-mapa-de-provincias-a.js ({attr}): pid {pid!r} no existe en datos")
 
     # Validar web/datos/ocupantes.json
     if not R_OCUP.exists():

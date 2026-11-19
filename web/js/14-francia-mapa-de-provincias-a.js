@@ -5,13 +5,15 @@ const PROV_DEF = [{"id": "fuera", "r": 0, "g": 0, "b": 0, "nombre": "Fuera del r
 const PROV_PNG = "data:image/png;base64,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";
 const GEO = {lon0:-5.2, lon1:8.6, lat1:51.3, k:Math.cos(46.5*Math.PI/180)};
 let provState=null, capaFrancia="ducados";
-let selDucado=0, selParl="paris", selDioc="dioc-paris", selApanaje="ap-orleans";
+let selDucado=0, selParl="paris", selDioc="dioc-paris", selApanaje="ap-orleans", selGob="gob-ile-de-france", selInt="int-paris";
 
 const CAPAS_FRANCIA = {
-  ducados:     {num:"1", label:"Ducados y Señoríos", ico:"🛡", sub:"Mapa feudal de Francia (1722): Ducados-Parías, Condados, Marquesados y Baronías, cada uno con su escudo heráldico y su señor."},
-  parlamentos: {num:"2", label:"Los Parlamentos",    ico:"⚖", sub:"Las 13 jurisdicciones soberanas de la Toga (Parlamentos y Consejos Soberanos), cada una con su emblema judicial y su Primer Presidente."},
-  diocesis:    {num:"3", label:"Las Diócesis",       ico:"✚", sub:"Mapa eclesiástico de Arzobispados y Obispados ante la bula Unigenitus, con sus emblemas episcopales/cardenalicios y su prelado."},
-  apanajes:    {num:"4", label:"Apanajes de la Sangre", ico:"⚜", sub:"Tierras del Dominio Real, Príncipes de la Sangre (Orleans, Condé, Conti) y Legitimados (Maine, Toulouse), con sus armas reales y su jefe de casa."}
+  ducados:      {num:"1", label:"Ducados y Señoríos",    ico:"🛡", sub:"Mapa feudal de Francia (1722): Ducados-Parías, Condados, Marquesados y Baronías, separados de los gobiernos provinciales."},
+  parlamentos:  {num:"2", label:"Los Parlamentos",       ico:"⚖", sub:"Las 13 jurisdicciones soberanas de la Toga (Parlamentos y Consejos Soberanos), cada una con su emblema judicial y su Primer Presidente."},
+  diocesis:     {num:"3", label:"Las Diócesis",          ico:"✚", sub:"Las 18 provincias metropolitanas (arzobispados) del reino y 18 obispados clave (pares eclesiásticos, apelantes y sedes cortesanas) ante la bula Unigenitus."},
+  apanajes:     {num:"4", label:"Apanajes y Patrimonios", ico:"⚜", sub:"Separación estricta: único Apanaje real vigente (Orleans), Principado soberano de Dombes, patrimonios señoriales de las ramas borbónicas y Dominio Real. Los gobiernos figuran aparte en el Mapa 5."},
+  gobiernos:    {num:"5", label:"Gobiernos Militares",   ico:"⚔", sub:"Los 32 gobiernos provinciales y militares del Reino en junio de 1722, con su Gobernador titular, nivel de confianza y fuente (distintos de los feudos y de las intendencias)."},
+  intendencias: {num:"6", label:"Intendencias",          ico:"📜", sub:"Las 30 intendencias reales (31–32 generalidades) de 1722 clasificadas por régimen fiscal: Pays d'élections, Pays d'États y Pays d'imposition."}
 };
 
 /* ---------- 1. MAPA DE DUCADOS Y SEÑORÍOS (Cada uno con su escudo y su líder) ---------- */
@@ -138,11 +140,11 @@ const FEUDOS = [
    escudo:{bg:"#1f3a68",fg:"#e8e4d8",acc:"#b02828",pat:"larochefoucauld",crown:"ducal",blason:"Fajado de diez piezas de plata y azur, con tres cabrios de gules brochantes sobre el todo, el primero despuntado."},
    rentas:"Señoríos en Angoumois y Saintonge, sumados al ducado de La Roche-Guyon sobre el Sena.",
    nota:"El Duque de La Rochefoucauld es Gran Montero de Francia y Maestro del Guardarropa de Luis XV."},
-  {id:"orleans-ap", prov:"orleanais", lon:1.90, lat:47.90, corto:"Apanaje de Orleans y Chartres", nombre:"Ducados de Orleans, Chartres y Blois (Gran Apanaje)", rango:"Primer Apanaje de la Sangre",
+  {id:"orleans-ap", prov:"orleanais", lon:1.90, lat:47.90, corto:"Apanaje de Orleans y Chartres", nombre:"Ducados de Orleans, Chartres y Blois (Gran Apanaje)", rango:"Ducados del Gran Apanaje Real",
    casa:"Casa de Orleans", clan:"orleans", pid:"luis-orleans-chartres", titular:"Luis de Orleans, Duque de Chartres (heredero del Regente)",
    escudo:{bg:"#1c386b",fg:"#e0ba54",acc:"#f0ede4",pat:"orleans",crown:"principe",blason:"De azur con tres flores de lis de oro y lambel de plata de tres pendientes (Casa Ducal de Orleans)."},
    rentas:"Peajes del Loira, bosques de Orleans, trigales de Beauce y canal de Orleans; más de 600.000 libras anuales.",
-   nota:"Corazón territorial de la Casa de Orleans; da su título al joven Duque de Chartres, hijo único varón del Regente."},
+   nota:"Núcleo del único apanaje real vigente en 1722 (véase también Mapa 4); da su título al joven Duque de Chartres, hijo único varón del Regente."},
   {id:"saint-aignan", prov:"berry", lon:1.37, lat:47.26, corto:"D. de Saint-Aignan", nombre:"Ducado-Paría de Saint-Aignan", rango:"Ducado-Paría (1663)",
    casa:"Casa de Beauvilliers", clan:"ducal", pid:"paul-hippolyte-st-aignan", titular:"Paul-Hippolyte de Beauvilliers, Duque de Saint-Aignan",
    escudo:{bg:"#e8e4d8",fg:"#2d6a3e",acc:"#b02828",pat:"harcourt",crown:"ducal",blason:"Fajado de plata y de sinople de seis piezas, las fajas de plata cargadas de seis merletas de gules (Beauvilliers)."},
@@ -154,22 +156,28 @@ const FEUDOS = [
    rentas:"Señoríos en el Berry y baronía de Ancenis en Bretaña.",
    nota:"Elegido en secreto por el Regente y el Cardenal Dubois para sustituir al Mariscal de Villeroy como Gobernador de Luis XV en agosto de 1722."},
 
-  // Borgoña, Lionesado y Provenza
-  {id:"borbon-conde-gob", prov:"bourgogne", lon:4.85, lat:47.20, corto:"Gob. de Borgoña y Charolais", nombre:"Gobierno de Borgoña y Condado de Charolais", rango:"Gobierno Perpetuo y Condado",
+  // Borgoña, Lionesado, Brie y Provenza
+  {id:"borbon-conde-gob", prov:"bourgogne", lon:4.28, lat:46.43, corto:"C. de Charolais y Borbón", nombre:"Condado de Charolais y Ducado de Borbón", rango:"Ducado engagiste y Condado Patrimonial",
    casa:"Casa de Borbón-Condé", clan:"conde", pid:"luis-enrique-borbon", titular:"Luis Enrique de Borbón-Condé, «Monsieur le Duc»",
-   escudo:{bg:"#1c386b",fg:"#e0ba54",acc:"#c42b2b",pat:"conde",crown:"principe",blason:"Armas de Borbón-Condé acoladas con el bandado de oro y azur con bordura de gules del Ducado de Borgoña."},
-   rentas:"Pensiones de los Estados de Borgoña, viñedos de la Côte-d'Or y forjas del Charolais.",
-   nota:"Feudo político inexpugnable de los Condé desde tiempos del Gran Condé."},
+   escudo:{bg:"#1c386b",fg:"#e0ba54",acc:"#c42b2b",pat:"conde",crown:"principe",blason:"Armas de Borbón-Condé acoladas con las de Borbón moderno y Charolais."},
+   rentas:"Tierras patrimoniales y forjas del Charolais (en Borgoña) y ducado engagiste del Borbonés (cedido en 1661 al Gran Condé a cambio de Albret).",
+   nota:"Patrimonio señorial de los Borbón-Condé, distinto del gobierno militar borgoñón (véase Mapa 5 · Gobiernos Militares)."},
   {id:"dombes-feudo", prov:"dombes", lon:4.95, lat:46.00, corto:"P. Soberano de Dombes", nombre:"Principado Soberano de Dombes", rango:"Principado Soberano",
    casa:"Casa de Borbón-Maine", clan:"maine", pid:"duc-du-maine", titular:"Luis Augusto de Borbón, Duque del Maine y Príncipe de Dombes",
    escudo:{bg:"#1c386b",fg:"#e0ba54",acc:"#c42b2b",pat:"maine",crown:"principe",blason:"De azur con tres flores de lis de oro y barra recortada de gules (Príncipes Soberanos de Dombes)."},
    rentas:"Impuestos soberanos, acuñación de moneda y privilegios de imprenta libre en Trévoux.",
    nota:"Único territorio donde el Duque del Maine reina como soberano independiente; su hijo primogénito lleva el título de Príncipe de Dombes."},
-  {id:"villars-prov", prov:"provence", lon:5.45, lat:43.55, corto:"Gob. de Provenza (Villars)", nombre:"Gobierno de Provenza y Marquesado de Les Baux", rango:"Gobierno General y Ducado",
+  {id:"villars-prov", prov:"ile-de-france", lon:2.71, lat:48.56, corto:"D. de Villars (Vaux)", nombre:"Ducado-Paría de Villars (Vaux-Villars)", rango:"Ducado-Paría (1705/1709)",
    casa:"Casa de Villars", clan:"ducal", pid:"villars", titular:"Claude-Louis-Hector, Duque y Mariscal de Villars",
    escudo:{bg:"#e0ba54",fg:"#b02828",acc:"#1f3a68",pat:"villars",crown:"ducal",blason:"De oro con tres cabrios de gules y jefe de azur cargado de un león pasante de plata (Duque y Mariscal de Villars)."},
-   rentas:"Emolumentos del Gobierno de Provenza unidos al Ducado-Paría de Villars (Vaux-le-Vicomte en Brie).",
-   nota:"El glorioso vencedor de Denain representa a Provenza en el Consejo de Regencia mientras la provincia sale de la Gran Peste."},
+   rentas:"Dominio de Vaux-le-Vicomte en Brie, comprado por el mariscal en 1705 y erigido en Ducado-Paría de Villars.",
+   nota:"Asiento feudal real del mariscal de Villars en Brie —distinto del gobierno militar provenzal (Mapa 5), sin mezcla con señoríos provenzales como el marquesado monegasco homónimo."},
+  {id:"brancas-villars", prov:"provence", lon:5.41, lat:43.92, corto:"D. de Villars-Brancas", nombre:"Ducado-Paría de Villars-Brancas", rango:"Ducado-Paría (1652)",
+   casa:"Casa de Brancas", clan:"ducal", pid:null, titular:"Louis-Antoine de Brancas, IV Duque de Villars-Brancas",
+   escudo:{bg:"#1f3a68",fg:"#e0ba54",acc:"#b02828",pat:"luynes",crown:"ducal",blason:"De azur con palo de plata cargado de tres torres de gules y flanqueado de cuatro piernas de león de oro (Brancas)."},
+   rentas:"Señoríos provenzales en Villars, Céreste y el valle del Apt.",
+   nota:"Ducado provenzal de la Casa de Brancas (homónimo pero distinto del ducado de Vaux-Villars del mariscal de Villars).",
+   conf:"a", fuente:"Père Anselme; Almanach royal 1722"},
 
   // Languedoc y Guyena
   {id:"ales-pezenas", prov:"languedoc", lon:3.65, lat:43.82, corto:"C. de Alès y Pézenas", nombre:"Condado de Alès y Baronías de Pézenas y Bagnols", rango:"Condado y Baronías",
@@ -312,159 +320,680 @@ const DIOCESIS_PARTIDOS = {
 };
 
 const DIOCESIS_LIST = [
+  // ---------- LAS 18 METRÓPOLIS (ARZOBISPADOS DEL REINO EN 1722) ----------
   {id:"dioc-paris", n:"Arzobispado de París (Ducado de Saint-Cloud)", corto:"Arz. de París", lon:2.35, lat:48.86,
-   partido:"apelante", galero:"cardenal", par:true, pid:"louis-antoine-noailles",
+   metropoli:true, sufraganeas:"Chartres, Meaux, Orleans, Blois",
+   partido:"apelante", galero:"cardenal", par:true, parSacre:false, pid:"louis-antoine-noailles",
    titular:"Cardenal Louis-Antoine de Noailles", cargo:"Arzobispo de París, Duque de Saint-Cloud y Par de Francia",
    emblema:{bg:"#a82828",fg:"#e0ba54",acc:"#1f3a68",galero:"cardenal",pat:"noailles",lema:"Capelo cardenalicio de 30 borlas · Banda de oro sobre gules (Noailles)"},
    rentas:"Más de 120.000 libras anuales y el Ducado-Paría de Saint-Cloud.",
-   nota:"Corazón de la resistencia galicana: el Cardenal de Noailles cuenta con el fervor de los párrocos de París, la Sorbona y el Parlamento frente a las presiones de Dubois."},
+   nota:"Corazón de la resistencia galicana: el Cardenal de Noailles cuenta con el fervor de los párrocos de París, la Sorbona y el Parlamento frente a las presiones de Dubois.",
+   conf:"a", fuente:"Gallia Christiana; Almanach royal 1722"},
   {id:"dioc-reims", n:"Arzobispado-Ducado de Reims", corto:"Arz.-D. de Reims", lon:4.03, lat:49.26,
-   partido:"aceptante", galero:"arzobispo", par:true, pid:"armand-jules-rohan",
+   metropoli:true, sufraganeas:"Soissons, Châlons, Laon, Senlis, Beauvais, Amiens, Noyon, Boulogne",
+   partido:"aceptante", galero:"arzobispo", par:true, parSacre:true, pid:"armand-jules-rohan",
    titular:"Armand-Jules de Rohan-Guémené", cargo:"Arzobispo-Duque de Reims, Primer Par Eclesiástico de Francia",
    emblema:{bg:"#1c386b",fg:"#e0ba54",acc:"#b02828",galero:"arzobispo",pat:"rohan",lema:"Manto ducal, cruz arzobispal de doble travesaño y macles de oro de Rohan"},
-   rentas:"80.000 libras de renta y primacía sobre todos los Pares de Francia.",
-   nota:"Sede de la Santa Ampolla. Nombrado arzobispo-duque el 2 de junio de 1722 (confirmado en julio y consagrado obispo el 23 de agosto) para garantizar que un prelado aceptante de la Casa de Rohan corone a Luis XV el 25 de octubre."},
+   rentas:"80.000 libras de renta y primacía sobre todos los Pares de Francia en la consagración real.",
+   nota:"Sede de la Santa Ampolla. Nombrado arzobispo-duque el 2 de junio de 1722 (confirmado en julio y consagrado obispo el 23 de agosto) para que un prelado de la Casa de Rohan corone a Luis XV el 25 de octubre.",
+   conf:"a", fuente:"Gallia Christiana; Diario de Marais"},
+  {id:"dioc-sens", n:"Arzobispado de Sens", corto:"Arz. de Sens", lon:3.28, lat:48.20,
+   metropoli:true, sufraganeas:"Troyes, Auxerre, Nevers, Bethléem (Clamecy)",
+   partido:"aceptante", galero:"arzobispo", par:false, pid:null,
+   titular:"Denis-François Bouthillier de Chavigny", cargo:"Arzobispo de Sens, Primado de las Galias y de Germania (1716–1730)",
+   emblema:{bg:"#1f3a68",fg:"#e0ba54",acc:"#f0ede4",galero:"arzobispo",pat:"lis",lema:"Cruz arzobispal · Báculo y tres llaves o cruces de Sens"},
+   rentas:"Unas 60.000 libras anuales sobre el valle del Yonne y el Sénonais.",
+   nota:"Metrópoli tradicional vecina de París hasta 1622; Chavigny sostiene la Constitución Unigenitus frente a su combativo sufragáneo jansenista de Auxerre (Caylus).",
+   conf:"a", fuente:"Gallia Christiana; Almanach royal 1722"},
   {id:"dioc-cambrai", n:"Arzobispado-Ducado de Cambrai", corto:"Arz. de Cambrai", lon:3.23, lat:50.18,
+   metropoli:true, sufraganeas:"Arras, Saint-Omer (y en Países Bajos Austriacos: Tournai, Namur)",
    partido:"aceptante", galero:"cardenal", par:false, pid:"dubois",
-   titular:"Cardenal Guillaume Dubois", cargo:"Arzobispo de Cambrai, Príncipe del Sacro Imperio y Primer Ministro de facto",
+   titular:"Cardenal Guillaume Dubois", cargo:"Arzobispo-Duque de Cambrai, Príncipe del Sacro Imperio y Primer Ministro de facto",
    emblema:{bg:"#1f3a68",fg:"#e0ba54",acc:"#b02828",galero:"cardenal",pat:"lis",lema:"Capelo rojo cardenalicio (1721) · Silla del antiguo Fénelon"},
    rentas:"Más de 150.000 libras anuales sumadas a siete grandes abadías comendatarias (más de un millón de libras en total).",
-   nota:"Ordenado en una sola mañana de 1720 para recibir la riquísima sede de Cambrai; forzó el registro de la bula Unigenitus a cambio de su capelo romano."},
-  {id:"dioc-estrasburgo", n:"Principado-Obispado de Estrasburgo", corto:"Ob. de Estrasburgo", lon:7.75, lat:48.58,
-   partido:"aceptante", galero:"cardenal", par:false, pid:"cardenal-rohan",
-   titular:"Cardenal Armand-Gaston-Maximilien de Rohan", cargo:"Príncipe-Obispo de Estrasburgo y Gran Limosnero de Francia",
-   emblema:{bg:"#b02828",fg:"#e0ba54",acc:"#f0ede4",galero:"cardenal",pat:"rohan",lema:"Capelo cardenalicio, banda de plata de Estrasburgo y nueve macles de Rohan"},
-   rentas:"Más de 400.000 libras de renta entre el Principado-Obispado del Rin y la Abadía de Saint-Vaast.",
-   nota:"El prelado más magnífico y poderoso de Versalles; como Gran Limosnero dirige la Capilla Real y lidera el partido aceptante en el Consejo de Conciencia."},
-  {id:"dioc-meaux", n:"Obispado de Meaux", corto:"Ob. de Meaux", lon:2.88, lat:48.96,
-   partido:"aceptante", galero:"cardenal", par:false, pid:"henri-thiard-bissy",
-   titular:"Cardenal Henri-Pons de Thiard de Bissy", cargo:"Cardenal y Obispo de Meaux, Abad de Saint-Germain-des-Prés",
-   emblema:{bg:"#e0ba54",fg:"#1f3a68",acc:"#b02828",galero:"cardenal",pat:"castries",lema:"Capelo cardenalicio · Tres cangrejos de gules sobre oro (Thiard de Bissy)"},
-   rentas:"Obispado de Meaux en Brie y las rentas inmensas de la Abadía Real de Saint-Germain-des-Prés en París.",
-   nota:"Sucesor del gran Bossuet en Meaux y martillo implacable de Roma contra los jansenistas y contra el Cardenal de Noailles."},
+   nota:"Ordenado en una sola mañana de 1720 para recibir la riquísima sede de Cambrai; forzó el registro de la bula Unigenitus a cambio de su capelo romano.",
+   conf:"a", fuente:"Saint-Simon; Almanach royal 1722"},
   {id:"dioc-rouen", n:"Arzobispado de Ruan (Primado de Normandía)", corto:"Arz. de Ruan", lon:1.09, lat:49.44,
-   partido:"moderado", galero:"arzobispo", par:false, pid:"claude-st-georges-rouen",
-   titular:"Sede vacante (Louis de La Vergne de Tressan, futuro arzobispo)", cargo:"Obispo de Nantes y Primer Limosnero del Regente (nombrado para Ruan en oct. de 1723)",
-   emblema:{bg:"#1f3a68",fg:"#f0ede4",acc:"#e0ba54",galero:"arzobispo",pat:"villeroy",lema:"Galero arzobispal de 20 borlas verdes · Cordero pascual de Ruan"},
-   rentas:"80.000 libras de renta y el espléndido palacio renacentista de Gaillon en Normandía.",
-   nota:"Sede vacante en junio de 1722 tras la muerte de Armand Bazin de Bezons (8 oct. 1721). Tressan, entonces obispo de Nantes y primer limosnero del Regente, será nombrado arzobispo de Ruan en octubre de 1723 tras haber consagrado obispo a Dubois."},
+   metropoli:true, sufraganeas:"Bayeux, Avranches, Évreux, Sées, Lisieux, Coutances",
+   partido:"moderado", galero:"arzobispo", par:false, pid:null, escudoId:"_vec_rouen",
+   refPid:"claude-st-georges-rouen", refLabel:"Futuro arzobispo (oct. 1723): Tressan, hoy obispo de Nantes",
+   titular:"Sede vacante (fallecido Armand Bazin de Bezons, 8 oct. 1721)", cargo:"Arzobispado de Ruan · Regimiento provisional por el cabildo en junio de 1722",
+   emblema:{bg:"#1f3a68",fg:"#f0ede4",acc:"#e0ba54",galero:"arzobispo",pat:"lis",lema:"Galero arzobispal de 20 borlas verdes · Sede metropolitana vacante en 1722"},
+   rentas:"80.000 libras de renta (en régale durante la vacante) y el palacio de Gaillon en Normandía.",
+   nota:"Sede vacante en junio de 1722 tras la muerte de Armand Bazin de Bezons (8 oct. 1721). Louis de La Vergne de Tressan, hoy obispo de Nantes y primer limosnero del Regente, será nombrado arzobispo de Ruan en octubre de 1723.",
+   conf:"a", fuente:"Gallia Christiana; Almanach royal 1722"},
+  {id:"dioc-tours", n:"Arzobispado de Tours", corto:"Arz. de Tours", lon:0.69, lat:47.39,
+   metropoli:true, sufraganeas:"Le Mans, Angers, Rennes, Nantes, Quimper, Vannes, Léon, Tréguier, Saint-Brieuc, Saint-Malo, Dol",
+   partido:"moderado", galero:"arzobispo", par:false, pid:null,
+   titular:"François Blouet de Camilly", cargo:"Arzobispo de Tours (1721–1723)",
+   emblema:{bg:"#1f3a68",fg:"#e0ba54",acc:"#f0ede4",galero:"arzobispo",pat:"lis",lema:"Cruz arzobispal de doble travesaño sobre el sembrado de Turena"},
+   rentas:"Unas 45.000 libras de renta y jurisdicción metropolitana sobre toda Turena, Anjou, Maine y los nueve obispados de Bretaña.",
+   nota:"Prelado moderado promovido en 1721 bajo la Regencia; encabeza la vasta provincia eclesiástica que abarca todo el noroeste bretón y del Loira.",
+   conf:"a", fuente:"Gallia Christiana; Almanach royal 1722"},
+  {id:"dioc-bourges", n:"Arzobispado de Bourges (Primado de las Aquitanias)", corto:"Arz. de Bourges", lon:2.40, lat:47.08,
+   metropoli:true, sufraganeas:"Clermont, Limoges, Le Puy, Tulle, Saint-Flour",
+   partido:"aceptante", galero:"cardenal", par:false, pid:null,
+   titular:"Cardenal Léon Potier de Gesvres", cargo:"Cardenal-Arzobispo de Bourges, Patriarca y Primado de las Aquitanias (1694–1729)",
+   emblema:{bg:"#b02828",fg:"#e0ba54",acc:"#1f3a68",galero:"cardenal",pat:"harcourt",lema:"Capelo cardenalicio (1719) y armas de los Potier de Gesvres"},
+   rentas:"Unas 50.000 libras de renta del arzobispado más abadías reales; miembro de la poderosa casa cortesana de Gesvres.",
+   nota:"Creado cardenal en 1719 pese a tensiones previas; en 1722 refuerza el peso del partido constitucionalista en el Berry y el Macizo Central.",
+   conf:"a", fuente:"Gallia Christiana; Almanach royal 1722"},
   {id:"dioc-lyon", n:"Arzobispado de Lyon (Primado de las Galias)", corto:"Arz. de Lyon", lon:4.83, lat:45.76,
+   metropoli:true, sufraganeas:"Autun, Langres, Mâcon, Chalon-sur-Saône",
    partido:"moderado", galero:"arzobispo", par:false, pid:"francois-paul-neufville",
    titular:"François-Paul de Neufville de Villeroy", cargo:"Arzobispo y Conde de Lyon, Primado de las Galias",
    emblema:{bg:"#1f3a68",fg:"#e0ba54",acc:"#b02828",galero:"arzobispo",pat:"villeroy",lema:"Primado de las Galias · Cabrio de oro y cruces ancoradas de Villeroy"},
    rentas:"70.000 libras del Arzobispado de Lyon y de la gran Abadía normanda de Fécamp.",
-   nota:"Hijo segundo del Mariscal de Villeroy; gracias a él, la familia Villeroy domina tanto el gobierno militar como la mitra primada de Lyon."},
+   nota:"Hijo segundo del Mariscal de Villeroy; gracias a él, la familia Villeroy domina tanto el gobierno militar como la mitra primada de Lyon.",
+   conf:"a", fuente:"Gallia Christiana; Almanach royal 1722"},
+  {id:"dioc-besancon", n:"Arzobispado de Besanzón", corto:"Arz. de Besanzón", lon:6.02, lat:47.24,
+   metropoli:true, sufraganeas:"Belley (y en el Imperio/Suiza: Basilea, Lausana)",
+   partido:"moderado", galero:"arzobispo", par:false, pid:null,
+   titular:"Sede vacante (fallecido René de Mornay en mayo de 1721)", cargo:"Arzobispado de Besanzón · Príncipe del Sacro Imperio (Grimaldi nombrado en 1723)",
+   emblema:{bg:"#b02828",fg:"#e0ba54",acc:"#f0ede4",galero:"arzobispo",pat:"lis",lema:"Cruz arzobispal · Águila imperial y columnas del cabildo de Besanzón"},
+   rentas:"Unas 36.000 libras anuales y asiento preeminente en los antiguos Estados comtois.",
+   nota:"Tras la muerte de René de Mornay (mayo de 1721), la sede comtoise aguarda la provisión que recaerá en François-Honoré de Grimaldi (1723).",
+   conf:"a", fuente:"Gallia Christiana; Archivos del Doubs"},
   {id:"dioc-vienne", n:"Arzobispado de Vienne y Abadía de Cluny", corto:"Arz. de Vienne", lon:4.87, lat:45.52,
+   metropoli:true, sufraganeas:"Grenoble, Valence, Die, Viviers, Ginebra-Annecy, Maurienne",
    partido:"aceptante", galero:"arzobispo", par:false, pid:"henri-oswald-auvergne",
    titular:"Henri-Oswald de La Tour d'Auvergne", cargo:"Arzobispo y Conde de Vienne, Abad General de Cluny",
    emblema:{bg:"#b02828",fg:"#e0ba54",acc:"#f0ede4",galero:"arzobispo",pat:"bouillon",lema:"Primado de los Primados · Llaves cruzadas de Cluny y torre de Bouillon"},
    rentas:"Más de 100.000 libras sumando la metrópoli del Delfinado y la Abadía madre de Cluny en Borgoña.",
-   nota:"Primo del Duque de Bouillon; corteja asiduamente a Dubois y a los Rohan para obtener el capelo de cardenal."},
+   nota:"Primo del Duque de Bouillon; corteja asiduamente a Dubois y a los Rohan para obtener el capelo de cardenal.",
+   conf:"a", fuente:"Gallia Christiana; Almanach royal 1722"},
   {id:"dioc-bordeaux", n:"Arzobispado de Burdeos (Primado de Aquitania)", corto:"Arz. de Burdeos", lon:-0.57, lat:44.84,
+   metropoli:true, sufraganeas:"Agen, Angoulême, Saintes, Poitiers, Périgueux, Condom, Sarlat, La Rochelle, Luçon",
    partido:"moderado", galero:"arzobispo", par:false, pid:"francois-elie-voyer-argenson",
    titular:"François-Élie de Voyer de Paulmy d'Argenson", cargo:"Arzobispo de Burdeos y Primado de Aquitania",
    emblema:{bg:"#1f3a68",fg:"#e0ba54",acc:"#b02828",galero:"arzobispo",pat:"luynes",lema:"León de San Marcos de Venecia y leopardos de oro de Paulmy d'Argenson"},
    rentas:"65.000 libras de renta sobre los diezmos de Guyena y el Médoc.",
-   nota:"Hermano del difunto Guarda de los Sellos Marc-René d'Argenson; mantiene la paz religiosa en Aquitania siguiendo las órdenes del Regente."},
+   nota:"Hermano del difunto Guarda de los Sellos Marc-René d'Argenson; mantiene la paz religiosa en Aquitania siguiendo las órdenes del Regente.",
+   conf:"a", fuente:"Gallia Christiana; Almanach royal 1722"},
+  {id:"dioc-auch", n:"Arzobispado de Auch", corto:"Arz. de Auch", lon:0.59, lat:43.65,
+   metropoli:true, sufraganeas:"Dax, Lectoure, Comminges, Couserans, Aire, Bazas, Tarbes, Oloron, Lescar, Bayona",
+   partido:"aceptante", galero:"arzobispo", par:false, pid:null,
+   titular:"Jacques Desmarets", cargo:"Arzobispo de Auch (1713–1725)",
+   emblema:{bg:"#1f3a68",fg:"#e0ba54",acc:"#b02828",galero:"arzobispo",pat:"lis",lema:"Galero arzobispal de 20 borlas verdes · Metrópoli de Gascuña y los Pirineos"},
+   rentas:"Una de las mitras más ricas del reino (más de 90.000 libras anuales sobre Gascuña y Armagnac).",
+   nota:"Sobrino de Colbert y hermano del antiguo Contralor General Nicolas Desmarets; gobierna diez diócesis gasconas, bearnesas y vascas.",
+   conf:"a", fuente:"Gallia Christiana; Almanach royal 1722"},
+  {id:"dioc-toulouse", n:"Arzobispado de Toulouse", corto:"Arz. de Toulouse", lon:1.44, lat:43.60,
+   metropoli:true, sufraganeas:"Montauban, Mirepoix, Lavaur, Rieux, Lombez, Saint-Papoul, Pamiers",
+   partido:"moderado", galero:"arzobispo", par:false, pid:null,
+   titular:"Henri de Nesmond", cargo:"Arzobispo de Toulouse (confirmado 14 ene. 1722–1727) · Académico Francés",
+   emblema:{bg:"#a82a2a",fg:"#e0ba54",acc:"#f0ede4",galero:"arzobispo",pat:"lis",lema:"Cruz arzobispal · Armas del arzobispado de Toulouse"},
+   rentas:"Unas 60.000 libras anuales y gran autoridad en el Alto Languedoc y los Estados de la provincia.",
+   nota:"Trasladado desde Albi y preconizado para Toulouse en enero de 1722; orador celebrado que apoya la política de apaciguamiento civil.",
+   conf:"a", fuente:"Gallia Christiana; CNRS"},
+  {id:"dioc-albi", n:"Arzobispado de Albi", corto:"Arz. de Albi", lon:2.15, lat:43.93,
+   metropoli:true, sufraganeas:"Castres, Mende, Cahors, Rodez, Vabres",
+   partido:"moderado", galero:"arzobispo", par:false, pid:null,
+   titular:"Armand-Pierre de La Croix de Castries", cargo:"Arzobispo de Albi (nom. 1719 / conf. 1722–1747)",
+   emblema:{bg:"#1f3a68",fg:"#e0ba54",acc:"#f0ede4",galero:"arzobispo",pat:"castries",lema:"Cruz de oro de La Croix de Castries bajo galero arzobispal"},
+   rentas:"Unas 95.000 libras anuales, una de las rentas episcopales más cuantiosas del Mediodía.",
+   nota:"Trasladado de Tours a Albi (bulas confirmadas en 1722); miembro de la poderosa casa languedociana de Castries y hermano del caballero de honor de Mme d'Orléans.",
+   conf:"a", fuente:"Gallia Christiana; Diócesis de Albi"},
   {id:"dioc-narbonne", n:"Arzobispado de Narbona", corto:"Arz. de Narbona", lon:3.00, lat:43.18,
+   metropoli:true, sufraganeas:"Carcassonne, Alet, Béziers, Agde, Lodève, Montpellier, Nîmes, Uzès, Saint-Pons, Alès, Elna-Perpiñán",
    partido:"moderado", galero:"arzobispo", par:false, pid:"rene-francois-beaupoil",
    titular:"René-François de Beauvau du Rivau", cargo:"Arzobispo y Primado de Narbona, Presidente de los Estados de Languedoc",
    emblema:{bg:"#f0ede4",fg:"#b02828",acc:"#e0ba54",galero:"arzobispo",pat:"tremoille",lema:"Cuatro leones rampantes de gules armados y coronados de oro (Beauvau)"},
    rentas:"110.000 libras anuales y presidencia nata de los Estados Generales del Languedoc.",
-   nota:"Verdadero virrey civil y fiscal del Mediodía; negocia cada año en Montpellier los millones que la provincia entrega al Tesoro Real."},
+   nota:"Verdadero virrey civil y fiscal del Mediodía; negocia cada año en Montpellier los millones que la provincia entrega al Tesoro Real.",
+   conf:"a", fuente:"Gallia Christiana; Almanach royal 1722"},
+  {id:"dioc-aix", n:"Arzobispado de Aix", corto:"Arz. de Aix", lon:5.45, lat:43.53,
+   metropoli:true, sufraganeas:"Apt, Riez, Fréjus, Gap, Sisteron",
+   partido:"aceptante", galero:"arzobispo", par:false, pid:null,
+   titular:"Charles-Gaspard-Guillaume de Vintimille du Luc", cargo:"Arzobispo de Aix-en-Provence (1708–1729)",
+   emblema:{bg:"#a82a2a",fg:"#e0ba54",acc:"#1f3a68",galero:"arzobispo",pat:"lis",lema:"Cruz arzobispal · Armas de Vintimille du Luc"},
+   rentas:"Unas 40.000 libras de renta y presidencia espiritual de la asamblea de los Estados/Comunidades de Provenza.",
+   nota:"En 1722 dirige con Cardin Le Bret la reconstrucción administrativa y moral de Provenza tras la Gran Peste; será arzobispo de París en 1729.",
+   conf:"a", fuente:"Gallia Christiana; Estados de Provenza 1722"},
+  {id:"dioc-arles", n:"Arzobispado de Arlés", corto:"Arz. de Arlés", lon:4.63, lat:43.68,
+   metropoli:true, sufraganeas:"Marsella, Saint-Paul-Trois-Châteaux, Tolón, Orange",
+   partido:"aceptante", galero:"arzobispo", par:false, pid:null,
+   titular:"Jacques II de Forbin-Janson", cargo:"Arzobispo de Arlés, Primado (1711–1741)",
+   emblema:{bg:"#1f3a68",fg:"#e0ba54",acc:"#b02828",galero:"arzobispo",pat:"villeroy",lema:"Galero arzobispal · Cabrio de oro y cabezas de leopardo de Forbin-Janson"},
+   rentas:"Unas 42.000 libras de renta en la Camarga y el Bajo Ródano.",
+   nota:"Firme defensor de la bula Unigenitus en Provenza; hermano y sobrino de diplomáticos cercanos a Roma.",
+   conf:"a", fuente:"Gallia Christiana; Almanach royal 1722"},
+  {id:"dioc-embrun", n:"Arzobispado-Principado de Embrun", corto:"Arz. de Embrun", lon:6.50, lat:44.56,
+   metropoli:true, sufraganeas:"Digne, Grasse, Vence, Glandèves, Senez (y Niza)",
+   partido:"aceptante", galero:"arzobispo", par:false, pid:null,
+   titular:"Jean-François-Gabriel de Hénin-Liétard", cargo:"Arzobispo-Príncipe de Embrun (1719–1724; toma posesión personal el 28 jun. 1722)",
+   emblema:{bg:"#b02828",fg:"#e0ba54",acc:"#f0ede4",galero:"arzobispo",pat:"noailles",lema:"Cruz arzobispal · Banda de oro de Hénin-Liétard"},
+   rentas:"Unas 25.000 libras de renta en los Altos Alpes y jurisdicción sobre las sedes provenzales orientales.",
+   nota:"Toma posesión solemne el 28 de junio de 1722; su muerte en 1724 abrirá la puerta a Guérin de Tencin y al célebre Concilio de Embrun (1727) contra Soanen.",
+   conf:"a", fuente:"Gallia Christiana; Catálogo Hyacinthe Rigaud"},
+
+  // ---------- 18 OBISPADOS CLAVE (PARES ECLESIÁSTICOS, APELANTES Y SEDES CORTESANAS) ----------
+  {id:"dioc-laon", n:"Obispado-Ducado de Laon", corto:"Ob.-D. de Laon", lon:3.62, lat:49.56,
+   metropoli:false, provinciaEcl:"Reims",
+   partido:"moderado", galero:"obispo", par:true, parSacre:true, pid:null,
+   titular:"Charles de Saint-Albin", cargo:"Obispo-Duque de Laon (consagrado 26 abr. 1722) · Par Eclesiástico de Francia",
+   emblema:{bg:"#1c386b",fg:"#e0ba54",acc:"#f0ede4",galero:"obispo",pat:"orleans",lema:"Manto ducal, galero episcopal y lises brisadas de Saint-Albin (Orleans)"},
+   rentas:"Unas 30.000 libras de renta y el rango de segundo par eclesiástico del reino.",
+   nota:"Hijo natural del Regente Felipe de Orleans; consagrado expresamente en la primavera de 1722 para llevar la Santa Ampolla en el Sacre de Reims.",
+   conf:"a", fuente:"Gallia Christiana; Diario de Barbier"},
+  {id:"dioc-langres", n:"Obispado-Ducado de Langres", corto:"Ob.-D. de Langres", lon:5.33, lat:47.86,
+   metropoli:false, provinciaEcl:"Lyon",
+   partido:"aceptante", galero:"obispo", par:true, parSacre:true, pid:null,
+   titular:"François-Louis de Clermont-Tonnerre", cargo:"Obispo-Duque de Langres (1695–1724) · Par Eclesiástico de Francia",
+   emblema:{bg:"#b02828",fg:"#e0ba54",acc:"#f0ede4",galero:"obispo",pat:"bouillon",lema:"Llaves cruzadas de plata de Clermont-Tonnerre y galero episcopal"},
+   rentas:"Unas 35.000 libras de renta y el privilegio tradicional de portar el cetro real en la consagración.",
+   nota:"Tercer par eclesiástico de Francia; combina el espíritu de gran señor con su lealtad constitucionalista.",
+   conf:"a", fuente:"Gallia Christiana; Almanach royal 1722"},
+  {id:"dioc-beauvais", n:"Obispado-Condado de Beauvais", corto:"Ob.-C. de Beauvais", lon:2.08, lat:49.43,
+   metropoli:false, provinciaEcl:"Reims",
+   partido:"aceptante", galero:"obispo", par:true, parSacre:true, pid:null,
+   titular:"François-Honoré-Antoine de Beauvilliers de Saint-Aignan", cargo:"Obispo-Conde de Beauvais (1713–1728) · Par Eclesiástico de Francia",
+   emblema:{bg:"#e8e4d8",fg:"#2d6a3e",acc:"#b02828",galero:"obispo",pat:"harcourt",lema:"Fajas de plata y sinople con merletas de Beauvilliers · Manto condal"},
+   rentas:"Unas 55.000 libras anuales; pariente cercano del duque de Saint-Aignan.",
+   nota:"Cuarto par eclesiástico (primero de los obispos-condes); porta el manto real en el Sacre de Reims.",
+   conf:"a", fuente:"Gallia Christiana; Almanach royal 1722"},
+  {id:"dioc-chalons", n:"Obispado-Condado de Châlons-sur-Marne", corto:"Ob.-C. de Châlons", lon:4.36, lat:48.96,
+   metropoli:false, provinciaEcl:"Reims",
+   partido:"aceptante", galero:"obispo", par:true, parSacre:true, pid:null,
+   titular:"Nicolas-Charles de Saulx-Tavannes", cargo:"Obispo-Conde de Châlons (1721–1733) · Par Eclesiástico de Francia",
+   emblema:{bg:"#1f3a68",fg:"#e0ba54",acc:"#b02828",galero:"obispo",pat:"lis",lema:"León coronado de oro de Saulx-Tavannes · Manto de Par del Reino"},
+   rentas:"Unas 30.000 libras de renta y rango de quinto par eclesiástico.",
+   nota:"Nombrado en 1721 para suceder al fallecido hermano del duque de Noailles; portará el anillo real en Reims (octubre de 1722).",
+   conf:"a", fuente:"Gallia Christiana; Sacre de Louis XV (1722)"},
+  {id:"dioc-noyon", n:"Obispado-Condado de Noyon", corto:"Ob.-C. de Noyon", lon:3.00, lat:49.58,
+   metropoli:false, provinciaEcl:"Reims",
+   partido:"aceptante", galero:"obispo", par:true, parSacre:true, pid:null,
+   titular:"Charles-François de Châteauneuf de Rochebonne", cargo:"Obispo-Conde de Noyon (1707–1731) · Par Eclesiástico de Francia",
+   emblema:{bg:"#b02828",fg:"#e0ba54",acc:"#1f3a68",galero:"obispo",pat:"harcourt",lema:"Tres castillos de oro de Rochebonne · Sexto Par Eclesiástico"},
+   rentas:"Unas 32.000 libras de renta y rango de sexto par eclesiástico del reino.",
+   nota:"Porta el tahalí real en la ceremonia de Reims; firme sostén de la Constitución Unigenitus.",
+   conf:"a", fuente:"Gallia Christiana; Almanach royal 1722"},
+  {id:"dioc-estrasburgo", n:"Principado-Obispado de Estrasburgo", corto:"Ob. de Estrasburgo", lon:7.75, lat:48.58,
+   metropoli:false, provinciaEcl:"Maguncia (diócesis imperial en suelo francés)",
+   partido:"aceptante", galero:"cardenal", par:false, pid:"cardenal-rohan",
+   titular:"Cardenal Armand-Gaston-Maximilien de Rohan", cargo:"Príncipe-Obispo de Estrasburgo y Gran Limosnero de Francia",
+   emblema:{bg:"#b02828",fg:"#e0ba54",acc:"#f0ede4",galero:"cardenal",pat:"rohan",lema:"Capelo cardenalicio, banda de plata de Estrasburgo y nueve macles de Rohan"},
+   rentas:"Más de 400.000 libras de renta entre el Principado-Obispado del Rin y la Abadía de Saint-Vaast.",
+   nota:"El prelado más magnífico y poderoso de Versalles; como Gran Limosnero dirige la Capilla Real y lidera el partido aceptante en el Consejo de Conciencia.",
+   conf:"a", fuente:"Gallia Christiana; Saint-Simon"},
+  {id:"dioc-meaux", n:"Obispado de Meaux", corto:"Ob. de Meaux", lon:2.88, lat:48.96,
+   metropoli:false, provinciaEcl:"París",
+   partido:"aceptante", galero:"cardenal", par:false, pid:"henri-thiard-bissy",
+   titular:"Cardenal Henri-Pons de Thiard de Bissy", cargo:"Cardenal y Obispo de Meaux, Abad de Saint-Germain-des-Prés",
+   emblema:{bg:"#e0ba54",fg:"#1f3a68",acc:"#b02828",galero:"cardenal",pat:"castries",lema:"Capelo cardenalicio · Tres cangrejos de gules sobre oro (Thiard de Bissy)"},
+   rentas:"Obispado de Meaux en Brie y las rentas inmensas de la Abadía Real de Saint-Germain-des-Prés en París.",
+   nota:"Sucesor del gran Bossuet en Meaux y martillo implacable de Roma contra los jansenistas y contra el Cardenal de Noailles.",
+   conf:"a", fuente:"Gallia Christiana; Almanach royal 1722"},
   {id:"dioc-montpellier", n:"Obispado de Montpellier", corto:"Ob. de Montpellier", lon:3.87, lat:43.61,
+   metropoli:false, provinciaEcl:"Narbona",
    partido:"apelante", galero:"obispo", par:false, pid:"charles-joachim-colbert",
    titular:"Charles-Joachim Colbert de Croissy", cargo:"Obispo de Montpellier y Conde de Melgueil",
    emblema:{bg:"#e0ba54",fg:"#1f3a68",acc:"#2d6a3e",galero:"obispo",pat:"antin",lema:"Sierpe (víbora) ondulante de azur en palo sobre campo de oro (Colbert)"},
    rentas:"35.000 libras de renta y autoridad sobre la célebre Universidad de Montpellier.",
-   nota:"Sobrino del gran Colbert y uno de los Cuatro Obispos Apelantes de 1717; su Catecismo jansenista desafía abiertamente a Roma."},
+   nota:"Sobrino del gran Colbert y uno de los Cuatro Obispos Apelantes de 1717; su Catecismo jansenista desafía abiertamente a Roma.",
+   conf:"a", fuente:"Gallia Christiana; Almanach royal 1722"},
   {id:"dioc-senez", n:"Obispado de Senez", corto:"Ob. de Senez", lon:6.41, lat:43.91,
+   metropoli:false, provinciaEcl:"Embrun",
    partido:"apelante", galero:"obispo", par:false, pid:"jean-soanen",
    titular:"Jean Soanen", cargo:"Obispo y Señor de Senez · Decano de los Cuatro Obispos Apelantes",
    emblema:{bg:"#1f3a68",fg:"#f0ede4",acc:"#e0ba54",galero:"obispo",pat:"castries",lema:"Paloma del Espíritu Santo y báculo pastoral · «Veritas liberabit vos»"},
    rentas:"Diócesis montañosa y pobre de apenas 10.000 libras en los Alpes de Provenza.",
-   nota:"Venerado como un santo padre de la Iglesia primitiva por los jansenistas; ni las amenazas de destierro de Dubois logran doblar su pluma."},
-  {id:"dioc-marseille", n:"Obispado de Marsella", corto:"Ob. de Marsella", lon:5.37, lat:43.30,
+   nota:"Venerado como un santo padre de la Iglesia primitiva por los jansenistas; ni las amenazas de destierro de Dubois logran doblar su pluma.",
+   conf:"a", fuente:"Gallia Christiana; Gazettes 1722"},
+  {id:"dioc-boulogne", n:"Obispado de Boulogne-sur-Mer", corto:"Ob. de Boulogne", lon:1.75, lat:50.45,
+   metropoli:false, provinciaEcl:"Reims",
+   partido:"apelante", galero:"obispo", par:false, pid:null,
+   titular:"Pierre de Langle", cargo:"Obispo de Boulogne (1698–1724) · Uno de los Cuatro Obispos Apelantes",
+   emblema:{bg:"#1f3a68",fg:"#e0ba54",acc:"#f0ede4",galero:"obispo",pat:"lis",lema:"Galero episcopal verde de 12 borlas · Sede apelante del Boulonnais"},
+   rentas:"Unas 20.000 libras anuales en la costa del Canal frente a Inglaterra.",
+   nota:"Junto con Soanen (Senez) y Colbert (Montpellier), es uno de los tres obispos apelantes originarios de 1717 aún vivos en junio de 1722.",
+   conf:"a", fuente:"Gallia Christiana; BnF"},
+  {id:"dioc-auxerre", n:"Obispado de Auxerre", corto:"Ob. de Auxerre", lon:3.57, lat:47.80,
+   metropoli:false, provinciaEcl:"Sens",
+   partido:"apelante", galero:"obispo", par:false, pid:null,
+   titular:"Charles-Daniel-Gabriel de Caylus", cargo:"Obispo de Auxerre (1704–1754) · Referente apelante en Borgoña",
+   emblema:{bg:"#1f3a68",fg:"#e0ba54",acc:"#b02828",galero:"obispo",pat:"castries",lema:"Galero episcopal verde · Blasón de Tubières-Grimoard de Caylus"},
+   rentas:"Unas 35.000 libras de renta entre Champaña y Borgoña.",
+   nota:"Gran señor convertido al rigorismo agustiniano; convierte Auxerre en refugio de sacerdotes perseguidos y seminario del partido apelante.",
+   conf:"a", fuente:"Gallia Christiana; Archivos de Yonne"},
+  {id:"dioc-marseille", n:"Obispado de Marsella", corto:"Ob. de Marsella", lon:5.38, lat:43.36,
+   metropoli:false, provinciaEcl:"Arlés",
    partido:"aceptante", galero:"obispo", par:false, pid:"henri-belsunce",
    titular:"Henri-François-Xavier de Belsunce de Castelmoron", cargo:"Obispo de Marsella",
    emblema:{bg:"#f0ede4",fg:"#1f3a68",acc:"#b02828",galero:"obispo",pat:"larochefoucauld",lema:"Sagrado Corazón de Marsella (1720) y vacas de gules de Belsunce"},
    rentas:"30.000 libras de renta en el gran puerto mediterráneo.",
-   nota:"Héroe de la Peste de Marsella (1720-1722); antiguo jesuita y campeón ardiente de la bula Unigenitus frente a su vecino apelante de Senez."},
-  {id:"dioc-frejus", n:"Obispado de Fréjus (Feudo espiritual de Fleury)", corto:"Ob. de Fréjus (Fleury)", lon:6.73, lat:43.43,
-   partido:"aceptante", galero:"obispo", par:false, pid:"fleury",
-   titular:"André-Hercule de Fleury", cargo:"Antiguo Obispo de Fréjus y Preceptor del Rey Luis XV",
-   emblema:{bg:"#f0ede4",fg:"#1f3a68",acc:"#e0ba54",galero:"obispo",pat:"villeroy",lema:"Tres rosas de gules sobre plata · Paciencia y oído absoluto del Rey"},
-   rentas:"Abadías reales de Tournus y Saint-Étienne de Caen.",
-   nota:"Aunque renunció a la mitra de Fréjus para educar a Luis XV en Versalles, su red de obispos provenzales y languedocianos prepara ya su futuro ascenso al poder."}
+   nota:"Héroe de la Peste de Marsella (1720-1722); antiguo jesuita y campeón ardiente de la bula Unigenitus frente a su vecino apelante de Senez.",
+   conf:"a", fuente:"Gallia Christiana; Memorias de 1720–1722"},
+  {id:"dioc-frejus", n:"Obispado de Fréjus (Antiguo feudo espiritual de Fleury)", corto:"Ob. de Fréjus", lon:6.73, lat:43.43,
+   metropoli:false, provinciaEcl:"Aix",
+   partido:"aceptante", galero:"obispo", par:false, pid:null, escudoId:"dioc-frejus",
+   refPid:"fleury", refLabel:"Antiguo obispo (1699–1715): André-Hercule de Fleury, Preceptor del Rey",
+   titular:"Joseph-Pierre de Castellane", cargo:"Obispo de Fréjus (1715–1739)",
+   emblema:{bg:"#f0ede4",fg:"#1f3a68",acc:"#e0ba54",galero:"obispo",pat:"villeroy",lema:"Armas de Rosset de Fleury (en recuerdo del Preceptor) · Sede regida por Castellane en 1722"},
+   rentas:"Unas 20.000 libras de renta sobre el litoral oriental de Provenza.",
+   nota:"En junio de 1722 la mitra pertenece a Joseph-Pierre de Castellane, elegido por mediación de André-Hercule de Fleury (preceptor de Luis XV, quien renunció en 1715).",
+   conf:"a", fuente:"Gallia Christiana; Almanach royal 1722"},
+  {id:"dioc-nantes", n:"Obispado de Nantes", corto:"Ob. de Nantes", lon:-1.55, lat:47.32,
+   metropoli:false, provinciaEcl:"Tours",
+   partido:"moderado", galero:"obispo", par:false, pid:"claude-st-georges-rouen", escudoId:"dioc-rouen",
+   titular:"Louis de La Vergne de Tressan", cargo:"Obispo de Nantes (1717–1723) y Primer Limosnero del Regente",
+   emblema:{bg:"#1f3a68",fg:"#f0ede4",acc:"#e0ba54",galero:"obispo",pat:"villeroy",lema:"Galero episcopal · Conchas de gules sobre ondas de plata de Tressan"},
+   rentas:"Unas 40.000 libras anuales sobre el gran puerto bretón del Loira.",
+   nota:"En junio de 1722 es titular efectivo de Nantes y hombre de confianza del Regente (consagró obispo a Dubois en 1720); en octubre de 1723 pasará a la sede vacante de Ruan.",
+   conf:"a", fuente:"Gallia Christiana; Almanach royal 1722"},
+  {id:"dioc-rennes", n:"Obispado de Rennes", corto:"Ob. de Rennes", lon:-1.68, lat:48.11,
+   metropoli:false, provinciaEcl:"Tours",
+   partido:"moderado", galero:"obispo", par:false, pid:null,
+   titular:"Christophe-Louis Turpin de Crissé de Sanzay", cargo:"Obispo de Rennes (1712–1723)",
+   emblema:{bg:"#1f3a68",fg:"#f0ede4",acc:"#e0ba54",galero:"obispo",pat:"lis",lema:"Armiños de Bretaña y lises de Turpin de Crissé"},
+   rentas:"Unas 22.000 libras de renta y presidencia tradicional del clero en los Estados de Bretaña.",
+   nota:"Colabora con las autoridades reales tras la Conspiración de Pontcallec y la reconstrucción de Rennes después del incendio de 1720.",
+   conf:"a", fuente:"Gallia Christiana; Almanach royal 1722"},
+  {id:"dioc-metz", n:"Principado-Obispado de Metz", corto:"Ob. de Metz", lon:6.18, lat:49.12,
+   metropoli:false, provinciaEcl:"Tréveris (sufragánea imperial bajo soberanía francesa)",
+   partido:"moderado", galero:"obispo", par:false, pid:null,
+   titular:"Henri-Charles du Cambout, Duque de Coislin", cargo:"Príncipe-Obispo de Metz (1697–1732) y Primer Limosnero del Rey · Académico Francés",
+   emblema:{bg:"#22252a",fg:"#f0ede4",acc:"#e0ba54",galero:"obispo",pat:"harcourt",lema:"Tres fajas ajedrezadas de oro y gules (Coislin) bajo galero episcopal"},
+   rentas:"Más de 100.000 libras anuales y gran autoridad en los Tres Obispados frente al Ducado de Lorena.",
+   nota:"Sobrino de Pierre de Coislin y dueño de una célebre biblioteca; pese a reservas iniciales ante la bula Unigenitus, evita la ruptura abierta con la Corona.",
+   conf:"a", fuente:"Gallia Christiana; Académie française"},
+  {id:"dioc-clermont", n:"Obispado de Clermont", corto:"Ob. de Clermont", lon:3.09, lat:45.78,
+   metropoli:false, provinciaEcl:"Bourges",
+   partido:"moderado", galero:"obispo", par:false, pid:null,
+   titular:"Jean-Baptiste Massillon", cargo:"Obispo de Clermont (1717–1742) · Predicador del Petit Carême · Académico Francés",
+   emblema:{bg:"#1f3a68",fg:"#e0ba54",acc:"#f0ede4",galero:"obispo",pat:"lis",lema:"Galero episcopal de 12 borlas verdes · Sede auvernesa de Massillon"},
+   rentas:"Unas 28.000 libras de renta en Auvernia.",
+   nota:"Antiguo oratoriano consagrado en presencia del joven Luis XV tras predicar el célebre Petit Carême en las Tullerías (1718); partidario de la paz religiosa.",
+   conf:"a", fuente:"Gallia Christiana; Académie française"},
+  {id:"dioc-mirepoix", n:"Obispado de Mirepoix", corto:"Ob. de Mirepoix", lon:1.87, lat:43.09,
+   metropoli:false, provinciaEcl:"Toulouse",
+   partido:"moderado", galero:"obispo", par:false, pid:null,
+   titular:"François-Honoré de Casaubon de Maniban", cargo:"Obispo de Mirepoix (1721–1729)",
+   emblema:{bg:"#a82a2a",fg:"#e0ba54",acc:"#f0ede4",galero:"obispo",pat:"lis",lema:"Galero episcopal verde · Antigua sede apelante de La Broue (m. 1720)"},
+   rentas:"Unas 24.000 libras anuales en el Lauragais pirenaico.",
+   nota:"Sucede al célebre jansenista Pierre de La Broue (uno de los Cuatro Obispos Apelantes de 1717, fallecido en sept. de 1720), marcando el giro hacia la moderación bajo la Regencia.",
+   conf:"a", fuente:"Gallia Christiana; Archivos del Hérault"}
 ];
 
-/* ---------- 4. MAPA DE APANAJES DE LA SANGRE (Con sus escudos de flores de lis y su Príncipe) ---------- */
+/* ---------- 4. MAPA DE APANAJES Y PATRIMONIOS DE LA SANGRE ---------- */
 const APANAJES_LIST = [
   {id:"ap-orleans", n:"Casa Real de Orleans (Gran Apanaje)", corto:"Apanaje de Orleans", lon:1.90, lat:47.90,
+   categoria:"Apanaje real (único vigente en 1722)",
    color:[126,96,192], pid:"felipe-ii-orleans", titular:"Felipe II de Orleans, Duque de Orleans y Regente del Reino",
    cargo:"Sobrino de Luis XIV, Primer Príncipe del Apanaje y Regente de Francia",
    escudo:{bg:"#1c386b",fg:"#e0ba54",acc:"#f0ede4",pat:"orleans",crown:"principe",
            blason:"De azur con tres flores de lis de oro, brisado en jefe con un lambel de tres pendientes de plata (Casa Ducal de Orleans)."},
-   dominios:"Ducados de Orleans, Chartres, Valois, Nemours y Montpensier; Condados de Blois, Dourdan, Romorantin y Gien; Principado de Joinville; Señoríos de Montargis y Beaujolais; Gobierno del Delfinado.",
+   dominios:"Ducados de Orleans, Chartres, Valois, Nemours y Montpensier; Condados de Blois, Dourdan, Romorantin y Gien; Principado de Joinville; Señoríos de Montargis y Beaujolais. (El Gobierno del Delfinado figura aparte en el Mapa 5).",
    rentas:"Más de 1.200.000 libras de renta apanajista y patrimonial, además del control supremo del Consejo de Regencia y del Palais-Royal.",
-   nota:"El mayor apanaje jamás constituido en la monarquía borbónica; su heredero es Luis de Orleans, Duque de Chartres (18 años)."},
-  {id:"ap-conde", n:"Casa de Borbón-Condé (Monsieur le Duc)", corto:"Tierras de Borbón-Condé", lon:4.85, lat:47.15,
+   nota:"El único apanaje real propiamente dicho vigente en 1722 (reverible a la Corona si se extinguiera la descendencia masculina); su heredero es Luis de Orleans, Duque de Chartres (18 años)."},
+  {id:"ap-conde", n:"Casa de Borbón-Condé (Patrimonio señorial)", corto:"Patrimonio Borbón-Condé", lon:3.33, lat:46.57,
+   categoria:"Patrimonio señorial y ducado engagiste (NO apanaje)",
    color:[56,116,188], pid:"luis-enrique-borbon", titular:"Luis Enrique de Borbón-Condé («Monsieur le Duc»)",
    cargo:"Príncipe de la Sangre, Jefe del Consejo de Regencia y Superintendente de la Educación del Rey",
    escudo:{bg:"#1c386b",fg:"#e0ba54",acc:"#c42b2b",pat:"conde",crown:"principe",
            blason:"De azur con tres flores de lis de oro, brisado en abismo con un bastón recortado de gules puesto en banda (Casa de Borbón-Condé)."},
-   dominios:"Ducados de Borbón (Moulins), Enghien (Chantilly) y Guisa; Condados de Charolais, Dammartin y Clermont-en-Beauvaisis; Gobierno perpetuo de Borgoña y Bresse.",
+   dominios:"Ducado engagiste del Borbonés (cedido en 1661 a cambio de Albret), Ducados de Enghien (Chantilly) y Guisa; Condados de Charolais, Dammartin y Clermont-en-Beauvaisis. (El Gobierno de Borgoña figura aparte en el Mapa 5).",
    rentas:"Más de 1.800.000 libras anuales tras redimir todas sus deudas y multiplicar su fortuna especulando con las acciones de John Law.",
    nota:"Principal rival dinástico de la Casa de Orleans; desde Chantilly y el Palais-Bourbon prepara su asalto al puesto de Primer Ministro."},
-  {id:"ap-conti", n:"Casa de Borbón-Conti", corto:"Tierras de Borbón-Conti", lon:3.65, lat:43.95,
+  {id:"ap-conti", n:"Casa de Borbón-Conti (Patrimonio señorial)", corto:"Patrimonio Borbón-Conti", lon:4.08, lat:44.13,
+   categoria:"Patrimonio señorial (NO apanaje)",
    color:[52,152,136], pid:"louis-armand-conti", titular:"Luis Armando II de Borbón, Príncipe de Conti",
    cargo:"Príncipe de la Sangre y Miembro del Consejo de Regencia",
    escudo:{bg:"#1c386b",fg:"#e0ba54",acc:"#c42b2b",pat:"conti",crown:"principe",
            blason:"De azur con tres flores de lis de oro, brisado con un bastón recortado de gules en abismo y una bordura de gules (Casa de Borbón-Conti)."},
-   dominios:"Principado de La Roche-sur-Yon (Poitou), Baronía de L'Isle-Adam y Pontoise (Île-de-France), Condado de Alès y Baronías de Pézenas y Bagnols (Languedoc), Gobierno del Poitou.",
+   dominios:"Principado de La Roche-sur-Yon, Baronía de L'Isle-Adam y Pontoise, Condado de Alès y Baronías de Pézenas y Bagnols. (El Gobierno del Poitou figura aparte en el Mapa 5).",
    rentas:"Unas 450.000 libras de rentas señoriales incrementadas con sacos de oro arrancados al Banco de Law antes de su quiebra.",
    nota:"Rama menor de los Condé emparentada por doble matrimonio cruzado con Monsieur le Duc."},
-  {id:"ap-maine", n:"Casa de Borbón-Maine (Legitimados)", corto:"Apanaje de Maine y Dombes", lon:4.92, lat:46.02,
+  {id:"ap-maine", n:"Casa de Borbón-Maine (Soberanía y Patrimonio)", corto:"Dombes y Patrimonio Maine", lon:4.92, lat:46.02,
+   categoria:"Principado soberano y patrimonio señorial (Legitimados)",
    color:[198,136,48], pid:"duc-du-maine", titular:"Luis Augusto de Borbón, Duque del Maine",
    cargo:"Hijo legitimado de Luis XIV y Mme de Montespan · Príncipe Soberano de Dombes",
    escudo:{bg:"#1c386b",fg:"#e0ba54",acc:"#c42b2b",pat:"maine",crown:"principe",
            blason:"De azur con tres flores de lis de oro, brisado en abismo con una barra (bastón siniestro) recortada de gules."},
-   dominios:"Principado Soberano de Dombes (Trévoux), Ducado-Paría de Aumale, Condado-Paría de Eu (Normandía), Principado de Anet, Señorío de Sceaux y Gobierno General del Languedoc (en disputa).",
+   dominios:"Principado Soberano de Dombes (Trévoux, fuera del reino), Ducado-Paría de Aumale, Condado-Paría de Eu, Principado de Anet y Señorío de Sceaux. (El Gobierno del Languedoc figura aparte en el Mapa 5).",
    rentas:"Más de 800.000 libras de renta y soberanía propia en Dombes.",
    nota:"Degradado del rango de Príncipe de la Sangre en el Lit de Justice de agosto de 1718 y encarcelado tras la Conspiración de Cellamare; vive retirado entre Sceaux y Versalles."},
-  {id:"ap-toulouse", n:"Casa de Borbón-Toulouse (Legitimados)", corto:"Apanaje de Toulouse y Penthièvre", lon:-2.40, lat:48.20,
+  {id:"ap-toulouse", n:"Casa de Borbón-Toulouse (Patrimonio señorial)", corto:"Patrimonio Toulouse", lon:-2.40, lat:48.20,
+   categoria:"Patrimonio señorial (Legitimados)",
    color:[168,128,64], pid:"comte-de-toulouse", titular:"Luis Alejandro de Borbón, Conde de Toulouse",
    cargo:"Hijo legitimado menor de Luis XIV · Gran Almirante de Francia y Gobernador de Bretaña",
    escudo:{bg:"#1c386b",fg:"#e0ba54",acc:"#c42b2b",pat:"toulouse",crown:"principe",
            blason:"De azur con tres flores de lis de oro y barra recortada de gules, puesto sobre las dos anclas cruzadas de Almirante de Francia."},
-   dominios:"Ducados-Parías de Rambouillet (Île-de-France), Penthièvre (Bretaña), Châteauvillain y Arc-en-Barrois; Gobierno General de Bretaña.",
+   dominios:"Ducados-Parías de Rambouillet, Penthièvre, Châteauvillain y Arc-en-Barrois. (El Gobierno de Bretaña figura aparte en el Mapa 5).",
    rentas:"Más de 900.000 libras anuales más los derechos de presa del Almirantazgo de Francia.",
    nota:"Por su prudencia y lealtad durante la Regencia, el Regente le conservó de por vida sus honores personales en la corte."},
   {id:"ap-corona", n:"Dominio Real Directo de la Corona", corto:"Dominio Real (Luis XV)", lon:2.13, lat:48.80,
+   categoria:"Dominio inalienable de la Corona",
    color:[176,166,144], pid:"luis-xv", titular:"Luis XV, Rey de Francia y de Navarra",
    cargo:"Rey Cristianísimo (12 años · Consagración prevista en Reims en octubre de 1722)",
    escudo:{bg:"#1c386b",fg:"#e0ba54",acc:"#b02828",pat:"lis",crown:"real",
            blason:"Partido de Francia (de azur con tres flores de lis de oro) y de Navarra (de gules con cadenas de oro en cruz, aspa y orla), timbrado de la Corona Real cerrada."},
-   dominios:"París, Versalles, Fontainebleau, Marly, Compiègne, Saint-Germain y las provincias realengas gobernadas directamente por los Intendentes y Gobernadores del Rey.",
+   dominios:"París, Versalles, Fontainebleau, Marly, Compiègne, Saint-Germain y las tierras realengas del Reino bajo administración directa de la Corona.",
    rentas:"Impuestos reales de la Talla, Capitación, Gabela de la sal y Granjas Generales del Reino.",
    nota:"Patrimonio inalienable de la Corona custodiado durante la minoría de edad por el Consejo de Regencia."}
 ];
 
 const PROV_APANAJE = {
-  "orleanais":"ap-orleans","dauphine":"ap-orleans",
-  "bourgogne":"ap-conde","bourbonnais":"ap-conde","picardie":"ap-conde",
-  "poitou":"ap-conti","languedoc":"ap-conti",
-  "dombes":"ap-maine","normandie":"ap-maine",
-  "bretagne":"ap-toulouse",
-  "ile-de-france":"ap-corona","champagne":"ap-corona","flandre":"ap-corona","artois":"ap-corona",
-  "trois-eveches":"ap-corona","alsace":"ap-corona","maine":"ap-corona","anjou":"ap-corona",
-  "touraine":"ap-corona","berry":"ap-corona","nivernais":"ap-corona","franche-comte":"ap-corona",
-  "aunis":"ap-corona","saintonge":"ap-corona","limousin":"ap-corona","marche":"ap-corona",
-  "auvergne":"ap-corona","lyonnais":"ap-corona","guyenne":"ap-corona","bearn":"ap-corona",
-  "foix":"ap-corona","roussillon":"ap-corona","provence":"ap-corona"
+  "orleanais":"ap-orleans",
+  "bourbonnais":"ap-conde",
+  "dombes":"ap-maine"
 };
 
+/* ---------- 5. MAPA DE LOS 32 GOBIERNOS PROVINCIALES Y MILITARES (JUNIO DE 1722) ---------- */
+const GOBIERNOS_TIPOS = {
+  sangre:   {n:"Príncipes de la Sangre y Legitimados", color:[118,92,168]},
+  mariscal: {n:"Mariscales de Francia",                color:[168,78,66]},
+  nobleza:  {n:"Grandes Casas (Duques, Pares y Príncipes)", color:[74,116,158]}
+};
+
+const GOBIERNOS_LIST = [
+  {id:"gob-ile-de-france", prov:"ile-de-france", n:"Gobierno de Île-de-France", corto:"Île-de-France", lon:2.62, lat:49.02,
+   tipoGob:"nobleza", escudoId:"paris", pid:"henri-louis-evreux", titular:"Henri-Louis de La Tour d'Auvergne, Conde de Évreux",
+   cargo:"Gobernador y Teniente General de Île-de-France (1719–1741) · Coronel General de la Caballería",
+   nota:"Comprende los bailiazgos en torno a París (excepto la ciudad y vizcondado de París, gobierno propio en manos del duque de Tresmes/Gesvres).",
+   conf:"a", fuente:"Almanach royal 1722; CRCV"},
+  {id:"gob-picardie", prov:"picardie", n:"Gobierno de Picardía (y Artois)", corto:"Picardía", lon:2.23, lat:49.95,
+   tipoGob:"nobleza", pid:null, titular:"Henri de Lorraine, IV Duque de Elbeuf",
+   cargo:"Gobernador y Teniente General de Picardía, Boulonnais y Artois (1692–1748)",
+   nota:"Gobierno militar de la frontera norte heredado en la casa de Lorena-Elbeuf desde 1692.",
+   conf:"a", fuente:"Almanach royal 1722; Conseil du Roi"},
+  {id:"gob-artois", prov:"artois", n:"Gobierno de Artois (unido a Picardía)", corto:"Artois", lon:2.37, lat:50.50,
+   tipoGob:"nobleza", pid:null, titular:"Henri de Lorraine, IV Duque de Elbeuf",
+   cargo:"Gobernador General de Picardía y Artois (hasta 1764)",
+   nota:"Artois conserva sus propios Estados provinciales (Pays d'États), pero hasta 1764 comparte gobernador militar con Picardía.",
+   conf:"a", fuente:"Almanach royal 1722; Historia de Artois"},
+  {id:"gob-flandre", prov:"flandre", n:"Gobierno de Flandes y Henao", corto:"Flandes", lon:3.35, lat:50.23,
+   tipoGob:"nobleza", escudoId:"douai", pid:null, titular:"Joseph-Marie de Boufflers, II Duque de Boufflers",
+   cargo:"Gobernador General de Flandes y del Henao (1711–1747; menor de edad en 1722)",
+   nota:"Heredado de su padre el célebre mariscal de Boufflers en 1711; la defensa efectiva recae en comandantes militares de plaza.",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"gob-champagne", prov:"champagne", n:"Gobierno de Champaña y Brie", corto:"Champaña", lon:4.23, lat:48.73,
+   tipoGob:"nobleza", escudoId:"soubise", pid:"hercule-meriadec-rohan", titular:"Hercule-Mériadec de Rohan, Príncipe de Soubise",
+   cargo:"Gobernador y Teniente General de Champaña y Brie (1712–1749)",
+   nota:"Cargo clave en 1722 por albergar Reims, ciudad donde Luis XV será consagrado en octubre bajo la égida de los Rohan.",
+   conf:"a", fuente:"Almanach royal 1722; Conseil du Roi"},
+  {id:"gob-trois-eveches", prov:"trois-eveches", n:"Gobierno de los Tres Obispados (Metz, Toul y Verdún)", corto:"Tres Obispados", lon:5.89, lat:49.18,
+   tipoGob:"nobleza", escudoId:"metz", pid:null, titular:"Louis de Harlay de Cély, Conde de Saillant",
+   cargo:"Gobernador General del País Mesino y Verdunesado (oct. 1712–jul. 1723)",
+   nota:"Plazas fuertes fronterizas enclavadas en el Ducado soberano de Lorena; Saillant reside y ejerce mando efectivo hasta su muerte en 1723.",
+   conf:"a", fuente:"Almanach royal 1722; Archivos de Metz"},
+  {id:"gob-alsace", prov:"alsace", n:"Gobierno General de Alsacia", corto:"Alsacia", lon:7.38, lat:48.32,
+   tipoGob:"mariscal", escudoId:"colmar", pid:null, titular:"Mariscal Nicolas Du Blé, Marqués de Huxelles",
+   cargo:"Gobernador General de Alta y Baja Alsacia y Estrasburgo (1713–1730)",
+   nota:"El mariscal de Huxelles ostenta el gobierno titular en Versalles mientras el conde Léonor-Marie Du Bourg ejerce el mando militar sobre el terreno.",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"gob-normandie", prov:"normandie", n:"Gobierno de Normandía", corto:"Normandía", lon:0.12, lat:49.16,
+   tipoGob:"nobleza", escudoId:"rouen", pid:null, titular:"Charles Ier-Frédéric de Montmorency-Luxembourg, Duque de Luxembourg",
+   cargo:"Gobernador y Teniente General de Normandía (1691–1726)",
+   nota:"Distinto de las tres generalidades fiscales de Ruan, Caen y Alençon; en 1726 le sucederá su hijo Charles II.",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"gob-bretagne", prov:"bretagne", n:"Gobierno de Bretaña", corto:"Bretaña", lon:-2.39, lat:48.07,
+   tipoGob:"sangre", escudoId:"rennes", pid:"comte-de-toulouse", titular:"Luis Alejandro de Borbón, Conde de Toulouse",
+   cargo:"Gobernador de Bretaña (1695–1737) y Gran Almirante de Francia",
+   nota:"El mando militar tras la Conspiración de Pontcallec (1720) se coordina entre Toulouse en Versalles, el mariscal de Montesquiou y el Parlamento de Rennes.",
+   conf:"a", fuente:"Almanach royal 1722; Saint-Simon"},
+  {id:"gob-maine", prov:"maine", n:"Gobierno de Maine, Perche y Laval", corto:"Maine", lon:0.11, lat:48.05,
+   tipoGob:"nobleza", pid:null, titular:"Anne-Jacques de Bullion, Marqués de Fervaques",
+   cargo:"Gobernador de Maine, Perche y Condado de Laval (1714–1745)",
+   nota:"Gobierno militar transmitido en la casa de Bullion desde principios del siglo XVIII.",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"gob-anjou", prov:"anjou", n:"Gobierno de Anjou", corto:"Anjou", lon:-0.53, lat:47.44,
+   tipoGob:"nobleza", pid:null, titular:"Louis de Lorraine, Príncipe de Lambesc",
+   cargo:"Gobernador y Teniente General de Anjou (1718–1743)",
+   nota:"Sucedió en 1718 a su abuelo Louis de Lorraine, conde de Armagnac; primo del Gran Caballerizo Carlos de Lorena.",
+   conf:"a", fuente:"Almanach royal 1722; Conseil du Roi"},
+  {id:"gob-touraine", prov:"touraine", n:"Gobierno de Turena", corto:"Turena", lon:0.77, lat:47.36,
+   tipoGob:"sangre", pid:"charles-charolais", titular:"Carlos de Borbón-Condé, Conde de Charolais",
+   cargo:"Gobernador de Turena (1720–1760)",
+   nota:"Nombrado en 1720 a la muerte del marqués de Dangeau; es el hermano menor de Monsieur le Duc.",
+   conf:"a", fuente:"Almanach royal 1722; Diario de Marais"},
+  {id:"gob-orleanais", prov:"orleanais", n:"Gobierno de Orleanesado, Blaisois y Chartrain", corto:"Orleanesado", lon:1.66, lat:48.07,
+   tipoGob:"nobleza", escudoId:"antin", pid:"antin", titular:"Louis-Antoine de Pardaillan de Gondrin, Duque de Antin",
+   cargo:"Gobernador y Teniente General de Orleanesado (1707–1736)",
+   nota:"Aunque el Ducado de Orleans es apanaje del Regente (Mapa 4), el gobierno militar provincial pertenece desde 1707 al duque de Antin.",
+   conf:"a", fuente:"Almanach royal 1722; Saint-Simon"},
+  {id:"gob-berry", prov:"berry", n:"Gobierno de Berry", corto:"Berry", lon:2.23, lat:47.03,
+   tipoGob:"nobleza", pid:null, titular:"Louis, Marqués de Arpajon",
+   cargo:"Gobernador de Berry (ago. 1715–1736) · Teniente General de los Ejércitos",
+   nota:"Adquirió el gobierno en agosto de 1715 al dimitir el duque de Noailles.",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"gob-nivernais", prov:"nivernais", n:"Gobierno de Nivernés", corto:"Nivernés", lon:3.40, lat:47.25,
+   tipoGob:"nobleza", escudoId:"nevers", pid:"philippe-jules-mancini", titular:"Philippe-Jules-François Mancini, Duque de Nevers",
+   cargo:"Gobernador del Nivernés (1707–1768)",
+   nota:"Sobrino nieto de Mazarino; en el Nivernés coincide la autoridad señorial del ducado con su cargo de gobernador.",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"gob-bourgogne", prov:"bourgogne", n:"Gobierno de Borgoña y Bresse", corto:"Borgoña", lon:4.77, lat:47.02,
+   tipoGob:"sangre", escudoId:"dijon", pid:"luis-enrique-borbon", titular:"Luis Enrique de Borbón-Condé, «Monsieur le Duc»",
+   cargo:"Gobernador de Borgoña, Bresse, Bugey, Valromey y Gex (1710–1740)",
+   nota:"Gobierno militar ejercido por los príncipes de Condé desde el siglo XVII (distinto de un apanaje real); preside las aperturas de los Estados de Borgoña.",
+   conf:"a", fuente:"Almanach royal 1722; Estados de Borgoña"},
+  {id:"gob-franche-comte", prov:"franche-comte", n:"Gobierno del Franco Condado de Borgoña", corto:"Franco Condado", lon:6.10, lat:47.18,
+   tipoGob:"mariscal", escudoId:"besancon", pid:null, titular:"Mariscal Camille d'Hostun, Duque de Tallard",
+   cargo:"Gobernador General del Franco Condado (1704–1728)",
+   nota:"Su hijo Marie-Joseph obtuvo la futura sucesión (efectiva en 1728); la provincia guarda la frontera con Suiza y Montbéliard.",
+   conf:"a", fuente:"Almanach royal 1722; Archivos de Besanzón"},
+  {id:"gob-poitou", prov:"poitou", n:"Gobierno de Poitou", corto:"Poitou", lon:-0.18, lat:46.68,
+   tipoGob:"sangre", escudoId:"ap-conti", pid:"louis-armand-conti", titular:"Luis Armando II de Borbón, Príncipe de Conti",
+   cargo:"Gobernador de Alto y Bajo Poitou (jun. 1719–1727)",
+   nota:"Cargo militar recibido bajo la Regencia en junio de 1719; independiente de sus escasos feudos propios en la provincia.",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"gob-aunis", prov:"aunis", n:"Gobierno de Aunis y La Rochelle", corto:"Aunis", lon:-0.85, lat:46.15,
+   tipoGob:"nobleza", pid:null, titular:"Louis-Jean-Baptiste de Goyon de Matignon, Conde de Gacé",
+   cargo:"Gobernador de Aunis, La Rochelle, Ré y Oléron (1710/1715–1747)",
+   nota:"Heredado por dimisión de su padre el mariscal de Matignon; custodia las islas y los arsenales atlánticos cercanos a Rochefort.",
+   conf:"a", fuente:"Almanach royal 1722; Wikimanche"},
+  {id:"gob-saintonge", prov:"saintonge", n:"Gobierno de Saintonge y Angoumois", corto:"Saintonge", lon:-0.06, lat:45.63,
+   tipoGob:"nobleza", escudoId:"uzes", pid:"jean-charles-uzes", titular:"Jean-Charles de Crussol, VII Duque de Uzès",
+   cargo:"Gobernador de Saintonge y Angoumois (1692–1739)",
+   nota:"Aunque su ducado-paría se ubica en Languedoc, su gobierno militar provincial radica entre Saintes y Angulema.",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"gob-limousin", prov:"limousin", n:"Gobierno de Lemosín", corto:"Lemosín", lon:1.27, lat:45.70,
+   tipoGob:"mariscal", pid:"duc-de-berwick", titular:"Mariscal James Fitz-James, Duque de Berwick",
+   cargo:"Gobernador de Alto y Bajo Lemosín (1707–1734)",
+   nota:"El vencedor de Almansa acumula este gobierno titular mientras actúa como comandante en jefe de Guyena.",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"gob-marche", prov:"marche", n:"Gobierno de Alta y Baja Marche", corto:"La Marche", lon:1.93, lat:46.25,
+   tipoGob:"nobleza", pid:null, titular:"Armand-Louis-François Foucault, Marqués de Saint-Germain-Beaupré",
+   cargo:"Gobernador de la Marche (c. 1711–1752)",
+   nota:"Cargo conservado de padres a hijos en la familia Foucault de Saint-Germain-Beaupré entre 1630 y 1752.",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"gob-bourbonnais", prov:"bourbonnais", n:"Gobierno del Borbonés", corto:"Borbonés", lon:3.25, lat:46.51,
+   tipoGob:"nobleza", pid:null, titular:"Charles-François de La Baume Le Blanc, Marqués de La Vallière",
+   cargo:"Gobernador del Borbonés (1698–1739; futuro duque en 1723)",
+   nota:"Ejemplo perfecto de separación jurisdiccional: el duque engagiste es Condé (Mapa 4), pero el gobernador militar es La Vallière.",
+   conf:"a", fuente:"Almanach royal 1722; Archivos del Allier"},
+  {id:"gob-auvergne", prov:"auvergne", n:"Gobierno de Auvernia", corto:"Auvernia", lon:2.84, lat:45.42,
+   tipoGob:"nobleza", escudoId:"chateau-thierry", pid:"emmanuel-theodose-bouillon", titular:"Emmanuel-Théodose de La Tour d'Auvergne, Duque de Bouillon",
+   cargo:"Gobernador de Alta y Baja Auvernia (1718–1728) · Gran Chambelán de Francia",
+   nota:"Patria ancestral de la casa de La Tour d'Auvergne; sucede en el cargo al duque de Bouillon su padre.",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"gob-lyonnais", prov:"lyonnais", n:"Gobierno de Lionesado, Forez y Beaujolais", corto:"Lionesado", lon:4.45, lat:45.61,
+   tipoGob:"mariscal", escudoId:"villeroy", pid:"villeroy", titular:"Mariscal François de Neufville, Duque de Villeroy",
+   cargo:"Gobernador del Lionesado, Forez y Beaujolais (1685–1730)",
+   nota:"Bastión familiar donde los Villeroy controlan simultáneamente el gobierno militar (el Mariscal) y el arzobispado primado (su hijo).",
+   conf:"a", fuente:"Almanach royal 1722; Saint-Simon"},
+  {id:"gob-dauphine", prov:"dauphine", n:"Gobierno del Delfinado", corto:"Delfinado", lon:5.56, lat:44.96,
+   tipoGob:"sangre", escudoId:"grenoble", pid:"luis-orleans-chartres", titular:"Luis de Orleans, Duque de Chartres",
+   cargo:"Gobernador General del Delfinado (sept. 1719–1752)",
+   nota:"Gobierno militar fronterizo frente a Saboya-Piamonte; en ausencia del gobernador, el Parlamento de Grenoble conserva prerrogativas de mando.",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"gob-guyenne", prov:"guyenne", n:"Gobierno de Guyena y Gascuña", corto:"Guyena", lon:0.33, lat:44.27,
+   tipoGob:"sangre", escudoId:"bordeaux", pid:"comte-d-eu", titular:"Luis Carlos de Borbón, Conde de Eu",
+   cargo:"Gobernador de Guyena y Gascuña (1712–1755) · Comandante en jefe: Berwick",
+   nota:"El gobierno más extenso del reino; fue otorgado al hijo segundo del duque del Maine, aunque la comandancia efectiva está confiada al mariscal de Berwick.",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"gob-bearn", prov:"bearn", n:"Gobierno de Navarra y Bearne", corto:"Navarra y Bearne", lon:-0.61, lat:43.19,
+   tipoGob:"nobleza", escudoId:"pau", pid:"antoine-gramont", titular:"Antoine V de Gramont, IV Duque de Gramont",
+   cargo:"Gobernador de Navarra y Bearne (1720–1725) · Coronel de los Guardias Francesas",
+   nota:"Llave militar de los Pirineos occidentales entre Pau, Saint-Jean-Pied-de-Port y Bayona.",
+   conf:"a", fuente:"Almanach royal 1722; Saint-Simon"},
+  {id:"gob-foix", prov:"foix", n:"Gobierno del País de Foix", corto:"País de Foix", lon:1.48, lat:42.86,
+   tipoGob:"nobleza", pid:null, titular:"Henri-Joseph de Ségur, Marqués de Ségur",
+   cargo:"Gobernador y Senescal del País de Foix, Donezan y Andorra (1704–1737)",
+   nota:"Suegro de una hija legitimada del Regente; en 1737 le sucederá su hijo Henri-François de Ségur.",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"gob-roussillon", prov:"roussillon", n:"Gobierno del Rosellón", corto:"Rosellón", lon:2.62, lat:42.70,
+   tipoGob:"nobleza", escudoId:"maintenon", pid:"noailles", titular:"Adrien-Maurice, III Duque de Noailles",
+   cargo:"Gobernador del Rosellón y Ciudadela de Perpiñán (1708–1766; en exilio desde mayo de 1722)",
+   nota:"Aunque desterrado de la corte en mayo de 1722 por oponerse a Dubois, conserva la propiedad titular de su gobierno catalán-francés.",
+   conf:"a", fuente:"Almanach royal 1722; Saint-Simon"},
+  {id:"gob-languedoc", prov:"languedoc", n:"Gobierno General del Languedoc", corto:"Languedoc", lon:3.09, lat:43.96,
+   tipoGob:"sangre", escudoId:"toulouse", pid:"duc-du-maine", titular:"Luis Augusto de Borbón, Duque del Maine",
+   cargo:"Gobernador General del Languedoc (1682–1736) · Comandante efectivo: Duque de Roquelaure",
+   nota:"El Duque del Maine retiene el título de Gobernador, mientras el mariscal-duque de Roquelaure manda sobre el terreno las Cévennes y la provincia.",
+   conf:"a", fuente:"Almanach royal 1722; Saint-Simon"},
+  {id:"gob-provence", prov:"provence", n:"Gobierno de Provenza", corto:"Provenza", lon:6.10, lat:43.88,
+   tipoGob:"mariscal", escudoId:"aix", pid:"villars", titular:"Mariscal Claude-Louis-Hector, Duque de Villars",
+   cargo:"Gobernador de Provenza y Puertos del Levante (1712–1734)",
+   nota:"Gobierno militar ejercido por el vencedor de Denain mientras el intendente Le Bret coordina el cordón sanitario de la peste (1720–1722).",
+   conf:"a", fuente:"Almanach royal 1722"}
+];
+
+/* ---------- 6. MAPA DE LAS 30 INTENDENCIAS / GENERALIDADES DE 1722 ---------- */
+const INTENDENCIA_REGIMENES = {
+  elections:  {n:"Pays d'élections (talla repartida por élus)", color:[70,114,168],
+               desc:"Generalidades del corazón del reino donde los oficiales fiscales (élus) reparten la talla bajo tutela estrecha del intendente."},
+  etats:      {n:"Pays d'États (Estados provinciales)",          color:[66,144,104],
+               desc:"Provincias que conservan sus Estados para votar el «don gratuit» anual y repartir sus propios impuestos."},
+  imposition: {n:"Pays d'imposition (fronterizos / conquistados)", color:[182,110,62],
+               desc:"Provincias integradas desde el siglo XVII donde el intendente fija y percibe directamente las contribuciones reales."}
+};
+
+const INTENDENCIAS_LIST = [
+  {id:"int-paris", provs:["ile-de-france"], n:"Generalidad de París", corto:"Gen. París", lon:2.35, lat:48.86,
+   regimen:"elections", pid:null, titular:"Armand-Roland Bignon de Blanzy", cargo:"Intendente de París (1709–1724)",
+   nota:"Cubre la capital, Versalles y el valle medio del Sena; dividida en 22 elecciones fiscales.",
+   conf:"a", fuente:"Almanach royal 1722; Archivos de París"},
+  {id:"int-soissons", provs:["ile-de-france","picardie"], n:"Generalidad de Soissons", corto:"Gen. Soissons", lon:3.32, lat:49.38,
+   regimen:"elections", pid:null, titular:"Philibert Orry", cargo:"Intendente de Soissons (1722–1726 · futuro Contralor General de 1730)",
+   nota:"Abarca el Soissonnais, Valois y Laonnois entre el norte de Île-de-France y el sur de Picardía.",
+   conf:"a", fuente:"Almanach royal 1722; Musée du Louvre"},
+  {id:"int-amiens", provs:["picardie","artois"], n:"Intendencia de Picardía y Artois (Amiens)", corto:"Int. Amiens", lon:2.30, lat:49.89,
+   regimen:"elections", pid:null, titular:"Bernard Chauvelin de Beauséjour", cargo:"Intendente de Picardía y Artois (1718–1731)",
+   nota:"Combina las elecciones de Picardía con los Estados provinciales de Artois (agregados a Amiens hasta 1754).",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"int-chalons", provs:["champagne"], n:"Generalidad de Châlons (Champaña)", corto:"Gen. Châlons", lon:4.36, lat:48.96,
+   regimen:"elections", pid:null, titular:"César-Charles de Lescalopier", cargo:"Intendente de Champaña en Châlons-sur-Marne (1720–1738)",
+   nota:"Vigila las doce elecciones de Champaña, incluyendo el abastecimiento del próximo Sacre de Reims.",
+   conf:"a", fuente:"Almanach royal 1722; Archivos de las Ardenas"},
+  {id:"int-rouen", provs:["normandie"], n:"Generalidad de Ruan", corto:"Gen. Ruan", lon:1.09, lat:49.44,
+   regimen:"elections", pid:null, titular:"Jean-Prosper Goujon de Gasville", cargo:"Intendente de Ruan (1715/1720–1733)",
+   nota:"Primera de las tres generalidades en que se divide Normandía; administra el comercio del Sena y El Havre.",
+   conf:"a", fuente:"Almanach royal 1722; Cairn"},
+  {id:"int-caen", provs:["normandie"], n:"Generalidad de Caen", corto:"Gen. Caen", lon:-0.37, lat:49.18,
+   regimen:"elections", pid:null, titular:"François Guynet d'Arthel (en transición hacia Richer d'Aube)", cargo:"Intendente de Caen (1711–1722)",
+   nota:"Administra la Baja Normandía occidental (Cotentin, Bessin); en 1722–1723 releva Guynet por Richer d'Aube.",
+   conf:"m", fuente:"Almanach royal 1722 (fecha exacta del relevo por verificar)"},
+  {id:"int-alencon", provs:["normandie","maine"], n:"Generalidad de Alençon", corto:"Gen. Alençon", lon:0.09, lat:48.43,
+   regimen:"elections", pid:null, titular:"Michel-Gervais-Robert de Pommereu", cargo:"Intendente de Alençon (ene. 1720–1726)",
+   nota:"Generalidad normando-percherona que une la Normandía central con el Perche (en el gobierno de Maine).",
+   conf:"a", fuente:"Almanach royal 1722; Perche-Gouët"},
+  {id:"int-tours", provs:["touraine","anjou","maine"], n:"Generalidad de Tours", corto:"Gen. Tours", lon:0.69, lat:47.39,
+   regimen:"elections", pid:null, titular:"René Hérault", cargo:"Intendente de Tours (nombrado 23 mar. 1722–1725 · futuro Teniente de Policía de París)",
+   nota:"Gran intendencia del Loira medio que engloba Turena, Anjou y el grueso de Maine.",
+   conf:"a", fuente:"Almanach royal 1722; SFHP"},
+  {id:"int-orleans", provs:["orleanais"], n:"Generalidad de Orleans", corto:"Gen. Orleans", lon:1.90, lat:47.90,
+   regimen:"elections", pid:null, titular:"Louis-Guillaume Jubert de Bouville", cargo:"Intendente de Orleans (feb. 1713–ago. 1731)",
+   nota:"Supervisa las rentas reales junto a los bailíos del gran apanaje ducal de Orleans.",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"int-bourges", provs:["berry"], n:"Generalidad de Bourges", corto:"Gen. Bourges", lon:2.40, lat:47.08,
+   regimen:"elections", pid:null, titular:"Jacques Barberie de Courteille", cargo:"Intendente de Berry en Bourges (1720–1728)",
+   nota:"Cubre el centro agrícola y lanero del Berry.",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"int-moulins", provs:["bourbonnais","nivernais","marche"], n:"Generalidad de Moulins", corto:"Gen. Moulins", lon:3.33, lat:46.57,
+   regimen:"elections", pid:null, titular:"Marc-Antoine Turgot de Saint-Clair", cargo:"Intendente de Moulins (1713–1723)",
+   nota:"Reúne Borbonés, Nivernés y Alta Marche (el futuro economista Turgot nacerá de su linaje).",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"int-poitiers", provs:["poitou"], n:"Generalidad de Poitiers", corto:"Gen. Poitiers", lon:0.34, lat:46.58,
+   regimen:"elections", pid:null, titular:"Jean-Baptiste Des Gallois de La Tour", cargo:"Intendente de Poitou (1716–1728)",
+   nota:"Vasta circunscripción entre el Loira atlántico y el Marais poitevin.",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"int-larochelle", provs:["aunis","saintonge"], n:"Generalidad de La Rochelle", corto:"Gen. La Rochelle", lon:-1.15, lat:46.16,
+   regimen:"elections", pid:null, titular:"Jean-Jacques Amelot de Chaillou", cargo:"Intendente de La Rochelle y de la Marina de Rochefort (1720–1726)",
+   nota:"Intendencia clave del comercio atlántico, salinas y arsenal marítimo de Rochefort (cubre Aunis y parte de Saintonge).",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"int-limoges", provs:["limousin","marche","saintonge"], n:"Generalidad de Limoges", corto:"Gen. Limoges", lon:1.26, lat:45.83,
+   regimen:"elections", pid:null, titular:"François-Victor Le Tonnelier de Breteuil", cargo:"Intendente de Limoges (mar. 1718–jul. 1723 · futuro Secretario de Guerra)",
+   nota:"Cubre Lemosín, Angoumois y Baja Marche en el oeste del Macizo Central.",
+   conf:"a", fuente:"Almanach royal 1722; Hyacinthe Rigaud"},
+  {id:"int-riom", provs:["auvergne"], n:"Generalidad de Riom (Auvernia)", corto:"Gen. Riom", lon:3.11, lat:45.89,
+   regimen:"elections", pid:null, titular:"Gilles Brunet d'Évry", cargo:"Intendente de Auvernia en Riom (1720–1723)",
+   nota:"Administra la talla en las montañas de Auvernia; en 1723 pasará a Moulins.",
+   conf:"a", fuente:"Almanach royal 1722; Archivos del Puy-de-Dôme"},
+  {id:"int-lyon", provs:["lyonnais"], n:"Generalidad de Lyon", corto:"Gen. Lyon", lon:4.83, lat:45.76,
+   regimen:"elections", pid:null, titular:"Pierre Poulletier de Nainville", cargo:"Intendente de Lyon (1717–1738)",
+   nota:"Vigila los pagos cambiarios y gremios sederos de Lyon; en 1722 inicia el gran Grenier d'abondance.",
+   conf:"a", fuente:"Almanach royal 1722; Academia de Lyon"},
+  {id:"int-grenoble", provs:["dauphine"], n:"Generalidad de Grenoble (Delfinado)", corto:"Gen. Grenoble", lon:5.72, lat:45.19,
+   regimen:"elections", pid:null, titular:"Louis Boucher d'Orsay", cargo:"Intendente del Delfinado en Grenoble (1716–1724)",
+   nota:"Provincia de antiguos Estados suspendidos en el siglo XVII, convertida fiscalmente en país de elecciones alpino.",
+   conf:"a", fuente:"Almanach royal 1722; MESHS"},
+  {id:"int-bordeaux", provs:["guyenne"], n:"Generalidad de Burdeos", corto:"Gen. Burdeos", lon:-0.57, lat:44.84,
+   regimen:"elections", pid:null, titular:"Claude Boucher", cargo:"Intendente de Burdeos (1720–1743)",
+   nota:"Tras la creación de Auch (1716), conserva Bordelés, Périgord, Agenais y Bazas.",
+   conf:"a", fuente:"Almanach royal 1722; PSL"},
+  {id:"int-montauban", provs:["guyenne"], n:"Generalidad de Montauban", corto:"Gen. Montauban", lon:1.35, lat:44.02,
+   regimen:"elections", pid:null, titular:"Louis-Basile de Bernage de Saint-Maurice", cargo:"Intendente de Montauban (1720–1725)",
+   nota:"Cubre Quercy y Rouergue en la Alta Guyena; hijo del intendente de Languedoc.",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"int-auch", provs:["guyenne","bearn"], n:"Generalidad de Auch y Pau", corto:"Int. Auch y Pau", lon:0.59, lat:43.65,
+   regimen:"etats", pid:null, titular:"Charles-Nicolas Leclerc de Lesseville", cargo:"Intendente de Auch y Bearne (1718–1731)",
+   nota:"Creada en mayo de 1716 al desmembrar Burdeos y Montauban; combina elecciones de Gascuña (Auch) con Estados de Bearne, Navarra y Bigorra.",
+   conf:"a", fuente:"Almanach royal 1722; FranceArchives"},
+  {id:"int-rennes", provs:["bretagne"], n:"Intendencia de Bretaña (Rennes)", corto:"Int. Rennes", lon:-1.68, lat:48.11,
+   regimen:"etats", pid:null, titular:"Paul-Esprit Feydeau de Brou", cargo:"Intendente de Bretaña (1716–1728)",
+   nota:"Última provincia del reino en recibir intendente permanente (1689); negocia cada dos años el don gratuit con los combativos Estados de Bretaña y reconstruye Rennes tras el incendio de 1720.",
+   conf:"a", fuente:"Almanach royal 1722; FranceArchives"},
+  {id:"int-dijon", provs:["bourgogne"], n:"Intendencia de Borgoña (Dijon)", corto:"Int. Dijon", lon:5.04, lat:47.32,
+   regimen:"etats", pid:null, titular:"Pierre Arnauld de La Briffe", cargo:"Intendente de Borgoña (1712–1740)",
+   nota:"Cubre Borgoña, Bresse, Bugey y Gex coordinándose con los Estados de Borgoña y la casa de Condé.",
+   conf:"a", fuente:"Almanach royal 1722; Cairn"},
+  {id:"int-montpellier", provs:["languedoc"], n:"Intendencia de Languedoc (Montpellier y Toulouse)", corto:"Int. Languedoc", lon:3.87, lat:43.61,
+   regimen:"etats", pid:null, titular:"Louis de Bernage de Saint-Maurice", cargo:"Intendente de Languedoc (1718–1725)",
+   nota:"Un único intendente dirige las dos generalidades financieras de Montpellier y Toulouse, tratando anualmente con los Estados de Languedoc.",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"int-aix", provs:["provence"], n:"Intendencia de Provenza (Aix)", corto:"Int. Aix", lon:5.45, lat:43.53,
+   regimen:"etats", pid:"cardin-lebret", titular:"Cardin Le Bret, Conde de Selles", cargo:"Intendente de Provenza (1704–1734) y Primer Presidente del Parlamento de Aix",
+   nota:"Caso extraordinario de acumulación de la Toga parlamentaria y la Intendencia real; en 1720–1722 dirige los socorros y cuarentenas de la Gran Peste.",
+   conf:"a", fuente:"Almanach royal 1722; Saint-Simon"},
+  {id:"int-lille", provs:["flandre"], n:"Intendencia de Flandes (Lille)", corto:"Int. Lille", lon:3.08, lat:50.52,
+   regimen:"imposition", pid:null, titular:"Antoine-François Méliand", cargo:"Intendente de Flandes Marítimo y Valón en Lille (1718–1730)",
+   nota:"Administra las ciudades fortificadas flamencas, los diques, Dunkerque y las capitulaciones fiscales tras Utrecht.",
+   conf:"a", fuente:"Almanach royal 1722; Cairn"},
+  {id:"int-valenciennes", provs:["flandre"], n:"Intendencia del Henao (Valenciennes)", corto:"Int. Valenciennes", lon:3.52, lat:50.36,
+   regimen:"imposition", pid:null, titular:"René-Louis de Voyer de Paulmy, Marqués d'Argenson", cargo:"Intendente del Henao y del País entre Sambre y Mosa (1720–1724)",
+   nota:"Hijo del difunto Guarda de los Sellos y futuro Secretario de Asuntos Exteriores (y célebre memorialista).",
+   conf:"a", fuente:"Almanach royal 1722; Cairn"},
+  {id:"int-metz", provs:["trois-eveches"], n:"Generalidad de Metz (Tres Obispados)", corto:"Gen. Metz", lon:6.18, lat:49.12,
+   regimen:"imposition", pid:null, titular:"Jean-François de Creil de Bournezeau", cargo:"Intendente de Metz y Fronteras de Champaña (1721–1754)",
+   nota:"Abastece las guarniciones de Metz, Toul, Verdún, Sarrelouis y Sedán en los confines imperiales.",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"int-strasbourg", provs:["alsace"], n:"Intendencia de Alsacia (Estrasburgo)", corto:"Int. Estrasburgo", lon:7.75, lat:48.58,
+   regimen:"imposition", pid:null, titular:"Nicolas-Prosper Bauyn d'Angervilliers", cargo:"Intendente de Alsacia (1715–1724 · futuro Secretario de Guerra)",
+   nota:"Mantiene el orden fiscal y militar en Estrasburgo y las ciudades libres alsacianas junto al cardenal de Rohan.",
+   conf:"a", fuente:"Almanach royal 1722"},
+  {id:"int-besancon", provs:["franche-comte"], n:"Intendencia del Franco Condado (Besanzón)", corto:"Int. Besanzón", lon:6.02, lat:47.24,
+   regimen:"imposition", pid:null, titular:"Charles Deschiens de La Neuville", cargo:"Intendente de Besanzón (abr. 1718–jul. 1734)",
+   nota:"Gobierna las contribuciones de una provincia fronteriza que conserva el derecho de salinas propio tras la conquista de 1674.",
+   conf:"a", fuente:"Almanach royal 1722; Archivos del Doubs"},
+  {id:"int-perpignan", provs:["roussillon","foix"], n:"Intendencia del Rosellón y País de Foix (Perpiñán)", corto:"Int. Perpiñán", lon:2.90, lat:42.70,
+   regimen:"imposition", pid:null, titular:"Jean-Baptiste-Louis Picon, Vizconde d'Andrezel", cargo:"Intendente del Rosellón, Cerdaña y País de Foix (oct. 1716–mar. 1724)",
+   nota:"Intendencia militar pirenaica que desde 1716 integra también el Condado de Foix (país de Estados) y la vigilancia fronteriza con España.",
+   conf:"a", fuente:"Almanach royal 1722"}
+];
+
 /* ---------- FUNCIONES HERÁLDICAS Y DE LÍDERES (SVG Y CANVAS) ---------- */
+const CONF_LABELS = {a:"Confirmado", m:"Probable", b:"Dudoso"};
+
+function confFuenteBox(conf, fuente){
+  if(!conf&&!fuente)return null;
+  const lbl=CONF_LABELS[conf]||conf||"";
+  return el("div",{class:"fr-src"},
+    lbl?el("span",{class:"tag"},lbl):null,
+    fuente?el("span",{},"Fuente: "+fuente):null
+  );
+}
+
 function buscarLider(pid){
   if(!pid)return {L:null,p:null};
   const L=(typeof LIBRO!=="undefined"&&LIBRO)?LIBRO.find(c=>c.escritorio_id===pid||c.id===pid):null;
@@ -478,27 +1007,30 @@ function abrirFichaLider(pid){
   if(p&&typeof openFicha==="function"){openFicha(p);return}
 }
 
-function liderCard(pid, titularFallback, cargoFallback){
+function liderCard(pid, titularFallback, cargoFallback, extraRef=null){
   const {L,p}=buscarLider(pid);
+  const ref=(extraRef&&extraRef.pid)?buscarLider(extraRef.pid):{L:null,p:null};
+  const hasRef=Boolean(extraRef&&extraRef.pid&&(ref.L||ref.p));
   const nombre=L?(L.nombre_nac||L.nombre):p?p.nombre:titularFallback;
   const sub=L?(L.titulo_nob||L.titulo||cargoFallback):p?(p.titulo||cargoFallback):cargoFallback;
   const puesto=L?(L.puesto||L.cargo||""):p?(p.situacion_1722||""):"";
   const retratoNode=L&&typeof retratoEl==="function"?retratoEl(L):(typeof bust==="function"?bust():el("span",{},"👤"));
 
-  const card=el("div",{class:"lider-card"},
+  return el("div",{class:"lider-card"},
     el("div",{class:"lider-av"},retratoNode),
     el("div",{class:"lider-body"},
       el("span",{class:"label"},"Líder / Titular en junio de 1722"),
       el("strong",{class:"lider-nm"},nombre),
       sub?el("div",{class:"note"},sub):null,
       puesto&&puesto!==sub?el("div",{class:"note"},puesto):null,
-      (L||p)?el("div",{class:"lider-actions"},
-        el("button",{class:"btn sm primary",onclick:()=>abrirFichaLider(pid)},"Abrir ficha en el Libro de Caras →"),
-        L?el("a",{class:"btn sm",href:"libro.html#"+L.id},"Ver retrato y hoja completa ↗"):null
+      hasRef?el("div",{class:"note"},extraRef.label||"Personaje relacionado en Versalles"):null,
+      (L||p||hasRef)?el("div",{class:"lider-actions"},
+        (L||p)?el("button",{class:"btn sm primary",onclick:()=>abrirFichaLider(pid)},"Abrir ficha en el Libro de Caras →"):null,
+        L?el("a",{class:"btn sm",href:"libro.html#"+L.id},"Ver retrato y hoja completa ↗"):null,
+        hasRef?el("button",{class:"btn sm",onclick:()=>abrirFichaLider(extraRef.pid)},"Ver personaje relacionado →"):null
       ):null
     )
   );
-  return card;
 }
 
 let ESCUDOS_DB = {src:{}, commons:{}, imgs:{}};
@@ -527,6 +1059,18 @@ async function loadEscudosDB(){
   }catch(e){}
 }
 
+function govEmblem(g){
+  const col=GOBIERNOS_TIPOS[g.tipoGob]?.color||[74,116,158];
+  const bg="#"+col.map(v=>Math.max(24,Math.round(v*0.58)).toString(16).padStart(2,"0")).join("");
+  return {bg, fg:"#e0ba54", acc:"#f0ede4", pat:"gob"};
+}
+
+function intEmblem(it){
+  const col=INTENDENCIA_REGIMENES[it.regimen]?.color||[70,114,168];
+  const bg="#"+col.map(v=>Math.max(24,Math.round(v*0.58)).toString(16).padStart(2,"0")).join("");
+  return {bg, fg:"#f0ede4", acc:"#e0ba54", pat:"int"};
+}
+
 function renderEscudoSVG(esc, tipoMapa="ducados", entityId=""){
   if(entityId && ESCUDOS_DB.src[entityId]){
     const wrap=el("div",{class:"escudo-svg-wrap"});
@@ -537,8 +1081,17 @@ function renderEscudoSVG(esc, tipoMapa="ducados", entityId=""){
   }
   const bg=esc.bg||"#1c386b", fg=esc.fg||"#e0ba54", acc=esc.acc||"#b02828", pat=esc.pat||"lis";
   let charges="";
-  if(pat==="lis"||pat==="orleans"||pat==="conde"||pat==="conti"||pat==="maine"||pat==="toulouse"){
-    // Tres flores de lis de Francia
+  if(tipoMapa==="gobiernos"||pat==="gob"){
+    // Bastones de mando cruzados de Gobierno Provincial
+    charges+=`<line x1="23" y1="21" x2="45" y2="43" stroke="${fg}" stroke-width="4.2" stroke-linecap="round"/>
+              <line x1="45" y1="21" x2="23" y2="43" stroke="${fg}" stroke-width="4.2" stroke-linecap="round"/>
+              <circle cx="34" cy="32" r="3.4" fill="${acc}" stroke="#222" stroke-width="0.6"/>`;
+  } else if(tipoMapa==="intendencias"||pat==="int"){
+    // Pergamino y pluma real de la Intendencia
+    charges+=`<rect x="24" y="20" width="20" height="24" rx="2" fill="${fg}" stroke="#222" stroke-width="0.7"/>
+              <path d="M28 26h12M28 31h12M28 36h8" stroke="${bg}" stroke-width="1.6"/>
+              <circle cx="40" cy="40" r="3.2" fill="${acc}"/>`;
+  } else if(pat==="lis"||pat==="orleans"||pat==="conde"||pat==="conti"||pat==="maine"||pat==="toulouse"){
     charges+=`<g fill="${fg}" stroke="#111" stroke-width="0.4">
       <path d="M24 22c0-4 2.2-6.5 2.2-6.5S28.4 18 28.4 22c2-1.8 4.4-1.2 4.4 1s-2.8 2.8-5.2 2.2l1.2 4h-5.2l1.2-4c-2.4.6-5.2 0-5.2-2.2s2.4-2.8 4.4-1z"/>
       <path d="M40 22c0-4 2.2-6.5 2.2-6.5S44.4 18 44.4 22c2-1.8 4.4-1.2 4.4 1s-2.8 2.8-5.2 2.2l1.2 4h-5.2l1.2-4c-2.4.6-5.2 0-5.2-2.2s2.4-2.8 4.4-1z"/>
@@ -549,7 +1102,6 @@ function renderEscudoSVG(esc, tipoMapa="ducados", entityId=""){
     if(pat==="conti") charges+=`<line x1="27" y1="24" x2="41" y2="38" stroke="#d42c2c" stroke-width="3.6"/><path d="M17 14h34v18c0 12-17 20-17 20S17 44 17 32z" fill="none" stroke="#d42c2c" stroke-width="3"/>`;
     if(pat==="maine"||pat==="toulouse") charges+=`<line x1="41" y1="24" x2="27" y2="38" stroke="#d42c2c" stroke-width="4" stroke-linecap="square"/>`;
   } else if(pat==="rohan"){
-    // 9 macles de oro de Rohan
     const pts=[[24,20],[34,20],[44,20],[24,30],[34,30],[44,30],[27,40],[34,40],[41,40]];
     charges+=pts.map(([x,y])=>`<polygon points="${x},${y-4} ${x+3.5},${y} ${x},${y+4} ${x-3.5},${y}" fill="none" stroke="${fg}" stroke-width="1.8"/>`).join("");
   } else if(pat==="bouillon"){
@@ -570,12 +1122,10 @@ function renderEscudoSVG(esc, tipoMapa="ducados", entityId=""){
 
   let timbre="";
   if(tipoMapa==="parlamentos"){
-    // Mortero de Primer Presidente + Balanza de la Justicia
     timbre=`<rect x="21" y="3" width="26" height="8" rx="1.5" fill="#1b1d22" stroke="#e0ba54" stroke-width="1.5"/>
             <line x1="21" y1="6" x2="47" y2="6" stroke="#e0ba54" stroke-width="1.6"/>
             <path d="M24 28h20M34 19v18M25 28l-3 7h6zM43 28l-3 7h6z" stroke="#fff" stroke-width="1.5" fill="${fg}"/>`;
   } else if(tipoMapa==="diocesis"){
-    // Galero cardenalicio (rojo) o episcopal (verde) con borlas y cruz procesional
     const gCol=esc.galero==="cardenal"?"#b8242c":"#2b7a44";
     timbre=`<line x1="34" y1="1" x2="34" y2="14" stroke="#d4af37" stroke-width="2"/>
             <line x1="29" y1="4" x2="39" y2="4" stroke="#d4af37" stroke-width="1.8"/>
@@ -584,8 +1134,10 @@ function renderEscudoSVG(esc, tipoMapa="ducados", entityId=""){
             <path d="M24 10 A10 5 0 0 1 44 10" fill="${gCol}" stroke="#222" stroke-width="0.7"/>
             <circle cx="13" cy="18" r="2.2" fill="${gCol}"/><circle cx="11" cy="24" r="2.2" fill="${gCol}"/><circle cx="15" cy="24" r="2.2" fill="${gCol}"/>
             <circle cx="55" cy="18" r="2.2" fill="${gCol}"/><circle cx="53" cy="24" r="2.2" fill="${gCol}"/><circle cx="57" cy="24" r="2.2" fill="${gCol}"/>`;
+  } else if(tipoMapa==="intendencias"){
+    timbre=`<rect x="22" y="6" width="24" height="6" rx="2" fill="#e0ba54" stroke="#3a2a0a" stroke-width="0.9"/>
+            <circle cx="34" cy="5" r="3" fill="#1c386b" stroke="#e0ba54" stroke-width="0.8"/>`;
   } else {
-    // Corona real, principesca o ducal de florones de oro
     timbre=`<path d="M20 12l2-6 6 4 6-6 6 6 6-4 2 6z" fill="#e0ba54" stroke="#3a2a0a" stroke-width="0.9"/>
             <rect x="20" y="11" width="28" height="2.8" rx="1" fill="#d4af37" stroke="#3a2a0a" stroke-width="0.7"/>`;
   }
@@ -607,7 +1159,9 @@ let FR_K=1.6;
 function drawEmblemCanvas(ctx, x, y, esc, tipoMapa, isSel, entityId=""){
   ctx.save();
   ctx.translate(x, y);
-  const sc=(isSel?1.32:1.0)*FR_K;
+  const dense=tipoMapa==="gobiernos"||tipoMapa==="intendencias"||(tipoMapa==="diocesis"&&esc?.sub);
+  const baseSc=dense?0.78:tipoMapa==="diocesis"?0.92:1.0;
+  const sc=(isSel?1.28:baseSc)*FR_K;
   ctx.scale(sc, sc);
 
   if(isSel){
@@ -619,7 +1173,7 @@ function drawEmblemCanvas(ctx, x, y, esc, tipoMapa, isSel, entityId=""){
   const wikiImg = entityId && ESCUDOS_DB.imgs[entityId];
   if(wikiImg){
     const iw=wikiImg.naturalWidth||100, ih=wikiImg.naturalHeight||115;
-    const targetH = tipoMapa==="ducados" ? 28 : 32;
+    const targetH = tipoMapa==="ducados" ? 28 : 31;
     const targetW = Math.round(targetH * (iw / ih));
     ctx.shadowColor="rgba(0,0,0,0.38)";
     ctx.shadowBlur=4;
@@ -629,7 +1183,6 @@ function drawEmblemCanvas(ctx, x, y, esc, tipoMapa, isSel, entityId=""){
     return;
   }
 
-  // Sombra y forma de escudo francés antiguo (respaldo vectorial)
   ctx.beginPath();
   ctx.moveTo(-10,-9); ctx.lineTo(10,-9); ctx.lineTo(10,2);
   ctx.bezierCurveTo(10,10, 0,14, 0,14);
@@ -638,18 +1191,22 @@ function drawEmblemCanvas(ctx, x, y, esc, tipoMapa, isSel, entityId=""){
   ctx.fillStyle=esc?.bg||"#1c386b";
   ctx.fill();
 
-  // Pieza heráldica interior en el lienzo
   const fg=esc?.fg||"#e0ba54", acc=esc?.acc||"#b02828", pat=esc?.pat||"lis";
   ctx.save();
   ctx.clip();
   ctx.fillStyle=fg; ctx.strokeStyle=fg;
-  if(tipoMapa==="parlamentos"){
-    // Balanza judicial en oro
+  if(tipoMapa==="gobiernos"||pat==="gob"){
+    ctx.lineWidth=2.4; ctx.lineCap="round";
+    ctx.beginPath(); ctx.moveTo(-6,-5); ctx.lineTo(6,7); ctx.moveTo(6,-5); ctx.lineTo(-6,7); ctx.stroke();
+  } else if(tipoMapa==="intendencias"||pat==="int"){
+    ctx.fillStyle=fg; ctx.fillRect(-5.5,-6,11,13);
+    ctx.strokeStyle=esc?.bg||"#1c386b"; ctx.lineWidth=1.4;
+    ctx.beginPath(); ctx.moveTo(-3,-2); ctx.lineTo(3,-2); ctx.moveTo(-3,1.5); ctx.lineTo(3,1.5); ctx.stroke();
+  } else if(tipoMapa==="parlamentos"){
     ctx.lineWidth=1.8;
     ctx.beginPath(); ctx.moveTo(-6,0); ctx.lineTo(6,0); ctx.moveTo(0,-5); ctx.lineTo(0,8); ctx.stroke();
     ctx.beginPath(); ctx.arc(-5,4,2.2,0,Math.PI); ctx.arc(5,4,2.2,0,Math.PI); ctx.fill();
   } else if(tipoMapa==="diocesis"){
-    // Cruz arzobispal/episcopal en el escudo
     ctx.lineWidth=2.2;
     ctx.beginPath(); ctx.moveTo(0,-7); ctx.lineTo(0,10); ctx.moveTo(-5,-2); ctx.lineTo(5,-2);
     if(esc?.galero!=="obispo"){ctx.moveTo(-4,3); ctx.lineTo(4,3);}
@@ -668,7 +1225,6 @@ function drawEmblemCanvas(ctx, x, y, esc, tipoMapa, isSel, entityId=""){
   } else if(pat==="villeroy"||pat==="richelieu"||pat==="tremoille"||pat==="villars"||pat==="larochefoucauld"){
     ctx.lineWidth=2.6; ctx.beginPath(); ctx.moveTo(-8,6); ctx.lineTo(0,-3); ctx.lineTo(8,6); ctx.stroke();
   } else {
-    // Tres lises reales + brisura si procede
     [[-4.2,-3],[4.2,-3],[0,5]].forEach(([lx,ly])=>{
       ctx.beginPath(); ctx.arc(lx,ly,2.1,0,7); ctx.fill();
     });
@@ -678,7 +1234,6 @@ function drawEmblemCanvas(ctx, x, y, esc, tipoMapa, isSel, entityId=""){
   }
   ctx.restore();
 
-  // Borde dorado del escudo
   ctx.beginPath();
   ctx.moveTo(-10,-9); ctx.lineTo(10,-9); ctx.lineTo(10,2);
   ctx.bezierCurveTo(10,10, 0,14, 0,14);
@@ -688,7 +1243,6 @@ function drawEmblemCanvas(ctx, x, y, esc, tipoMapa, isSel, entityId=""){
   ctx.lineWidth=isSel?2.2:1.6;
   ctx.stroke();
 
-  // Timbre superior según el mapa (Corona ducal/real, Mortero judicial o Galero eclesiástico)
   if(tipoMapa==="parlamentos"){
     ctx.fillStyle="#181a20"; ctx.strokeStyle="#e0ba54"; ctx.lineWidth=1.2;
     ctx.fillRect(-7,-14,14,4.5); ctx.strokeRect(-7,-14,14,4.5);
@@ -697,6 +1251,9 @@ function drawEmblemCanvas(ctx, x, y, esc, tipoMapa, isSel, entityId=""){
     ctx.fillStyle=gCol;
     ctx.beginPath(); ctx.ellipse(0,-11.5,10,2.4,0,0,7); ctx.fill();
     ctx.beginPath(); ctx.arc(-11,-4,2,0,7); ctx.arc(11,-4,2,0,7); ctx.fill();
+  } else if(tipoMapa==="intendencias"){
+    ctx.fillStyle="#e0ba54"; ctx.strokeStyle="#3a2a0a"; ctx.lineWidth=0.9;
+    ctx.fillRect(-7,-12.5,14,3.5); ctx.strokeRect(-7,-12.5,14,3.5);
   } else {
     ctx.fillStyle="#e0ba54"; ctx.strokeStyle="#3a2a0a"; ctx.lineWidth=0.9;
     ctx.beginPath();
@@ -707,7 +1264,7 @@ function drawEmblemCanvas(ctx, x, y, esc, tipoMapa, isSel, entityId=""){
   ctx.restore();
 }
 
-/* ---------- PREPROCESADO DEL MAPA DE FRANCIA EN SUS 4 DIVISIONES ---------- */
+/* ---------- PREPROCESADO DEL MAPA DE FRANCIA EN SUS 6 DIVISIONES ---------- */
 async function loadProvinces(){
   await loadEscudosDB();
   if(provState)return provState;
@@ -725,19 +1282,35 @@ async function loadProvinces(){
   const parlPts=PARLAMENTOS_LIST.map(p=>{const [fx,fy]=P(p.sede);return {fx,fy}});
   const diocPts=DIOCESIS_LIST.map(d=>{const [fx,fy]=P([d.lon,d.lat]);return {fx,fy}});
   const apanPts=APANAJES_LIST.map(a=>{const [fx,fy]=P([a.lon,a.lat]);return {fx,fy}});
+  const gobPts=GOBIERNOS_LIST.map(g=>{const [fx,fy]=P([g.lon,g.lat]);return {fx,fy,pi:provIdxBySlug[g.prov]??-1}});
+  const intPts=INTENDENCIAS_LIST.map(it=>{const [fx,fy]=P([it.lon,it.lat]);return {fx,fy}});
 
   const parlIdxById=Object.fromEntries(PARLAMENTOS_LIST.map((p,i)=>[p.id,i]));
   const apanIdxById=Object.fromEntries(APANAJES_LIST.map((a,i)=>[a.id,i]));
+  const gobIdxByProv=Object.fromEntries(GOBIERNOS_LIST.map((g,i)=>[g.prov,i]));
 
-  // Mapas de píxeles independientes para cada uno de los 4 modos
   const feudoIds=new Int16Array(w*h).fill(-1);
   const parlIds=new Int16Array(w*h).fill(-1);
   const diocIds=new Int16Array(w*h).fill(-1);
   const apanIds=new Int16Array(w*h).fill(-1);
+  const gobIds=new Int16Array(w*h).fill(-1);
+  const intIds=new Int16Array(w*h).fill(-1);
 
-  // Agrupar feudos por provincia cuando los hay; si una provincia no tiene feudo propio, asignarla al feudo más cercano
   const feudosByProv=PROV_DEF.map(()=>[]);
   feudoPts.forEach((pt,fi)=>{if(pt.pi>=0)feudosByProv[pt.pi].push(fi)});
+
+  const intsByProv=PROV_DEF.map(()=>[]);
+  INTENDENCIAS_LIST.forEach((it,ii)=>(it.provs||[]).forEach(pid=>{const pi=provIdxBySlug[pid];if(pi>=0)intsByProv[pi].push(ii)}));
+
+  const nearest=(pts,pool,x2,y)=>{
+    let best=pool[0], bestD=1e12;
+    for(let k=0;k<pool.length;k++){
+      const idx=pool[k], pt=pts[idx], dx=x2-pt.fx, dy=y-pt.fy, d2=dx*dx+dy*dy;
+      if(d2<bestD){bestD=d2;best=idx}
+    }
+    return best;
+  };
+  const allFeudos=FEUDOS.map((_,k)=>k), allDiocs=DIOCESIS_LIST.map((_,k)=>k), allInts=INTENDENCIAS_LIST.map((_,k)=>k);
 
   for(let y=0;y<h;y++){
     const row=y*w;
@@ -747,45 +1320,34 @@ async function loadProvinces(){
 
       // 1. Ducado / Señorío más cercano (priorizando los de su misma provincia histórica)
       const cand=feudosByProv[pId];
-      if(cand&&cand.length===1){
-        feudoIds[i]=cand[0];
-      } else {
-        const pool=(cand&&cand.length)?cand:FEUDOS.map((_,idx)=>idx);
-        let bestF=pool[0], bestFD=1e12;
-        for(let k=0;k<pool.length;k++){
-          const fi=pool[k], pt=feudoPts[fi], dx=x2-pt.fx, dy=y-pt.fy, d2=dx*dx+dy*dy;
-          if(d2<bestFD){bestFD=d2;bestF=fi}
-        }
-        feudoIds[i]=bestF;
-      }
+      feudoIds[i]=cand&&cand.length===1?cand[0]:nearest(feudoPts,(cand&&cand.length)?cand:allFeudos,x2,y);
 
       // 2. Parlamento soberano de esa provincia
       const pk=PROV_PARL[r.id];
       if(pk!==undefined&&parlIdxById[pk]!==undefined) parlIds[i]=parlIdxById[pk];
 
       // 3. Diócesis / Provincia eclesiástica más cercana
-      if(r.tipo==="reino"){
-        let bestDi=0, bestDD=1e12;
-        for(let k=0;k<diocPts.length;k++){
-          const pt=diocPts[k], dx=x2-pt.fx, dy=y-pt.fy, d2=dx*dx+dy*dy;
-          if(d2<bestDD){bestDD=d2;bestDi=k}
-        }
-        diocIds[i]=bestDi;
-      }
+      if(r.tipo==="reino") diocIds[i]=nearest(diocPts,allDiocs,x2,y);
 
-      // 4. Apanaje de la Sangre (según el señorío o provincia)
+      // 4. Apanaje o Patrimonio de la Sangre (separado de los gobiernos)
       const fClan=FEUDOS[feudoIds[i]]?.clan;
       const apSlug=fClan==="orleans"?"ap-orleans":fClan==="conde"?"ap-conde":fClan==="conti"?"ap-conti":
                    fClan==="maine"?"ap-maine":fClan==="toulouse"?"ap-toulouse":(PROV_APANAJE[r.id]||"ap-corona");
       apanIds[i]=apanIdxById[apSlug]??5;
+
+      // 5. Gobierno provincial / militar (1:1 con provincias del reino)
+      if(r.tipo==="reino"&&gobIdxByProv[r.id]!==undefined) gobIds[i]=gobIdxByProv[r.id];
+
+      // 6. Intendencia / Generalidad (Voronoi restringido por provincia)
+      if(r.tipo==="reino"){
+        const ic=intsByProv[pId];
+        intIds[i]=ic&&ic.length===1?ic[0]:nearest(intPts,(ic&&ic.length)?ic:allInts,x2,y);
+      }
     }
   }
 
-  // Calcular fronteras limpias de cada uno de los 4 mapas por separado
-  const feudoEdge=new Uint8Array(w*h);
-  const parlEdge=new Uint8Array(w*h);
-  const diocEdge=new Uint8Array(w*h);
-  const apanEdge=new Uint8Array(w*h);
+  const feudoEdge=new Uint8Array(w*h), parlEdge=new Uint8Array(w*h), diocEdge=new Uint8Array(w*h);
+  const apanEdge=new Uint8Array(w*h), gobEdge=new Uint8Array(w*h), intEdge=new Uint8Array(w*h);
   const coastEdge=new Uint8Array(w*h);
 
   for(let y=0;y<h-1;y++){
@@ -798,10 +1360,12 @@ async function loadProvinces(){
       if(pR>0&&parlIds[i]!==parlIds[i+1]||pD>0&&parlIds[i]!==parlIds[i+w]) parlEdge[i]=1;
       if(pR>0&&diocIds[i]!==diocIds[i+1]||pD>0&&diocIds[i]!==diocIds[i+w]) diocEdge[i]=1;
       if(pR>0&&apanIds[i]!==apanIds[i+1]||pD>0&&apanIds[i]!==apanIds[i+w]) apanEdge[i]=1;
+      if(pR>0&&gobIds[i]!==gobIds[i+1]||pD>0&&gobIds[i]!==gobIds[i+w]) gobEdge[i]=1;
+      if(pR>0&&intIds[i]!==intIds[i+1]||pD>0&&intIds[i]!==intIds[i+w]) intEdge[i]=1;
     }
   }
 
-  provState={w,h,ids,edge,coastEdge,P,feudoIds,feudoEdge,feudoPts,parlIds,parlEdge,parlPts,diocIds,diocEdge,diocPts,apanIds,apanEdge,apanPts};
+  provState={w,h,ids,edge,coastEdge,P,feudoIds,feudoEdge,feudoPts,parlIds,parlEdge,parlPts,diocIds,diocEdge,diocPts,apanIds,apanEdge,apanPts,gobIds,gobEdge,gobPts,intIds,intEdge,intPts};
   return provState;
 }
 
@@ -809,9 +1373,30 @@ function tokenRGB(name){const v=getComputedStyle(document.documentElement).getPr
 function hexRGB(hex){const m=String(hex||"").match(/^#([0-9a-f]{6})$/i);if(m){const n=parseInt(m[1],16);return [n>>16,(n>>8)&255,n&255]}return [140,120,90]}
 const mix=(a,b,t)=>a.map((v,i)=>Math.round(v*(1-t)+b[i]*t));
 
-/* ---------- RENDERIZADO TOTALMENTE SEPARADO DE LOS 4 MAPAS DE FRANCIA ---------- */
+function drawLabelSafe(ctx, text, x, y, w, h, offsetX, baseDy, isSel, placed, paper, ink){
+  ctx.textAlign="left"; ctx.textBaseline="middle";
+  const tw=ctx.measureText(text).width;
+  const fh=parseFloat(ctx.font)||12*FR_K;
+  const lx=x+offsetX+tw>w-8 ? x-offsetX-tw : x+offsetX;
+  const shifts=isSel?[baseDy]:[baseDy, baseDy-fh*1.15, baseDy+fh*1.15];
+  for(const dy of shifts){
+    const ly=Math.max(fh*0.7, Math.min(h-fh*0.7, y+dy));
+    const box={x0:lx-3, y0:ly-fh*0.58, x1:lx+tw+3, y1:ly+fh*0.58};
+    const collide=placed.some(b=>!(box.x1<b.x0||box.x0>b.x1||box.y1<b.y0||box.y0>b.y1));
+    if(isSel || !collide){
+      ctx.strokeStyle=`rgba(${paper},.93)`; ctx.lineWidth=(isSel?3.8:3.1)*FR_K;
+      ctx.strokeText(text,lx,ly);
+      ctx.fillStyle=isSel?"#8b2020":`rgb(${ink})`;
+      ctx.fillText(text,lx,ly);
+      placed.push(box);
+      return;
+    }
+  }
+}
+
+/* ---------- RENDERIZADO TOTALMENTE SEPARADO DE LOS 6 MAPAS DE FRANCIA ---------- */
 function renderProvinces(canvas){
-  const {w,h,ids,coastEdge,feudoIds,feudoEdge,feudoPts,parlIds,parlEdge,parlPts,diocIds,diocEdge,diocPts,apanIds,apanEdge,apanPts}=provState;
+  const {w,h,ids,coastEdge,feudoIds,feudoEdge,feudoPts,parlIds,parlEdge,parlPts,diocIds,diocEdge,diocPts,apanIds,apanEdge,apanPts,gobIds,gobEdge,gobPts,intIds,intEdge,intPts}=provState;
   const ctx=canvas.getContext("2d"), im=ctx.createImageData(w,h), d=im.data;
   const chip=tokenRGB("--chip"),line=tokenRGB("--line"),muted=tokenRGB("--muted"),gilt=tokenRGB("--gilt"),paper=tokenRGB("--paper"),ink=tokenRGB("--ink");
 
@@ -819,6 +1404,8 @@ function renderProvinces(canvas){
   const selParlIdx=PARLAMENTOS_LIST.findIndex(p=>p.id===selParl);
   const selDiocIdx=DIOCESIS_LIST.findIndex(x=>x.id===selDioc);
   const selApanIdx=APANAJES_LIST.findIndex(a=>a.id===selApanaje);
+  const selGobIdx=GOBIERNOS_LIST.findIndex(g=>g.id===selGob);
+  const selIntIdx=INTENDENCIAS_LIST.findIndex(it=>it.id===selInt);
 
   for(let i=0;i<w*h;i++){
     const id=ids[i];
@@ -827,7 +1414,16 @@ function renderProvinces(canvas){
     let c=paper;
 
     if(r.tipo==="extranjero"){
-      c=(x2+y)%9<2?line:paper;
+      if(r.id==="dombes"&&(capaFrancia==="ducados"||capaFrancia==="apanajes")){
+        const base=capaFrancia==="ducados"
+          ?(feudoIds[i]>=0?feudoColors[feudoIds[i]]:chip)
+          :(apanIds[i]>=0?mix(chip,APANAJES_LIST[apanIds[i]].color,.46):chip);
+        c=(x2+y)%9<2?mix(line,base,.35):base;
+        if((capaFrancia==="ducados"&&feudoIds[i]===selDucado)||(capaFrancia==="apanajes"&&apanIds[i]===selApanIdx)) c=mix(c,gilt,.50);
+        if((capaFrancia==="ducados"&&feudoEdge[i])||(capaFrancia==="apanajes"&&apanEdge[i])) c=ink;
+      } else {
+        c=(x2+y)%9<2?line:paper;
+      }
     } else if(capaFrancia==="ducados"){
       const fi=feudoIds[i];
       c=fi>=0?feudoColors[fi]:chip;
@@ -841,7 +1437,7 @@ function renderProvinces(canvas){
     } else if(capaFrancia==="diocesis"){
       const di=diocIds[i];
       const part=di>=0?DIOCESIS_PARTIDOS[DIOCESIS_LIST[di].partido]:null;
-      c=part?mix(chip,part.color,.42+(di%2)*0.08):chip;
+      c=part?mix(chip,part.color,.40+(di%3)*0.05):chip;
       if(di===selDiocIdx) c=mix(c,gilt,.52);
       if(diocEdge[i]) c=(x2+y)%7<5?ink:c;
     } else if(capaFrancia==="apanajes"){
@@ -849,6 +1445,18 @@ function renderProvinces(canvas){
       c=ai>=0?mix(chip,APANAJES_LIST[ai].color,.46):chip;
       if(ai===selApanIdx) c=mix(c,gilt,.50);
       if(apanEdge[i]) c=ink;
+    } else if(capaFrancia==="gobiernos"){
+      const gi=gobIds[i];
+      const gt=gi>=0?GOBIERNOS_TIPOS[GOBIERNOS_LIST[gi].tipoGob]:null;
+      c=gt?mix(chip,gt.color,.38+(gi%3)*0.07):chip;
+      if(gi===selGobIdx) c=mix(c,gilt,.52);
+      if(gobEdge[i]) c=ink;
+    } else if(capaFrancia==="intendencias"){
+      const ii=intIds[i];
+      const rg=ii>=0?INTENDENCIA_REGIMENES[INTENDENCIAS_LIST[ii].regimen]:null;
+      c=rg?mix(chip,rg.color,.40+(ii%3)*0.06):chip;
+      if(ii===selIntIdx) c=mix(c,gilt,.52);
+      if(intEdge[i]) c=ink;
     }
 
     if(coastEdge[i]) c=muted;
@@ -857,53 +1465,42 @@ function renderProvinces(canvas){
   ctx.putImageData(im,0,0);
 
   const fam=getComputedStyle(document.body).fontFamily;
-
-  // Dibujar únicamente los escudos/emblemas y etiquetas del mapa activo
   {const cw=ctx.canvas.clientWidth||0; FR_K=Math.min(3.2,Math.max(1.4,cw?(w/cw)*1.05:1.8));}
+
+  const paintMarkers=(items, pts, isSelFn, escFn, idFn, tipo, normPx, selPx, offPx, prioFn=()=>0)=>{
+    const order=items.map((_,idx)=>idx).sort((a,b)=>(isSelFn(a)?100:prioFn(a))-(isSelFn(b)?100:prioFn(b)));
+    // 1) Emblemas primero (no seleccionados -> seleccionado arriba)
+    order.forEach(idx=>{
+      const it=items[idx], {fx:x,fy:y}=pts[idx], isSel=isSelFn(idx);
+      drawEmblemCanvas(ctx,x,y,escFn(it),tipo,isSel,idFn(it));
+    });
+    // 2) Etiquetas evitando colisiones (priorizando seleccionado y metrópolis)
+    const placed=[];
+    const labelOrder=order.slice().reverse();
+    labelOrder.forEach(idx=>{
+      const it=items[idx], {fx:x,fy:y}=pts[idx], isSel=isSelFn(idx);
+      ctx.font=`${isSel?`700 ${(selPx*FR_K).toFixed(1)}px`:`600 ${(normPx*FR_K).toFixed(1)}px`} ${fam}`;
+      const dy=tipo==="ducados"?(idx%2===0?-5:6)*FR_K:0;
+      drawLabelSafe(ctx,it.corto,x,y,w,h,offPx*FR_K,dy,isSel,placed,paper,ink);
+    });
+  };
+
   if(capaFrancia==="ducados"){
-    FEUDOS.forEach((f,fi)=>{
-      const {fx:x,fy:y}=feudoPts[fi], isSel=fi===selDucado;
-      drawEmblemCanvas(ctx,x,y,f.escudo,"ducados",isSel,f.id);
-      ctx.font=`${isSel?`700 ${(15.5*FR_K).toFixed(1)}px`:`600 ${(13*FR_K).toFixed(1)}px`} ${fam}`;
-      ctx.textAlign="left"; ctx.textBaseline="middle";
-      const tw=ctx.measureText(f.corto).width;
-      const lx=x+16*FR_K+tw>w-8?x-16*FR_K-tw:x+16*FR_K, ly=y+(fi%2===0?-5:6)*FR_K;
-      ctx.strokeStyle=`rgba(${paper},.92)`; ctx.lineWidth=3.2*FR_K; ctx.strokeText(f.corto,lx,ly);
-      ctx.fillStyle=isSel?"#8b2020":`rgb(${ink})`; ctx.fillText(f.corto,lx,ly);
-    });
+    paintMarkers(FEUDOS, feudoPts, i=>i===selDucado, f=>f.escudo, f=>f.id, "ducados", 12.5, 15.5, 15);
   } else if(capaFrancia==="parlamentos"){
-    PARLAMENTOS_LIST.forEach((p,pi)=>{
-      const {fx:x,fy:y}=parlPts[pi], isSel=p.id===selParl;
-      drawEmblemCanvas(ctx,x,y,p.emblema,"parlamentos",isSel,p.id);
-      ctx.font=`${isSel?`700 ${(16.5*FR_K).toFixed(1)}px`:`600 ${(14.5*FR_K).toFixed(1)}px`} ${fam}`;
-      ctx.textAlign="left"; ctx.textBaseline="middle";
-      const tw=ctx.measureText(p.corto).width;
-      const lx=x+17*FR_K+tw>w-8?x-17*FR_K-tw:x+17*FR_K;
-      ctx.strokeStyle=`rgba(${paper},.94)`; ctx.lineWidth=3.6*FR_K; ctx.strokeText(p.corto,lx,y);
-      ctx.fillStyle=isSel?"#8b2020":`rgb(${ink})`; ctx.fillText(p.corto,lx,y);
-    });
+    paintMarkers(PARLAMENTOS_LIST, parlPts, i=>PARLAMENTOS_LIST[i].id===selParl, p=>p.emblema, p=>p.id, "parlamentos", 14.5, 16.5, 17);
   } else if(capaFrancia==="diocesis"){
-    DIOCESIS_LIST.forEach((dioc,di)=>{
-      const {fx:x,fy:y}=diocPts[di], isSel=dioc.id===selDioc;
-      drawEmblemCanvas(ctx,x,y,dioc.emblema,"diocesis",isSel,dioc.id);
-      ctx.font=`${isSel?`700 ${(16*FR_K).toFixed(1)}px`:`600 ${(14*FR_K).toFixed(1)}px`} ${fam}`;
-      ctx.textAlign="left"; ctx.textBaseline="middle";
-      const tw=ctx.measureText(dioc.corto).width;
-      const lx=x+17*FR_K+tw>w-8?x-17*FR_K-tw:x+17*FR_K;
-      ctx.strokeStyle=`rgba(${paper},.94)`; ctx.lineWidth=3.5*FR_K; ctx.strokeText(dioc.corto,lx,y);
-      ctx.fillStyle=isSel?"#8b2020":`rgb(${ink})`; ctx.fillText(dioc.corto,lx,y);
-    });
+    paintMarkers(
+      DIOCESIS_LIST, diocPts, i=>DIOCESIS_LIST[i].id===selDioc,
+      d=>({...d.emblema, sub:!d.metropoli}), d=>d.escudoId||d.id, "diocesis", 11.5, 15.5, 14,
+      i=>DIOCESIS_LIST[i].metropoli?2:1
+    );
   } else if(capaFrancia==="apanajes"){
-    APANAJES_LIST.forEach((ap,ai)=>{
-      const {fx:x,fy:y}=apanPts[ai], isSel=ap.id===selApanaje;
-      drawEmblemCanvas(ctx,x,y,ap.escudo,"apanajes",isSel,ap.id);
-      ctx.font=`${isSel?`700 ${(17*FR_K).toFixed(1)}px`:`600 ${(15*FR_K).toFixed(1)}px`} ${fam}`;
-      ctx.textAlign="left"; ctx.textBaseline="middle";
-      const tw=ctx.measureText(ap.corto).width;
-      const lx=x+18*FR_K+tw>w-8?x-18*FR_K-tw:x+18*FR_K;
-      ctx.strokeStyle=`rgba(${paper},.94)`; ctx.lineWidth=3.8*FR_K; ctx.strokeText(ap.corto,lx,y);
-      ctx.fillStyle=isSel?"#8b2020":`rgb(${ink})`; ctx.fillText(ap.corto,lx,y);
-    });
+    paintMarkers(APANAJES_LIST, apanPts, i=>APANAJES_LIST[i].id===selApanaje, a=>a.escudo, a=>a.id, "apanajes", 15, 17, 18);
+  } else if(capaFrancia==="gobiernos"){
+    paintMarkers(GOBIERNOS_LIST, gobPts, i=>GOBIERNOS_LIST[i].id===selGob, g=>govEmblem(g), g=>g.escudoId||g.id, "gobiernos", 11.5, 15.5, 13);
+  } else if(capaFrancia==="intendencias"){
+    paintMarkers(INTENDENCIAS_LIST, intPts, i=>INTENDENCIAS_LIST[i].id===selInt, it=>intEmblem(it), it=>it.escudoId||it.id, "intendencias", 11.5, 15.5, 13);
   }
 }
 
@@ -919,7 +1516,7 @@ function showFranciaSelection(){
         el("div",{class:"emblema-meta"},
           el("span",{class:"tag ej"},f.rango),
           el("div",{},el("b",{},"Casa señorial: "),f.casa),
-          provObj?el("div",{class:"note"},"Gobierno histórico: "+provObj.nombre):null,
+          provObj?el("div",{class:"note"},"Provincia geográfica: "+provObj.nombre):null,
           el("div",{class:"note blason-txt"},el("b",{},"Blasón histórico: "),f.escudo.blason)
         )
       ),
@@ -927,9 +1524,10 @@ function showFranciaSelection(){
       el("span",{class:"label"},"Rentas, tierras y privilegios en 1722"),
       el("p",{},f.rentas),
       el("span",{class:"label"},"Peso político en la corte de Versalles"),
-      el("p",{class:"note"},f.nota)
+      el("p",{class:"note"},f.nota),
+      confFuenteBox(f.conf, f.fuente)
     );
-    mapInfo(f.nombre, "Mapa 1 · Los Ducados y Señoríos de Francia (cada uno con su escudo heráldico real y su señor).", wrap);
+    mapInfo(f.nombre, "Mapa 1 · Los Ducados y Señoríos de Francia (feudos y casas nobiliarias, separados de los gobiernos militares).", wrap);
   } else if(capaFrancia==="parlamentos"){
     const p=PARLAMENTOS_LIST.find(x=>x.id===selParl)||PARLAMENTOS_LIST[0];
     wrap.append(
@@ -953,39 +1551,85 @@ function showFranciaSelection(){
   } else if(capaFrancia==="diocesis"){
     const d=DIOCESIS_LIST.find(x=>x.id===selDioc)||DIOCESIS_LIST[0];
     const part=DIOCESIS_PARTIDOS[d.partido];
+    const extraRef=d.refPid?{pid:d.refPid,label:d.refLabel}:null;
     wrap.append(
       el("div",{class:"emblema-header"},
-        renderEscudoSVG(d.emblema,"diocesis",d.id),
+        renderEscudoSVG(d.emblema,"diocesis",d.escudoId||d.id),
         el("div",{class:"emblema-meta"},
-          el("span",{class:"tag"},part?part.n:"Diócesis del Reino"),
-          d.par?el("span",{class:"tag ej",style:"margin-left:6px"},"Par Eclesiástico de Francia"):null,
+          el("div",{style:"display:flex;flex-wrap:wrap;gap:6px"},
+            el("span",{class:"tag"},part?part.n:"Diócesis del Reino"),
+            el("span",{class:"tag"},d.metropoli?"🏛 Sede Metropolitana (Arzobispado)":"Diócesis sufragánea"),
+            d.parSacre?el("span",{class:"tag ej"},"Par Eclesiástico del Sacre"):(d.par?el("span",{class:"tag ej"},"Par Eclesiástico de Francia"):null)
+          ),
+          d.metropoli&&d.sufraganeas?el("div",{class:"note"},el("b",{},"Diócesis sufragáneas: "),d.sufraganeas):null,
+          !d.metropoli&&d.provinciaEcl?el("div",{class:"note"},el("b",{},"Metrópoli eclesiástica: "),d.provinciaEcl):null,
           el("div",{class:"note blason-txt"},el("b",{},"Armas episcopales / cardenalicias: "),d.emblema.lema)
         )
       ),
-      liderCard(d.pid, d.titular, d.cargo),
+      liderCard(d.pid, d.titular, d.cargo, extraRef),
       el("span",{class:"label"},"Rentas y beneficios eclesiásticos"),
       el("p",{},d.rentas),
       el("span",{class:"label"},"Alineamiento ante la Bula Unigenitus y el Sacre de Reims"),
-      el("p",{class:"note"},d.nota)
+      el("p",{class:"note"},d.nota),
+      confFuenteBox(d.conf, d.fuente)
     );
-    mapInfo(d.n, "Mapa 3 · Las Diócesis y Provincias Eclesiásticas de Francia (con sus emblemas reales y prelados).", wrap);
+    mapInfo(d.n, "Mapa 3 · Las 18 Provincias Metropolitanas y Obispados clave de Francia (junio de 1722).", wrap);
   } else if(capaFrancia==="apanajes"){
     const ap=APANAJES_LIST.find(x=>x.id===selApanaje)||APANAJES_LIST[0];
     wrap.append(
       el("div",{class:"emblema-header"},
         renderEscudoSVG(ap.escudo,"apanajes",ap.id),
         el("div",{class:"emblema-meta"},
-          el("span",{class:"tag ej"},"⚜ Armas de Sangre Real"),
+          el("span",{class:"tag ej"},ap.categoria||"⚜ Armas de Sangre Real"),
           el("div",{class:"note blason-txt"},el("b",{},"Blasón y brisura: "),ap.escudo.blason)
         )
       ),
       liderCard(ap.pid, ap.titular, ap.cargo),
-      el("span",{class:"label"},"Ducados, condados y gobiernos del Apanaje"),
+      el("span",{class:"label"},"Ducados, condados y patrimonios (distintos de los gobiernos militares)"),
       el("p",{},ap.dominios),
       el("span",{class:"label"},"Rentas y peso en la Regencia"),
       el("p",{},ap.rentas+" "+ap.nota)
     );
-    mapInfo(ap.n, "Mapa 4 · Los Apanajes de la Sangre y Dominios de la Casa Real (con sus escudos de armas reales y su líder).", wrap);
+    mapInfo(ap.n, "Mapa 4 · Apanaje de Orleans, Dombes, Patrimonios señoriales de la Sangre y Dominio Real.", wrap);
+  } else if(capaFrancia==="gobiernos"){
+    const g=GOBIERNOS_LIST.find(x=>x.id===selGob)||GOBIERNOS_LIST[0];
+    const gt=GOBIERNOS_TIPOS[g.tipoGob];
+    const provObj=PROV_DEF.find(r=>r.id===g.prov);
+    wrap.append(
+      el("div",{class:"emblema-header"},
+        renderEscudoSVG(govEmblem(g),"gobiernos",g.escudoId||g.id),
+        el("div",{class:"emblema-meta"},
+          el("span",{class:"tag ej"},"⚔ Gobierno Provincial y Militar"),
+          gt?el("div",{},el("b",{},"Rango del titular: "),gt.n):null,
+          provObj?.capital?el("div",{class:"note"},el("b",{},"Plaza / capital provincial: "),provObj.capital):null
+        )
+      ),
+      liderCard(g.pid, g.titular, g.cargo),
+      el("span",{class:"label"},"Jurisdicción militar y situación en junio de 1722"),
+      el("p",{},g.nota),
+      el("p",{class:"note"},"El gobierno militar es un cargo regio honorífico o estratégico, distinto de la administración fiscal del Intendente (Mapa 6) y de los señoríos feudales o apanajes (Mapas 1 y 4)."),
+      confFuenteBox(g.conf, g.fuente)
+    );
+    mapInfo(g.n, "Mapa 5 · Los 32 Gobiernos Provinciales y Militares de Francia en junio de 1722.", wrap);
+  } else if(capaFrancia==="intendencias"){
+    const it=INTENDENCIAS_LIST.find(x=>x.id===selInt)||INTENDENCIAS_LIST[0];
+    const rg=INTENDENCIA_REGIMENES[it.regimen];
+    const provNames=(it.provs||[]).map(pid=>PROV_DEF.find(r=>r.id===pid)?.nombre||pid).join(", ");
+    wrap.append(
+      el("div",{class:"emblema-header"},
+        renderEscudoSVG(intEmblem(it),"intendencias",it.escudoId||it.id),
+        el("div",{class:"emblema-meta"},
+          el("span",{class:"tag"},rg?rg.n:"Generalidad del Reino"),
+          provNames?el("div",{class:"note"},el("b",{},"Ámbito provincial aproximado: "),provNames):null,
+          rg?el("div",{class:"note"},rg.desc):null
+        )
+      ),
+      liderCard(it.pid, it.titular, it.cargo),
+      el("span",{class:"label"},"Administración de Justicia, Policía y Hacienda en 1722"),
+      el("p",{},it.nota),
+      confFuenteBox(it.conf, it.fuente)
+    );
+    mapInfo(it.n, "Mapa 6 · Las Intendencias y Generalidades de Francia en 1722 (Pays d'élections, d'États y d'imposition).", wrap);
   }
 }
 
@@ -997,23 +1641,33 @@ function renderFranciaLegend(legBox, selDrop){
       el("span",{},"🛡 Cada ducado, condado y marquesado muestra su escudo heráldico"),
       el("span",{},"⋯ Frontera señorial · Clic en un escudo o territorio para ver su líder")
     );
-    selDrop.append(el("option",{value:""},"Ir a un Ducado o Señorío (30)…"),
+    selDrop.append(el("option",{value:""},`Ir a un Ducado o Señorío (${FEUDOS.length})…`),
       ...FEUDOS.map((f,i)=>el("option",{value:String(i),selected:i===selDucado},f.nombre+" — "+f.titular)));
   } else if(capaFrancia==="parlamentos"){
     PARLAMENTOS_LIST.slice(0,7).forEach(p=>
       legBox.append(el("span",{},el("i",{class:"dot",style:`background:rgb(${p.color})`}),p.corto)));
-    selDrop.append(el("option",{value:""},"Ir a un Parlamento (13)…"),
+    selDrop.append(el("option",{value:""},`Ir a un Parlamento (${PARLAMENTOS_LIST.length})…`),
       ...PARLAMENTOS_LIST.map(p=>el("option",{value:p.id,selected:p.id===selParl},p.n+" — "+p.titular)));
   } else if(capaFrancia==="diocesis"){
     Object.values(DIOCESIS_PARTIDOS).forEach(d=>
       legBox.append(el("span",{},el("i",{class:"dot",style:`background:rgb(${d.color})`}),d.n)));
-    selDrop.append(el("option",{value:""},"Ir a una Diócesis o Arzobispado (14)…"),
-      ...DIOCESIS_LIST.map(d=>el("option",{value:d.id,selected:d.id===selDioc},d.n+" — "+d.titular)));
+    selDrop.append(el("option",{value:""},`Ir a una Diócesis o Arzobispado (${DIOCESIS_LIST.length})…`),
+      ...DIOCESIS_LIST.map(d=>el("option",{value:d.id,selected:d.id===selDioc},(d.metropoli?"[Metr.] ":"")+d.n+" — "+d.titular)));
   } else if(capaFrancia==="apanajes"){
     APANAJES_LIST.forEach(a=>
       legBox.append(el("span",{},el("i",{class:"dot",style:`background:rgb(${a.color})`}),a.corto)));
-    selDrop.append(el("option",{value:""},"Ir a un Apanaje de la Sangre (6)…"),
+    selDrop.append(el("option",{value:""},`Ir a un Apanaje o Patrimonio (${APANAJES_LIST.length})…`),
       ...APANAJES_LIST.map(a=>el("option",{value:a.id,selected:a.id===selApanaje},a.n+" — "+a.titular)));
+  } else if(capaFrancia==="gobiernos"){
+    Object.values(GOBIERNOS_TIPOS).forEach(gt=>
+      legBox.append(el("span",{},el("i",{class:"dot",style:`background:rgb(${gt.color})`}),gt.n)));
+    selDrop.append(el("option",{value:""},`Ir a un Gobierno Militar (${GOBIERNOS_LIST.length})…`),
+      ...GOBIERNOS_LIST.map(g=>el("option",{value:g.id,selected:g.id===selGob},g.n+" — "+g.titular)));
+  } else if(capaFrancia==="intendencias"){
+    Object.values(INTENDENCIA_REGIMENES).forEach(rg=>
+      legBox.append(el("span",{},el("i",{class:"dot",style:`background:rgb(${rg.color})`}),rg.n)));
+    selDrop.append(el("option",{value:""},`Ir a una Intendencia (${INTENDENCIAS_LIST.length})…`),
+      ...INTENDENCIAS_LIST.map(it=>el("option",{value:it.id,selected:it.id===selInt},it.n+" — "+it.titular)));
   }
 }
 
@@ -1029,6 +1683,12 @@ function provInfo(i,fIdx=-1){
       selParl=PROV_PARL[r.id];
     } else if(capaFrancia==="apanajes"&&PROV_APANAJE[r.id]){
       selApanaje=PROV_APANAJE[r.id];
+    } else if(capaFrancia==="gobiernos"){
+      const g=GOBIERNOS_LIST.find(x=>x.prov===r.id);
+      if(g) selGob=g.id;
+    } else if(capaFrancia==="intendencias"){
+      const it=INTENDENCIAS_LIST.find(x=>(x.provs||[]).includes(r.id));
+      if(it) selInt=it.id;
     }
   }
   const cv=document.querySelector("#map-box canvas");
@@ -1037,12 +1697,12 @@ function provInfo(i,fIdx=-1){
 }
 
 async function drawProvinces(box){
-  mapInfo("Reino de Francia","Cargando los 4 mapas separados del Reino de Francia…");
+  mapInfo("Reino de Francia","Cargando los 6 mapas separados del Reino de Francia…");
   try{await loadProvinces()}catch(e){mapInfo("Reino de Francia","No se pudo cargar el mapa de Francia.");return}
   const {w,h}=provState;
 
   const tb=el("div",{class:"map-toolbar"});
-  const cBar=el("div",{class:"sectores-bar fr-tabs",role:"group","aria-label":"Los 4 mapas separados de Francia"});
+  const cBar=el("div",{class:"sectores-bar fr-tabs",role:"group","aria-label":"Los 6 mapas separados de Francia"});
   const legBox=el("div",{class:"leyenda-map"});
   const selDrop=el("select",{id:"francia-entity-sel","aria-label":"Seleccionar territorio en el mapa activo"});
   const canvas=el("canvas",{width:w,height:h,role:"img","aria-label":"Mapa de Francia en junio de 1722",style:"display:block;width:100%;height:auto;cursor:pointer"});
@@ -1065,6 +1725,8 @@ async function drawProvinces(box){
     else if(capaFrancia==="parlamentos") selParl=val;
     else if(capaFrancia==="diocesis") selDioc=val;
     else if(capaFrancia==="apanajes") selApanaje=val;
+    else if(capaFrancia==="gobiernos") selGob=val;
+    else if(capaFrancia==="intendencias") selInt=val;
     renderProvinces(canvas);
     showFranciaSelection();
   };
@@ -1073,44 +1735,27 @@ async function drawProvinces(box){
   renderFranciaLegend(legBox,selDrop);
   box.append(tb,legBox,canvas);
 
-  canvas.addEventListener("click",e=>{
-    const r=canvas.getBoundingClientRect();
-    const x=Math.floor((e.clientX-r.left)*w/r.width), y=Math.floor((e.clientY-r.top)*h/r.height);
-    const idx=y*w+x;
+  const clickCfg={
+    ducados:      {pts:()=>provState.feudoPts, ids:()=>provState.feudoIds, r:28, set:idx=>{selDucado=idx; return String(idx)}},
+    parlamentos:  {pts:()=>provState.parlPts,  ids:()=>provState.parlIds,  r:30, set:idx=>(selParl=PARLAMENTOS_LIST[idx].id)},
+    diocesis:     {pts:()=>provState.diocPts,  ids:()=>provState.diocIds,  r:26, set:idx=>(selDioc=DIOCESIS_LIST[idx].id)},
+    apanajes:     {pts:()=>provState.apanPts,  ids:()=>provState.apanIds,  r:32, set:idx=>(selApanaje=APANAJES_LIST[idx].id)},
+    gobiernos:    {pts:()=>provState.gobPts,   ids:()=>provState.gobIds,   r:26, set:idx=>(selGob=GOBIERNOS_LIST[idx].id)},
+    intendencias: {pts:()=>provState.intPts,   ids:()=>provState.intIds,   r:26, set:idx=>(selInt=INTENDENCIAS_LIST[idx].id)}
+  };
 
-    if(capaFrancia==="ducados"){
-      let bestFi=-1, bestD=(28*FR_K)*(28*FR_K);
-      provState.feudoPts.forEach((pt,fi)=>{
-        const dx=x-pt.fx, dy=y-pt.fy, d2=dx*dx+dy*dy;
-        if(d2<bestD){bestD=d2;bestFi=fi}
-      });
-      if(bestFi<0&&provState.feudoIds[idx]>=0) bestFi=provState.feudoIds[idx];
-      if(bestFi>=0){selDucado=bestFi; selDrop.value=String(bestFi); renderProvinces(canvas); showFranciaSelection();}
-    } else if(capaFrancia==="parlamentos"){
-      let bestPi=-1, bestD=(30*FR_K)*(30*FR_K);
-      provState.parlPts.forEach((pt,pi)=>{
-        const dx=x-pt.fx, dy=y-pt.fy, d2=dx*dx+dy*dy;
-        if(d2<bestD){bestD=d2;bestPi=pi}
-      });
-      if(bestPi<0&&provState.parlIds[idx]>=0) bestPi=provState.parlIds[idx];
-      if(bestPi>=0){selParl=PARLAMENTOS_LIST[bestPi].id; selDrop.value=selParl; renderProvinces(canvas); showFranciaSelection();}
-    } else if(capaFrancia==="diocesis"){
-      let bestDi=-1, bestD=(30*FR_K)*(30*FR_K);
-      provState.diocPts.forEach((pt,di)=>{
-        const dx=x-pt.fx, dy=y-pt.fy, d2=dx*dx+dy*dy;
-        if(d2<bestD){bestD=d2;bestDi=di}
-      });
-      if(bestDi<0&&provState.diocIds[idx]>=0) bestDi=provState.diocIds[idx];
-      if(bestDi>=0){selDioc=DIOCESIS_LIST[bestDi].id; selDrop.value=selDioc; renderProvinces(canvas); showFranciaSelection();}
-    } else if(capaFrancia==="apanajes"){
-      let bestAi=-1, bestD=32*32;
-      provState.apanPts.forEach((pt,ai)=>{
-        const dx=x-pt.fx, dy=y-pt.fy, d2=dx*dx+dy*dy;
-        if(d2<bestD){bestD=d2;bestAi=ai}
-      });
-      if(bestAi<0&&provState.apanIds[idx]>=0) bestAi=provState.apanIds[idx];
-      if(bestAi>=0){selApanaje=APANAJES_LIST[bestAi].id; selDrop.value=selApanaje; renderProvinces(canvas); showFranciaSelection();}
-    }
+  canvas.addEventListener("click",e=>{
+    const cfg=clickCfg[capaFrancia]; if(!cfg)return;
+    const rect=canvas.getBoundingClientRect();
+    const x=Math.floor((e.clientX-rect.left)*w/rect.width), y=Math.floor((e.clientY-rect.top)*h/rect.height);
+    const idx=y*w+x;
+    let best=-1, bestD=(cfg.r*FR_K)*(cfg.r*FR_K);
+    cfg.pts().forEach((pt,k)=>{
+      const dx=x-pt.fx, dy=y-pt.fy, d2=dx*dx+dy*dy;
+      if(d2<bestD){bestD=d2;best=k}
+    });
+    if(best<0&&cfg.ids()[idx]>=0) best=cfg.ids()[idx];
+    if(best>=0){selDrop.value=cfg.set(best); renderProvinces(canvas); showFranciaSelection();}
   });
 
   renderProvinces(canvas);
