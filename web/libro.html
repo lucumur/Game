@@ -147,6 +147,16 @@ button.sim-pill:focus-visible,.sim-open:focus-visible{outline:2px solid var(--ro
 .sim-personas .cname{font-size:13px;overflow-wrap:anywhere}
 .sim-new{margin-top:22px;padding:14px;background:var(--paper);border:1px solid var(--line);border-radius:6px;display:grid;gap:10px}
 .sim-new .row input{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);min-width:0;flex:1 1 160px}
+.ap-dd{display:grid;gap:2px}
+.ap-line{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px}
+.ap-nom{font-style:italic}
+.ap-nom.vig{color:var(--gold);font-weight:600}
+.ap-nom.fut{color:var(--muted)}
+.ap-tag{font:10px var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:1px 5px;border-radius:3px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.ap-tag.vig{border-color:var(--gold);color:var(--gold)}
+.ap-tag.fut{border-style:dashed;color:var(--royal);border-color:color-mix(in srgb,var(--royal) 45%,transparent)}
+.ap-tag.conf{opacity:.8}
+.ap-nota{font-size:13px;color:var(--muted);line-height:1.35}
 </style>
 
 <div class="wrap">
@@ -281,7 +291,7 @@ function render(){
   fac.forEach(f=>{const b=document.createElement('button');b.className='chip';b.textContent=f;b.setAttribute('aria-pressed',f===filtro);b.onclick=()=>{filtro=f;render()};$('chips').append(b)});
   const t=q.toLowerCase();
   const resDe=c=>Array.isArray(c.residencia)?c.residencia:c.residencia?[c.residencia]:[];
-  const vis=chars.filter(c=>(filtro==='Todas'||c.faccion===filtro)&&(!res||resDe(c).includes(res))&&(!fsim||(c.simbolos||[]).includes(fsim))&&(!t||[c.nombre,c.nombre_nac,(c.apodos||[]).join(' '),c.titulo_nob,c.puesto].join(' ').toLowerCase().includes(t)));
+  const vis=chars.filter(c=>(filtro==='Todas'||c.faccion===filtro)&&(!res||resDe(c).includes(res))&&(!fsim||(c.simbolos||[]).includes(fsim))&&(!t||[c.nombre,c.nombre_nac,(c.apodos||[]).join(' '),(c.apelaciones||[]).map(a=>a.texto).join(' '),c.titulo_nob,c.puesto].join(' ').toLowerCase().includes(t)));
   if(orden){const k=KEY[orden];vis.sort((a,b)=>k(b)-k(a)||(a.orden||0)-(b.orden||0))}
   const conR=chars.filter(c=>RET[c.id]).length;
   $('count').textContent=chars.length?`${vis.length} de ${chars.length} personajes · ${conR} con retrato`:'';
@@ -410,6 +420,22 @@ function ficha(){
   $('fsims').textContent='';const fsr=simRow(c,true);if(fsr)$('fsims').append(...fsr.childNodes);
   $('fdata').textContent='';
   SECC.forEach(([t,fs],idx)=>{const vs=fs.filter(([k])=>c[k]&&c[k]!=='—');const hasR=idx===0&&(c.rangos||[]).length;const rs=Array.isArray(c.residencia)?c.residencia:c.residencia?[c.residencia]:[];const hasRes=idx===3&&rs.length;if(!vs.length&&!hasR&&!hasRes)return;const dl=head(t);if(hasR)add(dl,'Rango',rangosLibro(c.rangos));if(hasRes)add(dl,'Residencia',rs.map(r=>RES_FULL[r]||r).join(' · '));vs.forEach(([k,l])=>add(dl,l,k==='edad'?c[k]+' años':c[k]))});
+  if(c.apelaciones&&c.apelaciones.length){
+    const dl=head('Apelaciones','cronología · incluye futuras');
+    c.apelaciones.forEach(a=>{
+      const box=document.createElement('div');box.className='ap-dd';
+      const line=document.createElement('div');line.className='ap-line';
+      const nom=document.createElement('span');nom.className='ap-nom'+(a.estado==='vigente'?' vig':a.estado==='futura'?' fut':'');
+      nom.textContent='«'+a.texto+'»';
+      line.append(nom);
+      if(a.estado==='vigente'){const tg=document.createElement('span');tg.className='ap-tag vig';tg.textContent='1722';line.append(tg)}
+      else if(a.estado==='futura'){const tg=document.createElement('span');tg.className='ap-tag fut';tg.textContent='futura';line.append(tg)}
+      if(a.conf&&a.conf!=='confirmado'){const cf=document.createElement('span');cf.className='ap-tag conf';cf.textContent=a.conf;cf.title='Nivel de confianza histórica: '+a.conf;line.append(cf)}
+      box.append(line);
+      if(a.nota){const nt=document.createElement('div');nt.className='ap-nota';nt.textContent=a.nota;box.append(nt)}
+      add(dl,a.fecha||'—',box);
+    });
+  }
   if(c.innatos){const dl=head('Innatos','interpretación');INN.forEach(([k,l])=>c.innatos[k]&&add(dl,l,c.innatos[k]))}
   if(c.habilidades){const dl=head('Habilidades','0–10 · interpretación · pasar cursor para ver nivel');const h3=dl.previousElementSibling;const gb=document.createElement('button');gb.className='guia-btn';gb.type='button';gb.textContent='? Guía 0–10';gb.onclick=()=>abrirGuia('erudicion');h3.append(gb);HAB.forEach(([k,l])=>{const n=+c.habilidades[k]||0;const esc=(HAB_ESCALA[k]||[])[n]||'';const w=document.createElement('div');w.className='bar'+(n>=6?' elite':'');if(esc)w.title=n+': '+esc;w.setAttribute('aria-label',l+': '+n+' de 10'+(esc?' — '+esc:''));const f=document.createElement('i');f.style.width=n*10+'%';const s=document.createElement('b');s.textContent=n;w.append(f,s);add(dl,l,w)})}
   if(c.rasgos&&Object.keys(c.rasgos).length){const dl=head('Rasgos','1–5 · los demás, neutros');const rd=c.rasgos_doc||[];

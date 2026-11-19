@@ -121,6 +121,36 @@
       "rey",
       "principe-sangre",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1710–1712",
+        "texto": "duc d'Anjou",
+        "estado": "anterior",
+        "nota": "Desde su nacimiento",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1712–1715",
+        "texto": "Monsieur le Dauphin",
+        "estado": "anterior",
+        "nota": "Al morir su padre y su hermano mayor",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1715–1774",
+        "texto": "le Roi",
+        "estado": "vigente",
+        "nota": "A la muerte de Luis XIV (01/09/1715)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1744",
+        "texto": "Louis le Bien-Aimé",
+        "estado": "futura",
+        "nota": "Aclamado tras sobrevivir a su enfermedad en Metz",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -225,6 +255,36 @@
       "dama-corte",
       "dama-alianza",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1718–1722",
+        "texto": "la infanta Mariana Victoria",
+        "estado": "anterior",
+        "nota": "Infanta de España desde su nacimiento",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "03/1722–1725",
+        "texto": "l'Infante-Reine",
+        "estado": "vigente",
+        "nota": "En Francia como prometida de Luis XV (hasta su devolución en 1725)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1729–1750",
+        "texto": "princesa del Brasil",
+        "estado": "futura",
+        "nota": "Al casarse con José de Braganza",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1750–1777",
+        "texto": "reina de Portugal",
+        "estado": "futura",
+        "nota": "Al ascender José I al trono portugués",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -384,6 +444,29 @@
       "ministro",
       "cortesano",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1674–1701",
+        "texto": "Monsieur le duc de Chartres",
+        "estado": "anterior",
+        "nota": "Título de cortesía en vida de su padre (Monsieur)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1701–1723",
+        "texto": "Monsieur le duc d'Orléans",
+        "estado": "vigente",
+        "nota": "Al suceder a Felipe I de Orleans (†09/06/1701)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1715–1723",
+        "texto": "le Régent",
+        "estado": "vigente",
+        "nota": "Regente del reino durante la minoría de Luis XV (02/09/1715–02/1723)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -505,6 +588,36 @@
       "dama-corte",
       "dama-alianza",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1681–1692",
+        "texto": "Mademoiselle de Blois",
+        "estado": "anterior",
+        "nota": "Al ser legitimada por Luis XIV en noviembre de 1681",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1692–1701",
+        "texto": "Madame la duchesse de Chartres",
+        "estado": "anterior",
+        "nota": "Al casarse con Felipe de Orleans (18/02/1692)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1701–1723",
+        "texto": "Madame la duchesse d'Orléans",
+        "estado": "vigente",
+        "nota": "Al suceder su esposo como duque de Orleans",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1723–1749",
+        "texto": "Madame la duchesse d'Orléans douairière",
+        "estado": "futura",
+        "nota": "Al enviudar del Regente (02/12/1723)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -661,6 +774,29 @@
       "dama-corte",
       "dama-alianza",
       "ile-de-france"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1652",
+        "texto": "Liselotte",
+        "estado": "vigente",
+        "nota": "Hipocorístico familiar desde la infancia en el Palatinado",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1671–1722",
+        "texto": "Madame",
+        "estado": "vigente",
+        "nota": "Al casarse con Monsieur, hermano de Luis XIV (16/11/1671)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1671–1722",
+        "texto": "Madame Palatine",
+        "estado": "vigente",
+        "nota": "Uso cortesano e histórico por su origen palatino",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -795,6 +931,29 @@
       "principe-sangre",
       "cortesano",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1703–1723",
+        "texto": "Monsieur le duc de Chartres",
+        "estado": "vigente",
+        "nota": "Desde su nacimiento como heredero de Orleans",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1723–1752",
+        "texto": "Monsieur le duc d'Orléans",
+        "estado": "futura",
+        "nota": "Al morir el Regente (02/12/1723)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "c. 1730–1752",
+        "texto": "Louis le Pieux",
+        "estado": "futura",
+        "nota": "Por su retiro devoto (especialmente en Santa Genoveva desde 1742)",
+        "conf": "probable"
+      }
     ]
   },
   {
@@ -937,6 +1096,36 @@
       "ministro",
       "cortesano",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "c. 1687–1720",
+        "texto": "l'abbé Dubois",
+        "estado": "anterior",
+        "nota": "Desde su entrada al servicio de Orleans; aún usado familiarmente en 1722",
+        "conf": "probable"
+      },
+      {
+        "fecha": "1720–1721",
+        "texto": "Monsieur de Cambrai",
+        "estado": "anterior",
+        "nota": "Al ser consagrado arzobispo de Cambrai (06/1720)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1721–1723",
+        "texto": "le Cardinal",
+        "estado": "vigente",
+        "nota": "Elevado al cardenalato el 16/07/1721 (le cardinal Dubois)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "08/1722–1723",
+        "texto": "Monsieur le Premier Ministre",
+        "estado": "futura",
+        "nota": "Nombrado primer ministro el 22/08/1722",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -1074,6 +1263,29 @@
       "obispo",
       "casa-rey",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "c. 1675–1698",
+        "texto": "l'abbé de Fleury",
+        "estado": "anterior",
+        "nota": "Como limosnero de la reina y del rey antes del episcopado",
+        "conf": "probable"
+      },
+      {
+        "fecha": "1698–1726",
+        "texto": "Monsieur de Fréjus",
+        "estado": "vigente",
+        "nota": "Obispo de Fréjus (1698–1715); conserva el trato como antiguo obispo en 1722",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1726–1743",
+        "texto": "le cardinal de Fleury",
+        "estado": "futura",
+        "nota": "Creado cardenal en septiembre de 1726",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -1209,6 +1421,29 @@
       "casa-rey",
       "gobernador",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "c. 1660",
+        "texto": "le Charmant",
+        "estado": "vigente",
+        "nota": "Apodo galante de su juventud en la corte de Luis XIV",
+        "conf": "probable"
+      },
+      {
+        "fecha": "1685–1730",
+        "texto": "le duc de Villeroy",
+        "estado": "vigente",
+        "nota": "Sucede a su padre como II duque de Villeroy",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1693–1730",
+        "texto": "le maréchal de Villeroy",
+        "estado": "vigente",
+        "nota": "Creado mariscal de Francia (27/03/1693)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -1327,6 +1562,29 @@
       "par",
       "casa-rey",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1663–1695",
+        "texto": "le marquis de Charost",
+        "estado": "anterior",
+        "nota": "Antes de suceder en el ducado de Charost",
+        "conf": "probable"
+      },
+      {
+        "fecha": "1695–1747",
+        "texto": "le duc de Charost",
+        "estado": "vigente",
+        "nota": "II duque de Charost (1695)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "08/1722–1723",
+        "texto": "Monsieur le Gouverneur",
+        "estado": "futura",
+        "nota": "Gobernador de Luis XV tras el arresto de Villeroy (agosto de 1722)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -1454,6 +1712,29 @@
       "casa-rey",
       "dama-corte",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1654–1671",
+        "texto": "Mademoiselle de La Motte-Houdancourt",
+        "estado": "anterior",
+        "nota": "Nombre de soltera en la corte",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1671–1744",
+        "texto": "Madame de Ventadour",
+        "estado": "vigente",
+        "nota": "Al casarse con Louis-Charles de Lévis, duque de Ventadour (14/03/1671)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "c. 1712–1722",
+        "texto": "Maman Doudour",
+        "estado": "vigente",
+        "nota": "Apodo afectuoso con que la llamaba Luis XV niño (aya desde 1709)",
+        "conf": "probable"
+      }
     ]
   },
   {
@@ -1591,6 +1872,22 @@
       "ministro",
       "cortesano",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1692–1710",
+        "texto": "Monsieur le duc d'Enghien",
+        "estado": "anterior",
+        "nota": "Título de cortesía en vida de su abuelo y su padre",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1710–1740",
+        "texto": "Monsieur le Duc",
+        "estado": "vigente",
+        "nota": "Al suceder a su padre Luis III (†04/03/1710) como cabeza de la casa de Condé",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -1737,6 +2034,22 @@
       "dama-corte",
       "favorita",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1698–1713",
+        "texto": "Mademoiselle de Pléneuf",
+        "estado": "anterior",
+        "nota": "Nombre de soltera",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1713–1727",
+        "texto": "Madame de Prie",
+        "estado": "vigente",
+        "nota": "Al casarse con Louis, marqués de Prie (1713)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -1875,6 +2188,22 @@
       "dama-corte",
       "dama-alianza",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1673–1685",
+        "texto": "Mademoiselle de Nantes",
+        "estado": "anterior",
+        "nota": "Al ser legitimada por Luis XIV en diciembre de 1673",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1685–1743",
+        "texto": "Madame la Duchesse",
+        "estado": "vigente",
+        "nota": "Al casarse con Luis III de Condé (1685); conservó el estilo tras enviudar en 1710",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -2010,6 +2339,15 @@
       "principe-sangre",
       "cortesano",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1700–1760",
+        "texto": "Monsieur de Charolais",
+        "estado": "vigente",
+        "nota": "Conde de Charolais desde su nacimiento (Monsieur le comte de Charolais)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -2126,6 +2464,22 @@
       "principe-sangre",
       "dama-corte",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1697–1741",
+        "texto": "Mademoiselle de Clermont",
+        "estado": "vigente",
+        "nota": "Estilo de princesa de la sangre desde su nacimiento",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1725–1741",
+        "texto": "Madame la Surintendante",
+        "estado": "futura",
+        "nota": "Nombrada superintendenta de la Casa de la Reina María Leszczynska (1725)",
+        "conf": "probable"
+      }
     ]
   },
   {
@@ -2257,6 +2611,29 @@
       "principe-sangre",
       "cortesano",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1695–1709",
+        "texto": "Monsieur le comte de La Marche",
+        "estado": "anterior",
+        "nota": "Título de cortesía en vida de su padre, el Gran Conti",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1709–1727",
+        "texto": "Monsieur le prince de Conti",
+        "estado": "vigente",
+        "nota": "Al suceder a su padre (†21/02/1709)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "c. 1715–1727",
+        "texto": "le Singe vert",
+        "estado": "vigente",
+        "nota": "Mote satírico en la corte de la Regencia",
+        "conf": "probable"
+      }
     ]
   },
   {
@@ -2392,6 +2769,15 @@
       "legitimado",
       "cortesano",
       "ile-de-france"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1673–1736",
+        "texto": "Monsieur du Maine",
+        "estado": "vigente",
+        "nota": "Legitimado y creado duque del Maine por Luis XIV en diciembre de 1673",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -2534,6 +2920,29 @@
       "dama-corte",
       "figura-corte",
       "ile-de-france"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1676–1692",
+        "texto": "Mademoiselle de Charolais",
+        "estado": "anterior",
+        "nota": "Estilo de soltera en la casa de Condé (también Mademoiselle d'Enghien)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1692–1753",
+        "texto": "Madame du Maine",
+        "estado": "vigente",
+        "nota": "Al casarse con el duque del Maine (19/03/1692)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "c. 1692",
+        "texto": "la poupée du sang",
+        "estado": "vigente",
+        "nota": "Mote cortesano por su pequeñez y orgullo de sangre",
+        "conf": "probable"
+      }
     ]
   },
   {
@@ -2662,6 +3071,22 @@
       "gobernador",
       "cortesano",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1681–1737",
+        "texto": "Monsieur le comte de Toulouse",
+        "estado": "vigente",
+        "nota": "Legitimado y creado conde de Toulouse en noviembre de 1681",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1683–1737",
+        "texto": "Monsieur l'Amiral",
+        "estado": "vigente",
+        "nota": "Nombrado Almirante de Francia en 1683",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -2795,6 +3220,22 @@
       "par",
       "cortesano",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1665–1711",
+        "texto": "le marquis d'Antin",
+        "estado": "anterior",
+        "nota": "Antes de la erección del ducado-paría",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1711–1736",
+        "texto": "Monsieur d'Antin",
+        "estado": "vigente",
+        "nota": "Erección en duque y par de Antin en 1711 (le duc d'Antin)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -2944,6 +3385,29 @@
       "par",
       "ministro",
       "ile-de-france"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1675–1693",
+        "texto": "le vidame de Chartres",
+        "estado": "anterior",
+        "nota": "Título de cortesía en vida de su padre",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1693–1755",
+        "texto": "Monsieur de Saint-Simon",
+        "estado": "vigente",
+        "nota": "II duque y par de Saint-Simon al morir su padre (05/1693)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "c. 1700",
+        "texto": "le petit duc",
+        "estado": "vigente",
+        "nota": "Mote de corte por su baja estatura y celo por el rango ducal",
+        "conf": "probable"
+      }
     ]
   },
   {
@@ -3083,6 +3547,36 @@
       "par",
       "mariscal",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1653–1702",
+        "texto": "le marquis de Villars",
+        "estado": "anterior",
+        "nota": "Antes del mariscalato",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1702–1734",
+        "texto": "le maréchal de Villars",
+        "estado": "vigente",
+        "nota": "Mariscal de Francia tras Friedlingen (10/1702); duque desde 1705",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1712",
+        "texto": "le vainqueur de Denain",
+        "estado": "vigente",
+        "nota": "Aclamado tras la victoria de Denain (24/07/1712)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1733–1734",
+        "texto": "le maréchal général",
+        "estado": "futura",
+        "nota": "Creado Mariscal General de los campos y ejércitos del Rey (10/1733)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -3210,6 +3704,29 @@
       "par",
       "cortesano",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1678–1708",
+        "texto": "le comte d'Ayen",
+        "estado": "anterior",
+        "nota": "Título de cortesía en vida de su padre",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1708–1766",
+        "texto": "Monsieur de Noailles",
+        "estado": "vigente",
+        "nota": "III duque de Noailles al morir su padre (10/1708; le duc de Noailles)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1734–1766",
+        "texto": "le maréchal de Noailles",
+        "estado": "futura",
+        "nota": "Elevado a mariscal de Francia (14/06/1734)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -3331,6 +3848,22 @@
       "ministro",
       "cortesano",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "c. 1690–1728",
+        "texto": "Monsieur d'Armenonville",
+        "estado": "vigente",
+        "nota": "Por su señorío de Armenonville y carrera ministerial",
+        "conf": "probable"
+      },
+      {
+        "fecha": "02/1722–1727",
+        "texto": "Monsieur le Garde des sceaux",
+        "estado": "vigente",
+        "nota": "Nombrado Guardasellos de Francia (28/02/1722)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -3451,6 +3984,29 @@
       "ministro",
       "cortesano",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "c. 1700–1736",
+        "texto": "Monsieur Dodun",
+        "estado": "vigente",
+        "nota": "Apellido en la magistratura y las finanzas",
+        "conf": "probable"
+      },
+      {
+        "fecha": "04/1722–1726",
+        "texto": "Monsieur le Contrôleur général",
+        "estado": "vigente",
+        "nota": "Nombrado Interventor General de Finanzas (21/04/1722)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "03/1723–1736",
+        "texto": "Monsieur d'Herbault",
+        "estado": "futura",
+        "nota": "Creado marqués de Herbault por cartas patentes de marzo de 1723",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -3574,6 +4130,15 @@
       "ministro",
       "cortesano",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1718–1728",
+        "texto": "Monsieur Le Blanc",
+        "estado": "vigente",
+        "nota": "Trato ministerial como Secretario de Estado de la Guerra (desde 1718; destituido 1723, vuelto 1726)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -3699,6 +4264,22 @@
       "ministro",
       "cortesano",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1715–1781",
+        "texto": "Monsieur de Maurepas",
+        "estado": "vigente",
+        "nota": "Conde de Maurepas y Secretario de Estado de la Casa del Rey desde 1715 (ejercicio pleno 1718)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1774–1781",
+        "texto": "le Mentor de Louis XVI",
+        "estado": "futura",
+        "nota": "Ministro de Estado y principal consejero al advenimiento de Luis XVI (1774)",
+        "conf": "probable"
+      }
     ]
   },
   {
@@ -3823,6 +4404,15 @@
       "ministro",
       "cortesano",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1700–1725",
+        "texto": "Monsieur de La Vrillière",
+        "estado": "vigente",
+        "nota": "Marqués de La Vrillière y Secretario de Estado desde 1700",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -3960,6 +4550,29 @@
       "militar",
       "cortesano",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1705–1741",
+        "texto": "Monsieur de Belle-Isle",
+        "estado": "vigente",
+        "nota": "Conde de Belle-Isle al suceder a su padre",
+        "conf": "probable"
+      },
+      {
+        "fecha": "1741–1761",
+        "texto": "le maréchal de Belle-Isle",
+        "estado": "futura",
+        "nota": "Creado mariscal de Francia (02/1741)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1742–1761",
+        "texto": "le duc de Belle-Isle",
+        "estado": "futura",
+        "nota": "Creado duque de Gisors / Belle-Isle en 1742 (par de Francia en 1748)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -4078,6 +4691,29 @@
       "principe-extranjero",
       "cortesano",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1684–1751",
+        "texto": "le prince Charles",
+        "estado": "vigente",
+        "nota": "Príncipe de la Casa de Lorena desde su nacimiento",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1712–1751",
+        "texto": "Monsieur le Grand",
+        "estado": "vigente",
+        "nota": "Gran Caballerizo de Francia (en ejercicio desde 1712; titular pleno en 1718)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1718–1751",
+        "texto": "le comte d'Armagnac",
+        "estado": "vigente",
+        "nota": "Al morir su padre Louis de Lorraine (†1718)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -4217,13 +4853,36 @@
       "principe-extranjero",
       "casa-rey",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "c. 1690–1704",
+        "texto": "l'abbé de Soubise",
+        "estado": "anterior",
+        "nota": "Como joven clérigo de la casa de Soubise (coadjutor de Estrasburgo en 1701)",
+        "conf": "probable"
+      },
+      {
+        "fecha": "1704–1712",
+        "texto": "Monsieur de Strasbourg",
+        "estado": "anterior",
+        "nota": "Príncipe-obispo de Estrasburgo desde 1704",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1712–1749",
+        "texto": "le cardinal de Rohan",
+        "estado": "vigente",
+        "nota": "Creado cardenal en mayo de 1712; Gran Limosnero de Francia desde 1713",
+        "conf": "confirmado"
+      }
     ]
   },
   {
     "aficiones": [],
     "anio": 1655,
     "apodos": [
-      "Príncipe de Guémené"
+      "le prince de Guémené"
     ],
     "cargo": "—",
     "casa": "Rohan-Guéméné",
@@ -4280,6 +4939,22 @@
       "principe-extranjero",
       "duque",
       "par"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1655–1727",
+        "texto": "le prince de Guémené",
+        "estado": "vigente",
+        "nota": "Título de primogénito y cabeza de la rama Rohan-Guémené",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1699–1727",
+        "texto": "le duc de Montbazon",
+        "estado": "vigente",
+        "nota": "Sucede a su padre Charles II (†1699) como V duque de Montbazon y par de Francia",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -4404,6 +5079,15 @@
       "casa-rey",
       "versalles",
       "cortesano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1703–1736",
+        "texto": "Monsieur Mareschal",
+        "estado": "vigente",
+        "nota": "Primer cirujano del Rey desde 1703 (ennoblecido en 1707, señor de Bièvres)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -4508,6 +5192,15 @@
       "casa-rey",
       "versalles",
       "cortesano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1718–1730",
+        "texto": "Monsieur Dodart",
+        "estado": "vigente",
+        "nota": "Primer médico del Rey desde 1718",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -4618,6 +5311,15 @@
       "casa-rey",
       "parisino",
       "cortesano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1708–1735",
+        "texto": "Monsieur de Cotte",
+        "estado": "vigente",
+        "nota": "Primer arquitecto del Rey desde 1708",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -4729,6 +5431,22 @@
       "casa-rey",
       "versalles",
       "cortesano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1683–1726",
+        "texto": "Monsieur de Lalande",
+        "estado": "vigente",
+        "nota": "Maestro de música de la Capilla Real y superintendente en la corte desde 1683",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "c. 1700",
+        "texto": "le Lully latin",
+        "estado": "vigente",
+        "nota": "Sobrenombre elogioso por sus grandes motetes",
+        "conf": "probable"
+      }
     ]
   },
   {
@@ -4847,6 +5565,22 @@
       "casa-rey",
       "parisino",
       "cortesano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1693–1733",
+        "texto": "Monsieur Couperin",
+        "estado": "vigente",
+        "nota": "Organista de la Capilla Real desde 1693 y maestro de clavecín de la corte",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "c. 1710",
+        "texto": "Couperin le Grand",
+        "estado": "vigente",
+        "nota": "Sobrenombre para distinguirlo de los demás músicos de la dinastía Couperin",
+        "conf": "probable"
+      }
     ]
   },
   {
@@ -4997,6 +5731,15 @@
       "embajador",
       "parisino",
       "extranjero"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1720–1758",
+        "texto": "Sir Luke",
+        "estado": "vigente",
+        "nota": "Armado caballero (Knight Bachelor) por Jorge I en 1720; embajador en París desde 1721",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -5126,6 +5869,29 @@
       "rey",
       "principe-sangre",
       "extranjero"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1683–1700",
+        "texto": "le duc d'Anjou",
+        "estado": "anterior",
+        "nota": "Desde su nacimiento en Versalles hasta aceptar la corona española",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1700–1746",
+        "texto": "le Roi d'Espagne",
+        "estado": "vigente",
+        "nota": "Rey de España (Felipe V; breve abdicación en 1724 y regreso ese año)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "c. 1706",
+        "texto": "el Animoso",
+        "estado": "vigente",
+        "nota": "Sobrenombre español adquirido durante la Guerra de Sucesión",
+        "conf": "probable"
+      }
     ]
   },
   {
@@ -5244,6 +6010,22 @@
       "par",
       "casa-rey",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1708–1719",
+        "texto": "le prince de Tarente",
+        "estado": "anterior",
+        "nota": "Título de cortesía en vida de su padre",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1719–1741",
+        "texto": "Monsieur de La Trémoille",
+        "estado": "vigente",
+        "nota": "Duque de La Trémoille y de Thouars al morir su padre en 1719 (le duc de La Trémoille)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -5376,6 +6158,22 @@
       "marques-conde",
       "dama-corte",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1693–1711",
+        "texto": "Mademoiselle de La Vieuville",
+        "estado": "anterior",
+        "nota": "Nombre de soltera",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1711–1755",
+        "texto": "Madame de Parabère",
+        "estado": "vigente",
+        "nota": "Al casarse con César-Alexandre de Baudéan, marqués/conde de Parabère (08/06/1711; viuda 1716)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -5497,6 +6295,15 @@
       "clero",
       "cortesano",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "c. 1690–1746",
+        "texto": "le Père de Linières",
+        "estado": "vigente",
+        "nota": "Sacerdote jesuita; confesor de Madame Palatine y, desde 1722, confesor de Luis XV",
+        "conf": "probable"
+      }
     ]
   },
   {
@@ -5504,8 +6311,11 @@
     "escritorio_id": "charles-philippe-luynes",
     "orden": 45,
     "nombre": "Duque de Luynes",
-    "nombre_nac": "Charles-Philippe d'Albert, IV duc de Luynes",
-    "apodos": [],
+    "nombre_nac": "Charles-Philippe d'Albert",
+    "apodos": [
+      "le duc de Luynes",
+      "Monsieur de Luynes"
+    ],
     "anio": 1695,
     "edad": "27",
     "nacimiento": "1695",
@@ -5573,6 +6383,22 @@
       "par",
       "salon-letras",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1704–1712",
+        "texto": "le duc de Chevreuse",
+        "estado": "anterior",
+        "nota": "Título de cortesía tras morir su padre el duque de Montfort (†1704)",
+        "conf": "probable"
+      },
+      {
+        "fecha": "1712–1758",
+        "texto": "le duc de Luynes",
+        "estado": "vigente",
+        "nota": "Sucede a su abuelo como IV duque de Luynes en 1712 (Monsieur de Luynes)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -5580,8 +6406,11 @@
     "escritorio_id": "paul-jules-mazarin",
     "orden": 46,
     "nombre": "Duque de Mazarin (Rethel)",
-    "nombre_nac": "Paul-Jules de La Porte, duc de Rethel-Mazarin et de La Meilleraye",
-    "apodos": [],
+    "nombre_nac": "Paul-Jules de La Porte",
+    "apodos": [
+      "le duc de Mazarin",
+      "Monsieur de Mazarin"
+    ],
     "anio": 1666,
     "edad": "56",
     "nacimiento": "1666",
@@ -5649,6 +6478,22 @@
       "par",
       "cortesano",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1666–1713",
+        "texto": "le duc de La Meilleraye",
+        "estado": "anterior",
+        "nota": "Título usado en vida de su padre",
+        "conf": "probable"
+      },
+      {
+        "fecha": "1713–1731",
+        "texto": "le duc de Mazarin",
+        "estado": "vigente",
+        "nota": "Sucede a su padre Armand-Charles (†11/1713) en los ducados de Rethel-Mazarin y La Meilleraye",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -5656,8 +6501,11 @@
     "escritorio_id": "emmanuel-theodose-bouillon",
     "orden": 47,
     "nombre": "Duque de Bouillon",
-    "nombre_nac": "Emmanuel-Théodose de La Tour d'Auvergne, duc de Bouillon",
-    "apodos": [],
+    "nombre_nac": "Emmanuel-Théodose de La Tour d'Auvergne",
+    "apodos": [
+      "le duc de Bouillon",
+      "Monsieur de Bouillon"
+    ],
     "anio": 1668,
     "edad": "54",
     "nacimiento": "1668",
@@ -5726,6 +6574,22 @@
       "duque",
       "par",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1696–1721",
+        "texto": "le duc d'Albret",
+        "estado": "anterior",
+        "nota": "Título de cortesía como heredero en vida de su padre",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1721–1730",
+        "texto": "le duc de Bouillon",
+        "estado": "vigente",
+        "nota": "Sucede a su padre (†07/1721) como duque soberano de Bouillon y Gran Chambelán",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -5733,8 +6597,11 @@
     "escritorio_id": "philippe-jules-mancini",
     "orden": 48,
     "nombre": "Duque de Nevers",
-    "nombre_nac": "Philippe-Jules-François Mancini-Mazarini, duc de Nevers",
-    "apodos": [],
+    "nombre_nac": "Philippe-Jules-François Mancini-Mazarini",
+    "apodos": [
+      "le duc de Nevers",
+      "Monsieur de Nevers"
+    ],
     "anio": 1676,
     "edad": "46",
     "nacimiento": "1676",
@@ -5799,6 +6666,22 @@
       "duque",
       "cortesano",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1676–1707",
+        "texto": "le prince de Vergagne",
+        "estado": "anterior",
+        "nota": "Título usado en juventud en vida de su padre",
+        "conf": "probable"
+      },
+      {
+        "fecha": "1707–1768",
+        "texto": "le duc de Nevers",
+        "estado": "vigente",
+        "nota": "Sucede a su padre (†05/1707; letras verificadas por el Parlamento en 1720)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -5806,8 +6689,11 @@
     "escritorio_id": "henri-louis-evreux",
     "orden": 49,
     "nombre": "Conde de Évreux",
-    "nombre_nac": "Henri-Louis de La Tour d'Auvergne, comte d'Évreux",
-    "apodos": [],
+    "nombre_nac": "Henri-Louis de La Tour d'Auvergne",
+    "apodos": [
+      "le comte d'Évreux",
+      "Monsieur d'Évreux"
+    ],
     "anio": 1679,
     "edad": "43",
     "nacimiento": "1679",
@@ -5874,6 +6760,15 @@
       "militar",
       "cortesano",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1679–1753",
+        "texto": "le comte d'Évreux",
+        "estado": "vigente",
+        "nota": "Título llevado desde su juventud (Monsieur d'Évreux)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -5881,8 +6776,11 @@
     "escritorio_id": "francois-harcourt",
     "orden": 50,
     "nombre": "Duque de Harcourt",
-    "nombre_nac": "François d'Harcourt, II duc d'Harcourt",
-    "apodos": [],
+    "nombre_nac": "François d'Harcourt",
+    "apodos": [
+      "le duc d'Harcourt",
+      "Monsieur d'Harcourt"
+    ],
     "anio": 1689,
     "edad": "33",
     "nacimiento": "1689",
@@ -5950,6 +6848,29 @@
       "par",
       "militar",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1689–1718",
+        "texto": "le marquis d'Harcourt",
+        "estado": "anterior",
+        "nota": "Antes de suceder a su padre, el I duque y mariscal",
+        "conf": "probable"
+      },
+      {
+        "fecha": "1718–1750",
+        "texto": "le duc d'Harcourt",
+        "estado": "vigente",
+        "nota": "II duque de Harcourt al morir su padre (†10/1718)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1746–1750",
+        "texto": "le maréchal d'Harcourt",
+        "estado": "futura",
+        "nota": "Elevado a mariscal de Francia (19/10/1746)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -5957,8 +6878,11 @@
     "escritorio_id": "jean-charles-uzes",
     "orden": 51,
     "nombre": "Duque de Uzès",
-    "nombre_nac": "Jean-Charles de Crussol, VII duc d'Uzès",
-    "apodos": [],
+    "nombre_nac": "Jean-Charles de Crussol",
+    "apodos": [
+      "le duc d'Uzès",
+      "Monsieur d'Uzès"
+    ],
     "anio": 1675,
     "edad": "46",
     "nacimiento": "29/12/1675, París",
@@ -6026,6 +6950,22 @@
       "par",
       "gobernador",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1675–1693",
+        "texto": "le duc de Crussol",
+        "estado": "anterior",
+        "nota": "Título de cortesía del primogénito antes de suceder",
+        "conf": "probable"
+      },
+      {
+        "fecha": "1693–1739",
+        "texto": "le duc d'Uzès",
+        "estado": "vigente",
+        "nota": "VII duque de Uzès y Primer Par Laico de Francia desde 1693 (Monsieur d'Uzès)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -6033,8 +6973,11 @@
     "escritorio_id": "armand-richelieu",
     "orden": 52,
     "nombre": "Duque de Richelieu",
-    "nombre_nac": "Louis-François-Armand de Vignerot du Plessis, III duc de Richelieu",
-    "apodos": [],
+    "nombre_nac": "Louis-François-Armand de Vignerot du Plessis",
+    "apodos": [
+      "le duc de Richelieu",
+      "Monsieur de Richelieu"
+    ],
     "anio": 1696,
     "edad": "26",
     "nacimiento": "13/03/1696, París",
@@ -6101,6 +7044,29 @@
       "par",
       "cortesano",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1696–1715",
+        "texto": "le duc de Fronsac",
+        "estado": "anterior",
+        "nota": "Título de cortesía en vida de su padre",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1715–1788",
+        "texto": "le duc de Richelieu",
+        "estado": "vigente",
+        "nota": "III duque de Richelieu al morir su padre (†05/1715; Monsieur de Richelieu)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1748–1788",
+        "texto": "le maréchal de Richelieu",
+        "estado": "futura",
+        "nota": "Elevado a mariscal de Francia (11/10/1748)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -6108,8 +7074,11 @@
     "escritorio_id": "antoine-gramont",
     "orden": 53,
     "nombre": "Duque de Gramont (Guiche)",
-    "nombre_nac": "Antoine V de Gramont, duc de Gramont et de Guiche",
-    "apodos": [],
+    "nombre_nac": "Antoine V de Gramont",
+    "apodos": [
+      "le duc de Gramont",
+      "Monsieur de Gramont"
+    ],
     "anio": 1671,
     "edad": "51",
     "nacimiento": "1671",
@@ -6176,6 +7145,29 @@
       "par",
       "gobernador",
       "militar"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1671–1720",
+        "texto": "le duc de Guiche",
+        "estado": "anterior",
+        "nota": "Conocido como conde y luego duque de Guiche en vida de su padre",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1720–1725",
+        "texto": "le duc de Gramont",
+        "estado": "vigente",
+        "nota": "IV duque de Gramont al morir su padre (†10/1720)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1724–1725",
+        "texto": "le maréchal de Gramont",
+        "estado": "futura",
+        "nota": "Creado mariscal de Francia en febrero de 1724",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -6183,8 +7175,11 @@
     "escritorio_id": "hercule-meriadec-rohan",
     "orden": 54,
     "nombre": "Príncipe de Soubise (Duque de Rohan-Rohan)",
-    "nombre_nac": "Hercule-Mériadec de Rohan, duc de Rohan-Rohan, prince de Soubise",
-    "apodos": [],
+    "nombre_nac": "Hercule-Mériadec de Rohan",
+    "apodos": [
+      "le prince de Rohan",
+      "le prince de Soubise"
+    ],
     "anio": 1669,
     "edad": "53",
     "nacimiento": "1669",
@@ -6252,6 +7247,29 @@
       "duque",
       "par",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1669–1712",
+        "texto": "le prince de Maubuisson",
+        "estado": "anterior",
+        "nota": "Título de cortesía en vida de su padre",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1712–1749",
+        "texto": "le prince de Soubise",
+        "estado": "vigente",
+        "nota": "Sucede a su padre François de Rohan (†08/1712)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1714–1749",
+        "texto": "le duc de Rohan-Rohan",
+        "estado": "vigente",
+        "nota": "Creado duque y par de Rohan-Rohan en 1714 (llamado habitualmente le prince de Rohan)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -6259,8 +7277,11 @@
     "escritorio_id": "paul-hippolyte-st-aignan",
     "orden": 55,
     "nombre": "Duque de Saint-Aignan",
-    "nombre_nac": "Paul-Hippolyte de Beauvilliers, duc de Saint-Aignan",
-    "apodos": [],
+    "nombre_nac": "Paul-Hippolyte de Beauvilliers",
+    "apodos": [
+      "le duc de Saint-Aignan",
+      "Monsieur de Saint-Aignan"
+    ],
     "anio": 1684,
     "edad": "38",
     "nacimiento": "1684",
@@ -6328,6 +7349,22 @@
       "par",
       "ministro",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1684–1706",
+        "texto": "le comte de Saint-Aignan",
+        "estado": "anterior",
+        "nota": "Antes de recibir el ducado por cesión de su medio hermano Beauvilliers",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1706–1776",
+        "texto": "le duc de Saint-Aignan",
+        "estado": "vigente",
+        "nota": "II duque de Saint-Aignan por cesión de su hermano Paul en 1706 (Monsieur de Saint-Aignan)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -6335,8 +7372,11 @@
     "escritorio_id": "louis-auguste-chaulnes",
     "orden": 56,
     "nombre": "Duque de Chaulnes",
-    "nombre_nac": "Louis-Auguste d'Albert d'Ailly, IV duc de Chaulnes",
-    "apodos": [],
+    "nombre_nac": "Louis-Auguste d'Albert d'Ailly",
+    "apodos": [
+      "le duc de Chaulnes",
+      "Monsieur de Chaulnes"
+    ],
     "anio": 1676,
     "edad": "46",
     "nacimiento": "1676",
@@ -6404,6 +7444,29 @@
       "par",
       "militar",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1698–1711",
+        "texto": "le vidame d'Amiens",
+        "estado": "anterior",
+        "nota": "Heredero de los bienes de Chaulnes antes de la restauración del ducado",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1711–1744",
+        "texto": "le duc de Chaulnes",
+        "estado": "vigente",
+        "nota": "Restaurado como IV duque y par de Chaulnes en 1711 (Monsieur de Chaulnes)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1741–1744",
+        "texto": "le maréchal de Chaulnes",
+        "estado": "futura",
+        "nota": "Elevado a mariscal de Francia (11/02/1741)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -6411,8 +7474,11 @@
     "escritorio_id": "louis-mortemart",
     "orden": 57,
     "nombre": "Duque de Mortemart",
-    "nombre_nac": "Louis II de Rochechouart, IV duc de Mortemart",
-    "apodos": [],
+    "nombre_nac": "Louis II de Rochechouart",
+    "apodos": [
+      "le duc de Mortemart",
+      "Monsieur de Mortemart"
+    ],
     "anio": 1681,
     "edad": "41",
     "nacimiento": "1681",
@@ -6480,6 +7546,22 @@
       "cortesano",
       "casa-rey",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1681–1688",
+        "texto": "le prince de Tonnay-Charente",
+        "estado": "anterior",
+        "nota": "Título de cortesía en la infancia antes de morir su padre",
+        "conf": "probable"
+      },
+      {
+        "fecha": "1688–1746",
+        "texto": "le duc de Mortemart",
+        "estado": "vigente",
+        "nota": "IV duque y par de Mortemart al morir su padre (†1688; Monsieur de Mortemart)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -6487,8 +7569,11 @@
     "escritorio_id": "francois-la-rochefoucauld",
     "orden": 58,
     "nombre": "Duque de La Rochefoucauld",
-    "nombre_nac": "François VIII de La Rochefoucauld, IV duc de La Rochefoucauld",
-    "apodos": [],
+    "nombre_nac": "François VIII de La Rochefoucauld",
+    "apodos": [
+      "le duc de La Rochefoucauld",
+      "Monsieur de La Rochefoucauld"
+    ],
     "anio": 1663,
     "edad": "59",
     "nacimiento": "1663",
@@ -6556,6 +7641,22 @@
       "par",
       "cortesano",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1679–1714",
+        "texto": "le duc de La Roche-Guyon",
+        "estado": "anterior",
+        "nota": "Creado duque de La Roche-Guyon al casarse con la hija de Louvois (1679)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1714–1728",
+        "texto": "le duc de La Rochefoucauld",
+        "estado": "vigente",
+        "nota": "IV duque de La Rochefoucauld al morir su padre (†01/1714)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -6563,8 +7664,11 @@
     "escritorio_id": "joseph-castries",
     "orden": 59,
     "nombre": "Marqués de Castries",
-    "nombre_nac": "Joseph-François de La Croix, marquis de Castries",
-    "apodos": [],
+    "nombre_nac": "Joseph-François de La Croix",
+    "apodos": [
+      "le marquis de Castries",
+      "Monsieur de Castries"
+    ],
     "anio": 1663,
     "edad": "59",
     "nacimiento": "1663",
@@ -6632,6 +7736,15 @@
       "militar",
       "casa-rey",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1674–1728",
+        "texto": "le marquis de Castries",
+        "estado": "vigente",
+        "nota": "Sucede a su padre René-Gaspard (†1674; Monsieur de Castries)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -6639,8 +7752,11 @@
     "escritorio_id": "jean-antoine-mesmes",
     "orden": 60,
     "nombre": "Primer Presidente de Mesmes",
-    "nombre_nac": "Jean-Antoine de Mesmes, comte d'Avaux",
-    "apodos": [],
+    "nombre_nac": "Jean-Antoine de Mesmes",
+    "apodos": [
+      "Monsieur le Premier Président",
+      "Monsieur de Mesmes"
+    ],
     "anio": 1661,
     "edad": "61",
     "nacimiento": "1661",
@@ -6706,6 +7822,22 @@
       "parlamentario",
       "salon-letras",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1688–1723",
+        "texto": "Monsieur de Mesmes",
+        "estado": "vigente",
+        "nota": "Presidente a mortero y conde d'Avaux tras morir su padre (†1688)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1712–1723",
+        "texto": "Monsieur le Premier Président",
+        "estado": "vigente",
+        "nota": "Primer Presidente del Parlamento de París desde 1712",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -6714,7 +7846,9 @@
     "orden": 61,
     "nombre": "Primer Presidente de Pontcarré (Ruan)",
     "nombre_nac": "Nicolas-Pierre Camus de Pontcarré",
-    "apodos": [],
+    "apodos": [
+      "Monsieur de Pontcarré"
+    ],
     "anio": 1667,
     "edad": "55",
     "nacimiento": "1667",
@@ -6779,6 +7913,15 @@
       "noble-toga",
       "parlamentario",
       "provinciano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1703–1726",
+        "texto": "Monsieur de Pontcarré",
+        "estado": "vigente",
+        "nota": "Primer Presidente del Parlamento de Normandía (Ruan) desde 1703 (Monsieur le Premier Président en Ruan)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -6786,8 +7929,10 @@
     "escritorio_id": "joseph-gillet-lacaze",
     "orden": 62,
     "nombre": "Primer Presidente de La Caze (Burdeos)",
-    "nombre_nac": "Joseph de Gillet, marquis de La Caze",
-    "apodos": [],
+    "nombre_nac": "Joseph de Gillet",
+    "apodos": [
+      "Monsieur de La Caze"
+    ],
     "anio": 1652,
     "edad": "70",
     "nacimiento": "1652",
@@ -6852,6 +7997,15 @@
       "marques-conde",
       "parlamentario",
       "provinciano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "desde 1714",
+        "texto": "Monsieur de La Caze",
+        "estado": "vigente",
+        "nota": "Primer Presidente del Parlamento de Burdeos desde 1714 (Monsieur le Premier Président en Burdeos)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -6859,8 +8013,10 @@
     "escritorio_id": "francois-berty",
     "orden": 63,
     "nombre": "Primer Presidente de Bertier (Toulouse)",
-    "nombre_nac": "François de Bertier, baron de Montrabe",
-    "apodos": [],
+    "nombre_nac": "François de Bertier",
+    "apodos": [
+      "Monsieur de Bertier"
+    ],
     "anio": 1655,
     "edad": "67",
     "nacimiento": "1655",
@@ -6925,6 +8081,15 @@
       "marques-conde",
       "parlamentario",
       "provinciano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "desde 1710",
+        "texto": "Monsieur de Bertier",
+        "estado": "vigente",
+        "nota": "Primer Presidente del Parlamento de Toulouse desde 1710 (Monsieur le Premier Président en Toulouse)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -6933,7 +8098,9 @@
     "orden": 64,
     "nombre": "Primer Presidente de Grammont (Grenoble)",
     "nombre_nac": "Pierre-Joseph de Grammont de Montferrand",
-    "apodos": [],
+    "apodos": [
+      "Monsieur de Grammont"
+    ],
     "anio": 1665,
     "edad": "57",
     "nacimiento": "1665",
@@ -6998,6 +8165,15 @@
       "marques-conde",
       "parlamentario",
       "provinciano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "por verificar",
+        "texto": "Monsieur de Grammont",
+        "estado": "vigente",
+        "nota": "Trato de Primer Presidente en Grenoble (titularidad y fecha en 1722 pendientes de verificación histórica)",
+        "conf": "dudoso"
+      }
     ]
   },
   {
@@ -7006,7 +8182,9 @@
     "orden": 65,
     "nombre": "Primer Presidente de Berbisey (Dijon)",
     "nombre_nac": "Jean de Berbisey",
-    "apodos": [],
+    "apodos": [
+      "Monsieur de Berbisey"
+    ],
     "anio": 1663,
     "edad": "59",
     "nacimiento": "1663",
@@ -7071,6 +8249,15 @@
       "noble-toga",
       "parlamentario",
       "provinciano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "desde 1715",
+        "texto": "Monsieur de Berbisey",
+        "estado": "vigente",
+        "nota": "Primer Presidente del Parlamento de Borgoña (Dijon) desde 1715",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -7078,8 +8265,10 @@
     "escritorio_id": "cardin-lebret",
     "orden": 66,
     "nombre": "Primer Presidente Le Bret (Aix)",
-    "nombre_nac": "Cardin Le Bret, comte de Selles",
-    "apodos": [],
+    "nombre_nac": "Cardin Le Bret",
+    "apodos": [
+      "Monsieur Le Bret"
+    ],
     "anio": 1675,
     "edad": "47",
     "nacimiento": "1675",
@@ -7144,6 +8333,15 @@
       "marques-conde",
       "parlamentario",
       "provinciano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1710–1734",
+        "texto": "Monsieur Le Bret",
+        "estado": "vigente",
+        "nota": "Sucede a su padre (†1710) como Primer Presidente del Parlamento de Aix e intendente de Provenza",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -7152,7 +8350,9 @@
     "orden": 67,
     "nombre": "Primer Presidente de Brilhac (Rennes)",
     "nombre_nac": "Pierre de Brilhac de Nouzières",
-    "apodos": [],
+    "apodos": [
+      "Monsieur de Brilhac"
+    ],
     "anio": 1668,
     "edad": "54",
     "nacimiento": "1668",
@@ -7217,6 +8417,15 @@
       "noble-toga",
       "parlamentario",
       "provinciano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1703–1734",
+        "texto": "Monsieur de Brilhac",
+        "estado": "vigente",
+        "nota": "Primer Presidente del Parlamento de Bretaña (Rennes) desde el 16/06/1703",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -7225,7 +8434,9 @@
     "orden": 68,
     "nombre": "Primer Presidente de Fenoyl (Pau)",
     "nombre_nac": "Gui de Fenoyl",
-    "apodos": [],
+    "apodos": [
+      "Monsieur de Fenoyl"
+    ],
     "anio": 1668,
     "edad": "54",
     "nacimiento": "1668",
@@ -7290,6 +8501,15 @@
       "noble-toga",
       "parlamentario",
       "provinciano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "desde 1711",
+        "texto": "Monsieur de Fenoyl",
+        "estado": "vigente",
+        "nota": "Primer Presidente del Parlamento de Navarra y Bearn (Pau) desde 1711",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -7298,7 +8518,9 @@
     "orden": 69,
     "nombre": "Primer Presidente de Pollinchove (Douai)",
     "nombre_nac": "Charles-Joseph de Pollinchove",
-    "apodos": [],
+    "apodos": [
+      "Monsieur de Pollinchove"
+    ],
     "anio": 1675,
     "edad": "47",
     "nacimiento": "1675",
@@ -7363,6 +8585,15 @@
       "noble-toga",
       "parlamentario",
       "provinciano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "desde 1710",
+        "texto": "Monsieur de Pollinchove",
+        "estado": "vigente",
+        "nota": "Sucede a su padre en 1710 como Primer Presidente del Parlamento de Flandes (en Douai desde 1714)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -7371,7 +8602,9 @@
     "orden": 70,
     "nombre": "Primer Presidente de Chasot (Metz)",
     "nombre_nac": "Pierre de Chasot de Congy",
-    "apodos": [],
+    "apodos": [
+      "Monsieur de Chasot"
+    ],
     "anio": 1658,
     "edad": "64",
     "nacimiento": "1658",
@@ -7436,6 +8669,15 @@
       "noble-toga",
       "parlamentario",
       "provinciano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "por verificar",
+        "texto": "Monsieur de Chasot",
+        "estado": "vigente",
+        "nota": "Primer Presidente del Parlamento de Metz (en fuentes, Bénigne de Chasot de Congy asume en 1717; nombre de pila por revisar)",
+        "conf": "probable"
+      }
     ]
   },
   {
@@ -7444,7 +8686,9 @@
     "orden": 71,
     "nombre": "Primer Presidente Jobelot (Besançon)",
     "nombre_nac": "Jean-Ferdinand Jobelot de Montureux",
-    "apodos": [],
+    "apodos": [
+      "Monsieur Jobelot"
+    ],
     "anio": 1650,
     "edad": "72",
     "nacimiento": "1650",
@@ -7509,6 +8753,15 @@
       "noble-toga",
       "parlamentario",
       "provinciano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1676–1723",
+        "texto": "Monsieur Jobelot",
+        "estado": "vigente",
+        "nota": "Primer Presidente del Parlamento del Franco Condado (Besançon) desde 1676 hasta su retiro en 1723",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -7516,8 +8769,10 @@
     "escritorio_id": "nicolas-corberon",
     "orden": 72,
     "nombre": "Primer Presidente de Corberon (Colmar)",
-    "nombre_nac": "Nicolas de Corberon, marquis de Torvilliers",
-    "apodos": [],
+    "nombre_nac": "Nicolas de Corberon",
+    "apodos": [
+      "Monsieur de Corberon"
+    ],
     "anio": 1654,
     "edad": "68",
     "nacimiento": "1654",
@@ -7582,6 +8837,15 @@
       "marques-conde",
       "parlamentario",
       "provinciano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "desde 1700",
+        "texto": "Monsieur de Corberon",
+        "estado": "vigente",
+        "nota": "Primer Presidente del Consejo Soberano de Alsacia (Colmar) desde 1700",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -7589,8 +8853,10 @@
     "escritorio_id": "louis-antoine-noailles",
     "orden": 73,
     "nombre": "Cardenal de Noailles (Arzobispo de París)",
-    "nombre_nac": "Louis-Antoine de Noailles, cardinal-archevêque de Paris",
-    "apodos": [],
+    "nombre_nac": "Louis-Antoine de Noailles",
+    "apodos": [
+      "le cardinal de Noailles"
+    ],
     "anio": 1651,
     "edad": "71",
     "nacimiento": "1651",
@@ -7657,6 +8923,29 @@
       "duque",
       "par",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1679–1695",
+        "texto": "Monsieur de Châlons",
+        "estado": "anterior",
+        "nota": "Obispo de Cahors (1679) y obispo-conde de Châlons-sur-Marne (1680–1695)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1695–1700",
+        "texto": "Monsieur de Paris",
+        "estado": "anterior",
+        "nota": "Nombrado arzobispo de París en agosto de 1695",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1700–1729",
+        "texto": "le cardinal de Noailles",
+        "estado": "vigente",
+        "nota": "Creado cardenal en junio de 1700",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -7664,8 +8953,10 @@
     "escritorio_id": "armand-jules-rohan",
     "orden": 74,
     "nombre": "Arzobispo de Reims (Rohan-Guémené)",
-    "nombre_nac": "Armand-Jules de Rohan-Guémené, archevêque-duc de Reims",
-    "apodos": [],
+    "nombre_nac": "Armand-Jules de Rohan-Guémené",
+    "apodos": [
+      "Monsieur de Reims"
+    ],
     "anio": 1695,
     "edad": "27",
     "nacimiento": "1695",
@@ -7732,6 +9023,22 @@
       "obispo",
       "duque",
       "par"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "c. 1715–1722",
+        "texto": "l'abbé de Rohan-Guémené",
+        "estado": "anterior",
+        "nota": "Antes de su nombramiento episcopal",
+        "conf": "probable"
+      },
+      {
+        "fecha": "06/1722–1762",
+        "texto": "Monsieur de Reims",
+        "estado": "vigente",
+        "nota": "Nombrado arzobispo-duque de Reims en junio de 1722 (l'archevêque de Reims)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -7739,8 +9046,10 @@
     "escritorio_id": "henri-thiard-bissy",
     "orden": 75,
     "nombre": "Cardenal de Bissy (Obispo de Meaux)",
-    "nombre_nac": "Henri-Pons de Thiard de Bissy, cardinal-évêque de Meaux",
-    "apodos": [],
+    "nombre_nac": "Henri-Pons de Thiard de Bissy",
+    "apodos": [
+      "le cardinal de Bissy"
+    ],
     "anio": 1657,
     "edad": "65",
     "nacimiento": "1657",
@@ -7806,6 +9115,29 @@
       "cardenal",
       "cortesano",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1687–1704",
+        "texto": "Monsieur de Toul",
+        "estado": "anterior",
+        "nota": "Obispo de Toul (nombrado 1687, consagrado 1692)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1704–1715",
+        "texto": "Monsieur de Meaux",
+        "estado": "anterior",
+        "nota": "Sucede a Bossuet como obispo de Meaux (1704)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1715–1737",
+        "texto": "le cardinal de Bissy",
+        "estado": "vigente",
+        "nota": "Creado cardenal en mayo de 1715",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -7813,8 +9145,11 @@
     "escritorio_id": "jean-soanen",
     "orden": 76,
     "nombre": "Obispo Soanen de Senez",
-    "nombre_nac": "Jean Soanen, évêque de Senez",
-    "apodos": [],
+    "nombre_nac": "Jean Soanen",
+    "apodos": [
+      "Monsieur de Senez",
+      "le nouvel Athanase"
+    ],
     "anio": 1647,
     "edad": "75",
     "nacimiento": "1647",
@@ -7879,6 +9214,29 @@
       "obispo",
       "clero",
       "provinciano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "c. 1670–1695",
+        "texto": "le père Soanen",
+        "estado": "anterior",
+        "nota": "Sacerdote del Oratorio y predicador ordinario del Rey",
+        "conf": "probable"
+      },
+      {
+        "fecha": "1695–1727",
+        "texto": "Monsieur de Senez",
+        "estado": "vigente",
+        "nota": "Obispo de Senez desde 1695 hasta su deposición en el concilio de Embrun (1727)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "c. 1717",
+        "texto": "le nouvel Athanase",
+        "estado": "vigente",
+        "nota": "Sobrenombre dado por los fieles jansenistas apelantes",
+        "conf": "probable"
+      }
     ]
   },
   {
@@ -7886,8 +9244,10 @@
     "escritorio_id": "charles-joachim-colbert",
     "orden": 77,
     "nombre": "Obispo Colbert de Montpellier",
-    "nombre_nac": "Charles-Joachim Colbert de Croissy, évêque de Montpellier",
-    "apodos": [],
+    "nombre_nac": "Charles-Joachim Colbert de Croissy",
+    "apodos": [
+      "Monsieur de Montpellier"
+    ],
     "anio": 1667,
     "edad": "55",
     "nacimiento": "1667",
@@ -7952,6 +9312,15 @@
       "obispo",
       "clero",
       "provinciano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1696–1738",
+        "texto": "Monsieur de Montpellier",
+        "estado": "vigente",
+        "nota": "Nombrado obispo de Montpellier en 1696 (consagrado 1697)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -7959,8 +9328,10 @@
     "escritorio_id": "francois-paul-neufville",
     "orden": 78,
     "nombre": "Arzobispo de Villeroy (Lyon)",
-    "nombre_nac": "François-Paul de Neufville de Villeroy, archevêque de Lyon",
-    "apodos": [],
+    "nombre_nac": "François-Paul de Neufville de Villeroy",
+    "apodos": [
+      "Monsieur de Lyon"
+    ],
     "anio": 1677,
     "edad": "45",
     "nacimiento": "1677",
@@ -8025,6 +9396,22 @@
       "obispo",
       "clero",
       "provinciano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "c. 1700–1714",
+        "texto": "l'abbé de Villeroy",
+        "estado": "anterior",
+        "nota": "Abad comendatario antes del episcopado",
+        "conf": "probable"
+      },
+      {
+        "fecha": "1714–1731",
+        "texto": "Monsieur de Lyon",
+        "estado": "vigente",
+        "nota": "Arzobispo de Lyon y primado de las Galias desde 1714",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -8032,8 +9419,10 @@
     "escritorio_id": "henri-oswald-auvergne",
     "orden": 79,
     "nombre": "Arzobispo de Auvergne (Vienne)",
-    "nombre_nac": "Henri-Oswald de La Tour d'Auvergne, archevêque de Vienne",
-    "apodos": [],
+    "nombre_nac": "Henri-Oswald de La Tour d'Auvergne",
+    "apodos": [
+      "Monsieur de Vienne"
+    ],
     "anio": 1671,
     "edad": "51",
     "nacimiento": "1671",
@@ -8098,6 +9487,36 @@
       "obispo",
       "casa-rey",
       "principe-extranjero"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "c. 1697–1719",
+        "texto": "l'abbé d'Auvergne",
+        "estado": "anterior",
+        "nota": "Abad de Cluny y primer limosnero antes del episcopado",
+        "conf": "probable"
+      },
+      {
+        "fecha": "1719–1721",
+        "texto": "Monsieur de Tours",
+        "estado": "anterior",
+        "nota": "Arzobispo de Tours (1719–1721)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1721–1737",
+        "texto": "Monsieur de Vienne",
+        "estado": "vigente",
+        "nota": "Trasladado al arzobispado de Vienne en 1721",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1737–1747",
+        "texto": "le cardinal d'Auvergne",
+        "estado": "futura",
+        "nota": "Creado cardenal por Clemente XII en diciembre de 1737",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -8105,8 +9524,10 @@
     "escritorio_id": "henri-belsunce",
     "orden": 80,
     "nombre": "Obispo de Belsunce (Marsella)",
-    "nombre_nac": "Henri-François-Xavier de Belsunce de Castelmoron, évêque de Marseille",
-    "apodos": [],
+    "nombre_nac": "Henri-François-Xavier de Belsunce de Castelmoron",
+    "apodos": [
+      "Monsieur de Marseille"
+    ],
     "anio": 1671,
     "edad": "51",
     "nacimiento": "1671",
@@ -8171,6 +9592,15 @@
       "obispo",
       "clero",
       "provinciano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1709–1755",
+        "texto": "Monsieur de Marseille",
+        "estado": "vigente",
+        "nota": "Nombrado obispo de Marsella en 1709 (consagrado 1710); célebre por la Peste de 1720–1722",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -8178,8 +9608,10 @@
     "escritorio_id": "francois-elie-voyer-argenson",
     "orden": 81,
     "nombre": "Arzobispo d'Argenson (Burdeos)",
-    "nombre_nac": "François-Élie de Voyer de Paulmy d'Argenson, archevêque de Bordeaux",
-    "apodos": [],
+    "nombre_nac": "François-Élie de Voyer de Paulmy d'Argenson",
+    "apodos": [
+      "Monsieur de Bordeaux"
+    ],
     "anio": 1656,
     "edad": "66",
     "nacimiento": "1656",
@@ -8244,6 +9676,29 @@
       "obispo",
       "clero",
       "provinciano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1702–1715",
+        "texto": "Monsieur de Dol",
+        "estado": "anterior",
+        "nota": "Obispo de Dol en Bretaña (1702–1715)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1715–1719",
+        "texto": "Monsieur d'Embrun",
+        "estado": "anterior",
+        "nota": "Arzobispo de Embrun (1715–1719)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1719–1728",
+        "texto": "Monsieur de Bordeaux",
+        "estado": "vigente",
+        "nota": "Arzobispo de Burdeos desde 1719",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -8251,8 +9706,10 @@
     "escritorio_id": "rene-francois-beaupoil",
     "orden": 82,
     "nombre": "Arzobispo de Beauvau (Narbona)",
-    "nombre_nac": "René-François de Beauvau du Rivau, archevêque de Narbonne",
-    "apodos": [],
+    "nombre_nac": "René-François de Beauvau du Rivau",
+    "apodos": [
+      "Monsieur de Narbonne"
+    ],
     "anio": 1664,
     "edad": "58",
     "nacimiento": "1664",
@@ -8317,6 +9774,29 @@
       "obispo",
       "clero",
       "provinciano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1707–1713",
+        "texto": "Monsieur de Tournai",
+        "estado": "anterior",
+        "nota": "Obispo de Tournai (1707–1713)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1713–1719",
+        "texto": "Monsieur de Toulouse",
+        "estado": "anterior",
+        "nota": "Arzobispo de Toulouse (1713–1719)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1719–1739",
+        "texto": "Monsieur de Narbonne",
+        "estado": "vigente",
+        "nota": "Arzobispo de Narbona desde 1719",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -8324,8 +9804,11 @@
     "escritorio_id": "claude-st-georges-rouen",
     "orden": 83,
     "nombre": "Arzobispo de Tressan (Ruan)",
-    "nombre_nac": "Louis de La Vergne de Tressan, archevêque de Rouen",
-    "apodos": [],
+    "nombre_nac": "Louis de La Vergne de Tressan",
+    "apodos": [
+      "Monsieur de Nantes",
+      "Monsieur de Tressan"
+    ],
     "anio": 1670,
     "edad": "52",
     "nacimiento": "1670",
@@ -8392,6 +9875,22 @@
       "duque",
       "casa-rey",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1717–1723",
+        "texto": "Monsieur de Nantes",
+        "estado": "vigente",
+        "nota": "Obispo de Nantes (en funciones en junio de 1722; también Primer Limosnero del Regente)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "10/1723–1733",
+        "texto": "Monsieur de Rouen",
+        "estado": "futura",
+        "nota": "Nombrado arzobispo de Ruan en octubre de 1723 (confirmado en febrero de 1724)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -8399,8 +9898,10 @@
     "escritorio_id": "louise-elisabeth-montpensier",
     "orden": 84,
     "nombre": "Luisa Isabel de Orleans",
-    "nombre_nac": "Luisa Isabel de Orleans",
-    "apodos": [],
+    "nombre_nac": "Louise-Élisabeth d'Orléans",
+    "apodos": [
+      "la princesse des Asturies"
+    ],
     "anio": 1709,
     "edad": "12",
     "nacimiento": "11/12/1709",
@@ -8452,6 +9953,36 @@
       "dama-corte",
       "dama-alianza",
       "extranjero"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1709–1722",
+        "texto": "Mademoiselle de Montpensier",
+        "estado": "anterior",
+        "nota": "Estilo de soltera desde su nacimiento",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "01/1722–1724",
+        "texto": "la princesse des Asturies",
+        "estado": "vigente",
+        "nota": "Al casarse con Luis de España (20/01/1722)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "01/1724–08/1724",
+        "texto": "la reine d'Espagne",
+        "estado": "futura",
+        "nota": "Breve reinado de Luis I de España (enero–agosto de 1724)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1724–1742",
+        "texto": "la reine douairière d'Espagne",
+        "estado": "futura",
+        "nota": "Tras enviudar (regresa a Francia en 1725)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -8459,8 +9990,10 @@
     "escritorio_id": "philippine-elisabeth-beaujolais",
     "orden": 85,
     "nombre": "Felipa Isabel de Orleans",
-    "nombre_nac": "Felipa Isabel de Orleans",
-    "apodos": [],
+    "nombre_nac": "Philippine-Élisabeth d'Orléans",
+    "apodos": [
+      "Mademoiselle de Beaujolais"
+    ],
     "anio": 1714,
     "edad": "7",
     "nacimiento": "18/12/1714",
@@ -8512,6 +10045,15 @@
       "dama-corte",
       "dama-alianza",
       "extranjero"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1714–1734",
+        "texto": "Mademoiselle de Beaujolais",
+        "estado": "vigente",
+        "nota": "Estilo desde su nacimiento (su compromiso con el infante Carlos se romperá en 1725)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -8519,8 +10061,10 @@
     "escritorio_id": "charlotte-aglae",
     "orden": 86,
     "nombre": "Carlota Aglaé de Orleans",
-    "nombre_nac": "Carlota Aglaé de Orleans",
-    "apodos": [],
+    "nombre_nac": "Charlotte-Aglaé d'Orléans",
+    "apodos": [
+      "la princesse de Modène"
+    ],
     "anio": 1700,
     "edad": "21",
     "nacimiento": "20/10/1700",
@@ -8572,6 +10116,29 @@
       "dama-corte",
       "dama-alianza",
       "extranjero"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1700–1720",
+        "texto": "Mademoiselle de Valois",
+        "estado": "anterior",
+        "nota": "Estilo de soltera en la corte de la Regencia",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1720–1737",
+        "texto": "la princesse de Modène",
+        "estado": "vigente",
+        "nota": "Al casarse con el heredero de Módena, Francisco de Este (1720)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1737–1761",
+        "texto": "Madame la duchesse de Modène",
+        "estado": "futura",
+        "nota": "Al suceder su esposo como duque de Módena (1737)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -8579,8 +10146,10 @@
     "escritorio_id": "louise-adelaide-chelles",
     "orden": 87,
     "nombre": "Luisa Adelaida de Orleans",
-    "nombre_nac": "Luisa Adelaida de Orleans",
-    "apodos": [],
+    "nombre_nac": "Louise-Adélaïde d'Orléans",
+    "apodos": [
+      "Madame de Chelles"
+    ],
     "anio": 1698,
     "edad": "23",
     "nacimiento": "13/08/1698",
@@ -8633,6 +10202,22 @@
       "clero",
       "dama-religiosa",
       "provinciano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1698–1717",
+        "texto": "Mademoiselle de Chartres",
+        "estado": "anterior",
+        "nota": "Estilo de soltera antes de tomar el velo (1717)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1719–1734",
+        "texto": "Madame de Chelles",
+        "estado": "vigente",
+        "nota": "Consagrada abadesa de Chelles en 1719 (renunciará en 1734)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -8640,8 +10225,10 @@
     "escritorio_id": "louise-diane",
     "orden": 88,
     "nombre": "Luisa Diana de Orleans",
-    "nombre_nac": "Luisa Diana de Orleans",
-    "apodos": [],
+    "nombre_nac": "Louise-Diane d'Orléans",
+    "apodos": [
+      "Mademoiselle de Chartres"
+    ],
     "anio": 1716,
     "edad": "5",
     "nacimiento": "27/06/1716",
@@ -8692,6 +10279,22 @@
       "principe-sangre",
       "dama-corte",
       "cortesano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1716–1732",
+        "texto": "Mademoiselle de Chartres",
+        "estado": "vigente",
+        "nota": "Estilo de soltera tras profesar su hermana mayor Luisa Adelaida",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1732–1736",
+        "texto": "Madame la princesse de Conti",
+        "estado": "futura",
+        "nota": "Al casarse con Louis-François de Bourbon-Conti (22/01/1732)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -8699,8 +10302,10 @@
     "escritorio_id": "louis-clermont",
     "orden": 89,
     "nombre": "Luis de Borbón-Condé",
-    "nombre_nac": "Luis de Borbón-Condé",
-    "apodos": [],
+    "nombre_nac": "Louis de Bourbon",
+    "apodos": [
+      "Monsieur le comte de Clermont"
+    ],
     "anio": 1709,
     "edad": "13",
     "nacimiento": "15/06/1709",
@@ -8751,6 +10356,22 @@
       "principe-sangre",
       "marques-conde",
       "cortesano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1709–1771",
+        "texto": "Monsieur le comte de Clermont",
+        "estado": "vigente",
+        "nota": "Conde de Clermont desde su nacimiento",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1737–1771",
+        "texto": "Monsieur l'abbé de Saint-Germain-des-Prés",
+        "estado": "futura",
+        "nota": "Al recibir la abadía comendataria de Saint-Germain-des-Prés (1737)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -8758,8 +10379,10 @@
     "escritorio_id": "louise-anne-charolais",
     "orden": 90,
     "nombre": "Luisa Ana de Borbón-Condé",
-    "nombre_nac": "Luisa Ana de Borbón-Condé",
-    "apodos": [],
+    "nombre_nac": "Louise-Anne de Bourbon",
+    "apodos": [
+      "Mademoiselle de Charolais"
+    ],
     "anio": 1695,
     "edad": "26",
     "nacimiento": "23/06/1695",
@@ -8811,6 +10434,22 @@
       "principe-sangre",
       "dama-corte",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1695–1710",
+        "texto": "Mademoiselle de Sens",
+        "estado": "anterior",
+        "nota": "Estilo usado en su primera infancia",
+        "conf": "probable"
+      },
+      {
+        "fecha": "c. 1710–1758",
+        "texto": "Mademoiselle de Charolais",
+        "estado": "vigente",
+        "nota": "Estilo habitual en la corte desde la adolescencia hasta su muerte",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -8818,8 +10457,10 @@
     "escritorio_id": "henriette-vermandois",
     "orden": 91,
     "nombre": "Enriqueta Luisa de Borbón-Condé",
-    "nombre_nac": "Enriqueta Luisa de Borbón-Condé",
-    "apodos": [],
+    "nombre_nac": "Henriette-Louise de Bourbon",
+    "apodos": [
+      "Mademoiselle de Vermandois"
+    ],
     "anio": 1703,
     "edad": "19",
     "nacimiento": "15/01/1703",
@@ -8870,6 +10511,22 @@
       "principe-sangre",
       "dama-religiosa",
       "provinciano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1703–1733",
+        "texto": "Mademoiselle de Vermandois",
+        "estado": "vigente",
+        "nota": "Estilo de soltera (toma el velo en 1727)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1733–1772",
+        "texto": "Madame de Beaumont",
+        "estado": "futura",
+        "nota": "Abadesa de Beaumont-lès-Tours desde 1733 (también Madame de Bourbon)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -8877,8 +10534,10 @@
     "escritorio_id": "elisabeth-sens",
     "orden": 92,
     "nombre": "Isabel Alejandrina de Borbón-Condé",
-    "nombre_nac": "Isabel Alejandrina de Borbón-Condé",
-    "apodos": [],
+    "nombre_nac": "Élisabeth-Alexandrine de Bourbon",
+    "apodos": [
+      "Mademoiselle de Sens"
+    ],
     "anio": 1705,
     "edad": "16",
     "nacimiento": "15/09/1705",
@@ -8929,6 +10588,15 @@
       "principe-sangre",
       "dama-corte",
       "cortesano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1705–1765",
+        "texto": "Mademoiselle de Sens",
+        "estado": "vigente",
+        "nota": "Estilo de soltera durante toda su vida",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -8936,8 +10604,10 @@
     "escritorio_id": "louise-elisabeth-conti",
     "orden": 93,
     "nombre": "Luisa Isabel de Borbón-Condé",
-    "nombre_nac": "Luisa Isabel de Borbón-Condé",
-    "apodos": [],
+    "nombre_nac": "Louise-Élisabeth de Bourbon",
+    "apodos": [
+      "Madame la princesse de Conti"
+    ],
     "anio": 1693,
     "edad": "28",
     "nacimiento": "22/11/1693",
@@ -8990,6 +10660,29 @@
       "dama-corte",
       "dama-alianza",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1693–1713",
+        "texto": "Mademoiselle de Bourbon",
+        "estado": "anterior",
+        "nota": "Estilo de soltera como hija mayor de Luis III de Condé",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1713–1727",
+        "texto": "Madame la princesse de Conti",
+        "estado": "vigente",
+        "nota": "Al casarse con Luis Armando II, príncipe de Conti (09/07/1713; la jeune princesse de Conti)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1727–1775",
+        "texto": "Madame la princesse de Conti douairière",
+        "estado": "futura",
+        "nota": "Tras enviudar (04/05/1727; la troisième douairière)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -8997,8 +10690,11 @@
     "escritorio_id": "marie-therese-conti",
     "orden": 94,
     "nombre": "María Teresa de Borbón-Condé",
-    "nombre_nac": "María Teresa de Borbón-Condé",
-    "apodos": [],
+    "nombre_nac": "Marie-Thérèse de Bourbon",
+    "apodos": [
+      "Madame la princesse de Conti",
+      "la seconde douairière"
+    ],
     "anio": 1666,
     "edad": "56",
     "nacimiento": "01/02/1666",
@@ -9051,6 +10747,29 @@
       "dama-corte",
       "dama-alianza",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1666–1688",
+        "texto": "Mademoiselle de Bourbon",
+        "estado": "anterior",
+        "nota": "Estilo de soltera como hija del príncipe de Condé",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1688–1709",
+        "texto": "Madame la princesse de Conti",
+        "estado": "anterior",
+        "nota": "Al casarse con François-Louis, el Gran Conti (22/01/1688)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1709–1732",
+        "texto": "la seconde douairière",
+        "estado": "vigente",
+        "nota": "Princesa viuda de Conti desde 1709 (distinguida de Marie-Anne, la première douairière)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -9058,8 +10777,10 @@
     "escritorio_id": "louise-adelaide-roche",
     "orden": 95,
     "nombre": "Luisa Adelaida de Borbón-Conti",
-    "nombre_nac": "Luisa Adelaida de Borbón-Conti",
-    "apodos": [],
+    "nombre_nac": "Louise-Adélaïde de Bourbon",
+    "apodos": [
+      "Mademoiselle de La Roche-sur-Yon"
+    ],
     "anio": 1696,
     "edad": "25",
     "nacimiento": "02/11/1696",
@@ -9110,6 +10831,15 @@
       "principe-sangre",
       "dama-corte",
       "cortesano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1696–1750",
+        "texto": "Mademoiselle de La Roche-sur-Yon",
+        "estado": "vigente",
+        "nota": "Estilo de soltera durante toda su vida",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -9117,8 +10847,10 @@
     "escritorio_id": "prince-de-dombes",
     "orden": 96,
     "nombre": "Luis Augusto de Borbón",
-    "nombre_nac": "Luis Augusto de Borbón",
-    "apodos": [],
+    "nombre_nac": "Louis-Auguste de Bourbon",
+    "apodos": [
+      "Monsieur le prince de Dombes"
+    ],
     "anio": 1700,
     "edad": "22",
     "nacimiento": "04/03/1700",
@@ -9169,6 +10901,15 @@
       "legitimado",
       "cortesano",
       "ile-de-france"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1700–1755",
+        "texto": "Monsieur le prince de Dombes",
+        "estado": "vigente",
+        "nota": "Príncipe soberano de Dombes desde su nacimiento (le prince de Dombes)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -9176,8 +10917,10 @@
     "escritorio_id": "comte-d-eu",
     "orden": 97,
     "nombre": "Luis Carlos de Borbón",
-    "nombre_nac": "Luis Carlos de Borbón",
-    "apodos": [],
+    "nombre_nac": "Louis-Charles de Bourbon",
+    "apodos": [
+      "Monsieur le comte d'Eu"
+    ],
     "anio": 1701,
     "edad": "20",
     "nacimiento": "15/10/1701",
@@ -9228,6 +10971,15 @@
       "legitimado",
       "cortesano",
       "ile-de-france"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1701–1775",
+        "texto": "Monsieur le comte d'Eu",
+        "estado": "vigente",
+        "nota": "Conde de Eu desde su nacimiento (le comte d'Eu)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -9235,8 +10987,10 @@
     "escritorio_id": "anne-henriette",
     "orden": 98,
     "nombre": "Ana Enriqueta del Palatinado",
-    "nombre_nac": "Ana Enriqueta del Palatinado",
-    "apodos": [],
+    "nombre_nac": "Anne-Henriette de Bavière",
+    "apodos": [
+      "Madame la Princesse"
+    ],
     "anio": 1648,
     "edad": "74",
     "nacimiento": "13/03/1648",
@@ -9288,6 +11042,22 @@
       "dama-corte",
       "dama-alianza",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1663–1686",
+        "texto": "Madame la duchesse d'Enghien",
+        "estado": "anterior",
+        "nota": "Al casarse con Enrique Julio de Borbón-Condé (11/12/1663)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1686–1723",
+        "texto": "Madame la Princesse",
+        "estado": "vigente",
+        "nota": "Al suceder su esposo como príncipe de Condé (1686); conservado tras enviudar en 1709",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -9297,7 +11067,8 @@
     "nombre": "Joseph Pâris-Duverney",
     "nombre_nac": "Joseph Pâris",
     "apodos": [
-      "Duverney"
+      "Monsieur Duverney",
+      "Pâris-Duverney"
     ],
     "anio": 1684,
     "edad": "38",
@@ -9349,6 +11120,15 @@
       "financiero",
       "ministro",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "c. 1705–1770",
+        "texto": "Monsieur Duverney",
+        "estado": "vigente",
+        "nota": "Toma el nombre de la tierra de Duverney para distinguirse de sus hermanos (Pâris-Duverney)",
+        "conf": "probable"
+      }
     ]
   },
   {
@@ -9358,7 +11138,8 @@
     "nombre": "Antoine Pâris",
     "nombre_nac": "Antoine Pâris",
     "apodos": [
-      "Le Grand Pâris"
+      "le Grand Pâris",
+      "Monsieur Pâris"
     ],
     "anio": 1668,
     "edad": "54",
@@ -9410,6 +11191,15 @@
       "financiero",
       "ministro",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "c. 1700–1733",
+        "texto": "le Grand Pâris",
+        "estado": "vigente",
+        "nota": "Primogénito y cabeza de los cuatro hermanos Pâris (Monsieur Pâris)",
+        "conf": "probable"
+      }
     ]
   },
   {
@@ -9419,7 +11209,8 @@
     "nombre": "Samuel Bernard",
     "nombre_nac": "Samuel Bernard",
     "apodos": [
-      "El banquero de los reyes"
+      "Monsieur Bernard",
+      "le banquier des rois"
     ],
     "anio": 1651,
     "edad": "70",
@@ -9470,6 +11261,29 @@
     "simbolos": [
       "financiero",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "c. 1690–1739",
+        "texto": "Monsieur Bernard",
+        "estado": "vigente",
+        "nota": "Gran banquero de París y prestamista de la Corona",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "c. 1708",
+        "texto": "le banquier des rois",
+        "estado": "vigente",
+        "nota": "Sobrenombre europeo por sostener el Tesoro de Luis XIV y la Regencia",
+        "conf": "probable"
+      },
+      {
+        "fecha": "1725–1739",
+        "texto": "le comte de Coubert",
+        "estado": "futura",
+        "nota": "Creado conde de Coubert por Luis XV en 1725",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -9479,7 +11293,8 @@
     "nombre": "Pierre Crozat",
     "nombre_nac": "Pierre Crozat",
     "apodos": [
-      "Crozat el Joven"
+      "Monsieur Crozat",
+      "Crozat le Pauvre"
     ],
     "anio": 1665,
     "edad": "57",
@@ -9531,6 +11346,22 @@
       "financiero",
       "salon-letras",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "c. 1700–1740",
+        "texto": "Monsieur Crozat",
+        "estado": "vigente",
+        "nota": "Tesorero de Francia y gran mecenas en París",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "c. 1715",
+        "texto": "Crozat le Pauvre",
+        "estado": "vigente",
+        "nota": "Mote irónico para distinguirlo de su hermano mayor Antoine (Crozat le Riche)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -9592,6 +11423,22 @@
       "financiero",
       "ministro",
       "extranjero"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1716–1729",
+        "texto": "Monsieur Lass",
+        "estado": "vigente",
+        "nota": "Pronunciación francesa habitual de su apellido desde el Banco General y el Sistema",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "01/1720–05/1720",
+        "texto": "Monsieur le Contrôleur général",
+        "estado": "anterior",
+        "nota": "Breve ejercicio como Interventor General de Finanzas antes del hundimiento del Sistema",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -9653,6 +11500,15 @@
       "embajador",
       "militar",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1720–1725",
+        "texto": "Don Patricio Laules",
+        "estado": "vigente",
+        "nota": "Forma hispanizada usada como embajador de Felipe V en París (Monsieur de Lawless)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -9662,7 +11518,8 @@
     "nombre": "Bartolomeo Massei",
     "nombre_nac": "Bartolomeo Massei",
     "apodos": [
-      "Monseñor Massei"
+      "Monseigneur Massei",
+      "le Nonce"
     ],
     "anio": 1663,
     "edad": "59",
@@ -9715,6 +11572,22 @@
       "obispo",
       "embajador",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1721–1730",
+        "texto": "Monseigneur Massei",
+        "estado": "vigente",
+        "nota": "Arzobispo titular de Atenas y nuncio en Francia (extraordinario 1721; ordinario 27/08/1722)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1730–1745",
+        "texto": "le cardinal Massei",
+        "estado": "futura",
+        "nota": "Creado cardenal por Clemente XII el 02/10/1730",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -9724,7 +11597,8 @@
     "nombre": "Christoph von Pentenriedter",
     "nombre_nac": "Johann Christoph Pentenriedter von Adelzhausen",
     "apodos": [
-      "Barón de Pentenriedter"
+      "le baron de Pentenriedter",
+      "Monsieur de Pentenriedter"
     ],
     "anio": 1678,
     "edad": "c. 44",
@@ -9786,6 +11660,15 @@
       "marques-conde",
       "embajador",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "c. 1715–1728",
+        "texto": "Monsieur de Pentenriedter",
+        "estado": "vigente",
+        "nota": "Enviado y plenipotenciario imperial en París y Cambrai (le baron de Pentenriedter)",
+        "conf": "probable"
+      }
     ]
   },
   {
@@ -9794,7 +11677,9 @@
     "orden": 107,
     "nombre": "Cornelis Hop",
     "nombre_nac": "Cornelis Hop",
-    "apodos": [],
+    "apodos": [
+      "Monsieur Hop"
+    ],
     "anio": 1685,
     "edad": "36–37",
     "nacimiento": "1685, Ámsterdam",
@@ -9845,6 +11730,15 @@
       "embajador",
       "parisino",
       "extranjero"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1718–1725",
+        "texto": "Monsieur Hop",
+        "estado": "vigente",
+        "nota": "Embajador ordinario de los Estados Generales en París desde 1718 (l'ambassadeur de Hollande)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -9908,6 +11802,22 @@
       "figura-corte",
       "salon-letras",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1647–1666",
+        "texto": "Mademoiselle de Courcelles",
+        "estado": "anterior",
+        "nota": "Nombre de soltera",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1666–1733",
+        "texto": "Madame de Lambert",
+        "estado": "vigente",
+        "nota": "Al casarse con Henri de Lambert, marqués de Saint-Bris (1666; viuda desde 1686)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -9917,7 +11827,8 @@
     "nombre": "Madame de Tencin",
     "nombre_nac": "Claudine Guérin de Tencin",
     "apodos": [
-      "La chanoinesse"
+      "Madame de Tencin",
+      "la chanoinesse"
     ],
     "anio": 1682,
     "edad": "40",
@@ -9971,6 +11882,22 @@
       "figura-corte",
       "salon-letras",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1711",
+        "texto": "la chanoinesse",
+        "estado": "vigente",
+        "nota": "Recibida canonesa de Neuville-les-Dames (1711); mote conservado tras anular sus votos en 1712",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "c. 1714–1749",
+        "texto": "Madame de Tencin",
+        "estado": "vigente",
+        "nota": "Estilo mundano en París (las canonesas nobles llevaban el trato de Madame)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -10032,6 +11959,22 @@
       "marques-conde",
       "dama-corte",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1693–1714",
+        "texto": "Mademoiselle de Foix-Rabat",
+        "estado": "anterior",
+        "nota": "Nombre de soltera",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "08/1714–1768",
+        "texto": "Madame de Sabran",
+        "estado": "vigente",
+        "nota": "Al casarse con Jean-Honoré, conde de Sabran (contrato de agosto de 1714)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -10097,6 +12040,29 @@
       "par",
       "dama-corte",
       "dama-alianza"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1699–1713",
+        "texto": "Mademoiselle de Rohan",
+        "estado": "anterior",
+        "nota": "Nombre de soltera en la casa de Rohan-Soubise",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1713–1754",
+        "texto": "Madame de Tallard",
+        "estado": "vigente",
+        "nota": "Al casarse con Joseph d'Hostun, duque de Tallard (1713)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1732–1754",
+        "texto": "Madame la Gouvernante",
+        "estado": "futura",
+        "nota": "Gobernanta de los Hijos de Francia tras su abuela Ventadour (supervivencia 1729, titular 1732)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -10160,6 +12126,22 @@
       "dama-corte",
       "figura-corte",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1688–1705",
+        "texto": "Mademoiselle d'Alègre",
+        "estado": "anterior",
+        "nota": "Nombre de soltera",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1705–1752",
+        "texto": "Madame de Rupelmonde",
+        "estado": "vigente",
+        "nota": "Al casarse con Maximilien-Philippe-Joseph de Recourt, conde de Rupelmonde (1705; viuda 1710)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -10169,7 +12151,8 @@
     "nombre": "Adrienne Lecouvreur",
     "nombre_nac": "Adrienne Couvreur",
     "apodos": [
-      "La Lecouvreur"
+      "la Lecouvreur",
+      "Mademoiselle Lecouvreur"
     ],
     "anio": 1692,
     "edad": "30",
@@ -10221,6 +12204,15 @@
       "casa-rey",
       "salon-letras",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1717–1730",
+        "texto": "la Lecouvreur",
+        "estado": "vigente",
+        "nota": "Nombre escénico desde su debut en la Comédie-Française en 1717 (Mademoiselle Lecouvreur)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -10282,6 +12274,15 @@
       "gobernador",
       "casa-rey",
       "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1678–1729",
+        "texto": "Monsieur Blouin",
+        "estado": "vigente",
+        "nota": "Al servicio íntimo del rey desde 1678; gobernador de Versalles y Marly",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -10343,6 +12344,15 @@
       "casa-rey",
       "versalles",
       "cortesano"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1715–1754",
+        "texto": "Monsieur Bachelier",
+        "estado": "vigente",
+        "nota": "Primer ayuda de cámara del Rey desde 1715",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -10352,7 +12362,7 @@
     "nombre": "Victor-Marie d'Estrées",
     "nombre_nac": "Victor-Marie d'Estrées",
     "apodos": [
-      "Mariscal d'Estrées"
+      "le maréchal d'Estrées"
     ],
     "anio": 1660,
     "edad": "61",
@@ -10405,6 +12415,29 @@
       "mariscal",
       "militar",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1660–1703",
+        "texto": "le marquis de Cœuvres",
+        "estado": "anterior",
+        "nota": "Título de cortesía en juventud (conde d'Estrées desde 1707)",
+        "conf": "probable"
+      },
+      {
+        "fecha": "1703–1737",
+        "texto": "le maréchal d'Estrées",
+        "estado": "vigente",
+        "nota": "Elevado a mariscal de Francia en 1703",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "02/1723–1737",
+        "texto": "le duc d'Estrées",
+        "estado": "futura",
+        "nota": "Duque y par de Estrées al heredar el ducado en febrero de 1723",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -10414,7 +12447,7 @@
     "nombre": "Duque de Berwick",
     "nombre_nac": "James FitzJames",
     "apodos": [
-      "Mariscal de Berwick"
+      "le maréchal de Berwick"
     ],
     "anio": 1670,
     "edad": "51",
@@ -10469,6 +12502,29 @@
       "par",
       "mariscal",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1687–1734",
+        "texto": "le duc de Berwick",
+        "estado": "vigente",
+        "nota": "Creado I duque de Berwick por su padre Jacobo II de Inglaterra (1687)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1706–1734",
+        "texto": "le maréchal de Berwick",
+        "estado": "vigente",
+        "nota": "Creado mariscal de Francia por Luis XIV (15/02/1706)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1710–1734",
+        "texto": "le duc de Fitz-James",
+        "estado": "vigente",
+        "nota": "Creado duque y par de Fitz-James en Francia (1710)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -10530,6 +12586,15 @@
       "noble-toga",
       "salon-letras",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "c. 1680–1757",
+        "texto": "Monsieur de Fontenelle",
+        "estado": "vigente",
+        "nota": "Uso literario y académico (Academia Francesa 1691; secretario perpetuo de Ciencias 1697)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -10539,7 +12604,8 @@
     "nombre": "Barón de Montesquieu",
     "nombre_nac": "Charles-Louis de Secondat",
     "apodos": [
-      "Montesquieu"
+      "Monsieur de Montesquieu",
+      "le président de Montesquieu"
     ],
     "anio": 1689,
     "edad": "33",
@@ -10593,6 +12659,22 @@
       "salon-letras",
       "cortesano",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1689–1716",
+        "texto": "Monsieur de La Brède",
+        "estado": "anterior",
+        "nota": "Por el señorío materno de La Brède antes de heredar Montesquieu",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1716–1755",
+        "texto": "le président de Montesquieu",
+        "estado": "vigente",
+        "nota": "Hereda de su tío en 1716 la baronía de Montesquieu y la presidencia a mortero en Burdeos (Monsieur de Montesquieu)",
+        "conf": "confirmado"
+      }
     ]
   },
   {
@@ -10602,8 +12684,8 @@
     "nombre": "Voltaire",
     "nombre_nac": "François-Marie Arouet",
     "apodos": [
-      "Arouet",
-      "Voltaire"
+      "Voltaire",
+      "Monsieur de Voltaire"
     ],
     "anio": 1694,
     "edad": "27",
@@ -10655,6 +12737,29 @@
       "salon-letras",
       "cortesano",
       "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1694–1718",
+        "texto": "Arouet",
+        "estado": "anterior",
+        "nota": "Apellido de nacimiento hasta el estreno de Edipo",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1718–1778",
+        "texto": "Voltaire",
+        "estado": "vigente",
+        "nota": "Seudónimo adoptado en 1718 tras salir de la Bastilla y estrenar Edipo (Monsieur de Voltaire)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "c. 1760–1778",
+        "texto": "le patriarche de Ferney",
+        "estado": "futura",
+        "nota": "Sobrenombre en su vejez tras instalarse en Ferney (1758/1760)",
+        "conf": "confirmado"
+      }
     ]
   }
 ]
