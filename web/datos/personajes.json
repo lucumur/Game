@@ -195,7 +195,7 @@
       "intriga": 0
     },
     "hijos": "—",
-    "hitos": "Llegó a París en marzo de 1722; será devuelta a España en 1725",
+    "hitos": "Llegó a París el 2/03/1722 (Louvre); se instala en el Aposento de la Reina de Versalles el 16/06/1722; será devuelta a España en 1725.",
     "idiomas": [
       {
         "doc": true,
@@ -3364,7 +3364,7 @@
     ],
     "titulo": "Duque de Saint-Simon",
     "titulo_nob": "Duque de Saint-Simon; par de Francia; grande de España",
-    "ubicacion": "Versalles / París",
+    "ubicacion": "Meudon / Versalles / París",
     "vocacion": "Corte y letras",
     "id": "p22",
     "sexo": "M",
@@ -3374,7 +3374,7 @@
     ],
     "favor": 1,
     "escritorio_id": "saint-simon",
-    "presencia_versalles": "reside",
+    "presencia_versalles": "frecuenta",
     "residencia": [
       "habitante_ile",
       "residente_palacio",
@@ -3537,7 +3537,7 @@
     ],
     "favor": 3,
     "escritorio_id": "villars",
-    "presencia_versalles": "reside",
+    "presencia_versalles": "frecuenta",
     "residencia": [
       "habitante_paris",
       "habitante_ile"
@@ -3596,7 +3596,7 @@
     "apodos": [
       "Monsieur de Noailles"
     ],
-    "cargo": "Sin cargo de gobierno desde febrero de 1722",
+    "cargo": "Sin cargo de gobierno desde febrero de 1722; exiliado en sus tierras desde mayo de 1722",
     "casa": "Noailles",
     "conyuge": "Françoise Charlotte d'Aubigné, sobrina de Madame de Maintenon",
     "cualidades": {
@@ -3620,7 +3620,7 @@
       "intriga": 6
     },
     "hijos": "Varios",
-    "hitos": "Abandona el Consejo de Regencia el 22/02/1722 junto con Villars y Antin, en protesta por la precedencia del cardenal Dubois",
+    "hitos": "Abandona el Consejo de Regencia el 22/02/1722 junto con Villars y Antin por la precedencia de Dubois y es exiliado a sus tierras en mayo de 1722.",
     "idiomas": [
       {
         "doc": false,
@@ -3646,7 +3646,7 @@
     "orden": 24,
     "padre": "Anne Jules, mariscal duque de Noailles",
     "prompt": "Adrien-Maurice de Noailles, Duke of Noailles, an energetic 43-year-old French duke, 1722, intelligent alert face. Ambitious, restless expression, clean shaven. Brown powdered Regency wig, dark coat, the wide light-blue moiré sash of the Order of the Holy Spirit. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, modern photograph, studio flash, modern clothing, text, watermark",
-    "puesto": "Sin cargo de gobierno desde febrero de 1722",
+    "puesto": "Sin cargo de gobierno desde febrero de 1722; exiliado en sus tierras desde mayo de 1722",
     "quiere": "Volver al poder",
     "rango": 52,
     "rasgos": {
@@ -3684,7 +3684,7 @@
     ],
     "titulo": "Duque de Noailles",
     "titulo_nob": "Duque de Noailles; par de Francia",
-    "ubicacion": "París / sus tierras",
+    "ubicacion": "Exiliado en sus tierras (desde mayo de 1722)",
     "vocacion": "Armas y finanzas",
     "id": "p24",
     "sexo": "M",
@@ -3694,16 +3694,15 @@
     ],
     "favor": 1,
     "escritorio_id": "noailles",
-    "presencia_versalles": "reside",
+    "presencia_versalles": "ausente",
     "residencia": [
-      "residente_palacio",
-      "habitante_paris"
+      "provinciano"
     ],
     "simbolos": [
       "duque",
       "par",
       "cortesano",
-      "versalles"
+      "provinciano"
     ],
     "apelaciones": [
       {
@@ -7303,7 +7302,7 @@
     "vocacion": "Espada",
     "llegada_corte": "Presentado en la corte al final del reinado de Luis XIV",
     "faccion": "Tradicionalistas",
-    "ubicacion": "Versalles (Ala Norte) y Château de Saint-Aignan (Berry)",
+    "ubicacion": "Versalles (Palacio · ala por confirmar) y Château de Saint-Aignan (Berry)",
     "quiere": "Mantener viva la herencia política de su hermano el Duque de Beauvilliers (antiguo gobernador del padre del Rey)",
     "oculta": "Contactos reservados en la corte de Madrid desde su azarosa embajada de 1715-1718",
     "relacion_rey": "Miembro del Consejo de Regencia · Ex Embajador en España",
@@ -7398,7 +7397,7 @@
     "vocacion": "Espada",
     "llegada_corte": "Presentado en la corte al final del reinado de Luis XIV",
     "faccion": "Tradicionalistas",
-    "ubicacion": "Versalles (Ala Sur) y Château de Chaulnes (Picardía)",
+    "ubicacion": "Versalles (Ático del Ala Norte) y Château de Chaulnes (Picardía)",
     "quiere": "Asegurar la supervivencia de los cargos militares de su casa para sus dos hijos",
     "oculta": "Cuantiosos gastos de representación en la compañía de Caballos Ligeros de la Guardia",
     "relacion_rey": "Capitán-Teniente de los Caballos Ligeros de la Guardia Real",
@@ -8980,9 +8979,9 @@
     "faccion": "Clero Aceptante",
     "ubicacion": "Palais du Tau (Reims) y Versalles",
     "quiere": "Oficiar con esplendor incomparable la Consagración (Sacre) de Luis XV en la Catedral de Reims el 25 de octubre de 1722",
-    "oculta": "Fue elegido y consagrado a toda prisa el 6 de junio de 1722 para colocar a un Rohan aceptante de Unigenitus en el trono primado de Reims",
+    "oculta": "Fue nombrado a toda prisa el 2 de junio de 1722 para colocar a un Rohan aceptante de Unigenitus en el trono primado de Reims",
     "relacion_rey": "Consagrador del Rey Luis XV en Reims",
-    "hitos": "Con solo 27 años ocupa el primer rango entre todos los Pares de Francia; en sus manos estará la Santa Ampolla durante la unción real de octubre.",
+    "hitos": "Nombrado arzobispo-duque de Reims el 2/06/1722 (confirmado en julio y consagrado obispo el 23/08/1722); con 27 años ocupa el primer rango entre los Pares y ungirá a Luis XV en octubre.",
     "estatus": "verificado",
     "riqueza": 9,
     "rango": 90,
@@ -9020,6 +9019,7 @@
       "por_verificar"
     ],
     "simbolos": [
+      "principe-extranjero",
       "obispo",
       "duque",
       "par"
@@ -9454,6 +9454,7 @@
     "rango": 83,
     "sexo": "M",
     "rangos": [
+      "etranger",
       "eglise"
     ],
     "favor": 3,
@@ -9803,7 +9804,7 @@
     "id": "p83",
     "escritorio_id": "claude-st-georges-rouen",
     "orden": 83,
-    "nombre": "Arzobispo de Tressan (Ruan)",
+    "nombre": "Obispo de Tressan (Nantes)",
     "nombre_nac": "Louis de La Vergne de Tressan",
     "apodos": [
       "Monsieur de Nantes",
@@ -9814,14 +9815,14 @@
     "nacimiento": "1670",
     "muerte": "—",
     "casa": "La Vergne de Tressan",
-    "estatus_familia": "Nobleza de Espada Languedociana / Arzobispo-Primado",
-    "titulo": "Arzobispo de Ruan y Primado de Normandía",
-    "titulo_nob": "Arzobispo de Ruan, Primado de Normandía, Conde de Dieppe y de Louviers, Primer Limosnero del Duque de Orleans",
-    "puesto": "Arzobispo de Ruan · Primer Limosnero de Su Alteza Real el Regente",
-    "cargo": "Arzobispo de Ruan · Primer Limosnero de Su Alteza Real el Regente",
+    "estatus_familia": "Nobleza de Espada Languedociana / Obispo",
+    "titulo": "Obispo de Nantes",
+    "titulo_nob": "Obispo de Nantes, Primer Limosnero del Duque de Orleans (futuro Arzobispo de Ruan en 1723)",
+    "puesto": "Obispo de Nantes · Primer Limosnero de Su Alteza Real el Regente",
+    "cargo": "Obispo de Nantes · Primer Limosnero de Su Alteza Real el Regente",
     "padre": "Jérôme de La Vergne, marqués de Tressan",
     "madre": "Marguerite de Béon du Massés",
-    "lugar_familia": "Arzobispo de Ruan y Primado de Normandía",
+    "lugar_familia": "Obispo de Nantes (futuro Arzobispo de Ruan en 1723)",
     "conyuge": "Voto de celibato eclesiástico",
     "hijos": "Tío del futuro académico conde de Tressan",
     "religion": "Católica",
@@ -9830,11 +9831,11 @@
     "vocacion": "Clero",
     "llegada_corte": "Presentado en la corte al final del reinado de Luis XIV",
     "faccion": "Regencia",
-    "ubicacion": "Palais-Royal (París), Palacio Arzobispal de Ruan y Château de Gaillon",
+    "ubicacion": "Palais-Royal (París) y Obispado de Nantes",
     "quiere": "Tomar posesión plena del riquísimo Arzobispado de Ruan tras haber consagrado obispo a Dubois",
     "oculta": "Se prestó a ordenar sacerdote y obispo en una sola mañana al Abad Dubois en 1720 para ganarse la sede primada de Normandía",
-    "relacion_rey": "Arzobispo de Ruan · Primer Limosnero de Su Alteza Real el Regente",
-    "hitos": "Cortesano asiduo del Palais-Royal y Primer Limosnero del Regente; sucede al difunto Armand Bazin de Bezons en la sede primada de Ruan.",
+    "relacion_rey": "Obispo de Nantes · Primer Limosnero de Su Alteza Real el Regente",
+    "hitos": "Obispo de Nantes desde 1717 y Primer Limosnero del Regente; será nombrado arzobispo de Ruan en octubre de 1723 tras la vacante dejada por Armand Bazin de Bezons (1721).",
     "estatus": "verificado",
     "riqueza": 8,
     "rango": 80,
@@ -9872,7 +9873,6 @@
     ],
     "simbolos": [
       "obispo",
-      "duque",
       "casa-rey",
       "parisino"
     ],
@@ -10486,8 +10486,8 @@
     "quiere": "—",
     "oculta": "—",
     "relacion_rey": "Hermana de Monsieur le Duc",
-    "hitos": "Documentada en la abadía de Beaumont-lès-Tours en marzo de 1722.",
-    "estatus": "por verificar",
+    "hitos": "Mathieu Marais la sitúa en la abadía de Beaumont-lès-Tours en marzo de 1722. Tomó el hábito en 1727.",
+    "estatus": "verificado",
     "presencia_versalles": "ausente",
     "riqueza": 7,
     "rango": 87,
@@ -12122,7 +12122,6 @@
     ],
     "simbolos": [
       "marques-conde",
-      "mariscal",
       "dama-corte",
       "figura-corte",
       "parisino"
@@ -12411,9 +12410,10 @@
       "habitante_paris"
     ],
     "simbolos": [
-      "duque",
+      "marques-conde",
       "mariscal",
       "militar",
+      "ministro",
       "parisino"
     ],
     "apelaciones": [

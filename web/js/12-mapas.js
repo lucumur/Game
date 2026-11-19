@@ -11,7 +11,7 @@ const PALACIO = [
  ["galerie","Galería de los Espejos","Galería de los Espejos",860,185,240,50,"","Terminada en 1684. Paso diario de la corte hacia la capilla: aquí se ve y se es visto."],
  ["guerre","Salón de la Guerra","N1",1100,185,90,55,"","Extremo norte de la Galería; abre los Grandes Aposentos del Rey."],
  // Aposentos de la Reina (brazo sur)
- ["chreine","Cámara de la Reina","S2",760,240,100,55,"","Desde junio de 1722 vive aquí la infanta Mariana Victoria, de cuatro años, prometida del rey."],
+ ["chreine","Cámara de la Reina","S2",760,240,100,55,"","Desde el 16 de junio de 1722 vive aquí la infanta Mariana Victoria, de cuatro años, prometida del rey."],
  ["nobles","Gran Gabinete de la Reina","S3",760,295,100,55,"","Sala de audiencias de la reina."],
  ["antreine","Antecámara de la Reina","S4",760,350,100,50,"","Antecámara del Gran Cubierto de la Reina."],
  ["gardesreine","Sala de Guardias de la Reina","S5",760,400,100,45,"","Guardia de los aposentos de la reina."],
@@ -62,7 +62,7 @@ const ALAS_NOBLE=[
  genAla(PALACIO,{p:"n-ms",pp:"b-ms",k:"S",n:"Ala del Mediodía",x0:45,x1:760,jard:11,calle:11,trans:[[45,100],[380,430],[705,760]],o:"Hardouin-Mansart, 1679-1682.",u:"Primer piso del Ala de los Príncipes: aposentos de los príncipes de la sangre y de sus casas.",
   apts:[["midi-orleans","Aposento de Madame y de la duquesa de Orleans",3,"Cabeza del Ala de los Príncipes."],["midi-chartres","Aposento del duque de Chartres",1,"Hijo del Regente."],["midi-bourbon","Aposento de Monsieur le Duc",2,"Casa de Condé."],["midi-conti","Aposento de los príncipes de Conti",2,"Casa de Conti."],["midi-charolais","Antiguo aposento de los Maine",2,"Pasa a los Condé en 1722."]]}),
  genAla(PALACIO,{p:"n-mn",pp:"b-mn",k:"N",n:"Ala Norte",x0:1290,x1:1870,jard:9,calle:9,trans:[[1290,1340],[1560,1610],[1815,1870]],o:"Hardouin-Mansart, 1685-1689.",u:"Primer piso del Ala Norte: alojamientos de grandes cargos, prelados y cortesanos.",
-  apts:[["n-nord","Aposentos junto a la capilla (Rohan, Noailles)",2,"Grandes cargos y prelados."]]})
+  apts:[["n-nord","Aposentos junto a la capilla (Rohan, Noailles)",2,"Cardenal de Rohan; el duque de Noailles está exiliado desde mayo de 1722."]]})
 ];
 
 /* Piso 1 · Planta baja (rez-de-chaussée) */
@@ -203,7 +203,7 @@ const INFO_EST = {
  paix:{u:"Pertenece al aposento de la reina. En 1722 sirve de sala de música y juegos anexa al aposento de la pequeña infanta Mariana Victoria.",o:"Hardouin-Mansart y Le Brun, 1680-1686: techo de Le Brun sobre la Paz de Nimega.",c:["galerie","chreine","midi-orleans"]},
  galerie:{u:"La calle principal del palacio. El rey la cruza cada mañana hacia la capilla y la corte se apiña a los lados para verlo pasar y pedirle algo. El 15 de junio de 1722 Luis XV se tumbó en el parqué para mirar la bóveda.",o:"Hardouin-Mansart, 1678-1684; bóveda pintada por Le Brun (1681-1684).",c:["paix","guerre","oeil","conseil"]},
  guerre:{u:"Antesala del Gran Aposento del Rey desde la Galería. En las veladas de corte se llena de quienes pasan de un salón a otro.",o:"Hardouin-Mansart y Le Brun, 1678-1686; medallón de Luis XIV a caballo por Coysevox.",c:["galerie","apollon"]},
- chreine:{u:"Desde el 15 de junio de 1722 es la cámara de la infanta Mariana Victoria, prometida del rey, que tiene cuatro años. Antes la ocupó la delfina María Adelaida de Saboya, madre de Luis XV, que murió aquí en 1712.",o:"Hardouin-Mansart, hacia 1680, para la reina María Teresa.",c:["paix","nobles","cabreine"]},
+ chreine:{u:"Desde el 16 de junio de 1722 es la cámara de la infanta Mariana Victoria, prometida del rey, que tiene cuatro años. Antes la ocupó la delfina María Adelaida de Saboya, madre de Luis XV, que murió aquí en 1712.",o:"Hardouin-Mansart, hacia 1680, para la reina María Teresa.",c:["paix","nobles","cabreine"]},
  nobles:{u:"Sala de audiencias de la reina. En 1722 recibe el círculo de damas presentadas a la pequeña infanta.",o:"Hacia 1671-1680, decoración de la época de María Teresa; techo de Michel II Corneille.",c:["chreine","antreine","cabreine"]},
  antreine:{u:"Antecámara del Gran Cubierto de la Reina, donde los reyes comían en público. En 1722 es antesala del séquito de la infanta.",o:"Hacia 1680, época de María Teresa.",c:["nobles","gardesreine"]},
  gardesreine:{u:"Guardias de corps de servicio. Es el umbral: quien no tiene derecho de entrada se queda aquí.",o:"1676-1681. Es la única sala del aposento que conserva su decoración del siglo XVII.",c:["antreine","escreine","grandegardes"]},
@@ -259,13 +259,13 @@ const INFO_EST = {
  "midi-bourbon":{u:"La casa de Condé, rival de los Orleans. Monsieur le Duc es superintendente de la educación del rey en junio de 1722.",o:"Hardouin-Mansart, década de 1680.",c:["midi-chartres","midi-conti","n-ms-gal"]},
  "midi-conti":{u:"Los príncipes de Conti, la rama menor de los Borbón-Condé.",o:"Hardouin-Mansart, década de 1680.",c:["midi-bourbon","midi-charolais","n-ms-gal"]},
  "midi-charolais":{u:"Antiguo aposento de los duques de Maine (apartados tras la conspiración de Cellamare de 1718). Pasa a los Condé (conde y Mlle de Charolais).",o:"Hardouin-Mansart, década de 1680.",c:["midi-conti","grandegardes","n-ms-gal"]},
- "n-nord":{u:"Primer piso del Ala Norte: el cardenal de Rohan (Gran Limosnero de 1713 a 1749) y el duque de Noailles, cerca de la capilla.",o:"Hardouin-Mansart, 1685-1689.",c:["tribune","hercule","n-mn-gal"]},
+ "n-nord":{u:"Primer piso del Ala Norte: el cardenal de Rohan (Gran Limosnero de 1713 a 1749), junto a la Capilla. El aposento del duque de Noailles permanece vacío en junio de 1722 tras su exilio a sus tierras en mayo de 1722.",o:"Hardouin-Mansart, 1685-1689.",c:["tribune","hercule","n-mn-gal"]},
  "b-gouverneur":{u:"Alojamiento del gobernador del rey. El 15 de junio de 1722 se instala Villeroy; el 10 de agosto de 1722 es arrestado y desterrado a Lyon, pasando al duque de Charost.",o:"Hardouin-Mansart, década de 1680.",c:["b-sud","b-fleury","b-reg-ant"]},
  "b-fleury":{u:"Antiguo aposento de los Hijos de Francia, ocupado desde junio de 1722 por André-Hercule de Fleury, preceptor de Luis XV.",o:"Hardouin-Mansart, 1689-1699.",c:["b-gouverneur","b-escreine","b-aile-s"]},
  "b-blouin":{u:"Louis Blouin, primer ayuda de cámara e intendente de Versalles: custodió el palacio durante los siete años de ausencia en París (1715-1722).",o:"Década de 1680.",c:["b-interiores","b-hoquetons"]},
  "a-chapelle-voute":{u:"Sin piso habitable: armadura y cubierta sobre la bóveda pintada de la Capilla Real.",o:"Hardouin-Mansart y Robert de Cotte, 1689-1710.",c:["tribune"]},
  "a-boveda":{u:"No hay piso habitable: aquí sube el trasdós de la gran bóveda pintada de la Galería de los Espejos.",o:"Hardouin-Mansart y Le Brun, 1678-1684.",c:[]},
- "a-sud":{u:"Alojamientos de gentilhombres y damas sobre los aposentos de la reina (duque de Mortemart, duque de Saint-Aignan).",o:"Le Vau, 1668-1670; subdivisiones posteriores.",c:["a-escreine","a-salle-gardes","a-centro"]},
+ "a-sud":{u:"Alojamientos de gentilhombres y damas sobre los aposentos de la reina (duque de Mortemart; duque de Saint-Aignan, ala por confirmar en junio de 1722).",o:"Le Vau, 1668-1670; subdivisiones posteriores.",c:["a-escreine","a-salle-gardes","a-centro"]},
  "a-salle-gardes":{u:"Ático meridional contiguo a la Escalera de la Reina.",o:"Hardouin-Mansart, 1682.",c:["a-escreine","a-sud","a-aile-s","a-ms-gal"]},
  "a-centro":{u:"Desvanes y entresuelos sobre la Cámara del Rey: primeros ayudas de cámara, guardarropas y criados de cámara.",o:"Núcleo de Luis XIII, rehecho por Hardouin-Mansart en 1701.",c:["a-sud","a-gardes-att","a-roi"]},
  "a-gardes-att":{u:"Entresuelos y desvanes de servicio sobre las antecámaras reales.",o:"Hardouin-Mansart, 1701.",c:["a-centro","a-escreine"]},
@@ -316,22 +316,22 @@ const INFO_EST = {
  boulogne:{u:"Bosque real a las puertas de París: lugar de paseo de las carrozas elegantes, de retiro espiritual en la abadía de Longchamp y de duelos al amanecer lejos de los guardias.",o:"Coto real cerrado de muros bajo Francisco I y Luis XIV.",c:["stcloud","sena","barriere-conference"]},
  "barriere-conference":{u:"Puerta fiscal y policial en el extremo oeste de París, al final del Cours-la-Reine. Los comisarios del teniente de policía d'Argenson / Baudry anotan las carrozas ilustres y registran los fardos en busca de libelos jansenistas.",o:"Barrera de los Fermiers Généraux junto al Sena.",c:["sevres","boulogne","sena","tuileries","paris-hotels","palais-royal"]},
  "paris-hotels":{u:"Los grandes hôtels particulares del Faubourg Saint-Germain y del Marais (Hôtel de Condé, Palais-Bourbon en construcción para Madame la Duchesse, Hôtel de Toulouse, Hôtel de Soubise): aquí siguen los intendentes, los archivos familiares y los acreedores.",o:"Mansart, Bullet, Boffrand y Germain Boffrand (1700-1722).",c:["barriere-conference","tuileries","palais-royal","paris-parlement"]},
- tuileries:{u:"Sede del gobierno y residencia de Luis XV desde diciembre de 1715 hasta el 15 de junio de 1722. Quedan allí las Academias, la casa de la pequeña infanta en el Louvre y los salones vacíos tras la partida a Versalles.",o:"Philibert Delorme, Le Vau y Le Nôtre.",c:["barriere-conference","palais-royal","paris-hotels","paris-parlement","sena"]},
+ tuileries:{u:"Sede del gobierno y residencia de Luis XV en las Tullerías y de la pequeña infanta en el Louvre hasta su traslado a Versalles los días 15 y 16 de junio de 1722. Quedan allí las Academias y los salones vacíos tras la mudanza de la corte.",o:"Philibert Delorme, Le Vau y Le Nôtre.",c:["barriere-conference","palais-royal","paris-hotels","paris-parlement","sena"]},
  "palais-royal":{u:"El verdadero centro neurálgico de París: residencia de Felipe II de Orleans, galerías de pintura, la Ópera real al costado y los comedores privados donde el Regente celebra sus cenas con los «roués» y la marquesa de Parabère.",o:"Palacio Cardinal de Richelieu, reformado por Oppenord para el Regente (1715-1720).",c:["barriere-conference","tuileries","paris-hotels","paris-parlement"]},
  "paris-parlement":{u:"La Île de la Cité con el Palais de Justice (sede del Parlamento de París, que regresó en diciembre de 1720 de su destierro en Pontoise), la catedral de Notre-Dame del cardenal de Noailles y, en la orilla derecha, la rue Quincampoix aún marcada por la quiebra de Law.",o:"Palais de la Cité y Grand'Chambre del Parlamento.",c:["tuileries","palais-royal","paris-hotels","sena"]}
 };
 
 const OCUP = {
  chambre:[["Luis XV","luis-xv","a","Duerme en la cama de Luis XIV desde el 15 de junio."]],
- chreine:[["Mariana Victoria, infanta de España","mariana-victoria","a","Prometida del rey, cuatro años."]],
- cabreine:[["Duquesa de Ventadour",null,"a","Gobernanta de la infanta (antes, del rey)."]],
+ chreine:[["Mariana Victoria, infanta de España","mariana-victoria","a","Prometida del rey, cuatro años; instalada desde el 16 de junio de 1722 (antes en el Louvre)."]],
+ cabreine:[["Duquesa de Ventadour","ventadour","a","Gobernanta de la infanta (antes, del rey)."]],
  "b-reg-ch":[["Felipe II de Orleans, el Regente","felipe-ii-orleans","a","Morirá en su gabinete contiguo el 2 de diciembre de 1723."]],
  "b-reg-cab":[["Felipe II de Orleans, el Regente","felipe-ii-orleans","a","Despacho privado del Regente."]],
  "b-gouverneur":[["Mariscal duque de Villeroy","villeroy","a","Gobernador del rey en junio de 1722; arrestado el 10 de agosto."],["Duque de Charost","charost","a","Sustituye a Villeroy desde el 14 de agosto de 1722."]],
  "b-fleury":[["André-Hercule de Fleury","fleury","a","Antiguo obispo de Fréjus, preceptor del rey (ocupa el antiguo aposento de los Hijos de Francia)."]],
  "b-tou-ch":[["Conde de Toulouse","comte-de-toulouse","a","Hijo legitimado de Luis XIV; conserva el Aposento de los Baños en 1715, 1722 y 1732."]],
  "b-capitaine":[["Capitán de guardias de corps de cuartel","francois-harcourt","a","Rotan por trimestre (Noailles, Villeroy, Charost, Harcourt)."]],
- "b-blouin":[["Louis Blouin",null,"a","Primer ayuda de cámara e intendente de Versalles (m. 1729)."]],
+ "b-blouin":[["Louis Blouin","louis-blouin","a","Primer ayuda de cámara e intendente/gobernador de Versalles (m. 1729)."]],
  maintenon:[["Vacante",null,"a","Mme de Maintenon se retiró a Saint-Cyr en 1715 y murió en 1719; inventariado en 1722."]],
  antin:[["Duque de Antin","antin","a","Director general de los Edificios del Rey; mismo ocupante en 1715 y 1732."]],
  "midi-orleans":[["Madame, princesa palatina","liselotte","a","Madre del Regente; muere en Saint-Cloud el 8 de diciembre de 1722."],["Duquesa de Orleans","francoise-marie-blois","a","Esposa del Regente."]],
@@ -339,9 +339,9 @@ const OCUP = {
  "midi-bourbon":[["Monsieur le Duc","luis-enrique-borbon","a","Superintendente de la educación del rey desde 1718."],["Madame la Duchesse (viuda)","louise-francoise-duchesse","m","Madre de Monsieur le Duc."]],
  "midi-conti":[["Príncipe de Conti","louis-armand-conti","a","Mismo aposento familiar entre 1715 y 1732."],["Princesa de Conti","louise-elisabeth-conti","a",""]],
  "midi-charolais":[["Conde de Charolais","charles-charolais","m","Antiguo aposento del duque de Maine (desgraciado tras Cellamare)."],["Mademoiselle de Charolais","louise-anne-charolais","m",""]],
- "n-nord":[["Cardenal de Rohan","cardenal-rohan","a","Gran Limosnero de Francia (1713-1749), alojado junto a la Capilla."],["Duque de Noailles","noailles","m","Capitán de la 1.ª compañía de Guardias de Corps."]],
+ "n-nord":[["Cardenal de Rohan","cardenal-rohan","a","Gran Limosnero de Francia (1713-1749), alojado junto a la Capilla."],["Duque de Noailles (ausente, exiliado)","noailles","a","Exiliado a sus tierras en mayo de 1722 por Dubois; no reside en el palacio en junio de 1722."]],
  "a-roi":[["Luis XV (Petits Cabinets y Cuadros)","luis-xv","a","Primeras piezas de recreo acondicionadas en el ático al volver en junio de 1722."]],
- "a-sud":[["Duque de Mortemart","louis-mortemart","m","Primer gentilhombre de la Cámara."],["Duque de Saint-Aignan","paul-hippolyte-st-aignan","m","Medio hermano de Beauvillier."]],
+ "a-sud":[["Duque de Mortemart","louis-mortemart","m","Primer gentilhombre de la Cámara."],["Duque de Saint-Aignan","paul-hippolyte-st-aignan","b","Medio hermano de Beauvillier (ala exacta en junio de 1722 por confirmar)."]],
  "a-nord":[["Duques de Chaulnes, Luxemburgo y Rochechouart","louis-auguste-chaulnes","b","Cortesanos del ático del Ala Norte."]],
  // Ocupantes y figuras clave del Dominio y de París en junio de 1722
  stcloud:[["Madame, princesa palatina","liselotte","a","Reside en Saint-Cloud de primavera a otoño; fallece aquí el 8 de diciembre de 1722."],["Felipe II de Orleans, el Regente","felipe-ii-orleans","a","Visita a su madre casi cada semana desde Versalles o París."]],
@@ -350,9 +350,9 @@ const OCUP = {
  "palais-royal":[["Felipe II de Orleans, el Regente","felipe-ii-orleans","a","Sede parisiense de la casa de Orleans y de sus cenas privadas."],["Cardenal Dubois","dubois","a","Despacha el correo extranjero y las finanzas de la Regencia."]],
  "paris-hotels":[["Madame la Duchesse (viuda)","louise-francoise-duchesse","a","Hace construir el Palais-Bourbon frente a los Campos Elíseos."],["Conde de Toulouse","comte-de-toulouse","a","Hôtel de Toulouse (junto a la Place des Victoires)."],["Príncipe de Conti","louis-armand-conti","a","Hôtel de Conti (Quai Malaquais)."]],
  "paris-parlement":[["Jean-Antoine de Mesmes, primer presidente","jean-antoine-mesmes","a","Cabeza del Parlamento de París."],["Cardenal de Noailles, arzobispo de París","louis-antoine-noailles","a","Arzobispado junto a Notre-Dame; líder de los apelantes de la bula Unigenitus."]],
- gecurie:[["Príncipe Carlos de Lorena (Monsieur le Grand)",null,"a","Gran Escudero de Francia."]],
+ gecurie:[["Príncipe Carlos de Lorena (Monsieur le Grand)","carlos-de-lorena","a","Gran Escudero de Francia."]],
  pecurie:[["Marqués de Beringhen (Monsieur le Premier)",null,"a","Primer Escudero del Rey."]],
- "ville-n":[["Canciller d'Aguesseau / Guarda de los Sellos Armenonville",null,"a","Chancillería y hôtels ministeriales del barrio de Notre-Dame."]]
+ "ville-n":[["Guarda de los Sellos Armenonville","armenonville","a","Nombrado el 1 de marzo de 1722 tras el destierro del canciller d'Aguesseau a Fresnes (28 feb 1722)."]]
 };
 
 /* Enlaces automáticos de las alas: vecinos de fila, galería, crujías y patios (sin duplicar) */
@@ -383,6 +383,12 @@ let OCUP_DB={};
 const CATS={real:"Familia real",hombre:"Hombre de corte",mujer:"Mujer de corte",cargo:"Lugar de un cargo"};
 const CAT_PJ={"luis-xv":"real","mariana-victoria":"real","felipe-ii-orleans":"real","liselotte":"real","francoise-marie-blois":"real","luis-orleans-chartres":"real","luis-enrique-borbon":"real","louise-francoise-duchesse":"real","louis-armand-conti":"real","louise-elisabeth-conti":"real","charles-charolais":"real","louise-anne-charolais":"real","comte-de-toulouse":"real"};
 const CAT_EST={"b-gouverneur":"cargo","b-fleury":"cargo","b-capitaine":"cargo","b-blouin":"cargo","b-hoquetons":"cargo","b-servicio":"cargo",cabreine:"mujer",antin:"cargo"};
+function buscarPjMapa(pid){
+  if(!pid)return {L:null,p:null};
+  const L=(typeof LIBRO!=="undefined"&&LIBRO)?LIBRO.find(c=>c.escritorio_id===pid||c.id===pid):null;
+  const p=(typeof PERSONAJES!=="undefined"&&PERSONAJES)?PERSONAJES.find(x=>x.id===pid):null;
+  return {L,p};
+}
 function ocupantes(id){
   const d=OCUP_DB[id]; if(d&&Array.isArray(d.lista))return d.lista.map(o=>[o.n,o.pid||null,o.conf||"m",o.nota||"",o.cat||"hombre"]);
   return (OCUP[id]||[]).map(o=>[o[0],o[1],o[2],o[3],o[1]&&CAT_PJ[o[1]]?CAT_PJ[o[1]]:(CAT_EST[id]||"hombre")]);
@@ -398,8 +404,8 @@ function ocupEditor(id){
   const nota=el("input",{type:"text",placeholder:"Nota o fuente (opcional)","aria-label":"Nota"});
   return el("div",{class:"ocup-ed"},
     el("div",{class:"row"},nom,cat,conf),nota,
-    el("div",{class:"row"},el("button",{class:"btn sm",onclick:()=>{if(!nom.value.trim())return;const pj=typeof PERSONAJES!=="undefined"?PERSONAJES.find(p=>p.nombre.toLowerCase()===nom.value.trim().toLowerCase()):null;
-      guardar([...L,{n:nom.value.trim(),cat:cat.value,conf:conf.value,nota:nota.value.trim(),pid:pj?pj.id:null}])}},"Añadir ocupante"),
+    el("div",{class:"row"},el("button",{class:"btn sm",onclick:()=>{if(!nom.value.trim())return;const q=nom.value.trim().toLowerCase();const pjL=typeof LIBRO!=="undefined"&&LIBRO?LIBRO.find(c=>c.nombre.toLowerCase()===q||(c.nombre_nac&&c.nombre_nac.toLowerCase()===q)):null;const pjP=typeof PERSONAJES!=="undefined"?PERSONAJES.find(p=>p.nombre.toLowerCase()===q):null;const pid=pjL?(pjL.escritorio_id||pjL.id):(pjP?pjP.id:null);
+      guardar([...L,{n:nom.value.trim(),cat:cat.value,conf:conf.value,nota:nota.value.trim(),pid}])}},"Añadir ocupante"),
       L.length?el("button",{class:"btn sm danger",onclick:()=>guardar(L.slice(0,-1))},"Quitar el último"):"",msg));
 }
 
@@ -850,8 +856,8 @@ function roomInfo(id,n,d){
     const CF={a:"confirmado (alta)",m:"probable (media)",b:"dudoso (baja)"};
     const ul=el("div",{class:"ocup"});
     OC.forEach(([nom,pid,cf,nota,cat])=>{
-      const p=pid&&typeof PERSONAJES!=="undefined"?PERSONAJES.find(x=>x.id===pid):null;
-      const nm=p?el("button",{class:"btn sm",onclick:()=>openFicha(p)},nom):el("b",{},nom);
+      const found=buscarPjMapa(pid);
+      const nm=found.L?el("button",{class:"btn sm",onclick:()=>openFichaL(found.L)},nom):found.p?el("button",{class:"btn sm",onclick:()=>openFicha(found.p)},nom):el("b",{},nom);
       ul.append(el("div",{class:"oc"},el("i",{class:"dot cat-"+cat,title:CATS[cat]||""}),nm,el("span",{class:"tag"+(cf==="a"?" ej":"")},CF[cf]||cf),nota?el("span",{class:"note"},nota):""));
     });
     box.append(el("span",{class:"label"},"Residentes y figuras clave en junio de 1722"),ul);
