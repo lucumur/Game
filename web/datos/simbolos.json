@@ -1,30 +1,774 @@
 [
-  {"id": "rey", "nombre": "Rey", "grupo": "Dignidad", "desc": "Monarca reinante (Francia o España).", "svg": "<path d='M4 18h16l-1.5-9-4 3.5L12 6l-2.5 6.5L5.5 9 4 18zm1 2h14'/>"},
-  {"id": "principe-sangre", "nombre": "Príncipe de la sangre", "grupo": "Dignidad", "desc": "Casa real legítima (Du sang): Orleans, Condé, Conti.", "svg": "<path d='M12 3c1.5 3 2.5 5 2.5 7a2.5 2.5 0 0 1-5 0c0-2 1-4 2.5-7zm-6 9c2 0 4 1.2 4 3a2 2 0 0 1-4 0c0-.8.3-1.5 1-2m11-1c-2 0-4 1.2-4 3a2 2 0 0 0 4 0c0-.8-.3-1.5-1-2M8 17h8m-4-2v5'/>"},
-  {"id": "legitimado", "nombre": "Príncipe legitimado", "grupo": "Dignidad", "desc": "Hijo o descendiente legitimado de Luis XIV.", "svg": "<path d='M12 3l2.2 5H19l-3.8 3 1.4 5-4.6-3-4.6 3 1.4-5L5 8h4.8z'/><path d='M6 20h12'/>"},
-  {"id": "principe-extranjero", "nombre": "Príncipe extranjero", "grupo": "Dignidad", "desc": "Casa con rango de príncipe extranjero en la corte (Rohan, Bouillon, Lorena, La Trémoille).", "svg": "<circle cx='12' cy='12' r='8'/><path d='M4 12h16M12 4c2.5 2.6 2.5 13.4 0 16M12 4c-2.5 2.6-2.5 13.4 0 16'/>"},
-  {"id": "duque", "nombre": "Duque", "grupo": "Dignidad", "desc": "Titular o consorte de un ducado.", "svg": "<path d='M4 17h16l-1-7-3.5 2L12 7l-3.5 5L5 10l-1 7z'/><circle cx='5' cy='8' r='1'/><circle cx='12' cy='5' r='1'/><circle cx='19' cy='8' r='1'/>"},
-  {"id": "par", "nombre": "Par de Francia", "grupo": "Dignidad", "desc": "Paría registrada en el Parlamento de París: precedencia, lit de justice y Sacre.", "svg": "<path d='M12 4v16M5 8h14M6 8l-2 5h4l-2-5zm12 0l-2 5h4l-2-5zM8 20h8'/>"},
-  {"id": "marques-conde", "nombre": "Marqués / Conde", "grupo": "Dignidad", "desc": "Título condal o marquesal sin rango ducal.", "svg": "<path d='M5 17h14l-.8-6-3.2 2-3-4-3 4-3.2-2L5 17z'/><path d='M6 20h12'/>"},
-  {"id": "noble-espada", "nombre": "Nobleza de espada", "grupo": "Dignidad", "desc": "Antigua nobleza militar o gentilhombre de espada.", "svg": "<path d='M18 4L8 14m-2 2l-2 4 4-2m1-5l3 3M14 5l5 5'/>"},
-  {"id": "noble-toga", "nombre": "Nobleza de toga", "grupo": "Dignidad", "desc": "Magistratura, consejos reales y grandes familias de toga.", "svg": "<path d='M8 4h8l2 15H6L8 4zm4 0v15M9 9h6'/>"},
-  {"id": "cardenal", "nombre": "Cardenal", "grupo": "Dignidad", "desc": "Príncipe de la Iglesia con púrpura cardenalicia.", "svg": "<path d='M4 13c3-4 13-4 16 0H4z'/><path d='M8 10c1-3 7-3 8 0'/><path d='M7 13l-2 6m12-6l2 6'/>"},
-  {"id": "obispo", "nombre": "Arzobispo / Obispo", "grupo": "Dignidad", "desc": "Prelado con mitra diocesana o arzobispal.", "svg": "<path d='M12 4l4 6-1.5 7h-5L8 10l4-6zM9 17h6m-3-9v5m-2-3h4'/>"},
-  {"id": "clero", "nombre": "Clero", "grupo": "Dignidad", "desc": "Religioso, confesor, abadesa o eclesiástico sin mitra.", "svg": "<path d='M12 4v16M7 9h10'/>"},
-  {"id": "cortesano", "nombre": "Cortesano", "grupo": "Papel en la corte", "desc": "Presencia y juego social constante en los salones y antecámaras.", "svg": "<path d='M6 7c2 2 10 2 12 0l-1 11H7L6 7z'/><path d='M9 10v4m6-4v4'/>"},
-  {"id": "dama-corte", "nombre": "Dama de corte", "grupo": "Papel en la corte", "desc": "Dama, princesa o figura femenina con peso en corte o salón.", "svg": "<path d='M12 19c-4-3-7-6-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 9c0 4-3 7-7 10z'/>"},
-  {"id": "ministro", "nombre": "Ministro / Consejo", "grupo": "Papel en la corte", "desc": "Secretario de Estado, consejero de Regencia, Guardasellos o Finanzas.", "svg": "<path d='M6 4h12v16H6zM9 8h6M9 12h6M9 16h4'/>"},
-  {"id": "mariscal", "nombre": "Mariscal de Francia", "grupo": "Papel en la corte", "desc": "Bastón azul sembrado de flores de lis; suprema dignidad militar.", "svg": "<path d='M6 18L18 6M14 6l4 4M6 14l4 4'/>"},
-  {"id": "militar", "nombre": "Oficial / Guardia", "grupo": "Papel en la corte", "desc": "Mando de regimiento, Guardias de Corps, Guardias Francesas o dragones.", "svg": "<path d='M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z'/>"},
-  {"id": "gobernador", "nombre": "Gobernador", "grupo": "Papel en la corte", "desc": "Gobierno territorial de una provincia, ciudad o plaza.", "svg": "<path d='M4 20V8l4-3 4 3 4-3 4 3v12H4zm6 0v-5h4v5'/>"},
-  {"id": "parlamentario", "nombre": "Parlamento", "grupo": "Papel en la corte", "desc": "Primer Presidente de un Parlamento o Consejo Soberano.", "svg": "<path d='M4 9l8-4 8 4H4zm2 0v8m4-8v8m4-8v8m4-8v8M3 19h18'/>"},
-  {"id": "embajador", "nombre": "Embajador / Nuncio", "grupo": "Papel en la corte", "desc": "Representante diplomático de una potencia extranjera o de Roma.", "svg": "<path d='M4 7h16v10H4zM4 7l8 6 8-6'/>"},
-  {"id": "financiero", "nombre": "Financiero", "grupo": "Papel en la corte", "desc": "Banca, Tesoro Real, operación del Visa y préstamos a la Corona.", "svg": "<circle cx='12' cy='12' r='7'/><path d='M12 8v8m-2-6.5h3a1.5 1.5 0 0 1 0 3h-2a1.5 1.5 0 0 0 0 3h3'/>"},
-  {"id": "casa-rey", "nombre": "Servicio de la Maison", "grupo": "Papel en la corte", "desc": "Cuidado y educación de la familia real, cargos de cámara y de honor, y servicios médicos, arquitectónicos, musicales y teatrales de la corte.", "svg": "<path d='M12 5a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm-6 14a6 6 0 0 1 12 0'/>"},
-  {"id": "salon-letras", "nombre": "Salón / Letras", "grupo": "Papel en la corte", "desc": "Escritor, académico, memorialista, dramaturgo o anfitrión de salón.", "svg": "<path d='M19 5c-4 0-8 3-10 8l-2 5 5-2c5-2 7-6 7-11z'/>"},
-  {"id": "versalles", "nombre": "Versalles", "grupo": "Residencia", "desc": "Residente en el palacio o habitante de la ciudad de Versalles.", "svg": "<path d='M3 18h18M5 18V9l4-2v11m6 0V7l4 2v9M9 11h6v7H9z'/>"},
-  {"id": "ile-de-france", "nombre": "Île-de-France", "grupo": "Residencia", "desc": "Habitante de l'Île (Saint-Cloud, Sceaux, Meudon, Chantilly, Rambouillet).", "svg": "<path d='M4 17c4-5 12-5 16 0M7 13l5-7 5 7'/>"},
-  {"id": "parisino", "nombre": "Parisino", "grupo": "Residencia", "desc": "Habitante de París (hôtel o residencia en la capital; visita Versalles).", "svg": "<path d='M6 19V8l3-3v14m6 0V5l3 3v11M9 11h6v8H9z'/>"},
-  {"id": "provinciano", "nombre": "Provinciano", "grupo": "Residencia", "desc": "Vive en su provincia o diócesis fuera de la región parisiense.", "svg": "<path d='M3 18l5-6 4 3 4-7 5 10H3z'/>"},
-  {"id": "extranjero", "nombre": "Extranjero", "grupo": "Residencia", "desc": "Reside fuera del reino de Francia en junio de 1722.", "svg": "<path d='M4 15s3-2 8 0 8 0 8 0V6s-3 2-8 0-8 0-8 0v13'/>"}
+  {
+    "id": "rey",
+    "nombre": "Rey",
+    "grupo": "Dignidad",
+    "desc": "Monarca reinante (Francia o España).",
+    "svg": "<path d='M4 18h16l-1.5-9-4 3.5L12 6l-2.5 6.5L5.5 9 4 18zm1 2h14'/>",
+    "ficha": {
+      "significado": "Dignidad del monarca reinante. El Libro reúne a Luis XV de Francia y a Felipe V de España, cada uno soberano de su propio reino.",
+      "motivo": "Una corona cerrada de oro con arcos, perlas y cruz remite a las insignias de la soberanía.",
+      "color": {
+        "nombre": "Azul real y oro",
+        "muestra": "#123e89",
+        "texto": "El azul del fondo y el metal dorado aluden a las insignias borbónicas. La ilustración comparte ese código para ambas monarquías."
+      },
+      "contexto": "En junio de 1722 Luis XV aún es menor. Felipe de Orleans ejerce la Regencia en Francia.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Musée de l’Armée · Retrato de Luis XIV y sus insignias",
+          "url": "https://www.musee-armee.fr/collections/tresors-du-musee/portrait-louis-xiv.html"
+        },
+        {
+          "nombre": "Château de Versailles · El regreso de la corte en 1722",
+          "url": "https://www.chateauversailles.fr/decouvrir/histoire/grandes-dates/retour-cour-versailles"
+        }
+      ]
+    }
+  },
+  {
+    "id": "principe-sangre",
+    "nombre": "Príncipe de la sangre",
+    "grupo": "Dignidad",
+    "desc": "Casa real legítima (Du sang): Orleans, Condé, Conti.",
+    "svg": "<path d='M12 3c1.5 3 2.5 5 2.5 7a2.5 2.5 0 0 1-5 0c0-2 1-4 2.5-7zm-6 9c2 0 4 1.2 4 3a2 2 0 0 1-4 0c0-.8.3-1.5 1-2m11-1c-2 0-4 1.2-4 3a2 2 0 0 0 4 0c0-.8-.3-1.5-1-2M8 17h8m-4-2v5'/>",
+    "ficha": {
+      "significado": "Rango dinástico de los príncipes y princesas de las ramas legítimas de la casa real francesa, como Orleans, Condé y Conti.",
+      "motivo": "La flor de lis dorada señala la pertenencia a la dinastía borbónica.",
+      "color": {
+        "nombre": "Azul real y oro",
+        "muestra": "#153e8b",
+        "texto": "El azul reúne a la familia real en la serie. El oro identifica a los príncipes de la sangre frente a la flor de lis plateada de los legitimados."
+      },
+      "contexto": "El rango dinástico daba precedencia en la corte y podía acompañar a un título ducal o a un cargo de gobierno.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Leonhard Horowski · Jerarquías y cargos de la corte",
+          "url": "https://chateauversailles-recherche.fr/IMG/pdf/horowski_prosopographie_intro.pdf"
+        }
+      ]
+    }
+  },
+  {
+    "id": "legitimado",
+    "nombre": "Príncipe legitimado",
+    "grupo": "Dignidad",
+    "desc": "Hijo o descendiente legitimado de Luis XIV.",
+    "svg": "<path d='M12 3l2.2 5H19l-3.8 3 1.4 5-4.6-3-4.6 3 1.4-5L5 8h4.8z'/><path d='M6 20h12'/>",
+    "ficha": {
+      "significado": "Dignidad que identifica a los hijos de Luis XIV reconocidos mediante legitimación y, en el Libro, a miembros de sus ramas.",
+      "motivo": "La flor de lis conserva la misma silueta que la de los príncipes de la sangre. La diferencia se reconoce en el metal.",
+      "color": {
+        "nombre": "Azul real y plata",
+        "muestra": "#1b4489",
+        "texto": "El fondo azul expresa el parentesco con la casa real. La plata es la convención visual elegida para distinguir a los legitimados."
+      },
+      "contexto": "La legitimación daba rango en la corte. La precedencia de los legitimados fue objeto de disputas durante la Regencia.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Leonhard Horowski · Jerarquías y cargos de la corte",
+          "url": "https://chateauversailles-recherche.fr/IMG/pdf/horowski_prosopographie_intro.pdf"
+        }
+      ]
+    }
+  },
+  {
+    "id": "principe-extranjero",
+    "nombre": "Príncipe extranjero",
+    "grupo": "Dignidad",
+    "desc": "Casa con rango de príncipe extranjero en la corte (Rohan, Bouillon, Lorena, La Trémoille).",
+    "svg": "<circle cx='12' cy='12' r='8'/><path d='M4 12h16M12 4c2.5 2.6 2.5 13.4 0 16M12 4c-2.5 2.6-2.5 13.4 0 16'/>",
+    "ficha": {
+      "significado": "Rango reconocido en la corte francesa a determinadas casas principescas, entre ellas Lorena, Rohan y Bouillon.",
+      "motivo": "El orbe dorado alude al origen y las pretensiones de soberanía de esas casas. El Libro lo usa como emblema de la categoría.",
+      "color": {
+        "nombre": "Verde esmeralda y oro",
+        "muestra": "#064b3c",
+        "texto": "El verde distingue este rango del azul que comparten los emblemas de la familia real francesa."
+      },
+      "contexto": "Muchos miembros de estas casas vivían en Francia o servían al rey. La ficha de residencia indica dónde vivía cada persona.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Leonhard Horowski · Jerarquías y cargos de la corte",
+          "url": "https://chateauversailles-recherche.fr/IMG/pdf/horowski_prosopographie_intro.pdf"
+        }
+      ]
+    }
+  },
+  {
+    "id": "duque",
+    "nombre": "Duque",
+    "grupo": "Dignidad",
+    "desc": "Titular o consorte de un ducado.",
+    "svg": "<path d='M4 17h16l-1-7-3.5 2L12 7l-3.5 5L5 10l-1 7z'/><circle cx='5' cy='8' r='1'/><circle cx='12' cy='5' r='1'/><circle cx='19' cy='8' r='1'/>",
+    "ficha": {
+      "significado": "Dignidad de quien posee o comparte por matrimonio el título correspondiente a un ducado.",
+      "motivo": "La corona abierta de oro tiene un anillo de florones altos y un aro guarnecido de piedras.",
+      "color": {
+        "nombre": "Burdeos y oro",
+        "muestra": "#711728",
+        "texto": "El terciopelo burdeos es la convención de la serie para la dignidad ducal."
+      },
+      "contexto": "Un ducado podía llevar anexa la paría. Cuando el Libro reconoce ambos rangos, muestra también el símbolo de Par de Francia.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Leonhard Horowski · Jerarquías y cargos de la corte",
+          "url": "https://chateauversailles-recherche.fr/IMG/pdf/horowski_prosopographie_intro.pdf"
+        }
+      ]
+    }
+  },
+  {
+    "id": "par",
+    "nombre": "Par de Francia",
+    "grupo": "Dignidad",
+    "desc": "Dignidad con derecho de asiento en el Parlamento y precedencia en solemnidades.",
+    "svg": "<path d='M12 4v16M5 8h14M6 8l-2 5h4l-2-5zm12 0l-2 5h4l-2-5zM8 20h8'/>",
+    "ficha": {
+      "significado": "Dignidad vinculada a la precedencia y al derecho de asiento en el Parlamento de París. Hubo pares por nacimiento, por un título territorial y por ciertas sedes eclesiásticas.",
+      "motivo": "Un sello de lacre verde lleva un banco en relieve. El sello alude a los actos que erigían tierras en parías. El banco remite al asiento de los pares en el Parlamento.",
+      "color": {
+        "nombre": "Violeta y verde de lacre",
+        "muestra": "#4d1d61",
+        "texto": "El fondo toma su violeta del manto ceremonial de las antiguas parías laicas. El verde evoca la cera de las cartas solemnes. Esta composición es un emblema del Libro."
+      },
+      "contexto": "En el sacre de 1722, seis representantes vistieron el manto violeta con armiño. El Libro usa el sello para representar la dignidad más allá de esa ceremonia.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Nicolas de Sainctot · Ceremonial y prerrogativas de los pares",
+          "url": "https://www.chateauversailles-recherche.fr/IMG/pdf/memoires_de_sainctot_t._iii.pdf"
+        },
+        {
+          "nombre": "Biblioteca del INHA · Libro del sacre de Luis XV",
+          "url": "https://agorha.inha.fr/ark:/54721/619d444b-7d3c-49bc-b305-afe2fa6099d3"
+        }
+      ]
+    }
+  },
+  {
+    "id": "marques-conde",
+    "nombre": "Marqués / Conde",
+    "grupo": "Dignidad",
+    "desc": "Título condal o marquesal sin rango ducal.",
+    "svg": "<path d='M5 17h14l-.8-6-3.2 2-3-4-3 4-3.2-2L5 17z'/><path d='M6 20h12'/>",
+    "ficha": {
+      "significado": "Agrupa a titulares de un marquesado o de un condado, y a las personas que figuran con uno de esos títulos por matrimonio.",
+      "motivo": "La corona abierta con perlas funciona como imagen común de la categoría y evoca la corona condal.",
+      "color": {
+        "nombre": "Rojo oscuro y oro",
+        "muestra": "#671b23",
+        "texto": "El fondo rojo oscuro enlaza esta pieza con las demás coronas del catálogo. Las perlas dan un perfil distinto a la miniatura."
+      },
+      "contexto": "Marqués y conde son títulos distintos. El nombre completo de la ficha conserva el título concreto de cada persona."
+    }
+  },
+  {
+    "id": "noble-espada",
+    "nombre": "Nobleza de espada",
+    "grupo": "Dignidad",
+    "desc": "Antigua nobleza militar o gentilhombre de espada.",
+    "svg": "<path d='M18 4L8 14m-2 2l-2 4 4-2m1-5l3 3M14 5l5 5'/>",
+    "ficha": {
+      "significado": "Identifica a las familias de tradición militar y a los gentilhombres que la corte situaba dentro de la nobleza de espada.",
+      "motivo": "Dos espadas cruzadas representan esa tradición de servicio militar.",
+      "color": {
+        "nombre": "Gris acero",
+        "muestra": "#585b61",
+        "texto": "El fondo gris resalta las hojas y da una clave sobria a esta dignidad."
+      },
+      "contexto": "El Libro usa Oficial / Guardia para el mando militar y Mariscal de Francia para la dignidad de mariscal. Esas etiquetas pueden acompañar a Nobleza de espada.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Leonhard Horowski · Jerarquías y cargos de la corte",
+          "url": "https://chateauversailles-recherche.fr/IMG/pdf/horowski_prosopographie_intro.pdf"
+        }
+      ]
+    }
+  },
+  {
+    "id": "noble-toga",
+    "nombre": "Nobleza de toga",
+    "grupo": "Dignidad",
+    "desc": "Magistratura, consejos reales y grandes familias de toga.",
+    "svg": "<path d='M8 4h8l2 15H6L8 4zm4 0v15M9 9h6'/>",
+    "ficha": {
+      "significado": "Identifica a familias cuya posición se vincula con la magistratura, los consejos reales y otros oficios civiles.",
+      "motivo": "Un bonete negro con galón de oro evoca la indumentaria de los magistrados.",
+      "color": {
+        "nombre": "Negro, oro y carmesí",
+        "muestra": "#851c32",
+        "texto": "El negro remite a la toga. El galón y el fondo carmesí dan contraste al tocado en esta ilustración."
+      },
+      "contexto": "Parlamento identifica un cargo judicial concreto. Nobleza de toga informa sobre el medio familiar y profesional.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Leonhard Horowski · Jerarquías y cargos de la corte",
+          "url": "https://chateauversailles-recherche.fr/IMG/pdf/horowski_prosopographie_intro.pdf"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cardenal",
+    "nombre": "Cardenal",
+    "grupo": "Dignidad",
+    "desc": "Príncipe de la Iglesia con púrpura cardenalicia.",
+    "svg": "<path d='M4 13c3-4 13-4 16 0H4z'/><path d='M8 10c1-3 7-3 8 0'/><path d='M7 13l-2 6m12-6l2 6'/>",
+    "ficha": {
+      "significado": "Dignidad eclesiástica conferida por el papa. Los cardenales podían ejercer además funciones episcopales o cargos en la corte.",
+      "motivo": "El galero es un sombrero de ala ancha. Sus cordones y sus borlas son atributos de la heráldica eclesiástica. El galero rojo identifica la dignidad cardenalicia.",
+      "color": {
+        "nombre": "Escarlata sobre marfil",
+        "muestra": "#af2439",
+        "texto": "El rojo pertenece al símbolo cardenalicio. El fondo claro destaca el ala, los cordones y las borlas."
+      },
+      "contexto": "Un cardenal podía ser también obispo, arzobispo, gran limosnero o ministro. Cada cargo puede figurar en su propia etiqueta.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Bibliographical Society · Heráldica eclesiástica",
+          "url": "https://armorial.bibsoc.org.uk/sites/default/files/Brief-heraldic-guide.doc.pdf"
+        },
+        {
+          "nombre": "Leonhard Horowski · Jerarquías y cargos de la corte",
+          "url": "https://chateauversailles-recherche.fr/IMG/pdf/horowski_prosopographie_intro.pdf"
+        }
+      ]
+    }
+  },
+  {
+    "id": "obispo",
+    "nombre": "Arzobispo / Obispo",
+    "grupo": "Dignidad",
+    "desc": "Prelado con mitra diocesana o arzobispal.",
+    "svg": "<path d='M12 4l4 6-1.5 7h-5L8 10l4-6zM9 17h6m-3-9v5m-2-3h4'/>",
+    "ficha": {
+      "significado": "Identifica a quienes desempeñan un oficio episcopal. El título de arzobispo corresponde a una sede arzobispal.",
+      "motivo": "La mitra blanca con bordados dorados y dos cintas posteriores remite a las vestiduras solemnes de los obispos y arzobispos.",
+      "color": {
+        "nombre": "Violeta y marfil",
+        "muestra": "#50256b",
+        "texto": "El violeta del fondo es una convención de la galería. La mitra clara conserva una silueta legible en miniatura."
+      },
+      "contexto": "El libro del sacre de Luis XV muestra a los pares eclesiásticos con vestiduras propias de su función litúrgica.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Biblioteca del INHA · Libro del sacre de Luis XV",
+          "url": "https://agorha.inha.fr/ark:/54721/619d444b-7d3c-49bc-b305-afe2fa6099d3"
+        },
+        {
+          "nombre": "Bibliographical Society · Heráldica eclesiástica",
+          "url": "https://armorial.bibsoc.org.uk/sites/default/files/Brief-heraldic-guide.doc.pdf"
+        }
+      ]
+    }
+  },
+  {
+    "id": "clero",
+    "nombre": "Clero",
+    "grupo": "Dignidad",
+    "desc": "Religioso, confesor, abadesa o eclesiástico sin mitra.",
+    "svg": "<path d='M12 4v16M7 9h10'/>",
+    "ficha": {
+      "significado": "Agrupa a sacerdotes, religiosos y otras personas cuya función principal pertenece a la Iglesia. La ficha individual precisa si se trata de un confesor, una abadesa u otro oficio.",
+      "motivo": "El birrete negro es un tocado cuadrangular con crestas. Aquí evoca la vestimenta clerical.",
+      "color": {
+        "nombre": "Negro sobre marfil",
+        "muestra": "#242224",
+        "texto": "El birrete oscuro se perfila sobre una tela clara. La combinación es la clave de lectura del icono."
+      },
+      "contexto": "El dibujo representa la categoría general del Libro. La indumentaria de cada personaje sigue su condición y el acto que se representa."
+    }
+  },
+  {
+    "id": "cortesano",
+    "nombre": "Cortesano",
+    "grupo": "Papel en la corte",
+    "desc": "Presencia y juego social constante en los salones y antecámaras.",
+    "svg": "<path d='M6 7c2 2 10 2 12 0l-1 11H7L6 7z'/><path d='M9 10v4m6-4v4'/>",
+    "ficha": {
+      "significado": "Identifica a quien participa de forma habitual en la vida social de la corte y cultiva su acceso por medio de visitas, presentaciones y relaciones.",
+      "motivo": "El sol dorado, con la flor de lis y la mano en cetros cruzados, evoca el entorno de la monarquía y la cercanía al soberano.",
+      "color": {
+        "nombre": "Oro sobre negro",
+        "muestra": "#252222",
+        "texto": "El terciopelo negro da contraste al calado de los rayos y a los dos cetros dorados."
+      },
+      "contexto": "La etiqueta de Versalles regulaba quién podía acercarse a cada persona, en qué lugar y en qué momento. Esto daba valor al acceso cortesano.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Château de Versailles · Los cortesanos",
+          "url": "https://www.chateauversailles.fr/decouvrir/histoire/grandes-dates/courtisans"
+        },
+        {
+          "nombre": "Musée de l’Armée · Retrato de Luis XIV y sus insignias",
+          "url": "https://www.musee-armee.fr/collections/tresors-du-musee/portrait-louis-xiv.html"
+        }
+      ]
+    }
+  },
+  {
+    "id": "dama-corte",
+    "nombre": "Dama de corte",
+    "grupo": "Papel en la corte",
+    "desc": "Etiqueta general de las damas, princesas y figuras femeninas de corte y salón.",
+    "svg": "<path d='M12 19 4 8a12 12 0 0 1 16 0l-8 11ZM8 7l4 12 4-12'/>",
+    "ficha": {
+      "significado": "Es la etiqueta general para las damas, princesas y figuras femeninas vinculadas a la vida de corte o de salón.",
+      "motivo": "El abanico combina varillas de nácar blanco calado junto al eje y una hoja lisa de seda marfil. Es el emblema compartido por todas las damas de esta categoría.",
+      "color": {
+        "nombre": "Rosa antiguo y marfil",
+        "muestra": "#9b5e6b",
+        "texto": "El terciopelo rosa más oscuro resalta el nácar blanco. El rosa es una convención visual del Libro."
+      },
+      "contexto": "Figura de corte describe la influencia propia, como la de la duquesa del Maine en Sceaux. Dama por alianza señala un vínculo político entre casas, como el de la duquesa de Tallard. Favorita identifica el acceso que da una relación amorosa documentada, como la de la marquesa de Prie con Monsieur le Duc. Servicio de la Maison ya identifica cargos como el de Ventadour, y Salón / Letras reúne a anfitrionas como Lambert y Tencin. Las etiquetas pueden coexistir cuando describen papeles distintos.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Domaine départemental de Sceaux · La corte de la duquesa del Maine",
+          "url": "https://domaine-de-sceaux.hauts-de-seine.fr/les-grandes-heures-de-sceaux-brouillon"
+        },
+        {
+          "nombre": "Château de Versailles · Alianzas dinásticas con España",
+          "url": "https://en.chateauversailles.fr/discover/history/key-dates/spain-and-versailles"
+        },
+        {
+          "nombre": "Gallica · La marquesa de Prie y el duque de Borbón",
+          "url": "https://gallica.bnf.fr/ark:/12148/bpt6k2002246"
+        },
+        {
+          "nombre": "Bibliothèque nationale de France · Madame de Tencin",
+          "url": "https://catalogue.bnf.fr/ark:/12148/cb12007143p"
+        }
+      ]
+    }
+  },
+  {
+    "id": "figura-corte",
+    "nombre": "Figura de corte",
+    "grupo": "Papel en la corte",
+    "desc": "Dama con un círculo propio e influencia social por iniciativa propia.",
+    "svg": "<path d='M12 8v12M7 20h10M5 11h14M5 11V7m14 4V7M12 8V4'/>",
+    "ficha": {
+      "significado": "Dama que ejerce influencia por iniciativa propia. Sostiene una red, reúne a personas de distintos círculos, patrocina las letras o anima una corte propia.",
+      "motivo": "El candelabro del icono vectorial evoca el espacio de reunión que la anfitriona crea alrededor suyo.",
+      "color": {
+        "nombre": "Ámbar",
+        "muestra": "#a86e31",
+        "texto": "Color propuesto para esta etiqueta. Evoca la luz de las reuniones y el brillo del candelabro."
+      },
+      "contexto": "La duquesa del Maine es el ejemplo más claro en el Libro. Creó en Sceaux una corte con sus propias fiestas y redes de patronazgo. El papel también puede acompañar a Salón / Letras, como en Lambert y Tencin.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Domaine départemental de Sceaux · La corte de la duquesa del Maine",
+          "url": "https://domaine-de-sceaux.hauts-de-seine.fr/les-grandes-heures-de-sceaux-brouillon"
+        },
+        {
+          "nombre": "Bibliothèque nationale de France · Madame de Tencin",
+          "url": "https://catalogue.bnf.fr/ark:/12148/cb12007143p"
+        }
+      ]
+    }
+  },
+  {
+    "id": "dama-alianza",
+    "nombre": "Dama por alianza",
+    "grupo": "Papel en la corte",
+    "desc": "Dama cuyo matrimonio, compromiso o viudez explica un vínculo político entre casas.",
+    "svg": "<circle cx='9' cy='12' r='5'/><circle cx='15' cy='12' r='5'/>",
+    "ficha": {
+      "significado": "Dama cuyo matrimonio, compromiso o posición de viuda ayuda a entender el vínculo político o dinástico que ocupa en la corte.",
+      "motivo": "Los dos anillos entrelazados del icono vectorial representan la unión de dos casas.",
+      "color": {
+        "nombre": "Azul lavanda",
+        "muestra": "#7473a5",
+        "texto": "Color propuesto para esta etiqueta. Mantiene una relación visual con el azul dinástico de la serie."
+      },
+      "contexto": "El compromiso de Mariana Victoria con Luis XV y el matrimonio de Luisa Isabel de Orleans con el príncipe de Asturias formaron parte de un acercamiento entre las dos coronas. En la ficha de Tallard, el enlace explica la relación entre familias de corte.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Château de Versailles · Alianzas dinásticas con España",
+          "url": "https://en.chateauversailles.fr/discover/history/key-dates/spain-and-versailles"
+        }
+      ]
+    }
+  },
+  {
+    "id": "favorita",
+    "nombre": "Favorita",
+    "grupo": "Papel en la corte",
+    "desc": "Dama vinculada a una figura de poder por una relación amorosa documentada y vigente.",
+    "svg": "<path d='M12 19c-4-3-7-6-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 9c0 4-3 7-7 10z'/>",
+    "ficha": {
+      "significado": "Identifica a una dama cuyo acceso o influencia en la corte depende en parte de una relación amorosa documentada y vigente en el momento representado.",
+      "motivo": "El corazón del icono vectorial señala un vínculo personal con consecuencias en las redes de la corte.",
+      "color": {
+        "nombre": "Granate rosado",
+        "muestra": "#893653",
+        "texto": "Color propuesto para esta etiqueta. Comparte la gama rosada del abanico general, con un tono más profundo."
+      },
+      "contexto": "La marquesa de Prie figura por su relación con Monsieur le Duc. La ficha de personaje indica la persona con quien se mantiene el vínculo. Las relaciones pasadas se valoran según la fecha. Por ejemplo, en julio de 1722 Mathieu Marais describe a Parabère como antigua amante del Regente.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Gallica · La marquesa de Prie y el duque de Borbón",
+          "url": "https://gallica.bnf.fr/ark:/12148/bpt6k2002246"
+        },
+        {
+          "nombre": "Mathieu Marais · Diario de julio de 1722",
+          "url": "https://fr.wikisource.org/wiki/Journal_et_m%C3%A9moires_de_Mathieu_Marais/1722/Juillet"
+        }
+      ]
+    }
+  },
+  {
+    "id": "ministro",
+    "nombre": "Ministro / Consejo",
+    "grupo": "Papel en la corte",
+    "desc": "Secretario de Estado, consejero de Regencia, Guardasellos o Finanzas.",
+    "svg": "<path d='M6 4h12v16H6zM9 8h6M9 12h6M9 16h4'/>",
+    "ficha": {
+      "significado": "Agrupa funciones en el gobierno central, como las secretarías de Estado, el Consejo de Regencia, los sellos y las finanzas.",
+      "motivo": "La cartera de despacho de cuero granate, con un pliego y un broche de latón, remite a la correspondencia y al trabajo de gobierno.",
+      "color": {
+        "nombre": "Azul petróleo y granate",
+        "muestra": "#17414c",
+        "texto": "El terciopelo azul petróleo contrasta con el cuero granate y hace visible el pliego claro."
+      },
+      "contexto": "El grupo reúne cargos distintos. La ficha de cada personaje especifica el consejo, la secretaría o la función que ejerce.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Leonhard Horowski · Jerarquías y cargos de la corte",
+          "url": "https://chateauversailles-recherche.fr/IMG/pdf/horowski_prosopographie_intro.pdf"
+        },
+        {
+          "nombre": "France Diplomatie · Historia de los archivos diplomáticos",
+          "url": "https://www.diplomatie.gouv.fr/fr/archives-bibliotheque/histoire-des-archives-diplomatiques"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mariscal",
+    "nombre": "Mariscal de Francia",
+    "grupo": "Papel en la corte",
+    "desc": "Bastón azul sembrado de flores de lis; suprema dignidad militar.",
+    "svg": "<path d='M6 18L18 6M14 6l4 4M6 14l4 4'/>",
+    "ficha": {
+      "significado": "Dignidad militar que reconoce a un mariscal de Francia. El Libro la distingue de los mandos militares ordinarios.",
+      "motivo": "El icono muestra de cerca el bastón de mando, con terciopelo azul, flores de lis bordadas en oro y un casquillo dorado.",
+      "color": {
+        "nombre": "Burdeos, azul real y oro",
+        "muestra": "#741927",
+        "texto": "El fondo burdeos resalta el azul y el oro de la pieza."
+      },
+      "contexto": "El bastón ya se usaba bajo Luis XIV. La forma y el número de adornos variaban antes de que se fijara un modelo reglamentario en el siglo XVIII.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Musée de l’Armée · Los bastones de mariscal",
+          "url": "https://www.musee-armee.fr/echo-du-dome/38/html-accessible/coulisses/les-batons-de-la-gloire.html"
+        }
+      ]
+    }
+  },
+  {
+    "id": "militar",
+    "nombre": "Oficial / Guardia",
+    "grupo": "Papel en la corte",
+    "desc": "Mando de regimiento, Guardias de Corps, Guardias Francesas o dragones.",
+    "svg": "<path d='M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z'/>",
+    "ficha": {
+      "significado": "Reúne a oficiales de regimiento y a quienes desempeñan mandos en cuerpos de guardia. La ficha de cada persona indica su grado o unidad.",
+      "motivo": "El gorjal es una placa metálica que se lleva al cuello. La pieza del Libro tiene forma de media luna, un ribete dorado y un escudo de tres flores de lis.",
+      "color": {
+        "nombre": "Gris carbón y acero",
+        "muestra": "#424247",
+        "texto": "El terciopelo oscuro deja destacar el acero. El dorado alude al acabado de la pieza de la galería."
+      },
+      "contexto": "El gorjal evolucionó de una pieza de armadura a distintivo de oficial. El escudo de este icono evoca la corte francesa. En 1767 se reglamentó un modelo con las armas del rey.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Musée de l’Armée · Historia del gorjal de oficial",
+          "url": "https://collections.musee-armee.fr/un-hausse-col-dofficier-de-la-garde-nationale-revolution-francaise/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gobernador",
+    "nombre": "Gobernador",
+    "grupo": "Papel en la corte",
+    "desc": "Gobierno territorial de una provincia, ciudad o plaza.",
+    "svg": "<path d='M4 20V8l4-3 4 3 4-3 4 3v12H4zm6 0v-5h4v5'/>",
+    "ficha": {
+      "significado": "Identifica el gobierno territorial de una provincia, ciudad o plaza, como Bretaña o Versalles y Marly.",
+      "motivo": "La fortaleza del icono vectorial representa la plaza o territorio confiado al gobernador.",
+      "color": {
+        "nombre": "Oro de interfaz",
+        "muestra": "#9c7a2a",
+        "texto": "El icono vectorial usa el color común de la galería mientras se define su imagen."
+      },
+      "contexto": "La educación o el cuidado de un príncipe se registra en Servicio de la Maison. Villeroy puede figurar en ambas categorías porque reunió un gobierno territorial y el cargo de gobernador del rey.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Leonhard Horowski · Jerarquías y cargos de la corte",
+          "url": "https://chateauversailles-recherche.fr/IMG/pdf/horowski_prosopographie_intro.pdf"
+        }
+      ]
+    }
+  },
+  {
+    "id": "parlamentario",
+    "nombre": "Parlamento",
+    "grupo": "Papel en la corte",
+    "desc": "Primer Presidente de un Parlamento o Consejo Soberano.",
+    "svg": "<path d='M4 9l8-4 8 4H4zm2 0v8m4-8v8m4-8v8m4-8v8M3 19h18'/>",
+    "ficha": {
+      "significado": "Identifica la presidencia de un Parlamento o Consejo Soberano. Los parlamentos del Antiguo Régimen eran tribunales superiores.",
+      "motivo": "La fachada con columnas del icono vectorial representa la sede de una corte judicial.",
+      "color": {
+        "nombre": "Oro de interfaz",
+        "muestra": "#9c7a2a",
+        "texto": "Color común del icono vectorial mientras se define su imagen."
+      },
+      "contexto": "Los parlamentos registraban los actos reales y podían presentar remonstrancias. Esta facultad influyó en sus relaciones con el Regente.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Cahiers Saint-Simon · El Parlamento al inicio de la Regencia",
+          "url": "https://www.persee.fr/doc/simon_0409-8846_1999_num_27_1_1290"
+        }
+      ]
+    }
+  },
+  {
+    "id": "embajador",
+    "nombre": "Embajador / Nuncio",
+    "grupo": "Papel en la corte",
+    "desc": "Representante diplomático de una potencia extranjera o de Roma.",
+    "svg": "<path d='M4 7h16v10H4zM4 7l8 6 8-6'/>",
+    "ficha": {
+      "significado": "Identifica a quien representa a una potencia extranjera o a la Santa Sede ante la corte francesa.",
+      "motivo": "La carta cerrada del icono vectorial alude a las credenciales y a la correspondencia diplomática.",
+      "color": {
+        "nombre": "Oro de interfaz",
+        "muestra": "#9c7a2a",
+        "texto": "Color común del icono vectorial mientras se define su imagen."
+      },
+      "contexto": "El nuncio es el representante pontificio. Una ficha puede indicar, además, una carrera militar o un rango propio de su país.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "France Diplomatie · Historia de los archivos diplomáticos",
+          "url": "https://www.diplomatie.gouv.fr/fr/archives-bibliotheque/histoire-des-archives-diplomatiques"
+        },
+        {
+          "nombre": "Leonhard Horowski · Jerarquías y cargos de la corte",
+          "url": "https://chateauversailles-recherche.fr/IMG/pdf/horowski_prosopographie_intro.pdf"
+        }
+      ]
+    }
+  },
+  {
+    "id": "financiero",
+    "nombre": "Financiero",
+    "grupo": "Papel en la corte",
+    "desc": "Banca, Tesoro Real, operación del Visa y préstamos a la Corona.",
+    "svg": "<circle cx='12' cy='12' r='7'/><path d='M12 8v8m-2-6.5h3a1.5 1.5 0 0 1 0 3h-2a1.5 1.5 0 0 0 0 3h3'/>",
+    "ficha": {
+      "significado": "Agrupa a figuras de la banca, el Tesoro, los préstamos a la Corona y la liquidación de las obligaciones del sistema de Law.",
+      "motivo": "La moneda del icono vectorial alude al crédito, las cuentas y la circulación del dinero.",
+      "color": {
+        "nombre": "Oro de interfaz",
+        "muestra": "#9c7a2a",
+        "texto": "El motivo utiliza el dorado común de la galería mientras se define su imagen."
+      },
+      "contexto": "El Visa iniciado en 1721 revisó y liquidó títulos y acreencias tras la crisis del sistema de Law. Sus operaciones se prolongaron en 1722.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "François R. Velde · El sistema de Law y el Visa de 1721",
+          "url": "https://fraser.stlouisfed.org/files/docs/historical/frbchi/workingpapers/frbchi_workingpaper_2003-31.pdf"
+        }
+      ]
+    }
+  },
+  {
+    "id": "casa-rey",
+    "nombre": "Servicio de la Maison",
+    "grupo": "Papel en la corte",
+    "desc": "Cuidado y educación de la familia real, cargos de cámara y de honor, y servicios médicos, arquitectónicos, musicales y teatrales de la corte.",
+    "svg": "<path d='M12 5a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm-6 14a6 6 0 0 1 12 0'/>",
+    "ficha": {
+      "significado": "Reúne los cargos de servicio a la familia real, como ayas, gobernadores y preceptores de príncipes, oficios de cámara y de honor, y servicios de medicina, arquitectura, música y teatro.",
+      "motivo": "La silueta del icono vectorial pone el acento en el servicio personal.",
+      "color": {
+        "nombre": "Oro de interfaz",
+        "muestra": "#9c7a2a",
+        "texto": "Color común del icono vectorial mientras se define su imagen."
+      },
+      "contexto": "Ventadour cuida a la infanta. Charost ejerce como gobernador del rey y Fleury como preceptor. La ficha de cada uno precisa su cargo. El gobierno de provincias, ciudades o plazas tiene su propia etiqueta.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Leonhard Horowski · Jerarquías y cargos de la corte",
+          "url": "https://chateauversailles-recherche.fr/IMG/pdf/horowski_prosopographie_intro.pdf"
+        },
+        {
+          "nombre": "Château de Versailles · Los aposentos del rey",
+          "url": "https://www.chateauversailles.fr/decouvrir/domaine/chateau/appartement-roi"
+        }
+      ]
+    }
+  },
+  {
+    "id": "salon-letras",
+    "nombre": "Salón / Letras",
+    "grupo": "Papel en la corte",
+    "desc": "Escritor, académico, memorialista, dramaturgo o anfitrión de salón.",
+    "svg": "<path d='M19 5c-4 0-8 3-10 8l-2 5 5-2c5-2 7-6 7-11z'/>",
+    "ficha": {
+      "significado": "Identifica el papel de escritores, académicos, dramaturgos, memorialistas y anfitriones de salón en la vida intelectual.",
+      "motivo": "La pluma del icono vectorial vuelve visible ese vínculo con la escritura y el intercambio de ideas.",
+      "color": {
+        "nombre": "Oro de interfaz",
+        "muestra": "#9c7a2a",
+        "texto": "Color común del icono vectorial mientras se define su imagen."
+      },
+      "contexto": "Una anfitriona puede figurar también como Figura de corte si su propio círculo le da un papel social. Madame de Tencin es un ejemplo del Libro.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Bibliothèque nationale de France · Madame de Tencin",
+          "url": "https://catalogue.bnf.fr/ark:/12148/cb12007143p"
+        }
+      ]
+    }
+  },
+  {
+    "id": "versalles",
+    "nombre": "Versalles",
+    "grupo": "Residencia",
+    "desc": "Residente en el palacio o habitante de la ciudad de Versalles.",
+    "svg": "<path d='M3 18h18M5 18V9l4-2v11m6 0V7l4 2v9M9 11h6v7H9z'/>",
+    "ficha": {
+      "significado": "Localiza a quienes residen en el palacio o habitan en la villa de Versalles.",
+      "motivo": "La silueta de un conjunto palaciego funciona como referencia al lugar.",
+      "color": {
+        "nombre": "Oro de interfaz",
+        "muestra": "#9c7a2a",
+        "texto": "Color común del icono vectorial mientras se define su imagen."
+      },
+      "contexto": "Luis XV y la corte regresaron a Versalles en junio de 1722. La ficha individual distingue un alojamiento en palacio de una residencia en la villa.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Château de Versailles · El regreso de la corte en 1722",
+          "url": "https://www.chateauversailles.fr/decouvrir/histoire/grandes-dates/retour-cour-versailles"
+        },
+        {
+          "nombre": "Château de Versailles · Los cortesanos",
+          "url": "https://www.chateauversailles.fr/decouvrir/histoire/grandes-dates/courtisans"
+        }
+      ]
+    }
+  },
+  {
+    "id": "ile-de-france",
+    "nombre": "Île-de-France",
+    "grupo": "Residencia",
+    "desc": "Habitante de l'Île (Saint-Cloud, Sceaux, Meudon, Chantilly, Rambouillet).",
+    "svg": "<path d='M4 17c4-5 12-5 16 0M7 13l5-7 5 7'/>",
+    "ficha": {
+      "significado": "Localiza residencias del entorno de la corte, como Saint-Cloud, Sceaux, Meudon o Rambouillet, según la clasificación del Libro.",
+      "motivo": "El paisaje ondulado del icono vectorial evoca las residencias y dominios de los alrededores.",
+      "color": {
+        "nombre": "Oro de interfaz",
+        "muestra": "#9c7a2a",
+        "texto": "Color común del icono vectorial mientras se define su imagen."
+      },
+      "contexto": "Algunas residencias tenían su propia vida de corte. Sceaux, por ejemplo, reunía a los invitados de la duquesa del Maine.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Domaine départemental de Sceaux · La corte de la duquesa del Maine",
+          "url": "https://domaine-de-sceaux.hauts-de-seine.fr/les-grandes-heures-de-sceaux-brouillon"
+        }
+      ]
+    }
+  },
+  {
+    "id": "parisino",
+    "nombre": "Parisino",
+    "grupo": "Residencia",
+    "desc": "Habitante de París (hôtel o residencia en la capital; visita Versalles).",
+    "svg": "<path d='M6 19V8l3-3v14m6 0V5l3 3v11M9 11h6v8H9z'/>",
+    "ficha": {
+      "significado": "Localiza a quienes tienen su residencia en París, aunque puedan acudir a Versalles.",
+      "motivo": "La silueta urbana del icono vectorial representa la capital y sus residencias.",
+      "color": {
+        "nombre": "Oro de interfaz",
+        "muestra": "#9c7a2a",
+        "texto": "Color común del icono vectorial mientras se define su imagen."
+      },
+      "contexto": "París reúne casas nobiliarias, tribunales y salones. El símbolo indica residencia y puede coexistir con un cargo de corte."
+    }
+  },
+  {
+    "id": "provinciano",
+    "nombre": "Provinciano",
+    "grupo": "Residencia",
+    "desc": "Vive en su provincia o diócesis fuera de la región parisiense.",
+    "svg": "<path d='M3 18l5-6 4 3 4-7 5 10H3z'/>",
+    "ficha": {
+      "significado": "Localiza a quienes residen en una provincia o diócesis fuera del entorno inmediato de París y Versalles.",
+      "motivo": "El relieve de montes del icono vectorial representa la residencia fuera del centro de la corte.",
+      "color": {
+        "nombre": "Oro de interfaz",
+        "muestra": "#9c7a2a",
+        "texto": "Color común del icono vectorial mientras se define su imagen."
+      },
+      "contexto": "La etiqueta describe dónde vive la persona. Un personaje puede gobernar una provincia y residir habitualmente en otra parte."
+    }
+  },
+  {
+    "id": "extranjero",
+    "nombre": "Extranjero",
+    "grupo": "Residencia",
+    "desc": "Reside fuera del reino de Francia en junio de 1722.",
+    "svg": "<path d='M4 15s3-2 8 0 8 0 8 0V6s-3 2-8 0-8 0-8 0v13'/>",
+    "ficha": {
+      "significado": "Localiza a quienes residen fuera del reino de Francia en el momento representado por el Libro.",
+      "motivo": "La bandera del icono vectorial evoca una corte, una misión o una residencia en otro país.",
+      "color": {
+        "nombre": "Oro de interfaz",
+        "muestra": "#9c7a2a",
+        "texto": "Color común del icono vectorial mientras se define su imagen."
+      },
+      "contexto": "Hasta una princesa de una rama francesa puede figurar aquí si vive en otra corte. Así ocurre con Luisa Isabel de Orleans, princesa de Asturias.",
+      "confianza": "confirmado",
+      "fuentes": [
+        {
+          "nombre": "Château de Versailles · Alianzas dinásticas con España",
+          "url": "https://en.chateauversailles.fr/discover/history/key-dates/spain-and-versailles"
+        }
+      ]
+    }
+  }
 ]

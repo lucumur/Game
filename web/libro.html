@@ -52,10 +52,13 @@ aside .anio{font-size:.7em}
 .empty{border:1px dashed var(--line);padding:28px;color:var(--muted);text-align:center;background:var(--paper)}
 /* ficha */
 .veil{position:fixed;inset:0;background:var(--veil);z-index:5}
-aside{position:fixed;top:0;right:0;bottom:0;width:min(500px,100%);background:var(--paper);z-index:6;overflow-y:auto;border-left:1px solid var(--line);
+aside{position:fixed;top:0;right:0;bottom:0;width:min(545px,100%);box-sizing:border-box;background:var(--paper);z-index:6;overflow-y:auto;border-left:1px solid var(--line);
   padding-top:calc(20px + env(safe-area-inset-top,0px));padding-bottom:calc(32px + env(safe-area-inset-bottom,0px));
   padding-left:22px;padding-right:max(22px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:16px}
 aside>*{flex:none;min-width:0}
+.ficha-nav{display:flex;justify-content:space-between;gap:8px}
+.ficha-nav #close{margin-left:auto}
+.ficha-cuerpo{display:grid;gap:16px;min-width:0}
 .close{align-self:flex-end;font:13px var(--mono);background:none;border:1px solid var(--line);color:var(--muted);padding:4px 10px;border-radius:4px;cursor:pointer}
 aside .face{width:440px;max-width:100%;height:auto;aspect-ratio:1}
 aside h2{font-family:var(--display);font-weight:400;font-size:1.9rem;line-height:1.1;margin:0;text-wrap:balance}
@@ -111,11 +114,15 @@ select{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);borde
 .sim-pill .sim-ico{width:20px;height:20px;border:0;background:transparent}
 #fsims{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:10px;margin-top:10px}
 #fsims .sim-pill{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:8px 6px;border-radius:6px;font-size:12px;line-height:1.2}
+button.sim-pill{font-family:inherit;color:inherit;cursor:pointer}
+button.sim-pill:hover,.sim-open:hover .sim-box{border-color:var(--royal)}
+button.sim-pill:focus-visible,.sim-open:focus-visible{outline:2px solid var(--royal);outline-offset:3px}
 #fsims .sim-pill .sim-ico{width:58px;height:58px;border:1px solid var(--gold);border-radius:6px;background:var(--paper)}
 #fsims .sim-pill .sim-ico img{width:46px;height:46px}
 #fsims .sim-pill .sim-ico svg{width:34px;height:34px}
 .sim-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:16px}
-.sim-card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px;display:grid;grid-template-columns:64px 1fr;gap:10px 12px;align-items:start}
+.sim-card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px;display:grid;gap:10px;align-items:start}
+.sim-open{all:unset;display:grid;grid-template-columns:64px minmax(0,1fr);gap:12px;align-items:start;cursor:pointer;border-radius:4px}
 .sim-box{width:64px;height:64px;border:1px solid var(--gold);border-radius:6px;background:var(--bg);display:grid;place-items:center;position:relative;overflow:hidden;cursor:pointer}
 .sim-box.over{outline:3px dashed var(--royal);outline-offset:2px}
 .sim-box img{width:48px;height:48px;object-fit:contain;display:block}
@@ -123,8 +130,21 @@ select{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);borde
 .sim-meta{display:grid;gap:3px;min-width:0}
 .sim-meta b{font-size:15px}
 .sim-meta code{font:11px var(--mono);color:var(--muted)}
-.sim-meta p{margin:0;font-size:13px;color:var(--muted);line-height:1.35}
+.sim-desc{font-size:13px;color:var(--muted);line-height:1.35}
 .sim-acts{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.sim-ficha-cabecera{display:grid;grid-template-columns:minmax(76px,30%) minmax(0,1fr);align-items:center;gap:14px}
+.sim-ficha-cabecera .sim-ico{width:100%;height:auto;aspect-ratio:1;border-color:var(--gold);border-radius:6px;overflow:hidden;box-sizing:border-box}
+.sim-ficha-cabecera .sim-ico img{width:100%;height:100%;object-fit:contain}
+.sim-ficha-cabecera .sim-ico svg{width:58%;height:58%}
+.sim-ficha-cabecera p,.sim-bloque p{margin:4px 0 0}
+.sim-bloque p{font-size:14px}
+.sim-muestra{display:inline-block;width:13px;height:13px;border:1px solid var(--muted);border-radius:50%;vertical-align:middle;margin-right:6px}
+.sim-fuentes{font-size:13px;margin:4px 0 0;padding-left:18px}
+.sim-fuentes a{color:var(--royal)}
+.sim-personas{display:grid;grid-template-columns:repeat(auto-fill,minmax(105px,1fr));gap:14px}
+.sim-personas .face{width:100%;box-sizing:border-box}
+.sim-personas .card{gap:4px}
+.sim-personas .cname{font-size:13px;overflow-wrap:anywhere}
 .sim-new{margin-top:22px;padding:14px;background:var(--paper);border:1px solid var(--line);border-radius:6px;display:grid;gap:10px}
 .sim-new .row input{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);min-width:0;flex:1 1 160px}
 </style>
@@ -153,7 +173,7 @@ select{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);borde
   <div class="empty" id="empty" hidden>La corte todavía no tiene personajes cargados. Aparecerán aquí en cuanto se añadan a la base del juego.</div>
   </div>
   <div id="vista-simbolos" hidden>
-    <p class="sub" style="margin-top:16px">Iconos que aparecen debajo de la foto, el nombre y los títulos. Arrastra o sube un PNG/JPG sobre cada recuadro: con llave de GitHub se guarda directo en <code>datos/simbolos/</code>; en local puedes previsualizarlo y descargar el archivo <code>&lt;id&gt;.png</code> listo para copiar a la carpeta.</p>
+    <p class="sub" style="margin-top:16px">Abre un símbolo para conocer su significado y ver quién lo lleva. Para cambiar su imagen, usa el botón de la tarjeta o arrastra un PNG/JPG al recuadro.</p>
     <div class="msg" id="gh-st" aria-live="polite" style="margin-top:6px"></div>
     <div class="msg" id="smsg" aria-live="polite" style="margin-top:8px"></div>
     <div id="sim-wrap"></div>
@@ -178,7 +198,11 @@ select{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);borde
   <ol class="hab-list" id="guia-list"></ol>
 </section>
 <aside id="ficha" hidden role="dialog" aria-modal="true" aria-labelledby="fname">
-  <button class="close" id="close">Cerrar</button>
+  <div class="ficha-nav">
+    <button class="close" id="ficha-volver" type="button" hidden>← Volver</button>
+    <button class="close" id="close" type="button">Cerrar</button>
+  </div>
+  <div class="ficha-cuerpo" id="ficha-personaje">
   <label class="face drop" id="fface" for="file"></label>
   <div>
     <div class="eyebrow" id="fhouse"></div>
@@ -200,12 +224,16 @@ select{font:14px var(--body);padding:6px 10px;border:1px solid var(--line);borde
     </div>
     <div class="prompt" id="fprompt"></div>
   </div>
+  </div>
+  <div class="ficha-cuerpo" id="ficha-simbolo" hidden></div>
 </aside>
 
 <script src="js/github.js?v=202611170004"></script>
 <script>
 const $=id=>document.getElementById(id);
 let chars=[],sims=[],filtro='Todas',q='',res='',fsim='',vista='per',sel=null,db=null,owner=false,orden='',RET={},SIM_IMG={},SIM_LOCAL={};
+let simboloActivo=null,origenFicha=null;
+const visitasFicha=[];
 const RES_FULL={residente_palacio:'Residente en Versalles (palacio, por gracia del rey)',habitante_versalles:'Habitante de Versalles (ciudad)',habitante_ile:"Habitante de l'Île (cercanías de la corte)",habitante_paris:'Habitante de París (visita Versalles)',provinciano:'Provinciano (vive en su provincia)',extranjero:'Extranjero (fuera del reino)',por_verificar:'Por verificar'};
 const nac=c=>{const m=String(c.anio||'').match(/\d{4}/);return m?+m[0]:9999};
 const KEY={riqueza:c=>+c.riqueza||0,edad:c=>-nac(c),rango:c=>+c.rango||0};
@@ -229,7 +257,8 @@ function simRow(c,conTexto){
   ids.forEach(id=>{
     if(!conTexto){w.append(simIco(id));return}
     const s=sims.find(x=>x.id===id)||{id,nombre:id,desc:''};
-    const p=document.createElement('span');p.className='sim-pill';p.title=s.desc||'';
+    const p=document.createElement('button');p.type='button';p.className='sim-pill';p.title=s.desc||'';
+    p.onclick=()=>abrirSimbolo(id,p);
     const t=document.createElement('span');t.textContent=s.nombre;
     p.append(simIco(id),t);w.append(p);
   });
@@ -240,6 +269,11 @@ function renderSimFilter(){
   const o0=document.createElement('option');o0.value='';o0.textContent='Todos';fs.append(o0);
   sims.forEach(s=>{const o=document.createElement('option');o.value=s.id;o.textContent=s.nombre;fs.append(o)});
   fs.value=cur;
+}
+function cargarCatalogo(sim,idx,bust){
+  sims=Array.isArray(sim)?sim:[];
+  SIM_IMG={};(idx.simbolos||[]).forEach(f=>{SIM_IMG[f.replace(/\.\w+$/,'')]='datos/simbolos/'+f+bust});
+  renderSimFilter();
 }
 function render(){
   const fac=['Todas',...new Set(chars.map(c=>c.faccion).filter(Boolean))];
@@ -355,7 +389,7 @@ function renderGuia(){
   (HAB_ESCALA[guiaHab]||[]).forEach((txt,n)=>{const li=document.createElement('li');if(n>=6)li.className='elite';const b=document.createElement('b');b.textContent=n;const s=document.createElement('span');s.textContent=txt;li.append(b,s);$('guia-list').append(li)});
 }
 function abrirGuia(k){if(k)guiaHab=k;renderGuia();$('guia').hidden=false;$('veil').hidden=false;$('guia-close').focus()}
-function cerrarGuia(){$('guia').hidden=true;if(!sel)$('veil').hidden=true}
+function cerrarGuia(){$('guia').hidden=true;if($('ficha').hidden)$('veil').hidden=true}
 const INN=[['temperamento','Temperamento'],['salud','Salud'],['aspecto','Aspecto'],['intelecto','Intelecto']];
 const RAS=[['soc','Sociabilidad','Retraído','Gregario'],['hos','Hospitalidad','Frío','Anfitrión'],['tem','Templanza','Colérico','Imperturbable'],['com','Competitividad','Conformista','Debe ser el primero'],['amb','Ambición','Satisfecho','Insaciable'],['dis','Discreción','Indiscreto','Tumba'],['van','Vanidad','Modesto','Vanidoso'],['org','Orgullo de sangre','Llano','Obsesionado con el rango'],['cer','Ceremonia','Desenvuelto','Puntilloso'],['ren','Rencor','Olvida','Nunca perdona'],['gen','Generosidad','Avaro','Pródigo con otros'],['gas','Gasto','Austero','Derrochador'],['cre','Credulidad','Desconfiado','Crédulo'],['val','Valor','Cobarde','Temerario'],['pru','Prudencia','Impulsivo','Calculador'],['pie','Piedad','Libertino','Devoto'],['sen','Sensualidad','Casto','Voluptuoso'],['esp','Esprit','Torpe','Ingenioso'],['hum','Humor','Grave','Burlón'],['lea','Lealtad','Veleta','Fiel hasta caer'],['fra','Franqueza','Taimado','Sincero'],['cmp','Compasión','Cruel','Compasivo'],['ani','Ánimo','Melancólico','Optimista'],['lab','Laboriosidad','Indolente','Infatigable'],['cur','Curiosidad','Indiferente','Curioso'],['cst','Constancia','Voluble','Constante'],['cel','Celos','Confiado','Celoso'],['obe','Obediencia','Rebelde','Sumiso']];
 const CUAL=[['belleza','Belleza'],['constitucion','Constitución'],['fertilidad','Fertilidad'],['intelecto','Intelecto'],['memoria','Memoria'],['voz','Voz'],['oido','Oído musical'],['estatura','Estatura'],['marcas','Marcas'],['taras','Taras']];
@@ -390,10 +424,101 @@ function ficha(){
   $('uprow').hidden=!owner;
   $('quitar').hidden=!RET[c.id];$('promptbox').hidden=!owner;
 }
-function abrir(id){cerrarGuia();sel=id;$('msg').textContent='';ficha();$('ficha').hidden=false;$('veil').hidden=false;$('close').focus()}
-function cerrar(){sel=null;$('ficha').hidden=true;if($('guia').hidden)$('veil').hidden=true}
+function personajesCon(id){return chars.filter(c=>(c.simbolos||[]).includes(id))}
+function fichaSimbolo(){
+  const s=sims.find(x=>x.id===simboloActivo);
+  if(!s){cerrar();return}
+  const data=s.ficha||{};
+  const body=$('ficha-simbolo');body.replaceChildren();
+  const el=(type,txt,cls)=>Object.assign(document.createElement(type),{textContent:txt||'',className:cls||''});
+  const titulo=el('h2',s.nombre);titulo.id='simbolo-nombre';
+  const introduccion=el('div');introduccion.append(el('div',s.grupo,'eyebrow'),titulo);
+  if(s.desc)introduccion.append(el('p',s.desc,'sub'));
+  const icono=simIco(s.id);icono.removeAttribute('title');icono.setAttribute('aria-hidden','true');
+  const cabecera=el('div',null,'sim-ficha-cabecera');cabecera.append(icono,introduccion);body.append(cabecera);
+  const bloque=(titulo,contenido)=>{
+    if(!contenido)return;
+    const section=el('section',null,'sim-bloque');
+    section.append(el('h3',titulo,'sec'),typeof contenido==='string'?el('p',contenido):contenido);
+    body.append(section);
+  };
+  bloque('Qué significa',data.significado);
+  bloque('El símbolo',data.motivo);
+  if(data.color){
+    const p=el('p');
+    if(/^#[0-9a-f]{6}$/i.test(data.color.muestra||'')){
+      const muestra=el('span',null,'sim-muestra');muestra.style.backgroundColor=data.color.muestra;muestra.setAttribute('aria-hidden','true');p.append(muestra);
+    }
+    p.append(el('strong',data.color.nombre));
+    if(data.color.texto)p.append('. '+data.color.texto);
+    bloque('Color asociado',p);
+  }
+  bloque('Contexto',data.contexto);
+  if(data.fuentes?.length){
+    const lista=el('ul',null,'sim-fuentes');
+    data.fuentes.forEach(({nombre,url})=>{
+      if(!/^https:\/\//i.test(url))return;
+      const link=el('a',nombre);link.href=url;link.target='_blank';link.rel='noopener noreferrer';
+      const li=el('li');li.append(link);lista.append(li);
+    });
+    if(lista.childElementCount)bloque('Fuentes',lista);
+  }
+  const portadores=personajesCon(s.id);
+  const grupo=el('section');
+  const encabezado=el('h3','Personajes','sec');
+  encabezado.append(el('span',String(portadores.length)));grupo.append(encabezado);
+  if(!portadores.length)grupo.append(el('p','Ninguna ficha lleva este símbolo.','sub'));
+  else{
+    const grid=el('div',null,'sim-personas');
+    portadores.forEach(c=>{
+      const button=el('button',null,'card');button.type='button';
+      const portrait=el('span',null,'face');face(portrait,c);
+      button.append(portrait,el('span',c.nombre,'cname'));
+      button.onclick=()=>abrir(c.id,button);
+      grid.append(button);
+    });
+    grupo.append(grid);
+  }
+  body.append(grupo);
+}
+function actualizarFicha(){if(sel)ficha();else if(simboloActivo)fichaSimbolo()}
+function mostrarFicha(personaje,simbolo,scroll=0){
+  cerrarGuia();sel=personaje;simboloActivo=simbolo;
+  const panel=$('ficha');
+  $('ficha-personaje').hidden=!!simbolo;$('ficha-simbolo').hidden=!simbolo;
+  $('ficha-volver').hidden=!visitasFicha.length;
+  panel.setAttribute('aria-labelledby',simbolo?'simbolo-nombre':'fname');
+  $('msg').textContent='';actualizarFicha();
+  panel.hidden=false;$('veil').hidden=false;
+  $(visitasFicha.length?'ficha-volver':'close').focus({preventScroll:true});panel.scrollTop=scroll;
+}
+function navegarFicha(personaje,simbolo,origen){
+  const panel=$('ficha');
+  if(panel.hidden)origenFicha=origen;
+  else visitasFicha.push({personaje:sel,simbolo:simboloActivo,scroll:panel.scrollTop});
+  mostrarFicha(personaje,simbolo);
+}
+function abrir(id,origen=document.activeElement){if(chars.some(c=>c.id===id))navegarFicha(id,null,origen)}
+function abrirSimbolo(id,origen=document.activeElement){if(sims.some(s=>s.id===id))navegarFicha(null,id,origen)}
+function cerrar(){
+  sel=null;simboloActivo=null;visitasFicha.length=0;$('ficha').hidden=true;
+  if($('guia').hidden)$('veil').hidden=true;
+  if(origenFicha?.isConnected)origenFicha.focus();
+  else $(vista==='sim'?'tab-sim':'tab-per').focus({preventScroll:true});
+  origenFicha=null;
+}
+$('ficha-volver').onclick=()=>{const v=visitasFicha.pop();if(v)mostrarFicha(v.personaje,v.simbolo,v.scroll)};
 $('close').onclick=cerrar;$('guia-open').onclick=()=>abrirGuia();$('guia-close').onclick=cerrarGuia;$('veil').onclick=()=>{if(!$('guia').hidden)cerrarGuia();else cerrar()};
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(!$('guia').hidden)cerrarGuia();else if(sel)cerrar()}});
+document.addEventListener('keydown',e=>{
+  const panel=!$('guia').hidden?$('guia'):!$('ficha').hidden?$('ficha'):null;
+  if(!panel)return;
+  if(e.key==='Escape'){if(panel===$('guia'))cerrarGuia();else cerrar();return}
+  if(e.key!=='Tab')return;
+  const botones=[...panel.querySelectorAll('button,a[href],[tabindex="0"]')].filter(x=>!x.disabled&&x.getClientRects().length);
+  const primero=botones[0],ultimo=botones.at(-1);
+  if(e.shiftKey&&document.activeElement===primero){e.preventDefault();ultimo?.focus()}
+  else if(!e.shiftKey&&document.activeElement===ultimo){e.preventDefault();primero?.focus()}
+});
 $('q').oninput=e=>{q=e.target.value;render()};
 $('res').onchange=e=>{res=e.target.value;render()};
 $('fsim').onchange=e=>{fsim=e.target.value;render()};
@@ -427,7 +552,7 @@ async function subirSimbolo(id,f){
       SIM_LOCAL[id]=img;
       $('smsg').textContent='Vista previa local para '+id+' (sin llave de GitHub activa: se perderá al recargar). Descarga '+id+'.png y cópialo a web/datos/simbolos/.';
     }
-    renderSimbolos(); render(); if(sel)ficha();
+    renderSimbolos(); render(); actualizarFicha();
   }catch(err){$('smsg').textContent='No se pudo procesar: '+(err&&err.message||err)}
 }
 function renderSimbolos(){
@@ -440,7 +565,9 @@ function renderSimbolos(){
     const grid=document.createElement('div');grid.className='sim-grid';
     sims.filter(s=>(s.grupo||'Otros')===g).forEach(s=>{
       const card=document.createElement('div');card.className='sim-card';
-      const box=document.createElement('label');box.className='sim-box';box.title='Clic o arrastra una imagen para '+s.id;
+      const abrirBtn=document.createElement('button');abrirBtn.type='button';abrirBtn.className='sim-open';
+      abrirBtn.setAttribute('aria-haspopup','dialog');abrirBtn.onclick=()=>abrirSimbolo(s.id,abrirBtn);
+      const box=document.createElement('span');box.className='sim-box';box.setAttribute('aria-hidden','true');
       const inp=document.createElement('input');inp.type='file';inp.accept='image/*';inp.hidden=true;
       inp.onchange=e=>{const f=e.target.files[0];e.target.value='';if(f)subirSimbolo(s.id,f)};
       box.addEventListener('dragover',e=>{e.preventDefault();box.classList.add('over')});
@@ -449,14 +576,14 @@ function renderSimbolos(){
       const cur=SIM_LOCAL[s.id]||SIM_IMG[s.id];
       if(cur){const im=new Image();im.src=cur;im.alt=s.nombre;box.append(im)}
       else{const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 24 24');svg.innerHTML=s.svg||"<circle cx='12' cy='12' r='6'/>";box.append(svg)}
-      box.append(inp);
-      const meta=document.createElement('div');meta.className='sim-meta';
+      const meta=document.createElement('span');meta.className='sim-meta';
       const b=document.createElement('b');b.textContent=s.nombre;
       const cd=document.createElement('code');cd.textContent='datos/simbolos/'+s.id+'.png';
-      const p=document.createElement('p');p.textContent=s.desc||'';
+      const p=document.createElement('span');p.className='sim-desc';p.textContent=s.desc||'';
       meta.append(b,cd,p);
+      abrirBtn.append(box,meta);
       const acts=document.createElement('div');acts.className='sim-acts';
-      const nUsos=chars.filter(c=>(c.simbolos||[]).includes(s.id)).length;
+      const nUsos=personajesCon(s.id).length;
       const btnVer=document.createElement('button');btnVer.className='guia-btn';btnVer.type='button';btnVer.textContent=nUsos+' personajes';
       btnVer.onclick=()=>{fsim=s.id;$('fsim').value=s.id;setVista('per');render()};
       const btnUp=document.createElement('button');btnUp.className='guia-btn';btnUp.type='button';btnUp.textContent=cur?'Cambiar imagen':'Subir imagen';
@@ -471,7 +598,7 @@ function renderSimbolos(){
         q.onclick=async()=>{try{await (db||GH).doc('simbolos/'+s.id).delete();delete SIM_IMG[s.id];delete SIM_LOCAL[s.id];try{sessionStorage.removeItem('sim_pend_'+s.id)}catch{}$('smsg').textContent='Símbolo '+s.id+' quitado.';renderSimbolos();render()}catch(err){$('smsg').textContent='No se pudo quitar: '+(err&&err.message||err)}};
         acts.append(q);
       }
-      card.append(box,meta,acts);grid.append(card);
+      card.append(abrirBtn,inp,acts);grid.append(card);
     });
     wrap.append(h,grid);
   });
@@ -512,25 +639,28 @@ render();
   if(!window.claude){ /* Modo estático: datos/ del repositorio */
     try{const bust='?t='+Date.now();
       const [per,idx,sim]=await Promise.all([fetch('datos/personajes.json'+bust,{cache:'no-store'}).then(r=>r.json()),fetch('datos/indice.json'+bust,{cache:'no-store'}).then(r=>r.json()),fetch('datos/simbolos.json'+bust,{cache:'no-store'}).then(r=>r.ok?r.json():[]).catch(()=>[])]);
-      chars=per;sims=Array.isArray(sim)?sim:[];RET={};(idx.retratos||[]).forEach(f=>{RET[f.replace(/\.\w+$/,'')]='datos/retratos/'+f});
-      SIM_IMG={};(idx.simbolos||[]).forEach(f=>{SIM_IMG[f.replace(/\.\w+$/,'')]='datos/simbolos/'+f+bust});
+      chars=per;RET={};(idx.retratos||[]).forEach(f=>{RET[f.replace(/\.\w+$/,'')]='datos/retratos/'+f});
+      cargarCatalogo(sim,idx,bust);
       try{for(let i=sessionStorage.length-1;i>=0;i--){const k=sessionStorage.key(i);if(k&&k.startsWith('sim_pend_')){const id=k.slice(9),v=JSON.parse(sessionStorage.getItem(k)||'null');if(v&&v.img&&v.exp>Date.now())SIM_IMG[id]=v.img;else sessionStorage.removeItem(k)}}}catch{}
-      renderSimFilter();render();
+      render();if(vista==='sim')renderSimbolos();
       window.ghCambio=(col,id,d)=>{
-        if(col==='retratos'){if(d)RET[id]=d.img;else delete RET[id];render();if(sel)ficha()}
-        if(col==='simbolos'){if(d)SIM_IMG[id]=d.img;else delete SIM_IMG[id];render();if(sel)ficha();if(vista==='sim')renderSimbolos()}
+        if(col==='retratos'){if(d)RET[id]=d.img;else delete RET[id];render();actualizarFicha()}
+        if(col==='simbolos'){if(d)SIM_IMG[id]=d.img;else delete SIM_IMG[id];render();actualizarFicha();if(vista==='sim')renderSimbolos()}
       };
-      owner=await GH.comprobar();render();if(sel)ficha();if(vista==='sim')renderSimbolos();
+      owner=await GH.comprobar();render();actualizarFicha();if(vista==='sim')renderSimbolos();
       const h=decodeURIComponent(location.hash.slice(1));if(h&&chars.some(c=>c.id===h))abrir(h);
     }catch(e){$('empty').textContent='No se pudieron cargar los datos del repositorio.';$('empty').hidden=false}
     return}
   const user=await claude.use('user');db=await claude.use('db');
   try{owner=!!(user&&await user.isOwner())}catch{owner=false}
   if(!db){$('empty').textContent='Inicia sesión en Claude para ver la base de personajes.';$('empty').hidden=false;return}
-  db.collection('retratos').onSnapshot(s=>{RET={};s.docs.forEach(d=>{if(d.exists){const v=d.data();if(v&&v.img)RET[d.id]=v.img}});render();if(sel)ficha()},()=>{});
+  const bust='?t='+Date.now();
+  Promise.all([fetch('datos/simbolos.json'+bust).then(r=>r.json()),fetch('datos/indice.json'+bust).then(r=>r.json()).catch(()=>({}))])
+    .then(([sim,idx])=>{cargarCatalogo(sim,idx,bust);render();actualizarFicha();if(vista==='sim')renderSimbolos()}).catch(()=>{});
+  db.collection('retratos').onSnapshot(s=>{RET={};s.docs.forEach(d=>{if(d.exists){const v=d.data();if(v&&v.img)RET[d.id]=v.img}});render();actualizarFicha()},()=>{});
   db.collection('personajes').onSnapshot(s=>{
     chars=s.docs.filter(d=>d.exists).map(d=>({id:d.id,...d.data()})).sort((a,b)=>(a.orden||0)-(b.orden||0));
-    render();if(sel)ficha();
+    render();actualizarFicha();if(vista==='sim')renderSimbolos();
     const h=decodeURIComponent(location.hash.slice(1));if(h&&!sel&&!window._hashOpened&&chars.some(c=>c.id===h)){window._hashOpened=1;abrir(h)}
   },err=>{$('empty').textContent='No se pudo leer la base de personajes: '+(err&&err.message||'error desconocido');$('empty').hidden=false});
 })();

@@ -223,6 +223,7 @@
     "simbolos": [
       "principe-sangre",
       "dama-corte",
+      "dama-alianza",
       "versalles"
     ]
   },
@@ -502,6 +503,7 @@
     "simbolos": [
       "legitimado",
       "dama-corte",
+      "dama-alianza",
       "versalles"
     ]
   },
@@ -657,6 +659,7 @@
     "simbolos": [
       "principe-sangre",
       "dama-corte",
+      "dama-alianza",
       "ile-de-france"
     ]
   },
@@ -1732,6 +1735,7 @@
     "simbolos": [
       "duque",
       "dama-corte",
+      "favorita",
       "parisino"
     ]
   },
@@ -1869,6 +1873,7 @@
     "simbolos": [
       "legitimado",
       "dama-corte",
+      "dama-alianza",
       "versalles"
     ]
   },
@@ -2527,6 +2532,7 @@
     "simbolos": [
       "principe-sangre",
       "dama-corte",
+      "figura-corte",
       "ile-de-france"
     ]
   },
@@ -8444,6 +8450,7 @@
     "simbolos": [
       "principe-sangre",
       "dama-corte",
+      "dama-alianza",
       "extranjero"
     ]
   },
@@ -8503,6 +8510,7 @@
     "simbolos": [
       "principe-sangre",
       "dama-corte",
+      "dama-alianza",
       "extranjero"
     ]
   },
@@ -8562,6 +8570,7 @@
     "simbolos": [
       "principe-sangre",
       "dama-corte",
+      "dama-alianza",
       "extranjero"
     ]
   },
@@ -8979,6 +8988,7 @@
     "simbolos": [
       "principe-sangre",
       "dama-corte",
+      "dama-alianza",
       "versalles"
     ]
   },
@@ -9039,6 +9049,7 @@
     "simbolos": [
       "principe-sangre",
       "dama-corte",
+      "dama-alianza",
       "parisino"
     ]
   },
@@ -9275,6 +9286,7 @@
     "simbolos": [
       "principe-sangre",
       "dama-corte",
+      "dama-alianza",
       "parisino"
     ]
   },
@@ -9893,6 +9905,7 @@
     "simbolos": [
       "marques-conde",
       "dama-corte",
+      "figura-corte",
       "salon-letras",
       "parisino"
     ]
@@ -9955,6 +9968,7 @@
     "simbolos": [
       "noble-toga",
       "dama-corte",
+      "figura-corte",
       "salon-letras",
       "parisino"
     ]
@@ -10081,7 +10095,8 @@
       "principe-extranjero",
       "duque",
       "par",
-      "dama-corte"
+      "dama-corte",
+      "dama-alianza"
     ]
   },
   {
@@ -10143,6 +10158,7 @@
       "marques-conde",
       "mariscal",
       "dama-corte",
+      "figura-corte",
       "parisino"
     ]
   },
