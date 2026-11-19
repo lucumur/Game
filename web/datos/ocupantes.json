@@ -1,1 +1,698 @@
-{}
+{
+ "chambre": {
+  "lista": [
+   {
+    "n": "Luis XV",
+    "pid": "luis-xv",
+    "conf": "a",
+    "nota": "Duerme en la cama de Luis XIV desde el 15 de junio.",
+    "fuente": "Château de Versailles; Barbier, Chronique (jun. 1722)",
+    "cat": "real"
+   }
+  ]
+ },
+ "chreine": {
+  "lista": [
+   {
+    "n": "Mariana Victoria, infanta de España",
+    "pid": "mariana-victoria",
+    "conf": "a",
+    "nota": "Prometida del rey, cuatro años; instalada desde el 16 de junio de 1722 (antes en el Louvre).",
+    "fuente": "Barbier; Mathieu Marais, Journal (jun. 1722)",
+    "cat": "real"
+   }
+  ]
+ },
+ "cabreine": {
+  "lista": [
+   {
+    "n": "Duquesa de Ventadour",
+    "pid": "ventadour",
+    "conf": "a",
+    "nota": "Gobernanta de la infanta (antes, del rey).",
+    "fuente": "Château de Versailles; Newton, L'Espace du Roi",
+    "cat": "mujer"
+   }
+  ]
+ },
+ "b-reg-ch": {
+  "lista": [
+   {
+    "n": "Felipe II de Orleans, el Regente",
+    "pid": "felipe-ii-orleans",
+    "conf": "a",
+    "nota": "Antiguo aposento del Gran Delfín; morirá en su gabinete contiguo el 2 de diciembre de 1723.",
+    "fuente": "Saint-Simon, Mémoires (1722); Newton, L'Espace du Roi",
+    "cat": "real"
+   }
+  ]
+ },
+ "b-reg-cab": {
+  "lista": [
+   {
+    "n": "Felipe II de Orleans, el Regente",
+    "pid": "felipe-ii-orleans",
+    "conf": "a",
+    "nota": "Despacho privado del Regente.",
+    "fuente": "Saint-Simon, Mémoires (1722); Newton",
+    "cat": "real"
+   }
+  ]
+ },
+ "b-gouverneur": {
+  "lista": [
+   {
+    "n": "Mariscal duque de Villeroy",
+    "pid": "villeroy",
+    "conf": "a",
+    "nota": "Gobernador del rey en junio de 1722 (Saint-Simon cita también su alojamiento tras los gabinetes del rey); arrestado el 10 de agosto.",
+    "fuente": "Saint-Simon, Mémoires (1722); Newton",
+    "cat": "cargo"
+   },
+   {
+    "n": "Duque de Charost",
+    "pid": "charost",
+    "conf": "a",
+    "nota": "Sustituye a Villeroy como gobernador del rey desde el 14 de agosto de 1722.",
+    "fuente": "Marais, Journal (ago. 1722); Newton",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "b-fleury": {
+  "lista": [
+   {
+    "n": "André-Hercule de Fleury",
+    "pid": "fleury",
+    "conf": "a",
+    "nota": "Antiguo obispo de Fréjus, preceptor del rey (antiguo aposento de los Hijos de Francia).",
+    "fuente": "Château de Versailles; Newton, L'Espace du Roi",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "b-tou-ch": {
+  "lista": [
+   {
+    "n": "Conde de Toulouse",
+    "pid": "comte-de-toulouse",
+    "conf": "a",
+    "nota": "Hijo legitimado de Luis XIV; conserva el Aposento de los Baños en 1715, 1722 y 1732.",
+    "fuente": "Immersailles (1715/1732); Newton, L'Espace du Roi",
+    "cat": "real"
+   }
+  ]
+ },
+ "b-capitaine": {
+  "lista": [
+   {
+    "n": "Capitán de guardias de corps de cuartel",
+    "pid": "francois-harcourt",
+    "conf": "a",
+    "nota": "Rotan por trimestre (Noailles, Villeroy, Charost, Harcourt).",
+    "fuente": "Almanach royal (1722); Newton",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "b-blouin": {
+  "lista": [
+   {
+    "n": "Louis Blouin",
+    "pid": "louis-blouin",
+    "conf": "a",
+    "nota": "Primer ayuda de cámara y gobernador de Versalles y Marly (m. 1729).",
+    "fuente": "Newton, L'Espace du Roi; CRCV",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "maintenon": {
+  "lista": [
+   {
+    "n": "Vacante",
+    "pid": null,
+    "conf": "a",
+    "nota": "Mme de Maintenon se retiró a Saint-Cyr en 1715 y murió en 1719; inventariado en 1722.",
+    "fuente": "Newton, L'Espace du Roi",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "antin": {
+  "lista": [
+   {
+    "n": "Duque de Antin",
+    "pid": "antin",
+    "conf": "a",
+    "nota": "Director general de los Edificios del Rey; mismo ocupante en 1715, 1722 y 1732.",
+    "fuente": "Immersailles (1715/1732); Newton",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "a-roi": {
+  "lista": [
+   {
+    "n": "Luis XV",
+    "pid": "luis-xv",
+    "conf": "a",
+    "nota": "Primeras piezas privadas de recreo acondicionadas en el ático al volver en junio de 1722.",
+    "fuente": "Château de Versailles; Newton",
+    "cat": "real"
+   }
+  ]
+ },
+ "a-centro": {
+  "lista": [
+   {
+    "n": "François-Gabriel Bachelier",
+    "pid": "bachelier",
+    "conf": "m",
+    "nota": "Primer ayuda de cámara de Luis XV (1715–1754); servicio interior y desvanes sobre la Cámara del Rey.",
+    "fuente": "Mathieu da Vinha, Les Valets de chambre; Newton",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "a-sud": {
+  "lista": [
+   {
+    "n": "Duque de Mortemart",
+    "pid": "louis-mortemart",
+    "conf": "m",
+    "nota": "Primer gentilhombre de la Cámara del Rey.",
+    "fuente": "Almanach royal (1722); Newton",
+    "cat": "hombre"
+   },
+   {
+    "n": "Duque de Saint-Aignan",
+    "pid": "paul-hippolyte-st-aignan",
+    "conf": "b",
+    "nota": "Medio hermano de Beauvillier; ala exacta en junio de 1722 por confirmar.",
+    "fuente": "Ubicación exacta por verificar en O¹ / Immersailles",
+    "cat": "hombre"
+   }
+  ]
+ },
+ "midi-orleans": {
+  "lista": [
+   {
+    "n": "Madame Palatina",
+    "pid": "liselotte",
+    "conf": "a",
+    "nota": "Madre del Regente; reside sobre todo en Saint-Cloud, donde muere el 8 de diciembre de 1722.",
+    "fuente": "Newton; Immersailles",
+    "cat": "real"
+   },
+   {
+    "n": "Duquesa de Orleans",
+    "pid": "francoise-marie-blois",
+    "conf": "a",
+    "nota": "Esposa del Regente.",
+    "fuente": "Newton; Immersailles",
+    "cat": "real"
+   }
+  ]
+ },
+ "midi-chartres": {
+  "lista": [
+   {
+    "n": "Duque de Chartres",
+    "pid": "luis-orleans-chartres",
+    "conf": "a",
+    "nota": "Hijo del Regente, 18 años.",
+    "fuente": "Barbier; Newton",
+    "cat": "real"
+   }
+  ]
+ },
+ "midi-bourbon": {
+  "lista": [
+   {
+    "n": "Monsieur le Duc",
+    "pid": "luis-enrique-borbon",
+    "conf": "a",
+    "nota": "Superintendente de la educación del rey desde 1718.",
+    "fuente": "Newton, L'Espace du Roi",
+    "cat": "real"
+   },
+   {
+    "n": "Madame la Duchesse (viuda)",
+    "pid": "louise-francoise-duchesse",
+    "conf": "m",
+    "nota": "Madre de Monsieur le Duc.",
+    "fuente": "Newton, L'Espace du Roi",
+    "cat": "real"
+   },
+   {
+    "n": "Mademoiselle de Clermont",
+    "pid": "marie-anne-clermont",
+    "conf": "m",
+    "nota": "Hermana de Monsieur le Duc; alojada en el ámbito de la Casa de Condé.",
+    "fuente": "Newton; Immersailles",
+    "cat": "real"
+   }
+  ]
+ },
+ "midi-conti": {
+  "lista": [
+   {
+    "n": "Príncipe de Conti",
+    "pid": "louis-armand-conti",
+    "conf": "a",
+    "nota": "Mismo aposento familiar en 1715, 1722 y 1732.",
+    "fuente": "Immersailles (1715/1732); Newton",
+    "cat": "real"
+   },
+   {
+    "n": "Princesa de Conti",
+    "pid": "louise-elisabeth-conti",
+    "conf": "a",
+    "nota": "Esposa del príncipe de Conti.",
+    "fuente": "Immersailles; Newton",
+    "cat": "real"
+   }
+  ]
+ },
+ "midi-charolais": {
+  "lista": [
+   {
+    "n": "Conde de Charolais",
+    "pid": "charles-charolais",
+    "conf": "m",
+    "nota": "Antiguo aposento del duque de Maine (apartado tras Cellamare).",
+    "fuente": "Newton, L'Espace du Roi",
+    "cat": "real"
+   },
+   {
+    "n": "Mademoiselle de Charolais",
+    "pid": "louise-anne-charolais",
+    "conf": "m",
+    "nota": "Casa de Condé.",
+    "fuente": "Newton, L'Espace du Roi",
+    "cat": "real"
+   }
+  ]
+ },
+ "n-nord": {
+  "lista": [
+   {
+    "n": "Cardenal de Rohan",
+    "pid": "cardenal-rohan",
+    "conf": "a",
+    "nota": "Gran Limosnero de Francia (1713–1749), alojado junto a la Capilla.",
+    "fuente": "Immersailles (1715/1732); Newton",
+    "cat": "hombre"
+   },
+   {
+    "n": "Duque de Noailles (ausente, exiliado)",
+    "pid": "noailles",
+    "conf": "a",
+    "nota": "Exiliado a sus tierras en mayo de 1722 por Dubois; no reside en el palacio en junio de 1722.",
+    "fuente": "Saint-Simon; Marais (mayo 1722)",
+    "cat": "hombre"
+   }
+  ]
+ },
+ "n-mn-bouillon": {
+  "lista": [
+   {
+    "n": "Duque de Bouillon",
+    "pid": "emmanuel-theodose-bouillon",
+    "conf": "a",
+    "nota": "Gran Chambelán de Francia; apartamento principesco en el Ala Norte junto a la Capilla.",
+    "fuente": "Newton, L'Espace du Roi; inventarios Bâtiments du Roi",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "n-mn-grandsofs": {
+  "lista": [
+   {
+    "n": "Duque de La Trémoille",
+    "pid": "la-tremoille",
+    "conf": "b",
+    "nota": "Primer gentilhombre de la Cámara (14 años); cuarto concreto en el palacio por verificar.",
+    "fuente": "Almanach royal (1722); sala exacta por confirmar",
+    "cat": "hombre"
+   }
+  ]
+ },
+ "n-mn-clero": {
+  "lista": [
+   {
+    "n": "Padre de Linières",
+    "pid": "linieres",
+    "conf": "b",
+    "nota": "Confesor jesuita de Luis XV desde marzo de 1722; alojamiento de corte cerca de la Capilla por verificar.",
+    "fuente": "Almanach royal (1722); sala exacta por confirmar",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "a-nord": {
+  "lista": [
+   {
+    "n": "Duque de Chaulnes",
+    "pid": "louis-auguste-chaulnes",
+    "conf": "a",
+    "nota": "Capitán-teniente de los Caballos Ligeros de la Guardia; apartamento documentado en el ático del Ala Norte.",
+    "fuente": "Archives nationales O¹ 1799¹; CRCV",
+    "cat": "hombre"
+   },
+   {
+    "n": "Duques de Luxemburgo y Rochechouart",
+    "pid": null,
+    "conf": "m",
+    "nota": "Apartamentos contiguos en el ático del Ala Norte.",
+    "fuente": "Archives nationales O¹ 1799¹; CRCV",
+    "cat": "hombre"
+   }
+  ]
+ },
+ "sur-dubois": {
+  "lista": [
+   {
+    "n": "Cardenal Guillaume Dubois",
+    "pid": "dubois",
+    "conf": "a",
+    "nota": "Principal ministro de facto; ocupa la Surintendance entera desde julio de 1722 hasta su muerte en agosto de 1723 (como antes Colbert y Louvois).",
+    "fuente": "Saint-Simon, Mémoires (1722); CRCV",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "sur-archivos": {
+  "lista": [
+   {
+    "n": "Cardenal Guillaume Dubois (Asuntos Extranjeros)",
+    "pid": "dubois",
+    "conf": "a",
+    "nota": "Despacho diplomático y unos 600 volúmenes de archivos trasladados desde París.",
+    "fuente": "CRCV / OpenEdition; Saint-Simon",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "sur-batiments": {
+  "lista": [
+   {
+    "n": "Duque de Antin",
+    "pid": "antin",
+    "conf": "a",
+    "nota": "Director general de los Edificios del Rey.",
+    "fuente": "CRCV; Bâtiments du Roi",
+    "cat": "cargo"
+   },
+   {
+    "n": "Robert de Cotte",
+    "pid": "robert-de-cotte",
+    "conf": "m",
+    "nota": "Primer Arquitecto del Rey; dirección técnica de los Bâtiments du Roi.",
+    "fuente": "Almanach royal (1722); proyecto VERSPERA",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "min-n1": {
+  "lista": [
+   {
+    "n": "Claude Le Blanc",
+    "pid": "le-blanc",
+    "conf": "m",
+    "nota": "Secretario de Estado de la Guerra (1718–1723); pabellón exacto en las Alas de los Ministros por verificar en O¹.",
+    "fuente": "Almanach royal (1722); CRCV",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "min-n2": {
+  "lista": [
+   {
+    "n": "Secretaría de Asuntos Extranjeros (servicios de Dubois)",
+    "pid": "dubois",
+    "conf": "m",
+    "nota": "Oficinas de enlace en la Cour des Ministres junto al despacho de la Surintendance.",
+    "fuente": "Almanach royal (1722); CRCV",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "min-s1": {
+  "lista": [
+   {
+    "n": "Conde de Maurepas",
+    "pid": "maurepas",
+    "conf": "m",
+    "nota": "Secretario de Estado de la Casa del Rey; pabellón exacto en junio de 1722 por verificar.",
+    "fuente": "Almanach royal (1722); CRCV",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "min-s2": {
+  "lista": [
+   {
+    "n": "Marqués de La Vrillière",
+    "pid": "la-vrilliere",
+    "conf": "m",
+    "nota": "Secretario de Estado (R.P.R. y provincias); dinastía Phélypeaux.",
+    "fuente": "Almanach royal (1722); CRCV",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "min-s3": {
+  "lista": [
+   {
+    "n": "Charles Gaspard Dodun",
+    "pid": "dodun",
+    "conf": "m",
+    "nota": "Controlador General de Finanzas desde abril de 1722; despacho de corte (oficinas principales en París).",
+    "fuente": "Almanach royal (1722); CRCV",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "gc-musica": {
+  "lista": [
+   {
+    "n": "Michel-Richard de Lalande",
+    "pid": "lalande",
+    "conf": "a",
+    "nota": "Superintendente de la Música de la Cámara y la Capilla; residente documentado en el Gran Común.",
+    "fuente": "Château de Versailles, censo del Gran Común (1722)",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "gc-salud": {
+  "lista": [
+   {
+    "n": "Claude Jean-Baptiste Dodart",
+    "pid": "dodart",
+    "conf": "b",
+    "nota": "Primer Médico del Rey; servicio médico de la corte (alojamiento exacto entre Gran Común y cuerpo central por verificar).",
+    "fuente": "Almanach royal (1722); Cour-de-France.fr",
+    "cat": "cargo"
+   },
+   {
+    "n": "Georges Mareschal",
+    "pid": "mareschal",
+    "conf": "b",
+    "nota": "Primer Cirujano del Rey (alojamiento exacto por verificar).",
+    "fuente": "Almanach royal (1722); Cour-de-France.fr",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "commun": {
+  "lista": [
+   {
+    "n": "Michel-Richard de Lalande",
+    "pid": "lalande",
+    "conf": "a",
+    "nota": "Residente documentado; el censo de 1722 registra ~220 alojamientos (~1.500 personas) en el Gran Común.",
+    "fuente": "Château de Versailles, censo de 1722",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "chenil": {
+  "lista": [
+   {
+    "n": "Duque de La Rochefoucauld",
+    "pid": "francois-la-rochefoucauld",
+    "conf": "a",
+    "nota": "Gran Montero de Francia (Grand Veneur) y Maestro del Guardarropa; Pabellón del Gran Montero junto al Grand Chenil.",
+    "fuente": "Almanach royal (1722); Newton",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "gecurie": {
+  "lista": [
+   {
+    "n": "Príncipe Carlos de Lorena (Monsieur le Grand)",
+    "pid": "carlos-de-lorena",
+    "conf": "a",
+    "nota": "Gran Escudero de Francia.",
+    "fuente": "Almanach royal (1722); Château de Versailles",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "pecurie": {
+  "lista": [
+   {
+    "n": "Marqués de Beringhen (Monsieur le Premier)",
+    "pid": null,
+    "conf": "a",
+    "nota": "Primer Escudero del Rey.",
+    "fuente": "Almanach royal (1722); Château de Versailles",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "ville-n": {
+  "lista": [
+   {
+    "n": "Guarda de los Sellos Armenonville",
+    "pid": "armenonville",
+    "conf": "a",
+    "nota": "Nombrado el 1 de marzo de 1722 tras el destierro del canciller d'Aguesseau a Fresnes (28 feb. 1722).",
+    "fuente": "Barbier; Almanach royal (1722)",
+    "cat": "cargo"
+   },
+   {
+    "n": "Duque de Luynes",
+    "pid": "charles-philippe-luynes",
+    "conf": "m",
+    "nota": "Pabellón de Luynes en Versalles.",
+    "fuente": "Mémoires de Luynes; ficha biográfica",
+    "cat": "hombre"
+   }
+  ]
+ },
+ "stcloud": {
+  "lista": [
+   {
+    "n": "Madame Palatina",
+    "pid": "liselotte",
+    "conf": "a",
+    "nota": "Reside en Saint-Cloud de primavera a otoño; fallece aquí el 8 de diciembre de 1722.",
+    "fuente": "Correspondencia de Madame; Marais",
+    "cat": "real"
+   },
+   {
+    "n": "Felipe II de Orleans, el Regente",
+    "pid": "felipe-ii-orleans",
+    "conf": "a",
+    "nota": "Visita a su madre casi cada semana desde Versalles o París.",
+    "fuente": "Barbier; Marais",
+    "cat": "real"
+   }
+  ]
+ },
+ "meudon": {
+  "lista": [
+   {
+    "n": "Duque de Saint-Simon",
+    "pid": "saint-simon",
+    "conf": "a",
+    "nota": "Disfruta del palacio de Meudon por gracia del Regente; aquí celebra la boda de su hija la noche del 15–16 de junio de 1722.",
+    "fuente": "Saint-Simon, Mémoires (1722)",
+    "cat": "hombre"
+   }
+  ]
+ },
+ "sceaux": {
+  "lista": [
+   {
+    "n": "Duquesa de Maine",
+    "pid": "duchesse-du-maine",
+    "conf": "a",
+    "nota": "Tiene corte literaria y política propia en Sceaux tras su liberación en 1720.",
+    "fuente": "Domaine de Sceaux; Marais",
+    "cat": "real"
+   },
+   {
+    "n": "Duque de Maine",
+    "pid": "duc-du-maine",
+    "conf": "a",
+    "nota": "Retirado en Sceaux y Clagny, reconciliado solo en apariencia.",
+    "fuente": "Domaine de Sceaux; Saint-Simon",
+    "cat": "real"
+   }
+  ]
+ },
+ "palais-royal": {
+  "lista": [
+   {
+    "n": "Felipe II de Orleans, el Regente",
+    "pid": "felipe-ii-orleans",
+    "conf": "a",
+    "nota": "Sede parisiense de la casa de Orleans y de sus cenas privadas.",
+    "fuente": "Saint-Simon; Barbier",
+    "cat": "real"
+   },
+   {
+    "n": "Cardenal Dubois",
+    "pid": "dubois",
+    "conf": "a",
+    "nota": "Despacha el correo extranjero y las finanzas de la Regencia.",
+    "fuente": "Saint-Simon; Barbier",
+    "cat": "cargo"
+   }
+  ]
+ },
+ "paris-hotels": {
+  "lista": [
+   {
+    "n": "Madame la Duchesse (viuda)",
+    "pid": "louise-francoise-duchesse",
+    "conf": "a",
+    "nota": "Hace construir el Palais-Bourbon frente a los Campos Elíseos.",
+    "fuente": "Archivo Palais-Bourbon",
+    "cat": "real"
+   },
+   {
+    "n": "Conde de Toulouse",
+    "pid": "comte-de-toulouse",
+    "conf": "a",
+    "nota": "Hôtel de Toulouse (junto a la Place des Victoires).",
+    "fuente": "Hôtel de Toulouse",
+    "cat": "real"
+   },
+   {
+    "n": "Príncipe de Conti",
+    "pid": "louis-armand-conti",
+    "conf": "a",
+    "nota": "Hôtel de Conti (Quai Malaquais).",
+    "fuente": "Hôtel de Conti",
+    "cat": "real"
+   }
+  ]
+ },
+ "paris-parlement": {
+  "lista": [
+   {
+    "n": "Jean-Antoine de Mesmes, primer presidente",
+    "pid": "jean-antoine-mesmes",
+    "conf": "a",
+    "nota": "Cabeza del Parlamento de París.",
+    "fuente": "Almanach royal (1722)",
+    "cat": "cargo"
+   },
+   {
+    "n": "Cardenal de Noailles, arzobispo de París",
+    "pid": "louis-antoine-noailles",
+    "conf": "a",
+    "nota": "Arzobispado junto a Notre-Dame; líder de los apelantes de la bula Unigenitus.",
+    "fuente": "Almanach royal (1722)",
+    "cat": "cargo"
+   }
+  ]
+ }
+}

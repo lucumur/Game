@@ -289,6 +289,7 @@ button.era:hover{background:var(--chip)}
 .ocup{display:grid;gap:6px}
 .ocup .oc{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline}
 .ocup .oc b{font-weight:500}
+.ocup .oc-src{font-size:.82rem;opacity:.82}
 .conecta{display:flex;flex-wrap:wrap;gap:6px}
 .conecta .btn{border-color:var(--line);text-align:left}
 .conecta .btn:hover{border-color:var(--gilt)}

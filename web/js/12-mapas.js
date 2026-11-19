@@ -43,6 +43,27 @@ const PALACIO = [
  ["aile-n","Ala norte del Patio Real","A2",1110,640,60,160,"","Alojamientos de cortesanos y oficiales."]
 ];
 
+/* Anexos administrativos y de servicio compartidos en los tres pisos: Cour y Alas de los Ministros, Gran Común e Hôtel de la Surintendance */
+const PALACIO_ANEXOS = [
+ ["cour-ministres","Patio de los Ministros","Patio Ministros",770,860,410,255,"open","Avant-cour oficial entre la Reja de Honor y la Reja Real, flanqueado por las dos Alas de los Ministros."],
+ ["min-s1","Ala de los Ministros Sur · Pabellón Oeste","MS1",690,865,80,83,"","Pabellón occidental del Ala de los Ministros Sur (Casa del Rey — Maurepas)."],
+ ["min-s2","Ala de los Ministros Sur · Cuerpo central","MS2",690,948,80,84,"","Secretaría de Estado (marqués de La Vrillière) y despachos de provincias."],
+ ["min-s3","Ala de los Ministros Sur · Pabellón Este","MS3",690,1032,80,83,"","Pabellón oriental: despachos de enlace de Finanzas y Control General (Dodun)."],
+ ["min-n1","Ala de los Ministros Norte · Pabellón Oeste","MN1",1180,865,80,83,"","Pabellón occidental del Ala de los Ministros Norte (Secretaría de la Guerra — Le Blanc)."],
+ ["min-n2","Ala de los Ministros Norte · Cuerpo central","MN2",1180,948,80,84,"","Oficinas de enlace de Asuntos Extranjeros (servicios de Dubois)."],
+ ["min-n3","Ala de los Ministros Norte · Pabellón Este","MN3",1180,1032,80,83,"","Pabellón oriental: servicios de Marina, Consejos y commis ministeriales."],
+ ["gc-patio","Patio del Gran Común","Patio G. Común",425,930,150,120,"open","Gran patio interior del cuadrilátero de Hardouin-Mansart: trajín continuo de cocineros, aguadores y oficiales."],
+ ["gc-bouche","Gran Común · Cocinas y Bouche du Roi","Bouche du Roi",360,865,280,65,"","Cuerpo norte: cocinas de la Bouche, panadería, cava y mesas de los comensales del Rey."],
+ ["gc-salud","Gran Común · Servicio Médico y Quirúrgico","Salud",360,930,65,120,"","Crujía occidental: oficiales de salud, cirujanos, boticarios y personal sanitario de la corte."],
+ ["gc-musica","Gran Común · Música y Oficiales de la Casa","Música",575,930,65,120,"","Crujía oriental: músicos reales (Lalande) y oficiales de la Casa del Rey."],
+ ["gc-oficios","Gran Común · Alojamientos de Oficiales y Gobelet","Oficiales / Gobelet",360,1050,280,65,"","Cuerpo sur: más de doscientos cuartos censados en 1722 para oficiales de boca, commis y servidores."],
+ ["sur-dubois","Hôtel de la Surintendance · Aposento de Dubois","Surintendance (Dubois)",75,865,240,95,"","Gran edificio de Hardouin-Mansart (calle de la Surintendance): el cardenal Dubois ocupa el hotel entero desde julio de 1722."],
+ ["sur-archivos","Surintendance · Archivos de Asuntos Extranjeros","Archivos Ext.",75,960,120,155,"","Dos salas con ~600 volúmenes de archivos diplomáticos trasladados desde París por Dubois."],
+ ["sur-batiments","Surintendance · Bâtiments du Roi y Cuadros","Bâtiments du Roi",195,960,120,155,"","Administración de los Edificios del Rey (Duque de Antin, Robert de Cotte) y Gabinete de Cuadros."]
+];
+const ANEXOS_SET = new Set(PALACIO_ANEXOS.map(r=>r[0]));
+PALACIO.push(...PALACIO_ANEXOS);
+
 function genAla(lista,a){
   const ids=[]; a.filaJ=[]; a.filaC=[]; a.transIds=[]; a.patioIds=[];
   const add=(id,nom,lab,x,y,w,h,cls,d,arr)=>{lista.push([id,nom,lab,x,y,w,h,cls,d]);ids.push(id);if(arr)arr.push(id)};
@@ -52,7 +73,8 @@ function genAla(lista,a){
   fila(a.jard,555,70,"jardín","J",a.apts);
   add(`${a.p}-gal`,`Galería ${a.galNom||"alta"} del ${a.n}`,"Galería",a.x0,625,a.x1-a.x0,15,"","Corredor que recorre el ala y une todos sus alojamientos.");
   fila(a.calle,740,60,"calle","C",a.aptsC);
-  a.trans.forEach(([x0,x1],i)=>add(`${a.p}-t${i+1}`,`${a.n} · crujía transversal ${i+1}`,`${a.k}T${i+1}`,x0,640,x1-x0,100,"","Alojamiento en la crujía que separa los patios del ala.",a.transIds));
+  a.trans.forEach(([x0,x1],i)=>{const t=(a.transApts&&a.transApts[i])||null;
+    add(t?t[0]:`${a.p}-t${i+1}`,t?t[1]:`${a.n} · crujía transversal ${i+1}`,`${a.k}T${i+1}`,x0,640,x1-x0,100,"",t?t[2]:"Alojamiento en la crujía que separa los patios del ala.",a.transIds)});
   for(let i=0;i<a.trans.length-1;i++){const x0=a.trans[i][1],x1=a.trans[i+1][0];
     add(`${a.pp}-p${i+1}`,`Patio interior ${i+1} del ${a.n}`,"Patio",x0,640,x1-x0,100,"open","Patio de luces y de servicio.",a.patioIds)}
   a.ids=ids; return a;
@@ -60,9 +82,13 @@ function genAla(lista,a){
 
 const ALAS_NOBLE=[
  genAla(PALACIO,{p:"n-ms",pp:"b-ms",k:"S",n:"Ala del Mediodía",x0:45,x1:760,jard:11,calle:11,trans:[[45,100],[380,430],[705,760]],o:"Hardouin-Mansart, 1679-1682.",u:"Primer piso del Ala de los Príncipes: aposentos de los príncipes de la sangre y de sus casas.",
-  apts:[["midi-orleans","Aposento de Madame y de la duquesa de Orleans",3,"Cabeza del Ala de los Príncipes."],["midi-chartres","Aposento del duque de Chartres",1,"Hijo del Regente."],["midi-bourbon","Aposento de Monsieur le Duc",2,"Casa de Condé."],["midi-conti","Aposento de los príncipes de Conti",2,"Casa de Conti."],["midi-charolais","Antiguo aposento de los Maine",2,"Pasa a los Condé en 1722."]]}),
+  apts:[["midi-orleans","Aposento de Madame y de la duquesa de Orleans",3,"Cabeza del Ala de los Príncipes."],["midi-chartres","Aposento del duque de Chartres",1,"Hijo del Regente."],["midi-bourbon","Aposento de Monsieur le Duc",2,"Casa de Condé."],["midi-conti","Aposento de los príncipes de Conti",2,"Casa de Conti."],["midi-charolais","Antiguo aposento de los Maine",2,"Pasa a los Condé en 1722."],["n-ms-princes-s","Ala del Mediodía · casas principescas (extremo sur)",1,"Prolongación sobre el Parterre del Mediodía para séquitos de Orleans, Condé y Conti."]],
+  aptsC:[["n-ms-c-orleans","Ala del Mediodía · casa de Orleans (calle)",3,"Gentilhombres y damas de servicio de Orleans junto al extremo norte del ala."],["n-ms-c-conde","Ala del Mediodía · casa de Condé (calle)",3,"Oficiales y damas de las casas de Monsieur le Duc y Madame la Duchesse."],["n-ms-c-conti","Ala del Mediodía · casa de Conti (calle)",3,"Dependencias de la casa de Conti sobre la rue de la Surintendance."],["n-ms-c-cortes","Ala del Mediodía · alojamientos principescos del sur (calle)",2,"Cuartos altos de séquito hacia la cabecera sur."]],
+  transApts:[["n-ms-t1","Ala del Mediodía · pabellón transversal sur","Paso interior entre la galería alta y las escaleras del extremo sur."],["n-ms-t2","Ala del Mediodía · escalera y crujía central","Núcleo de comunicaciones entre los dos patios interiores del ala."],["n-ms-t3","Ala del Mediodía · crujía de enlace con la Escalera de los Príncipes","Enlace hacia el cuerpo central y la Escalera de los Príncipes."]]}),
  genAla(PALACIO,{p:"n-mn",pp:"b-mn",k:"N",n:"Ala Norte",x0:1290,x1:1870,jard:9,calle:9,trans:[[1290,1340],[1560,1610],[1815,1870]],o:"Hardouin-Mansart, 1685-1689.",u:"Primer piso del Ala Norte: alojamientos de grandes cargos, prelados y cortesanos.",
-  apts:[["n-nord","Aposentos junto a la capilla (Rohan, Noailles)",2,"Cardenal de Rohan; el duque de Noailles está exiliado desde mayo de 1722."]]})
+  apts:[["n-nord","Aposentos junto a la capilla (Rohan, Noailles)",2,"Cardenal de Rohan; el duque de Noailles está exiliado desde mayo de 1722."],["n-mn-bouillon","Aposento del Gran Chambelán (Duque de Bouillon)",2,"Apartamento principesco de la casa de Bouillon junto a la Capilla Real."],["n-mn-grandsofs","Ala Norte · grandes cargos y duques (jardín)",3,"Apartamentos de gracia para pares y grandes oficiales de la Corona sobre el Parterre del Norte."],["n-mn-clero","Ala Norte · prelados y confesor del Rey",2,"Cuartos reservados al servicio eclesiástico y capellanía junto al tramo norte."]],
+  aptsC:[["n-mn-c-chapelle","Ala Norte · capellanes y oficiales de la Capilla (calle)",3,"Alojamientos próximos a la tribuna de la Capilla Real."],["n-mn-c-officiers","Ala Norte · oficiales de la Casa del Rey (calle)",3,"Cuartos de oficiales de corte sobre los patios y la calle de los Réservoirs."],["n-mn-c-cour","Ala Norte · alojamientos de gracia (extremo norte)",3,"Bloque de apartamentos cortesanos hacia el depósito y el teatro futuro."]],
+  transApts:[["n-mn-t1","Ala Norte · crujía junto a la Capilla","Vestíbulo y alojamientos anexos a la galería de la Capilla Real."],["n-mn-t2","Ala Norte · escalera y crujía central","Escaleras de reparto entre los dos patios interiores del Ala Norte."],["n-mn-t3","Ala Norte · pabellón transversal norte","Cierre septentrional del Ala Norte hacia el Parterre del Norte."]]})
 ];
 
 /* Piso 1 · Planta baja (rez-de-chaussée) */
@@ -95,15 +121,22 @@ const PALACIO_BAJA = [
  ["b-oldchapel","Antigua capilla (nivel bajo)","N7",1110,480,80,50,"","Capilla de 1682, desafectada."],
  ["b-chapelle","Capilla Real (nave)","Capilla Real","1190,540 1290,540 1290,760 1240,800 1190,760","","Consagrada en 1710. La corte oye misa en la nave.",[1240,670]],
  ["b-aile-s","Ala sur del Patio Real (planta baja)","A1",780,560,60,240,"","Oficios de boca y alojamientos modestos."],
- ["b-aile-n","Ala norte del Patio Real (planta baja)","A2",1110,560,60,240,"","Oficios del Gobelet y alojamientos modestos."]
+ ["b-aile-n","Ala norte del Patio Real (planta baja)","A2",1110,560,60,240,"","Oficios del Gobelet y alojamientos modestos."],
+ ...PALACIO_ANEXOS
 ];
 
 const ALAS_BAJA = [
- genAla(PALACIO_BAJA,{p:"b-ms",pp:"b-ms",galNom:"baja",k:"S",n:"Ala del Mediodía",x0:45,x1:760,jard:11,calle:11,trans:[[45,100],[380,430],[705,760]],o:"Hardouin-Mansart, 1679-1682.",u:"Ala de los Príncipes: los alojamientos de planta baja son de damas, oficiales y gentilhombres de las casas de Orleans, Condé y Conti."}),
- genAla(PALACIO_BAJA,{p:"b-mn",pp:"b-mn",galNom:"baja",k:"N",n:"Ala Norte",x0:1290,x1:1870,jard:9,calle:9,trans:[[1290,1340],[1560,1610],[1815,1870]],o:"Hardouin-Mansart, 1685-1689.",u:"Alojamientos de cortesanos y de oficiales de la casa del rey."})
+ genAla(PALACIO_BAJA,{p:"b-ms",pp:"b-ms",galNom:"baja",k:"S",n:"Ala del Mediodía",x0:45,x1:760,jard:11,calle:11,trans:[[45,100],[380,430],[705,760]],o:"Hardouin-Mansart, 1679-1682.",u:"Ala de los Príncipes: los alojamientos de planta baja son de damas, oficiales y gentilhombres de las casas de Orleans, Condé y Conti.",
+  apts:[["b-ms-orleans","Ala del Mediodía (baja) · casa de Orleans (jardín)",3,"Damas y oficiales de la casa de Orleans bajo los aposentos de Madame."],["b-ms-conde","Ala del Mediodía (baja) · casa de Condé (jardín)",3,"Oficiales y servicio de Monsieur le Duc y Madame la Duchesse."],["b-ms-conti","Ala del Mediodía (baja) · casa de Conti (jardín)",3,"Gentilhombres y secretarios de la casa de Conti."],["b-ms-princes","Ala del Mediodía (baja) · oficiales y séquitos del sur (jardín)",2,"Alojamientos de planta baja sobre el Parterre del Mediodía."]],
+  aptsC:[["b-ms-c-oficios","Ala del Mediodía (baja) · oficios y despensas (calle)",4,"Dependencias de servicio en contacto con el Patio Real y el barrio sur."],["b-ms-c-conde","Ala del Mediodía (baja) · caballerizas interiores y criados Condé (calle)",4,"Servicio bajo de las casas principescas hacia los patios interiores."],["b-ms-c-paso","Ala del Mediodía (baja) · paso hacia el Gran Común y la Surintendance",3,"Comunicación exterior por la rue de la Surintendance."]],
+  transApts:[["b-ms-t1","Ala del Mediodía (baja) · vestíbulo sur","Acceso entre el Parterre del Mediodía y la calle de la Surintendance."],["b-ms-t2","Ala del Mediodía (baja) · paso central","Paso abovedado entre los dos patios interiores de servicio."],["b-ms-t3","Ala del Mediodía (baja) · vestíbulo norte","Paso hacia el vestíbulo del Mediodía y la Escalera de los Príncipes."]]}),
+ genAla(PALACIO_BAJA,{p:"b-mn",pp:"b-mn",galNom:"baja",k:"N",n:"Ala Norte",x0:1290,x1:1870,jard:9,calle:9,trans:[[1290,1340],[1560,1610],[1815,1870]],o:"Hardouin-Mansart, 1685-1689.",u:"Alojamientos de cortesanos y de oficiales de la casa del rey.",
+  apts:[["b-mn-chapelle","Ala Norte (baja) · vestíbulo de la Capilla y sacristía",3,"Paso cubierto hacia la nave de la Capilla Real y dependencias clericales."],["b-mn-cour","Ala Norte (baja) · alojamientos cortesanos sobre el jardín",3,"Cuartos bajos de damas y oficiales de corte sobre el Parterre del Norte."],["b-mn-bains","Ala Norte (baja) · antiguo pabellón y cuartos del norte",3,"Alojamientos de oficiales reales junto al extremo septentrional del jardín."]],
+  aptsC:[["b-mn-c-service","Ala Norte (baja) · oficios del Gobelet y cocina baja (calle)",3,"Servicios menores contiguos al Patio de la Capilla."],["b-mn-c-med","Ala Norte (baja) · oficiales y criados de corte (calle)",3,"Cuartos bajos hacia los patios de luces del Ala Norte."],["b-mn-c-nord","Ala Norte (baja) · cuerpo de guardia y paso norte (calle)",3,"Dependencias de guardia y salida hacia el depósito."]],
+  transApts:[["b-mn-t1","Ala Norte (baja) · vestíbulo de la Capilla","Enlace entre la galería baja del Ala Norte y la Capilla Real."],["b-mn-t2","Ala Norte (baja) · paso central","Crujía que separa los dos patios interiores del Ala Norte."],["b-mn-t3","Ala Norte (baja) · vestíbulo septentrional","Salida hacia el extremo norte de los jardines."]]})
 ];
 
-/* Piso 3 · Ático y desvanes (2e étage / attique) — mismas coordenadas 20 150 1870 740 */
+/* Piso 3 · Ático y desvanes (2e étage / attique) — mismas coordenadas */
 const PALACIO_ATICO = [
  ["royale","Patio Real","Patio Real","905,380 1055,380 1055,530 1110,530 1110,860 840,860 840,530 905,530","open","Entrada de carrozas desde la Plaza de Armas.",[975,700]],
  ["marbre","Patio de Mármol","Patio de Mármol",955,275,100,105,"open","Patio de honor ante la Cámara del Rey."],
@@ -117,14 +150,19 @@ const PALACIO_ATICO = [
  ["a-grand","Ático sobre el Gran Aposento del Rey","Ático Norte",1100,185,90,355,"","Alojamientos de cortesanos sobre los salones de Apolo, Mercurio, Marte, Diana y Venus."],
  ["a-chapelle-voute","Bóveda alta de la Capilla Real","Techo Capilla","1190,540 1290,540 1290,760 1240,800 1190,760","open","Cubierta y armadura de la Capilla Real de 1710.",[1240,670]],
  ["a-aile-s","Ático del ala sur del Patio Real","A1",780,560,60,240,"","Alojamientos modestos bajo mansarda sobre el Patio Real."],
- ["a-aile-n","Ático del ala norte del Patio Real","A2",1110,560,60,240,"","Alojamientos modestos bajo mansarda sobre el Patio Real."]
+ ["a-aile-n","Ático del ala norte del Patio Real","A2",1110,560,60,240,"","Alojamientos modestos bajo mansarda sobre el Patio Real."],
+ ...PALACIO_ANEXOS
 ];
 
 const ALAS_ATICO = [
  genAla(PALACIO_ATICO,{p:"a-ms",pp:"b-ms",galNom:"del ático",k:"S",n:"Ala del Mediodía",x0:45,x1:760,jard:11,calle:11,trans:[[45,100],[380,430],[705,760]],o:"Hardouin-Mansart, 1679-1682.",u:"Segundo piso (ático) del Ala de los Príncipes: alojamientos de gentilhombres y oficiales de las casas de Orleans, Condé y Conti.",
-  apts:[["a-midi","Aposentos altos de las casas de Orleans y Condé",4,"Gentilhombres de cámara y damas de las princesas."]]}),
+  apts:[["a-midi","Aposentos altos de las casas de Orleans y Condé",4,"Gentilhombres de cámara y damas de las princesas."],["a-ms-conti","Ático del Mediodía · casa de Conti (jardín)",3,"Alojamientos altos para oficiales y damas de Conti."],["a-ms-cour","Ático del Mediodía · cuartos altos de cortesanos (jardín)",4,"Alojamientos bajo mansarda sobre el Parterre del Mediodía."]],
+  aptsC:[["a-ms-c-suite","Ático del Mediodía · criados y secretarios de Orleans (calle)",4,"Buhardillas del servicio de Orleans sobre la galería del ático."],["a-ms-c-conde","Ático del Mediodía · criados y oficiales de Condé (calle)",4,"Alojamientos altos de las casas de Condé y Conti."],["a-ms-c-comun","Ático del Mediodía · desvanes sobre el extremo sur (calle)",3,"Cuartos menores junto a la cabecera meridional."]],
+  transApts:[["a-ms-t1","Ático del Mediodía · crujía sur","Escaleras de servicio y cuartos bajo cubierta del extremo sur."],["a-ms-t2","Ático del Mediodía · crujía central","Desembarco central de las escaleras del ático."],["a-ms-t3","Ático del Mediodía · enlace con la Escalera de los Príncipes","Comunicación alta hacia el cuerpo central."]]}),
  genAla(PALACIO_ATICO,{p:"a-mn",pp:"b-mn",galNom:"del ático",k:"N",n:"Ala Norte",x0:1290,x1:1870,jard:9,calle:9,trans:[[1290,1340],[1560,1610],[1815,1870]],o:"Hardouin-Mansart, 1685-1689.",u:"Ático del Ala Norte sobre el jardín y la calle: alojamientos codiciados de duques y cortesanos.",
-  apts:[["a-nord","Aposentos de los duques de Chaulnes, Luxemburgo y Rochechouart",3,"Alojamientos de gracia en el ático sobre el jardín."]]})
+  apts:[["a-nord","Aposentos de los duques de Chaulnes, Luxemburgo y Rochechouart",3,"Alojamientos de gracia en el ático sobre el jardín."],["a-mn-duques","Ático del Ala Norte · apartamentos de duques y pares (jardín)",3,"Apartamentos codiciados en el ático sobre el Parterre del Norte."],["a-mn-cour","Ático del Ala Norte · alojamientos de cortesanos (jardín)",3,"Cuartos altos reservados a familias de la corte."]],
+  aptsC:[["a-mn-c-officiers","Ático del Ala Norte · oficiales de corte (calle)",3,"Cuartos bajo mansarda sobre el lado norte."],["a-mn-c-domest","Ático del Ala Norte · criados y secretarios (calle)",3,"Alojamientos de servicio dependientes de los apartamentos nobles."],["a-mn-c-nord","Ático del Ala Norte · mansardas del extremo norte (calle)",3,"Cuartos menores junto al extremo septentrional."]],
+  transApts:[["a-mn-t1","Ático del Ala Norte · crujía junto a la Capilla","Comunicación alta junto a la cubierta de la Capilla Real."],["a-mn-t2","Ático del Ala Norte · crujía central","Escaleras de reparto del ático del Ala Norte."],["a-mn-t3","Ático del Ala Norte · crujía septentrional","Cierre alto del Ala Norte."]]})
 ];
 
 const DOMINIO = [
@@ -198,7 +236,7 @@ const CIUDADES = [
 const CAMINOS = [[0,1],[0,2],[0,3],[0,4],[0,10,9,8],[9,12],[0,6],[0,5],[6,7,8],[0,11],[10,13]];
 
 const INFO_EST = {
- royale:{u:"Patio de llegada. Solo entran en carroza hasta aquí quienes tienen los «honores del Louvre»; los demás bajan en la Plaza de Armas y cruzan a pie. Lacayos, sillas de manos y guardias suizos a toda hora.",o:"Hardouin-Mansart, 1679-1682: cierre con la reja dorada y unificación de las alas.",c:["marbre","b-escreine","b-ambassadeurs","b-sud","b-aile-s","b-aile-n"]},
+ royale:{u:"Patio de llegada. Solo entran en carroza hasta aquí quienes tienen los «honores del Louvre»; los demás bajan en la Plaza de Armas y cruzan el Patio de los Ministros a pie. Lacayos, sillas de manos y guardias suizos a toda hora.",o:"Hardouin-Mansart, 1679-1682: cierre con la reja dorada y unificación de las alas.",c:["marbre","cour-ministres","b-escreine","b-ambassadeurs","b-sud","b-aile-s","b-aile-n"]},
  marbre:{u:"Patio de honor ante la Cámara del Rey. El balcón dorado del primer piso lo domina: es la cara del palacio que mira a la ciudad.",o:"Hardouin-Mansart, 1679-1680: pavimento de mármol blanco y negro sobre el patio de Luis XIII.",c:["royale","b-marbre","b-escreine"]},
  paix:{u:"Pertenece al aposento de la reina. En 1722 sirve de sala de música y juegos anexa al aposento de la pequeña infanta Mariana Victoria.",o:"Hardouin-Mansart y Le Brun, 1680-1686: techo de Le Brun sobre la Paz de Nimega.",c:["galerie","chreine","midi-orleans"]},
  galerie:{u:"La calle principal del palacio. El rey la cruza cada mañana hacia la capilla y la corte se apiña a los lados para verlo pasar y pedirle algo. El 15 de junio de 1722 Luis XV se tumbó en el parqué para mirar la bóveda.",o:"Hardouin-Mansart, 1678-1684; bóveda pintada por Le Brun (1681-1684).",c:["paix","guerre","oeil","conseil"]},
@@ -260,6 +298,9 @@ const INFO_EST = {
  "midi-conti":{u:"Los príncipes de Conti, la rama menor de los Borbón-Condé.",o:"Hardouin-Mansart, década de 1680.",c:["midi-bourbon","midi-charolais","n-ms-gal"]},
  "midi-charolais":{u:"Antiguo aposento de los duques de Maine (apartados tras la conspiración de Cellamare de 1718). Pasa a los Condé (conde y Mlle de Charolais).",o:"Hardouin-Mansart, década de 1680.",c:["midi-conti","grandegardes","n-ms-gal"]},
  "n-nord":{u:"Primer piso del Ala Norte: el cardenal de Rohan (Gran Limosnero de 1713 a 1749), junto a la Capilla. El aposento del duque de Noailles permanece vacío en junio de 1722 tras su exilio a sus tierras en mayo de 1722.",o:"Hardouin-Mansart, 1685-1689.",c:["tribune","hercule","n-mn-gal"]},
+ "n-mn-bouillon":{u:"Apartamento principesco del Gran Chambelán de Francia en el Ala Norte junto a la Capilla Real, ocupado por Emmanuel-Théodose de La Tour d'Auvergne, duque de Bouillon.",o:"Hardouin-Mansart, 1685-1689.",c:["n-nord","n-mn-grandsofs","n-mn-gal"]},
+ "n-mn-grandsofs":{u:"Bloque del primer piso del Ala Norte sobre el Parterre del Norte: apartamentos asignados a grandes oficiales y pares (como el primer gentilhombre de cámara Duque de La Trémoille, cuya pieza exacta está por verificar).",o:"Hardouin-Mansart, 1685-1689.",c:["n-mn-bouillon","n-mn-clero","n-mn-gal"]},
+ "n-mn-clero":{u:"Tramo septentrional del Ala Norte sobre el jardín: alojamiento cortesano de prelados y del confesor jesuita del rey, Padre de Linières (cuarto exacto por verificar).",o:"Hardouin-Mansart, 1685-1689.",c:["n-mn-grandsofs","n-mn-gal"]},
  "b-gouverneur":{u:"Alojamiento del gobernador del rey. El 15 de junio de 1722 se instala Villeroy; el 10 de agosto de 1722 es arrestado y desterrado a Lyon, pasando al duque de Charost.",o:"Hardouin-Mansart, década de 1680.",c:["b-sud","b-fleury","b-reg-ant"]},
  "b-fleury":{u:"Antiguo aposento de los Hijos de Francia, ocupado desde junio de 1722 por André-Hercule de Fleury, preceptor de Luis XV.",o:"Hardouin-Mansart, 1689-1699.",c:["b-gouverneur","b-escreine","b-aile-s"]},
  "b-blouin":{u:"Louis Blouin, primer ayuda de cámara e intendente de Versalles: custodió el palacio durante los siete años de ausencia en París (1715-1722).",o:"Década de 1680.",c:["b-interiores","b-hoquetons"]},
@@ -276,6 +317,22 @@ const INFO_EST = {
  "a-nord":{u:"Ático del Ala Norte: alojamientos de los duques de Chaulnes, Luxemburgo y Rochechouart.",o:"Hardouin-Mansart, 1685-1689.",c:["a-mn-gal","n-nord"]},
  "a-aile-s":{u:"Ático del ala sur del Patio Real: alojamientos modestos, muy disputados.",o:"Le Vau, década de 1660.",c:["a-salle-gardes","aile-s"]},
  "a-aile-n":{u:"Ático del ala norte del Patio Real: alojamientos modestos.",o:"Le Vau, década de 1660.",c:["a-grand","aile-n"]},
+ // Anexos administrativos y de servicio (Cour des Ministres, Gran Común y Surintendance)
+ "cour-ministres":{u:"Avant-cour del palacio entre las dos Alas de los Ministros. Por aquí circulan carrozas ordinarias, correos y sillas de manos hacia la Reja Real.",o:"Hardouin-Mansart, 1679-1682.",c:["royale","min-s1","min-s2","min-s3","min-n1","min-n2","min-n3","gc-musica"]},
+ "min-s1":{u:"Pabellón occidental del Ala de los Ministros Sur: despachos y alojamiento cortesano de la Secretaría de Estado de la Casa del Rey (conde de Maurepas, 20 años).",o:"Hardouin-Mansart, 1678-1679 (sobre pabellones de 1671).",c:["cour-ministres","min-s2"]},
+ "min-s2":{u:"Cuerpo central del Ala de los Ministros Sur: Secretaría de Estado de Louis Phélypeaux, marqués de La Vrillière (asuntos de provincias y R.P.R.).",o:"Hardouin-Mansart, 1678-1679.",c:["cour-ministres","min-s1","min-s3"]},
+ "min-s3":{u:"Pabellón oriental del Ala de los Ministros Sur: oficinas de enlace del Controlador General de Finanzas Charles Gaspard Dodun en la corte.",o:"Hardouin-Mansart, 1678-1679.",c:["cour-ministres","min-s2"]},
+ "min-n1":{u:"Pabellón occidental del Ala de los Ministros Norte: Secretaría de Estado de la Guerra (Claude Le Blanc), junto a la Reja Real.",o:"Hardouin-Mansart, 1678-1679 (sobre pabellones de 1671).",c:["cour-ministres","min-n2"]},
+ "min-n2":{u:"Cuerpo central del Ala de los Ministros Norte: secretarías y oficinas de enlace de Asuntos Extranjeros bajo el cardenal Dubois.",o:"Hardouin-Mansart, 1678-1679.",c:["cour-ministres","min-n1","min-n3"]},
+ "min-n3":{u:"Pabellón oriental del Ala de los Ministros Norte: oficinas y commis de la Marina y de los Consejos.",o:"Hardouin-Mansart, 1678-1679.",c:["cour-ministres","min-n2"]},
+ "gc-patio":{u:"Patio central del Gran Común, rodeado de las crujías de cocina, despensa y alojamientos: en 1722 viven aquí unas 1.500 personas en ~220 cuartos.",o:"Hardouin-Mansart, 1682-1684.",c:["gc-bouche","gc-salud","gc-musica","gc-oficios"]},
+ "gc-bouche":{u:"Cocinas de la Bouche du Roi, panadería y cava que alimentan a todos los oficiales con derecho a mesa en la corte.",o:"Hardouin-Mansart, 1682-1684.",c:["gc-patio","gc-salud","gc-musica","b-ms-c-paso","sur-dubois"]},
+ "gc-salud":{u:"Alojamientos atribuidos a oficiales sanitarios, boticarios y ayudas médicas y quirúrgicas de la corte (ubicación exacta de Dodart y Mareschal entre este bloque y el cuerpo central por verificar).",o:"Hardouin-Mansart, 1682-1684.",c:["gc-patio","gc-bouche","gc-oficios","sur-dubois"]},
+ "gc-musica":{u:"Crujía oriental del Gran Común frente a la calle de la Surintendance: vivienda documentada de Michel-Richard de Lalande y de oficiales de la Casa del Rey.",o:"Hardouin-Mansart, 1682-1684.",c:["gc-patio","gc-bouche","gc-oficios","cour-ministres"]},
+ "gc-oficios":{u:"Cuerpo meridional del Gran Común: subdividido desde 1684 en más de doscientos cuartos para oficiales del Gobelet, commis y criados.",o:"Hardouin-Mansart, 1682-1684.",c:["gc-patio","gc-salud","gc-musica"]},
+ "sur-dubois":{u:"Hôtel de la Surintendance: desde el 15 de julio de 1722 lo ocupa en solitario el cardenal Dubois como principal ministro de facto (como hicieron Colbert y Louvois).",o:"Hardouin-Mansart, 1688-1692.",c:["sur-archivos","sur-batiments","gc-bouche","gc-salud","b-ms-c-paso"]},
+ "sur-archivos":{u:"Salas del depósito diplomático en la Surintendance: Dubois trasladó aquí desde París cerca de 600 volúmenes de papeles de Asuntos Extranjeros.",o:"Hardouin-Mansart, 1688-1692.",c:["sur-dubois","sur-batiments"]},
+ "sur-batiments":{u:"Sede histórica de la administración de los Edificios del Rey (Duque de Antin, Robert de Cotte) y depósito del Gabinete de Cuadros.",o:"Hardouin-Mansart, 1688-1692.",c:["sur-dubois","sur-archivos"]},
  // Dominio, Ciudad de Versalles (1722) y Trayecto hasta París
  stcyr:{u:"Doscientas cincuenta señoritas de la nobleza pobre educadas por las Damas de San Luis. Aquí reposa Madame de Maintenon desde abril de 1719; sigue siendo un centro de influencia devota y de casamientos concertados por la corona.",o:"Hardouin-Mansart, 1685-1686.",c:["canal","menagerie"]},
  canal:{u:"Eje hidráulico del parque. En verano navegan las góndolas venecianas y las chalupas armadas del rey.",o:"Le Nôtre, 1668-1679.",c:["apolo","trianon","menagerie","stcyr"]},
@@ -321,42 +378,16 @@ const INFO_EST = {
  "paris-parlement":{u:"La Île de la Cité con el Palais de Justice (sede del Parlamento de París, que regresó en diciembre de 1720 de su destierro en Pontoise), la catedral de Notre-Dame del cardenal de Noailles y, en la orilla derecha, la rue Quincampoix aún marcada por la quiebra de Law.",o:"Palais de la Cité y Grand'Chambre del Parlamento.",c:["tuileries","palais-royal","paris-hotels","sena"]}
 };
 
+/* Respaldo mínimo por si falla la carga de datos/ocupantes.json (el censo completo vive en web/datos/ocupantes.json) */
 const OCUP = {
  chambre:[["Luis XV","luis-xv","a","Duerme en la cama de Luis XIV desde el 15 de junio."]],
  chreine:[["Mariana Victoria, infanta de España","mariana-victoria","a","Prometida del rey, cuatro años; instalada desde el 16 de junio de 1722 (antes en el Louvre)."]],
- cabreine:[["Duquesa de Ventadour","ventadour","a","Gobernanta de la infanta (antes, del rey)."]],
  "b-reg-ch":[["Felipe II de Orleans, el Regente","felipe-ii-orleans","a","Morirá en su gabinete contiguo el 2 de diciembre de 1723."]],
- "b-reg-cab":[["Felipe II de Orleans, el Regente","felipe-ii-orleans","a","Despacho privado del Regente."]],
- "b-gouverneur":[["Mariscal duque de Villeroy","villeroy","a","Gobernador del rey en junio de 1722; arrestado el 10 de agosto."],["Duque de Charost","charost","a","Sustituye a Villeroy desde el 14 de agosto de 1722."]],
- "b-fleury":[["André-Hercule de Fleury","fleury","a","Antiguo obispo de Fréjus, preceptor del rey (ocupa el antiguo aposento de los Hijos de Francia)."]],
- "b-tou-ch":[["Conde de Toulouse","comte-de-toulouse","a","Hijo legitimado de Luis XIV; conserva el Aposento de los Baños en 1715, 1722 y 1732."]],
- "b-capitaine":[["Capitán de guardias de corps de cuartel","francois-harcourt","a","Rotan por trimestre (Noailles, Villeroy, Charost, Harcourt)."]],
- "b-blouin":[["Louis Blouin","louis-blouin","a","Primer ayuda de cámara e intendente/gobernador de Versalles (m. 1729)."]],
- maintenon:[["Vacante",null,"a","Mme de Maintenon se retiró a Saint-Cyr en 1715 y murió en 1719; inventariado en 1722."]],
- antin:[["Duque de Antin","antin","a","Director general de los Edificios del Rey; mismo ocupante en 1715 y 1732."]],
- "midi-orleans":[["Madame, princesa palatina","liselotte","a","Madre del Regente; muere en Saint-Cloud el 8 de diciembre de 1722."],["Duquesa de Orleans","francoise-marie-blois","a","Esposa del Regente."]],
- "midi-chartres":[["Duque de Chartres","luis-orleans-chartres","a","Hijo del Regente, 18 años."]],
- "midi-bourbon":[["Monsieur le Duc","luis-enrique-borbon","a","Superintendente de la educación del rey desde 1718."],["Madame la Duchesse (viuda)","louise-francoise-duchesse","m","Madre de Monsieur le Duc."]],
- "midi-conti":[["Príncipe de Conti","louis-armand-conti","a","Mismo aposento familiar entre 1715 y 1732."],["Princesa de Conti","louise-elisabeth-conti","a",""]],
- "midi-charolais":[["Conde de Charolais","charles-charolais","m","Antiguo aposento del duque de Maine (desgraciado tras Cellamare)."],["Mademoiselle de Charolais","louise-anne-charolais","m",""]],
- "n-nord":[["Cardenal de Rohan","cardenal-rohan","a","Gran Limosnero de Francia (1713-1749), alojado junto a la Capilla."],["Duque de Noailles (ausente, exiliado)","noailles","a","Exiliado a sus tierras en mayo de 1722 por Dubois; no reside en el palacio en junio de 1722."]],
- "a-roi":[["Luis XV (Petits Cabinets y Cuadros)","luis-xv","a","Primeras piezas de recreo acondicionadas en el ático al volver en junio de 1722."]],
- "a-sud":[["Duque de Mortemart","louis-mortemart","m","Primer gentilhombre de la Cámara."],["Duque de Saint-Aignan","paul-hippolyte-st-aignan","b","Medio hermano de Beauvillier (ala exacta en junio de 1722 por confirmar)."]],
- "a-nord":[["Duques de Chaulnes, Luxemburgo y Rochechouart","louis-auguste-chaulnes","b","Cortesanos del ático del Ala Norte."]],
- // Ocupantes y figuras clave del Dominio y de París en junio de 1722
- stcloud:[["Madame, princesa palatina","liselotte","a","Reside en Saint-Cloud de primavera a otoño; fallece aquí el 8 de diciembre de 1722."],["Felipe II de Orleans, el Regente","felipe-ii-orleans","a","Visita a su madre casi cada semana desde Versalles o París."]],
- meudon:[["Duque de Saint-Simon","saint-simon","a","Disfruta del palacio de Meudon por gracia del Regente; aquí redacta sus notas y recibe en secreto."]],
- sceaux:[["Duquesa de Maine","duchesse-du-maine","a","Tiene corte literaria y política propia en Sceaux tras su liberación en 1720."],["Duque de Maine","duc-du-maine","a","Retirado en Sceaux y Clagny, reconciliado solo en apariencia."]],
- "palais-royal":[["Felipe II de Orleans, el Regente","felipe-ii-orleans","a","Sede parisiense de la casa de Orleans y de sus cenas privadas."],["Cardenal Dubois","dubois","a","Despacha el correo extranjero y las finanzas de la Regencia."]],
- "paris-hotels":[["Madame la Duchesse (viuda)","louise-francoise-duchesse","a","Hace construir el Palais-Bourbon frente a los Campos Elíseos."],["Conde de Toulouse","comte-de-toulouse","a","Hôtel de Toulouse (junto a la Place des Victoires)."],["Príncipe de Conti","louis-armand-conti","a","Hôtel de Conti (Quai Malaquais)."]],
- "paris-parlement":[["Jean-Antoine de Mesmes, primer presidente","jean-antoine-mesmes","a","Cabeza del Parlamento de París."],["Cardenal de Noailles, arzobispo de París","louis-antoine-noailles","a","Arzobispado junto a Notre-Dame; líder de los apelantes de la bula Unigenitus."]],
- gecurie:[["Príncipe Carlos de Lorena (Monsieur le Grand)","carlos-de-lorena","a","Gran Escudero de Francia."]],
- pecurie:[["Marqués de Beringhen (Monsieur le Premier)",null,"a","Primer Escudero del Rey."]],
- "ville-n":[["Guarda de los Sellos Armenonville","armenonville","a","Nombrado el 1 de marzo de 1722 tras el destierro del canciller d'Aguesseau a Fresnes (28 feb 1722)."]]
+ "b-tou-ch":[["Conde de Toulouse","comte-de-toulouse","a","Hijo legitimado de Luis XIV; conserva el Aposento de los Baños en 1715, 1722 y 1732."]]
 };
 
 /* Enlaces automáticos de las alas: vecinos de fila, galería, crujías y patios (sin duplicar) */
-const enlazar=(id,...otros)=>{const c=INFO_EST[id].c;otros.forEach(o=>{if(o&&o!==id&&!c.includes(o))c.push(o)})};
+const enlazar=(id,...otros)=>{if(!INFO_EST[id])return;const c=INFO_EST[id].c;otros.forEach(o=>{if(o&&o!==id&&!c.includes(o))c.push(o)})};
 [ALAS_BAJA,ALAS_NOBLE,ALAS_ATICO].forEach(grupo=>grupo.forEach(a=>{
   const gal=a.p+"-gal", base=c=>({u:a.u,o:a.o,c}), gen=/-[JC]\d+$/;
   [a.filaJ,a.filaC].forEach(L=>L.forEach((id,i)=>{
@@ -378,10 +409,11 @@ enlazar("b-ms-gal","b-sud","b-aile-s","n-ms-gal");
 enlazar("b-mn-gal","b-chapelle","b-aile-n","n-mn-gal");
 enlazar("a-ms-gal","a-salle-gardes","n-ms-gal");
 enlazar("a-mn-gal","a-grand","n-mn-gal");
+enlazar("b-ms-c-paso","gc-bouche","sur-dubois");
 
 let OCUP_DB={};
 const CATS={real:"Familia real",hombre:"Hombre de corte",mujer:"Mujer de corte",cargo:"Lugar de un cargo"};
-const CAT_PJ={"luis-xv":"real","mariana-victoria":"real","felipe-ii-orleans":"real","liselotte":"real","francoise-marie-blois":"real","luis-orleans-chartres":"real","luis-enrique-borbon":"real","louise-francoise-duchesse":"real","louis-armand-conti":"real","louise-elisabeth-conti":"real","charles-charolais":"real","louise-anne-charolais":"real","comte-de-toulouse":"real"};
+const CAT_PJ={"luis-xv":"real","mariana-victoria":"real","felipe-ii-orleans":"real","liselotte":"real","francoise-marie-blois":"real","luis-orleans-chartres":"real","luis-enrique-borbon":"real","louise-francoise-duchesse":"real","louis-armand-conti":"real","louise-elisabeth-conti":"real","charles-charolais":"real","louise-anne-charolais":"real","comte-de-toulouse":"real","marie-anne-clermont":"real"};
 const CAT_EST={"b-gouverneur":"cargo","b-fleury":"cargo","b-capitaine":"cargo","b-blouin":"cargo","b-hoquetons":"cargo","b-servicio":"cargo",cabreine:"mujer",antin:"cargo"};
 function buscarPjMapa(pid){
   if(!pid)return {L:null,p:null};
@@ -390,31 +422,34 @@ function buscarPjMapa(pid){
   return {L,p};
 }
 function ocupantes(id){
-  const d=OCUP_DB[id]; if(d&&Array.isArray(d.lista))return d.lista.map(o=>[o.n,o.pid||null,o.conf||"m",o.nota||"",o.cat||"hombre"]);
-  return (OCUP[id]||[]).map(o=>[o[0],o[1],o[2],o[3],o[1]&&CAT_PJ[o[1]]?CAT_PJ[o[1]]:(CAT_EST[id]||"hombre")]);
+  const d=OCUP_DB[id]; if(d&&Array.isArray(d.lista))return d.lista.map(o=>[o.n,o.pid||null,o.conf||"m",o.nota||"",o.cat||"hombre",o.fuente||""]);
+  return (OCUP[id]||[]).map(o=>[o[0],o[1],o[2],o[3],o[1]&&CAT_PJ[o[1]]?CAT_PJ[o[1]]:(CAT_EST[id]||"hombre"),o[4]||""]);
 }
 function catCls(id){const L=ocupantes(id).filter(o=>o[0]!=="Vacante");return L.length?" cat-"+L[0][4]:""}
 function ocupEditor(id){
-  const L=ocupantes(id).map(o=>({n:o[0],pid:o[1],conf:o[2],nota:o[3],cat:o[4]}));
+  const L=ocupantes(id).map(o=>({n:o[0],pid:o[1],conf:o[2],nota:o[3],cat:o[4],...(o[5]?{fuente:o[5]}:{})}));
   const msg=el("span",{class:"note","aria-live":"polite"});
   const guardar=async lista=>{msg.textContent="Guardando…";try{await (db||GH).doc("ocupantes/"+id).set({lista});OCUP_DB[id]={lista};goRoom(id)}catch(e){msg.textContent="No se pudo guardar."}};
   const nom=el("input",{type:"text",placeholder:"Nombre del ocupante","aria-label":"Nombre del ocupante"});
   const cat=el("select",{"aria-label":"Categoría"}); Object.entries(CATS).forEach(([k,v])=>{const o=el("option",{value:k},v);if(k==="hombre")o.selected=true;cat.append(o)});
   const conf=el("select",{"aria-label":"Confianza"}); [["a","confirmado"],["m","probable"],["b","dudoso"]].forEach(([k,v])=>{const o=el("option",{value:k},v);if(k==="m")o.selected=true;conf.append(o)});
-  const nota=el("input",{type:"text",placeholder:"Nota o fuente (opcional)","aria-label":"Nota"});
+  const nota=el("input",{type:"text",placeholder:"Nota (opcional)","aria-label":"Nota"});
+  const fuente=el("input",{type:"text",placeholder:"Fuente histórica (opcional)","aria-label":"Fuente histórica"});
   return el("div",{class:"ocup-ed"},
-    el("div",{class:"row"},nom,cat,conf),nota,
+    el("div",{class:"row"},nom,cat,conf),nota,fuente,
     el("div",{class:"row"},el("button",{class:"btn sm",onclick:()=>{if(!nom.value.trim())return;const q=nom.value.trim().toLowerCase();const pjL=typeof LIBRO!=="undefined"&&LIBRO?LIBRO.find(c=>c.nombre.toLowerCase()===q||(c.nombre_nac&&c.nombre_nac.toLowerCase()===q)):null;const pjP=typeof PERSONAJES!=="undefined"?PERSONAJES.find(p=>p.nombre.toLowerCase()===q):null;const pid=pjL?(pjL.escritorio_id||pjL.id):(pjP?pjP.id:null);
-      guardar([...L,{n:nom.value.trim(),cat:cat.value,conf:conf.value,nota:nota.value.trim(),pid}])}},"Añadir ocupante"),
+      const item={n:nom.value.trim(),cat:cat.value,conf:conf.value,nota:nota.value.trim(),pid};if(fuente.value.trim())item.fuente=fuente.value.trim();guardar([...L,item])}},"Añadir ocupante"),
       L.length?el("button",{class:"btn sm danger",onclick:()=>guardar(L.slice(0,-1))},"Quitar el último"):"",msg));
 }
 
 let mapSel=null, PISO_PAL=2, CAM_PAL="todo", CALCO_PAL=false, CAM_DOM="todo";
 const CAMERAS_PAL = {
-  todo:    {vb:"20 150 1870 740", label:"Palacio completo", zoom:false},
-  central: {vb:"720 155 600 690", label:"Cuerpo central", zoom:true},
-  midi:    {vb:"25 490 770 350",  label:"Ala del Mediodía", zoom:true},
-  nord:    {vb:"1170 490 720 350",label:"Ala Norte y Capilla", zoom:true}
+  todo:      {vb:"20 150 1870 1015", label:"Palacio completo", zoom:false},
+  central:   {vb:"720 155 600 715",  label:"Cuerpo central", zoom:true},
+  midi:      {vb:"25 490 770 350",   label:"Ala del Mediodía", zoom:true},
+  nord:      {vb:"1170 490 720 350", label:"Ala Norte y Capilla", zoom:true},
+  ministros: {vb:"655 815 645 340",  label:"Alas de los Ministros", zoom:true},
+  anexos:    {vb:"45 815 630 340",   label:"Gran Común y Surintendance", zoom:true}
 };
 const CAMERAS_DOM = {
   todo:      {vb:"0 0 600 1125",   label:"De Versalles a París", zoom:false},
@@ -751,6 +786,16 @@ function openViajeModal(id){
   L.append(sheet); L.hidden=false; btnViajar.focus();
 }
 
+function camaraPara(e){
+  if(!e||CAM_PAL==="todo")return CAM_PAL;
+  const [vx,vy,vw,vh]=CAMERAS_PAL[CAM_PAL].vb.split(" ").map(Number);
+  if(e.cx>=vx&&e.cx<=vx+vw&&e.cy>=vy&&e.cy<=vy+vh)return CAM_PAL;
+  for(const k of ["ministros","anexos","central","midi","nord"]){
+    const [x,y,w,h]=CAMERAS_PAL[k].vb.split(" ").map(Number);
+    if(e.cx>=x&&e.cx<=x+w&&e.cy>=y&&e.cy<=y+h)return k;
+  }
+  return "todo";
+}
 function goRoom(id){
   if(DOMNOM[id]&&!ESTNOM[id]){
     drawMap("dominio");
@@ -760,6 +805,7 @@ function goRoom(id){
   }
   const e=ESTNOM[id]; if(!e)return;
   if(!e.p.includes(PISO_PAL))PISO_PAL=e.p[0];
+  CAM_PAL=camaraPara(e);
   drawMap("palacio");
   const z=document.querySelector('#map-box .zone[data-id="'+id+'"]');
   if(z){z.dispatchEvent(new MouseEvent("click",{bubbles:true}));z.focus({preventScroll:true})}
@@ -785,6 +831,9 @@ function sectorOf(id){
     if(["ville-s","vieux-versailles","stlouis-iglesia","parc-aux-cerfs","commun","cocheras","pecurie"].includes(id))return "Ciudad de Versalles · Barrio Saint-Louis (Sur)";
     return "Dominio y Parque de Versalles";
   }
+  if(id==="cour-ministres"||/^min-/.test(id))return "Patio y Alas de los Ministros";
+  if(/^gc-/.test(id))return "Gran Común";
+  if(/^sur-/.test(id))return "Hôtel de la Surintendance";
   if(/^(b-ms-|n-ms-|a-ms-|a-midi|midi-)/.test(id))return "Ala del Mediodía";
   if(/^(b-mn-|n-mn-|a-mn-|n-nord|a-nord)/.test(id))return "Ala Norte";
   if(/^(b-reg-|b-sud|b-gouverneur|b-fleury|b-escreine|a-sud|a-escreine|a-salle-gardes)/.test(id)||["paix","chreine","nobles","antreine","gardesreine","grandegardes","cabreine","escreine"].includes(id))return "Cuerpo central · lado sur (Reina / Regente)";
@@ -855,10 +904,10 @@ function roomInfo(id,n,d){
   if(OC.length){
     const CF={a:"confirmado (alta)",m:"probable (media)",b:"dudoso (baja)"};
     const ul=el("div",{class:"ocup"});
-    OC.forEach(([nom,pid,cf,nota,cat])=>{
+    OC.forEach(([nom,pid,cf,nota,cat,fuente])=>{
       const found=buscarPjMapa(pid);
       const nm=found.L?el("button",{class:"btn sm",onclick:()=>openFichaL(found.L)},nom):found.p?el("button",{class:"btn sm",onclick:()=>openFicha(found.p)},nom):el("b",{},nom);
-      ul.append(el("div",{class:"oc"},el("i",{class:"dot cat-"+cat,title:CATS[cat]||""}),nm,el("span",{class:"tag"+(cf==="a"?" ej":"")},CF[cf]||cf),nota?el("span",{class:"note"},nota):""));
+      ul.append(el("div",{class:"oc"},el("i",{class:"dot cat-"+cat,title:CATS[cat]||""}),nm,el("span",{class:"tag"+(cf==="a"?" ej":"")},CF[cf]||cf),nota?el("span",{class:"note"},nota):"",fuente?el("span",{class:"note oc-src"},"Fuente: "+fuente):""));
     });
     box.append(el("span",{class:"label"},"Residentes y figuras clave en junio de 1722"),ul);
   }
@@ -902,8 +951,11 @@ function drawArchContext(svg,piso){
   // Damero del Patio de Mármol (955,275,100,105)
   for(let x=955;x<1055;x+=20)g.append(sv("line",{x1:x,y1:275,x2:x,y2:380,stroke:"var(--line)","stroke-width":.7}));
   for(let y=275;y<380;y+=21)g.append(sv("line",{x1:955,y1:y,x2:1055,y2:y,stroke:"var(--line)","stroke-width":.7}));
-  // Reja Real (Grille Royale) cerrando el Patio Real (y=860)
+  // Reja Real (Grille Royale) cerrando el Patio Real (y=860) y Reja de Honor al pie del Patio de los Ministros
   g.append(sv("line",{x1:840,y1:860,x2:1110,y2:860,stroke:"var(--gilt)","stroke-width":3,"stroke-dasharray":"6 3"}));
+  g.append(sv("line",{x1:770,y1:1118,x2:1180,y2:1118,stroke:"var(--gilt)","stroke-width":2.6,"stroke-dasharray":"6 3"}));
+  // Trazado de la Rue de la Surintendance ante el Gran Común y la Surintendance
+  g.append(sv("line",{x1:45,y1:832,x2:685,y2:832,stroke:"var(--muted)","stroke-width":1,"stroke-dasharray":"4 4",opacity:.65}));
   svg.append(g);
 }
 
@@ -1003,14 +1055,16 @@ function drawMap(kind){
       drawArchContext(s,PISO_PAL);
       if(CALCO_PAL){
         const g=sv("g",{});
-        (PISO_PAL===2?PALACIO_BAJA:PALACIO).forEach(r=>{if(typeof r[3]==="number")g.append(sv("rect",{x:r[3],y:r[4],width:r[5],height:r[6],class:"ghost-room"}))});
+        (PISO_PAL===2?PALACIO_BAJA:PALACIO).forEach(r=>{if(typeof r[3]==="number"&&!ANEXOS_SET.has(r[0]))g.append(sv("rect",{x:r[3],y:r[4],width:r[5],height:r[6],class:"ghost-room"}))});
         s.append(g);
       }
     });
     note(svg,1200,170,"↑ Jardines (Oeste) · Parterre de Agua","start");
     note(svg,400,542,"← Ala del Mediodía (de los Príncipes) · Parterre del Mediodía");
     note(svg,1580,542,"Ala Norte · Parterre del Norte →");
-    note(svg,975,882,"↓ Plaza de Armas · Grille Royale");
+    note(svg,195,850,"Hôtel de la Surintendance");
+    note(svg,500,850,"Gran Común");
+    note(svg,975,1142,"↓ Plaza de Armas · Grille d'Honneur");
     note(svg,45,172,"Sur ← · Piso "+PISO_PAL,"start");
 
     const lg=el("div",{class:"leyenda-map"});

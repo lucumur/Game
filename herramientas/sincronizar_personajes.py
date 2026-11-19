@@ -22,6 +22,7 @@ R_CANON = RAIZ / "canon" / "personajes.json"
 R_LINAJE = RAIZ / "canon" / "linaje.json"
 R_GLOSARIO = RAIZ / "canon" / "glosario.json"
 R_00 = RAIZ / "web" / "js" / "00-datos.js"
+R_OCUP = RAIZ / "web" / "datos" / "ocupantes.json"
 R_MAPAS = RAIZ / "web" / "js" / "12-mapas.js"
 R_FRANCIA = RAIZ / "web" / "js" / "14-francia-mapa-de-provincias-a.js"
 
@@ -215,6 +216,36 @@ def validar(datos, canon_obj, pj00):
     for pid in sorted(set(re.findall(r'pid:"([^"]+)"', txt_fr))):
         if pid not in d_by_eid:
             errores.append(f"14-francia-mapa-de-provincias-a.js: pid {pid!r} no existe en datos")
+
+    # Validar web/datos/ocupantes.json
+    if not R_OCUP.exists():
+        errores.append("Falta web/datos/ocupantes.json")
+    else:
+        ocup_db = json.loads(R_OCUP.read_text(encoding="utf-8"))
+        if not isinstance(ocup_db, dict) or not ocup_db:
+            errores.append("web/datos/ocupantes.json debe ser un objeto no vacío")
+        else:
+            est_ids = set(re.findall(r'^\s*(?:\["|aptsC?:.*?\[|"?)([\w-]+)', txt_mapas, re.M))
+            est_ids |= set(re.findall(r'\["([\w-]+)",\s*"[^"]+",', txt_mapas))
+            for room_id, entry in ocup_db.items():
+                if room_id not in est_ids:
+                    errores.append(f"ocupantes.json: estancia {room_id!r} no encontrada en 12-mapas.js")
+                lista = entry.get("lista") if isinstance(entry, dict) else None
+                if not isinstance(lista, list) or not lista:
+                    errores.append(f"ocupantes.json {room_id}: 'lista' debe ser una lista no vacía")
+                    continue
+                for idx, o in enumerate(lista):
+                    if not str(o.get("n") or "").strip():
+                        errores.append(f"ocupantes.json {room_id}[{idx}]: 'n' vacío")
+                    if o.get("conf") not in {"a", "m", "b"}:
+                        errores.append(f"ocupantes.json {room_id}[{idx}]: conf inválida ({o.get('conf')!r})")
+                    if o.get("cat") not in {"real", "hombre", "mujer", "cargo"}:
+                        errores.append(f"ocupantes.json {room_id}[{idx}]: cat inválida ({o.get('cat')!r})")
+                    if not str(o.get("fuente") or "").strip():
+                        errores.append(f"ocupantes.json {room_id}[{idx}]: 'fuente' vacía")
+                    pid = o.get("pid")
+                    if pid is not None and pid not in d_by_eid:
+                        errores.append(f"ocupantes.json {room_id}[{idx}]: pid {pid!r} no existe en datos")
 
     return errores
 

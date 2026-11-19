@@ -58,6 +58,7 @@ async function irALugar(L){
   [...tabs.children].forEach(x=>x.setAttribute("aria-selected",String(x.dataset.map===L.tipo)));
   if(L.tipo==="palacio"){
     if(!L.pisos.includes(PISO_PAL))PISO_PAL=L.pisos.includes(2)?2:L.pisos[0];
+    if(typeof camaraPara==="function"&&ESTNOM[L.id])CAM_PAL=camaraPara(ESTNOM[L.id]);
     mapSel=null; drawMap("palacio");
   } else if(L.tipo==="dominio"){
     if(typeof CAM_DOM!=="undefined")CAM_DOM="todo";
