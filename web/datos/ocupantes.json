@@ -32,6 +32,22 @@
     "nota": "Gobernanta de la infanta (antes, del rey).",
     "fuente": "Château de Versailles; Newton, L'Espace du Roi",
     "cat": "mujer"
+   },
+   {
+    "n": "Princesa de Soubise",
+    "pid": "princesse-de-soubise",
+    "conf": "a",
+    "nota": "Sub-gobernanta de los Hijos de Francia desde abril de 1722, bajo Madame de Ventadour.",
+    "fuente": "Gazette; Saint-Simon (abr. 1722)",
+    "cat": "mujer"
+   },
+   {
+    "n": "Madame de La Lande",
+    "pid": "madame-de-la-lande",
+    "conf": "a",
+    "nota": "Sub-gobernanta de los Hijos de Francia (en servicio desde 1704; confirmada para la infanta en 1722).",
+    "fuente": "Newton, L'Espace du Roi; Luynes",
+    "cat": "mujer"
    }
   ]
  },
@@ -624,6 +640,14 @@
     "nota": "Retirado en Sceaux y Clagny, reconciliado solo en apariencia.",
     "fuente": "Domaine de Sceaux; Saint-Simon",
     "cat": "real"
+   },
+   {
+    "n": "Mademoiselle de Launay",
+    "pid": "mlle-de-launay",
+    "conf": "a",
+    "nota": "Secretaria y confidente de la duquesa del Maine en Sceaux tras salir de la Bastilla.",
+    "fuente": "Mémoires de Mme de Staal-Delaunay",
+    "cat": "mujer"
    }
   ]
  },
@@ -644,6 +668,14 @@
     "nota": "Despacha el correo extranjero y las finanzas de la Regencia.",
     "fuente": "Saint-Simon; Barbier",
     "cat": "cargo"
+   },
+   {
+    "n": "Duquesa de Phalaris",
+    "pid": "duchesse-de-phalaris",
+    "conf": "a",
+    "nota": "Favorita titular del Regente Felipe de Orleans en 1722.",
+    "fuente": "Barbier; Saint-Simon",
+    "cat": "mujer"
    }
   ]
  },
@@ -672,6 +704,30 @@
     "nota": "Hôtel de Conti (Quai Malaquais).",
     "fuente": "Hôtel de Conti",
     "cat": "real"
+   },
+   {
+    "n": "María Ana de Borbón, princesa viuda de Conti",
+    "pid": "marie-anne-blois-conti",
+    "conf": "a",
+    "nota": "Hôtel de Conti (rue Saint-Augustin) y Château de Choisy.",
+    "fuente": "Archivos de París; Saint-Simon",
+    "cat": "real"
+   },
+   {
+    "n": "Condesa de Verrue",
+    "pid": "comtesse-de-verrue",
+    "conf": "a",
+    "nota": "Petit Hôtel de Verrue (rue du Regard / rue du Cherche-Midi).",
+    "fuente": "Inventarios parisienses; Saint-Simon",
+    "cat": "mujer"
+   },
+   {
+    "n": "Antoine Crozat (Marqués du Châtel)",
+    "pid": "antoine-crozat",
+    "conf": "a",
+    "nota": "Hôtel Crozat en la Place Vendôme.",
+    "fuente": "Place Vendôme; Barbier",
+    "cat": "hombre"
    }
   ]
  },

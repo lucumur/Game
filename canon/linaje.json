@@ -243,6 +243,18 @@
    "nacimiento": "1698",
    "muerte": null,
    "nota": "Amante de Monsieur le Duc"
+  },
+  "la-valliere": {
+   "nombre": "Louise de La Vallière",
+   "nacimiento": "1644",
+   "muerte": "1710",
+   "nota": "Favorita de Luis XIV; madre de María Ana de Borbón (Mademoiselle de Blois / Conti)"
+  },
+  "louis-armand-i-conti": {
+   "nombre": "Luis Armando I de Borbón, príncipe de Conti",
+   "nacimiento": "1661",
+   "muerte": "1685",
+   "nota": "Hermano mayor del Gran Conti; primer esposo de Mademoiselle de Blois"
   }
  },
  "padres": {
@@ -433,6 +445,14 @@
   "mlle-du-maine": [
    "duc-du-maine",
    "duchesse-du-maine"
+  ],
+  "marie-anne-blois-conti": [
+   "luis-xiv",
+   "la-valliere"
+  ],
+  "louis-armand-i-conti": [
+   "armand-conti",
+   "martinozzi"
   ]
  },
  "consortes": [
@@ -596,6 +616,27 @@
    "desde": "1692",
    "hasta": null,
    "estado": "vigente"
+  },
+  {
+   "a": "louis-armand-i-conti",
+   "b": "marie-anne-blois-conti",
+   "desde": "1680",
+   "hasta": "1685",
+   "estado": "viudez"
+  },
+  {
+   "a": "noailles",
+   "b": "duchesse-de-noailles",
+   "desde": "1698",
+   "hasta": null,
+   "estado": "vigente"
+  },
+  {
+   "a": "villars",
+   "b": "duchesse-de-villars",
+   "desde": "1702",
+   "hasta": null,
+   "estado": "vigente"
   }
  ],
  "especiales": [
@@ -628,6 +669,31 @@
    "de": "luis-enrique-borbon",
    "a": "prie",
    "tipo": "Amante"
+  },
+  {
+   "de": "felipe-ii-orleans",
+   "a": "duchesse-de-phalaris",
+   "tipo": "Favorita (1720–1723)"
+  },
+  {
+   "de": "mariana-victoria",
+   "a": "princesse-de-soubise",
+   "tipo": "Sub-gobernanta (desde abr. 1722)"
+  },
+  {
+   "de": "mariana-victoria",
+   "a": "madame-de-la-lande",
+   "tipo": "Sub-gobernanta"
+  },
+  {
+   "de": "comte-de-toulouse",
+   "a": "marie-victoire-gondrin",
+   "tipo": "Futuro matrimonio secreto (feb. 1723)"
+  },
+  {
+   "de": "duchesse-du-maine",
+   "a": "mlle-de-launay",
+   "tipo": "Secretaria y confidente en Sceaux"
   }
  ]
 }

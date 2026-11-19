@@ -6176,6 +6176,85 @@
     ]
   },
   {
+    "id": "p43",
+    "escritorio_id": "duchesse-de-phalaris",
+    "orden": 43,
+    "nombre": "Duquesa de Phalaris",
+    "nombre_nac": "Marie-Thérèse Blonel d'Haraucourt",
+    "apodos": [
+      "Madame de Phalaris",
+      "Mademoiselle de Fallary"
+    ],
+    "anio": 1697,
+    "edad": "24–25",
+    "nacimiento": "1697, Saint-Marcellin (Delfinado)",
+    "muerte": "18/07/1782",
+    "casa": "Blonel d'Haraucourt",
+    "estatus_familia": "Nobleza provincial del Delfinado",
+    "titulo": "Duquesa de Phalaris (ducado pontificio por matrimonio)",
+    "titulo_nob": "Duquesa de Phalaris",
+    "puesto": "Sin cargo",
+    "cargo": "Favorita del Regente Felipe de Orleans (1720–1723)",
+    "padre": "Claude Balthazar Blonel, marqués d'Haraucourt",
+    "madre": "Thérèse Falcoz de La Blache",
+    "lugar_familia": "Hija",
+    "conyuge": "George d'Entragues, duque de Phalaris (huido a España por deudas)",
+    "hijos": "Sin descendencia conocida",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "Educación provincial noble; introducida en París hacia 1719–1720",
+    "vocacion": "Corte",
+    "llegada_corte": "Círculo del Palais-Royal desde 1720 vía Mme de Sabran",
+    "faccion": "Orleans",
+    "ubicacion": "París (entorno del Palais-Royal) / Versalles ocasional",
+    "quiere": "Conservar el favor del Regente y asegurar rentas frente a las deudas de su marido",
+    "oculta": "Las dificultades financieras y el paradero en España de su esposo",
+    "relacion_rey": "Ninguna directa; favorita del Regente en junio de 1722",
+    "hitos": "Abandonada tras casar con George d'Entragues (huido por fraude); última favorita titular de Felipe de Orleans desde 1720 hasta su muerte en diciembre de 1723 [confirmado]",
+    "estatus": "verificado",
+    "presencia_versalles": "frecuenta",
+    "riqueza": 6,
+    "rango": 46,
+    "sexo": "F",
+    "rangos": [
+      "epee"
+    ],
+    "favor": 3,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": "",
+    "residencia": [
+      "habitante_paris"
+    ],
+    "simbolos": [
+      "duque",
+      "dama-corte",
+      "favorita",
+      "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1697–c. 1715",
+        "texto": "Mademoiselle Blonel d'Haraucourt",
+        "estado": "anterior",
+        "nota": "Nombre de nacimiento",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "c. 1715–1782",
+        "texto": "Duquesa de Phalaris",
+        "estado": "vigente",
+        "nota": "Madame la duchesse de Phalaris por su matrimonio con George d'Entragues (ducado pontificio de Phalaris)",
+        "conf": "confirmado"
+      }
+    ]
+  },
+  {
     "aficiones": [
       {
         "doc": false,
@@ -6239,7 +6318,7 @@
     "nombre": "Padre de Linières",
     "nombre_nac": "Claude-Bertrand Taschereau de Linières",
     "oculta": "Lo que el rey le confiesa",
-    "orden": 43,
+    "orden": 44,
     "padre": "—",
     "prompt": "Father Claude-Bertrand Taschereau de Linières, Jesuit confessor to the King, an austere 63-year-old French priest, 1722, thin severe face. Grave, discreet expression, clean shaven, own short grey hair. Black Jesuit cassock with white collar. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, wig, colorful robes, modern photograph, studio flash, modern clothing, text, watermark",
     "puesto": "Confesor del rey",
@@ -12758,6 +12837,1539 @@
         "texto": "le patriarche de Ferney",
         "estado": "futura",
         "nota": "Sobrenombre en su vejez tras instalarse en Ferney (1758/1760)",
+        "conf": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "p121",
+    "escritorio_id": "marie-anne-blois-conti",
+    "orden": 121,
+    "nombre": "María Ana de Borbón, princesa viuda de Conti",
+    "nombre_nac": "Marie-Anne de Bourbon",
+    "apodos": [
+      "Madame la Princesse douairière de Conti",
+      "la Première douairière"
+    ],
+    "anio": 1666,
+    "edad": "55",
+    "nacimiento": "02/10/1666, Vincennes",
+    "muerte": "03/05/1739, París",
+    "casa": "Borbón (legitimada de Francia) / Borbón-Conti",
+    "estatus_familia": "Hija legitimada de Luis XIV; princesa viuda de sangre por matrimonio",
+    "titulo": "Princesa viuda de Conti",
+    "titulo_nob": "Princesa viuda de Conti, duquesa de La Vallière y de Vaujours",
+    "puesto": "Princesa de la casa de Conti (Hôtel de Conti / Choisy)",
+    "cargo": "Sin cargo palatino en 1722",
+    "padre": "Luis XIV de Francia",
+    "madre": "Louise de La Vallière",
+    "lugar_familia": "Hija mayor legitimada de Luis XIV",
+    "conyuge": "Viuda de Luis Armando I de Borbón, príncipe de Conti (m. ene. 1680; †1685)",
+    "hijos": "Sin descendencia",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "Corte de Luis XIV",
+    "vocacion": "Corte y rango dinástico",
+    "llegada_corte": "Legitimada en mayo de 1667",
+    "faccion": "Legitimados",
+    "ubicacion": "París (Hôtel de Conti, rue Saint-Augustin) / Château de Choisy",
+    "quiere": "Preservar las preeminencias de los legitimados y el rango de princesa viuda",
+    "oculta": "Rivalidades domésticas con los Condé y las otras viudas de Conti",
+    "relacion_rey": "Tía abuela natural del joven rey (hija mayor de Luis XIV)",
+    "hitos": "Casada en enero de 1680 con Luis Armando I de Conti (primer enlace de una legitimada con un príncipe de sangre); viuda con diecinueve años en 1685 y titular del ducado de La Vallière [confirmado]",
+    "estatus": "verificado",
+    "presencia_versalles": "ocasional",
+    "riqueza": 9,
+    "rango": 82,
+    "sexo": "F",
+    "rangos": [
+      "legitime"
+    ],
+    "favor": 2,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": "",
+    "residencia": [
+      "habitante_paris",
+      "habitante_ile"
+    ],
+    "simbolos": [
+      "legitimado",
+      "dama-corte",
+      "figura-corte",
+      "dama-alianza",
+      "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1667–1680",
+        "texto": "Mademoiselle de Blois",
+        "estado": "anterior",
+        "nota": "Primera Mademoiselle de Blois tras su legitimación en mayo de 1667",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1680–1739",
+        "texto": "Princesa de Conti",
+        "estado": "vigente",
+        "nota": "Desde 1709 distinguida como primera princesa viuda de Conti",
+        "conf": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "p122",
+    "escritorio_id": "princesse-de-soubise",
+    "orden": 122,
+    "nombre": "Princesa de Soubise (Anne-Julie de Melun)",
+    "nombre_nac": "Anne-Julie-Adélaïde de Melun",
+    "apodos": [
+      "Madame la Princesse de Soubise"
+    ],
+    "anio": 1698,
+    "edad": "23–24",
+    "nacimiento": "1698",
+    "muerte": "18/05/1724, París",
+    "casa": "Melun-Épinoy / Rohan-Soubise",
+    "estatus_familia": "Príncipes extranjeros (casa de Melun y casa de Rohan)",
+    "titulo": "Princesa de Soubise",
+    "titulo_nob": "Princesa de Soubise",
+    "puesto": "Sub-gobernanta de los Hijos de Francia (nombrada en abril de 1722)",
+    "cargo": "Sub-gobernanta de la Infanta María Ana Victoria en Versalles",
+    "padre": "Louis I de Melun, príncipe de Épinoy",
+    "madre": "Élisabeth-Thérèse de Lorraine",
+    "lugar_familia": "Hija; esposa del heredero de Rohan-Soubise",
+    "conyuge": "Jules François Louis de Rohan, príncipe de Soubise (m. 16/09/1714; hijo de p54 y nieto de p11)",
+    "hijos": "Charles de Rohan (futuro mariscal de Soubise) y varios hijos",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "Alta nobleza principesca",
+    "vocacion": "Servicio real y casa de Rohan",
+    "llegada_corte": "Abril de 1722 como sub-gobernanta junto a su abuela política Mme de Ventadour",
+    "faccion": "Casa del Rey",
+    "ubicacion": "Versalles (alojamiento de la gobernanta de la Infanta) / París",
+    "quiere": "Consolidar la preeminencia de los Rohan-Soubise junto a Ventadour",
+    "oculta": "Equilibrios de precedencia entre los Rohan y los duques y pares",
+    "relacion_rey": "Sub-gobernanta en el entorno íntimo de Luis XV y la infanta prometida",
+    "hitos": "Casada el 16/09/1714 con Jules de Rohan (nieto de p11 Ventadour e hijo de p54); nombrada sub-gobernanta en abril de 1722 para asistir a Ventadour con la infanta Mariana Victoria [confirmado]",
+    "estatus": "verificado",
+    "presencia_versalles": "reside",
+    "riqueza": 8,
+    "rango": 76,
+    "sexo": "F",
+    "rangos": [
+      "etranger",
+      "service"
+    ],
+    "favor": 3,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": "",
+    "residencia": [
+      "residente_palacio",
+      "habitante_paris"
+    ],
+    "simbolos": [
+      "principe-extranjero",
+      "dama-corte",
+      "casa-rey",
+      "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1698–1714",
+        "texto": "Mademoiselle de Melun",
+        "estado": "anterior",
+        "nota": "Hija del príncipe de Épinoy",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1714–1724",
+        "texto": "Princesa de Soubise",
+        "estado": "vigente",
+        "nota": "Tras su boda con Jules François Louis de Rohan, príncipe de Soubise (16/09/1714)",
+        "conf": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "p123",
+    "escritorio_id": "madame-de-la-lande",
+    "orden": 123,
+    "nombre": "Madame de La Lande",
+    "nombre_nac": "Jeanne-Françoise de Biaudos de Castéja",
+    "apodos": [
+      "Madame de La Lande"
+    ],
+    "anio": 1672,
+    "edad": "49",
+    "nacimiento": "18/12/1672, Versalles (bautismo)",
+    "muerte": "1761",
+    "casa": "Biaudos de Castéja / Salomon de La Lande",
+    "estatus_familia": "Nobleza de espada gascona",
+    "titulo": "Señora de La Lande",
+    "titulo_nob": "Dama noble",
+    "puesto": "Sub-gobernanta de los Hijos de Francia (en servicio desde 1704; confirmada en 1722)",
+    "cargo": "Sub-gobernanta de la Infanta María Ana Victoria en Versalles",
+    "padre": "Jean-Baptiste de Biaudos de Castéja (familia de Castéja)",
+    "madre": "Por verificar",
+    "lugar_familia": "Educada en Saint-Cyr; confidente de Mme de Maintenon",
+    "conyuge": "Jacques de Salomon, señor de La Lande (m. oct. 1696)",
+    "hijos": "Por verificar",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "Maison Royale de Saint-Louis en Saint-Cyr",
+    "vocacion": "Casa del Rey y educación principesca",
+    "llegada_corte": "Sub-gobernanta desde 1704; confirmada en 1722 bajo Mme de Ventadour",
+    "faccion": "Casa del Rey",
+    "ubicacion": "Versalles (cuarto de las damas gobernantes de la Infanta)",
+    "quiere": "Velar por la disciplina y piedad cotidiana de la pequeña Infanta",
+    "oculta": "Correspondencias y lealtades del antiguo círculo de Saint-Cyr y Maine",
+    "relacion_rey": "Sub-gobernanta de Luis XV en su infancia; atiende ahora a su prometida",
+    "hitos": "Alumna y colaboradora de Mme de Maintenon en Saint-Cyr; sub-gobernanta de los Hijos de Francia desde 1704 y confirmada en el servicio de la infanta en 1722 [confirmado]",
+    "estatus": "verificado",
+    "presencia_versalles": "reside",
+    "riqueza": 5,
+    "rango": 54,
+    "sexo": "F",
+    "rangos": [
+      "epee",
+      "service"
+    ],
+    "favor": 3,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": "",
+    "residencia": [
+      "residente_palacio"
+    ],
+    "simbolos": [
+      "dama-corte",
+      "casa-rey",
+      "versalles"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1672–1696",
+        "texto": "Mademoiselle de Castéja",
+        "estado": "anterior",
+        "nota": "Educada en Saint-Cyr bajo la protección de Mme de Maintenon",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1696–1761",
+        "texto": "Madame de La Lande",
+        "estado": "vigente",
+        "nota": "Casada en octubre de 1696 con Jacques de Salomon de La Lande",
+        "conf": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "p124",
+    "escritorio_id": "marie-victoire-gondrin",
+    "orden": 124,
+    "nombre": "Marie-Victoire de Noailles, marquesa de Gondrin",
+    "nombre_nac": "Marie-Victoire-Sophie de Noailles",
+    "apodos": [
+      "Madame de Gondrin"
+    ],
+    "anio": 1688,
+    "edad": "34",
+    "nacimiento": "06/05/1688, Versalles",
+    "muerte": "30/09/1766, París",
+    "casa": "Noailles / Pardaillan de Gondrin",
+    "estatus_familia": "Alta nobleza ducal (Noailles)",
+    "titulo": "Marquesa viuda de Gondrin",
+    "titulo_nob": "Marquesa de Gondrin",
+    "puesto": "Dama de la corte; entorno discreto del conde de Toulouse",
+    "cargo": "Sin cargo oficial en junio de 1722",
+    "padre": "Anne-Jules de Noailles, mariscal duque de Noailles",
+    "madre": "Marie-Françoise de Bournonville",
+    "lugar_familia": "Hermana de Adrien-Maurice de Noailles (p24) y nuera del duque de Antin (p21)",
+    "conyuge": "Viuda de Louis de Pardaillan de Gondrin, marqués de Gondrin (m. 1707; †1712)",
+    "hijos": "Louis de Pardaillan de Gondrin (futuro II duque de Antin) y Antoine-François",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "Corte de Versalles",
+    "vocacion": "Corte y alianzas familiares",
+    "llegada_corte": "Nacida en Versalles",
+    "faccion": "Legitimados",
+    "ubicacion": "París / Rambouillet / Versalles",
+    "quiere": "Asegurar el porvenir de sus hijos Gondrin y formalizar su unión con el conde de Toulouse",
+    "oculta": "Su relación ya estrecha con Luis Alejandro de Borbón, conde de Toulouse (casarán en secreto en febrero de 1723)",
+    "relacion_rey": "Cuñada y futura nuera política de la casa legitimada",
+    "hitos": "Enviuda del marqués de Gondrin (hijo de p21 Antin) en 1712; vinculada estrechamente al conde de Toulouse (p20), con quien contraerá matrimonio secreto en febrero de 1723 [confirmado]",
+    "estatus": "verificado",
+    "presencia_versalles": "frecuenta",
+    "riqueza": 7,
+    "rango": 70,
+    "sexo": "F",
+    "rangos": [
+      "epee"
+    ],
+    "favor": 2,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": "",
+    "residencia": [
+      "habitante_paris",
+      "habitante_ile"
+    ],
+    "simbolos": [
+      "marques-conde",
+      "dama-corte",
+      "dama-alianza",
+      "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1688–1707",
+        "texto": "Mademoiselle de Noailles",
+        "estado": "anterior",
+        "nota": "Hija del II duque de Noailles",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1707–1723",
+        "texto": "Marquesa de Gondrin",
+        "estado": "vigente",
+        "nota": "Madame de Gondrin tras casar en 1707 con Louis de Pardaillan de Gondrin (†1712)",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1723–1766",
+        "texto": "Condesa de Toulouse",
+        "estado": "futura",
+        "nota": "Por su matrimonio secreto de febrero de 1723 con Luis Alejandro de Borbón, conde de Toulouse",
+        "conf": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "p125",
+    "escritorio_id": "duchesse-de-noailles",
+    "orden": 125,
+    "nombre": "Françoise-Charlotte d'Aubigné, duquesa de Noailles",
+    "nombre_nac": "Françoise Amable Charlotte d'Aubigné",
+    "apodos": [
+      "Madame la Duchesse de Noailles"
+    ],
+    "anio": 1684,
+    "edad": "38",
+    "nacimiento": "05/05/1684",
+    "muerte": "06/10/1739",
+    "casa": "Aubigné / Noailles",
+    "estatus_familia": "Duques y pares; sobrina heredera de Madame de Maintenon",
+    "titulo": "Duquesa de Noailles",
+    "titulo_nob": "Duquesa de Noailles, par de Francia",
+    "puesto": "Sin cargo en corte tras la desgracia de su marido",
+    "cargo": "Cabeza patrimonial del Hôtel de Noailles y señorío de Maintenon",
+    "padre": "Charles d'Aubigné, conde d'Aubigné (hermano de Mme de Maintenon)",
+    "madre": "Geneviève Piètre",
+    "lugar_familia": "Hija única; esposa del III duque de Noailles (p24)",
+    "conyuge": "Adrien-Maurice de Noailles, III duque de Noailles (m. 31/03/1698; p24)",
+    "hijos": "Seis hijos, entre ellos Amable-Gabrielle (esposa del hijo de Villars desde 1721)",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "Educada por su tía Madame de Maintenon y Saint-Cyr",
+    "vocacion": "Linaje, patrimonio y piedad tradicional",
+    "llegada_corte": "Casada en la corte en 1698",
+    "faccion": "Viejo régimen",
+    "ubicacion": "París (Hôtel de Noailles) / tierras de Maintenon (marido exiliado en mayo de 1722)",
+    "quiere": "Proteger el crédito y los bienes de los Noailles ante el destierro del duque por Dubois",
+    "oculta": "Sus contactos con antiguos fieles de Maintenon y la oposición devota al cardenal Dubois",
+    "relacion_rey": "Distanciada de la corte tras el exilio de su marido en mayo de 1722",
+    "hitos": "Sobrina y heredera universal de Mme de Maintenon; casada en 1698 con el duque de Noailles (p24), recién exiliado a sus tierras en mayo de 1722 por orden del cardenal Dubois [confirmado]",
+    "estatus": "verificado",
+    "presencia_versalles": "ocasional",
+    "riqueza": 8,
+    "rango": 78,
+    "sexo": "F",
+    "rangos": [
+      "pair",
+      "epee"
+    ],
+    "favor": 1,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": "",
+    "residencia": [
+      "habitante_paris",
+      "habitante_ile"
+    ],
+    "simbolos": [
+      "duque",
+      "par",
+      "dama-corte",
+      "dama-alianza",
+      "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1684–1698",
+        "texto": "Mademoiselle d'Aubigné",
+        "estado": "anterior",
+        "nota": "Sobrina de Madame de Maintenon",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1698–1708",
+        "texto": "Condesa d'Ayen",
+        "estado": "anterior",
+        "nota": "Título tras su boda con Adrien-Maurice de Noailles (31/03/1698) hasta la muerte de su suegro",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1708–1739",
+        "texto": "Duquesa de Noailles",
+        "estado": "vigente",
+        "nota": "Desde que Adrien-Maurice heredó el ducado de Noailles en 1708",
+        "conf": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "p126",
+    "escritorio_id": "duchesse-de-villars",
+    "orden": 126,
+    "nombre": "Duquesa de Villars",
+    "nombre_nac": "Jeanne-Angélique Rocque de Varengeville",
+    "apodos": [
+      "Madame la Maréchale de Villars",
+      "Madame la Duchesse de Villars"
+    ],
+    "anio": 1682,
+    "edad": "39–40",
+    "nacimiento": "1682 (c. 1681–1683)",
+    "muerte": "03/03/1763",
+    "casa": "Rocque de Varengeville / Villars",
+    "estatus_familia": "Nobleza parlamentaria de Normandía enlazada a paría mariscal",
+    "titulo": "Duquesa de Villars",
+    "titulo_nob": "Duquesa de Villars, par de Francia",
+    "puesto": "Anfitriona en París, Versalles y Vaux-le-Vicomte (luego dama de honor de la Reina desde 1725)",
+    "cargo": "Sin cargo oficial de corte en junio de 1722",
+    "padre": "Jacques Rocque de Varengeville",
+    "madre": "Charlotte-Angélique Courtin",
+    "lugar_familia": "Esposa del mariscal duque de Villars (p23); su hijo Honoré-Armand casó en 1721 con Amable-Gabrielle de Noailles",
+    "conyuge": "Claude-Louis-Hector, mariscal duque de Villars (m. 01/02/1702; p23)",
+    "hijos": "Honoré-Armand de Villars (casado en 1721 con la hija de p24 y p125)",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "Cultura parisiense y de salón",
+    "vocacion": "Corte y mundo",
+    "llegada_corte": "Corte desde 1702; brillante salón en Vaux-le-Vicomte y París",
+    "faccion": "Viejo régimen",
+    "ubicacion": "París (Hôtel de Villars) / Vaux-le-Vicomte / Versalles",
+    "quiere": "Mantener el brillo mundano del nombre Villars pese a la frialdad entre la vieja corte y Dubois",
+    "oculta": "Las tensiones de su célebre y anciano esposo por su juventud y sociabilidad",
+    "relacion_rey": "Próxima por el prestigio militar de Villars y el enlace de 1721 con los Noailles",
+    "hitos": "Casada el 1 de febrero de 1702 con el futuro mariscal duque de Villars (p23); anfitriona destacada en Vaux-le-Vicomte y París, suegra de la casa de Noailles desde 1721 [confirmado]",
+    "estatus": "verificado",
+    "presencia_versalles": "frecuenta",
+    "riqueza": 8,
+    "rango": 78,
+    "sexo": "F",
+    "rangos": [
+      "pair",
+      "epee"
+    ],
+    "favor": 2,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": "",
+    "residencia": [
+      "habitante_paris",
+      "habitante_ile"
+    ],
+    "simbolos": [
+      "duque",
+      "par",
+      "dama-corte",
+      "figura-corte",
+      "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1682–1702",
+        "texto": "Mademoiselle de Varengeville",
+        "estado": "anterior",
+        "nota": "Nombre de soltera",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1702–1763",
+        "texto": "Duquesa de Villars",
+        "estado": "vigente",
+        "nota": "Casada con Claude-Louis-Hector de Villars (01/02/1702), duque y par desde 1705/1709",
+        "conf": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "p127",
+    "escritorio_id": "comtesse-de-verrue",
+    "orden": 127,
+    "nombre": "Condesa de Verrue",
+    "nombre_nac": "Jeanne-Baptiste d'Albert de Luynes",
+    "apodos": [
+      "Madame de Verrue",
+      "la Dame de Volupté"
+    ],
+    "anio": 1670,
+    "edad": "52",
+    "nacimiento": "18/01/1670, París",
+    "muerte": "18/11/1736, París",
+    "casa": "Albert de Luynes / Scaglia di Verrua",
+    "estatus_familia": "Alta nobleza ducal (Luynes / Rohan-Montbazon)",
+    "titulo": "Condesa de Verrue (Verrua)",
+    "titulo_nob": "Condesa de Verrue",
+    "puesto": "Gran coleccionista, mecenas y anfitriona en París",
+    "cargo": "Sin cargo oficial en 1722",
+    "padre": "Louis-Charles d'Albert, II duque de Luynes",
+    "madre": "Anne de Rohan-Montbazon",
+    "lugar_familia": "Hija del duque de Luynes; emparentada por madre con los Rohan-Montbazon (p33)",
+    "conyuge": "Viuda de Giuseppe Ignazio Scaglia, conde de Verrua (m. 1683; †1704)",
+    "hijos": "Vittorio Amedeo y Maria Anna Scaglia",
+    "religion": "Católica (espíritu ilustrado y epicúreo)",
+    "lengua": "Francés, italiano",
+    "educacion": "Corte francesa y corte de Turín",
+    "vocacion": "Artes, coleccionismo y salón",
+    "llegada_corte": "Regresada definitivamente de Turín a París en 1700",
+    "faccion": "Cortesanos",
+    "ubicacion": "París (Petit Hôtel de Verrue, rue du Regard / rue du Cherche-Midi)",
+    "quiere": "Ampliar su célebre galería de pintura, biblioteca y red de eruditos y políticos en París",
+    "oculta": "Antiguos vínculos saboyanos y su posición independiente tras haber sido favorita de Víctor Amadeo II",
+    "relacion_rey": "Lejana; figura del mundo ducal Luynes y conocida en los salones de París",
+    "hitos": "Antigua favorita de Víctor Amadeo II de Saboya huida de Turín en 1700; en 1722 figura en el corazón del coleccionismo parisiense y del mercado de arte [confirmado]",
+    "estatus": "verificado",
+    "presencia_versalles": "ocasional",
+    "riqueza": 8,
+    "rango": 66,
+    "sexo": "F",
+    "rangos": [
+      "epee"
+    ],
+    "favor": 2,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": "",
+    "residencia": [
+      "habitante_paris"
+    ],
+    "simbolos": [
+      "marques-conde",
+      "dama-corte",
+      "figura-corte",
+      "salon-letras",
+      "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1670–1683",
+        "texto": "Mademoiselle d'Albert de Luynes",
+        "estado": "anterior",
+        "nota": "Hija del II duque de Luynes",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1683–1736",
+        "texto": "Condesa de Verrue",
+        "estado": "vigente",
+        "nota": "Madame de Verrue tras casar en 1683 con Giuseppe Ignazio Scaglia, conde de Verrua (†1704)",
+        "conf": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "p128",
+    "escritorio_id": "mlle-de-launay",
+    "orden": 128,
+    "nombre": "Mademoiselle de Launay",
+    "nombre_nac": "Marguerite-Jeanne Cordier de Launay",
+    "apodos": [
+      "Mademoiselle de Launay"
+    ],
+    "anio": 1684,
+    "edad": "37",
+    "nacimiento": "30/08/1684, París",
+    "muerte": "15/06/1750, Gennevilliers",
+    "casa": "Cordier de Launay",
+    "estatus_familia": "Burguesía intelectual; educación conventual selecta",
+    "titulo": "Sin título nobiliario en 1722",
+    "titulo_nob": "— (fut. baronesa de Staal-Delaunay en 1735)",
+    "puesto": "Camarera de confianza, lectora y secretaria en Sceaux",
+    "cargo": "Secretaria y confidente de la duquesa del Maine (p19)",
+    "padre": "Claude Cordier (pintor emigrado a Inglaterra)",
+    "madre": "Rose Delaunay",
+    "lugar_familia": "Hija",
+    "conyuge": "Soltera en 1722 (casará en 1735 con Jacques de Staal)",
+    "hijos": "—",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "Abadía de Saint-Sauveur de Évreux; lectora erudita de Fontenelle y Descartes",
+    "vocacion": "Letras y servicio de una corte principesca",
+    "llegada_corte": "Al servicio de la duquesa del Maine en Sceaux desde c. 1711",
+    "faccion": "Legitimados",
+    "ubicacion": "Château de Sceaux / París",
+    "quiere": "Reconstruir el prestigio literario y la prudencia política de su ama tras la Bastilla",
+    "oculta": "Su lucidez sobre las flaquezas del partido Maine y los papeles de la conspiración de Cellamare",
+    "relacion_rey": "Ninguna directa; pluma confidencial de la corte de Sceaux",
+    "hitos": "Prisionera en la Bastilla (1718–1720) por la conspiración de Cellamare sin delatar a la duquesa del Maine; en 1722 anima la renovada corte de Sceaux y prepara sus célebres Memorias [confirmado]",
+    "estatus": "verificado",
+    "presencia_versalles": "ocasional",
+    "riqueza": 3,
+    "rango": 30,
+    "sexo": "F",
+    "rangos": [
+      "service"
+    ],
+    "favor": 1,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": "",
+    "residencia": [
+      "habitante_ile"
+    ],
+    "simbolos": [
+      "dama-corte",
+      "salon-letras",
+      "casa-rey",
+      "ile-de-france"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1684–1735",
+        "texto": "Mademoiselle de Launay",
+        "estado": "vigente",
+        "nota": "Nombre literario y de servicio en Sceaux",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1735–1750",
+        "texto": "Baronesa de Staal-Delaunay",
+        "estado": "futura",
+        "nota": "Tras su matrimonio en 1735 con el oficial suizo Jacques de Staal",
+        "conf": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "p129",
+    "escritorio_id": "comte-de-vernon",
+    "orden": 129,
+    "nombre": "Conde de Vernon",
+    "nombre_nac": "Carlo Emanuele Balbis di Vernone",
+    "apodos": [
+      "Monsieur de Vernon",
+      "Comte de Vernon"
+    ],
+    "anio": 1668,
+    "edad": "c. 54",
+    "nacimiento": "c. 1668 (fecha exacta por verificar)",
+    "muerte": "Por verificar",
+    "casa": "Balbis di Vernone",
+    "estatus_familia": "Nobleza piamontesa de Saboya-Cerdeña",
+    "titulo": "Conde de Vernon",
+    "titulo_nob": "Conde de Vernone",
+    "puesto": "Embajador de Cerdeña-Saboya ante el rey de Francia",
+    "cargo": "Embajador de Víctor Amadeo II en París/Versalles (acreditado desde 1719; salida en 1722 por verificar)",
+    "padre": "Por verificar",
+    "madre": "Por verificar",
+    "lugar_familia": "—",
+    "conyuge": "Por verificar",
+    "hijos": "Por verificar",
+    "religion": "Católica",
+    "lengua": "Italiano, francés",
+    "educacion": "Diplomacia saboyana",
+    "vocacion": "Diplomacia y servicio real de Turín",
+    "llegada_corte": "Acreditado en París desde 1719",
+    "faccion": "Neutral",
+    "ubicacion": "París / audiencia diplomática en Versalles (por verificar)",
+    "quiere": "Defender los intereses saboyano-sardos de Víctor Amadeo II ante París y Cambrai",
+    "oculta": "Despachos de Turín sobre alianzas italianas; fecha exacta de su relevo en 1722",
+    "relacion_rey": "Representante del abuelo materno de Luis XV (Víctor Amadeo II de Cerdeña)",
+    "hitos": "Embajador del rey de Cerdeña y duque de Saboya en Francia (desde 1719); su presencia continuada frente a su paso al virreinato sardo en 1722 queda por verificar al mes exacto [probable]",
+    "estatus": "por verificar",
+    "presencia_versalles": "por verificar",
+    "riqueza": 7,
+    "rango": 60,
+    "sexo": "M",
+    "rangos": [
+      "ambassade"
+    ],
+    "favor": 2,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": "",
+    "residencia": [
+      "habitante_paris",
+      "por_verificar"
+    ],
+    "simbolos": [
+      "marques-conde",
+      "embajador",
+      "parisino",
+      "extranjero"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1719–1722",
+        "texto": "Conde de Vernon (Ambassadeur de Sardaigne)",
+        "estado": "vigente",
+        "nota": "Nombre afrancesado empleado en los despachos de la corte de Francia [probable]",
+        "conf": "probable"
+      }
+    ]
+  },
+  {
+    "id": "p130",
+    "escritorio_id": "nicolo-foscarini",
+    "orden": 130,
+    "nombre": "Nicolò Foscarini",
+    "nombre_nac": "Nicolò Foscarini",
+    "apodos": [
+      "Monsieur l'ambassadeur de Venise"
+    ],
+    "anio": 1671,
+    "edad": "51",
+    "nacimiento": "16/03/1671, Venecia",
+    "muerte": "15/11/1752, Venecia",
+    "casa": "Foscarini",
+    "estatus_familia": "Patriciado veneciano",
+    "titulo": "Patricio veneciano y embajador extraordinario",
+    "titulo_nob": "Nobiluomo de Venecia",
+    "puesto": "Embajador extraordinario de la República de Venecia en Francia (1722–1723)",
+    "cargo": "Embajador designado / en llegada (llega a París en julio de 1722 para relevar a Alvise Tiepolo)",
+    "padre": "Nicolò Foscarini (rama de San Stae)",
+    "madre": "Por verificar",
+    "lugar_familia": "—",
+    "conyuge": "Por verificar",
+    "hijos": "Por verificar",
+    "religion": "Católica",
+    "lengua": "Italiano, francés",
+    "educacion": "Magistraturas de la República de Venecia",
+    "vocacion": "Diplomacia veneciana",
+    "llegada_corte": "Designado para París; llegada a París documentada en julio de 1722",
+    "faccion": "Neutral",
+    "ubicacion": "En tránsito hacia París en junio de 1722 (París / Versalles desde julio de 1722; por verificar)",
+    "quiere": "Asegurar la neutralidad comercial e italiana de Venecia ante la corte francesa",
+    "oculta": "Instrucciones reservadas del Senado veneciano respecto a Austria, España y la Puerta",
+    "relacion_rey": "Embajador extraordinario acreditado ante la corte francesa en 1722",
+    "hitos": "Patricio veneciano enviado a París (1722–1723); su llegada efectiva a París se fecha en julio de 1722 justo tras el regreso de la corte a Versalles [confirmado]",
+    "estatus": "por verificar",
+    "presencia_versalles": "por verificar",
+    "riqueza": 7,
+    "rango": 58,
+    "sexo": "M",
+    "rangos": [
+      "ambassade"
+    ],
+    "favor": 2,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": "",
+    "residencia": [
+      "habitante_paris",
+      "por_verificar"
+    ],
+    "simbolos": [
+      "embajador",
+      "parisino",
+      "extranjero"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1722–1723",
+        "texto": "Nicolò Foscarini, embajador de Venecia",
+        "estado": "vigente",
+        "nota": "Patricio veneciano acreditado ante Luis XV (1722–1723)",
+        "conf": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "p131",
+    "escritorio_id": "vasili-dolgorukov",
+    "orden": 131,
+    "nombre": "Príncipe Vasili Lúkich Dolgorúkov",
+    "nombre_nac": "Vasili Lukich Dolgorukov",
+    "apodos": [
+      "Prince Dolgorouki"
+    ],
+    "anio": 1672,
+    "edad": "49–50",
+    "nacimiento": "1672",
+    "muerte": "19/11/1739, Nóvgorod",
+    "casa": "Dolgorúkov",
+    "estatus_familia": "Alta aristocracia boyarda y principesca de Rusia (Kniaz)",
+    "titulo": "Príncipe (Kniaz) Dolgorúkov",
+    "titulo_nob": "Príncipe ruso (título de servicio en Moscovia)",
+    "puesto": "Ministro plenipotenciario / embajador extraordinario de Pedro el Grande en Francia (1720–1722)",
+    "cargo": "Representante de Rusia ante el Regente y el cardenal Dubois",
+    "padre": "Príncipe Luká Fiódorovich Dolgorúkov",
+    "madre": "Por verificar",
+    "lugar_familia": "—",
+    "conyuge": "Soltero / por verificar",
+    "hijos": "Sin descendencia legítima documentada",
+    "religion": "Ortodoxa rusa",
+    "lengua": "Ruso, francés, polaco",
+    "educacion": "Formado en París en la juventud y misiones diplomáticas en Varsovia y Copenhague",
+    "vocacion": "Diplomacia imperial rusa",
+    "llegada_corte": "Acreditado en París entre 1720 y 1722 (retratado por Hyacinthe Rigaud en 1722)",
+    "faccion": "Neutral",
+    "ubicacion": "París (relevo exacto dentro de 1722 por verificar)",
+    "quiere": "Lograr el reconocimiento francés del título imperial de Pedro I y una alianza franco-rusa",
+    "oculta": "Desconfianza mutua con la diplomacia británica aliada de Dubois",
+    "relacion_rey": "Enviado de Pedro el Grande ante la Regencia francesa",
+    "hitos": "Enviado extraordinario ruso en París (1720–1722), retratado por Rigaud en 1722; su fecha exacta de despedida dentro de 1722 queda por verificar [probable]",
+    "estatus": "plausible",
+    "presencia_versalles": "por verificar",
+    "riqueza": 7,
+    "rango": 65,
+    "sexo": "M",
+    "rangos": [
+      "ambassade"
+    ],
+    "favor": 2,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": "",
+    "residencia": [
+      "habitante_paris",
+      "por_verificar"
+    ],
+    "simbolos": [
+      "embajador",
+      "parisino",
+      "extranjero"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1720–1722",
+        "texto": "Príncipe Dolgorouki",
+        "estado": "vigente",
+        "nota": "Forma habitual de corte en París para Vasili Lúkich Dolgorúkov",
+        "conf": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "p132",
+    "escritorio_id": "jean-de-chambrier",
+    "orden": 132,
+    "nombre": "Jean de Chambrier",
+    "nombre_nac": "Jean de Chambrier",
+    "apodos": [
+      "Monsieur de Chambrier"
+    ],
+    "anio": 1686,
+    "edad": "35",
+    "nacimiento": "31/07/1686, Neuchâtel",
+    "muerte": "26/06/1751, Wesel",
+    "casa": "Chambrier",
+    "estatus_familia": "Patriciado de Neuchâtel (principado unido a Prusia desde 1707)",
+    "titulo": "Enviado de Prusia (futuro barón en 1737)",
+    "titulo_nob": "Noble de Neuchâtel",
+    "puesto": "Enviado y representante diplomático de Prusia en París (desde 1721–1722)",
+    "cargo": "Representante de Federico Guillermo I de Prusia ante la corte de Francia",
+    "padre": "François de Chambrier",
+    "madre": "Por verificar",
+    "lugar_familia": "Hijo",
+    "conyuge": "Por verificar",
+    "hijos": "Por verificar",
+    "religion": "Protestante reformada",
+    "lengua": "Francés, alemán",
+    "educacion": "Comercio, finanzas y asuntos de Estado",
+    "vocacion": "Diplomacia prusiana",
+    "llegada_corte": "Acreditado en París en 1721–1722",
+    "faccion": "Neutral",
+    "ubicacion": "París / Versalles (audiencias diplomáticas)",
+    "quiere": "Ganar oído en Versalles y afirmar los intereses de Prusia y Neuchâtel en Europa occidental",
+    "oculta": "Correspondencias cifradas para Berlín sobre Francia y el Imperio",
+    "relacion_rey": "Representante oficial del rey de Prusia en París",
+    "hitos": "Asentado en París en negocios y nombrado entre 1721–1722 representante diplomático de Prusia en Francia hasta su muerte [confirmado]",
+    "estatus": "verificado",
+    "presencia_versalles": "frecuenta",
+    "riqueza": 6,
+    "rango": 50,
+    "sexo": "M",
+    "rangos": [
+      "ambassade"
+    ],
+    "favor": 2,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": "",
+    "residencia": [
+      "habitante_paris"
+    ],
+    "simbolos": [
+      "embajador",
+      "parisino",
+      "extranjero"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1721–1737",
+        "texto": "Monsieur de Chambrier",
+        "estado": "vigente",
+        "nota": "Enviado y ministro de Prusia en París",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1737–1751",
+        "texto": "Baron de Chambrier",
+        "estado": "futura",
+        "nota": "Elevado a barón por Federico Guillermo I de Prusia en 1737",
+        "conf": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "p133",
+    "escritorio_id": "niklas-peter-gedda",
+    "orden": 133,
+    "nombre": "Niklas Peter von Gedda",
+    "nombre_nac": "Niklas Peter Gedda",
+    "apodos": [
+      "Monsieur de Gedda"
+    ],
+    "anio": 1675,
+    "edad": "46–47",
+    "nacimiento": "1675",
+    "muerte": "1758",
+    "casa": "Gedda",
+    "estatus_familia": "Nobleza de servicio sueca (ennoblecido en 1719)",
+    "titulo": "Residente de Suecia en París (futuro barón von Gedda)",
+    "titulo_nob": "Noble sueco (ennoblecido 1719; barón en 1730)",
+    "puesto": "Residente y ministro de Suecia en Francia (desde mayo de 1721)",
+    "cargo": "Representante de Suecia ante la corte de París/Versalles",
+    "padre": "Por verificar",
+    "madre": "Por verificar",
+    "lugar_familia": "—",
+    "conyuge": "Por verificar",
+    "hijos": "Por verificar",
+    "religion": "Luterana",
+    "lengua": "Sueco, francés, alemán",
+    "educacion": "Cancillería y diplomacia sueca",
+    "vocacion": "Diplomacia sueca",
+    "llegada_corte": "En París desde años previos como secretario de legación; residente titular desde mayo de 1721",
+    "faccion": "Neutral",
+    "ubicacion": "París / Versalles (días de embajadores)",
+    "quiere": "Asegurar subsidios y el apoyo diplomático francés para la Suecia posguerra del Norte",
+    "oculta": "Negociaciones paralelas sobre el Báltico frente al ascendiente británico de Dubois",
+    "relacion_rey": "Ministro residente de la Corona de Suecia ante Luis XV",
+    "hitos": "Ennoblecido en Suecia (1719) y nombrado residente en París en mayo de 1721; permanece décadas como pieza clave de la diplomacia franco-sueca [confirmado]",
+    "estatus": "verificado",
+    "presencia_versalles": "frecuenta",
+    "riqueza": 5,
+    "rango": 52,
+    "sexo": "M",
+    "rangos": [
+      "ambassade"
+    ],
+    "favor": 2,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": "",
+    "residencia": [
+      "habitante_paris"
+    ],
+    "simbolos": [
+      "embajador",
+      "parisino",
+      "extranjero"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1721–1730",
+        "texto": "Monsieur de Gedda",
+        "estado": "vigente",
+        "nota": "Residente y luego enviado de Suecia en París",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1730–1758",
+        "texto": "Baron von Gedda",
+        "estado": "futura",
+        "nota": "Elevado al rango de barón (Friherre) en 1730",
+        "conf": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "p134",
+    "escritorio_id": "luis-da-cunha",
+    "orden": 134,
+    "nombre": "Dom Luís da Cunha",
+    "nombre_nac": "Luís da Cunha",
+    "apodos": [
+      "Dom Luís da Cunha"
+    ],
+    "anio": 1662,
+    "edad": "60",
+    "nacimiento": "25/01/1662, Lisboa",
+    "muerte": "09/10/1749, París",
+    "casa": "Cunha",
+    "estatus_familia": "Nobleza portuguesa (fidalgo letrado)",
+    "titulo": "Comendador de la Orden de Cristo y embajador de Portugal",
+    "titulo_nob": "Fidalgo portugués; comendador",
+    "puesto": "Embajador extraordinario de Juan V de Portugal en Francia y plenipotenciario para Cambrai",
+    "cargo": "Diplomático de Portugal entre París y el congreso de Cambrai",
+    "padre": "António Álvares da Cunha",
+    "madre": "Maria Manoel de Vilhena",
+    "lugar_familia": "Hijo",
+    "conyuge": "Soltero",
+    "hijos": "—",
+    "religion": "Católica",
+    "lengua": "Portugués, francés, latín, español",
+    "educacion": "Universidad de Coimbra (derecho canónico); plenipotenciario en Utrecht (1712–1715)",
+    "vocacion": "Diplomacia e Ilustración portuguesa (estrangeirado)",
+    "llegada_corte": "Misiones entre Madrid, París y Cambrai desde c. 1719–1722",
+    "faccion": "Neutral",
+    "ubicacion": "París / Cambrai (estancia exacta en junio de 1722 por verificar)",
+    "quiere": "Defender la posición atlántica de Portugal y asegurar rango en el congreso de Cambrai",
+    "oculta": "Sus contactos reformistas y su correspondencia crítica con Lisboa",
+    "relacion_rey": "Veterano embajador de la corte portuguesa ante Francia",
+    "hitos": "Plenipotenciario en Utrecht y ministro de Juan V entre París y el proyectado congreso de Cambrai en la década de 1720; presencia exacta entre París y Cambrai en junio de 1722 por verificar [probable]",
+    "estatus": "plausible",
+    "presencia_versalles": "por verificar",
+    "riqueza": 7,
+    "rango": 60,
+    "sexo": "M",
+    "rangos": [
+      "ambassade"
+    ],
+    "favor": 2,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": "",
+    "residencia": [
+      "habitante_paris",
+      "por_verificar"
+    ],
+    "simbolos": [
+      "embajador",
+      "parisino",
+      "extranjero"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1696–1749",
+        "texto": "Dom Luís da Cunha",
+        "estado": "vigente",
+        "nota": "Embajador portugués en Londres, La Haya, Madrid y París",
+        "conf": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "p135",
+    "escritorio_id": "jean-paris-monmartel",
+    "orden": 135,
+    "nombre": "Jean Pâris de Monmartel",
+    "nombre_nac": "Jean Pâris",
+    "apodos": [
+      "Monsieur de Monmartel",
+      "Monmartel"
+    ],
+    "anio": 1690,
+    "edad": "31",
+    "nacimiento": "03/08/1690, Moirans (Delfinado)",
+    "muerte": "10/09/1766, Brunoy",
+    "casa": "Pâris",
+    "estatus_familia": "Burguesía financiera del Delfinado",
+    "titulo": "Señor de Monmartel",
+    "titulo_nob": "Secretario del Rey (cargo ennoblecedor); futuro marqués de Brunoy",
+    "puesto": "Financiero del Estado, banquero de la corte y socio de los hermanos Pâris",
+    "cargo": "Socio de la operación del Visa y financiero real (luego Guarda del Tesoro Real desde fines de 1722/1723)",
+    "padre": "Jean Pâris (posadero de Moirans)",
+    "madre": "Justine Trenonay",
+    "lugar_familia": "Benjamín de los cuatro hermanos Pâris (con p100 Antoine, p136 Claude y p99 Duverney)",
+    "conyuge": "Viudo de Marguerite-Françoise Mégret (m. y †1720; casará en oct. 1724 con su sobrina Antoinette Justine Pâris)",
+    "hijos": "Descendencia posterior con su tercera esposa",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "Contabilidad militar, municiones y banca bajo sus hermanos mayores",
+    "vocacion": "Finanzas reales y crédito del Estado",
+    "llegada_corte": "Asociado a la administración del Visa de 1721–1722 junto al Regente y Dubois",
+    "faccion": "Regencia",
+    "ubicacion": "París / frecuentes despachos en Versalles",
+    "quiere": "Consolidar el crédito del clan Pâris en el Tesoro Real y derrotar a los restos del partido de Law",
+    "oculta": "Los balances reales de la liquidación del Sistema y el alcance del crédito privado hacia los ministros",
+    "relacion_rey": "Banquero de confianza de la Regencia y futuro guarda del Tesoro Real",
+    "hitos": "Hermano menor de los Pâris; asociado desde 1721 al Visa tras la caída de Law y destinado próximamente al cargo de Guarda del Tesoro Real [confirmado]",
+    "estatus": "verificado",
+    "presencia_versalles": "frecuenta",
+    "riqueza": 9,
+    "rango": 32,
+    "sexo": "M",
+    "rangos": [
+      "finance"
+    ],
+    "favor": 3,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": "",
+    "residencia": [
+      "habitante_paris"
+    ],
+    "simbolos": [
+      "financiero",
+      "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1690–c. 1715",
+        "texto": "Jean Pâris",
+        "estado": "anterior",
+        "nota": "Nombre de familia en Moirans",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "c. 1715–1766",
+        "texto": "Monsieur de Monmartel",
+        "estado": "vigente",
+        "nota": "Toma el nombre de la tierra de Monmartel (también escrito Montmartel)",
+        "conf": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "p136",
+    "escritorio_id": "claude-paris-montagne",
+    "orden": 136,
+    "nombre": "Claude Pâris de La Montagne",
+    "nombre_nac": "Claude Pâris",
+    "apodos": [
+      "Monsieur de La Montagne"
+    ],
+    "anio": 1670,
+    "edad": "51",
+    "nacimiento": "12/08/1670, Moirans (Delfinado)",
+    "muerte": "18/04/1744, Serpaize",
+    "casa": "Pâris",
+    "estatus_familia": "Burguesía financiera del Delfinado",
+    "titulo": "Señor de La Montagne",
+    "titulo_nob": "Nobleza financiera (Secretario del Rey)",
+    "puesto": "Financiero del Estado, antiguo proveedor militar y co-operador del Visa",
+    "cargo": "Financiero real y recaudador general (Delfinado)",
+    "padre": "Jean Pâris",
+    "madre": "Justine Trenonay",
+    "lugar_familia": "Segundo de los cuatro hermanos Pâris (entre p100 Antoine y p99 Duverney)",
+    "conyuge": "Anne-Élisabeth de La Roche (m. 14/01/1708)",
+    "hijos": "Varios",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "Abastecimiento de ejércitos en Italia y Flandes junto a Antoine Pâris",
+    "vocacion": "Finanzas públicas y abastecimientos",
+    "llegada_corte": "Llamado con sus hermanos desde 1721 para la liquidación del Sistema de Law",
+    "faccion": "Regencia",
+    "ubicacion": "París / visitas de trabajo a Versalles",
+    "quiere": "Reconstruir la hacienda de la Regencia bajo control del clan Pâris y asegurar sus granjas fiscales",
+    "oculta": "Rivalidad sorda con los hermanos Crozat y otros grandes financieros desplazados",
+    "relacion_rey": "Pieza clave del equipo hacendístico que sostiene al cardenal Dubois y Dodun",
+    "hitos": "Veterano abastecedor de los ejércitos de Luis XIV junto a Antoine (p100); llamado de vuelta del exilio en 1721 con sus tres hermanos para dirigir el Visa [confirmado]",
+    "estatus": "verificado",
+    "presencia_versalles": "frecuenta",
+    "riqueza": 9,
+    "rango": 38,
+    "sexo": "M",
+    "rangos": [
+      "finance"
+    ],
+    "favor": 3,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": "",
+    "residencia": [
+      "habitante_paris"
+    ],
+    "simbolos": [
+      "financiero",
+      "ministro",
+      "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1670–c. 1708",
+        "texto": "Claude Pâris",
+        "estado": "anterior",
+        "nota": "Nombre original antes de consolidar el apodo materno de La Montagne",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "c. 1708–1744",
+        "texto": "Pâris de La Montagne",
+        "estado": "vigente",
+        "nota": "Conocido en finanzas como Monsieur de La Montagne",
+        "conf": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "p137",
+    "escritorio_id": "antoine-crozat",
+    "orden": 137,
+    "nombre": "Antoine Crozat (Marqués du Châtel)",
+    "nombre_nac": "Antoine Crozat",
+    "apodos": [
+      "Crozat le Riche",
+      "Marqués du Châtel"
+    ],
+    "anio": 1655,
+    "edad": "67",
+    "nacimiento": "24/04/1655, Toulouse (bautismo)",
+    "muerte": "07/06/1738, París",
+    "casa": "Crozat",
+    "estatus_familia": "Burguesía tolosana ennoblecida",
+    "titulo": "Marqués du Châtel",
+    "titulo_nob": "Marqués du Châtel (tierras adquiridas en Bretaña)",
+    "puesto": "Gran financiero de Francia (antiguo concesionario de Luisiana; futuro fermier général en 1726)",
+    "cargo": "Financiero de la corte y gran tesorero honorario del Espíritu Santo (hasta 1724)",
+    "padre": "Antoine Crozat (mercader capitoul de Toulouse)",
+    "madre": "Catherine de Saporta",
+    "lugar_familia": "Hermano mayor de Pierre Crozat (p102); padre del futuro marqués de Thugny y de la condesa d'Évreux",
+    "conyuge": "Marguerite Le Gendre d'Armény (m. 1690)",
+    "hijos": "Louis-François, Marie-Anne (condesa d'Évreux), Joseph-Antoine y Louis-Antoine",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "Comercio atlántico, asiento de negros y hacienda real",
+    "vocacion": "Alta finanza y alianzas con la gran nobleza",
+    "llegada_corte": "Establecido en París desde fines del XVII en la Place Vendôme",
+    "faccion": "Neutral",
+    "ubicacion": "París (Hôtel Crozat, Place Vendôme) / Versalles ocasional",
+    "quiere": "Preservar una de las mayores fortunas del reino tras las tasaciones y casamientos de sus hijos con la alta nobleza",
+    "oculta": "La extensión de su liquidez tras la quiebra del Sistema y sus antiguos lucros de la trata y Luisiana",
+    "relacion_rey": "Financiero legendario del reinado anterior; suegro del conde d'Évreux (casa de Bouillon)",
+    "hitos": "Concesionario comercial de la Luisiana francesa (1712–1717); apodado «Crozat le Riche» frente a su hermano Pierre (p102); será fermier général en 1726 [confirmado]",
+    "estatus": "verificado",
+    "presencia_versalles": "ocasional",
+    "riqueza": 10,
+    "rango": 42,
+    "sexo": "M",
+    "rangos": [
+      "finance"
+    ],
+    "favor": 2,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": "",
+    "residencia": [
+      "habitante_paris"
+    ],
+    "simbolos": [
+      "financiero",
+      "marques-conde",
+      "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1655–1714",
+        "texto": "Monsieur Crozat (Crozat l'aîné)",
+        "estado": "anterior",
+        "nota": "Antes de titularse marqués du Châtel",
+        "conf": "confirmado"
+      },
+      {
+        "fecha": "1714–1738",
+        "texto": "Marqués du Châtel (Crozat le Riche)",
+        "estado": "vigente",
+        "nota": "Desde la adquisición del marquesado du Châtel; llamado Crozat le Riche en París",
+        "conf": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "p138",
+    "escritorio_id": "francois-castanier",
+    "orden": 138,
+    "nombre": "François Castanier",
+    "nombre_nac": "François Castanier",
+    "apodos": [
+      "Monsieur Castanier"
+    ],
+    "anio": 1676,
+    "edad": "45–46",
+    "nacimiento": "1676, Carcassonne",
+    "muerte": "15/10/1759, París",
+    "casa": "Castanier",
+    "estatus_familia": "Burguesía manufacturera y financiera de Languedoc",
+    "titulo": "Banquero en París (futuro director de la Compañía de las Indias en 1723)",
+    "titulo_nob": "Ennoblecido por cargo financiero",
+    "puesto": "Banquero y financiero en París ligado al comercio de Languedoc y las Indias",
+    "cargo": "Financiero en París (nombrado director de la Compañía de las Indias en 1723)",
+    "padre": "Guillaume III Castanier (mercader pañero en Carcassonne)",
+    "madre": "Marie Raynaud",
+    "lugar_familia": "Hijo; hermano menor de Guillaume IV Castanier d'Auriac",
+    "conyuge": "Por verificar",
+    "hijos": "Por verificar",
+    "religion": "Católica",
+    "lengua": "Francés, occitano",
+    "educacion": "Comercio textil del Languedoc y banca parisiense",
+    "vocacion": "Banca y comercio colonial",
+    "llegada_corte": "Activo en las finanzas de París tras la crisis de 1720",
+    "faccion": "Neutral",
+    "ubicacion": "París",
+    "quiere": "Capitalizar el reordenamiento del comercio colonial para entrar en la dirección de la Compañía de las Indias",
+    "oculta": "Las enormes ganancias obtenidas liquidando valores durante el derrumbe del Sistema de Law",
+    "relacion_rey": "Ninguna directa; financiero clave del comercio languedociano y asiático",
+    "hitos": "Origen languedociano y fortuna bancaria forjada en los paños y en la liquidación del Sistema; entrará como director de la renovada Compañía de las Indias de 1723 a 1759 [confirmado]",
+    "estatus": "verificado",
+    "presencia_versalles": "ocasional",
+    "riqueza": 9,
+    "rango": 30,
+    "sexo": "M",
+    "rangos": [
+      "finance"
+    ],
+    "favor": 1,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": "",
+    "residencia": [
+      "habitante_paris"
+    ],
+    "simbolos": [
+      "financiero",
+      "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1676–1759",
+        "texto": "Monsieur Castanier",
+        "estado": "vigente",
+        "nota": "Banquero originario de Carcassonne y futuro director de la Compañía de las Indias (1723)",
+        "conf": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "p139",
+    "escritorio_id": "charles-savalette",
+    "orden": 139,
+    "nombre": "Charles Savalette",
+    "nombre_nac": "Charles Savalette",
+    "apodos": [
+      "Monsieur Savalette"
+    ],
+    "anio": 1683,
+    "edad": "39",
+    "nacimiento": "15/02/1683, París",
+    "muerte": "05/05/1756, París",
+    "casa": "Savalette",
+    "estatus_familia": "Notariado y burguesía financiera de París",
+    "titulo": "Señor de Magnanville",
+    "titulo_nob": "Ennoblecido por oficio financiero",
+    "puesto": "Director de la Compañía de las Indias (desde 1719) y financiero en París (futuro fermier général desde 1724)",
+    "cargo": "Director de la Compañía de las Indias (1719) y financiero",
+    "padre": "Pierre Savalette (notario en el Châtelet de París)",
+    "madre": "Marie Bonneau",
+    "lugar_familia": "Hijo; padre del futuro intendente y guarda del Tesoro Real",
+    "conyuge": "Anne-Geneviève Gilbert de Nozières (m. 15/04/1712)",
+    "hijos": "Charles-Pierre Savalette de Magnanville (futuro intendente)",
+    "religion": "Católica",
+    "lengua": "Francés",
+    "educacion": "Derecho notarial y finanzas coloniales en París",
+    "vocacion": "Finanzas coloniales y administración fiscal",
+    "llegada_corte": "Círculos financieros de la rue Vivienne y París desde la Regencia",
+    "faccion": "Neutral",
+    "ubicacion": "París",
+    "quiere": "Sobrevivir a la investigación del Visa conservando su puesto en la Compañía de las Indias y alcanzar la Ferme générale",
+    "oculta": "Beneficios de sus especulaciones en los años del Sistema de Law",
+    "relacion_rey": "Ninguna directa; alto gestor financiero de París",
+    "hitos": "Hijo de un notario del Châtelet; nombrado director de la Compañía de las Indias en 1719 tras amasar fortuna con el Sistema; accederá a la Ferme générale en 1724 [confirmado]",
+    "estatus": "verificado",
+    "presencia_versalles": "ocasional",
+    "riqueza": 9,
+    "rango": 32,
+    "sexo": "M",
+    "rangos": [
+      "finance"
+    ],
+    "favor": 1,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": "",
+    "residencia": [
+      "habitante_paris"
+    ],
+    "simbolos": [
+      "financiero",
+      "parisino"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1683–1756",
+        "texto": "Charles Savalette (Monsieur Savalette)",
+        "estado": "vigente",
+        "nota": "Director de la Compañía de las Indias (1719) y futuro señor de Magnanville",
+        "conf": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "p140",
+    "escritorio_id": "isaac-thellusson",
+    "orden": 140,
+    "nombre": "Isaac Thellusson",
+    "nombre_nac": "Isaac Thellusson",
+    "apodos": [
+      "Monsieur Thellusson"
+    ],
+    "anio": 1690,
+    "edad": "31",
+    "nacimiento": "14/10/1690, Ginebra",
+    "muerte": "02/09/1755, Champel (Ginebra)",
+    "casa": "Thellusson",
+    "estatus_familia": "Patriciado protestante y banca de Ginebra",
+    "titulo": "Banquero ginebrino en París (futuro ministro de Ginebra en París, 1730–1744)",
+    "titulo_nob": "Ciudadano de Ginebra",
+    "puesto": "Banquero protestante en París (Thellusson et Cie; futuro socio de Tourton, Guiguer et Thellusson)",
+    "cargo": "Banquero privado de giro internacional y opositor al Sistema de Law",
+    "padre": "Théophile Thellusson",
+    "madre": "Jeanne Guiguer",
+    "lugar_familia": "Hijo; abuelo del futuro banquero parisiense Georges-Tobie Thellusson",
+    "conyuge": "Soltero en junio de 1722 (casará el 11/10/1722 en Leiden con Sarah Le Boullenger)",
+    "hijos": "Posteriormente Georges-Tobie y descendencia en Ginebra",
+    "religion": "Protestante calvinista",
+    "lengua": "Francés",
+    "educacion": "Casas de comercio y banca entre Ginebra, Ámsterdam, Londres y París",
+    "vocacion": "Banca internacional de cambios",
+    "llegada_corte": "Establecido en París desde 1707 en la banca protestante",
+    "faccion": "Neutral",
+    "ubicacion": "París",
+    "quiere": "Afianzar su casa bancaria ginebrina en París sobre crédito metálico sólido tras el fiasco del papel moneda",
+    "oculta": "Redes de transferencia de capitales entre París, Ginebra, Londres y Ámsterdam fuera del control real",
+    "relacion_rey": "Ninguna directa; pieza de la llamada «Banca protestante» en París",
+    "hitos": "Banquero ginebrino asentado en París y adversario firme del Sistema de Law; retratado por Rigaud hacia 1722 y futuro enviado de Ginebra ante la corte de Francia en 1730 [confirmado]",
+    "estatus": "verificado",
+    "presencia_versalles": "ocasional",
+    "riqueza": 9,
+    "rango": 28,
+    "sexo": "M",
+    "rangos": [
+      "finance"
+    ],
+    "favor": 1,
+    "rasgos": {},
+    "rasgos_doc": [],
+    "cualidades": {},
+    "cualidades_doc": [],
+    "aficiones": [],
+    "talentos": [],
+    "idiomas": [],
+    "prompt": "",
+    "residencia": [
+      "habitante_paris"
+    ],
+    "simbolos": [
+      "financiero",
+      "parisino",
+      "extranjero"
+    ],
+    "apelaciones": [
+      {
+        "fecha": "1707–1755",
+        "texto": "Isaac Thellusson",
+        "estado": "vigente",
+        "nota": "Banquero ginebrino en París, de la banca protestante europea",
         "conf": "confirmado"
       }
     ]
