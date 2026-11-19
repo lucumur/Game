@@ -1203,6 +1203,8 @@
       "duque",
       "par",
       "mariscal",
+      "casa-rey",
+      "gobernador",
       "versalles"
     ]
   },
@@ -1320,7 +1322,7 @@
     "simbolos": [
       "duque",
       "par",
-      "gobernador",
+      "casa-rey",
       "versalles"
     ]
   },
@@ -1446,7 +1448,7 @@
     ],
     "simbolos": [
       "duque",
-      "gobernador",
+      "casa-rey",
       "dama-corte",
       "versalles"
     ]
@@ -5234,6 +5236,7 @@
       "principe-extranjero",
       "duque",
       "par",
+      "casa-rey",
       "versalles"
     ]
   },
@@ -6469,6 +6472,7 @@
       "duque",
       "par",
       "cortesano",
+      "casa-rey",
       "versalles"
     ]
   },
@@ -6620,6 +6624,7 @@
       "duque",
       "gobernador",
       "militar",
+      "casa-rey",
       "parisino"
     ]
   },
@@ -6985,7 +6990,6 @@
     ],
     "simbolos": [
       "marques-conde",
-      "gobernador",
       "parlamentario",
       "provinciano"
     ]
