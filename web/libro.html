@@ -183,6 +183,13 @@ button.sim-pill:focus-visible,.sim-open:focus-visible{outline:2px solid var(--ro
 .casa-card-nom{font-size:14px;font-weight:600;line-height:1.25}
 .casa-card-sub{font-size:12px;color:var(--muted);line-height:1.25}
 .casa-blason{font-style:italic;background:var(--bg);border-left:3px solid var(--gold);padding:8px 12px;margin:0;font-size:14px}
+.leyenda-pleb{margin:10px 0 12px;padding:8px 12px;background:var(--paper);border:1px solid var(--line);border-radius:6px;font-size:13px}
+.leyenda-pleb summary{cursor:pointer;font-weight:600;color:var(--ink);user-select:none}
+.leyenda-pleb summary span{font-weight:400;color:var(--muted);font-size:12px;margin-left:6px}
+.leyenda-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px 16px;margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+.leyenda-col h4{margin:0 0 6px;font:11px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--gold)}
+.leyenda-list{list-style:none;margin:0;padding:0;display:grid;gap:4px;font-size:12.5px}
+.sw-dot{display:inline-block;width:11px;height:11px;border-radius:2px;border:1px solid rgb(0 0 0 / .3);vertical-align:-1px;margin-right:6px}
 </style>
 
 <div class="wrap">
@@ -217,6 +224,48 @@ button.sim-pill:focus-visible,.sim-open:focus-visible{outline:2px solid var(--ro
       <label class="sortlbl">Escudo<select id="cest"><option value="">Todos</option></select></label>
     </div>
     <div class="count" id="ccount"></div>
+    <details class="leyenda-pleb">
+      <summary>Código visual de casas plebeyas <span>(convención del juego, no heráldica histórica oficial)</span></summary>
+      <p class="leyenda" style="margin-top:6px">Los plebeyos sin carta de armas usan estos emblemas provisionales sin esmaltes nobles para leer de un vistazo oficio y procedencia sin repetir diseños.</p>
+      <div class="leyenda-grid">
+        <div class="leyenda-col">
+          <h4>Oscuros · Oficio o raíz</h4>
+          <ul class="leyenda-list">
+            <li><span class="sw-dot" style="background:#22415a"></span><b>Azul petróleo:</b> mar, puertos y ríos</li>
+            <li><span class="sw-dot" style="background:#5a3d24"></span><b>Nogal:</b> arquitectura y madera</li>
+            <li><span class="sw-dot" style="background:#264639"></span><b>Bosque:</b> campo y raíz rural</li>
+            <li><span class="sw-dot" style="background:#5c2228"></span><b>Carmesí:</b> textil, vestido y vino</li>
+            <li><span class="sw-dot" style="background:#7a3320"></span><b>Terracota:</b> comercio y botica</li>
+            <li><span class="sw-dot" style="background:#4a3556"></span><b>Ciruela:</b> artes, letras y música</li>
+            <li><span class="sw-dot" style="background:#1e2024"></span><b>Negro:</b> leyes, medicina y servicio</li>
+          </ul>
+        </div>
+        <div class="leyenda-col">
+          <h4>Claros · Ámbito y Neutros</h4>
+          <ul class="leyenda-list">
+            <li><span class="sw-dot" style="background:#f5f3ec"></span><b>Plata / Lino:</b> París e Île-de-France</li>
+            <li><span class="sw-dot" style="background:#e8c45a"></span><b>Oro suave:</b> dinero o servicio real</li>
+            <li><span class="sw-dot" style="background:#b9cfe3"></span><b>Celeste:</b> Norte, Oeste o extranjero</li>
+            <li><span class="sw-dot" style="background:#e4b8a6"></span><b>Salmón:</b> Sur y Centro / Midi</li>
+            <li><span class="sw-dot" style="background:#6f886b"></span><b>Salvia prof.:</b> vínculo rural / botánico</li>
+            <li><span class="sw-dot" style="background:#a67f43"></span><b>Ocre prof.:</b> gremio tradicional</li>
+            <li><span class="sw-dot" style="background:#847e74"></span><b>Piedra:</b> oficio sin documentar</li>
+          </ul>
+        </div>
+        <div class="leyenda-col">
+          <h4>Particiones y trazos</h4>
+          <ul class="leyenda-list">
+            <li><b>Partido horizontal:</b> ascenso en una generación</li>
+            <li><b>Partido vertical:</b> doble tierra o migración</li>
+            <li><b>Rayas horizontales:</b> oficio hereditario</li>
+            <li><b>Rayas verticales:</b> comercio y ruta</li>
+            <li><b>Moteado:</b> pueblo pequeño o artesanía menuda</li>
+            <li><b>Grid 2×2 / 2 oscuros:</b> alianza o doble oficio</li>
+            <li><b>3 Bandas:</b> familia en transición entre dos oficios</li>
+          </ul>
+        </div>
+      </div>
+    </details>
     <div id="cas-wrap"></div>
   </div>
   <div id="vista-simbolos" hidden>
@@ -276,8 +325,8 @@ button.sim-pill:focus-visible,.sim-open:focus-visible{outline:2px solid var(--ro
   <div class="ficha-cuerpo" id="ficha-casa" hidden></div>
 </aside>
 
-<script src="js/github.js?v=202611200318"></script>
-<script src="js/heraldica.js?v=202611200318"></script>
+<script src="js/github.js?v=202611200404"></script>
+<script src="js/heraldica.js?v=202611200404"></script>
 <script>
 const $=id=>document.getElementById(id);
 let chars=[],sims=[],filtro='Todas',q='',res='',fsim='',fcas='',qc='',ccat='',cest='',vista='per',sel=null,db=null,owner=false,orden='',RET={},SIM_IMG={},SIM_LOCAL={};
@@ -583,7 +632,11 @@ function fichaCasa(){
   const addC=(l,v)=>{if(!v)return;const dt=mk('dt',l),dd=mk('dd');if(v instanceof Node)dd.append(v);else dd.textContent=v;dl.append(dt,dd)};
   if(cas.blason){const p=mk('p',cas.blason,'casa-blason');addC('Blasonamiento',p)}
   addC('Estado del escudo',(Heraldica.ESTADOS[cas.escudo_estado]||cas.escudo_estado||'')+(cas.confianza?' ('+cas.confianza+')':''));
-  if(cas.escudo_estado==='plebeya_generico'&&cas.plebeya_diseno)addC('Variante provisional',cas.plebeya_diseno.patron.replace(/_/g,' '));
+  if(cas.escudo_estado==='plebeya_generico'&&cas.plebeya_diseno){
+    const PAT_LAB={partido_horizontal:'partido horizontal',partido_vertical:'partido vertical',grid_2x2:'grid 2×2',rayas_horizontales:'rayas horizontales',rayas_verticales:'rayas verticales',moteado:'moteado',grid_2x2_tricolor:'grid 2×2 (dos oscuros)',tres_bandas:'tres bandas'};
+    addC('Diseño',PAT_LAB[cas.plebeya_diseno.patron]||cas.plebeya_diseno.patron.replace(/_/g,' '));
+    if(cas.plebeya_diseno.lectura)addC('Lectura del emblema',cas.plebeya_diseno.lectura);
+  }
   addC('Fuente',cas.fuente);
   if(dl.childElementCount)body.append(dl);
 

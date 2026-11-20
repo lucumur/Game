@@ -56,9 +56,11 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "partido_horizontal",
-      "c1": "#4a3556",
-      "c2": "#e6d5a8"
+      "patron": "tres_bandas",
+      "c1": "#1e2024",
+      "c2": "#f5f3ec",
+      "c3": "#4a3556",
+      "lectura": "Notariado (negro) y letras (ciruela) en París (lino); familia en transición"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (burguesía notarial en 1722 (sin nobleza))"
@@ -84,9 +86,10 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "partido_vertical",
-      "c1": "#4a3556",
-      "c2": "#dce3ea"
+      "patron": "rayas_horizontales",
+      "c1": "#1e2024",
+      "c2": "#e8c45a",
+      "lectura": "Servicio interior hereditario (rayas H, negro) ligado a la Corona (oro suave)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (servicio interior (escudo plebeyo provisional))"
@@ -100,9 +103,10 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "grid_2x2",
-      "c1": "#4a3556",
-      "c2": "#e8dcc8"
+      "patron": "partido_horizontal",
+      "c1": "#6f886b",
+      "c2": "#e4b8a6",
+      "lectura": "Raíz rural (salvia profunda) de provincia del Sur/Delfinado (salmón)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (casa materna de provincia (sin armas registradas))"
@@ -320,9 +324,10 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "rayas_horizontales",
-      "c1": "#263859",
-      "c2": "#dce3ea"
+      "patron": "grid_2x2",
+      "c1": "#f5f3ec",
+      "c2": "#1e2024",
+      "lectura": "Burguesía notarial (negro) en París (grid invertido, lino)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (burguesía de París (materna de Savalette))"
@@ -444,9 +449,12 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "rayas_verticales",
-      "c1": "#2f3b44",
-      "c2": "#e6d5a8"
+      "patron": "grid_2x2_tricolor",
+      "c1": "#1e2024",
+      "c2": "#f5f3ec",
+      "c3": "#6f886b",
+      "inv": false,
+      "lectura": "Medicina y botánica (negro y salvia profunda) en París (lino); alianza burguesa"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (burguesía parisina (materna de Dodart))"
@@ -461,8 +469,9 @@
     "blason": "",
     "plebeya_diseno": {
       "patron": "moteado",
-      "c1": "#5c2228",
-      "c2": "#e6d5a8"
+      "c1": "#e4b8a6",
+      "c2": "#5c2228",
+      "lectura": "Artesanía textil (carmesí) en Champaña (moteado invertido, salmón)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (artesanado de Champaña (materna de Lecouvreur))"
@@ -680,9 +689,10 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "partido_horizontal",
-      "c1": "#264639",
-      "c2": "#e6d5a8"
+      "patron": "partido_vertical",
+      "c1": "#4a3556",
+      "c2": "#b9cfe3",
+      "lectura": "Artes y letras (ciruela) con emigración paterna a Inglaterra (partido V, celeste)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (hija de pintor emigrado; baronesa solo en 1735)"
@@ -696,9 +706,11 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "partido_vertical",
+      "patron": "tres_bandas",
       "c1": "#4a3556",
-      "c2": "#e6d5a8"
+      "c2": "#b9cfe3",
+      "c3": "#1e2024",
+      "lectura": "Letras (ciruela) y toga/leyes (negro) en Ruan/Normandía (celeste)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (burguesía letrada de Ruan (pendiente posible d'Hozier))"
@@ -724,9 +736,10 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "grid_2x2",
-      "c1": "#1f4b5c",
-      "c2": "#e8dcc8"
+      "patron": "rayas_horizontales",
+      "c1": "#4a3556",
+      "c2": "#f5f3ec",
+      "lectura": "Dinastía hereditaria de músicos (rayas H, ciruela) en París (lino)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (dinastía de músicos; escudo plebeyo provisional)"
@@ -764,9 +777,10 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "rayas_horizontales",
-      "c1": "#5a3d24",
-      "c2": "#d6e2d5"
+      "patron": "moteado",
+      "c1": "#5c2228",
+      "c2": "#e4b8a6",
+      "lectura": "Artesanía textil / sombrerería (moteado, carmesí) de Champaña (salmón)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (artesanado de Champaña (sombrerero))"
@@ -840,9 +854,10 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "rayas_verticales",
-      "c1": "#2f3b44",
-      "c2": "#f2ead7"
+      "patron": "grid_2x2",
+      "c1": "#1e2024",
+      "c2": "#f5f3ec",
+      "lectura": "Burguesía notarial (grid, negro) en París (lino)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (burguesía parisina (materna de Voltaire))"
@@ -869,8 +884,9 @@
     "blason": "",
     "plebeya_diseno": {
       "patron": "moteado",
-      "c1": "#1f4b5c",
-      "c2": "#f2ead7"
+      "c1": "#f5f3ec",
+      "c2": "#847e74",
+      "lectura": "París (lino); origen modesto sin oficio documentado (moteado, piedra)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (materna de Mlle de Launay (sin armas))"
@@ -933,8 +949,9 @@
     "blason": "",
     "plebeya_diseno": {
       "patron": "partido_horizontal",
-      "c1": "#5a3d24",
-      "c2": "#dce3ea"
+      "c1": "#847e74",
+      "c2": "#e4b8a6",
+      "lectura": "Languedoc (salmón); oficio materno sin documentar (piedra)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (materna languedociana (sin armas registradas aquí))"
@@ -961,8 +978,9 @@
     "blason": "",
     "plebeya_diseno": {
       "patron": "partido_vertical",
-      "c1": "#5a3d24",
-      "c2": "#dce3ea"
+      "c1": "#f5f3ec",
+      "c2": "#847e74",
+      "lectura": "París (lino); oficio materno sin documentar (piedra)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (materna parisina (Lalande))"
@@ -1144,9 +1162,10 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "grid_2x2",
-      "c1": "#7a3320",
-      "c2": "#f2ead7"
+      "patron": "rayas_horizontales",
+      "c1": "#847e74",
+      "c2": "#e4b8a6",
+      "lectura": "Provincia del Centro/Sur (salmón); linaje sin oficio documentado (piedra)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (materna de Dodun (pendiente revisar en Forez/d'Hozier))"
@@ -1244,9 +1263,10 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "rayas_horizontales",
-      "c1": "#5a3d24",
-      "c2": "#dce3ea"
+      "patron": "partido_horizontal",
+      "c1": "#f5f3ec",
+      "c2": "#4a3556",
+      "lectura": "Entorno musical (ciruela) en París (partido H invertido, lino)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (materna de François Couperin)"
@@ -1284,9 +1304,10 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "rayas_verticales",
-      "c1": "#5a3d24",
-      "c2": "#dce3ea"
+      "patron": "partido_horizontal",
+      "c1": "#847e74",
+      "c2": "#e8c45a",
+      "lectura": "Entorno hacendístico (oro suave); oficio materno sin documentar (piedra)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (materna de Fleuriau d'Armenonville (sin nobleza confirmada))"
@@ -1300,9 +1321,10 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "moteado",
-      "c1": "#1f4b5c",
-      "c2": "#f5efe2"
+      "patron": "partido_vertical",
+      "c1": "#847e74",
+      "c2": "#e4b8a6",
+      "lectura": "Gascuña/Sur (salmón); oficio materno sin documentar (piedra)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (materna de Mme de La Lande (sin armas verificadas))"
@@ -1412,9 +1434,10 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "partido_horizontal",
-      "c1": "#4a3556",
-      "c2": "#d6e2d5"
+      "patron": "moteado",
+      "c1": "#7a3320",
+      "c2": "#e4b8a6",
+      "lectura": "Botica y comercio urbano (terracota) en el Lemosín (moteado, salmón)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (materna de Guillaume Dubois (Lemosín))"
@@ -1429,8 +1452,9 @@
     "blason": "",
     "plebeya_diseno": {
       "patron": "partido_vertical",
-      "c1": "#1f4b5c",
-      "c2": "#f5efe2"
+      "c1": "#1e2024",
+      "c2": "#b9cfe3",
+      "lectura": "Notariado y oficio urbano (negro) de Basilea / exterior (partido V, celeste)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (materna suiza de Luke Schaub (Basilea))"
@@ -1528,9 +1552,10 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "grid_2x2",
-      "c1": "#4a3556",
-      "c2": "#f5efe2"
+      "patron": "moteado",
+      "c1": "#264639",
+      "c2": "#e4b8a6",
+      "lectura": "Raíz rural (bosque, moteado) en Languedoc (salmón)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (materna languedociana de Fleury)"
@@ -1580,9 +1605,11 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "rayas_horizontales",
+      "patron": "tres_bandas",
       "c1": "#5c2228",
-      "c2": "#dce3ea"
+      "c2": "#e8c45a",
+      "c3": "#4a3556",
+      "lectura": "De oficio sastre (carmesí) a músico del Rey (oro suave y ciruela); transición"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (hijo de sastre; caballero Saint-Michel en 1722 (provisional))"
@@ -1692,9 +1719,12 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "rayas_verticales",
-      "c1": "#5c2228",
-      "c2": "#e8dcc8"
+      "patron": "grid_2x2_tricolor",
+      "c1": "#7a3320",
+      "c2": "#e8c45a",
+      "c3": "#4a3556",
+      "inv": false,
+      "lectura": "Comercio, finanzas (terracota, oro suave) y artes (ciruela); alianza burguesa"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (materna de Samuel Bernard)"
@@ -1852,9 +1882,10 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "moteado",
-      "c1": "#263859",
-      "c2": "#e6d5a8"
+      "patron": "rayas_verticales",
+      "c1": "#22415a",
+      "c2": "#e4b8a6",
+      "lectura": "Comercio portuario/fluvial (rayas V, azul petróleo) de Guyena/Burdeos (salmón)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (materna bordelesa de La Caze)"
@@ -1905,8 +1936,9 @@
     "blason": "",
     "plebeya_diseno": {
       "patron": "partido_horizontal",
-      "c1": "#7a3320",
-      "c2": "#f2ead7"
+      "c1": "#847e74",
+      "c2": "#b9cfe3",
+      "lectura": "Bretaña/Oeste (celeste); oficio materno sin documentar (piedra)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (materna de Brilhac)"
@@ -1944,9 +1976,10 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "partido_vertical",
-      "c1": "#7a3320",
-      "c2": "#e8dcc8"
+      "patron": "partido_horizontal",
+      "c1": "#f5f3ec",
+      "c2": "#a67f43",
+      "lectura": "Burguesía de París (lino) con raíz gremial tradicional (ocre profundo)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (materna parisina de Mme de Lambert)"
@@ -1997,8 +2030,9 @@
     "blason": "",
     "plebeya_diseno": {
       "patron": "grid_2x2",
-      "c1": "#2f3b44",
-      "c2": "#d6e2d5"
+      "c1": "#e8c45a",
+      "c2": "#847e74",
+      "lectura": "Fortuna urbana (oro suave); oficio materno sin documentar (piedra)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (materna de la duquesa de Noailles)"
@@ -2084,9 +2118,10 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "rayas_horizontales",
-      "c1": "#264639",
-      "c2": "#f5efe2"
+      "patron": "partido_vertical",
+      "c1": "#e8c45a",
+      "c2": "#847e74",
+      "lectura": "Entorno financiero (oro suave); oficio materno sin documentar (piedra)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (materna de Mme de Prie)"
@@ -2304,9 +2339,10 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "rayas_verticales",
-      "c1": "#2f3b44",
-      "c2": "#f2ead7"
+      "patron": "partido_vertical",
+      "c1": "#22415a",
+      "c2": "#b9cfe3",
+      "lectura": "Costa y comercio marítimo (azul petróleo) en el Norte/Calais (partido V, celeste)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (materna de Georges Mareschal)"
@@ -2320,9 +2356,10 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "moteado",
-      "c1": "#1f4b5c",
-      "c2": "#d6e2d5"
+      "patron": "partido_horizontal",
+      "c1": "#e8c45a",
+      "c2": "#1e2024",
+      "lectura": "Servicio a la Corona (oro suave) en oficios interiores (partido H invertido, negro)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (materna de Louis Blouin)"
@@ -2337,8 +2374,9 @@
     "blason": "",
     "plebeya_diseno": {
       "patron": "partido_horizontal",
-      "c1": "#5a3d24",
-      "c2": "#e8dcc8"
+      "c1": "#4a3556",
+      "c2": "#e4b8a6",
+      "lectura": "Familia letrada (ciruela) en Auvernia/Riom (salmón)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (materna de Jean Soanen (Riom))"
@@ -2400,9 +2438,10 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "partido_vertical",
-      "c1": "#5c2228",
-      "c2": "#dce3ea"
+      "patron": "partido_horizontal",
+      "c1": "#5a3d24",
+      "c2": "#f5f3ec",
+      "lectura": "Arquitectura y obra real (nogal) en París (lino)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (materna de Robert de Cotte)"
@@ -2428,9 +2467,10 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "grid_2x2",
-      "c1": "#4a3556",
-      "c2": "#f5efe2"
+      "patron": "partido_vertical",
+      "c1": "#847e74",
+      "c2": "#b9cfe3",
+      "lectura": "Alsacia/Norte-Este (celeste); oficio materno sin documentar (piedra)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (materna de Corberon)"
@@ -2444,9 +2484,10 @@
     "escudo_ref": null,
     "blason": "",
     "plebeya_diseno": {
-      "patron": "rayas_horizontales",
-      "c1": "#5c2228",
-      "c2": "#e6d5a8"
+      "patron": "moteado",
+      "c1": "#6f886b",
+      "c2": "#e4b8a6",
+      "lectura": "Origen rural disperso (moteado, salvia profunda) del Sur/Bearne (salmón)"
     },
     "confianza": "probable",
     "fuente": "Sin armas propias en 1722 — diseño bicolor temporal (materna de Fenoyl)"

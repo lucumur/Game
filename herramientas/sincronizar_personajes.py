@@ -46,6 +46,7 @@ ESTADOS_ESCUDO = {
 PATRONES_PLEBEYOS = {
     "partido_horizontal", "partido_vertical", "grid_2x2",
     "rayas_horizontales", "rayas_verticales", "moteado",
+    "grid_2x2_tricolor", "tres_bandas",
 }
 CONFIANZAS_CASA = {"confirmado", "probable", "por_verificar"}
 CORRECCIONES_NOTAS = {
@@ -154,6 +155,7 @@ def validar(datos, canon_obj, pj00):
         if not isinstance(casas_list, list) or not casas_list:
             errores.append("web/datos/casas.json debe ser una lista no vacía")
         else:
+            firmas_plebeyas = {}
             for c in casas_list:
                 cid = str(c.get("id") or "").strip()
                 if not cid or cid in casas_by_id:
@@ -175,12 +177,33 @@ def validar(datos, canon_obj, pj00):
                     errores.append(f"casas.json {cid}: escudo_ref {c.get('escudo_ref')!r} no existe en escudos.json")
                 if est == "plebeya_generico":
                     pd = c.get("plebeya_diseno")
-                    if not isinstance(pd, dict) or pd.get("patron") not in PATRONES_PLEBEYOS:
+                    pat = pd.get("patron") if isinstance(pd, dict) else None
+                    if not isinstance(pd, dict) or pat not in PATRONES_PLEBEYOS:
                         errores.append(f"casas.json {cid}: plebeya_diseno.patron inválido ({pd!r})")
                     else:
-                        for ck in ("c1", "c2"):
+                        bad_col = False
+                        claves_col = ("c1", "c2", "c3") if pat in ("grid_2x2_tricolor", "tres_bandas") else ("c1", "c2")
+                        for ck in claves_col:
                             if not re.match(r"^#[0-9a-fA-F]{6}$", str(pd.get(ck) or "")):
                                 errores.append(f"casas.json {cid}: color plebeyo inválido {ck}={pd.get(ck)!r}")
+                                bad_col = True
+                        if not bad_col:
+                            c1, c2 = pd["c1"].lower(), pd["c2"].lower()
+                            if c1 == c2:
+                                errores.append(f"casas.json {cid}: c1 y c2 no pueden ser iguales ({c1})")
+                            if pat in ("grid_2x2_tricolor", "tres_bandas"):
+                                c3 = pd["c3"].lower()
+                                if c3 == c1 or c3 == c2:
+                                    errores.append(f"casas.json {cid}: c3 debe diferenciarse de c1/c2 ({c3})")
+                                sig = (pat, c1, c2, c3, bool(pd.get("inv", False)) if pat == "grid_2x2_tricolor" else False)
+                            elif pat in ("rayas_horizontales", "rayas_verticales"):
+                                sig = (pat, *sorted((c1, c2)))
+                            else:
+                                sig = (pat, c1, c2)
+                            if sig in firmas_plebeyas:
+                                errores.append(f"casas.json {cid}: escudo plebeyo duplicado con {firmas_plebeyas[sig]} ({sig})")
+                            else:
+                                firmas_plebeyas[sig] = cid
 
     ids = set()
     eids = set()
