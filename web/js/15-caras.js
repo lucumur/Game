@@ -19,8 +19,9 @@ function drawUnknown(){
   const n=Object.keys(guesses).length;
   $("#guess-count").textContent=n+" conjetura"+(n===1?"":"s")+" pendiente"+(n===1?"":"s")+(n>=3?" · ya hay suficientes para pedir confirmación al narrador":" · faltan "+(3-n%3)+" para la próxima confirmación");
 }
-let LIBRO=null,RETR={};
+let LIBRO=null,RETR={},curFichaL=null;
 const libroDe=id=>LIBRO&&LIBRO.find(c=>c.escritorio_id===id);
+function refrescarFichaCasa(){if(curFichaL&&!$("#ficha").hidden)openFichaL(curFichaL)}
 function retratoEl(c){const s=RETR[c.id];if(!s)return bust();const i=el("img",{class:"pt",alt:"Retrato de "+(c.nombre_nac||c.nombre)});i.src=s;return i}
 function drawFaces(){
   if(LIBRO&&LIBRO.length)return drawFacesLibro();
@@ -37,26 +38,43 @@ function drawFaces(){
   if(!list.length)b.append(el("p",{class:"note"},"Nadie coincide con la búsqueda."));
 }
 function drawFacesLibro(){
-  const q=$("#q").value.trim().toLowerCase(), fp=$("#f-pres").value;
-  $("#f-pres").hidden=false;
-  const list=LIBRO.filter(c=>(!fp||c.presencia_versalles===fp)&&(!q||[c.nombre,c.nombre_nac,(c.apodos||[]).join(" "),c.titulo_nob,c.puesto].join(" ").toLowerCase().includes(q)));
+  const q=$("#q").value.trim().toLowerCase(), fp=$("#f-pres").value, fc=$("#f-casa")?.value||"";
+  $("#f-pres").hidden=false; if($("#f-casa"))$("#f-casa").hidden=false;
+  const hNom=id=>typeof Heraldica!=="undefined"?Heraldica.nombre(id):"";
+  const list=LIBRO.filter(c=>(!fp||c.presencia_versalles===fp)&&(!fc||(typeof Heraldica!=="undefined"&&Heraldica.coincideCasa(c,fc)))&&(!q||[c.nombre,c.nombre_nac,(c.apodos||[]).join(" "),c.titulo_nob,c.puesto,c.casa,hNom(c.casa_id),hNom(c.casa_materna_id),hNom(c.casa_alianza_id)].join(" ").toLowerCase().includes(q)));
   $("#faces-count").textContent=list.length+" de "+LIBRO.length+" personas";
   const b=$("#faces"); b.innerHTML="";
   const grupos={}; list.forEach(c=>(grupos[c.faccion||"Sin facción"] ||= []).push(c));
   for(const[g,cs]of Object.entries(grupos)){
     const box=el("div",{class:"plates"});
-    cs.forEach(c=>box.append(el("button",{class:"plate"+(c.presencia_versalles==="ausente"?" away":""),onclick:()=>openFichaL(c)},retratoEl(c),el("span",{class:"nm"},c.nombre_nac||c.nombre),el("span",{class:"tt"},c.titulo_nob||c.titulo||""),el("span",{class:"tt"},c.puesto||c.cargo||""),simbolosEl(c))));
+    cs.forEach(c=>{
+      const esc=typeof Heraldica!=="undefined"&&c.casa_id?Heraldica.parCasasEl(c,{size:20}):null;
+      box.append(el("button",{class:"plate"+(c.presencia_versalles==="ausente"?" away":""),onclick:()=>openFichaL(c)},retratoEl(c),el("span",{class:"nm"},c.nombre_nac||c.nombre),el("span",{class:"tt"},c.titulo_nob||c.titulo||""),el("span",{class:"tt"},c.puesto||c.cargo||""),esc&&esc.childElementCount?esc:null,simbolosEl(c)));
+    });
     b.append(el("div",{class:"rama"},el("h3",{},g),box));
   }
   if(!list.length)b.append(el("p",{class:"note"},"Nadie coincide con la búsqueda."));
 }
+function fichaCasasEl(c){
+  if(typeof Heraldica==="undefined"||!c.casa_id)return null;
+  const wrap=el("div",{class:"ficha-casas"});
+  const addChip=(rol,cid)=>{
+    const nom=cid?Heraldica.nombre(cid):"Por verificar";
+    wrap.append(el("div",{class:"casa-chip"},Heraldica.escudoEl(cid,{size:30,rol}),el("div",{class:"casa-chip-meta"},el("span",{class:"casa-chip-rol"},rol),el("span",{class:"casa-chip-nom"},nom))));
+  };
+  addChip("Casa paterna",c.casa_id);
+  addChip("Casa materna",c.casa_materna_id);
+  if(c.casa_alianza_id)addChip("Alianza marital",c.casa_alianza_id);
+  return wrap;
+}
 function openFichaL(c){
+  curFichaL=c;
   const f=$("#ficha"); f.innerHTML="";
   const key=c.escritorio_id||c.id, notas=store.get("vg_notas",{});
   const ta=el("textarea",{id:"nota-"+key,placeholder:"Lo que piensas de esta persona. Solo tú lo ves."}); ta.value=notas[key]||"";
   ta.addEventListener("input",()=>{const n=store.get("vg_notas",{});n[key]=ta.value;store.set("vg_notas",n)});
   const dl=el("dl",{});
-  [["Rango",(c.rangos||[]).length?rangosEl(c.rangos):""],["Título",c.titulo_nob||c.titulo],["Puesto",c.puesto||c.cargo],["Nació",c.nacimiento],["Edad",c.edad?c.edad+" años":""],["Casa",c.casa],["Cónyuge",c.conyuge],["Facción",c.faccion],["Presencia",PRES[c.presencia_versalles]||""],["Dónde vive",c.ubicacion],["Con el rey",c.relacion_rey]]
+  [["Rango",(c.rangos||[]).length?rangosEl(c.rangos):""],["Título",c.titulo_nob||c.titulo],["Puesto",c.puesto||c.cargo],["Nació",c.nacimiento],["Edad",c.edad?c.edad+" años":""],["Casa",!c.casa_id?c.casa:""],["Cónyuge",c.conyuge],["Facción",c.faccion],["Presencia",PRES[c.presencia_versalles]||""],["Dónde vive",c.ubicacion],["Con el rey",c.relacion_rey]]
     .forEach(([k,v])=>{if(v&&v!=="—")dl.append(el("dt",{},k),el("dd",{},v instanceof Node?v:String(v)))});
   const nom=(c.nombre_nac||c.nombre)+((c.apodos||[]).length?" «"+c.apodos.join("» «")+"»":"");
   f.append(el("button",{class:"x","aria-label":"Cerrar",onclick:()=>{f.hidden=true}},"×"),
@@ -68,7 +86,8 @@ function openFichaL(c){
       catch(e){msg.textContent="No se pudo guardar: "+(e&&e.message||e)}};
     f.append(el("div",{class:"ficha-up"},inp,el("button",{class:"btn sm",onclick:()=>inp.click()},RETR[c.id]?"Cambiar retrato":"Subir retrato"),msg));
   }
-  f.append(el("h2",{},nom),simbolosEl(c,"simbolos-row ficha-sims"),el("div",{class:"rule"}),dl);
+  const fcEl=fichaCasasEl(c);
+  f.append(el("h2",{},nom),fcEl||"",simbolosEl(c,"simbolos-row ficha-sims"),el("div",{class:"rule"}),dl);
   if(c.escritorio_id&&LINAJE.padres)f.append(el("span",{class:"label"},"Familia"),familyBlock(c.escritorio_id));
   f.append(el("span",{class:"label"},"Lo que sabes"),el("p",{class:"note"},"Todavía no has observado nada de esta persona."),
     el("label",{class:"label",for:"nota-"+key},"Tus notas"),ta,

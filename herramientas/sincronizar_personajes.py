@@ -17,6 +17,8 @@ import sys
 
 RAIZ = pathlib.Path(__file__).resolve().parents[1]
 R_DATOS = RAIZ / "web" / "datos" / "personajes.json"
+R_CASAS = RAIZ / "web" / "datos" / "casas.json"
+R_ESCUDOS = RAIZ / "web" / "datos" / "escudos.json"
 R_SIMBOLOS = RAIZ / "web" / "datos" / "simbolos.json"
 R_CANON = RAIZ / "canon" / "personajes.json"
 R_LINAJE = RAIZ / "canon" / "linaje.json"
@@ -33,6 +35,19 @@ RANGOS_VALIDOS = {
 PRESENCIAS_VALIDAS = {
     "reside", "frecuenta", "ocasional", "ausente", "por verificar",
 }
+CATEGORIAS_CASA = {
+    "real", "principe_extranjero", "noble_alta", "noble_espada",
+    "toga", "finanzas", "servicio_ennoblecido", "extranjera", "plebeya",
+}
+ESTADOS_ESCUDO = {
+    "wikimedia_local", "wikimedia_pendiente", "blason_manual",
+    "plebeya_generico", "por_verificar",
+}
+PATRONES_PLEBEYOS = {
+    "partido_horizontal", "partido_vertical", "grid_2x2",
+    "rayas_horizontales", "rayas_verticales", "moteado",
+}
+CONFIANZAS_CASA = {"confirmado", "probable", "por_verificar"}
 CORRECCIONES_NOTAS = {
     "mariana-victoria",
     "noailles",
@@ -106,6 +121,9 @@ def construir_canon(datos, old_canon):
             "nombre": d["nombre"],
             "titulo": titulo,
             "rama": rama,
+            "casa_id": d.get("casa_id"),
+            "casa_materna_id": d.get("casa_materna_id"),
+            "casa_alianza_id": d.get("casa_alianza_id"),
             "nacimiento": nac,
             "edad_jun_1722": edad,
             "parentesco": parentesco,
@@ -127,6 +145,43 @@ def construir_canon(datos, old_canon):
 def validar(datos, canon_obj, pj00):
     errores = []
     sims_validos = {s["id"] for s in json.loads(R_SIMBOLOS.read_text(encoding="utf-8"))}
+    casas_by_id = {}
+    if not R_CASAS.exists():
+        errores.append("Falta web/datos/casas.json")
+    else:
+        casas_list = json.loads(R_CASAS.read_text(encoding="utf-8"))
+        esc_files = set(json.loads(R_ESCUDOS.read_text(encoding="utf-8")).get("files", {}).keys()) if R_ESCUDOS.exists() else set()
+        if not isinstance(casas_list, list) or not casas_list:
+            errores.append("web/datos/casas.json debe ser una lista no vacía")
+        else:
+            for c in casas_list:
+                cid = str(c.get("id") or "").strip()
+                if not cid or cid in casas_by_id:
+                    errores.append(f"casas.json: id vacío o duplicado ({cid!r})")
+                    continue
+                casas_by_id[cid] = c
+                if not str(c.get("nombre") or "").strip():
+                    errores.append(f"casas.json {cid}: nombre vacío")
+                if c.get("categoria") not in CATEGORIAS_CASA:
+                    errores.append(f"casas.json {cid}: categoria inválida ({c.get('categoria')!r})")
+                est = c.get("escudo_estado")
+                if est not in ESTADOS_ESCUDO:
+                    errores.append(f"casas.json {cid}: escudo_estado inválido ({est!r})")
+                if c.get("confianza") not in CONFIANZAS_CASA:
+                    errores.append(f"casas.json {cid}: confianza inválida ({c.get('confianza')!r})")
+                if c.get("rama_de") is not None and not str(c.get("rama_de") or "").strip():
+                    errores.append(f"casas.json {cid}: rama_de vacío (usa null si no aplica)")
+                if est == "wikimedia_local" and c.get("escudo_ref") not in esc_files:
+                    errores.append(f"casas.json {cid}: escudo_ref {c.get('escudo_ref')!r} no existe en escudos.json")
+                if est == "plebeya_generico":
+                    pd = c.get("plebeya_diseno")
+                    if not isinstance(pd, dict) or pd.get("patron") not in PATRONES_PLEBEYOS:
+                        errores.append(f"casas.json {cid}: plebeya_diseno.patron inválido ({pd!r})")
+                    else:
+                        for ck in ("c1", "c2"):
+                            if not re.match(r"^#[0-9a-fA-F]{6}$", str(pd.get(ck) or "")):
+                                errores.append(f"casas.json {cid}: color plebeyo inválido {ck}={pd.get(ck)!r}")
+
     ids = set()
     eids = set()
 
@@ -139,6 +194,15 @@ def validar(datos, canon_obj, pj00):
         if not eid or eid in eids:
             errores.append(f"datos {pid}: escritorio_id vacío o duplicado ({eid!r})")
         eids.add(eid)
+
+        if casas_by_id:
+            cid = d.get("casa_id")
+            if cid not in casas_by_id:
+                errores.append(f"{pid} ({eid}): casa_id inválida o inexistente ({cid!r})")
+            for opt_k in ("casa_materna_id", "casa_alianza_id"):
+                ov = d.get(opt_k)
+                if ov is not None and ov not in casas_by_id:
+                    errores.append(f"{pid} ({eid}): {opt_k} inexistente ({ov!r})")
 
         pv = d.get("presencia_versalles")
         if pv not in PRESENCIAS_VALIDAS:
@@ -248,7 +312,7 @@ def validar(datos, canon_obj, pj00):
                     if pid is not None and pid not in d_by_eid:
                         errores.append(f"ocupantes.json {room_id}[{idx}]: pid {pid!r} no existe en datos")
 
-    return errores
+    return errores, len(casas_by_id)
 
 
 def main():
@@ -283,7 +347,7 @@ def main():
             print("ERROR: canon/personajes.json y PERSONAJES de web/js/00-datos.js difieren", file=sys.stderr)
             return 1
 
-    errores = validar(datos, canon_obj, pj00)
+    errores, n_casas = validar(datos, canon_obj, pj00)
     if errores:
         print(f"FALLARON {len(errores)} validaciones:", file=sys.stderr)
         for e in errores:
@@ -292,7 +356,7 @@ def main():
 
     print(
         f"OK: {len(datos)} datos == {len(canon_obj['personajes'])} canon == {len(pj00)} 00-datos.js; "
-        "0 errores de esquema y mapas."
+        f"{n_casas} casas; 0 errores de esquema y mapas."
     )
     return 0
 

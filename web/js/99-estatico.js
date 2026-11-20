@@ -4,19 +4,27 @@
 ready.then(async()=>{
   if(db)return;
   try{
-    const [per,idx,sim,ocu]=await Promise.all([
+    const [per,idx,sim,ocu,cas]=await Promise.all([
       fetch("datos/personajes.json").then(r=>r.json()),
       fetch("datos/indice.json").then(r=>r.json()),
       fetch("datos/simbolos.json").then(r=>r.ok?r.json():[]).catch(()=>[]),
-      fetch("datos/ocupantes.json").then(r=>r.ok?r.json():{}).catch(()=>({}))
+      fetch("datos/ocupantes.json").then(r=>r.ok?r.json():{}).catch(()=>({})),
+      fetch("datos/casas.json").then(r=>r.ok?r.json():[]).catch(()=>[])
     ]);
     LIBRO=per;
     SIMBOLOS=Array.isArray(sim)?sim:[];
     OCUP_DB=ocu||{};
+    if(typeof Heraldica!=="undefined"){Heraldica.setCasas(Array.isArray(cas)?cas:[]);Heraldica.poblarSelect($("#f-casa"),LIBRO,"Toda casa")}
     RETR={};(idx.retratos||[]).forEach(f=>{RETR[f.replace(/\.\w+$/,"")]="datos/retratos/"+f});
     ESTANCIAS={};(idx.estancias||[]).forEach(f=>{ESTANCIAS[f.replace(/\.\w+$/,"")]="datos/estancias/"+f});
     SIM_IMG={};(idx.simbolos||[]).forEach(f=>{SIM_IMG[f.replace(/\.\w+$/,"")]="datos/simbolos/"+f});
     try{drawFaces()}catch(e){}
+    fetch("datos/escudos.json").then(r=>r.ok?r.json():null).then(esc=>{
+      if(esc&&esc.files&&typeof Heraldica!=="undefined"){
+        Heraldica.setEscudos(esc.files);
+        try{if(!document.querySelector('.view[data-view="caras"]').hidden)drawFaces();if(typeof refrescarFichaCasa==="function")refrescarFichaCasa()}catch(e){}
+      }
+    }).catch(()=>{});
     try{if(!$("#selector").hidden&&modo==="existente")renderExistentes();if(!$("#game").hidden&&player?.existente){buildBar();if(current==="bio")drawBio()}}catch(e){}
     try{const v=document.querySelector('.view[data-view="mapa"]');if(v&&!v.hidden){const tab=document.querySelector('#map-tabs [aria-selected=true]')?.dataset.map;if(tab==="palacio"||tab==="dominio"){const keep=mapSel&&mapSel.id;drawMap(tab);if(keep)goRoom(keep)}}}catch(e){}
     activarEditorGH();

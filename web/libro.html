@@ -157,6 +157,32 @@ button.sim-pill:focus-visible,.sim-open:focus-visible{outline:2px solid var(--ro
 .ap-tag.fut{border-style:dashed;color:var(--royal);border-color:color-mix(in srgb,var(--royal) 45%,transparent)}
 .ap-tag.conf{opacity:.8}
 .ap-nota{font-size:13px;color:var(--muted);line-height:1.35}
+/* heráldica y casas */
+.esc-wrap{display:inline-flex;align-items:center;justify-content:center;flex:none;line-height:0;vertical-align:middle}
+.esc-img,.esc-svg{width:100%;height:100%;object-fit:contain;display:block}
+.esc-mat{opacity:.92}
+.esc-ali{opacity:.9}
+.casas-par{display:inline-flex;align-items:flex-end;gap:4px;flex-wrap:wrap}
+.card .casas-par{margin-top:2px}
+.esc-btn{all:unset;display:inline-flex;cursor:pointer;border-radius:4px}
+.esc-btn:focus-visible{outline:2px solid var(--royal);outline-offset:2px}
+.casas-ficha-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;margin-top:6px}
+.casa-pill{all:unset;box-sizing:border-box;display:grid;grid-template-columns:38px minmax(0,1fr);gap:9px;align-items:center;padding:7px 9px;border:1px solid var(--line);border-radius:6px;background:var(--bg);cursor:pointer}
+.casa-pill:hover{border-color:var(--royal)}
+.casa-pill:focus-visible{outline:2px solid var(--royal);outline-offset:2px}
+.casa-pill-static{cursor:default}
+.casa-pill-static:hover{border-color:var(--line)}
+.casa-pill-meta{display:grid;gap:1px;min-width:0}
+.casa-pill-rol{font:10px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}
+.casa-pill-nom{font-size:12.5px;font-weight:600;line-height:1.25;overflow-wrap:anywhere}
+.casa-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:12px;margin-top:12px}
+.casa-card{all:unset;box-sizing:border-box;display:grid;grid-template-columns:46px minmax(0,1fr);gap:12px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:6px;background:var(--paper);cursor:pointer}
+.casa-card:hover{border-color:var(--royal)}
+.casa-card:focus-visible{outline:2px solid var(--royal);outline-offset:2px}
+.casa-card-meta{display:grid;gap:2px;min-width:0}
+.casa-card-nom{font-size:14px;font-weight:600;line-height:1.25}
+.casa-card-sub{font-size:12px;color:var(--muted);line-height:1.25}
+.casa-blason{font-style:italic;background:var(--bg);border-left:3px solid var(--gold);padding:8px 12px;margin:0;font-size:14px}
 </style>
 
 <div class="wrap">
@@ -166,21 +192,32 @@ button.sim-pill:focus-visible,.sim-open:focus-visible{outline:2px solid var(--ro
     <p class="sub">Los personajes del juego con sus datos, lo que quieren y lo que ocultan. Abre una ficha para ver todo lo que se sabe de cada uno.</p>
     <div class="ltabs" role="tablist" aria-label="Vistas del libro">
       <button class="chip" id="tab-per" type="button" aria-pressed="true">Personajes</button>
+      <button class="chip" id="tab-cas" type="button" aria-pressed="false">Casas</button>
       <button class="chip" id="tab-sim" type="button" aria-pressed="false">Símbolos</button>
     </div>
   </header>
   <div id="vista-personajes">
   <div class="tools">
-    <input type="search" id="q" placeholder="Buscar por nombre, cargo o título" aria-label="Buscar personaje">
+    <input type="search" id="q" placeholder="Buscar por nombre, casa, cargo o título" aria-label="Buscar personaje">
     <label class="sortlbl">Ordenar<select id="orden"><option value="">Original</option><option value="riqueza">Dinero</option><option value="edad">Edad</option><option value="rango">Nobleza / rango</option></select></label>
     <label class="sortlbl">Residencia<select id="res"><option value="">Todas</option><option value="residente_palacio">Residente en Versalles</option><option value="habitante_versalles">Habitante de Versalles</option><option value="habitante_ile">Habitante de l'Île</option><option value="habitante_paris">Habitante de París</option><option value="provinciano">Provinciano</option><option value="extranjero">Extranjero</option><option value="por_verificar">Por verificar</option></select></label>
     <label class="sortlbl">Símbolo<select id="fsim"><option value="">Todos</option></select></label>
+    <label class="sortlbl">Casa<select id="fcas"><option value="">Todas</option></select></label>
     <div class="chips" id="chips" role="group" aria-label="Filtrar por facción"></div>
   </div>
   <div class="count" id="count"></div>
   <div class="msg" id="gmsg" aria-live="polite"></div>
   <div class="grid" id="grid"></div>
   <div class="empty" id="empty" hidden>La corte todavía no tiene personajes cargados. Aparecerán aquí en cuanto se añadan a la base del juego.</div>
+  </div>
+  <div id="vista-casas" hidden>
+    <div class="tools">
+      <input type="search" id="qc" placeholder="Buscar casa, tronco o blasonamiento" aria-label="Buscar casa">
+      <label class="sortlbl">Categoría<select id="ccat"><option value="">Todas</option></select></label>
+      <label class="sortlbl">Escudo<select id="cest"><option value="">Todos</option></select></label>
+    </div>
+    <div class="count" id="ccount"></div>
+    <div id="cas-wrap"></div>
   </div>
   <div id="vista-simbolos" hidden>
     <p class="sub" style="margin-top:16px">Abre un símbolo para conocer su significado y ver quién lo lleva. Para cambiar su imagen, usa el botón de la tarjeta o arrastra un PNG/JPG al recuadro.</p>
@@ -236,13 +273,15 @@ button.sim-pill:focus-visible,.sim-open:focus-visible{outline:2px solid var(--ro
   </div>
   </div>
   <div class="ficha-cuerpo" id="ficha-simbolo" hidden></div>
+  <div class="ficha-cuerpo" id="ficha-casa" hidden></div>
 </aside>
 
-<script src="js/github.js?v=202611190402"></script>
+<script src="js/github.js?v=202611200318"></script>
+<script src="js/heraldica.js?v=202611200318"></script>
 <script>
 const $=id=>document.getElementById(id);
-let chars=[],sims=[],filtro='Todas',q='',res='',fsim='',vista='per',sel=null,db=null,owner=false,orden='',RET={},SIM_IMG={},SIM_LOCAL={};
-let simboloActivo=null,origenFicha=null;
+let chars=[],sims=[],filtro='Todas',q='',res='',fsim='',fcas='',qc='',ccat='',cest='',vista='per',sel=null,db=null,owner=false,orden='',RET={},SIM_IMG={},SIM_LOCAL={};
+let simboloActivo=null,casaActiva=null,origenFicha=null;
 const visitasFicha=[];
 const RES_FULL={residente_palacio:'Residente en Versalles (palacio, por gracia del rey)',habitante_versalles:'Habitante de Versalles (ciudad)',habitante_ile:"Habitante de l'Île (cercanías de la corte)",habitante_paris:'Habitante de París (visita Versalles)',provinciano:'Provinciano (vive en su provincia)',extranjero:'Extranjero (fuera del reino)',por_verificar:'Por verificar'};
 const nac=c=>{const m=String(c.anio||'').match(/\d{4}/);return m?+m[0]:9999};
@@ -291,7 +330,7 @@ function render(){
   fac.forEach(f=>{const b=document.createElement('button');b.className='chip';b.textContent=f;b.setAttribute('aria-pressed',f===filtro);b.onclick=()=>{filtro=f;render()};$('chips').append(b)});
   const t=q.toLowerCase();
   const resDe=c=>Array.isArray(c.residencia)?c.residencia:c.residencia?[c.residencia]:[];
-  const vis=chars.filter(c=>(filtro==='Todas'||c.faccion===filtro)&&(!res||resDe(c).includes(res))&&(!fsim||(c.simbolos||[]).includes(fsim))&&(!t||[c.nombre,c.nombre_nac,(c.apodos||[]).join(' '),(c.apelaciones||[]).map(a=>a.texto).join(' '),c.titulo_nob,c.puesto].join(' ').toLowerCase().includes(t)));
+  const vis=chars.filter(c=>(filtro==='Todas'||c.faccion===filtro)&&(!res||resDe(c).includes(res))&&(!fsim||(c.simbolos||[]).includes(fsim))&&(!fcas||Heraldica.coincideCasa(c,fcas))&&(!t||[c.nombre,c.nombre_nac,(c.apodos||[]).join(' '),(c.apelaciones||[]).map(a=>a.texto).join(' '),c.titulo_nob,c.puesto,c.casa,Heraldica.nombre(c.casa_id),Heraldica.nombre(c.casa_materna_id),Heraldica.nombre(c.casa_alianza_id)].join(' ').toLowerCase().includes(t)));
   if(orden){const k=KEY[orden];vis.sort((a,b)=>k(b)-k(a)||(a.orden||0)-(b.orden||0))}
   const conR=chars.filter(c=>RET[c.id]).length;
   $('count').textContent=chars.length?`${vis.length} de ${chars.length} personajes · ${conR} con retrato`:'';
@@ -303,7 +342,7 @@ function render(){
     const n=document.createElement('div');n.className='cname';nombreEn(n,c);
     const s=document.createElement('div');s.className='ctitle';s.textContent=c.titulo_nob||c.titulo||'';
     const p=document.createElement('div');p.className='cpuesto';p.textContent=c.puesto||c.cargo||'';
-    b.append(f,n,s,p);const sr=simRow(c,false);if(sr)b.append(sr);if(orden){const v=document.createElement('div');v.className='cval';v.textContent=VAL[orden](c);b.append(v)}b.onclick=()=>abrir(c.id);zona(f,()=>c.id);$('grid').append(b)});
+    b.append(f,n,s,p);const par=Heraldica.parCasasEl(c,{size:22});if(par.childElementCount)b.append(par);const sr=simRow(c,false);if(sr)b.append(sr);if(orden){const v=document.createElement('div');v.className='cval';v.textContent=VAL[orden](c);b.append(v)}b.onclick=()=>abrir(c.id);zona(f,()=>c.id);$('grid').append(b)});
 }
 const SECC=[
  ['Origen',[['nacimiento','Nació'],['muerte','Muere'],['casa','Casa'],['estatus_familia','Rango familiar'],['padre','Padre'],['madre','Madre'],['lugar_familia','Lugar en la familia'],['religion','Religión'],['lengua','Lengua']]],
@@ -419,6 +458,26 @@ function ficha(){
   $('fhouse').textContent=c.faccion||'';nombreEn($('fname'),c);$('ftitle').textContent=c.titulo_nob||c.titulo||'';$('fpuesto').textContent=c.puesto||c.cargo||'';
   $('fsims').textContent='';const fsr=simRow(c,true);if(fsr)$('fsims').append(...fsr.childNodes);
   $('fdata').textContent='';
+  if(c.casa_id){
+    const h3=document.createElement('h3');h3.className='sec';h3.textContent='Casas y heráldica';
+    const sub=document.createElement('span');sub.textContent='paterna · materna · alianza';h3.append(sub);$('fdata').append(h3);
+    const cg=document.createElement('div');cg.className='casas-ficha-grid';
+    const putPill=(rol,cid)=>{
+      const casObj=cid?Heraldica.get(cid):null;
+      const btn=document.createElement(casObj?'button':'div');
+      if(casObj){btn.type='button';btn.className='casa-pill';btn.onclick=()=>abrirCasa(cid,btn)}
+      else btn.className='casa-pill casa-pill-static';
+      const esc=Heraldica.escudoEl(cid,{size:34,rol});
+      const meta=document.createElement('div');meta.className='casa-pill-meta';
+      const er=document.createElement('span');er.className='casa-pill-rol';er.textContent=rol;
+      const en=document.createElement('span');en.className='casa-pill-nom';en.textContent=casObj?casObj.nombre:'Por verificar';
+      meta.append(er,en);btn.append(esc,meta);cg.append(btn);
+    };
+    putPill('Casa paterna',c.casa_id);
+    putPill('Casa materna',c.casa_materna_id);
+    if(c.casa_alianza_id)putPill('Alianza marital',c.casa_alianza_id);
+    $('fdata').append(cg);
+  }
   SECC.forEach(([t,fs],idx)=>{const vs=fs.filter(([k])=>c[k]&&c[k]!=='—');const hasR=idx===0&&(c.rangos||[]).length;const rs=Array.isArray(c.residencia)?c.residencia:c.residencia?[c.residencia]:[];const hasRes=idx===3&&rs.length;if(!vs.length&&!hasR&&!hasRes)return;const dl=head(t);if(hasR)add(dl,'Rango',rangosLibro(c.rangos));if(hasRes)add(dl,'Residencia',rs.map(r=>RES_FULL[r]||r).join(' · '));vs.forEach(([k,l])=>add(dl,l,k==='edad'?c[k]+' años':c[k]))});
   if(c.apelaciones&&c.apelaciones.length){
     const dl=head('Apelaciones','cronología · incluye futuras');
@@ -507,33 +566,81 @@ function fichaSimbolo(){
   }
   body.append(grupo);
 }
-function actualizarFicha(){if(sel)ficha();else if(simboloActivo)fichaSimbolo()}
-function mostrarFicha(personaje,simbolo,scroll=0){
-  cerrarGuia();sel=personaje;simboloActivo=simbolo;
+function fichaCasa(){
+  const cas=Heraldica.get(casaActiva);
+  if(!cas){cerrar();return}
+  const body=$('ficha-casa');body.replaceChildren();
+  const mk=(type,txt,cls)=>Object.assign(document.createElement(type),{textContent:txt||'',className:cls||''});
+  const titulo=mk('h2',cas.nombre);titulo.id='casa-nombre';
+  const subCat=Heraldica.CATEGORIAS[cas.categoria]||cas.categoria||'Casa';
+  const metaTop=subCat+(cas.rama_de?' · '+Heraldica.ramaNombre(cas.rama_de):'');
+  const intro=mk('div');intro.append(mk('div',metaTop,'eyebrow'),titulo);
+  const cab=mk('div',null,'sim-ficha-cabecera');
+  cab.append(Heraldica.escudoEl(cas.id,{size:84}),intro);
+  body.append(cab);
+
+  const dl=document.createElement('dl');
+  const addC=(l,v)=>{if(!v)return;const dt=mk('dt',l),dd=mk('dd');if(v instanceof Node)dd.append(v);else dd.textContent=v;dl.append(dt,dd)};
+  if(cas.blason){const p=mk('p',cas.blason,'casa-blason');addC('Blasonamiento',p)}
+  addC('Estado del escudo',(Heraldica.ESTADOS[cas.escudo_estado]||cas.escudo_estado||'')+(cas.confianza?' ('+cas.confianza+')':''));
+  if(cas.escudo_estado==='plebeya_generico'&&cas.plebeya_diseno)addC('Variante provisional',cas.plebeya_diseno.patron.replace(/_/g,' '));
+  addC('Fuente',cas.fuente);
+  if(dl.childElementCount)body.append(dl);
+
+  const grupos=Heraldica.personajesDeCasa(cas.id,chars);
+  const secGrupo=(tituloSec,lista,vacio)=>{
+    const sec=mk('section');
+    const enc=mk('h3',tituloSec,'sec');enc.append(mk('span',String(lista.length)));sec.append(enc);
+    if(!lista.length){if(vacio)sec.append(mk('p',vacio,'sub'));return sec}
+    const grid=mk('div',null,'sim-personas');
+    lista.forEach(p=>{
+      const btn=mk('button',null,'card');btn.type='button';
+      const por=mk('span',null,'face');face(por,p);
+      btn.append(por,mk('span',p.nombre,'cname'));
+      btn.onclick=()=>abrir(p.id,btn);
+      grid.append(btn);
+    });
+    sec.append(grid);
+    return sec;
+  };
+  if(!grupos.todos.length){
+    body.append(mk('p','Ningún personaje cargado está vinculado todavía a esta casa.','sub'));
+  } else {
+    if(grupos.pat.length)body.append(secGrupo('Por casa paterna / de nacimiento',grupos.pat));
+    if(grupos.mat.length)body.append(secGrupo('Por línea materna',grupos.mat));
+    if(grupos.ali.length)body.append(secGrupo('Por alianza marital',grupos.ali));
+  }
+}
+function actualizarFicha(){if(sel)ficha();else if(simboloActivo)fichaSimbolo();else if(casaActiva)fichaCasa()}
+function mostrarFicha(personaje,simbolo,casa,scroll=0){
+  cerrarGuia();sel=personaje;simboloActivo=simbolo;casaActiva=casa||null;
   const panel=$('ficha');
-  $('ficha-personaje').hidden=!!simbolo;$('ficha-simbolo').hidden=!simbolo;
+  $('ficha-personaje').hidden=!!(simbolo||casa);
+  $('ficha-simbolo').hidden=!simbolo;
+  $('ficha-casa').hidden=!casa;
   $('ficha-volver').hidden=!visitasFicha.length;
-  panel.setAttribute('aria-labelledby',simbolo?'simbolo-nombre':'fname');
+  panel.setAttribute('aria-labelledby',simbolo?'simbolo-nombre':casa?'casa-nombre':'fname');
   $('msg').textContent='';actualizarFicha();
   panel.hidden=false;$('veil').hidden=false;
   $(visitasFicha.length?'ficha-volver':'close').focus({preventScroll:true});panel.scrollTop=scroll;
 }
-function navegarFicha(personaje,simbolo,origen){
+function navegarFicha(personaje,simbolo,casa,origen){
   const panel=$('ficha');
   if(panel.hidden)origenFicha=origen;
-  else visitasFicha.push({personaje:sel,simbolo:simboloActivo,scroll:panel.scrollTop});
-  mostrarFicha(personaje,simbolo);
+  else visitasFicha.push({personaje:sel,simbolo:simboloActivo,casa:casaActiva,scroll:panel.scrollTop});
+  mostrarFicha(personaje,simbolo,casa);
 }
-function abrir(id,origen=document.activeElement){if(chars.some(c=>c.id===id))navegarFicha(id,null,origen)}
-function abrirSimbolo(id,origen=document.activeElement){if(sims.some(s=>s.id===id))navegarFicha(null,id,origen)}
+function abrir(id,origen=document.activeElement){if(chars.some(c=>c.id===id))navegarFicha(id,null,null,origen)}
+function abrirSimbolo(id,origen=document.activeElement){if(sims.some(s=>s.id===id))navegarFicha(null,id,null,origen)}
+function abrirCasa(id,origen=document.activeElement){if(Heraldica.get(id))navegarFicha(null,null,id,origen)}
 function cerrar(){
-  sel=null;simboloActivo=null;visitasFicha.length=0;$('ficha').hidden=true;
+  sel=null;simboloActivo=null;casaActiva=null;visitasFicha.length=0;$('ficha').hidden=true;
   if($('guia').hidden)$('veil').hidden=true;
   if(origenFicha?.isConnected)origenFicha.focus();
-  else $(vista==='sim'?'tab-sim':'tab-per').focus({preventScroll:true});
+  else $(vista==='sim'?'tab-sim':vista==='cas'?'tab-cas':'tab-per').focus({preventScroll:true});
   origenFicha=null;
 }
-$('ficha-volver').onclick=()=>{const v=visitasFicha.pop();if(v)mostrarFicha(v.personaje,v.simbolo,v.scroll)};
+$('ficha-volver').onclick=()=>{const v=visitasFicha.pop();if(v)mostrarFicha(v.personaje,v.simbolo,v.casa,v.scroll)};
 $('close').onclick=cerrar;$('guia-open').onclick=()=>abrirGuia();$('guia-close').onclick=cerrarGuia;$('veil').onclick=()=>{if(!$('guia').hidden)cerrarGuia();else cerrar()};
 document.addEventListener('keydown',e=>{
   const panel=!$('guia').hidden?$('guia'):!$('ficha').hidden?$('ficha'):null;
@@ -548,15 +655,66 @@ document.addEventListener('keydown',e=>{
 $('q').oninput=e=>{q=e.target.value;render()};
 $('res').onchange=e=>{res=e.target.value;render()};
 $('fsim').onchange=e=>{fsim=e.target.value;render()};
+$('fcas').onchange=e=>{fcas=e.target.value;render()};
+$('qc').oninput=e=>{qc=e.target.value;renderCasas()};
+$('ccat').onchange=e=>{ccat=e.target.value;renderCasas()};
+$('cest').onchange=e=>{cest=e.target.value;renderCasas()};
 $('orden').onchange=e=>{orden=e.target.value;try{localStorage.setItem('orden',orden)}catch{}render()};
 function setVista(v){
   vista=v;
-  $('vista-personajes').hidden=v!=='per'; $('vista-simbolos').hidden=v!=='sim';
-  $('tab-per').setAttribute('aria-pressed',v==='per'); $('tab-sim').setAttribute('aria-pressed',v==='sim');
+  $('vista-personajes').hidden=v!=='per'; $('vista-casas').hidden=v!=='cas'; $('vista-simbolos').hidden=v!=='sim';
+  $('tab-per').setAttribute('aria-pressed',v==='per'); $('tab-cas').setAttribute('aria-pressed',v==='cas'); $('tab-sim').setAttribute('aria-pressed',v==='sim');
   if(v==='sim')renderSimbolos();
+  if(v==='cas')renderCasas();
 }
 $('tab-per').onclick=()=>setVista('per');
+$('tab-cas').onclick=()=>setVista('cas');
 $('tab-sim').onclick=()=>setVista('sim');
+function renderCasaFiltros(){
+  Heraldica.poblarSelect($('fcas'),chars,'Todas');
+  const cc=$('ccat'), ce=$('cest');
+  if(cc&&cc.options.length<=1){
+    Object.entries(Heraldica.CATEGORIAS).forEach(([k,v])=>{const o=document.createElement('option');o.value=k;o.textContent=v;cc.append(o)});
+  }
+  if(ce&&ce.options.length<=1){
+    Object.entries(Heraldica.ESTADOS).forEach(([k,v])=>{const o=document.createElement('option');o.value=k;o.textContent=v;ce.append(o)});
+  }
+}
+function renderCasas(){
+  const wrap=$('cas-wrap');wrap.textContent='';
+  const all=Heraldica.all();
+  if(!all.length){$('ccount').textContent='';wrap.append(Object.assign(document.createElement('p'),{className:'sub',textContent:'Cargando catálogo de casas…'}));return}
+  const t=qc.trim().toLowerCase();
+  const vis=all.filter(c=>(!ccat||c.categoria===ccat)&&(!cest||c.escudo_estado===cest)&&(!t||[c.nombre,c.id,c.rama_de||'',c.blason||'',c.fuente||''].join(' ').toLowerCase().includes(t)));
+  $('ccount').textContent=`${vis.length} de ${all.length} casas`;
+  const ordenCat=['real','principe_extranjero','noble_alta','noble_espada','toga','finanzas','servicio_ennoblecido','extranjera','plebeya'];
+  ordenCat.forEach(cat=>{
+    const items=vis.filter(c=>c.categoria===cat).sort((a,b)=>{
+      const ga=Heraldica.personajesDeCasa(a.id,chars).todos.length, gb=Heraldica.personajesDeCasa(b.id,chars).todos.length;
+      return gb-ga||a.nombre.localeCompare(b.nombre,'es');
+    });
+    if(!items.length)return;
+    const h=document.createElement('h3');h.className='sec';h.textContent=Heraldica.CATEGORIAS[cat]||cat;
+    const sp=document.createElement('span');sp.textContent=items.length+' casas';h.append(sp);
+    const grid=document.createElement('div');grid.className='casa-grid';
+    items.forEach(cas=>{
+      const card=document.createElement('button');card.type='button';card.className='casa-card';
+      card.onclick=()=>abrirCasa(cas.id,card);
+      const esc=Heraldica.escudoEl(cas.id,{size:44});
+      const meta=document.createElement('div');meta.className='casa-card-meta';
+      const nom=document.createElement('div');nom.className='casa-card-nom';nom.textContent=cas.nombre;
+      const g=Heraldica.personajesDeCasa(cas.id,chars);
+      const partes=[];
+      if(g.pat.length)partes.push(g.pat.length+' pat.');
+      if(g.mat.length)partes.push(g.mat.length+' mat.');
+      if(g.ali.length)partes.push(g.ali.length+' al.');
+      const sub=document.createElement('div');sub.className='casa-card-sub';
+      sub.textContent=(partes.length?partes.join(' · '):'0 vínculos')+' · '+(Heraldica.ESTADOS[cas.escudo_estado]||cas.escudo_estado);
+      meta.append(nom,sub);card.append(esc,meta);grid.append(card);
+    });
+    wrap.append(h,grid);
+  });
+}
 function achicarSimbolo(f){return new Promise((ok,ko)=>{const u=URL.createObjectURL(f),i=new Image();
   i.onload=()=>{const n=Math.max(i.naturalWidth,i.naturalHeight),c=document.createElement('canvas');c.width=c.height=256;
     const x=c.getContext('2d'),w=i.naturalWidth/n*256,h=i.naturalHeight/n*256;
@@ -662,13 +820,17 @@ $('quitar').onclick=async()=>{if(!sel)return;try{await (db||GH).doc('retratos/'+
 
 render();
 (async()=>{
+  const syncCasasUI=()=>{renderCasaFiltros();render();actualizarFicha();if(vista==='cas')renderCasas()};
+  const cargarEscudosFondo=()=>fetch('datos/escudos.json').then(r=>r.ok?r.json():null).then(esc=>{if(esc&&esc.files){Heraldica.setEscudos(esc.files);syncCasasUI()}}).catch(()=>{});
   if(!window.claude){ /* Modo estático: datos/ del repositorio */
     try{const bust='?t='+Date.now();
-      const [per,idx,sim]=await Promise.all([fetch('datos/personajes.json'+bust,{cache:'no-store'}).then(r=>r.json()),fetch('datos/indice.json'+bust,{cache:'no-store'}).then(r=>r.json()),fetch('datos/simbolos.json'+bust,{cache:'no-store'}).then(r=>r.ok?r.json():[]).catch(()=>[])]);
+      const [per,idx,sim,cas]=await Promise.all([fetch('datos/personajes.json'+bust,{cache:'no-store'}).then(r=>r.json()),fetch('datos/indice.json'+bust,{cache:'no-store'}).then(r=>r.json()),fetch('datos/simbolos.json'+bust,{cache:'no-store'}).then(r=>r.ok?r.json():[]).catch(()=>[]),fetch('datos/casas.json'+bust,{cache:'no-store'}).then(r=>r.ok?r.json():[]).catch(()=>[])]);
       chars=per;RET={};(idx.retratos||[]).forEach(f=>{RET[f.replace(/\.\w+$/,'')]='datos/retratos/'+f});
+      Heraldica.setCasas(cas);
       cargarCatalogo(sim,idx,bust);
       try{for(let i=sessionStorage.length-1;i>=0;i--){const k=sessionStorage.key(i);if(k&&k.startsWith('sim_pend_')){const id=k.slice(9),v=JSON.parse(sessionStorage.getItem(k)||'null');if(v&&v.img&&v.exp>Date.now())SIM_IMG[id]=v.img;else sessionStorage.removeItem(k)}}}catch{}
-      render();if(vista==='sim')renderSimbolos();
+      syncCasasUI();if(vista==='sim')renderSimbolos();
+      cargarEscudosFondo();
       window.ghCambio=(col,id,d)=>{
         if(col==='retratos'){if(d)RET[id]=d.img;else delete RET[id];render();actualizarFicha()}
         if(col==='simbolos'){if(d)SIM_IMG[id]=d.img;else delete SIM_IMG[id];render();actualizarFicha();if(vista==='sim')renderSimbolos()}
@@ -681,12 +843,12 @@ render();
   try{owner=!!(user&&await user.isOwner())}catch{owner=false}
   if(!db){$('empty').textContent='Inicia sesión en Claude para ver la base de personajes.';$('empty').hidden=false;return}
   const bust='?t='+Date.now();
-  Promise.all([fetch('datos/simbolos.json'+bust).then(r=>r.json()),fetch('datos/indice.json'+bust).then(r=>r.json()).catch(()=>({}))])
-    .then(([sim,idx])=>{cargarCatalogo(sim,idx,bust);render();actualizarFicha();if(vista==='sim')renderSimbolos()}).catch(()=>{});
+  Promise.all([fetch('datos/simbolos.json'+bust).then(r=>r.json()),fetch('datos/indice.json'+bust).then(r=>r.json()).catch(()=>({})),fetch('datos/casas.json'+bust).then(r=>r.ok?r.json():[]).catch(()=>[])])
+    .then(([sim,idx,cas])=>{Heraldica.setCasas(cas);cargarCatalogo(sim,idx,bust);syncCasasUI();if(vista==='sim')renderSimbolos();cargarEscudosFondo()}).catch(()=>{});
   db.collection('retratos').onSnapshot(s=>{RET={};s.docs.forEach(d=>{if(d.exists){const v=d.data();if(v&&v.img)RET[d.id]=v.img}});render();actualizarFicha()},()=>{});
   db.collection('personajes').onSnapshot(s=>{
     chars=s.docs.filter(d=>d.exists).map(d=>({id:d.id,...d.data()})).sort((a,b)=>(a.orden||0)-(b.orden||0));
-    render();actualizarFicha();if(vista==='sim')renderSimbolos();
+    syncCasasUI();if(vista==='sim')renderSimbolos();
     const h=decodeURIComponent(location.hash.slice(1));if(h&&!sel&&!window._hashOpened&&chars.some(c=>c.id===h)){window._hashOpened=1;abrir(h)}
   },err=>{$('empty').textContent='No se pudo leer la base de personajes: '+(err&&err.message||'error desconocido');$('empty').hidden=false});
 })();

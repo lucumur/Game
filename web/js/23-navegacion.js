@@ -20,6 +20,6 @@ function show(v){
   window.scrollTo(0,0);
 }
 $("#map-tabs").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;[...e.currentTarget.children].forEach(x=>x.setAttribute("aria-selected",String(x===b)));drawMap(b.dataset.map)});
-$("#q").addEventListener("input",drawFaces); $("#f-pres").addEventListener("change",drawFaces);
+$("#q").addEventListener("input",drawFaces); $("#f-pres").addEventListener("change",drawFaces); $("#f-casa")?.addEventListener("change",drawFaces);
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){$("#ficha").hidden=true;closeLectern();closeMenu()}});
 show(player?"game":"selector");

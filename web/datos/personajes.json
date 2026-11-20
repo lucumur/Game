@@ -151,7 +151,10 @@
         "nota": "Aclamado tras sobrevivir a su enfermedad en Metz",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-francia",
+    "casa_materna_id": "saboya",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -285,7 +288,10 @@
         "nota": "Al ascender José I al trono portugués",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-espana",
+    "casa_materna_id": "farnesio",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -467,7 +473,10 @@
         "nota": "Regente del reino durante la minoría de Luis XV (02/09/1715–02/1723)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-orleans",
+    "casa_materna_id": "wittelsbach-palatinado",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -618,7 +627,10 @@
         "nota": "Al enviudar del Regente (02/12/1723)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-legitimados",
+    "casa_materna_id": "rochechouart-mortemart",
+    "casa_alianza_id": "borbon-orleans"
   },
   {
     "aficiones": [
@@ -797,7 +809,10 @@
         "nota": "Uso cortesano e histórico por su origen palatino",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "wittelsbach-palatinado",
+    "casa_materna_id": "hesse-kassel",
+    "casa_alianza_id": "borbon-orleans"
   },
   {
     "aficiones": [
@@ -954,7 +969,10 @@
         "nota": "Por su retiro devoto (especialmente en Santa Genoveva desde 1742)",
         "conf": "probable"
       }
-    ]
+    ],
+    "casa_id": "borbon-orleans",
+    "casa_materna_id": "borbon-legitimados",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -1126,7 +1144,10 @@
         "nota": "Nombrado primer ministro el 22/08/1722",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "dubois",
+    "casa_materna_id": "joyet",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -1286,7 +1307,10 @@
         "nota": "Creado cardenal en septiembre de 1726",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "fleury",
+    "casa_materna_id": "la-treilhe",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -1444,7 +1468,10 @@
         "nota": "Creado mariscal de Francia (27/03/1693)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "neufville-villeroy",
+    "casa_materna_id": "crequy",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -1503,14 +1530,14 @@
     "lengua": "Francés",
     "llegada_corte": "Cortesano de larga data",
     "lugar_familia": "—",
-    "madre": "—",
+    "madre": "Marie Fouquet",
     "muerte": "1747",
     "nacimiento": "1663 (fecha incierta)",
     "nombre": "Armand de Béthune",
     "nombre_nac": "Armand de Béthune",
     "oculta": "Que es un sustituto de compromiso",
     "orden": 10,
-    "padre": "—",
+    "padre": "Louis Armand de Béthune, duque de Chârost",
     "prompt": "Armand de Béthune, Duke of Charost, a grave 58-year-old French duke, 1722, long sober face, heavy-lidded eyes. Cautious, neutral expression, clean shaven. Grey powdered Regency wig, dark blue coat of the King's Bodyguard trimmed with silver lace, silver-laced shoulder belt, lace cravat. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, modern photograph, studio flash, modern clothing, text, watermark",
     "puesto": "Capitán de los guardias de corps; gobernador del rey desde agosto de 1722",
     "quiere": "Cumplir sin hacerse enemigos",
@@ -1585,7 +1612,10 @@
         "nota": "Gobernador de Luis XV tras el arresto de Villeroy (agosto de 1722)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "bethune",
+    "casa_materna_id": "fouquet",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -1735,7 +1765,10 @@
         "nota": "Apodo afectuoso con que la llamaba Luis XV niño (aya desde 1709)",
         "conf": "probable"
       }
-    ]
+    ],
+    "casa_id": "la-motte-houdancourt",
+    "casa_materna_id": "prie",
+    "casa_alianza_id": "levis"
   },
   {
     "aficiones": [
@@ -1888,7 +1921,10 @@
         "nota": "Al suceder a su padre Luis III (†04/03/1710) como cabeza de la casa de Condé",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-conde",
+    "casa_materna_id": "borbon-legitimados",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -2050,7 +2086,10 @@
         "nota": "Al casarse con Louis, marqués de Prie (1713)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "berthelot-pleneuf",
+    "casa_materna_id": "rioult-douilly",
+    "casa_alianza_id": "prie"
   },
   {
     "aficiones": [
@@ -2204,7 +2243,10 @@
         "nota": "Al casarse con Luis III de Condé (1685); conservó el estilo tras enviudar en 1710",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-legitimados",
+    "casa_materna_id": "rochechouart-mortemart",
+    "casa_alianza_id": "borbon-conde"
   },
   {
     "aficiones": [
@@ -2348,7 +2390,10 @@
         "nota": "Conde de Charolais desde su nacimiento (Monsieur le comte de Charolais)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-conde",
+    "casa_materna_id": "borbon-legitimados",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -2480,7 +2525,10 @@
         "nota": "Nombrada superintendenta de la Casa de la Reina María Leszczynska (1725)",
         "conf": "probable"
       }
-    ]
+    ],
+    "casa_id": "borbon-conde",
+    "casa_materna_id": "borbon-legitimados",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -2634,7 +2682,10 @@
         "nota": "Mote satírico en la corte de la Regencia",
         "conf": "probable"
       }
-    ]
+    ],
+    "casa_id": "borbon-conti",
+    "casa_materna_id": "borbon-conde",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -2778,7 +2829,10 @@
         "nota": "Legitimado y creado duque del Maine por Luis XIV en diciembre de 1673",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-maine",
+    "casa_materna_id": "rochechouart-mortemart",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -2943,7 +2997,10 @@
         "nota": "Mote cortesano por su pequeñez y orgullo de sangre",
         "conf": "probable"
       }
-    ]
+    ],
+    "casa_id": "borbon-conde",
+    "casa_materna_id": "wittelsbach-palatinado",
+    "casa_alianza_id": "borbon-maine"
   },
   {
     "aficiones": [
@@ -3087,7 +3144,10 @@
         "nota": "Nombrado Almirante de Francia en 1683",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-toulouse",
+    "casa_materna_id": "rochechouart-mortemart",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -3236,7 +3296,10 @@
         "nota": "Erección en duque y par de Antin en 1711 (le duc d'Antin)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "pardaillan-gondrin",
+    "casa_materna_id": "rochechouart-mortemart",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -3408,7 +3471,10 @@
         "nota": "Mote de corte por su baja estatura y celo por el rango ducal",
         "conf": "probable"
       }
-    ]
+    ],
+    "casa_id": "rouvroy-saint-simon",
+    "casa_materna_id": "laubespine",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -3577,7 +3643,10 @@
         "nota": "Creado Mariscal General de los campos y ejércitos del Rey (10/1733)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "villars",
+    "casa_materna_id": "gigault-bellefonds",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -3726,7 +3795,10 @@
         "nota": "Elevado a mariscal de Francia (14/06/1734)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "noailles",
+    "casa_materna_id": "bournonville",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -3791,14 +3863,14 @@
     "lengua": "Francés",
     "llegada_corte": "Ministro desde 1722",
     "lugar_familia": "Hijo",
-    "madre": "—",
+    "madre": "Françoise Guillemin",
     "muerte": "27/11/1728, castillo de Madrid (Bois de Boulogne)",
     "nacimiento": "1661, París",
     "nombre": "Joseph Fleuriau d'Armenonville",
     "nombre_nac": "Joseph-Jean-Baptiste Fleuriau d'Armenonville",
     "oculta": "Que ocupa el puesto del canciller exiliado d'Aguesseau",
     "orden": 25,
-    "padre": "—",
+    "padre": "Charles Fleuriau d'Armenonville",
     "prompt": "Joseph Fleuriau d'Armenonville, Keeper of the Seals of France, a sober 60-year-old magistrate, 1722, heavy serious face. Grave, neutral expression, clean shaven. Long full wig, black velvet magistrate's robe, white bands. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, modern photograph, studio flash, modern clothing, text, watermark",
     "puesto": "Guardasellos de Francia",
     "quiere": "Sostener la justicia del regente",
@@ -3863,7 +3935,10 @@
         "nota": "Nombrado Guardasellos de Francia (28/02/1722)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "fleuriau",
+    "casa_materna_id": "guillemin",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -3923,14 +3998,14 @@
     "lengua": "Francés",
     "llegada_corte": "Ministro desde 1722",
     "lugar_familia": "Hijo",
-    "madre": "—",
+    "madre": "Anne-Marie de Gayardon",
     "muerte": "1736",
     "nacimiento": "1679, París",
     "nombre": "Charles Gaspard Dodun",
     "nombre_nac": "Charles-Gaspard Dodun",
     "oculta": "Lo frágil que está el tesoro",
     "orden": 26,
-    "padre": "—",
+    "padre": "Charles-Gaspard Dodun, consejero en el Parlamento",
     "prompt": "Charles-Gaspard Dodun, Controller General of Finances, a stocky 42-year-old Frenchman, 1722, square careful face. Anxious, calculating expression, clean shaven. Powdered Regency wig, black velvet coat, lace cravat. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, modern photograph, studio flash, modern clothing, text, watermark",
     "puesto": "Interventor general de Finanzas",
     "quiere": "Sanear las finanzas tras la quiebra de Law",
@@ -4006,7 +4081,10 @@
         "nota": "Creado marqués de Herbault por cartas patentes de marzo de 1723",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "dodun",
+    "casa_materna_id": "gayardon",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -4065,7 +4143,7 @@
     "lengua": "Francés",
     "llegada_corte": "Ministro desde 1718",
     "lugar_familia": "Hijo",
-    "madre": "—",
+    "madre": "Suzanne Bazin de Bezons",
     "muerte": "1728, Versalles",
     "nacimiento": "1669, París",
     "nombre": "Claude Le Blanc",
@@ -4138,7 +4216,10 @@
         "nota": "Trato ministerial como Secretario de Estado de la Guerra (desde 1718; destituido 1723, vuelto 1726)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "le-blanc",
+    "casa_materna_id": "bazin-bezons",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -4279,7 +4360,10 @@
         "nota": "Ministro de Estado y principal consejero al advenimiento de Luis XVI (1774)",
         "conf": "probable"
       }
-    ]
+    ],
+    "casa_id": "phelypeaux",
+    "casa_materna_id": "la-rochefoucauld",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -4333,7 +4417,7 @@
     "lengua": "Francés",
     "llegada_corte": "Secretario de Estado desde 1700",
     "lugar_familia": "Hijo",
-    "madre": "—",
+    "madre": "Marie-Marguerite de Fourcy",
     "muerte": "07/09/1725",
     "nacimiento": "1672",
     "nombre": "Louis Phélypeaux",
@@ -4412,7 +4496,10 @@
         "nota": "Marqués de La Vrillière y Secretario de Estado desde 1700",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "phelypeaux",
+    "casa_materna_id": "fourcy",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -4572,7 +4659,10 @@
         "nota": "Creado duque de Gisors / Belle-Isle en 1742 (par de Francia en 1748)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "fouquet",
+    "casa_materna_id": "levis",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -4713,7 +4803,10 @@
         "nota": "Al morir su padre Louis de Lorraine (†1718)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "lorena-armagnac",
+    "casa_materna_id": "neufville-villeroy",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -4875,7 +4968,10 @@
         "nota": "Creado cardenal en mayo de 1712; Gran Limosnero de Francia desde 1713",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "rohan-soubise",
+    "casa_materna_id": "rohan-chabot",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [],
@@ -4954,7 +5050,10 @@
         "nota": "Sucede a su padre Charles II (†1699) como V duque de Montbazon y par de Francia",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "rohan-guemene",
+    "casa_materna_id": "schomberg",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -5014,14 +5113,14 @@
     "lengua": "Francés",
     "llegada_corte": "Primer cirujano del rey desde 1703",
     "lugar_familia": "Hijo",
-    "madre": "—",
+    "madre": "Marguerite de Sel",
     "muerte": "13/12/1736, castillo de Bièvres",
     "nacimiento": "1658, Calais",
     "nombre": "Georges Mareschal",
     "nombre_nac": "Georges Mareschal",
     "oculta": "Estuvo en el lecho de muerte de Luis XIV",
     "orden": 34,
-    "padre": "—",
+    "padre": "John Marshall (Jean Mareschal)",
     "prompt": "Georges Mareschal, First Surgeon to the King, a sturdy 63-year-old Frenchman, 1722, frank weathered face, steady eyes. Calm, professional expression, clean shaven. Grey wig, plain black coat, white cravat. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, embroidery, modern photograph, studio flash, modern clothing, text, watermark",
     "puesto": "Primer cirujano del rey",
     "quiere": "Proteger la salud del rey",
@@ -5087,7 +5186,10 @@
         "nota": "Primer cirujano del Rey desde 1703 (ennoblecido en 1707, señor de Bièvres)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "mareschal",
+    "casa_materna_id": "sel",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -5142,7 +5244,7 @@
     "lengua": "Francés",
     "llegada_corte": "Primer médico del rey desde 1718",
     "lugar_familia": "Hijo",
-    "madre": "—",
+    "madre": "Marie Bouland",
     "muerte": "1730",
     "nacimiento": "1664, París",
     "nombre": "Claude Jean-Baptiste Dodart",
@@ -5200,7 +5302,10 @@
         "nota": "Primer médico del Rey desde 1718",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "dodart",
+    "casa_materna_id": "bouland",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -5265,14 +5370,14 @@
     "lengua": "Francés",
     "llegada_corte": "Primer arquitecto del rey desde 1708",
     "lugar_familia": "Hijo",
-    "madre": "—",
+    "madre": "Marie Toullet",
     "muerte": "15/07/1735, París",
     "nacimiento": "1656, París",
     "nombre": "Robert de Cotte",
     "nombre_nac": "Robert de Cotte",
     "oculta": "—",
     "orden": 36,
-    "padre": "Familia de arquitectos y maestros de obras",
+    "padre": "Frémin de Cotte, ingeniero del Rey",
     "prompt": "Robert de Cotte, First Architect to the King, a dignified 65-year-old Frenchman, 1722, thoughtful lined face. Composed, intelligent expression, clean shaven. Full grey wig, dark brown coat, lace cravat. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, modern photograph, studio flash, modern clothing, text, watermark",
     "puesto": "Primer arquitecto del rey",
     "quiere": "Terminar sus obras en palacio",
@@ -5319,7 +5424,10 @@
         "nota": "Primer arquitecto del Rey desde 1708",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "de-cotte",
+    "casa_materna_id": "toullet",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -5381,7 +5489,7 @@
     "lengua": "Francés",
     "llegada_corte": "En la corte desde 1683",
     "lugar_familia": "Decimoquinto hijo",
-    "madre": "—",
+    "madre": "Claude Dumoustier",
     "muerte": "18/06/1726, Versalles",
     "nacimiento": "15/12/1657, París",
     "nombre": "Michel-Richard de Lalande",
@@ -5446,7 +5554,10 @@
         "nota": "Sobrenombre elogioso por sus grandes motetes",
         "conf": "probable"
       }
-    ]
+    ],
+    "casa_id": "lalande",
+    "casa_materna_id": "dumoustier",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -5580,7 +5691,10 @@
         "nota": "Sobrenombre para distinguirlo de los demás músicos de la dinastía Couperin",
         "conf": "probable"
       }
-    ]
+    ],
+    "casa_id": "couperin",
+    "casa_materna_id": "guerin-paris",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -5660,14 +5774,14 @@
     "lengua": "Alemán y francés; habla inglés",
     "llegada_corte": "Embajador en París desde 1721",
     "lugar_familia": "Hijo",
-    "madre": "—",
+    "madre": "Barbara Ketterlin",
     "muerte": "1758, Londres",
     "nacimiento": "1690, Basilea",
     "nombre": "Luke Schaub",
     "nombre_nac": "Lukas Schaub",
     "oculta": "Informes al gobierno británico sobre todo lo que ve",
     "orden": 39,
-    "padre": "—",
+    "padre": "Hans Heinrich Schaub (notario de Basilea)",
     "prompt": "Sir Luke Schaub, British ambassador to France, a sharp-eyed 32-year-old Swiss-born diplomat, 1722, narrow clever face. Polite, inscrutable expression, clean shaven. Powdered Regency wig, dark diplomatic coat, lace cravat. Strict 3/4 view facing slightly right, centered head and shoulders, warm light from upper right, solid dark charcoal background, no frame:: painterly realism, photorealistic oil painting, subtle visible brushwork, faint canvas texture, cinematic period film still like Barry Lyndon, candlelit chiaroscuro::1.2 18th-century court portrait by Hyacinthe Rigaud::0.6 --ar 1:1 --s 250 --no beard, modern photograph, studio flash, modern clothing, text, watermark",
     "puesto": "Embajador de Gran Bretaña",
     "quiere": "Mantener la alianza anglo-francesa",
@@ -5739,7 +5853,10 @@
         "nota": "Armado caballero (Knight Bachelor) por Jorge I en 1720; embajador en París desde 1721",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "schaub",
+    "casa_materna_id": "ketterlin",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -5891,7 +6008,10 @@
         "nota": "Sobrenombre español adquirido durante la Guerra de Sucesión",
         "conf": "probable"
       }
-    ]
+    ],
+    "casa_id": "borbon-espana",
+    "casa_materna_id": "wittelsbach-baviera",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -6025,7 +6145,10 @@
         "nota": "Duque de La Trémoille y de Thouars al morir su padre en 1719 (le duc de La Trémoille)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "la-tremoille",
+    "casa_materna_id": "motier-la-fayette",
+    "casa_alianza_id": null
   },
   {
     "aficiones": [
@@ -6173,7 +6296,10 @@
         "nota": "Al casarse con César-Alexandre de Baudéan, marqués/conde de Parabère (08/06/1711; viuda 1716)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "la-vieuville",
+    "casa_materna_id": "la-chaussee-deu",
+    "casa_alianza_id": "baudean-parabere"
   },
   {
     "id": "p43",
@@ -6252,7 +6378,10 @@
         "nota": "Madame la duchesse de Phalaris por su matrimonio con George d'Entragues (ducado pontificio de Phalaris)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "blonel-haraucourt",
+    "casa_materna_id": "falcoz-la-blache",
+    "casa_alianza_id": "entragues-phalaris"
   },
   {
     "aficiones": [
@@ -6382,7 +6511,10 @@
         "nota": "Sacerdote jesuita; confesor de Madame Palatine y, desde 1722, confesor de Luis XV",
         "conf": "probable"
       }
-    ]
+    ],
+    "casa_id": "taschereau-linieres",
+    "casa_materna_id": null,
+    "casa_alianza_id": null
   },
   {
     "id": "p45",
@@ -6477,7 +6609,10 @@
         "nota": "Sucede a su abuelo como IV duque de Luynes en 1712 (Monsieur de Luynes)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "albert-luynes",
+    "casa_materna_id": "courcillon",
+    "casa_alianza_id": null
   },
   {
     "id": "p46",
@@ -6572,7 +6707,10 @@
         "nota": "Sucede a su padre Armand-Charles (†11/1713) en los ducados de Rethel-Mazarin y La Meilleraye",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "la-porte-mazarin",
+    "casa_materna_id": "mancini",
+    "casa_alianza_id": null
   },
   {
     "id": "p47",
@@ -6668,7 +6806,10 @@
         "nota": "Sucede a su padre (†07/1721) como duque soberano de Bouillon y Gran Chambelán",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "la-tour-dauvergne",
+    "casa_materna_id": "mancini",
+    "casa_alianza_id": null
   },
   {
     "id": "p48",
@@ -6760,7 +6901,10 @@
         "nota": "Sucede a su padre (†05/1707; letras verificadas por el Parlamento en 1720)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "mancini",
+    "casa_materna_id": "damas-thianges",
+    "casa_alianza_id": null
   },
   {
     "id": "p49",
@@ -6847,7 +6991,10 @@
         "nota": "Título llevado desde su juventud (Monsieur d'Évreux)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "la-tour-dauvergne",
+    "casa_materna_id": "mancini",
+    "casa_alianza_id": null
   },
   {
     "id": "p50",
@@ -6949,7 +7096,10 @@
         "nota": "Elevado a mariscal de Francia (19/10/1746)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "harcourt",
+    "casa_materna_id": "brulart",
+    "casa_alianza_id": null
   },
   {
     "id": "p51",
@@ -7044,7 +7194,10 @@
         "nota": "VII duque de Uzès y Primer Par Laico de Francia desde 1693 (Monsieur d'Uzès)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "crussol-uzes",
+    "casa_materna_id": "sainte-maure",
+    "casa_alianza_id": null
   },
   {
     "id": "p52",
@@ -7145,7 +7298,10 @@
         "nota": "Elevado a mariscal de Francia (11/10/1748)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "vignerot-richelieu",
+    "casa_materna_id": "acigne",
+    "casa_alianza_id": null
   },
   {
     "id": "p53",
@@ -7246,7 +7402,10 @@
         "nota": "Creado mariscal de Francia en febrero de 1724",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "gramont",
+    "casa_materna_id": "castelnau",
+    "casa_alianza_id": null
   },
   {
     "id": "p54",
@@ -7348,7 +7507,10 @@
         "nota": "Creado duque y par de Rohan-Rohan en 1714 (llamado habitualmente le prince de Rohan)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "rohan-soubise",
+    "casa_materna_id": "rohan-chabot",
+    "casa_alianza_id": null
   },
   {
     "id": "p55",
@@ -7443,7 +7605,10 @@
         "nota": "II duque de Saint-Aignan por cesión de su hermano Paul en 1706 (Monsieur de Saint-Aignan)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "beauvilliers",
+    "casa_materna_id": "gere-rance",
+    "casa_alianza_id": null
   },
   {
     "id": "p56",
@@ -7545,7 +7710,10 @@
         "nota": "Elevado a mariscal de Francia (11/02/1741)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "albert-chaulnes",
+    "casa_materna_id": "colbert",
+    "casa_alianza_id": null
   },
   {
     "id": "p57",
@@ -7640,7 +7808,10 @@
         "nota": "IV duque y par de Mortemart al morir su padre (†1688; Monsieur de Mortemart)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "rochechouart-mortemart",
+    "casa_materna_id": "colbert",
+    "casa_alianza_id": null
   },
   {
     "id": "p58",
@@ -7735,7 +7906,10 @@
         "nota": "IV duque de La Rochefoucauld al morir su padre (†01/1714)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "la-rochefoucauld",
+    "casa_materna_id": "plessis-liancourt",
+    "casa_alianza_id": null
   },
   {
     "id": "p59",
@@ -7823,7 +7997,10 @@
         "nota": "Sucede a su padre René-Gaspard (†1674; Monsieur de Castries)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "la-croix-castries",
+    "casa_materna_id": "bonzi",
+    "casa_alianza_id": null
   },
   {
     "id": "p60",
@@ -7916,7 +8093,10 @@
         "nota": "Primer Presidente del Parlamento de París desde 1712",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "mesmes",
+    "casa_materna_id": "bertrand-baziniere",
+    "casa_alianza_id": null
   },
   {
     "id": "p61",
@@ -8000,7 +8180,10 @@
         "nota": "Primer Presidente del Parlamento de Normandía (Ruan) desde 1703 (Monsieur le Premier Président en Ruan)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "camus-pontcarre",
+    "casa_materna_id": "le-prevost",
+    "casa_alianza_id": null
   },
   {
     "id": "p62",
@@ -8084,7 +8267,10 @@
         "nota": "Primer Presidente del Parlamento de Burdeos desde 1714 (Monsieur le Premier Président en Burdeos)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "gillet-la-caze",
+    "casa_materna_id": "mullet",
+    "casa_alianza_id": null
   },
   {
     "id": "p63",
@@ -8168,7 +8354,10 @@
         "nota": "Primer Presidente del Parlamento de Toulouse desde 1710 (Monsieur le Premier Président en Toulouse)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "bertier-montrabe",
+    "casa_materna_id": "du-cup",
+    "casa_alianza_id": null
   },
   {
     "id": "p64",
@@ -8252,7 +8441,10 @@
         "nota": "Trato de Primer Presidente en Grenoble (titularidad y fecha en 1722 pendientes de verificación histórica)",
         "conf": "dudoso"
       }
-    ]
+    ],
+    "casa_id": "grammont-vacheres",
+    "casa_materna_id": "bailly",
+    "casa_alianza_id": null
   },
   {
     "id": "p65",
@@ -8336,7 +8528,10 @@
         "nota": "Primer Presidente del Parlamento de Borgoña (Dijon) desde 1715",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "berbisey",
+    "casa_materna_id": "brulart",
+    "casa_alianza_id": null
   },
   {
     "id": "p66",
@@ -8420,7 +8615,10 @@
         "nota": "Sucede a su padre (†1710) como Primer Presidente del Parlamento de Aix e intendente de Provenza",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "le-bret",
+    "casa_materna_id": "veydeau-grandmont",
+    "casa_alianza_id": null
   },
   {
     "id": "p67",
@@ -8504,7 +8702,10 @@
         "nota": "Primer Presidente del Parlamento de Bretaña (Rennes) desde el 16/06/1703",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "brilhac",
+    "casa_materna_id": "nouzieres",
+    "casa_alianza_id": null
   },
   {
     "id": "p68",
@@ -8588,7 +8789,10 @@
         "nota": "Primer Presidente del Parlamento de Navarra y Bearn (Pau) desde 1711",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "fenoyl",
+    "casa_materna_id": "varennes",
+    "casa_alianza_id": null
   },
   {
     "id": "p69",
@@ -8610,7 +8814,7 @@
     "puesto": "Primer Presidente del Parlamento de Flandes (Douai)",
     "cargo": "Primer Presidente del Parlamento de Flandes (Douai)",
     "padre": "Jacques-Martin de Pollinchove (Primer Presidente fundador del Parlamento de Flandes, †1714)",
-    "madre": "Marie-Magdeleine deスリ",
+    "madre": "Marie-Magdeleine du Chambge",
     "lugar_familia": "Señor de Pollinchove, Primer Presidente de Flandes",
     "conyuge": "Marie-Françoise de Blondel",
     "hijos": "Gaspard-Félix-Jacques de Pollinchove",
@@ -8672,7 +8876,10 @@
         "nota": "Sucede a su padre en 1710 como Primer Presidente del Parlamento de Flandes (en Douai desde 1714)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "pollinchove",
+    "casa_materna_id": "du-chambge",
+    "casa_alianza_id": null
   },
   {
     "id": "p70",
@@ -8756,7 +8963,10 @@
         "nota": "Primer Presidente del Parlamento de Metz (en fuentes, Bénigne de Chasot de Congy asume en 1717; nombre de pila por revisar)",
         "conf": "probable"
       }
-    ]
+    ],
+    "casa_id": "chasot",
+    "casa_materna_id": "corberon",
+    "casa_alianza_id": null
   },
   {
     "id": "p71",
@@ -8840,7 +9050,10 @@
         "nota": "Primer Presidente del Parlamento del Franco Condado (Besançon) desde 1676 hasta su retiro en 1723",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "jobelot-montureux",
+    "casa_materna_id": "montureux",
+    "casa_alianza_id": null
   },
   {
     "id": "p72",
@@ -8924,7 +9137,10 @@
         "nota": "Primer Presidente del Consejo Soberano de Alsacia (Colmar) desde 1700",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "corberon",
+    "casa_materna_id": "turgis",
+    "casa_alianza_id": null
   },
   {
     "id": "p73",
@@ -9024,7 +9240,10 @@
         "nota": "Creado cardenal en junio de 1700",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "noailles",
+    "casa_materna_id": "boyer",
+    "casa_alianza_id": null
   },
   {
     "id": "p74",
@@ -9118,7 +9337,10 @@
         "nota": "Nombrado arzobispo-duque de Reims en junio de 1722 (l'archevêque de Reims)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "rohan-guemene",
+    "casa_materna_id": "cochefilet-vaucelas",
+    "casa_alianza_id": null
   },
   {
     "id": "p75",
@@ -9217,7 +9439,10 @@
         "nota": "Creado cardenal en mayo de 1715",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "thiard-bissy",
+    "casa_materna_id": "neucheze",
+    "casa_alianza_id": null
   },
   {
     "id": "p76",
@@ -9316,7 +9541,10 @@
         "nota": "Sobrenombre dado por los fieles jansenistas apelantes",
         "conf": "probable"
       }
-    ]
+    ],
+    "casa_id": "soanen",
+    "casa_materna_id": "sirmond",
+    "casa_alianza_id": null
   },
   {
     "id": "p77",
@@ -9400,7 +9628,10 @@
         "nota": "Nombrado obispo de Montpellier en 1696 (consagrado 1697)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "colbert",
+    "casa_materna_id": "beraud",
+    "casa_alianza_id": null
   },
   {
     "id": "p78",
@@ -9491,7 +9722,10 @@
         "nota": "Arzobispo de Lyon y primado de las Galias desde 1714",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "neufville-villeroy",
+    "casa_materna_id": "cosse-brissac",
+    "casa_alianza_id": null
   },
   {
     "id": "p79",
@@ -9597,7 +9831,10 @@
         "nota": "Creado cardenal por Clemente XII en diciembre de 1737",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "la-tour-dauvergne",
+    "casa_materna_id": "hohenzollern",
+    "casa_alianza_id": null
   },
   {
     "id": "p80",
@@ -9681,7 +9918,10 @@
         "nota": "Nombrado obispo de Marsella en 1709 (consagrado 1710); célebre por la Peste de 1720–1722",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "belsunce",
+    "casa_materna_id": "caumont-lauzun",
+    "casa_alianza_id": null
   },
   {
     "id": "p81",
@@ -9779,7 +10019,10 @@
         "nota": "Arzobispo de Burdeos desde 1719",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "voyer-dargenson",
+    "casa_materna_id": "houllier-poyade",
+    "casa_alianza_id": null
   },
   {
     "id": "p82",
@@ -9877,7 +10120,10 @@
         "nota": "Arzobispo de Narbona desde 1719",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "beauvau",
+    "casa_materna_id": "campet-saujon",
+    "casa_alianza_id": null
   },
   {
     "id": "p83",
@@ -9970,7 +10216,10 @@
         "nota": "Nombrado arzobispo de Ruan en octubre de 1723 (confirmado en febrero de 1724)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "la-vergne-tressan",
+    "casa_materna_id": "beon-masses",
+    "casa_alianza_id": null
   },
   {
     "id": "p84",
@@ -10062,7 +10311,10 @@
         "nota": "Tras enviudar (regresa a Francia en 1725)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-orleans",
+    "casa_materna_id": "borbon-legitimados",
+    "casa_alianza_id": "borbon-espana"
   },
   {
     "id": "p85",
@@ -10133,7 +10385,10 @@
         "nota": "Estilo desde su nacimiento (su compromiso con el infante Carlos se romperá en 1725)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-orleans",
+    "casa_materna_id": "borbon-legitimados",
+    "casa_alianza_id": null
   },
   {
     "id": "p86",
@@ -10218,7 +10473,10 @@
         "nota": "Al suceder su esposo como duque de Módena (1737)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-orleans",
+    "casa_materna_id": "borbon-legitimados",
+    "casa_alianza_id": "este"
   },
   {
     "id": "p87",
@@ -10297,7 +10555,10 @@
         "nota": "Consagrada abadesa de Chelles en 1719 (renunciará en 1734)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-orleans",
+    "casa_materna_id": "borbon-legitimados",
+    "casa_alianza_id": null
   },
   {
     "id": "p88",
@@ -10374,7 +10635,10 @@
         "nota": "Al casarse con Louis-François de Bourbon-Conti (22/01/1732)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-orleans",
+    "casa_materna_id": "borbon-legitimados",
+    "casa_alianza_id": null
   },
   {
     "id": "p89",
@@ -10451,7 +10715,10 @@
         "nota": "Al recibir la abadía comendataria de Saint-Germain-des-Prés (1737)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-conde",
+    "casa_materna_id": "borbon-legitimados",
+    "casa_alianza_id": null
   },
   {
     "id": "p90",
@@ -10529,7 +10796,10 @@
         "nota": "Estilo habitual en la corte desde la adolescencia hasta su muerte",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-conde",
+    "casa_materna_id": "borbon-legitimados",
+    "casa_alianza_id": null
   },
   {
     "id": "p91",
@@ -10606,7 +10876,10 @@
         "nota": "Abadesa de Beaumont-lès-Tours desde 1733 (también Madame de Bourbon)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-conde",
+    "casa_materna_id": "borbon-legitimados",
+    "casa_alianza_id": null
   },
   {
     "id": "p92",
@@ -10676,7 +10949,10 @@
         "nota": "Estilo de soltera durante toda su vida",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-conde",
+    "casa_materna_id": "borbon-legitimados",
+    "casa_alianza_id": null
   },
   {
     "id": "p93",
@@ -10762,7 +11038,10 @@
         "nota": "Tras enviudar (04/05/1727; la troisième douairière)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-conde",
+    "casa_materna_id": "borbon-legitimados",
+    "casa_alianza_id": "borbon-conti"
   },
   {
     "id": "p94",
@@ -10849,7 +11128,10 @@
         "nota": "Princesa viuda de Conti desde 1709 (distinguida de Marie-Anne, la première douairière)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-conde",
+    "casa_materna_id": "wittelsbach-palatinado",
+    "casa_alianza_id": "borbon-conti"
   },
   {
     "id": "p95",
@@ -10919,7 +11201,10 @@
         "nota": "Estilo de soltera durante toda su vida",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-conti",
+    "casa_materna_id": "borbon-conde",
+    "casa_alianza_id": null
   },
   {
     "id": "p96",
@@ -10989,7 +11274,10 @@
         "nota": "Príncipe soberano de Dombes desde su nacimiento (le prince de Dombes)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-maine",
+    "casa_materna_id": "borbon-conde",
+    "casa_alianza_id": null
   },
   {
     "id": "p97",
@@ -11059,7 +11347,10 @@
         "nota": "Conde de Eu desde su nacimiento (le comte d'Eu)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-maine",
+    "casa_materna_id": "borbon-conde",
+    "casa_alianza_id": null
   },
   {
     "id": "p98",
@@ -11137,7 +11428,10 @@
         "nota": "Al suceder su esposo como príncipe de Condé (1686); conservado tras enviudar en 1709",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "wittelsbach-palatinado",
+    "casa_materna_id": "gonzaga",
+    "casa_alianza_id": "borbon-conde"
   },
   {
     "id": "p99",
@@ -11208,7 +11502,10 @@
         "nota": "Toma el nombre de la tierra de Duverney para distinguirse de sus hermanos (Pâris-Duverney)",
         "conf": "probable"
       }
-    ]
+    ],
+    "casa_id": "paris",
+    "casa_materna_id": "trenonay",
+    "casa_alianza_id": null
   },
   {
     "id": "p100",
@@ -11279,7 +11576,10 @@
         "nota": "Primogénito y cabeza de los cuatro hermanos Pâris (Monsieur Pâris)",
         "conf": "probable"
       }
-    ]
+    ],
+    "casa_id": "paris",
+    "casa_materna_id": "trenonay",
+    "casa_alianza_id": null
   },
   {
     "id": "p101",
@@ -11363,7 +11663,10 @@
         "nota": "Creado conde de Coubert por Luis XV en 1725",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "bernard",
+    "casa_materna_id": "le-silleur",
+    "casa_alianza_id": null
   },
   {
     "id": "p102",
@@ -11441,7 +11744,10 @@
         "nota": "Mote irónico para distinguirlo de su hermano mayor Antoine (Crozat le Riche)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "crozat",
+    "casa_materna_id": "saporta",
+    "casa_alianza_id": null
   },
   {
     "id": "p103",
@@ -11518,7 +11824,10 @@
         "nota": "Breve ejercicio como Interventor General de Finanzas antes del hundimiento del Sistema",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "law-lauriston",
+    "casa_materna_id": "campbell",
+    "casa_alianza_id": null
   },
   {
     "id": "p104",
@@ -11588,7 +11897,10 @@
         "nota": "Forma hispanizada usada como embajador de Felipe V en París (Monsieur de Lawless)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "lawless",
+    "casa_materna_id": null,
+    "casa_alianza_id": null
   },
   {
     "id": "p105",
@@ -11610,7 +11922,7 @@
     "titulo_nob": "—",
     "puesto": "Nuncio extraordinario de la Santa Sede (nuncio ordinario desde agosto de 1722)",
     "cargo": "Nuncio apostólico en Francia",
-    "padre": "—",
+    "padre": "Lorenzo Massei",
     "madre": "—",
     "lugar_familia": "—",
     "conyuge": "Voto eclesiástico",
@@ -11667,7 +11979,10 @@
         "nota": "Creado cardenal por Clemente XII el 02/10/1730",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "massei",
+    "casa_materna_id": null,
+    "casa_alianza_id": null
   },
   {
     "id": "p106",
@@ -11748,7 +12063,10 @@
         "nota": "Enviado y plenipotenciario imperial en París y Cambrai (le baron de Pentenriedter)",
         "conf": "probable"
       }
-    ]
+    ],
+    "casa_id": "pentenriedter",
+    "casa_materna_id": null,
+    "casa_alianza_id": null
   },
   {
     "id": "p107",
@@ -11770,7 +12088,7 @@
     "puesto": "Embajador ordinario de los Estados Generales en París (desde 1718)",
     "cargo": "Embajador de las Provincias Unidas",
     "padre": "Jacob Hop (pensionario de Ámsterdam)",
-    "madre": "—",
+    "madre": "Isabella Maria Hooft",
     "lugar_familia": "—",
     "conyuge": "—",
     "hijos": "—",
@@ -11818,7 +12136,10 @@
         "nota": "Embajador ordinario de los Estados Generales en París desde 1718 (l'ambassadeur de Hollande)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "hop",
+    "casa_materna_id": "hooft",
+    "casa_alianza_id": null
   },
   {
     "id": "p108",
@@ -11897,7 +12218,10 @@
         "nota": "Al casarse con Henri de Lambert, marqués de Saint-Bris (1666; viuda desde 1686)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "marguenat-courcelles",
+    "casa_materna_id": "passart",
+    "casa_alianza_id": "lambert"
   },
   {
     "id": "p109",
@@ -11977,7 +12301,10 @@
         "nota": "Estilo mundano en París (las canonesas nobles llevaban el trato de Madame)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "guerin-tencin",
+    "casa_materna_id": "buffevent",
+    "casa_alianza_id": null
   },
   {
     "id": "p110",
@@ -11998,8 +12325,8 @@
     "titulo_nob": "Condesa de Sabran",
     "puesto": "Dama del círculo íntimo del Palais-Royal",
     "cargo": "Sin cargo; círculo íntimo del Regente",
-    "padre": "—",
-    "madre": "—",
+    "padre": "François-Gaston de Foix, conde de Rabat",
+    "madre": "Dorothée-Théodore de Podenas",
     "lugar_familia": "—",
     "conyuge": "Jean-Honoré de Sabran, conde de Sabran",
     "hijos": "—",
@@ -12054,7 +12381,10 @@
         "nota": "Al casarse con Jean-Honoré, conde de Sabran (contrato de agosto de 1714)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "foix-rabat",
+    "casa_materna_id": "podenas",
+    "casa_alianza_id": "sabran"
   },
   {
     "id": "p111",
@@ -12142,7 +12472,10 @@
         "nota": "Gobernanta de los Hijos de Francia tras su abuela Ventadour (supervivencia 1729, titular 1732)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "rohan-soubise",
+    "casa_materna_id": "levis",
+    "casa_alianza_id": "hostun-tallard"
   },
   {
     "id": "p112",
@@ -12220,7 +12553,10 @@
         "nota": "Al casarse con Maximilien-Philippe-Joseph de Recourt, conde de Rupelmonde (1705; viuda 1710)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "alegre",
+    "casa_materna_id": "garaud",
+    "casa_alianza_id": "recourt-rupelmonde"
   },
   {
     "id": "p113",
@@ -12291,7 +12627,10 @@
         "nota": "Nombre escénico desde su debut en la Comédie-Française en 1717 (Mademoiselle Lecouvreur)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "couvreur",
+    "casa_materna_id": "bouly",
+    "casa_alianza_id": null
   },
   {
     "id": "p114",
@@ -12313,7 +12652,7 @@
     "puesto": "Gobernador de la ciudad, parques y palacios de Versalles y Marly",
     "cargo": "Gobernador de Versalles y Marly; antiguo primer ayuda de cámara de Luis XIV",
     "padre": "Jérôme Blouin (ayuda de cámara de Luis XIV)",
-    "madre": "—",
+    "madre": "Marie-Armande Sénéchal",
     "lugar_familia": "—",
     "conyuge": "—",
     "hijos": "—",
@@ -12361,7 +12700,10 @@
         "nota": "Al servicio íntimo del rey desde 1678; gobernador de Versalles y Marly",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "blouin",
+    "casa_materna_id": "senechal",
+    "casa_alianza_id": null
   },
   {
     "id": "p115",
@@ -12431,7 +12773,10 @@
         "nota": "Primer ayuda de cámara del Rey desde 1715",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "bachelier",
+    "casa_materna_id": null,
+    "casa_alianza_id": null
   },
   {
     "id": "p116",
@@ -12517,7 +12862,10 @@
         "nota": "Duque y par de Estrées al heredar el ducado en febrero de 1723",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "estrees",
+    "casa_materna_id": "morin",
+    "casa_alianza_id": null
   },
   {
     "id": "p117",
@@ -12604,7 +12952,10 @@
         "nota": "Creado duque y par de Fitz-James en Francia (1710)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "fitzjames",
+    "casa_materna_id": "churchill",
+    "casa_alianza_id": null
   },
   {
     "id": "p118",
@@ -12674,7 +13025,10 @@
         "nota": "Uso literario y académico (Academia Francesa 1691; secretario perpetuo de Ciencias 1697)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "le-bovier",
+    "casa_materna_id": "corneille",
+    "casa_alianza_id": null
   },
   {
     "id": "p119",
@@ -12754,7 +13108,10 @@
         "nota": "Hereda de su tío en 1716 la baronía de Montesquieu y la presidencia a mortero en Burdeos (Monsieur de Montesquieu)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "secondat-montesquieu",
+    "casa_materna_id": "pesnel",
+    "casa_alianza_id": null
   },
   {
     "id": "p120",
@@ -12839,7 +13196,10 @@
         "nota": "Sobrenombre en su vejez tras instalarse en Ferney (1758/1760)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "arouet",
+    "casa_materna_id": "daumard",
+    "casa_alianza_id": null
   },
   {
     "id": "p121",
@@ -12920,7 +13280,10 @@
         "nota": "Desde 1709 distinguida como primera princesa viuda de Conti",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "borbon-legitimados",
+    "casa_materna_id": "la-baume-le-blanc",
+    "casa_alianza_id": "borbon-conti"
   },
   {
     "id": "p122",
@@ -13000,7 +13363,10 @@
         "nota": "Tras su boda con Jules François Louis de Rohan, príncipe de Soubise (16/09/1714)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "melun-epinoy",
+    "casa_materna_id": "lorena",
+    "casa_alianza_id": "rohan-soubise"
   },
   {
     "id": "p123",
@@ -13021,8 +13387,8 @@
     "titulo_nob": "Dama noble",
     "puesto": "Sub-gobernanta de los Hijos de Francia (en servicio desde 1704; confirmada en 1722)",
     "cargo": "Sub-gobernanta de la Infanta María Ana Victoria en Versalles",
-    "padre": "Jean-Baptiste de Biaudos de Castéja (familia de Castéja)",
-    "madre": "Por verificar",
+    "padre": "Fiacre de Biaudos, conde de Castéja",
+    "madre": "Jeanne de Guillerme",
     "lugar_familia": "Educada en Saint-Cyr; confidente de Mme de Maintenon",
     "conyuge": "Jacques de Salomon, señor de La Lande (m. oct. 1696)",
     "hijos": "Por verificar",
@@ -13078,7 +13444,10 @@
         "nota": "Casada en octubre de 1696 con Jacques de Salomon de La Lande",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "biaudos-casteja",
+    "casa_materna_id": "guillerme",
+    "casa_alianza_id": "salomon-la-lande"
   },
   {
     "id": "p124",
@@ -13164,7 +13533,10 @@
         "nota": "Por su matrimonio secreto de febrero de 1723 con Luis Alejandro de Borbón, conde de Toulouse",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "noailles",
+    "casa_materna_id": "bournonville",
+    "casa_alianza_id": "pardaillan-gondrin"
   },
   {
     "id": "p125",
@@ -13252,7 +13624,10 @@
         "nota": "Desde que Adrien-Maurice heredó el ducado de Noailles en 1708",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "aubigne",
+    "casa_materna_id": "pietre",
+    "casa_alianza_id": "noailles"
   },
   {
     "id": "p126",
@@ -13334,7 +13709,10 @@
         "nota": "Casada con Claude-Louis-Hector de Villars (01/02/1702), duque y par desde 1705/1709",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "rocque-varengeville",
+    "casa_materna_id": "courtin",
+    "casa_alianza_id": "villars"
   },
   {
     "id": "p127",
@@ -13414,7 +13792,10 @@
         "nota": "Madame de Verrue tras casar en 1683 con Giuseppe Ignazio Scaglia, conde de Verrua (†1704)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "albert-luynes",
+    "casa_materna_id": "rohan-guemene",
+    "casa_alianza_id": "scaglia-verrua"
   },
   {
     "id": "p128",
@@ -13492,7 +13873,10 @@
         "nota": "Tras su matrimonio en 1735 con el oficial suizo Jacques de Staal",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "cordier-launay",
+    "casa_materna_id": "delaunay",
+    "casa_alianza_id": null
   },
   {
     "id": "p129",
@@ -13565,7 +13949,10 @@
         "nota": "Nombre afrancesado empleado en los despachos de la corte de Francia [probable]",
         "conf": "probable"
       }
-    ]
+    ],
+    "casa_id": "balbis-vernone",
+    "casa_materna_id": null,
+    "casa_alianza_id": null
   },
   {
     "id": "p130",
@@ -13587,7 +13974,7 @@
     "puesto": "Embajador extraordinario de la República de Venecia en Francia (1722–1723)",
     "cargo": "Embajador designado / en llegada (llega a París en julio de 1722 para relevar a Alvise Tiepolo)",
     "padre": "Nicolò Foscarini (rama de San Stae)",
-    "madre": "Por verificar",
+    "madre": "Ruzzina Ruzzini",
     "lugar_familia": "—",
     "conyuge": "Por verificar",
     "hijos": "Por verificar",
@@ -13636,7 +14023,10 @@
         "nota": "Patricio veneciano acreditado ante Luis XV (1722–1723)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "foscarini",
+    "casa_materna_id": "ruzzini",
+    "casa_alianza_id": null
   },
   {
     "id": "p131",
@@ -13707,7 +14097,10 @@
         "nota": "Forma habitual de corte en París para Vasili Lúkich Dolgorúkov",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "dolgorukov",
+    "casa_materna_id": null,
+    "casa_alianza_id": null
   },
   {
     "id": "p132",
@@ -13729,7 +14122,7 @@
     "puesto": "Enviado y representante diplomático de Prusia en París (desde 1721–1722)",
     "cargo": "Representante de Federico Guillermo I de Prusia ante la corte de Francia",
     "padre": "François de Chambrier",
-    "madre": "Por verificar",
+    "madre": "Salomé de Chambrier",
     "lugar_familia": "Hijo",
     "conyuge": "Por verificar",
     "hijos": "Por verificar",
@@ -13784,7 +14177,10 @@
         "nota": "Elevado a barón por Federico Guillermo I de Prusia en 1737",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "chambrier",
+    "casa_materna_id": "chambrier",
+    "casa_alianza_id": null
   },
   {
     "id": "p133",
@@ -13861,7 +14257,10 @@
         "nota": "Elevado al rango de barón (Friherre) en 1730",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "gedda",
+    "casa_materna_id": null,
+    "casa_alianza_id": null
   },
   {
     "id": "p134",
@@ -13932,7 +14331,10 @@
         "nota": "Embajador portugués en Londres, La Haya, Madrid y París",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "cunha",
+    "casa_materna_id": "vilhena",
+    "casa_alianza_id": null
   },
   {
     "id": "p135",
@@ -14009,7 +14411,10 @@
         "nota": "Toma el nombre de la tierra de Monmartel (también escrito Montmartel)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "paris",
+    "casa_materna_id": "trenonay",
+    "casa_alianza_id": null
   },
   {
     "id": "p136",
@@ -14086,7 +14491,10 @@
         "nota": "Conocido en finanzas como Monsieur de La Montagne",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "paris",
+    "casa_materna_id": "trenonay",
+    "casa_alianza_id": null
   },
   {
     "id": "p137",
@@ -14164,7 +14572,10 @@
         "nota": "Desde la adquisición del marquesado du Châtel; llamado Crozat le Riche en París",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "crozat",
+    "casa_materna_id": "saporta",
+    "casa_alianza_id": null
   },
   {
     "id": "p138",
@@ -14233,7 +14644,10 @@
         "nota": "Banquero originario de Carcassonne y futuro director de la Compañía de las Indias (1723)",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "castanier",
+    "casa_materna_id": "raynaud",
+    "casa_alianza_id": null
   },
   {
     "id": "p139",
@@ -14302,7 +14716,10 @@
         "nota": "Director de la Compañía de las Indias (1719) y futuro señor de Magnanville",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "savalette",
+    "casa_materna_id": "bonneau",
+    "casa_alianza_id": null
   },
   {
     "id": "p140",
@@ -14372,6 +14789,9 @@
         "nota": "Banquero ginebrino en París, de la banca protestante europea",
         "conf": "confirmado"
       }
-    ]
+    ],
+    "casa_id": "thellusson",
+    "casa_materna_id": "guiguer",
+    "casa_alianza_id": null
   }
 ]
