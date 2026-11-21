@@ -341,7 +341,7 @@ const VAL={riqueza:c=>'Fortuna '+(c.riqueza??'?')+'/10',edad:c=>(c.edad||'?')+' 
 const ini=n=>n.replace(/^(Padre|Sir) /,'').split(/\s+/).filter(w=>/^[A-ZÁÉÍÓÚ]/.test(w)).slice(0,2).map(w=>w[0]).join('');
 const src=c=>RET[c.id]||null;
 function face(el,c){el.textContent='';const s=src(c);
-  if(s){const i=new Image();i.alt='Retrato de '+c.nombre;i.src=s;i.onerror=()=>{el.textContent='';const m=document.createElement('span');m.className='mono';m.textContent=ini(c.nombre);el.append(m)};el.append(i)}
+  if(s){const i=new Image();i.alt='Retrato de '+c.nombre;i.src=s;i.onerror=()=>{i.remove();const m=document.createElement('span');m.className='mono';m.textContent=ini(c.nombre);el.prepend(m)};el.append(i)}
   else{const m=document.createElement('span');m.className='mono';m.textContent=ini(c.nombre);el.append(m)}}
 function simIco(id){
   const s=sims.find(x=>x.id===id)||{id,nombre:id,desc:''};
@@ -393,7 +393,7 @@ function render(){
     const n=document.createElement('div');n.className='cname';nombreEn(n,c);
     const s=document.createElement('div');s.className='ctitle';s.textContent=c.titulo_nob||c.titulo||'';
     const p=document.createElement('div');p.className='cpuesto';p.textContent=c.puesto||c.cargo||'';
-    b.append(f,n,s,p);if(c.id==='p01'){if(c.casa_id)f.append(Heraldica.escudoEl(c.casa_id,{size:22,rol:'Casa paterna',cls:'esc-pat esc-sobre'}))}else{const par=Heraldica.parCasasEl(c,{size:22});if(par.childElementCount)b.append(par)}const sr=simRow(c,false);if(sr)b.append(sr);if(orden){const v=document.createElement('div');v.className='cval';v.textContent=VAL[orden](c);b.append(v)}b.onclick=()=>abrir(c.id);zona(f,()=>c.id);$('grid').append(b)});
+    b.append(f,n,s,p);if(c.casa_id)f.append(Heraldica.escudoEl(c.casa_id,{size:22,rol:'Casa paterna',cls:'esc-pat esc-sobre'}));const sr=simRow(c,false);if(sr)b.append(sr);if(orden){const v=document.createElement('div');v.className='cval';v.textContent=VAL[orden](c);b.append(v)}b.onclick=()=>abrir(c.id);zona(f,()=>c.id);$('grid').append(b)});
 }
 const SECC=[
  ['Origen',[['nacimiento','Nació'],['muerte','Muere'],['casa','Casa'],['estatus_familia','Rango familiar'],['padre','Padre'],['madre','Madre'],['lugar_familia','Lugar en la familia'],['religion','Religión'],['lengua','Lengua']]],
