@@ -22,11 +22,16 @@ ready.then(async()=>{
     fetch("datos/escudos.json").then(r=>r.ok?r.json():null).then(esc=>{
       if(esc&&esc.files&&typeof Heraldica!=="undefined"){
         Heraldica.setEscudos(esc.files);
-        try{if(!document.querySelector('.view[data-view="caras"]').hidden)drawFaces();if(typeof refrescarFichaCasa==="function")refrescarFichaCasa()}catch(e){}
+        try{if(!$("#game").hidden&&current==="personajes")drawFaces();if(typeof refrescarFichaCasa==="function")refrescarFichaCasa()}catch(e){}
       }
     }).catch(()=>{});
     try{if(!$("#selector").hidden&&modo==="existente")renderExistentes();if(!$("#game").hidden&&player?.existente){buildBar();if(current==="bio")drawBio()}}catch(e){}
-    try{const v=document.querySelector('.view[data-view="mapa"]');if(v&&!v.hidden){const tab=document.querySelector('#map-tabs [aria-selected=true]')?.dataset.map;if(tab==="palacio"||tab==="dominio"){const keep=mapSel&&mapSel.id;drawMap(tab);if(keep)goRoom(keep)}}}catch(e){}
+    try{
+      if(!$("#game").hidden&&(current==="palacio"||current==="dominio")){
+        if(mapSel)goRoom(mapSel.id);
+        else drawMap(current);
+      }
+    }catch(e){}
     activarEditorGH();
   }catch(e){console.warn("Modo estático: no se pudieron cargar los datos",e)}
 });
@@ -46,7 +51,10 @@ window.ghCambio=(col,id,d)=>{
   if(col==="simbolos"){if(d)SIM_IMG[id]=d.img;else delete SIM_IMG[id];try{drawFaces()}catch(e){}}
   if(col==="estancias"){if(d)ESTANCIAS[id]=d.img;else delete ESTANCIAS[id]}
   if(col==="ocupantes"){if(d)OCUP_DB[id]=d;else delete OCUP_DB[id]}
-  if(col!=="retratos"&&mapSel&&mapSel.id){const v=document.querySelector('.view[data-view="mapa"]');if(v&&!v.hidden){if(col==="ocupantes"){drawMap("palacio");goRoom(mapSel.id)}else showRoom(mapSel.id,mapSel.n,mapSel.d)}}
+  if(col!=="retratos"&&!$("#game").hidden&&!$("#map-view").hidden&&$("#map-box .zone.sel")){
+    if(col==="ocupantes"&&current==="palacio")goRoom(mapSel.id);
+    else showRoom(mapSel.id,mapSel.n,mapSel.d);
+  }
 };
 $("#p-llave-ok").onclick=()=>{const v=$("#p-llave").value.trim();if(!v)return;GH.guardar(v);$("#p-llave").value="";activarEditorGH()};
 $("#p-llave-x").onclick=()=>{GH.quitar();activarEditorGH()};

@@ -1696,9 +1696,13 @@ function provInfo(i,fIdx=-1){
   showFranciaSelection();
 }
 
-async function drawProvinces(box){
+async function drawProvinces(box,isCurrent){
   mapInfo("Reino de Francia","Cargando los 6 mapas separados del Reino de Francia…");
-  try{await loadProvinces()}catch(e){mapInfo("Reino de Francia","No se pudo cargar el mapa de Francia.");return}
+  try{await loadProvinces()}catch(e){
+    if(isCurrent())mapInfo("Reino de Francia","No se pudo cargar el mapa de Francia.");
+    return;
+  }
+  if(!isCurrent())return;
   const {w,h}=provState;
 
   const tb=el("div",{class:"map-toolbar"});

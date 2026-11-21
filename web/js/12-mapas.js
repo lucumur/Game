@@ -429,7 +429,14 @@ function catCls(id){const L=ocupantes(id).filter(o=>o[0]!=="Vacante");return L.l
 function ocupEditor(id){
   const L=ocupantes(id).map(o=>({n:o[0],pid:o[1],conf:o[2],nota:o[3],cat:o[4],...(o[5]?{fuente:o[5]}:{})}));
   const msg=el("span",{class:"note","aria-live":"polite"});
-  const guardar=async lista=>{msg.textContent="Guardando…";try{await (db||GH).doc("ocupantes/"+id).set({lista});OCUP_DB[id]={lista};goRoom(id)}catch(e){msg.textContent="No se pudo guardar."}};
+  const guardar=async lista=>{
+    msg.textContent="Guardando…";
+    try{
+      await (db||GH).doc("ocupantes/"+id).set({lista});
+      OCUP_DB[id]={lista};
+      if(!$("#game").hidden&&current==="palacio"&&mapSel?.id===id)goRoom(id);
+    }catch(e){msg.textContent="No se pudo guardar."}
+  };
   const nom=el("input",{type:"text",placeholder:"Nombre del ocupante","aria-label":"Nombre del ocupante"});
   const cat=el("select",{"aria-label":"Categoría"}); Object.entries(CATS).forEach(([k,v])=>{const o=el("option",{value:k},v);if(k==="hombre")o.selected=true;cat.append(o)});
   const conf=el("select",{"aria-label":"Confianza"}); [["a","confirmado"],["m","probable"],["b","dudoso"]].forEach(([k,v])=>{const o=el("option",{value:k},v);if(k==="m")o.selected=true;conf.append(o)});
@@ -1032,7 +1039,9 @@ function drawRooms(svg,rooms,capaMedia){
 
 function note(svg,x,y,txt,anchor="middle"){svg.append(sv("text",{x,y,"text-anchor":anchor,class:"compass"},txt))}
 
+let mapRender=0;
 function drawMap(kind){
+  const render=++mapRender;
   const box=$("#map-box"); box.innerHTML="";
   document.querySelector(".map-layout").classList.toggle("ancho",kind==="palacio");
   const svg=sv("svg",{role:"img"});
@@ -1093,7 +1102,7 @@ function drawMap(kind){
     note(svg,12,768,"↙ Meudon y Sceaux","start");
     mapInfo("De Versalles a París (Dominio, Barrios de 1722 y Línea del Sena)","Arriba el Gran Canal y el parque; en el centro el Palacio flanqueado por los dos barrios históricos de 1722 (Saint-Louis con el Viejo Versalles, el Gran Común y el Parc aux Cerfs al sur; Notre-Dame con su parroquia, mercado y hôtels al norte); abajo, las tres avenidas hacia Meudon, Sceaux, el puente de Sèvres, Saint-Cloud y la entrada a París por la Barrière de la Conférence hasta las Tullerías y el Palais-Royal. Toca París, Saint-Cloud, Sèvres, Meudon o Sceaux para abrir el modal de viaje.");
   } else {
-    drawProvinces(box);
+    drawProvinces(box,()=>render===mapRender&&current==="francia"&&!$("#game").hidden);
     return;
   }
   if(kind==="palacio"||kind==="dominio")box.append(el("div",{class:"map-head",id:"map-head"},el("h3",{},"Ningún lugar seleccionado"),el("span",{class:"note"},kind==="dominio"?"Toca un barrio de Versalles o un enclave del Sena/París (abre el modal de viaje en carroza).":"Toca una estancia del plano o usa los botones de enfoque (Cuerpo central, Ala del Mediodía, Ala Norte).")));

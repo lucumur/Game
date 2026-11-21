@@ -10,7 +10,11 @@ ready.then(()=>{if(!db)return;
   claude.use("user").then(async u=>{try{OWNER=!!(u&&await u.isOwner())}catch(e){OWNER=false}
     if(OWNER&&mapSel&&mapSel.id&&document.querySelector(".zone.sel"))showRoom(mapSel.id,mapSel.n,mapSel.d)}).catch(()=>{});
   db.collection("ocupantes").onSnapshot(s=>{OCUP_DB={};s.docs.forEach(d=>{if(d.exists)OCUP_DB[d.id]=d.data()});
-    const v=document.querySelector('.view[data-view="mapa"]');if(v&&!v.hidden&&document.querySelector('#map-tabs [aria-selected=true]').dataset.map==="palacio"){const keep=mapSel&&mapSel.id;drawMap("palacio");if(keep)goRoom(keep)}},()=>{});
+    if(!$("#game").hidden&&current==="palacio"){
+      if(mapSel)goRoom(mapSel.id);
+      else drawMap("palacio");
+    }
+  },()=>{});
   db.collection("retratos").onSnapshot(s=>{RETR={};s.docs.forEach(d=>{if(d.exists){const v=d.data();if(v&&v.img)RETR[d.id]=v.img}});redraw()},()=>{});
 });
 function snapshot(){const o={};KEYS.forEach(k=>o[k]=store.get(k,null));

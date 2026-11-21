@@ -63,16 +63,13 @@ function buscarLugares(q){
   });
   return res.sort((a,b)=>b.sc-a.sc||a.n.localeCompare(b.n,"es"));
 }
-async function irALugar(L){
-  const tabs=$("#map-tabs");
-  [...tabs.children].forEach(x=>x.setAttribute("aria-selected",String(x.dataset.map===L.tipo)));
+function irALugar(L){
   if(L.tipo==="palacio"){
     if(!L.pisos.includes(PISO_PAL))PISO_PAL=L.pisos.includes(2)?2:L.pisos[0];
     if(typeof camaraPara==="function"&&ESTNOM[L.id])CAM_PAL=camaraPara(ESTNOM[L.id]);
-    mapSel=null; drawMap("palacio");
+    mapSel=null;
   } else if(L.tipo==="dominio"){
     if(typeof CAM_DOM!=="undefined")CAM_DOM="todo";
-    drawMap("dominio");
   } else if(L.tipo==="francia"){
     if(L.subMapa){
       capaFrancia=L.subMapa;
@@ -83,9 +80,9 @@ async function irALugar(L){
       else if(L.subMapa==="gobiernos") selGob=L.id;
       else if(L.subMapa==="intendencias") selInt=L.id;
     }
-    drawMap("francia");
-    return;
   }
+  go(L.tipo);
+  if(L.tipo==="francia")return;
   const z=document.querySelector('#map-box .zone[data-id="'+L.id+'"]');
   if(z){z.dispatchEvent(new MouseEvent("click",{bubbles:true}));z.focus({preventScroll:true});
     const bb=z.getBoundingClientRect(); if(bb.top<80||bb.bottom>innerHeight)z.scrollIntoView({block:"center",behavior:"smooth"})}
