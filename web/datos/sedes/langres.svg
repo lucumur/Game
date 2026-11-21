@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="115" viewBox="0 0 100 115" role="img">
+<title>Évêché de Langres</title>
+<defs><clipPath id="ecu"><path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/></clipPath>
+<path id="lys" fill="#edbb52" d="M0 -10C-2 -6 -5 -5 -3 -1L-1 3C-4 -1 -6 -6 -10 -4C-14 -2 -12 3 -9 4C-10 0 -6 0 -4 4H-6V6H-2L-4 9Q-1 9 0 7Q1 9 4 9L2 6H6V4H4C6 0 10 0 9 4C12 3 14 -2 10 -4C6 -6 4 -1 1 3L3 -1C5 -5 2 -6 0 -10Z"/></defs>
+<g clip-path="url(#ecu)"><path fill="#18447a" d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/>
+<use xlink:href="#lys" transform="translate(12 5) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(32 5) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(52 5) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(72 5) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(92 5) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(2 21) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(22 21) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(42 21) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(62 21) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(82 21) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(102 21) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(12 37) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(32 37) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(52 37) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(72 37) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(92 37) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(2 53) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(22 53) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(42 53) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(62 53) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(82 53) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(102 53) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(12 69) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(32 69) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(52 69) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(72 69) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(92 69) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(2 85) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(22 85) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(42 85) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(62 85) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(82 85) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(102 85) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(12 101) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(32 101) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(52 101) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(72 101) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(92 101) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(2 117) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(22 117) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(42 117) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(62 117) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(82 117) scale(0.62)"/>
+<use xlink:href="#lys" transform="translate(102 117) scale(0.62)"/><path d="M0 0L100 115M100 0L0 115" stroke="#ac2636" stroke-width="13"/></g>
+<path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z" fill="none" stroke="#342c25" stroke-width="2"/>
+</svg>

@@ -536,7 +536,7 @@ const DIOCESIS_LIST = [
    metropoli:false, provinciaEcl:"Embrun",
    partido:"apelante", galero:"obispo", par:false, pid:"jean-soanen",
    titular:"Jean Soanen", cargo:"Obispo y Señor de Senez · Decano de los Cuatro Obispos Apelantes",
-   emblema:{bg:"#1f3a68",fg:"#f0ede4",acc:"#e0ba54",galero:"obispo",pat:"castries",lema:"Paloma del Espíritu Santo y báculo pastoral · «Veritas liberabit vos»"},
+   emblema:{bg:"#1f3a68",fg:"#f0ede4",acc:"#e0ba54",galero:"obispo",pat:"castries",lema:"Perro azul sobre oro y puente de plata sobre rojo"},
    rentas:"Diócesis montañosa y pobre de apenas 10.000 libras en los Alpes de Provenza.",
    nota:"Venerado como un santo padre de la Iglesia primitiva por los jansenistas; ni las amenazas de destierro de Dubois logran doblar su pluma.",
    conf:"a", fuente:"Gallia Christiana; Gazettes 1722"},
@@ -1033,7 +1033,95 @@ function liderCard(pid, titularFallback, cargoFallback, extraRef=null){
   );
 }
 
+const ARMAS_SEDES = {
+  "dioc-paris": {
+    "blason": "Sembrado de lises de oro sobre azul, con cruz roja.",
+    "conf": "a",
+    "fuente": "https://commons.wikimedia.org/wiki/File:Arms_of_the_Archdiocese_of_Paris.svg"
+  },
+  "dioc-reims": {
+    "blason": "Cruz roja sobre el sembrado de lises de oro. Variante del armorial de los pares de Francia de 1633.",
+    "conf": "a",
+    "fuente": "https://commons.wikimedia.org/wiki/File:Blason_de_l%27archev%C3%AAch%C3%A9_de_Reims.svg",
+    "autor": "Euryrel",
+    "licencia": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "dioc-laon": {
+    "blason": "Escudo partido. A la derecha heráldica, dos llaves de plata y un escudete con lis. A la izquierda, una cruz de plata con báculo rojo sobre un sembrado de lises.",
+    "conf": "a",
+    "fuente": "https://commons.wikimedia.org/wiki/File:Arms_of_the_diocese_of_Laon.svg",
+    "autor": "Euryrel",
+    "licencia": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "dioc-noyon": {
+    "blason": "Dos báculos de plata sobre un sembrado de lises de oro en campo azul.",
+    "conf": "a",
+    "fuente": "https://commons.wikimedia.org/wiki/File:Arms_of_the_diocese_of_Noyon.svg",
+    "autor": "Euryrel",
+    "licencia": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "dioc-chalons": {
+    "blason": "Cruz de plata sobre azul con una lis de oro en cada cuartel.",
+    "conf": "a",
+    "fuente": "https://commons.wikimedia.org/wiki/File:Blason_Ev%C3%AAques_de_Ch%C3%A2lons-en-Champagne.svg",
+    "autor": "Jimmy44",
+    "licencia": "https://creativecommons.org/licenses/by/3.0/"
+  },
+  "dioc-senez": {
+    "blason": "Cuartelado. Perro azul vuelto sobre oro y puente de plata de tres arcos sobre rojo.",
+    "conf": "a",
+    "fuente": "https://commons.wikimedia.org/wiki/File:Arms_of_the_diocese_of_Senez.svg",
+    "autor": "Euryrel",
+    "licencia": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "dioc-langres": {
+    "blason": "Aspa roja sobre un sembrado de lises de oro en campo azul.",
+    "conf": "a",
+    "fuente": "https://www.e-periodica.ch/cntmng?pid=ahe-001%3A1912%3A26%3A%3A335"
+  },
+  "dioc-beauvais": {
+    "blason": "Cruz roja sobre oro, acompañada de cuatro llaves rojas. Documentado en el manuscrito BnF, latin 13314, f. 2.",
+    "conf": "a",
+    "fuente": "https://bibale.irht.cnrs.fr/23577"
+  },
+  "dioc-frejus": {
+    "blason": "Llave en campo rojo. El cabildo documenta el motivo y el campo. El dorado es una lectura probable de la miniatura.",
+    "conf": "m",
+    "fuente": "https://www.chapitre-frejus-toulon.fr/index.php/le-chapitre/son-blason"
+  },
+  "dioc-estrasburgo": {
+    "blason": "Banda de plata sobre rojo, documentada en sellos del obispado.",
+    "conf": "a",
+    "fuente": "https://sigilla.irht.cnrs.fr/152929"
+  },
+  "dioc-clermont": {
+    "blason": "Cruz roja perfilada de oro, con cuatro lises de oro sobre azul. Armas del poder temporal del obispo.",
+    "conf": "a",
+    "fuente": "https://www.armorialdefrance.fr/page_blason.php?ville=6166"
+  },
+  "dioc-cambrai": {
+    "blason": "Tres leones azules sobre oro. Armas del condado episcopal de Cambrai recogidas en armoriales medievales.",
+    "conf": "a",
+    "fuente": "https://armorial.dk/ordinary/families20.pdf",
+    "autor": "Thom.Lanaud (colores adaptados)",
+    "original": "https://commons.wikimedia.org/wiki/File:Blason_pays_fr_Cambresis.svg",
+    "licencia": "https://creativecommons.org/licenses/by-sa/4.0/"
+  }
+};
+
 let ESCUDOS_DB = {src:{}, commons:{}, imgs:{}};
+const imagenesSedes = {};
+let cargaSedes;
+function cargarArmasSedes(){
+  if(cargaSedes)return cargaSedes;
+  cargaSedes=Promise.all([...Object.keys(ARMAS_SEDES), "dioc-pendiente"].map(async id=>{
+    const img=new Image();
+    img.src="datos/sedes/"+id.slice(5)+".svg";
+    try{await img.decode();imagenesSedes[id]=img}
+    catch(e){console.warn("No se pudo cargar el escudo de la sede",id)}
+  }));
+  return cargaSedes;
+}
 
 async function loadEscudosDB(){
   if(Object.keys(ESCUDOS_DB.src).length) return;
@@ -1170,7 +1258,7 @@ function drawEmblemCanvas(ctx, x, y, esc, tipoMapa, isSel, entityId=""){
     ctx.strokeStyle="#9e2a28"; ctx.lineWidth=2.4; ctx.stroke();
   }
 
-  const wikiImg = entityId && ESCUDOS_DB.imgs[entityId];
+  const wikiImg = tipoMapa==="diocesis" ? (imagenesSedes[entityId]||imagenesSedes["dioc-pendiente"]) : ESCUDOS_DB.imgs[entityId];
   if(wikiImg){
     const iw=wikiImg.naturalWidth||100, ih=wikiImg.naturalHeight||115;
     const targetH = tipoMapa==="ducados" ? 28 : 31;
@@ -1266,7 +1354,8 @@ function drawEmblemCanvas(ctx, x, y, esc, tipoMapa, isSel, entityId=""){
 
 /* ---------- PREPROCESADO DEL MAPA DE FRANCIA EN SUS 6 DIVISIONES ---------- */
 async function loadProvinces(){
-  await loadEscudosDB();
+  if(provState)return provState;
+  await Promise.all([loadEscudosDB(),cargarArmasSedes()]);
   if(provState)return provState;
   const img=new Image(); img.src=PROV_PNG; await img.decode();
   const w=img.width,h=img.height,c=document.createElement("canvas"); c.width=w;c.height=h;
@@ -1492,7 +1581,7 @@ function renderProvinces(canvas){
   } else if(capaFrancia==="diocesis"){
     paintMarkers(
       DIOCESIS_LIST, diocPts, i=>DIOCESIS_LIST[i].id===selDioc,
-      d=>({...d.emblema, sub:!d.metropoli}), d=>d.escudoId||d.id, "diocesis", 11.5, 15.5, 14,
+      d=>({...d.emblema, sub:!d.metropoli}), d=>d.id, "diocesis", 11.5, 15.5, 14,
       i=>DIOCESIS_LIST[i].metropoli?2:1
     );
   } else if(capaFrancia==="apanajes"){
@@ -1551,10 +1640,20 @@ function showFranciaSelection(){
   } else if(capaFrancia==="diocesis"){
     const d=DIOCESIS_LIST.find(x=>x.id===selDioc)||DIOCESIS_LIST[0];
     const part=DIOCESIS_PARTIDOS[d.partido];
+    const armas=ARMAS_SEDES[d.id];
+    const escudo=imagenesSedes[d.id]||imagenesSedes["dioc-pendiente"];
     const extraRef=d.refPid?{pid:d.refPid,label:d.refLabel}:null;
+    const titular=liderCard(d.pid,d.titular,d.cargo,extraRef);
+    const armasPersonales=d.escudoId||d.id;
+    if(ESCUDOS_DB.src[armasPersonales] && !["dioc-cambrai","dioc-senez","dioc-frejus"].includes(armasPersonales)){
+      titular.querySelector(".lider-body").append(
+        el("div",{class:"note"},"Armas del titular o de su casa"),
+        renderEscudoSVG(d.emblema,"diocesis",armasPersonales)
+      );
+    }
     wrap.append(
       el("div",{class:"emblema-header"},
-        renderEscudoSVG(d.emblema,"diocesis",d.escudoId||d.id),
+        escudo?el("img",{src:escudo.src,width:68,height:76,style:"object-fit:contain",alt:imagenesSedes[d.id]?"Armas de la sede · "+d.corto:"Marcador genérico de diócesis"}):null,
         el("div",{class:"emblema-meta"},
           el("div",{style:"display:flex;flex-wrap:wrap;gap:6px"},
             el("span",{class:"tag"},part?part.n:"Diócesis del Reino"),
@@ -1563,10 +1662,14 @@ function showFranciaSelection(){
           ),
           d.metropoli&&d.sufraganeas?el("div",{class:"note"},el("b",{},"Diócesis sufragáneas: "),d.sufraganeas):null,
           !d.metropoli&&d.provinciaEcl?el("div",{class:"note"},el("b",{},"Metrópoli eclesiástica: "),d.provinciaEcl):null,
-          el("div",{class:"note blason-txt"},el("b",{},"Armas episcopales / cardenalicias: "),d.emblema.lema)
+          armas?el("div",{class:"note blason-txt"},
+            el("b",{},"Armas de la sede · "+CONF_LABELS[armas.conf]+". "),armas.blason," ",
+            el("a",{href:armas.fuente,target:"_blank",rel:"noopener"},"Fuente heráldica"),
+            armas.autor?el("span",{}," · SVG de ",el("a",{href:armas.original||armas.fuente,target:"_blank",rel:"noopener"},armas.autor)," · ",el("a",{href:armas.licencia,target:"_blank",rel:"noopener"},"Licencia")):null
+          ):el("div",{class:"note blason-txt"},"Armas de la sede pendientes de identificación.")
         )
       ),
-      liderCard(d.pid, d.titular, d.cargo, extraRef),
+      titular,
       el("span",{class:"label"},"Rentas y beneficios eclesiásticos"),
       el("p",{},d.rentas),
       el("span",{class:"label"},"Alineamiento ante la Bula Unigenitus y el Sacre de Reims"),

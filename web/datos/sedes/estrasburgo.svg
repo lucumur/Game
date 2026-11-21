@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="115" viewBox="0 0 100 115" role="img">
+<title>Évêché de Strasbourg</title>
+<defs><clipPath id="ecu"><path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/></clipPath>
+</defs>
+<g clip-path="url(#ecu)"><path fill="#ac2636" d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/>
+<path d="M-8 -8L110 128" stroke="#f5f1e6" stroke-width="22"/></g>
+<path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z" fill="none" stroke="#342c25" stroke-width="2"/>
+</svg>
