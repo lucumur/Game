@@ -164,6 +164,7 @@ button.sim-pill:focus-visible,.sim-open:focus-visible{outline:2px solid var(--ro
 .esc-ali{opacity:.9}
 .casas-par{display:inline-flex;align-items:flex-end;gap:4px;flex-wrap:wrap}
 .card .casas-par{margin-top:2px}
+.face .esc-sobre{position:absolute;top:6px;left:6px;z-index:1;pointer-events:none;filter:drop-shadow(0 1px 2px rgb(0 0 0 / .45))}
 .esc-btn{all:unset;display:inline-flex;cursor:pointer;border-radius:4px}
 .esc-btn:focus-visible{outline:2px solid var(--royal);outline-offset:2px}
 .casas-ficha-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;margin-top:6px}
@@ -391,7 +392,7 @@ function render(){
     const n=document.createElement('div');n.className='cname';nombreEn(n,c);
     const s=document.createElement('div');s.className='ctitle';s.textContent=c.titulo_nob||c.titulo||'';
     const p=document.createElement('div');p.className='cpuesto';p.textContent=c.puesto||c.cargo||'';
-    b.append(f,n,s,p);const par=Heraldica.parCasasEl(c,{size:22});if(par.childElementCount)b.append(par);const sr=simRow(c,false);if(sr)b.append(sr);if(orden){const v=document.createElement('div');v.className='cval';v.textContent=VAL[orden](c);b.append(v)}b.onclick=()=>abrir(c.id);zona(f,()=>c.id);$('grid').append(b)});
+    b.append(f,n,s,p);if(c.id==='p01'){if(c.casa_id)f.append(Heraldica.escudoEl(c.casa_id,{size:22,rol:'Casa paterna',cls:'esc-pat esc-sobre'}))}else{const par=Heraldica.parCasasEl(c,{size:22});if(par.childElementCount)b.append(par)}const sr=simRow(c,false);if(sr)b.append(sr);if(orden){const v=document.createElement('div');v.className='cval';v.textContent=VAL[orden](c);b.append(v)}b.onclick=()=>abrir(c.id);zona(f,()=>c.id);$('grid').append(b)});
 }
 const SECC=[
  ['Origen',[['nacimiento','Nació'],['muerte','Muere'],['casa','Casa'],['estatus_familia','Rango familiar'],['padre','Padre'],['madre','Madre'],['lugar_familia','Lugar en la familia'],['religion','Religión'],['lengua','Lengua']]],
