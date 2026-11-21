@@ -1034,6 +1034,12 @@ function liderCard(pid, titularFallback, cargoFallback, extraRef=null){
 }
 
 const ARMAS_SEDES = {
+  "dioc-boulogne": {
+    "denominacion": "Armes du chapitre cathédral Notre-Dame de Boulogne",
+    "blason": "Armas del cabildo catedralicio. La Virgen y el Niño, con nimbos de oro, en una barca de plata sobre azul. Armorial général de France, Picardía, folio 118.",
+    "conf": "a",
+    "fuente": "https://armorialdefrance.fr/documents/DH/BRUNEMBERT-62-02.JPG"
+  },
   "dioc-paris": {
     "blason": "Sembrado de lises de oro sobre azul, con cruz roja.",
     "conf": "a",
@@ -1641,6 +1647,7 @@ function showFranciaSelection(){
     const d=DIOCESIS_LIST.find(x=>x.id===selDioc)||DIOCESIS_LIST[0];
     const part=DIOCESIS_PARTIDOS[d.partido];
     const armas=ARMAS_SEDES[d.id];
+    const denominacion=armas?.denominacion||"Armas de la sede";
     const escudo=imagenesSedes[d.id]||imagenesSedes["dioc-pendiente"];
     const extraRef=d.refPid?{pid:d.refPid,label:d.refLabel}:null;
     const titular=liderCard(d.pid,d.titular,d.cargo,extraRef);
@@ -1653,7 +1660,7 @@ function showFranciaSelection(){
     }
     wrap.append(
       el("div",{class:"emblema-header"},
-        escudo?el("img",{src:escudo.src,width:68,height:76,style:"object-fit:contain",alt:imagenesSedes[d.id]?"Armas de la sede · "+d.corto:"Marcador genérico de diócesis"}):null,
+        escudo?el("img",{src:escudo.src,width:68,height:76,style:"object-fit:contain",alt:imagenesSedes[d.id]?denominacion+" · "+d.corto:"Marcador genérico de diócesis"}):null,
         el("div",{class:"emblema-meta"},
           el("div",{style:"display:flex;flex-wrap:wrap;gap:6px"},
             el("span",{class:"tag"},part?part.n:"Diócesis del Reino"),
@@ -1663,7 +1670,7 @@ function showFranciaSelection(){
           d.metropoli&&d.sufraganeas?el("div",{class:"note"},el("b",{},"Diócesis sufragáneas: "),d.sufraganeas):null,
           !d.metropoli&&d.provinciaEcl?el("div",{class:"note"},el("b",{},"Metrópoli eclesiástica: "),d.provinciaEcl):null,
           armas?el("div",{class:"note blason-txt"},
-            el("b",{},"Armas de la sede · "+CONF_LABELS[armas.conf]+". "),armas.blason," ",
+            el("b",{},denominacion+" · "+CONF_LABELS[armas.conf]+". "),armas.blason," ",
             el("a",{href:armas.fuente,target:"_blank",rel:"noopener"},"Fuente heráldica"),
             armas.autor?el("span",{}," · SVG de ",el("a",{href:armas.original||armas.fuente,target:"_blank",rel:"noopener"},armas.autor)," · ",el("a",{href:armas.licencia,target:"_blank",rel:"noopener"},"Licencia")):null
           ):el("div",{class:"note blason-txt"},"Armas de la sede pendientes de identificación.")
