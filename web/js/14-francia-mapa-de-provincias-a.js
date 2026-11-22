@@ -1035,8 +1035,8 @@ function liderCard(pid, titularFallback, cargoFallback, extraRef=null){
 
 const ARMAS_SEDES = {
   "dioc-boulogne": {
-    "denominacion": "Armes du chapitre cathédral Notre-Dame de Boulogne",
-    "blason": "Armas del cabildo catedralicio. La Virgen y el Niño, con nimbos de oro, en una barca de plata sobre azul. Armorial général de France, Picardía, folio 118.",
+    "denominacion": "Motif du chapitre cathédral Notre-Dame de Boulogne",
+    "blason": "El folio 118 del Armorial général de France (Picardía) documenta la Virgen con el Niño en una barca de plata como motivo del cabildo. La versión de Gemini elegida para el mapa representa la barca en oro y añade la cruz y el capelo verde con seis borlas por lado.",
     "conf": "a",
     "fuente": "https://armorialdefrance.fr/documents/DH/BRUNEMBERT-62-02.JPG"
   },
