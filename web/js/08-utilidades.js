@@ -2,6 +2,9 @@
 const MEM={};
 const store={get(k,d){try{const v=localStorage.getItem(k);if(v!=null)return JSON.parse(v)}catch(e){}return k in MEM?MEM[k]:d},set(k,v){if(v==null)return store.del(k);MEM[k]=v;try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}},del(k){delete MEM[k];try{localStorage.removeItem(k)}catch(e){}}};
 let player=store.get("vg_player",null);
+/* Modo de la aplicación: "mundo" (base de datos completa) o "partida" (un personaje, descubrimiento progresivo).
+   Se declara aquí, antes que los demás módulos, para que cualquiera pueda leerlo sin riesgo. */
+let appMode="mundo";
 const $=s=>document.querySelector(s);
 const el=(t,a={},...c)=>{const e=document.createElement(t);for(const[k,v]of Object.entries(a)){if(v==null)continue;if(k==="class")e.className=v;else if(k.startsWith("on"))e.addEventListener(k.slice(2),v);else e.setAttribute(k,v)}for(const x of c)if(x!=null&&x!=="")e.append(x);return e};
 const glById=Object.fromEntries(GLOSARIO.map(g=>[g.id,g]));

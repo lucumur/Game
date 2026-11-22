@@ -25,7 +25,7 @@ ready.then(async()=>{
         try{if(!$("#game").hidden&&current==="personajes")drawFaces();if(typeof refrescarFichaCasa==="function")refrescarFichaCasa()}catch(e){}
       }
     }).catch(()=>{});
-    try{if(!$("#selector").hidden&&modo==="existente")renderExistentes();if(!$("#game").hidden&&player?.existente){buildBar();if(current==="bio")drawBio()}}catch(e){}
+    try{if(!$("#selector").hidden&&modo==="existente")renderExistentes();if(!$("#game").hidden&&appMode==="partida"&&player?.existente){buildBar();if(current==="bio")drawBio()}}catch(e){}
     try{
       if(!$("#game").hidden&&(current==="palacio"||current==="dominio")){
         if(mapSel)goRoom(mapSel.id);

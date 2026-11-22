@@ -20,15 +20,31 @@ function drawUnknown(){
   $("#guess-count").textContent=n+" conjetura"+(n===1?"":"s")+" pendiente"+(n===1?"":"s")+(n>=3?" · ya hay suficientes para pedir confirmación al narrador":" · faltan "+(3-n%3)+" para la próxima confirmación");
 }
 let LIBRO=null,RETR={},curFichaL=null;
+/* Libro de caras de Partida: solo quien el personaje ya conoce (se va formando). */
+let conocidos=new Set(store.get("vg_conocidos",[]));
+const CARAS_VACIO="Todavía no conoces a nadie en la corte. A medida que trates con personas o identifiques rostros sin nombre, tu libro de caras se irá formando aquí.";
+const esPartida=()=>appMode==="partida";
+const caraConocida=c=>conocidos.has(c.id)||Boolean(c.escritorio_id&&conocidos.has(c.escritorio_id));
+function modoCarasUI(){
+  const par=esPartida();
+  $("#faces-title").textContent=par?"Personas que conoces":"Libro de caras";
+  $("#faces-libro-link").hidden=par;
+  $("#faces-tools").hidden=par&&conocidos.size===0;
+  $("#f-pres").hidden=par; if($("#f-casa"))$("#f-casa").hidden=par;
+}
 const libroDe=id=>LIBRO&&LIBRO.find(c=>c.escritorio_id===id);
 function refrescarFichaCasa(){if(curFichaL&&!$("#ficha").hidden)openFichaL(curFichaL)}
 function retratoEl(c){const s=RETR[c.id];if(!s)return bust();const i=el("img",{class:"pt",alt:"Retrato de "+(c.nombre_nac||c.nombre)});i.src=s;return i}
 function drawFaces(){
+  modoCarasUI();
   if(LIBRO&&LIBRO.length)return drawFacesLibro();
-  const q=$("#q").value.trim().toLowerCase(), fp=$("#f-pres").value;
-  const list=PERSONAJES.filter(p=>(!fp||p.presencia_versalles===fp)&&(!q||(p.nombre+" "+p.titulo).toLowerCase().includes(q)));
-  $("#faces-count").textContent=list.length+" de "+PERSONAJES.length+" personas";
+  const par=esPartida();
+  const q=$("#q").value.trim().toLowerCase(), fp=par?"":$("#f-pres").value;
+  const base=par?PERSONAJES.filter(p=>conocidos.has(p.id)):PERSONAJES;
+  const list=base.filter(p=>(!fp||p.presencia_versalles===fp)&&(!q||(p.nombre+" "+p.titulo).toLowerCase().includes(q)));
+  $("#faces-count").textContent=par?list.length+" persona"+(list.length===1?"":"s")+" conocida"+(list.length===1?"":"s"):list.length+" de "+PERSONAJES.length+" personas";
   const b=$("#faces"); b.innerHTML="";
+  if(par&&!conocidos.size){b.append(el("p",{class:"note"},CARAS_VACIO));return}
   const ramas={}; list.forEach(p=>(ramas[p.rama.split(" / ")[0]] ||= []).push(p));
   for(const[r,ps]of Object.entries(ramas)){
     const g=el("div",{class:"plates"});
@@ -38,12 +54,15 @@ function drawFaces(){
   if(!list.length)b.append(el("p",{class:"note"},"Nadie coincide con la búsqueda."));
 }
 function drawFacesLibro(){
-  const q=$("#q").value.trim().toLowerCase(), fp=$("#f-pres").value, fc=$("#f-casa")?.value||"";
-  $("#f-pres").hidden=false; if($("#f-casa"))$("#f-casa").hidden=false;
+  const par=esPartida();
+  const q=$("#q").value.trim().toLowerCase(), fp=par?"":$("#f-pres").value, fc=par?"":($("#f-casa")?.value||"");
+  modoCarasUI();
   const hNom=id=>typeof Heraldica!=="undefined"?Heraldica.nombre(id):"";
-  const list=LIBRO.filter(c=>(!fp||c.presencia_versalles===fp)&&(!fc||(typeof Heraldica!=="undefined"&&Heraldica.coincideCasa(c,fc)))&&(!q||[c.nombre,c.nombre_nac,(c.apodos||[]).join(" "),c.titulo_nob,c.puesto,c.casa,hNom(c.casa_id),hNom(c.casa_materna_id),hNom(c.casa_alianza_id)].join(" ").toLowerCase().includes(q)));
-  $("#faces-count").textContent=list.length+" de "+LIBRO.length+" personas";
+  const base=par?LIBRO.filter(caraConocida):LIBRO;
+  const list=base.filter(c=>(!fp||c.presencia_versalles===fp)&&(!fc||(typeof Heraldica!=="undefined"&&Heraldica.coincideCasa(c,fc)))&&(!q||[c.nombre,c.nombre_nac,(c.apodos||[]).join(" "),c.titulo_nob,c.puesto,c.casa,hNom(c.casa_id),hNom(c.casa_materna_id),hNom(c.casa_alianza_id)].join(" ").toLowerCase().includes(q)));
+  $("#faces-count").textContent=par?list.length+" persona"+(list.length===1?"":"s")+" conocida"+(list.length===1?"":"s"):list.length+" de "+LIBRO.length+" personas";
   const b=$("#faces"); b.innerHTML="";
+  if(par&&!conocidos.size){b.append(el("p",{class:"note"},CARAS_VACIO));return}
   const grupos={}; list.forEach(c=>(grupos[c.faccion||"Sin facción"] ||= []).push(c));
   for(const[g,cs]of Object.entries(grupos)){
     const box=el("div",{class:"plates"});
@@ -79,7 +98,7 @@ function openFichaL(c){
   const nom=(c.nombre_nac||c.nombre)+((c.apodos||[]).length?" «"+c.apodos.join("» «")+"»":"");
   f.append(el("button",{class:"x","aria-label":"Cerrar",onclick:()=>{f.hidden=true}},"×"),
     el("span",{class:"label"},"Libro de caras"),retratoEl(c));
-  if(OWNER&&(db||GH_OK)){ /* Solo el dueño: subir o cambiar el retrato desde la ficha */
+  if(OWNER&&(db||GH_OK)&&!esPartida()){ /* Solo el dueño (y solo en Mundo): subir o cambiar el retrato desde la ficha */
     const msg=el("span",{class:"note","aria-live":"polite"}), inp=el("input",{type:"file",accept:"image/*",hidden:""});
     inp.onchange=async()=>{const fl=inp.files[0];inp.value="";if(!fl)return;msg.textContent="Guardando retrato…";
       try{const img=await achicarImg(fl,700);await (db||GH).doc("retratos/"+c.id).set({img});RETR[c.id]=img;openFichaL(c);try{drawFaces()}catch(e){}}
@@ -91,6 +110,6 @@ function openFichaL(c){
   if(c.escritorio_id&&LINAJE.padres)f.append(el("span",{class:"label"},"Familia"),familyBlock(c.escritorio_id));
   f.append(el("span",{class:"label"},"Lo que sabes"),el("p",{class:"note"},"Todavía no has observado nada de esta persona."),
     el("label",{class:"label",for:"nota-"+key},"Tus notas"),ta,
-    el("a",{class:"note",href:"libro.html#"+c.id,style:"color:inherit"},"Ver la ficha completa en el libro →"));
+    esPartida()?null:el("a",{class:"note",href:"libro.html#"+c.id,style:"color:inherit"},"Ver la ficha completa en el libro →"));
   f.hidden=false; f.querySelector(".x").focus();
 }

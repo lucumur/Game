@@ -14,7 +14,7 @@ function buildBar(){
   $("#who").innerHTML=""; $("#who").append(p.nombre," ",el("small",{},posName(p)));
   const pr=$("#portrait"), src=store.get("vg_retrato",null)||(p.existente&&RETR[p.existente])||null; pr.innerHTML="";
   pr.append(src?el("img",{src,alt:""}):bust());
-  $("#fecha").textContent=fmtFr(hoy)+" · "+(epoca.lugar||"Versalles");
+  $("#fecha").textContent=fmtFr(hoy)+" · "+(epoca?.lugar||"Versalles");
   const c=$("#clock"); c.innerHTML=""; JORNADA.forEach((j,i)=>c.append(el("span",{class:i===4?"now":null},j)));
   const g=$("#gauges"); g.innerHTML="";
   indicadores(p).forEach(([n,v])=>{const pips=el("span",{class:"pips","aria-label":n+": "+v+" de 5"});for(let i=0;i<5;i++)pips.append(el("i",{class:i<v?"on":null}));g.append(el("span",{class:"gauge"},n,pips))});

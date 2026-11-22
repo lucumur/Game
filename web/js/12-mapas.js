@@ -450,6 +450,11 @@ function ocupEditor(id){
 }
 
 let mapSel=null, PISO_PAL=2, CAM_PAL="todo", CALCO_PAL=false, CAM_DOM="todo";
+/* Descubrimiento (solo Partida): el personaje ve únicamente los lugares que ya conoce. En Mundo se ve todo. */
+const LUGARES_INICIALES=["royale","marbre","galerie","oeil","escreine","cour-ministres","corps","patios","armes"];
+let descubiertos=new Set(store.get("vg_lugares",LUGARES_INICIALES));
+const esLugarDescubierto=id=>appMode!=="partida"||descubiertos.has(id);
+function descubrirLugar(id){if(!descubiertos.has(id)){descubiertos.add(id);store.set("vg_lugares",[...descubiertos])}}
 const CAMERAS_PAL = {
   todo:      {vb:"20 150 1870 1015", label:"Palacio completo", zoom:false},
   central:   {vb:"720 155 600 715",  label:"Cuerpo central", zoom:true},
@@ -922,15 +927,15 @@ function roomInfo(id,n,d){
     const row=el("div",{class:"conecta"});
     const esDom=Boolean(DOMNOM[id]&&!ESTNOM[id]);
     I.c.forEach(c=>{
-      const e=esDom?DOMNOM[c]:ESTNOM[c]; if(!e)return;
+      const e=esDom?DOMNOM[c]:ESTNOM[c]; if(!e||!esLugarDescubierto(c))return;
       const otro=!esDom&&!e.p.includes(PISO_PAL);
       row.append(el("button",{class:"btn sm",onclick:()=>goRoom(c)},(e.s&&e.s.length<=4?e.s+" · ":"")+e.n+(otro?(e.p[0]>PISO_PAL?" ↑ (Piso "+e.p[0]+")":" ↓ (Piso "+e.p[0]+")"):"")));
     });
     box.append(el("span",{class:"label"},esDom?"Caminos y lugares contiguos":"Puertas y escaleras contiguas"),row);
   }
-  if(OWNER&&(db||GH_OK)&&ESTNOM[id])box.append(el("span",{class:"label"},"Asignar ocupantes (solo tú)"),ocupEditor(id));
+  if(OWNER&&(db||GH_OK)&&appMode!=="partida"&&ESTNOM[id])box.append(el("span",{class:"label"},"Asignar ocupantes (solo tú)"),ocupEditor(id));
   box.append(el("span",{class:"label"},"Presentes ahora"),el("div",{class:"note"},"Nadie a la vista. Aparecerán aquí conforme avance la partida."));
-  if(OWNER&&(db||GH_OK)){
+  if(OWNER&&(db||GH_OK)&&appMode!=="partida"){
     const msg=el("span",{class:"note","aria-live":"polite"});
     const inp=el("input",{type:"file",accept:"image/*",hidden:""});
     inp.onchange=async()=>{const f=inp.files[0];inp.value="";if(!f)return;msg.textContent="Guardando imagen…";
@@ -944,8 +949,10 @@ function roomInfo(id,n,d){
 }
 
 function pickable(node,svg,n,d,id){
-  const pick=e=>{svg.querySelectorAll(".zone").forEach(z=>z.classList.remove("sel"));node.classList.add("sel");mapSel={id,n,d};showRoom(id,n,d,Boolean(e&&e.isTrusted))};
-  node.setAttribute("tabindex",0); node.setAttribute("role","button"); node.setAttribute("aria-label",n);
+  const pick=e=>{svg.querySelectorAll(".zone").forEach(z=>z.classList.remove("sel"));node.classList.add("sel");
+    if(!esLugarDescubierto(id)){mapSel=null;mapInfo("Lugar aún no descubierto","Todavía no conoces esta estancia ni quién la ocupa. Se revelará conforme explores Versalles o recibas noticias de ella.");return}
+    mapSel={id,n,d};showRoom(id,n,d,Boolean(e&&e.isTrusted))};
+  node.setAttribute("tabindex",0); node.setAttribute("role","button"); node.setAttribute("aria-label",esLugarDescubierto(id)?n:"Lugar aún no descubierto");
   node.addEventListener("click",pick); node.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();pick(e)}});
 }
 
@@ -1020,12 +1027,13 @@ function drawRooms(svg,rooms,capaMedia){
   rooms.forEach(r=>{
     if(typeof r[3]==="string"){
       const [id,n,short,pts,cls,d,[lx,ly]]=r;
-      const poly=sv("polygon",{points:pts,class:"zone "+cls+catCls(id)+(VIAJES_DOM[id]?" viaje-zone":""),"data-id":id}); pickable(poly,svg,n,d,id); svg.append(poly);
-      labels.push(sv("text",{x:lx,y:ly,"text-anchor":"middle",class:"mlabel s"},short));
+      const poly=sv("polygon",{points:pts,class:"zone "+cls+(esLugarDescubierto(id)?catCls(id):"")+(VIAJES_DOM[id]?" viaje-zone":"")+(esLugarDescubierto(id)?"":" oculto"),"data-id":id}); pickable(poly,svg,n,d,id); svg.append(poly);
+      if(esLugarDescubierto(id))labels.push(sv("text",{x:lx,y:ly,"text-anchor":"middle",class:"mlabel s"},short));
       return;
     }
     const [id,n,short,x,y,w,h,cls,d]=r;
-    const rect=sv("rect",{x,y,width:w,height:h,class:"zone "+cls+catCls(id)+(VIAJES_DOM[id]?" viaje-zone":""),"data-id":id}); pickable(rect,svg,n,d,id); svg.append(rect);
+    const rect=sv("rect",{x,y,width:w,height:h,class:"zone "+cls+(esLugarDescubierto(id)?catCls(id):"")+(VIAJES_DOM[id]?" viaje-zone":"")+(esLugarDescubierto(id)?"":" oculto"),"data-id":id}); pickable(rect,svg,n,d,id); svg.append(rect);
+    if(!esLugarDescubierto(id))return;
     const corto=short.length<=4, vertical=!corto&&h>w*1.8&&w<60, size=Math.min(vertical?h:w,200);
     if(size<36)return;
     const t=sv("text",{x:x+w/2,y:y+h/2+4,"text-anchor":"middle",class:"mlabel"+((size<90&&!corto)||cls==="open"?" s":"")+(corto?" code":"")},short);
@@ -1042,6 +1050,8 @@ function note(svg,x,y,txt,anchor="middle"){svg.append(sv("text",{x,y,"text-ancho
 let mapRender=0;
 function drawMap(kind){
   const render=++mapRender;
+  const pn=$("#map-partida-note");
+  if(pn){pn.hidden=appMode!=="partida";pn.textContent=appMode==="partida"?"Modo partida: solo ves los lugares que tu personaje conoce ("+descubiertos.size+" descubiertos). Para consultar el atlas completo, entra en Mundo.":""}
   const box=$("#map-box"); box.innerHTML="";
   document.querySelector(".map-layout").classList.toggle("ancho",kind==="palacio");
   const svg=sv("svg",{role:"img"});

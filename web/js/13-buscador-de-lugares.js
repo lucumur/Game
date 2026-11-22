@@ -41,6 +41,8 @@ function lugaresIndex(){
       out.push({tipo:"francia",subMapa:"intendencias",id:it.id,n:it.n,code:"",alias:it.corto,d:it.nota||"",pisos:[],sector:"Mapa 6 · Intendencias",oc:[it.titular,it.cargo].filter(Boolean)});
     });
   }
+  /* En Partida solo se busca lo descubierto; Francia queda para Mundo por ahora. */
+  if(appMode==="partida")return out.filter(L=>L.tipo!=="francia"&&esLugarDescubierto(L.id));
   return out;
 }
 function buscarLugares(q){

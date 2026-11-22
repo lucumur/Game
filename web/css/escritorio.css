@@ -498,3 +498,27 @@ button.kin:hover{border-color:var(--gilt)}
 .casa-chip-meta{display:grid;gap:1px;min-width:0}
 .casa-chip-rol{font:10px var(--f-mono,ui-monospace,monospace);letter-spacing:.06em;text-transform:uppercase;color:var(--gilt)}
 .casa-chip-nom{font-size:12px;font-weight:600;line-height:1.2;color:var(--ink);overflow-wrap:anywhere}
+
+/* ---------- Portada, Mundo y Partida ---------- */
+#portada{max-width:860px;margin-inline:auto;padding-block:48px 40px;display:grid;gap:28px}
+.puertas{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.puerta{padding:26px 24px;gap:8px;border-color:var(--gilt)}
+.puerta:hover{background:var(--chip)}
+.puerta b{font-size:2rem;line-height:1.1}
+.puerta span:not(.st){font-size:1rem}
+.puerta .note{margin-top:4px}
+.bar-mundo{padding-bottom:6px}
+.bar-mundo .who{font-family:var(--f-display);font-size:1.15rem;color:var(--muted)}
+.bar-mundo .who strong{font-weight:400;font-size:1.6rem;color:var(--ink);margin-right:6px}
+.bar-mundo .who small{font-family:var(--f-body);font-size:.85rem}
+.zone.oculto{fill:var(--line)!important;fill-opacity:.35!important;stroke:var(--muted);stroke-width:.8;stroke-dasharray:3 3;cursor:help}
+.zone.oculto:hover,.zone.oculto:focus{fill-opacity:.55!important}
+.zone.oculto.sel{stroke:var(--seal)!important;stroke-width:2.2!important;stroke-dasharray:none}
+.mecanicas{display:grid;gap:14px}
+.mec-card{overflow-x:auto}
+.mec-card h3{font-size:1.15rem}
+.mec-card h4{font-family:var(--f-display);font-weight:400;font-size:1.02rem;color:var(--gilt);margin:8px 0 0}
+.mec-table{width:100%;border-collapse:collapse;font-size:.92rem}
+.mec-table th,.mec-table td{text-align:left;padding:5px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.mec-table th{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:400}
+.mec-list{margin:0;padding-left:1.1rem;display:grid;gap:4px}

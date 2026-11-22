@@ -7,9 +7,23 @@
 <link rel="icon" href="favicon.ico?v=3" sizes="any"><link rel="icon" type="image/svg+xml" href="favicon.svg?v=3"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=3"><link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&display=swap">
-<link rel="stylesheet" href="css/escritorio.css?v=202611210555">
+<link rel="stylesheet" href="css/escritorio.css?v=202611221603">
 </head>
 <body>
+
+<!-- ================= PORTADA ================= -->
+<main id="portada" class="wrap" hidden>
+  <header class="sel-head">
+    <span class="label">Versalles · 1682–1789</span>
+    <h1>Versailles</h1>
+    <p>Dos puertas a la misma corte: el mundo tal como es, o una vida dentro de él.</p>
+    <div class="rule"></div>
+  </header>
+  <div class="modos puertas">
+    <button type="button" class="modo puerta" id="btn-entrar-mundo"><span class="st">Base de datos · Atlas · Reglas</span><b>Mundo</b><span>Todo Versalles sin personaje: Palacio, Dominio y Francia, el libro de caras completo, glosario y cómo funcionan las mecánicas.</span></button>
+    <button type="button" class="modo puerta" id="btn-entrar-partida"><span class="st">Jugable · En desarrollo</span><b>Partida</b><span>Entras en la corte con un personaje y ves solo lo que él ve: lugares y caras se descubren poco a poco.</span><span class="note" id="portada-partida-st"></span></button>
+  </div>
+</main>
 
 <!-- ================= ÉPOCAS ================= -->
 <main id="epocas" class="wrap" hidden>
@@ -20,6 +34,7 @@
     <div class="rule"></div>
   </header>
   <div class="eras" id="eras"></div>
+  <button class="back" id="b-epocas-portada">‹ Volver a la portada</button>
 </main>
 
 <!-- ================= SELECTOR ================= -->
@@ -77,12 +92,13 @@
     <button class="btn" id="b-reset">Empezar de nuevo</button>
   </div>
   <button class="back" id="b-epocas">Cambiar de época</button>
+  <button class="back" id="b-sel-portada">‹ Portada</button>
 </main>
 
 <!-- ================= JUEGO ================= -->
 <div id="game" class="wrap" hidden>
   <header class="bar">
-    <div class="bar-top">
+    <div class="bar-top" id="bar-partida">
       <div class="ident">
         <button class="portrait" id="portrait" title="Cambiar retrato" aria-label="Retrato del personaje. Toca para cambiarlo."></button>
         <input type="file" id="portrait-file" accept="image/*" hidden>
@@ -91,11 +107,20 @@
       <div class="bar-right">
         <div class="bar-meta">
           <span class="date" id="fecha"></span>
-          <button class="btn sm" id="b-back">‹ Épocas</button>
+          <button class="btn sm" id="b-back">‹ Portada</button>
+          <button class="btn sm" id="b-ir-mundo">Mundo</button>
           <button class="btn sm primary" id="b-partida">Partida</button>
         </div>
         <div class="clock" id="clock" aria-label="Jornada del rey"></div>
         <div class="gauges" id="gauges"></div>
+      </div>
+    </div>
+    <div class="bar-top bar-mundo" id="bar-mundo" hidden>
+      <div class="who"><strong>Mundo</strong> <small id="mundo-sub">Versalles · Base de datos, cartografía y reglas</small></div>
+      <div class="bar-meta">
+        <button class="btn sm" id="b-mundo-portada">‹ Portada</button>
+        <button class="btn sm" id="b-mundo-partida">Ir a Partida</button>
+        <button class="btn sm primary" id="b-mundo-edicion">Edición</button>
       </div>
     </div>
     <nav class="views" id="views" aria-label="Secciones"></nav>
@@ -129,6 +154,7 @@
 
   <!-- Palacio, Dominio y Francia -->
   <section class="view" id="map-view" hidden>
+    <p class="note" id="map-partida-note" hidden></p>
     <div class="map-layout">
       <div class="pane">
         <div class="msearch">
@@ -145,15 +171,15 @@
 
   <!-- Personajes -->
   <section class="view" data-view="personajes" hidden>
-    <section class="pane">
+    <section class="pane" id="pane-unknown">
       <div class="pane-h"><h2>Rostros sin nombre</h2><span class="tag ej">Ejemplo</span></div>
       <p class="note">Gente que has visto sin saber quién es. Escribe tu conjetura: el narrador confirma los aciertos de tres en tres, sin decirte cuál falló.</p>
       <div class="plates" id="unknown"></div>
       <div class="note" id="guess-count"></div>
     </section>
     <section class="pane">
-      <div class="pane-h"><h2>Libro de caras</h2><span class="note" id="faces-count"></span><a class="note" href="libro.html" style="color:inherit">Abrir el libro completo →</a></div>
-      <div class="faces-tools">
+      <div class="pane-h"><h2 id="faces-title">Libro de caras</h2><span class="note" id="faces-count"></span><a class="note" id="faces-libro-link" href="libro.html" style="color:inherit">Abrir el libro completo →</a></div>
+      <div class="faces-tools" id="faces-tools">
         <input id="q" type="search" placeholder="Buscar por nombre o título" aria-label="Buscar">
         <select id="f-pres" aria-label="Presencia">
           <option value="">Toda presencia</option>
@@ -166,6 +192,21 @@
       </div>
       <div id="faces" style="display:grid;gap:14px"></div>
     </section>
+  </section>
+
+  <!-- Glosario completo (Mundo) -->
+  <section class="view" data-view="glosario" hidden>
+    <section class="pane">
+      <div class="pane-h"><h2>Glosario completo</h2><span class="note" id="gl-mundo-count"></span></div>
+      <div class="tabs" role="tablist" id="gl-mundo-tabs"></div>
+      <div class="glossary" id="glossary-mundo"></div>
+    </section>
+  </section>
+
+  <!-- Mecánicas (Mundo) -->
+  <section class="view" data-view="mecanicas" hidden>
+    <div class="pane-h"><h2>Mecánicas y reglas</h2><span class="note">Resumen de REGLAS.md; si difiere, manda REGLAS.md</span></div>
+    <div id="mecanicas-body" class="mecanicas"></div>
   </section>
 
   <!-- Diario -->
@@ -204,7 +245,8 @@
 <div class="overlay" id="lectern" hidden></div>
 <div class="overlay" id="partida" hidden>
   <section class="menu" role="dialog" aria-label="Partida">
-    <div class="pane-h"><h2>Partida</h2><button class="x" id="p-close" aria-label="Cerrar">×</button></div>
+    <div class="pane-h"><h2 id="p-title">Partida</h2><button class="x" id="p-close" aria-label="Cerrar">×</button></div>
+    <div id="p-sec-partida" style="display:grid;gap:12px">
     <div class="row">
       <div class="field"><label class="label" for="p-nombre">Nombre de la partida</label><input id="p-nombre" autocomplete="off"></div>
       <button class="btn primary" id="p-save">Guardar</button>
@@ -219,6 +261,8 @@
       <input type="file" id="p-import" accept=".json,application/json" hidden>
     </div>
     <div class="rule"></div>
+    </div>
+    <div id="p-sec-edicion" style="display:grid;gap:12px">
     <span class="label">Edición del juego (solo el dueño)</span>
     <div class="row">
       <div class="field"><label class="label" for="p-llave">Llave de GitHub</label><input id="p-llave" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…"></div>
@@ -226,44 +270,48 @@
       <button class="btn sm danger" id="p-llave-x">Quitar llave</button>
     </div>
     <span class="status" id="p-llave-st"></span>
+    </div>
+    <div id="p-sec-acciones" style="display:grid;gap:12px">
     <div class="rule"></div>
     <div class="row">
       <button class="btn sm" id="p-perso">Cambiar personaje</button>
       <button class="btn sm" id="p-epocas">Volver a las épocas</button>
       <button class="btn sm danger" id="p-new">Nueva partida</button>
     </div>
+    </div>
   </section>
 </div>
 <nav class="mnav" id="mnav" hidden aria-label="Secciones"></nav>
 
-<script src="js/00-datos.js?v=202611210555"></script>
-<script src="js/01-epocas.js?v=202611210555"></script>
-<script src="js/02-fechas.js?v=202611210555"></script>
-<script src="js/03-catalogos.js?v=202611210555"></script>
-<script src="js/04-nombres-de-epoca.js?v=202611210555"></script>
-<script src="js/05-creacion-de-personaje.js?v=202611210555"></script>
-<script src="js/06-familia-del-jugador.js?v=202611210555"></script>
-<script src="js/07-contenido-de-ejemplo.js?v=202611210555"></script>
-<script src="js/08-utilidades.js?v=202611210555"></script>
-<script src="js/heraldica.js?v=202611210555"></script>
-<script src="js/09-selector.js?v=202611210555"></script>
-<script src="js/10-barra.js?v=202611210555"></script>
-<script src="js/11-escritorio.js?v=202611210555"></script>
-<script src="js/12-mapas.js?v=202611210555"></script>
-<script src="js/13-buscador-de-lugares.js?v=202611210555"></script>
-<script src="js/14-francia-mapa-de-provincias-a.js?v=202611210555"></script>
-<script src="js/15-caras.js?v=202611210555"></script>
-<script src="js/16-linaje.js?v=202611210555"></script>
-<script src="js/17-diario-y-glosario.js?v=202611210555"></script>
-<script src="js/18-planes.js?v=202611210555"></script>
-<script src="js/19-calendario.js?v=202611210555"></script>
-<script src="js/20-epocas-pantalla.js?v=202611210555"></script>
-<script src="js/21-partidas-guardar-cargar-expo.js?v=202611210555"></script>
-<script src="js/22-biografia-y-relaciones.js?v=202611210555"></script>
-<script src="js/23-navegacion.js?v=202611210555"></script>
-<script src="js/24-panel-lateral.js?v=202611210555"></script>
-<script src="js/github.js?v=202611210555"></script>
-<script src="js/99-estatico.js?v=202611210555"></script>
+<script src="js/00-datos.js?v=202611221603"></script>
+<script src="js/01-epocas.js?v=202611221603"></script>
+<script src="js/02-fechas.js?v=202611221603"></script>
+<script src="js/03-catalogos.js?v=202611221603"></script>
+<script src="js/04-nombres-de-epoca.js?v=202611221603"></script>
+<script src="js/05-creacion-de-personaje.js?v=202611221603"></script>
+<script src="js/06-familia-del-jugador.js?v=202611221603"></script>
+<script src="js/07-contenido-de-ejemplo.js?v=202611221603"></script>
+<script src="js/08-utilidades.js?v=202611221603"></script>
+<script src="js/heraldica.js?v=202611221603"></script>
+<script src="js/09-selector.js?v=202611221603"></script>
+<script src="js/10-barra.js?v=202611221603"></script>
+<script src="js/11-escritorio.js?v=202611221603"></script>
+<script src="js/12-mapas.js?v=202611221603"></script>
+<script src="js/13-buscador-de-lugares.js?v=202611221603"></script>
+<script src="js/14-francia-mapa-de-provincias-a.js?v=202611221603"></script>
+<script src="js/15-caras.js?v=202611221603"></script>
+<script src="js/16-linaje.js?v=202611221603"></script>
+<script src="js/17-diario-y-glosario.js?v=202611221603"></script>
+<script src="js/18-planes.js?v=202611221603"></script>
+<script src="js/19-calendario.js?v=202611221603"></script>
+<script src="js/20-epocas-pantalla.js?v=202611221603"></script>
+<script src="js/21-partidas-guardar-cargar-expo.js?v=202611221603"></script>
+<script src="js/22-biografia-y-relaciones.js?v=202611221603"></script>
+<script src="js/25-mecanicas.js?v=202611221603"></script>
+<script src="js/23-navegacion.js?v=202611221603"></script>
+<script src="js/24-panel-lateral.js?v=202611221603"></script>
+<script src="js/github.js?v=202611221603"></script>
+<script src="js/99-estatico.js?v=202611221603"></script>
 
 
 </body></html>

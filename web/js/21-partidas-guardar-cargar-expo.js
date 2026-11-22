@@ -1,9 +1,9 @@
 /* ---------- Partidas: guardar, cargar, exportar ---------- */
-const KEYS=["vg_retrato","vg_epoca","vg_player","vg_docs","vg_notas","vg_guess","vg_planes","vg_diario","vg_glosario","vg_fecha"];
+const KEYS=["vg_retrato","vg_epoca","vg_player","vg_docs","vg_notas","vg_guess","vg_planes","vg_diario","vg_glosario","vg_fecha","vg_conocidos","vg_lugares"];
 let db=null, downloads=null, sesion=store.get("vg_sesion",null);
 const ready=(async()=>{try{if(window.claude?.use){[db,downloads]=await Promise.all([claude.use("db").catch(()=>null),claude.use("downloads").catch(()=>null)])}}catch(e){}})();
 ready.then(()=>{if(!db)return;
-  const redraw=()=>{try{drawFaces()}catch(e){};try{if(!$("#selector").hidden&&modo==="existente")renderExistentes();if(!$("#game").hidden&&player?.existente)buildBar()}catch(e){}};
+  const redraw=()=>{try{drawFaces()}catch(e){};try{if(!$("#selector").hidden&&modo==="existente")renderExistentes();if(!$("#game").hidden&&appMode==="partida"&&player?.existente)buildBar()}catch(e){}};
   db.collection("personajes").onSnapshot(s=>{LIBRO=s.docs.filter(d=>d.exists).map(d=>({id:d.id,...d.data()})).sort((a,b)=>(a.orden||0)-(b.orden||0));redraw()},()=>{});
   db.collection("estancias").onSnapshot(s=>{ESTANCIAS={};s.docs.forEach(d=>{if(d.exists){const v=d.data();if(v&&v.img)ESTANCIAS[d.id]=v.img}});
     if(mapSel&&mapSel.id&&document.querySelector(".zone.sel"))showRoom(mapSel.id,mapSel.n,mapSel.d)},()=>{});
@@ -18,11 +18,12 @@ ready.then(()=>{if(!db)return;
   db.collection("retratos").onSnapshot(s=>{RETR={};s.docs.forEach(d=>{if(d.exists){const v=d.data();if(v&&v.img)RETR[d.id]=v.img}});redraw()},()=>{});
 });
 function snapshot(){const o={};KEYS.forEach(k=>o[k]=store.get(k,null));
-  o.vg_epoca=epoca?.id||null;o.vg_player=player;o.vg_docs=deskState;o.vg_guess=guesses;o.vg_planes=planes;o.vg_glosario=[...unlocked];return o}
+  o.vg_epoca=epoca?.id||null;o.vg_player=player;o.vg_docs=deskState;o.vg_guess=guesses;o.vg_planes=planes;o.vg_glosario=[...unlocked];o.vg_conocidos=[...conocidos];o.vg_lugares=[...descubiertos];return o}
 function restore(o){
   KEYS.forEach(k=>store.set(k,o[k]));
   epoca=EPOCAS.find(e=>e.id===o.vg_epoca)||null; player=o.vg_player||null; deskState=o.vg_docs||{}; guesses=o.vg_guess||{};
   planes=o.vg_planes||[PLAN_EJEMPLO]; unlocked=new Set(o.vg_glosario||[]);
+  conocidos=new Set(o.vg_conocidos||[]); descubiertos=new Set(o.vg_lugares||LUGARES_INICIALES);
 }
 function defaultName(){return (player||EJEMPLO).nombre.split(" ").slice(-1)[0]+" · "+(epoca?.año||"")}
 async function listSaves(){
@@ -55,11 +56,18 @@ async function drawSaves(){
       el("span",{class:"acts"},el("button",{class:"btn sm",onclick:()=>{restore(s.estado);sesion=s.id;store.set("vg_sesion",s.id);closeMenu();show(epoca?(player?"game":"selector"):"epocas")}},"Cargar"),del)));
   });
 }
-function openMenu(){$("#p-nombre").value=defaultName();setStatus(db?"Las partidas se guardan en tu cuenta de Claude.":"Las partidas se guardan en este navegador.");$("#partida").hidden=false;drawSaves();$("#p-save").focus()}
+/* modo "partida": guardar/cargar y acciones de partida. modo "edicion" (desde Mundo): solo la llave de GitHub. */
+function openMenu(modo){
+  const ed=modo==="edicion";
+  $("#p-title").textContent=ed?"Edición del mundo":"Partida";
+  $("#p-sec-partida").hidden=ed; $("#p-sec-acciones").hidden=ed;
+  $("#p-sec-edicion").hidden=false;
+  $("#p-nombre").value=defaultName();setStatus(db?"Las partidas se guardan en tu cuenta de Claude.":"Las partidas se guardan en este navegador.");$("#partida").hidden=false;
+  if(ed)$("#p-llave").focus(); else{drawSaves();$("#p-save").focus()}
+}
 function closeMenu(){$("#partida").hidden=true}
-$("#b-partida").onclick=openMenu; $("#p-close").onclick=closeMenu; $("#p-save").onclick=saveSession;
+$("#b-partida").onclick=()=>openMenu("partida"); $("#p-close").onclick=closeMenu; $("#p-save").onclick=saveSession;
 $("#partida").addEventListener("click",e=>{if(e.target.id==="partida")closeMenu()});
-$("#b-back").onclick=()=>show("epocas");
 $("#p-epocas").onclick=()=>{closeMenu();show("epocas")};
 $("#p-perso").onclick=()=>{closeMenu();show("selector")};
 $("#p-new").onclick=e=>{const b=e.currentTarget;if(b.dataset.armed!=="1"){b.dataset.armed="1";b.textContent="¿Empezar de cero? Lo no guardado se pierde";return}

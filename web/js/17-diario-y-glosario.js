@@ -24,3 +24,15 @@ function drawGlossary(hl){
   $("#gl-count").textContent=unlocked.size+" de "+GLOSARIO.length+" entradas";
 }
 function showGloss(id){glCat="Todas";drawGlossary(id);document.getElementById("gl-"+id)?.scrollIntoView({block:"center"})}
+
+/* Glosario completo (sección Mundo): todas las entradas, sin bloqueos. */
+let glMundoCat="Todas";
+function drawGlossaryMundo(){
+  const t=$("#gl-mundo-tabs"), box=$("#glossary-mundo"); if(!t||!box)return;
+  const cats=["Todas",...new Set(GLOSARIO.map(g=>g.cat))];
+  t.innerHTML=""; cats.forEach(c=>t.append(el("button",{role:"tab","aria-selected":String(c===glMundoCat),onclick:()=>{glMundoCat=c;drawGlossaryMundo()}},c)));
+  box.innerHTML="";
+  const items=GLOSARIO.filter(g=>glMundoCat==="Todas"||g.cat===glMundoCat).sort((a,b)=>a.termino.localeCompare(b.termino,"es"));
+  items.forEach(g=>box.append(el("div",{class:"gl-item",id:"glm-"+g.id},el("h3",{},g.termino),el("span",{class:"label"},g.cat),el("p",{},g.def))));
+  $("#gl-mundo-count").textContent=items.length+" de "+GLOSARIO.length+" entradas";
+}
