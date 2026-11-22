@@ -4,16 +4,18 @@
 ready.then(async()=>{
   if(db)return;
   try{
-    const [per,idx,sim,ocu,cas]=await Promise.all([
+    const [per,idx,sim,ocu,cas,tit]=await Promise.all([
       fetch("datos/personajes.json").then(r=>r.json()),
       fetch("datos/indice.json").then(r=>r.json()),
       fetch("datos/simbolos.json").then(r=>r.ok?r.json():[]).catch(()=>[]),
       fetch("datos/ocupantes.json").then(r=>r.ok?r.json():{}).catch(()=>({})),
-      fetch("datos/casas.json").then(r=>r.ok?r.json():[]).catch(()=>[])
+      fetch("datos/casas.json").then(r=>r.ok?r.json():[]).catch(()=>[]),
+      fetch("datos/titulos.json").then(r=>r.ok?r.json():null).catch(()=>null)
     ]);
     LIBRO=per;
     SIMBOLOS=Array.isArray(sim)?sim:[];
     OCUP_DB=ocu||{};
+    if(tit&&typeof setTitulosData==="function"){setTitulosData(tit);if(!$("#game").hidden&&current==="titulos")drawTitulos()}
     if(typeof Heraldica!=="undefined"){Heraldica.setCasas(Array.isArray(cas)?cas:[]);Heraldica.poblarSelect($("#f-casa"),LIBRO,"Toda casa")}
     RETR={};(idx.retratos||[]).forEach(f=>{RETR[f.replace(/\.\w+$/,"")]="datos/retratos/"+f});
     ESTANCIAS={};(idx.estancias||[]).forEach(f=>{ESTANCIAS[f.replace(/\.\w+$/,"")]="datos/estancias/"+f});

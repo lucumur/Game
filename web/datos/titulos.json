@@ -1,0 +1,1620 @@
+{
+  "tipos": [
+    {
+      "id": "corona",
+      "nombre": "Corona real",
+      "categoria": "soberano",
+      "es_tecnico": false,
+      "definicion": "Soberanía real de Francia (en 1722, Luis XV, rey menor de edad bajo la regencia de Felipe II de Orleans).",
+      "aclaraciones": "En este catálogo sirve de título raíz del reino: de la Corona dependen los ducados-parías, los apanajes reversibles y las demás dignidades feudales directas.",
+      "historia": "La monarquía capeta y borbónica reunió progresivamente los grandes feudos medievales al dominio real, conservando las parías —seis eclesiásticas antiguas y un cuerpo creciente de parías laicas— como alta corte del reino.",
+      "derechos_generales": [
+        "Soberanía legislativa y judicial suprema (lecho de justicia en el Parlamento).",
+        "Erección, registro y reversión de ducados-parías y apanajes.",
+        "Nombramiento de cargos de la Corona, prelados y gobernadores."
+      ],
+      "obligaciones_generales": [
+        "Jurar los deberes del reino en la consagración de Reims.",
+        "Mantener el dominio de la Corona como inalienable salvo apanaje o empeño."
+      ],
+      "confianza": "confirmado",
+      "fuente": "Derecho público de la monarquía francesa (s. XVII–XVIII)."
+    },
+    {
+      "id": "ducado-paria-laico",
+      "nombre": "Ducado-Paría laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "definicion": "Dignidad ducal unida a la condición de Par de Francia, verificada y registrada por letras patentes en el Parlamento de París.",
+      "aclaraciones": "No debe confundirse con un gobierno militar provincial ni con el mando de una intendencia: la paría da precedencia, asiento en el Parlamento y rango de corte, no el gobierno administrativo de una provincia.",
+      "historia": "Tras extinguirse o reunirse a la Corona las parías laicas medievales, los reyes desde el siglo XVI erigieron nuevas tierras en ducados-parías hereditarios (generalmente por línea masculina). La precedencia entre pares se regía por la antigüedad del registro en el Parlamento (Uzès era la más antigua en 1722), salvo los Príncipes de la Sangre y los pares eclesiásticos.",
+      "derechos_generales": [
+        "Asiento y voz deliberativa en el Parlamento de París (en sesiones solemnes y juicios de pares).",
+        "Precedencia cortesana en ceremonias y en el Sacre de Reims.",
+        "Honores propios del rango (taburete para la duquesa en presencia de la reina, entrada en carroza según etiqueta)."
+      ],
+      "obligaciones_generales": [
+        "Juramento y recepción formal ante el Parlamento de París.",
+        "Servicio al rey y asistencia ceremonial cuando la Corona convoca a los pares."
+      ],
+      "confianza": "confirmado",
+      "fuente": "Père Anselme; Almanach royal 1722; memorias de Saint-Simon."
+    },
+    {
+      "id": "ducado-paria-eclesiastico",
+      "nombre": "Ducado-Paría eclesiástico",
+      "categoria": "eclesiastico",
+      "es_tecnico": false,
+      "definicion": "Dignidad ducal y de Par de Francia unida perpetuamente a tres sedes episcopales históricas (Reims, Laon y Langres), no hereditaria por sangre sino aneja al obispado o arzobispado.",
+      "aclaraciones": "A diferencia de los ducados-parías laicos, no se transmite por linaje: acompaña al prelado nombrado por el rey y confirmado canónicamente para esa sede. En los rangos del reino precede a los condados-parías eclesiásticos y, en la consagración, cada sede tiene una función litúrgica fija.",
+      "historia": "Integra el grupo canónico de los seis pares eclesiásticos antiguos (tres duques: Reims, Laon, Langres; tres condes: Beauvais, Châlons, Noyon), consolidado desde la Edad Media y mantenido intacto en 1722. En 1674/1690 el arzobispo de París había recibido también la paría de Saint-Cloud, fuera de los seis antiguos.",
+      "derechos_generales": [
+        "Asiento y voz en el Parlamento de París como Par Eclesiástico.",
+        "Precedencia sobre los condes-pares eclesiásticos y oficio propio en la consagración de Reims.",
+        "Señorío temporal vinculado a la sede episcopal (alcance concreto por verificar)."
+      ],
+      "obligaciones_generales": [
+        "Gobierno espiritual y temporal de la diócesis.",
+        "Asistencia ceremonial al rey y función litúrgica en la consagración de Reims."
+      ],
+      "confianza": "confirmado",
+      "fuente": "Gallia Christiana; Almanach royal 1722; Sacre de Louis XV (1722)."
+    },
+    {
+      "id": "ducado-apanaje",
+      "nombre": "Ducado de apanaje",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "definicion": "Ducado concedido por la Corona a un hijo menor de Francia (y sus descendientes varones) para sostener el rango de su rama.",
+      "aclaraciones": "Estrictamente distinto de una tierra patrimonial privada o de un gobierno de provincia: el apanaje es reversible a la Corona si se extingue la línea masculina legítima, y el apanajado no puede enajenarlo libremente.",
+      "historia": "Sustituyó desde el siglo XIII–XIV los antiguos repartos patrimoniales que desmembraban el reino. En junio de 1722 el único gran apanaje real vigente es el de la Casa de Orleans (erigido para Monsieur, hermano de Luis XIV, y heredado por Felipe II de Orleans).",
+      "derechos_generales": [
+        "Percepción de rentas dominiales, derechos señoriales y presentación a ciertos oficios dentro del apanaje.",
+        "Rango principesco de hijo/nieto de Francia o primer príncipe de la sangre."
+      ],
+      "obligaciones_generales": [
+        "Inalienabilidad del fondo del apanaje.",
+        "Reversión automática a la Corona al extinguirse la descendencia masculina legítima."
+      ],
+      "confianza": "confirmado",
+      "fuente": "Mapa 4 (Apanajes y Patrimonios) en 14-francia-mapa-de-provincias-a.js; REGLAS.md."
+    },
+    {
+      "id": "ducado",
+      "nombre": "Ducado (sin paría / feudal / engagiste)",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "definicion": "Título ducal territorial que otorga rango de duque pero carece de la dignidad de Par de Francia (o cuyo disfrute procede de un empeño o cesión real —engagiste— o de erección antigua sin paría registrada).",
+      "aclaraciones": "Un duque sin paría (como un duc à brevet o un duque simple con letras verificadas sin paría) goza de honores ducales en la corte según su concesión, pero no tiene asiento ni voto de par en el Parlamento de París. Tampoco debe confundirse un ducado engagiste (como el Borbonés cedido a Condé) con un apanaje real.",
+      "historia": "La monarquía distinguió entre duques y pares, duques hereditarios no pares y duques vitalicios (à brevet). Algunos ducados históricos reunidos a la Corona fueron luego cedidos en empeño o verificados tardíamente.",
+      "derechos_generales": [
+        "Tratamiento y título ducal según los términos de las letras patentes.",
+        "Disfrute de las rentas y derechos señoriales del dominio asociado."
+      ],
+      "obligaciones_generales": [
+        "Vasallaje y fidelidad a la Corona.",
+        "Respeto de las condiciones de reversión o rescate si se trata de un dominio engagiste."
+      ],
+      "confianza": "probable",
+      "fuente": "FEUDOS (Nevers, Longueville, Borbonés) y derecho nobiliario francés."
+    },
+    {
+      "id": "marquesado",
+      "nombre": "Marquesado",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "definicion": "Título nobiliario territorial erigido por la Corona mediante unión o elevación de señoríos, situado jerárquicamente entre el condado y el ducado.",
+      "aclaraciones": "En la corte francesa del siglo XVIII el uso social del título de marqués se extendió con frecuencia por cortesía o posesión de tierra; en sentido estricto, exige letras patentes registradas en el Parlamento y la Cámara de Cuentas.",
+      "historia": "Originalmente ligado a marcas fronterizas, desde el siglo XVI se convirtió en título de dignidad concedido a casas nobles o de alta toga/finanzas con tierras suficientes.",
+      "derechos_generales": [
+        "Uso del título y corona de marqués.",
+        "Derechos señoriales y de justicia anexos a las tierras erigidas (alcance concreto por verificar en cada feudo)."
+      ],
+      "obligaciones_generales": [
+        "Homenaje feudal y registro de las letras patentes.",
+        "Carga y conservación de las tierras según el edicto de erección."
+      ],
+      "confianza": "probable",
+      "fuente": "FEUDOS (Maintenon, Castries, Montespan); diccionarios nobiliarios de época."
+    },
+    {
+      "id": "condado-paria-laico",
+      "nombre": "Condado-Paría laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "definicion": "Título condal unido a la dignidad de Par de Francia (caso singular como el Condado-Paría de Eu).",
+      "aclaraciones": "Concede rango y asiento de Par en el Parlamento pese a mantener denominación condal en lugar de ducal.",
+      "historia": "Históricamente los condados-parías primitivos (Flandes, Champaña, Toulouse) fueron los grandes feudos medievales; en época moderna fue rarísimo mantener la paría bajo título condal, destacándose Eu en manos de los Borbón-Maine.",
+      "derechos_generales": [
+        "Asiento y voz de Par en el Parlamento de París.",
+        "Rentas y jurisdicción condal del territorio."
+      ],
+      "obligaciones_generales": [
+        "Recepción ante el Parlamento y asistencia ceremonial como Par."
+      ],
+      "confianza": "probable",
+      "fuente": "FEUDOS (eu)."
+    },
+    {
+      "id": "condado-paria-eclesiastico",
+      "nombre": "Condado-Paría eclesiástico",
+      "categoria": "eclesiastico",
+      "es_tecnico": false,
+      "definicion": "Dignidad condal y de Par de Francia aneja perpetuamente a tres obispados históricos de la provincia de Reims: Beauvais, Châlons-sur-Marne y Noyon.",
+      "aclaraciones": "Al igual que los ducados-parías eclesiásticos, no es hereditaria por familia sino vinculada al cargo episcopal de la sede. Sigue en precedencia a los tres duques-pares eclesiásticos.",
+      "historia": "Completa el colegio medieval de los seis pares eclesiásticos del reino y conserva en 1722 sus papeles ceremoniales en la consagración del rey en Reims (manto real, anillo real y tahalí real).",
+      "derechos_generales": [
+        "Asiento y voz en el Parlamento de París como Par Eclesiástico.",
+        "Lugar y oficio fijo en el Sacre de Reims."
+      ],
+      "obligaciones_generales": [
+        "Gobierno de la diócesis y asistencia ceremonial al rey."
+      ],
+      "confianza": "confirmado",
+      "fuente": "Gallia Christiana; Almanach royal 1722; Sacre de Louis XV (1722)."
+    },
+    {
+      "id": "condado",
+      "nombre": "Condado",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "definicion": "Título nobiliario territorial clásico, inferior en dignidad al marquesado y al ducado, vinculado a una tierra con derechos señoriales y jurisdiccionales propios.",
+      "aclaraciones": "Muchos príncipes de la sangre y duques acumulaban condados patrimoniales o antiguos feudos (como Charolais, Dammartin o Alès) aparte de su título principal.",
+      "historia": "De origen carolingio y feudal, en la Francia de 1722 coexisten condados medievales muy antiguos con condados erigidos por letras patentes reales en los siglos XVI–XVIII.",
+      "derechos_generales": [
+        "Título condal y precedencia señorial local.",
+        "Rentas feudales, peajes y justicia señorial según carta y costumbre."
+      ],
+      "obligaciones_generales": [
+        "Homenaje debido al rey o al señor feudo-superior correspondiente."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS."
+    },
+    {
+      "id": "cargo",
+      "nombre": "Cargo / Oficio de la Corona o de la Casa del Rey",
+      "categoria": "cargo",
+      "es_tecnico": false,
+      "definicion": "Puesto oficial de servicio, mando o administración (Gran Chambelán, Secretario de Estado, Gobernador militar, Intendente, Primer Presidente de Parlamento).",
+      "aclaraciones": "No debe mezclarse con los títulos feudales o nobiliarios territoriales: un mismo personaje puede ser duque y a la vez Gobernador o Gran Oficial, pero son títulos distintos con atribuciones y transmisiones distintas.",
+      "historia": "Reservado para las siguientes tandas del catálogo de títulos.",
+      "derechos_generales": [
+        "Accesos, emolumentos y funciones propias del oficio (a detallar por cargo)."
+      ],
+      "obligaciones_generales": [
+        "Desempeño del servicio o función ante el rey o el tribunal."
+      ],
+      "confianza": "confirmado",
+      "fuente": "REGLAS.md; COLABORAR.md."
+    },
+    {
+      "id": "honorifico",
+      "nombre": "Título honorífico / Brevet / Orden",
+      "categoria": "honorifico",
+      "es_tecnico": false,
+      "definicion": "Distinción personal, orden de caballería (Espíritu Santo, San Luis) o brevet de honor sin tierra feudal asociada.",
+      "aclaraciones": "Generalmente vitalicio y dependiente de la gracia real directa, no transmisible por herencia.",
+      "historia": "Reservado para futuras tandas del catálogo de títulos.",
+      "derechos_generales": [
+        "Insignia, tratamiento o privilegio cortesano específico del brevet u orden."
+      ],
+      "obligaciones_generales": [
+        "Lealtad y observancia de los estatutos de la orden o concesión."
+      ],
+      "confianza": "probable",
+      "fuente": "Diseño del sistema de títulos."
+    },
+    {
+      "id": "tecnico",
+      "nombre": "Título técnico (clasificatorio)",
+      "categoria": "tecnico",
+      "es_tecnico": true,
+      "definicion": "Etiqueta estructural del juego usada para clasificar grupos, dependencias o roles funcionales que no existían nombrados como un título formal en la Francia de 1722.",
+      "aclaraciones": "Se marca explícitamente como «Técnico» en la ficha para no confundirlo jamás con un título histórico real.",
+      "historia": "Categoría instrumental prevista para organizar jerarquías y mecánicas dentro de la base de datos.",
+      "derechos_generales": [
+        "Define vínculos, agrupaciones o reglas internas dentro del sistema del juego."
+      ],
+      "obligaciones_generales": [
+        "Debe permanecer claramente distinguido de los títulos históricos."
+      ],
+      "confianza": "confirmado",
+      "fuente": "Diseño del sistema de títulos."
+    }
+  ],
+  "titulos": [
+    {
+      "id": "corona-francia",
+      "nombre": "Corona de Francia",
+      "tipo_id": "corona",
+      "categoria": "soberano",
+      "es_tecnico": false,
+      "titular_id": "luis-xv",
+      "titular_nombre": "Luis XV (menor de edad; Regencia de Felipe II de Orleans)",
+      "casa": "Casa de Borbón (Casa Real de Francia)",
+      "emblema": null,
+      "escudo_key": "ap-corona",
+      "feudo_id": null,
+      "dioc_id": null,
+      "provincia": "Reino de Francia",
+      "lon": 2.35,
+      "lat": 48.86,
+      "extension": "Reino de Francia (36 provincias / gobiernos generales)",
+      "superior_id": null,
+      "subordinados_ids": [],
+      "posesiones": "Dominio de la Corona y soberanía suprema del Reino.",
+      "otorga": "Soberanía real, derecho de gracia, erección de títulos y provisión de cargos y beneficios mayores.",
+      "derechos": [
+        "Soberanía sobre todos los feudos, parías y cortes del reino.",
+        "Convocatoria del Parlamento en lecho de justicia."
+      ],
+      "obligaciones": [
+        "Conservar íntegro el patrimonio inalienable de la Corona.",
+        "Hacer justicia y proteger al reino y la Iglesia galicana."
+      ],
+      "confianza": "confirmado",
+      "fuente": "Mapa 4 (ap-corona) y personajes.json (p01)",
+      "nota": "Título raíz del catálogo en junio de 1722; durante la minoría de Luis XV ejerce el poder el Regente Felipe II de Orleans."
+    },
+    {
+      "id": "ducado-reims",
+      "nombre": "Arzobispado-Ducado de Reims",
+      "tipo_id": "ducado-paria-eclesiastico",
+      "categoria": "eclesiastico",
+      "es_tecnico": false,
+      "titular_id": "armand-jules-rohan",
+      "titular_nombre": "Armand-Jules de Rohan-Guémené",
+      "casa": "Casa de Rohan-Guémené (Iglesia)",
+      "emblema": "datos/sedes/reims.svg",
+      "feudo_id": "reims-paria",
+      "dioc_id": "dioc-reims",
+      "provincia": "Champaña",
+      "lon": 4.03,
+      "lat": 49.26,
+      "extension": "Sede metropolitana de Reims y señorío temporal anexo (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Más de 80.000 libras de renta anual y señorío temporal sobre Reims.",
+      "otorga": "Rango de Primer Par Eclesiástico de Francia y primacía en la consagración real.",
+      "derechos": [
+        "Ungir y coronar al Rey de Francia en la catedral de Reims.",
+        "Primer asiento entre los pares eclesiásticos en el Parlamento de París."
+      ],
+      "obligaciones": [
+        "Gobierno de la archidiócesis de Reims y su provincia eclesiástica.",
+        "Oficiar el Sacre real (octubre de 1722 para Luis XV)."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (reims-paria), DIOCESIS_LIST (dioc-reims), personajes.json (p74)",
+      "nota": "Nombrado el 2 de junio de 1722 (confirmado en julio y consagrado obispo el 23 de agosto de 1722)."
+    },
+    {
+      "id": "ducado-laon",
+      "nombre": "Obispado-Ducado de Laon",
+      "tipo_id": "ducado-paria-eclesiastico",
+      "categoria": "eclesiastico",
+      "es_tecnico": false,
+      "titular_id": null,
+      "titular_nombre": "Charles de Saint-Albin",
+      "casa": "Casa de Orleans (hijo natural del Regente)",
+      "emblema": "datos/sedes/laon.svg",
+      "feudo_id": null,
+      "dioc_id": "dioc-laon",
+      "provincia": "Picardía / Île-de-France (Laon)",
+      "lon": 3.62,
+      "lat": 49.56,
+      "extension": "Diócesis de Laon (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Unas 30.000 libras de renta anual y señorío episcopal de Laon (por verificar detalle).",
+      "otorga": "Rango de Segundo Par Eclesiástico del reino.",
+      "derechos": [
+        "Llevar la Santa Ampolla en el Sacre de Reims.",
+        "Asiento y voz de Par Eclesiástico en el Parlamento de París."
+      ],
+      "obligaciones": [
+        "Gobierno de la diócesis de Laon (sufragánea de Reims)."
+      ],
+      "confianza": "confirmado",
+      "fuente": "Gallia Christiana; Diario de Barbier; DIOCESIS_LIST (dioc-laon)",
+      "nota": "Consagrado el 26 de abril de 1722 expresamente a tiempo para el Sacre de Reims."
+    },
+    {
+      "id": "ducado-langres",
+      "nombre": "Obispado-Ducado de Langres",
+      "tipo_id": "ducado-paria-eclesiastico",
+      "categoria": "eclesiastico",
+      "es_tecnico": false,
+      "titular_id": null,
+      "titular_nombre": "François-Louis de Clermont-Tonnerre",
+      "casa": "Casa de Clermont-Tonnerre (Iglesia)",
+      "emblema": "datos/sedes/langres.svg",
+      "feudo_id": null,
+      "dioc_id": "dioc-langres",
+      "provincia": "Champaña / Borgoña (Langres)",
+      "lon": 5.33,
+      "lat": 47.86,
+      "extension": "Diócesis de Langres (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Unas 35.000 libras de renta anual.",
+      "otorga": "Rango de Tercer Par Eclesiástico de Francia.",
+      "derechos": [
+        "Portar el cetro real en la consagración de Reims.",
+        "Asiento y voz de Par Eclesiástico en el Parlamento de París."
+      ],
+      "obligaciones": [
+        "Gobierno de la diócesis de Langres (sufragánea de Lyon)."
+      ],
+      "confianza": "confirmado",
+      "fuente": "Gallia Christiana; Almanach royal 1722; DIOCESIS_LIST (dioc-langres)",
+      "nota": "Obispo-duque desde 1695 hasta 1724."
+    },
+    {
+      "id": "condado-beauvais",
+      "nombre": "Obispado-Condado de Beauvais",
+      "tipo_id": "condado-paria-eclesiastico",
+      "categoria": "eclesiastico",
+      "es_tecnico": false,
+      "titular_id": null,
+      "titular_nombre": "François-Honoré-Antoine de Beauvilliers de Saint-Aignan",
+      "casa": "Casa de Beauvilliers (Iglesia)",
+      "emblema": "datos/sedes/beauvais.svg",
+      "feudo_id": null,
+      "dioc_id": "dioc-beauvais",
+      "provincia": "Île-de-France / Picardía (Beauvais)",
+      "lon": 2.08,
+      "lat": 49.43,
+      "extension": "Diócesis y condado episcopal de Beauvais (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Unas 55.000 libras anuales y señorío condal anexo a la sede.",
+      "otorga": "Rango de Cuarto Par Eclesiástico (primero de los obispos-condes).",
+      "derechos": [
+        "Portar el manto real en el Sacre de Reims.",
+        "Asiento de Par Eclesiástico en el Parlamento de París."
+      ],
+      "obligaciones": [
+        "Gobierno de la diócesis de Beauvais (sufragánea de Reims)."
+      ],
+      "confianza": "confirmado",
+      "fuente": "Gallia Christiana; Almanach royal 1722; DIOCESIS_LIST (dioc-beauvais)",
+      "nota": "Pariente cercano del duque de Saint-Aignan."
+    },
+    {
+      "id": "condado-chalons",
+      "nombre": "Obispado-Condado de Châlons-sur-Marne",
+      "tipo_id": "condado-paria-eclesiastico",
+      "categoria": "eclesiastico",
+      "es_tecnico": false,
+      "titular_id": null,
+      "titular_nombre": "Nicolas-Charles de Saulx-Tavannes",
+      "casa": "Casa de Saulx-Tavannes (Iglesia)",
+      "emblema": "datos/sedes/chalons.svg",
+      "feudo_id": null,
+      "dioc_id": "dioc-chalons",
+      "provincia": "Champaña",
+      "lon": 4.36,
+      "lat": 48.96,
+      "extension": "Diócesis de Châlons-sur-Marne (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Unas 30.000 libras de renta anual.",
+      "otorga": "Rango de Quinto Par Eclesiástico de Francia.",
+      "derechos": [
+        "Portar el anillo real en la consagración de Reims.",
+        "Asiento de Par Eclesiástico en el Parlamento de París."
+      ],
+      "obligaciones": [
+        "Gobierno de la diócesis de Châlons (sufragánea de Reims)."
+      ],
+      "confianza": "confirmado",
+      "fuente": "Gallia Christiana; Sacre de Louis XV (1722); DIOCESIS_LIST (dioc-chalons)",
+      "nota": "Nombrado en 1721 para suceder al fallecido hermano del duque de Noailles."
+    },
+    {
+      "id": "condado-noyon",
+      "nombre": "Obispado-Condado de Noyon",
+      "tipo_id": "condado-paria-eclesiastico",
+      "categoria": "eclesiastico",
+      "es_tecnico": false,
+      "titular_id": null,
+      "titular_nombre": "Charles-François de Châteauneuf de Rochebonne",
+      "casa": "Casa de Châteauneuf de Rochebonne (Iglesia)",
+      "emblema": "datos/sedes/noyon.svg",
+      "feudo_id": null,
+      "dioc_id": "dioc-noyon",
+      "provincia": "Picardía",
+      "lon": 3.00,
+      "lat": 49.58,
+      "extension": "Diócesis de Noyon (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Unas 32.000 libras de renta anual.",
+      "otorga": "Rango de Sexto Par Eclesiástico del reino.",
+      "derechos": [
+        "Portar el tahalí real en la ceremonia de Reims.",
+        "Asiento de Par Eclesiástico en el Parlamento de París."
+      ],
+      "obligaciones": [
+        "Gobierno de la diócesis de Noyon (sufragánea de Reims)."
+      ],
+      "confianza": "confirmado",
+      "fuente": "Gallia Christiana; Almanach royal 1722; DIOCESIS_LIST (dioc-noyon)",
+      "nota": "Firme sostén de la bula Unigenitus."
+    },
+    {
+      "id": "ducado-chevreuse",
+      "nombre": "Ducado-Paría de Chevreuse",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "charles-philippe-luynes",
+      "titular_nombre": "Charles-Philippe d'Albert, IV Duque de Luynes",
+      "casa": "Casa d'Albert de Luynes",
+      "emblema": null,
+      "feudo_id": "montfort",
+      "dioc_id": null,
+      "provincia": "Île-de-France",
+      "lon": 1.78,
+      "lat": 48.78,
+      "extension": "Por verificar (Dampierre y tierras asociadas tras el trueque con Luis XIV)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Bosques, censos señoriales y bailía entre Versalles, Dampierre y Dreux (más de 90.000 libras en el conjunto de los feudos de Luynes/Chevreuse/Montfort).",
+      "otorga": "Dignidad ducal y paría de Francia.",
+      "derechos": [
+        "Precedencia y asiento de Par en el Parlamento de París."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "probable",
+      "fuente": "FEUDOS (montfort) y personajes.json (p45)",
+      "nota": "Luis XIV adquirió las tierras originales de Chevreuse para ampliar el Gran Parque de Versalles a cambio del condado de Montfort-l'Amaury, conservando la casa el título."
+    },
+    {
+      "id": "condado-montfort",
+      "nombre": "Condado de Montfort-l'Amaury",
+      "tipo_id": "condado",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "charles-philippe-luynes",
+      "titular_nombre": "Charles-Philippe d'Albert, IV Duque de Luynes",
+      "casa": "Casa d'Albert de Luynes",
+      "emblema": null,
+      "feudo_id": "montfort",
+      "dioc_id": null,
+      "provincia": "Île-de-France",
+      "lon": 1.78,
+      "lat": 48.78,
+      "extension": "Bailía y condado de Montfort-l'Amaury (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Bosques, bailía y censos señoriales entre Versalles y Dreux.",
+      "otorga": "Título y rentas condales entregados por Luis XIV en permuta de Chevreuse.",
+      "derechos": [
+        "Rentas señoriales y derechos de bailía (por verificar detalle)."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "probable",
+      "fuente": "FEUDOS (montfort) y personajes.json (p45)",
+      "nota": "Separado aquí de Chevreuse para mantener 1 ficha = 1 título."
+    },
+    {
+      "id": "condado-dammartin",
+      "nombre": "Condado de Dammartin",
+      "tipo_id": "condado",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "luis-enrique-borbon",
+      "titular_nombre": "Luis Enrique de Borbón-Condé («Monsieur le Duc»)",
+      "casa": "Casa de Borbón-Condé",
+      "emblema": null,
+      "feudo_id": "dammartin",
+      "dioc_id": null,
+      "provincia": "Île-de-France",
+      "lon": 2.62,
+      "lat": 49.08,
+      "extension": "Al noreste de París (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Rentas agrarias, bosques de caza y ferias (unido en la base patrimonial de Chantilly).",
+      "otorga": "Título condal y patrimonio señorial al noreste de París.",
+      "derechos": [
+        "Rentas señoriales y ferias (detalle por verificar)."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "probable",
+      "fuente": "FEUDOS (dammartin) y personajes.json (p12)",
+      "nota": "Vinculado en la práctica a Chantilly, corte rival de Versalles bajo Monsieur le Duc y la marquesa de Prie."
+    },
+    {
+      "id": "marquesado-maintenon",
+      "nombre": "Marquesado de Maintenon",
+      "tipo_id": "marquesado",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "noailles",
+      "titular_nombre": "Adrien-Maurice, III Duque de Noailles (por su esposa Françoise-Charlotte d'Aubigné)",
+      "casa": "Casa de Noailles",
+      "emblema": null,
+      "feudo_id": "maintenon",
+      "dioc_id": null,
+      "provincia": "Île-de-France / Beauce (Eure)",
+      "lon": 1.52,
+      "lat": 48.56,
+      "extension": "Tierras sobre el río Eure (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Tierras regadas por el Eure, molinos y señorío libre de deudas (dote dispuesta por Luis XIV en 1698).",
+      "otorga": "Título de marqués de Maintenon y rentas del señorío.",
+      "derechos": [
+        "Rentas agrarias y de molinos del señorío (detalle por verificar)."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (maintenon), personajes.json (p24, p125)",
+      "nota": "Heredado en 1719 a la muerte de Madame de Maintenon por su sobrina Françoise-Charlotte d'Aubigné, esposa del Duque de Noailles."
+    },
+    {
+      "id": "ducado-rambouillet",
+      "nombre": "Ducado-Paría de Rambouillet",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "comte-de-toulouse",
+      "titular_nombre": "Luis Alejandro de Borbón, Conde de Toulouse",
+      "casa": "Casa de Borbón-Toulouse",
+      "emblema": null,
+      "feudo_id": "rambouillet",
+      "dioc_id": null,
+      "provincia": "Île-de-France",
+      "lon": 1.83,
+      "lat": 48.62,
+      "extension": "Señorío y bosques de Rambouillet (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Uno de los señoríos mejor administrados del reino, adquirido en 1706 y erigido en Ducado-Paría en 1711.",
+      "otorga": "Ducado-Paría de Francia (1711).",
+      "derechos": [
+        "Asiento y rango de Par; disfrute forestal y señorial."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (rambouillet), personajes.json (p20)",
+      "nota": "Residencia predilecta del Conde de Toulouse, Almirante de Francia."
+    },
+    {
+      "id": "ducado-villeroy",
+      "nombre": "Ducado-Paría de Villeroy",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "villeroy",
+      "titular_nombre": "François de Neufville, II Duque y Mariscal de Villeroy",
+      "casa": "Casa de Neufville de Villeroy",
+      "emblema": null,
+      "feudo_id": "villeroy",
+      "dioc_id": null,
+      "provincia": "Île-de-France",
+      "lon": 2.46,
+      "lat": 48.52,
+      "extension": "Mennecy, Corbeil y tierras de Villeroy (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Rentas señoriales en Mennecy y Corbeil.",
+      "otorga": "Ducado-Paría (1651).",
+      "derechos": [
+        "Asiento y rango de Par de Francia en el Parlamento."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (villeroy), personajes.json (p09)",
+      "nota": "Solar del anciano Gobernador de Luis XV; primer lugar de confinamiento en su destierro de agosto de 1722."
+    },
+    {
+      "id": "ducado-rethel-mazarin",
+      "nombre": "Ducado-Paría de Rethel-Mazarin",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "paul-jules-mazarin",
+      "titular_nombre": "Paul-Jules de La Porte, Duque de Rethel-Mazarin",
+      "casa": "Casa de La Porte-Mazarin",
+      "emblema": null,
+      "feudo_id": "rethel",
+      "dioc_id": null,
+      "provincia": "Champaña",
+      "lon": 4.38,
+      "lat": 49.52,
+      "extension": "Más de treinta parroquias en las Ardenas champañesas",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Más de treinta parroquias, herrerías y bosques en la ruta hacia Reims.",
+      "otorga": "Ducado-Paría de Rethel-Mazarin.",
+      "derechos": [
+        "Asiento de Par y derechos señoriales sobre el Rethelois (por verificar detalle)."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (rethel), personajes.json (p46)",
+      "nota": "Comprado por el cardenal Mazarino a los Gonzaga-Nevers y rebautizado Ducado-Paría de Mazarin."
+    },
+    {
+      "id": "ducado-chateau-thierry",
+      "nombre": "Ducado-Paría de Château-Thierry",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "emmanuel-theodose-bouillon",
+      "titular_nombre": "Emmanuel-Théodose de La Tour d'Auvergne, Duque de Bouillon",
+      "casa": "Casa de La Tour d'Auvergne (Bouillon)",
+      "emblema": null,
+      "feudo_id": "chateau-thierry",
+      "dioc_id": null,
+      "provincia": "Champaña",
+      "lon": 3.40,
+      "lat": 49.05,
+      "extension": "Bailía ducal de Château-Thierry en el valle del Marne (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Viñedos del Marne, peajes fluviales hacia París y bailía ducal.",
+      "otorga": "Ducado-Paría entregado a los Bouillon a cambio del principado soberano de Sedán.",
+      "derechos": [
+        "Asiento de Par y rentas de bailía (detalle por verificar)."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (chateau-thierry), personajes.json (p47)",
+      "nota": "Sostén territorial de la Casa de Bouillon (que ostenta el rango de príncipes extranjeros)."
+    },
+    {
+      "id": "ducado-nevers",
+      "nombre": "Ducado de Nevers",
+      "tipo_id": "ducado",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "philippe-jules-mancini",
+      "titular_nombre": "Philippe-Jules-François Mancini, Duque de Nevers",
+      "casa": "Casa Mancini-Mazarini",
+      "emblema": null,
+      "feudo_id": "nevers",
+      "dioc_id": null,
+      "provincia": "Nivernés",
+      "lon": 3.16,
+      "lat": 46.99,
+      "extension": "Nivernés y Donzy (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Rentas de fundiciones, bosques, loza de Nevers y peajes sobre el Loira.",
+      "otorga": "Título ducal de Nevers (letras verificadas en el Parlamento en 1720; rango de duque no par en 1722 por verificar precisión histórica de la paría).",
+      "derechos": [
+        "Amplia autonomía señorial en el Nivernés (alcance por verificar)."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "probable",
+      "fuente": "FEUDOS (nevers), personajes.json (p48)",
+      "nota": "En la base del juego figura como Ducado Feudal; la verificación parlamentaria de 1720 consolidó el título para el sobrino nieto de Mazarino."
+    },
+    {
+      "id": "condado-eu",
+      "nombre": "Condado-Paría de Eu",
+      "tipo_id": "condado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "comte-d-eu",
+      "titular_nombre": "Luis Carlos de Borbón, Conde de Eu (hijo del Duque del Maine)",
+      "casa": "Casa de Borbón-Maine",
+      "emblema": null,
+      "feudo_id": "eu",
+      "dioc_id": null,
+      "provincia": "Normandía",
+      "lon": 1.42,
+      "lat": 50.05,
+      "extension": "Frontera normando-picarda hasta Tréport (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Puerto de Tréport, bosques de vidrierías y tierras cerealistas.",
+      "otorga": "Condado-Paría (título del hijo segundo del Duque del Maine).",
+      "derechos": [
+        "Rango de Condado-Paría y rentas del puerto y bosques (detalle por verificar)."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (eu), personajes.json (p97)",
+      "nota": "Arrancado a la Grande Mademoiselle para dotar a la Casa de Maine."
+    },
+    {
+      "id": "ducado-longueville",
+      "nombre": "Ducado de Longueville",
+      "tipo_id": "ducado",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "charles-charolais",
+      "titular_nombre": "En litigio sucesorio (Casas de Condé, Conti y Luynes; representado en el mapa por el Conde de Charolais como coheredero)",
+      "casa": "Casas de Condé, Conti y Luynes (en litigio)",
+      "emblema": null,
+      "feudo_id": "longueville",
+      "dioc_id": null,
+      "provincia": "Normandía",
+      "lon": 1.05,
+      "lat": 49.78,
+      "extension": "Señoríos en el País de Caux (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Diezmos y señoríos en el País de Caux (en pleito).",
+      "otorga": "Litigio de gran peso patrimonial en los Parlamentos de Ruan y París.",
+      "derechos": [
+        "Disputados judicialmente tras extinguirse los Orleans-Longueville con Marie de Nemours."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "probable",
+      "fuente": "FEUDOS (longueville), personajes.json (p15)",
+      "nota": "La rama Orleans-Longueville se extinguió en 1707; en 1722 sus tierras siguen enfrentando a Condé, Conti y Luynes."
+    },
+    {
+      "id": "condado-evreux",
+      "nombre": "Condado de Évreux",
+      "tipo_id": "condado",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "henri-louis-evreux",
+      "titular_nombre": "Henri-Louis de La Tour d'Auvergne, Conde de Évreux",
+      "casa": "Casa de La Tour d'Auvergne (Bouillon)",
+      "emblema": null,
+      "feudo_id": "tancarville",
+      "dioc_id": null,
+      "provincia": "Normandía",
+      "lon": 0.46,
+      "lat": 49.48,
+      "extension": "Condado de Évreux en Normandía (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Rentas condales de Évreux.",
+      "otorga": "Título condal de la rama menor de los Bouillon.",
+      "derechos": [
+        "Rentas condales (detalle por verificar)."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (tancarville), personajes.json (p49)",
+      "nota": "Separado de Tancarville (1 ficha = 1 título). Con sus ganancias del Sistema de Law levantó el Hôtel d'Évreux en París."
+    },
+    {
+      "id": "condado-tancarville",
+      "nombre": "Condado de Tancarville",
+      "tipo_id": "condado",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "henri-louis-evreux",
+      "titular_nombre": "Henri-Louis de La Tour d'Auvergne, Conde de Évreux",
+      "casa": "Casa de La Tour d'Auvergne (Bouillon)",
+      "emblema": null,
+      "feudo_id": "tancarville",
+      "dioc_id": null,
+      "provincia": "Normandía",
+      "lon": 0.46,
+      "lat": 49.48,
+      "extension": "Estuario del Sena (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Derechos de barcaje en el estuario del Sena.",
+      "otorga": "Título y derechos portuarios/fluviales adquiridos por el Conde de Évreux.",
+      "derechos": [
+        "Peajes y barcaje en el estuario del Sena (detalle por verificar)."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (tancarville), personajes.json (p49)",
+      "nota": "Adquirido por el Conde de Évreux."
+    },
+    {
+      "id": "ducado-harcourt",
+      "nombre": "Ducado-Paría de Harcourt",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "francois-harcourt",
+      "titular_nombre": "François d'Harcourt, II Duque de Harcourt",
+      "casa": "Casa d'Harcourt",
+      "emblema": null,
+      "feudo_id": "harcourt",
+      "dioc_id": null,
+      "provincia": "Normandía",
+      "lon": -0.45,
+      "lat": 49.15,
+      "extension": "Baja Normandía al sur de Caen, centrado en Thury (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Tierras ganaderas, manzanos y señoríos en Baja Normandía.",
+      "otorga": "Ducado-Paría (1709).",
+      "derechos": [
+        "Asiento y voz de Par de Francia en el Parlamento de París."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (harcourt), personajes.json (p50)",
+      "nota": "Su titular es además Capitán de los Guardias de Corps del Rey."
+    },
+    {
+      "id": "ducado-chaulnes",
+      "nombre": "Ducado-Paría de Chaulnes",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "louis-auguste-chaulnes",
+      "titular_nombre": "Louis-Auguste d'Albert d'Ailly, IV Duque de Chaulnes",
+      "casa": "Casa d'Albert d'Ailly de Chaulnes",
+      "emblema": null,
+      "feudo_id": "chaulnes",
+      "dioc_id": null,
+      "provincia": "Picardía",
+      "lon": 2.80,
+      "lat": 49.82,
+      "extension": "Señoríos cerealistas en el Santerre (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Señoríos en el Santerre, baronía de Picquigny y derechos del Vidamato de Amiens.",
+      "otorga": "Ducado-Paría restaurado en 1711.",
+      "derechos": [
+        "Asiento y rango de Par de Francia en el Parlamento de París."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (chaulnes), personajes.json (p56)",
+      "nota": "Su titular manda la compañía de Caballos Ligeros de la Guardia Real."
+    },
+    {
+      "id": "ducado-saint-simon",
+      "nombre": "Ducado-Paría de Saint-Simon",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "saint-simon",
+      "titular_nombre": "Louis de Rouvroy, II Duque de Saint-Simon",
+      "casa": "Casa de Rouvroy de Saint-Simon",
+      "emblema": null,
+      "feudo_id": "st-simon-feudo",
+      "dioc_id": null,
+      "provincia": "Picardía (Vermandois)",
+      "lon": 3.18,
+      "lat": 49.70,
+      "extension": "Señorío de Saint-Simon en Picardía (y La Ferté-Vidame en el Perche)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Señorío de Saint-Simon en Picardía y tierras en La Ferté-Vidame (cargado de deudas tras la embajada en Madrid).",
+      "otorga": "Ducado-Paría (1635).",
+      "derechos": [
+        "Asiento y rango de Par en el Parlamento de París; precedencia por erección de 1635."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (st-simon-feudo), personajes.json (p22)",
+      "nota": "Cuna de la paría que obsesiona al memorialista."
+    },
+    {
+      "id": "ducado-rohan",
+      "nombre": "Ducado-Paría de Rohan",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "rohan-guemene",
+      "titular_nombre": "Charles III de Rohan, Príncipe de Guémené (cabeza primogénita; paría vinculada a Montbazon / Rohan según rama — detalle de titularidad exacta entre Rohan-Chabot y Rohan-Guémené por verificar)",
+      "casa": "Casa de Rohan",
+      "emblema": null,
+      "feudo_id": "rohan",
+      "dioc_id": null,
+      "provincia": "Bretaña",
+      "lon": -2.95,
+      "lat": 48.06,
+      "extension": "Dominios bretones en Pontivy, Guémené y Léon (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Vastos dominios bretones en Pontivy, Guémené y Léon.",
+      "otorga": "Rango ducal y de paría; la Casa de Rohan reclama precedencia de príncipes sobre los pares ordinarios.",
+      "derechos": [
+        "Derecho de presidencia en la nobleza de los Estados de Bretaña (alternando con Vitré / La Trémoille)."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "probable",
+      "fuente": "FEUDOS (rohan), personajes.json (p33)",
+      "nota": "En el mapa del juego figuran juntos Ducado de Rohan y Principado de Guémené bajo Charles III de Rohan; el reparto exacto entre Rohan-Guémené (duque de Montbazon) y Rohan-Chabot (duque de Rohan) queda marcado para verificar."
+    },
+    {
+      "id": "ducado-penthievre",
+      "nombre": "Ducado-Paría de Penthièvre",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "comte-de-toulouse",
+      "titular_nombre": "Luis Alejandro de Borbón, Conde de Toulouse",
+      "casa": "Casa de Borbón-Toulouse",
+      "emblema": null,
+      "feudo_id": "penthievre",
+      "dioc_id": null,
+      "provincia": "Bretaña",
+      "lon": -2.35,
+      "lat": 48.52,
+      "extension": "Tierras costeras de Saint-Brieuc a Lamballe (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Tierras costeras, rentas marítimas y derechos locales entre Saint-Brieuc y Lamballe.",
+      "otorga": "Ducado-Paría (1697).",
+      "derechos": [
+        "Asiento de Par de Francia; base territorial en Bretaña (distinta de su cargo de Gobernador General de Bretaña)."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (penthievre), personajes.json (p20)",
+      "nota": "Base señorial en Bretaña del Conde de Toulouse."
+    },
+    {
+      "id": "ducado-thouars",
+      "nombre": "Ducado-Paría de Thouars",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "la-tremoille",
+      "titular_nombre": "Charles-Armand-René, Duque de La Trémoille y de Thouars",
+      "casa": "Casa de La Trémoille",
+      "emblema": null,
+      "feudo_id": "vitre",
+      "dioc_id": null,
+      "provincia": "Poitou (con la baronía de Vitré en Bretaña)",
+      "lon": -1.21,
+      "lat": 48.12,
+      "extension": "Vasto ducado de Thouars en el Poitou (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Tierras de Thouars en Poitou y (por otro título de la casa) baronía de Vitré en Bretaña.",
+      "otorga": "Ducado-Paría de Thouars.",
+      "derechos": [
+        "Asiento y precedencia de Par de Francia en el Parlamento de París."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (vitre), personajes.json (p41)",
+      "nota": "En el mapa va unido a la primera baronía de Vitré (que da derecho a presidir la nobleza en los Estados de Bretaña alternando con los Rohan)."
+    },
+    {
+      "id": "ducado-rohan-rohan",
+      "nombre": "Ducado-Paría de Rohan-Rohan (Frontenay)",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "hercule-meriadec-rohan",
+      "titular_nombre": "Hercule-Mériadec de Rohan, Duque de Rohan-Rohan y Príncipe de Soubise",
+      "casa": "Casa de Rohan-Soubise",
+      "emblema": null,
+      "feudo_id": "soubise",
+      "dioc_id": null,
+      "provincia": "Poitou / Saintonge",
+      "lon": -0.65,
+      "lat": 46.25,
+      "extension": "Señorío de Frontenay en Poitou (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Señorío de Frontenay en Poitou (la casa posee además el principado de Soubise en Saintonge).",
+      "otorga": "Ducado-Paría (1714).",
+      "derechos": [
+        "Asiento y rango de Par de Francia en el Parlamento de París."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (soubise), personajes.json (p54)",
+      "nota": "Hermano mayor del Cardenal de Rohan y yerno de Madame de Ventadour."
+    },
+    {
+      "id": "ducado-mortemart",
+      "nombre": "Ducado-Paría de Mortemart",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "louis-mortemart",
+      "titular_nombre": "Louis II de Rochechouart, IV Duque de Mortemart",
+      "casa": "Casa de Rochechouart de Mortemart",
+      "emblema": null,
+      "feudo_id": "mortemart",
+      "dioc_id": null,
+      "provincia": "Lemosín / Alto Poitou / La Marche",
+      "lon": 0.96,
+      "lat": 46.04,
+      "extension": "Tierras en el Alto Poitou, La Marche y el Lemosín (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Tierras señoriales de Mortemart (y principado de Tonnay-Charente).",
+      "otorga": "Ducado-Paría (1650).",
+      "derechos": [
+        "Asiento y rango de Par de Francia en el Parlamento de París."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (mortemart), personajes.json (p57)",
+      "nota": "Su titular es además Primer Gentilhombre de la Cámara de Luis XV."
+    },
+    {
+      "id": "ducado-la-rochefoucauld",
+      "nombre": "Ducado-Paría de La Rochefoucauld",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "francois-la-rochefoucauld",
+      "titular_nombre": "François VIII, IV Duque de La Rochefoucauld",
+      "casa": "Casa de La Rochefoucauld",
+      "emblema": null,
+      "feudo_id": "la-rochefoucauld",
+      "dioc_id": null,
+      "provincia": "Saintonge y Angoumois",
+      "lon": 0.38,
+      "lat": 45.74,
+      "extension": "Señoríos en Angoumois y Saintonge (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Señoríos en Angoumois y Saintonge (la casa posee además el ducado de La Roche-Guyon sobre el Sena).",
+      "otorga": "Ducado-Paría (1622).",
+      "derechos": [
+        "Asiento y precedencia de Par de Francia en el Parlamento de París."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (la-rochefoucauld), personajes.json (p58)",
+      "nota": "Su titular es Gran Montero de Francia y Maestro del Guardarropa."
+    },
+    {
+      "id": "ducado-orleans",
+      "nombre": "Ducado de Orleans (Gran Apanaje)",
+      "tipo_id": "ducado-apanaje",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "felipe-ii-orleans",
+      "titular_nombre": "Felipe II de Orleans, Duque de Orleans y Regente",
+      "casa": "Casa de Orleans",
+      "emblema": null,
+      "feudo_id": "orleans-ap",
+      "dioc_id": null,
+      "provincia": "Orleanesado",
+      "lon": 1.90,
+      "lat": 47.90,
+      "extension": "Orleanesado, bosques de Orleans, canal de Orleans y trigales de Beauce (núcleo del Gran Apanaje)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Peajes del Loira, bosques y canal de Orleans, trigales de Beauce; más de 600.000 libras anuales en el conjunto del apanaje.",
+      "otorga": "Cabeza del único gran apanaje real vigente en 1722, con patronato señorial y rentas dominiales.",
+      "derechos": [
+        "Percepción de rentas del apanaje y presentación a ciertos oficios.",
+        "Asiento de Par y rango de Primer Príncipe de la Sangre."
+      ],
+      "obligaciones": [
+        "Inalienabilidad del fondo y reversión a la Corona sin descendencia masculina legítima."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (orleans-ap), personajes.json (p03)",
+      "nota": "Separado de Chartres (1 ficha = 1 título); en 1722 el Duque de Orleans es el Regente del Reino."
+    },
+    {
+      "id": "ducado-chartres",
+      "nombre": "Ducado de Chartres (Apanaje de Orleans)",
+      "tipo_id": "ducado-apanaje",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "luis-orleans-chartres",
+      "titular_nombre": "Luis de Orleans, Duque de Chartres",
+      "casa": "Casa de Orleans",
+      "emblema": null,
+      "feudo_id": "orleans-ap",
+      "dioc_id": null,
+      "provincia": "Orleanesado / Beauce (Chartres)",
+      "lon": 1.49,
+      "lat": 48.45,
+      "extension": "País chartrain dentro del apanaje de Orleans (extensión exacta por verificar)",
+      "superior_id": "ducado-orleans",
+      "subordinados_ids": [],
+      "posesiones": "Trigales de Beauce y rentas chartraines del apanaje de Orleans.",
+      "otorga": "Título tradicional del heredero varón primogénito de la Casa de Orleans.",
+      "derechos": [
+        "Rango de Primer Príncipe de la Sangre (por nacimiento) y rentas asociadas al apanaje."
+      ],
+      "obligaciones": [
+        "Sujeto a las reglas de inalienabilidad y reversión del apanaje."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (orleans-ap), personajes.json (p06)",
+      "nota": "En 1722 lo porta Luis de Orleans, hijo único varón del Regente."
+    },
+    {
+      "id": "ducado-saint-aignan",
+      "nombre": "Ducado-Paría de Saint-Aignan",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "paul-hippolyte-st-aignan",
+      "titular_nombre": "Paul-Hippolyte de Beauvilliers, Duque de Saint-Aignan",
+      "casa": "Casa de Beauvilliers",
+      "emblema": null,
+      "feudo_id": "saint-aignan",
+      "dioc_id": null,
+      "provincia": "Berry / Turena",
+      "lon": 1.37,
+      "lat": 47.26,
+      "extension": "Tierras sobre el Cher en Berry y Turena (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Viñedos del Cher y tierras en Berry y Turena.",
+      "otorga": "Ducado-Paría (1663).",
+      "derechos": [
+        "Asiento y precedencia de Par de Francia en el Parlamento de París."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (saint-aignan), personajes.json (p55)",
+      "nota": "Miembro del Consejo de Regencia y ex embajador en España."
+    },
+    {
+      "id": "ducado-charost",
+      "nombre": "Ducado-Paría de Charost",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "charost",
+      "titular_nombre": "Armand de Béthune, II Duque de Charost",
+      "casa": "Casa de Béthune-Charost",
+      "emblema": null,
+      "feudo_id": "charost",
+      "dioc_id": null,
+      "provincia": "Berry",
+      "lon": 2.10,
+      "lat": 46.99,
+      "extension": "Señoríos en el Berry (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Señoríos en el Berry (la casa posee además la baronía de Ancenis en Bretaña).",
+      "otorga": "Ducado-Paría (1672).",
+      "derechos": [
+        "Asiento y rango de Par de Francia en el Parlamento de París."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (charost), personajes.json (p10)",
+      "nota": "Elegido para sustituir a Villeroy como Gobernador de Luis XV en agosto de 1722."
+    },
+    {
+      "id": "condado-charolais",
+      "nombre": "Condado de Charolais",
+      "tipo_id": "condado",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "charles-charolais",
+      "titular_nombre": "Carlos de Borbón-Condé, Conde de Charolais (en titularidad social/patrimonial de la casa Condé; detalle de partición entre Monsieur le Duc y su hermano por verificar)",
+      "casa": "Casa de Borbón-Condé",
+      "emblema": null,
+      "feudo_id": "borbon-conde-gob",
+      "dioc_id": null,
+      "provincia": "Borgoña (Charolais)",
+      "lon": 4.28,
+      "lat": 46.43,
+      "extension": "País del Charolais en Borgoña (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Tierras patrimoniales y forjas del Charolais.",
+      "otorga": "Título condal patrimonial de la Casa de Condé.",
+      "derechos": [
+        "Rentas señoriales y de forjas en Borgoña (distinto del gobierno militar de Borgoña)."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "probable",
+      "fuente": "FEUDOS (borbon-conde-gob), personajes.json (p12, p15)",
+      "nota": "Patrimonio señorial en Borgoña; da su nombre al hermano de Monsieur le Duc, el Conde de Charolais."
+    },
+    {
+      "id": "ducado-borbon",
+      "nombre": "Ducado de Borbón (engagiste)",
+      "tipo_id": "ducado",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "luis-enrique-borbon",
+      "titular_nombre": "Luis Enrique de Borbón-Condé («Monsieur le Duc»)",
+      "casa": "Casa de Borbón-Condé",
+      "emblema": null,
+      "feudo_id": "borbon-conde-gob",
+      "dioc_id": null,
+      "provincia": "Borbonés",
+      "lon": 3.33,
+      "lat": 46.57,
+      "extension": "Antiguo ducado del Borbonés cedido en empeño en 1661 (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Rentas dominiales del ducado engagiste del Borbonés, cedido en 1661 al Gran Condé a cambio de Albret.",
+      "otorga": "Título ducal de Borbón y disfrute del dominio empeñado.",
+      "derechos": [
+        "Rentas dominiales de empeño (engagiste)."
+      ],
+      "obligaciones": [
+        "Condiciones de dominio empeñado ante la Corona (no confundir con apanaje real)."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (borbon-conde-gob), personajes.json (p12)",
+      "nota": "Ducado engagiste del Borbonés, distinto de un gobierno militar provincial."
+    },
+    {
+      "id": "ducado-villars",
+      "nombre": "Ducado-Paría de Villars (Vaux-Villars)",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "villars",
+      "titular_nombre": "Claude-Louis-Hector, Duque y Mariscal de Villars",
+      "casa": "Casa de Villars",
+      "emblema": null,
+      "feudo_id": "villars-prov",
+      "dioc_id": null,
+      "provincia": "Île-de-France / Brie",
+      "lon": 2.71,
+      "lat": 48.56,
+      "extension": "Dominio de Vaux-le-Vicomte en Brie (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Dominio y castillo de Vaux-le-Vicomte (comprado por el mariscal en 1705 y erigido en ducado-paría).",
+      "otorga": "Ducado-Paría (1705/1709).",
+      "derechos": [
+        "Asiento y rango de Par de Francia en el Parlamento de París."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (villars-prov), personajes.json (p23)",
+      "nota": "Asiento feudal real en Brie; distinto del Gobierno Militar de Provenza que ejerce Villars y distinto del ducado provenzal de Villars-Brancas."
+    },
+    {
+      "id": "ducado-villars-brancas",
+      "nombre": "Ducado-Paría de Villars-Brancas",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": null,
+      "titular_nombre": "Louis-Antoine de Brancas, IV Duque de Villars-Brancas",
+      "casa": "Casa de Brancas",
+      "emblema": null,
+      "feudo_id": "brancas-villars",
+      "dioc_id": null,
+      "provincia": "Provenza",
+      "lon": 5.41,
+      "lat": 43.92,
+      "extension": "Señoríos en Villars, Céreste y valle del Apt (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Señoríos provenzales en Villars, Céreste y el valle del Apt.",
+      "otorga": "Ducado-Paría (1652).",
+      "derechos": [
+        "Asiento y rango de Par de Francia en el Parlamento de París."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "Père Anselme; Almanach royal 1722; FEUDOS (brancas-villars)",
+      "nota": "Ducado provenzal de la Casa de Brancas, homónimo pero distinto de Vaux-Villars."
+    },
+    {
+      "id": "condado-ales",
+      "nombre": "Condado de Alès",
+      "tipo_id": "condado",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "louis-armand-conti",
+      "titular_nombre": "Luis Armando II de Borbón, Príncipe de Conti",
+      "casa": "Casa de Borbón-Conti",
+      "emblema": null,
+      "feudo_id": "ales-pezenas",
+      "dioc_id": null,
+      "provincia": "Languedoc",
+      "lon": 3.65,
+      "lat": 43.82,
+      "extension": "Zona de Alès y las Cévennes en el Bajo Languedoc (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Minas de las Cévennes y rentas señoriales en el Bajo Languedoc.",
+      "otorga": "Título condal y clientela regional a la Casa de Conti en Languedoc.",
+      "derechos": [
+        "Rentas mineras y señoriales; influencia en los Estados de Languedoc."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (ales-pezenas), personajes.json (p17)",
+      "nota": "Junto con las baronías de Pézenas y Bagnols constituye el gran polo languedociano de los Conti."
+    },
+    {
+      "id": "ducado-uzes",
+      "nombre": "Ducado-Paría de Uzès",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "jean-charles-uzes",
+      "titular_nombre": "Jean-Charles de Crussol, VII Duque de Uzès",
+      "casa": "Casa de Crussol d'Uzès",
+      "emblema": null,
+      "feudo_id": "uzes",
+      "dioc_id": null,
+      "provincia": "Languedoc",
+      "lon": 4.42,
+      "lat": 44.08,
+      "extension": "Señoríos en el Gard y las Cévennes (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Señoríos en el Gard y las Cévennes.",
+      "otorga": "Rango de Primer Ducado-Paría Laico de Francia (ducado en 1565; paría en 1572).",
+      "derechos": [
+        "Precedencia absoluta sobre todos los demás duques y pares laicos (inmediatamente tras la sangre real y los pares eclesiásticos).",
+        "Hablar, sentarse y firmar primero entre los pares laicos en el Parlamento de París y en el Sacre de Reims."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (uzes), personajes.json (p51)",
+      "nota": "Al extinguirse las parías laicas anteriores del siglo XVI, Uzès quedó como la paría laica más antigua del reino."
+    },
+    {
+      "id": "marquesado-castries",
+      "nombre": "Marquesado de Castries",
+      "tipo_id": "marquesado",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "joseph-castries",
+      "titular_nombre": "Joseph-François de La Croix, Marqués de Castries",
+      "casa": "Casa de La Croix de Castries",
+      "emblema": null,
+      "feudo_id": "baronias-lang",
+      "dioc_id": null,
+      "provincia": "Languedoc",
+      "lon": 2.35,
+      "lat": 43.45,
+      "extension": "Tierras de Castries en Languedoc (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Señorío de Castries (unido a baronías de los Estados de Languedoc).",
+      "otorga": "Título de marqués de Castries y rango en la nobleza languedociana.",
+      "derechos": [
+        "Derecho de asiento y voto en los Estados de Languedoc (por las baronías de Estados)."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (baronias-lang), personajes.json (p59)",
+      "nota": "El Marqués de Castries es Caballero de Honor de la Duquesa de Orleans y gobernador de Montpellier y Sète."
+    },
+    {
+      "id": "ducado-albret",
+      "nombre": "Ducado-Paría de Albret",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "emmanuel-theodose-bouillon",
+      "titular_nombre": "Emmanuel-Théodose de La Tour d'Auvergne, Duque de Bouillon",
+      "casa": "Casa de La Tour d'Auvergne (Bouillon)",
+      "emblema": null,
+      "feudo_id": "turenne",
+      "dioc_id": null,
+      "provincia": "Guyena y Gascuña",
+      "lon": 1.62,
+      "lat": 44.96,
+      "extension": "Tierras del Albret en Gascuña (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Rentas ducales de Albret (cedidas junto con Château-Thierry a cambio de Sedán).",
+      "otorga": "Ducado-Paría de Albret.",
+      "derechos": [
+        "Asiento y rango de Par de Francia en el Parlamento."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (turenne), personajes.json (p47)",
+      "nota": "Separado del Vizcondado Soberano de Turenne (que figura en el mismo punto del mapa). La casa Bouillon cedió el Borbonés a Condé en 1661."
+    },
+    {
+      "id": "ducado-fronsac",
+      "nombre": "Ducado-Paría de Fronsac",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "armand-richelieu",
+      "titular_nombre": "Louis-François-Armand, III Duque de Richelieu y de Fronsac",
+      "casa": "Casa de Vignerot du Plessis de Richelieu",
+      "emblema": null,
+      "feudo_id": "fronsac",
+      "dioc_id": null,
+      "provincia": "Guyena",
+      "lon": -0.25,
+      "lat": 44.95,
+      "extension": "Fronsadais sobre el Dordoña (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Viñedos bordeleses y peajes sobre el Dordoña.",
+      "otorga": "Ducado-Paría de Fronsac.",
+      "derechos": [
+        "Asiento y rango de Par de Francia; peajes sobre el Dordoña (detalle por verificar)."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (fronsac), personajes.json (p52)",
+      "nota": "Separado del Ducado-Paría de Richelieu (1 ficha = 1 título)."
+    },
+    {
+      "id": "ducado-richelieu",
+      "nombre": "Ducado-Paría de Richelieu",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "armand-richelieu",
+      "titular_nombre": "Louis-François-Armand, III Duque de Richelieu y de Fronsac",
+      "casa": "Casa de Vignerot du Plessis de Richelieu",
+      "emblema": null,
+      "feudo_id": "fronsac",
+      "dioc_id": null,
+      "provincia": "Poitou / Turena (Richelieu)",
+      "lon": 0.32,
+      "lat": 47.01,
+      "extension": "Ciudad y dominio ducal de Richelieu (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Rentas ducales de Richelieu en Poitou.",
+      "otorga": "Ducado-Paría heredado del cardenal de Richelieu.",
+      "derechos": [
+        "Asiento y rango de Par de Francia en el Parlamento de París."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (fronsac), personajes.json (p52)",
+      "nota": "Título principal bajo el cual figura el joven duque en Versalles (recién salido de la Bastilla y académico francés)."
+    },
+    {
+      "id": "ducado-antin",
+      "nombre": "Ducado-Paría de Antin",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "antin",
+      "titular_nombre": "Louis-Antoine de Pardaillan de Gondrin, I Duque de Antin",
+      "casa": "Casa de Pardaillan de Gondrin",
+      "emblema": null,
+      "feudo_id": "antin",
+      "dioc_id": null,
+      "provincia": "Guyena y Gascuña (Bigorra)",
+      "lon": 0.25,
+      "lat": 43.33,
+      "extension": "Señoríos gascones y pirenaicos en Bigorra (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Señoríos en Bigorra.",
+      "otorga": "Ducado-Paría (1711).",
+      "derechos": [
+        "Asiento y rango de Par de Francia en el Parlamento de París."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (antin), personajes.json (p21)",
+      "nota": "Hijo legítimo de Madame de Montespan y Director general de los Edificios del Rey."
+    },
+    {
+      "id": "marquesado-montespan",
+      "nombre": "Marquesado de Montespan",
+      "tipo_id": "marquesado",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "antin",
+      "titular_nombre": "Louis-Antoine de Pardaillan de Gondrin, I Duque de Antin",
+      "casa": "Casa de Pardaillan de Gondrin",
+      "emblema": null,
+      "feudo_id": "antin",
+      "dioc_id": null,
+      "provincia": "Gascuña / Comminges",
+      "lon": 0.85,
+      "lat": 43.08,
+      "extension": "Señorío pirenaico de Montespan (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Señoríos gascones y pirenaicos de la casa Pardaillan.",
+      "otorga": "Título marquesal histórico de la Casa de Pardaillan.",
+      "derechos": [
+        "Derechos señoriales locales (por verificar)."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "probable",
+      "fuente": "FEUDOS (antin), personajes.json (p21)",
+      "nota": "Separado del Ducado-Paría de Antin (1 ficha = 1 título); título del padre del Duque de Antin."
+    },
+    {
+      "id": "ducado-gramont",
+      "nombre": "Ducado-Paría de Gramont",
+      "tipo_id": "ducado-paria-laico",
+      "categoria": "noble",
+      "es_tecnico": false,
+      "titular_id": "antoine-gramont",
+      "titular_nombre": "Antoine V de Gramont, IV Duque de Gramont",
+      "casa": "Casa de Gramont",
+      "emblema": null,
+      "feudo_id": "gramont",
+      "dioc_id": null,
+      "provincia": "Bearn / Gascuña (frontera de Bayona)",
+      "lon": -1.14,
+      "lat": 43.48,
+      "extension": "Tierras de Gramont y Guiche (extensión exacta por verificar)",
+      "superior_id": "corona-francia",
+      "subordinados_ids": [],
+      "posesiones": "Tierras y peajes pirenaicos (la casa ostenta además la soberanía de Bidache y los gobiernos hereditarios de Navarra, Bearn y Bayona).",
+      "otorga": "Ducado-Paría de Gramont.",
+      "derechos": [
+        "Asiento y rango de Par de Francia en el Parlamento de París."
+      ],
+      "obligaciones": [
+        "Por verificar."
+      ],
+      "confianza": "confirmado",
+      "fuente": "FEUDOS (gramont), personajes.json (p53)",
+      "nota": "Guardián militar de la frontera española; su hijo es además el duque de Guiche."
+    }
+  ]
+}

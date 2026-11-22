@@ -4,7 +4,7 @@
    · Partida (appMode="partida") — un solo personaje; solo ve lo que descubre.
    El hash lleva el modo: #mundo/<vista> o #partida/<vista>. Sin hash se muestra la portada con las dos puertas. */
 const MAP_VIEWS=[["palacio","Palacio"],["dominio","Dominio"],["francia","Francia"]];
-const VIEWS_MUNDO=[...MAP_VIEWS,["personajes","Personajes"],["glosario","Glosario"],["mecanicas","Mecánicas"]];
+const VIEWS_MUNDO=[...MAP_VIEWS,["personajes","Personajes"],["titulos","Títulos"],["glosario","Glosario"],["mecanicas","Mecánicas"]];
 const VIEWS_PARTIDA=[["escritorio","Escritorio"],["palacio","Palacio"],["dominio","Dominio"],["personajes","Personajes"],["diario","Diario"],["planes","Planes"],["bio","Biografía"],["rel","Relaciones"]];
 const activeViews=()=>appMode==="mundo"?VIEWS_MUNDO:VIEWS_PARTIDA;
 let current="escritorio";
@@ -21,7 +21,7 @@ function go(v,replaceHash=false){
   if(isMap)drawMap(v);
   if(v==="personajes"){const pu=$("#pane-unknown");if(pu)pu.hidden=appMode!=="partida";if(appMode==="partida")drawUnknown();drawFaces()}
   if(v==="diario")drawBook(); if(v==="planes")drawPlans(); if(v==="bio")drawBio(); if(v==="rel")drawRel();
-  if(v==="glosario")drawGlossaryMundo(); if(v==="mecanicas")drawMecanicas();
+  if(v==="glosario")drawGlossaryMundo(); if(v==="mecanicas")drawMecanicas(); if(v==="titulos")drawTitulos();
   try{
     const h="#"+appMode+"/"+v;
     if(location.hash!==h){
@@ -38,7 +38,7 @@ function parseHash(){
   const [a,b]=h.split("/");
   if(a==="mundo"||a==="partida")return {mode:a,view:alias[b]||b||null};
   const v=alias[a]||a;
-  if(["palacio","dominio","francia","personajes","glosario","mecanicas"].includes(v))return {mode:"mundo",view:v};
+  if(["palacio","dominio","francia","personajes","titulos","glosario","mecanicas"].includes(v))return {mode:"mundo",view:v};
   if(VIEWS_PARTIDA.some(([id])=>id===v))return {mode:"partida",view:v};
   return {mode:null,view:null};
 }

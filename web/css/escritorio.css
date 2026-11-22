@@ -522,3 +522,42 @@ button.kin:hover{border-color:var(--gilt)}
 .mec-table th,.mec-table td{text-align:left;padding:5px 8px;border-bottom:1px solid var(--line);vertical-align:top}
 .mec-table th{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:400}
 .mec-list{margin:0;padding-left:1.1rem;display:grid;gap:4px}
+
+/* ---------- Títulos y tipos de título ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:.2rem .75rem;font-size:.86rem;display:inline-flex;gap:4px;align-items:baseline}
+.chip:hover{border-color:var(--gilt);background:var(--chip)}
+.chip.tech{border-style:dashed}
+.chip-n{font-size:.78rem;color:var(--muted)}
+.vista-switch{display:flex;gap:4px}
+.vista-switch button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.titulos-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.titulos-tools input[type=search]{flex:1 1 240px;min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:.4rem .65rem}
+.titulos-tools select{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:.4rem .6rem}
+.titulos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.titulo-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:12px;display:grid;gap:6px;align-content:start;cursor:pointer;min-width:0}
+.titulo-card:hover,.titulo-card:focus-visible{border-color:var(--gilt);background:var(--chip)}
+.titulo-card h3{font-size:1.1rem;line-height:1.2}
+.titulo-card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.titulo-card-tags{display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-end}
+.titulo-card-port{font-size:.92rem;color:var(--ink)}
+.titulo-emb{width:46px;height:52px;display:grid;place-items:center;flex:none}
+.titulo-emb.grande{width:84px;height:94px}
+.titulo-emb .escudo-svg-wrap{display:grid;place-items:center;width:100%;height:100%}
+.titulo-emb .escudo-svg-wrap svg,.titulo-emb .escudo-svg-wrap img,.titulo-emb-img{max-width:100%;max-height:100%;width:auto!important;height:auto!important;object-fit:contain;display:block}
+.titulo-emb-ph{font-size:1.6rem;color:var(--gilt)}
+.ficha-emb{display:flex;justify-content:flex-start}
+.tipo-btn{border:1px solid var(--gilt);background:transparent;color:var(--gilt);border-radius:999px;padding:1px 8px;font-size:.74rem;letter-spacing:.04em;text-align:left}
+.tipo-btn:hover{background:var(--chip)}
+.link-ficha{border-color:var(--line);text-align:left}
+.link-ficha:hover{border-color:var(--gilt)}
+.titulos-table-wrap{overflow-x:auto}
+.titulos-table{width:100%;border-collapse:collapse;font-size:.9rem}
+.titulos-table th,.titulos-table td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
+.titulos-table th{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:400;white-space:nowrap}
+.titulos-table .td-emb{width:48px}
+.titulos-table .td-emb .titulo-emb{width:36px;height:40px}
+.jerarquia-list{display:grid;gap:8px}
+.jer-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.jer-subs{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.ficha-list{margin:0;padding-left:1.1rem;display:grid;gap:3px;font-size:.94rem}

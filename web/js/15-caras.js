@@ -107,6 +107,10 @@ function openFichaL(c){
   }
   const fcEl=fichaCasasEl(c);
   f.append(el("h2",{},nom),fcEl||"",simbolosEl(c,"simbolos-row ficha-sims"),el("div",{class:"rule"}),dl);
+  if(!esPartida()&&typeof titulosDePersonaje==="function"){
+    const ts=titulosDePersonaje(c);
+    if(ts.length)f.append(el("span",{class:"label"},"Títulos que porta"),el("div",{class:"jer-subs"},...ts.map(t=>el("button",{type:"button",class:"btn sm",onclick:()=>openFichaTitulo(t.id)},t.nombre))));
+  }
   if(c.escritorio_id&&LINAJE.padres)f.append(el("span",{class:"label"},"Familia"),familyBlock(c.escritorio_id));
   f.append(el("span",{class:"label"},"Lo que sabes"),el("p",{class:"note"},"Todavía no has observado nada de esta persona."),
     el("label",{class:"label",for:"nota-"+key},"Tus notas"),ta,
