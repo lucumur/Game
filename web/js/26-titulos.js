@@ -182,83 +182,92 @@ function listaFicha(items){
   return el("ul",{class:"ficha-list"},...items.map(x=>el("li",{},x)));
 }
 
-function openFichaTitulo(id){
+function fichaNavOrClose(){
+  return typeof fichaNavBar==="function"?fichaNavBar():el("button",{class:"x","aria-label":"Cerrar",onclick:()=>{$("#ficha").hidden=true}},"×");
+}
+function openFichaTitulo(id,reset=false){
   const t=TITULO_BY_ID[id]; if(!t)return;
-  const f=$("#ficha"); f.innerHTML="";
-  const sup=t.superior_id?TITULO_BY_ID[t.superior_id]:null;
-  const subs=subordinadosDe(t);
-  const coord=(t.lat!=null&&t.lon!=null)?`${t.lat.toFixed(2)}° N, ${t.lon.toFixed(2)}° E`:"Por verificar";
-  const dl=el("dl",{});
-  [
-    ["Tipo",tipoBtn(t.tipo_id,false)],
-    ["Categoría",(CAT_TIT[t.categoria]||t.categoria)+(t.es_tecnico?" · Técnico":"")],
-    ["Portador",portadorBtn(t)],
-    ["Casa",t.casa||"—"],
-    ["Localización",t.provincia||"Por verificar"],
-    ["Coordenadas",coord],
-    ["Extensión",t.extension||"Por verificar"]
-  ].forEach(([k,v])=>dl.append(el("dt",{},k),el("dd",{},v instanceof Node?v:String(v))));
+  const run=()=>{
+    const f=$("#ficha"); f.innerHTML="";
+    const sup=t.superior_id?TITULO_BY_ID[t.superior_id]:null;
+    const subs=subordinadosDe(t);
+    const coord=(t.lat!=null&&t.lon!=null)?`${t.lat.toFixed(2)}° N, ${t.lon.toFixed(2)}° E`:"Por verificar";
+    const dl=el("dl",{});
+    [
+      ["Tipo",tipoBtn(t.tipo_id,false)],
+      ["Categoría",(CAT_TIT[t.categoria]||t.categoria)+(t.es_tecnico?" · Técnico":"")],
+      ["Portador",portadorBtn(t)],
+      ["Casa",t.casa||"—"],
+      ["Localización",t.provincia||"Por verificar"],
+      ["Coordenadas",coord],
+      ["Extensión",t.extension||"Por verificar"]
+    ].forEach(([k,v])=>dl.append(el("dt",{},k),el("dd",{},v instanceof Node?v:String(v))));
 
-  const jer=el("div",{class:"jerarquia-list"});
-  jer.append(el("div",{class:"jer-row"},el("span",{class:"label"},"Título superior: "),
-    sup?el("button",{type:"button",class:"btn sm link-ficha",onclick:()=>openFichaTitulo(sup.id)},sup.nombre)
-       :el("span",{class:"note"},t.superior_id===null?"Ninguno (título raíz)":"Por verificar")));
-  const subBox=el("div",{class:"jer-subs"});
-  if(subs.length){
-    subs.slice(0,40).forEach(s=>subBox.append(el("button",{type:"button",class:"btn sm",onclick:()=>openFichaTitulo(s.id)},s.nombre)));
-    if(subs.length>40)subBox.append(el("span",{class:"note"},`y ${subs.length-40} más…`));
-  } else subBox.append(el("span",{class:"note"},"Ninguno registrado todavía."));
-  jer.append(el("div",{},el("span",{class:"label"},"Títulos subordinados ("+subs.length+")"),subBox));
+    const jer=el("div",{class:"jerarquia-list"});
+    jer.append(el("div",{class:"jer-row"},el("span",{class:"label"},"Título superior: "),
+      sup?el("button",{type:"button",class:"btn sm link-ficha",onclick:()=>openFichaTitulo(sup.id)},sup.nombre)
+         :el("span",{class:"note"},t.superior_id===null?"Ninguno (título raíz)":"Por verificar")));
+    const subBox=el("div",{class:"jer-subs"});
+    if(subs.length){
+      subs.slice(0,40).forEach(s=>subBox.append(el("button",{type:"button",class:"btn sm",onclick:()=>openFichaTitulo(s.id)},s.nombre)));
+      if(subs.length>40)subBox.append(el("span",{class:"note"},`y ${subs.length-40} más…`));
+    } else subBox.append(el("span",{class:"note"},"Ninguno registrado todavía."));
+    jer.append(el("div",{},el("span",{class:"label"},"Títulos subordinados ("+subs.length+")"),subBox));
 
-  f.append(
-    el("button",{class:"x","aria-label":"Cerrar",onclick:()=>{f.hidden=true}},"×"),
-    el("span",{class:"label"},"Ficha de título"),
-    el("div",{class:"ficha-emb"},emblemaTituloEl(t,true)),
-    el("h2",{},t.nombre),
-    el("div",{class:"row"},
-      confBadgeEl(t.confianza),
-      t.es_tecnico?el("span",{class:"tag ej"},"Técnico"):null,
-      (t.feudo_id||t.dioc_id)?el("button",{type:"button",class:"btn sm",onclick:()=>{f.hidden=true;verEnMapaFrancia(t)}},"Ver en el mapa de Francia →"):null
-    ),
-    el("div",{class:"rule"}),
-    dl,
-    el("span",{class:"label"},"Jerarquía"),jer,
-    el("span",{class:"label"},"Qué posee"),el("p",{},t.posesiones||"Por verificar."),
-    el("span",{class:"label"},"Qué otorga"),el("p",{},t.otorga||"Por verificar."),
-    el("span",{class:"label"},"Derechos"),listaFicha(t.derechos),
-    el("span",{class:"label"},"Obligaciones"),listaFicha(t.obligaciones),
-    t.nota?el("span",{class:"label"},"Notas"):null,t.nota?el("p",{},t.nota):null,
-    el("span",{class:"note"},"Fuente: "+(t.fuente||"Por verificar"))
-  );
-  f.hidden=false; f.querySelector(".x").focus();
+    f.append(
+      fichaNavOrClose(),
+      el("span",{class:"label"},"Ficha de título"),
+      el("div",{class:"ficha-emb"},emblemaTituloEl(t,true)),
+      el("h2",{},t.nombre),
+      el("div",{class:"row"},
+        confBadgeEl(t.confianza),
+        t.es_tecnico?el("span",{class:"tag ej"},"Técnico"):null,
+        (t.feudo_id||t.dioc_id)?el("button",{type:"button",class:"btn sm",onclick:()=>{if(typeof fichaCerrar==="function")fichaCerrar();else f.hidden=true;verEnMapaFrancia(t)}},"Ver en el mapa de Francia →"):null
+      ),
+      el("div",{class:"rule"}),
+      dl,
+      el("span",{class:"label"},"Jerarquía"),jer,
+      el("span",{class:"label"},"Qué posee"),el("p",{},t.posesiones||"Por verificar."),
+      el("span",{class:"label"},"Qué otorga"),el("p",{},t.otorga||"Por verificar."),
+      el("span",{class:"label"},"Derechos"),listaFicha(t.derechos),
+      el("span",{class:"label"},"Obligaciones"),listaFicha(t.obligaciones),
+      t.nota?el("span",{class:"label"},"Notas"):null,t.nota?el("p",{},t.nota):null,
+      el("span",{class:"note"},"Fuente: "+(t.fuente||"Por verificar"))
+    );
+    f.hidden=false; f.querySelector(".x")?.focus();
+  };
+  if(typeof fichaIr==="function")fichaIr(run,reset); else run();
 }
 
-function openFichaTipoTitulo(tipoId){
+function openFichaTipoTitulo(tipoId,reset=false){
   const tp=TIPO_TITULO_BY_ID[tipoId]; if(!tp)return;
-  const f=$("#ficha"); f.innerHTML="";
-  const titulosDeTipo=TITULOS.filter(t=>t.tipo_id===tipoId);
-  const lista=el("div",{class:"jer-subs"});
-  if(titulosDeTipo.length)titulosDeTipo.forEach(t=>lista.append(el("button",{type:"button",class:"btn sm",onclick:()=>openFichaTitulo(t.id)},t.nombre)));
-  else lista.append(el("span",{class:"note"},"Aún no hay títulos cargados de este tipo."));
+  const run=()=>{
+    const f=$("#ficha"); f.innerHTML="";
+    const titulosDeTipo=TITULOS.filter(t=>t.tipo_id===tipoId);
+    const lista=el("div",{class:"jer-subs"});
+    if(titulosDeTipo.length)titulosDeTipo.forEach(t=>lista.append(el("button",{type:"button",class:"btn sm",onclick:()=>openFichaTitulo(t.id)},t.nombre)));
+    else lista.append(el("span",{class:"note"},"Aún no hay títulos cargados de este tipo."));
 
-  f.append(
-    el("button",{class:"x","aria-label":"Cerrar",onclick:()=>{f.hidden=true}},"×"),
-    el("span",{class:"label"},"Tipo de título"),
-    el("h2",{},tp.nombre),
-    tp.nombre_fr?el("p",{class:"tipo-fr"},el("em",{},tp.nombre_fr)):null,
-    el("div",{class:"row"},
-      el("span",{class:"tag"},CAT_TIT[tp.categoria]||tp.categoria),
-      tp.es_tecnico?el("span",{class:"tag ej"},"Técnico (clasificatorio)"):null,
-      confBadgeEl(tp.confianza)
-    ),
-    el("div",{class:"rule"}),
-    el("span",{class:"label"},"Definición"),el("p",{},tp.definicion||"—"),
-    el("span",{class:"label"},"Aclaraciones"),el("p",{},tp.aclaraciones||"—"),
-    el("span",{class:"label"},"Historia y evolución"),el("p",{},tp.historia||"—"),
-    el("span",{class:"label"},"Derechos generales"),listaFicha(tp.derechos_generales),
-    el("span",{class:"label"},"Obligaciones generales"),listaFicha(tp.obligaciones_generales),
-    el("span",{class:"label"},"Títulos de este tipo ("+titulosDeTipo.length+")"),lista,
-    el("span",{class:"note"},"Fuente: "+(tp.fuente||"Por verificar"))
-  );
-  f.hidden=false; f.querySelector(".x").focus();
+    f.append(
+      fichaNavOrClose(),
+      el("span",{class:"label"},"Tipo de título"),
+      el("h2",{},tp.nombre),
+      tp.nombre_fr?el("p",{class:"tipo-fr"},el("em",{},tp.nombre_fr)):null,
+      el("div",{class:"row"},
+        el("span",{class:"tag"},CAT_TIT[tp.categoria]||tp.categoria),
+        tp.es_tecnico?el("span",{class:"tag ej"},"Técnico (clasificatorio)"):null,
+        confBadgeEl(tp.confianza)
+      ),
+      el("div",{class:"rule"}),
+      el("span",{class:"label"},"Definición"),el("p",{},tp.definicion||"—"),
+      el("span",{class:"label"},"Aclaraciones"),el("p",{},tp.aclaraciones||"—"),
+      el("span",{class:"label"},"Historia y evolución"),el("p",{},tp.historia||"—"),
+      el("span",{class:"label"},"Derechos generales"),listaFicha(tp.derechos_generales),
+      el("span",{class:"label"},"Obligaciones generales"),listaFicha(tp.obligaciones_generales),
+      el("span",{class:"label"},"Títulos de este tipo ("+titulosDeTipo.length+")"),lista,
+      el("span",{class:"note"},"Fuente: "+(tp.fuente||"Por verificar"))
+    );
+    f.hidden=false; f.querySelector(".x")?.focus();
+  };
+  if(typeof fichaIr==="function")fichaIr(run,reset); else run();
 }

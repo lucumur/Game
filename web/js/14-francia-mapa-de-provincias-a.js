@@ -1026,7 +1026,6 @@ function liderCard(pid, titularFallback, cargoFallback, extraRef=null){
       hasRef?el("div",{class:"note"},extraRef.label||"Personaje relacionado en Versalles"):null,
       (L||p||hasRef)?el("div",{class:"lider-actions"},
         (L||p)?el("button",{class:"btn sm primary",onclick:()=>abrirFichaLider(pid)},"Abrir ficha en el Libro de Caras →"):null,
-        L?el("a",{class:"btn sm",href:"libro.html#"+L.id},"Ver retrato y hoja completa ↗"):null,
         hasRef?el("button",{class:"btn sm",onclick:()=>abrirFichaLider(extraRef.pid)},"Ver personaje relacionado →"):null
       ):null
     )

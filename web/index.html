@@ -7,7 +7,7 @@
 <link rel="icon" href="favicon.ico?v=3" sizes="any"><link rel="icon" type="image/svg+xml" href="favicon.svg?v=3"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=3"><link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&display=swap">
-<link rel="stylesheet" href="css/escritorio.css?v=202611230005">
+<link rel="stylesheet" href="css/escritorio.css?v=202611230022">
 </head>
 <body>
 
@@ -171,6 +171,15 @@
 
   <!-- Personajes -->
   <section class="view" data-view="personajes" hidden>
+    <div class="per-subbar" id="per-subtabs">
+      <div class="tabs" role="tablist" aria-label="Vistas del libro">
+        <button type="button" role="tab" id="sub-per" aria-selected="true">Personajes</button>
+        <button type="button" role="tab" id="sub-cas" aria-selected="false">Casas</button>
+        <button type="button" role="tab" id="sub-sim" aria-selected="false">Símbolos</button>
+      </div>
+      <button type="button" class="btn sm" id="b-guia-hab">Guía habilidades (0–10)</button>
+    </div>
+    <div id="vista-per">
     <section class="pane" id="pane-unknown">
       <div class="pane-h"><h2>Rostros sin nombre</h2><span class="tag ej">Ejemplo</span></div>
       <p class="note">Gente que has visto sin saber quién es. Escribe tu conjetura: el narrador confirma los aciertos de tres en tres, sin decirte cuál falló.</p>
@@ -178,9 +187,15 @@
       <div class="note" id="guess-count"></div>
     </section>
     <section class="pane">
-      <div class="pane-h"><h2 id="faces-title">Libro de caras</h2><span class="note" id="faces-count"></span><a class="note" id="faces-libro-link" href="libro.html" style="color:inherit">Abrir el libro completo →</a></div>
+      <div class="pane-h"><h2 id="faces-title">Libro de caras</h2><span class="note" id="faces-count"></span></div>
       <div class="faces-tools" id="faces-tools">
-        <input id="q" type="search" placeholder="Buscar por nombre o título" aria-label="Buscar">
+        <input id="q" type="search" placeholder="Buscar por nombre, casa, apelación o título" aria-label="Buscar">
+        <select id="f-orden" aria-label="Ordenar">
+          <option value="">Orden original</option>
+          <option value="riqueza">Dinero</option>
+          <option value="edad">Edad</option>
+          <option value="rango">Nobleza / rango</option>
+        </select>
         <select id="f-pres" aria-label="Presencia">
           <option value="">Toda presencia</option>
           <option value="reside">Reside en el palacio</option>
@@ -188,10 +203,95 @@
           <option value="ocasional">Visitas ocasionales</option>
           <option value="ausente">Fuera de Versalles</option>
         </select>
+        <select id="f-res" aria-label="Residencia">
+          <option value="">Toda residencia</option>
+          <option value="residente_palacio">Residente en Versalles</option>
+          <option value="habitante_versalles">Habitante de Versalles</option>
+          <option value="habitante_ile">Habitante de l'Île</option>
+          <option value="habitante_paris">Habitante de París</option>
+          <option value="provinciano">Provinciano</option>
+          <option value="extranjero">Extranjero</option>
+          <option value="por_verificar">Por verificar</option>
+        </select>
+        <select id="f-sim" aria-label="Símbolo"><option value="">Todo símbolo</option></select>
         <select id="f-casa" aria-label="Casa"><option value="">Toda casa</option></select>
       </div>
+      <div class="chips" id="f-facciones" role="group" aria-label="Filtrar por facción"></div>
       <div id="faces" style="display:grid;gap:14px"></div>
     </section>
+    </div>
+    <div id="vista-casas" hidden>
+      <section class="pane">
+        <div class="pane-h"><h2>Casas y heráldica</h2><span class="note" id="ccount"></span></div>
+        <div class="titulos-tools">
+          <input id="qc" type="search" placeholder="Buscar casa, tronco o blasonamiento" aria-label="Buscar casa">
+          <select id="ccat" aria-label="Categoría"><option value="">Toda categoría</option></select>
+          <select id="cest" aria-label="Escudo"><option value="">Todo escudo</option></select>
+        </div>
+        <details class="leyenda-pleb">
+          <summary>Código visual de casas plebeyas <span>(convención del juego, no heráldica histórica oficial)</span></summary>
+          <p class="note" style="margin-top:6px">Los plebeyos sin carta de armas usan estos emblemas provisionales sin esmaltes nobles para leer de un vistazo oficio y procedencia sin repetir diseños.</p>
+          <div class="leyenda-grid">
+            <div class="leyenda-col">
+              <h4>Oscuros · Oficio o raíz</h4>
+              <ul class="leyenda-list">
+                <li><span class="sw-dot" style="background:#22415a"></span><b>Azul petróleo:</b> mar, puertos y ríos</li>
+                <li><span class="sw-dot" style="background:#5a3d24"></span><b>Nogal:</b> arquitectura y madera</li>
+                <li><span class="sw-dot" style="background:#264639"></span><b>Bosque:</b> campo y raíz rural</li>
+                <li><span class="sw-dot" style="background:#5c2228"></span><b>Carmesí:</b> textil, vestido y vino</li>
+                <li><span class="sw-dot" style="background:#7a3320"></span><b>Terracota:</b> comercio y botica</li>
+                <li><span class="sw-dot" style="background:#4a3556"></span><b>Ciruela:</b> artes, letras y música</li>
+                <li><span class="sw-dot" style="background:#1e2024"></span><b>Negro:</b> leyes, medicina y servicio</li>
+              </ul>
+            </div>
+            <div class="leyenda-col">
+              <h4>Claros · Ámbito y Neutros</h4>
+              <ul class="leyenda-list">
+                <li><span class="sw-dot" style="background:#f5f3ec"></span><b>Plata / Lino:</b> París e Île-de-France</li>
+                <li><span class="sw-dot" style="background:#e8c45a"></span><b>Oro suave:</b> dinero o servicio real</li>
+                <li><span class="sw-dot" style="background:#b9cfe3"></span><b>Celeste:</b> Norte, Oeste o extranjero</li>
+                <li><span class="sw-dot" style="background:#e4b8a6"></span><b>Salmón:</b> Sur y Centro / Midi</li>
+                <li><span class="sw-dot" style="background:#6f886b"></span><b>Salvia prof.:</b> vínculo rural / botánico</li>
+                <li><span class="sw-dot" style="background:#a67f43"></span><b>Ocre prof.:</b> gremio tradicional</li>
+                <li><span class="sw-dot" style="background:#847e74"></span><b>Piedra:</b> oficio sin documentar</li>
+              </ul>
+            </div>
+            <div class="leyenda-col">
+              <h4>Particiones y trazos</h4>
+              <ul class="leyenda-list">
+                <li><b>Partido horizontal:</b> ascenso en una generación</li>
+                <li><b>Partido vertical:</b> doble tierra o migración</li>
+                <li><b>Rayas horizontales:</b> oficio hereditario</li>
+                <li><b>Rayas verticales:</b> comercio y ruta</li>
+                <li><b>Moteado:</b> pueblo pequeño o artesanía menuda</li>
+                <li><b>Grid 2×2 / 2 oscuros:</b> alianza o doble oficio</li>
+                <li><b>3 Bandas:</b> familia en transición entre dos oficios</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+        <div id="cas-wrap"></div>
+      </section>
+    </div>
+    <div id="vista-simbolos" hidden>
+      <section class="pane">
+        <div class="pane-h"><h2>Símbolos y etiquetas</h2><span class="note" id="sim-gh-st"></span></div>
+        <p class="note">Pulsa un símbolo para conocer su significado y ver quién lo lleva.</p>
+        <div class="status" id="smsg" aria-live="polite"></div>
+        <div id="sim-wrap"></div>
+        <div class="sim-new">
+          <span class="label">Añadir nuevo símbolo al catálogo</span>
+          <div class="row">
+            <input id="ns-id" placeholder="id (ej. academico)" aria-label="ID del símbolo">
+            <input id="ns-nom" placeholder="Nombre visible (ej. Académico)" aria-label="Nombre del símbolo">
+            <input id="ns-grp" placeholder="Grupo (ej. Papel en la corte)" aria-label="Grupo del símbolo">
+            <input id="ns-desc" placeholder="Descripción corta" aria-label="Descripción del símbolo">
+            <button class="btn sm" id="ns-gen" type="button">Generar JSON</button>
+          </div>
+          <div class="prompt" id="ns-out" hidden></div>
+        </div>
+      </section>
+    </div>
   </section>
 
   <!-- Títulos (Mundo) -->
@@ -313,38 +413,46 @@
     </div>
   </section>
 </div>
+<div class="overlay" id="guia-modal" hidden>
+  <section class="menu guia-menu" role="dialog" aria-modal="true" aria-labelledby="guia-tit">
+    <div class="pane-h"><h2 id="guia-tit">Escala de habilidades (0–10)</h2><button class="x" id="guia-close" type="button" aria-label="Cerrar">×</button></div>
+    <div class="chips" id="guia-tabs" role="tablist"></div>
+    <ol class="hab-list" id="guia-list"></ol>
+  </section>
+</div>
 <nav class="mnav" id="mnav" hidden aria-label="Secciones"></nav>
 
-<script src="js/00-datos.js?v=202611230005"></script>
-<script src="js/01-epocas.js?v=202611230005"></script>
-<script src="js/02-fechas.js?v=202611230005"></script>
-<script src="js/03-catalogos.js?v=202611230005"></script>
-<script src="js/04-nombres-de-epoca.js?v=202611230005"></script>
-<script src="js/05-creacion-de-personaje.js?v=202611230005"></script>
-<script src="js/06-familia-del-jugador.js?v=202611230005"></script>
-<script src="js/07-contenido-de-ejemplo.js?v=202611230005"></script>
-<script src="js/08-utilidades.js?v=202611230005"></script>
-<script src="js/heraldica.js?v=202611230005"></script>
-<script src="js/09-selector.js?v=202611230005"></script>
-<script src="js/10-barra.js?v=202611230005"></script>
-<script src="js/11-escritorio.js?v=202611230005"></script>
-<script src="js/12-mapas.js?v=202611230005"></script>
-<script src="js/13-buscador-de-lugares.js?v=202611230005"></script>
-<script src="js/14-francia-mapa-de-provincias-a.js?v=202611230005"></script>
-<script src="js/15-caras.js?v=202611230005"></script>
-<script src="js/16-linaje.js?v=202611230005"></script>
-<script src="js/17-diario-y-glosario.js?v=202611230005"></script>
-<script src="js/18-planes.js?v=202611230005"></script>
-<script src="js/19-calendario.js?v=202611230005"></script>
-<script src="js/20-epocas-pantalla.js?v=202611230005"></script>
-<script src="js/21-partidas-guardar-cargar-expo.js?v=202611230005"></script>
-<script src="js/22-biografia-y-relaciones.js?v=202611230005"></script>
-<script src="js/25-mecanicas.js?v=202611230005"></script>
-<script src="js/26-titulos.js?v=202611230005"></script>
-<script src="js/23-navegacion.js?v=202611230005"></script>
-<script src="js/24-panel-lateral.js?v=202611230005"></script>
-<script src="js/github.js?v=202611230005"></script>
-<script src="js/99-estatico.js?v=202611230005"></script>
+<script src="js/00-datos.js?v=202611230022"></script>
+<script src="js/01-epocas.js?v=202611230022"></script>
+<script src="js/02-fechas.js?v=202611230022"></script>
+<script src="js/03-catalogos.js?v=202611230022"></script>
+<script src="js/04-nombres-de-epoca.js?v=202611230022"></script>
+<script src="js/05-creacion-de-personaje.js?v=202611230022"></script>
+<script src="js/06-familia-del-jugador.js?v=202611230022"></script>
+<script src="js/07-contenido-de-ejemplo.js?v=202611230022"></script>
+<script src="js/08-utilidades.js?v=202611230022"></script>
+<script src="js/heraldica.js?v=202611230022"></script>
+<script src="js/09-selector.js?v=202611230022"></script>
+<script src="js/10-barra.js?v=202611230022"></script>
+<script src="js/11-escritorio.js?v=202611230022"></script>
+<script src="js/12-mapas.js?v=202611230022"></script>
+<script src="js/13-buscador-de-lugares.js?v=202611230022"></script>
+<script src="js/14-francia-mapa-de-provincias-a.js?v=202611230022"></script>
+<script src="js/15-caras.js?v=202611230022"></script>
+<script src="js/16-linaje.js?v=202611230022"></script>
+<script src="js/17-diario-y-glosario.js?v=202611230022"></script>
+<script src="js/18-planes.js?v=202611230022"></script>
+<script src="js/19-calendario.js?v=202611230022"></script>
+<script src="js/20-epocas-pantalla.js?v=202611230022"></script>
+<script src="js/21-partidas-guardar-cargar-expo.js?v=202611230022"></script>
+<script src="js/22-biografia-y-relaciones.js?v=202611230022"></script>
+<script src="js/25-mecanicas.js?v=202611230022"></script>
+<script src="js/26-titulos.js?v=202611230022"></script>
+<script src="js/27-libro-completo.js?v=202611230022"></script>
+<script src="js/23-navegacion.js?v=202611230022"></script>
+<script src="js/24-panel-lateral.js?v=202611230022"></script>
+<script src="js/github.js?v=202611230022"></script>
+<script src="js/99-estatico.js?v=202611230022"></script>
 
 
 </body></html>

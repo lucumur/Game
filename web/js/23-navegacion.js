@@ -19,7 +19,13 @@ function go(v,replaceHash=false){
   $("#mnav button[aria-current=true]")?.scrollIntoView({block:"nearest",inline:"nearest"});
   if(v==="escritorio"){drawDesk();drawCal()}
   if(isMap)drawMap(v);
-  if(v==="personajes"){const pu=$("#pane-unknown");if(pu)pu.hidden=appMode!=="partida";if(appMode==="partida")drawUnknown();drawFaces()}
+  if(v==="personajes"){
+    const ps=$("#per-subtabs"); if(ps)ps.hidden=appMode!=="mundo";
+    const pu=$("#pane-unknown"); if(pu)pu.hidden=appMode!=="partida";
+    if(appMode==="partida"){if(typeof setPerSubVista==="function")setPerSubVista("per");drawUnknown();drawFaces()}
+    else if(typeof setPerSubVista==="function")setPerSubVista(perSubVista);
+    else drawFaces();
+  }
   if(v==="diario")drawBook(); if(v==="planes")drawPlans(); if(v==="bio")drawBio(); if(v==="rel")drawRel();
   if(v==="glosario")drawGlossaryMundo(); if(v==="mecanicas")drawMecanicas(); if(v==="titulos")drawTitulos();
   try{
@@ -90,5 +96,5 @@ $("#b-mundo-partida").onclick=()=>entrar("partida");
 for(const id of ["#b-back","#b-mundo-portada","#b-epocas-portada","#b-sel-portada"])$(id).onclick=()=>show("portada");
 $("#b-mundo-edicion").onclick=()=>openMenu("edicion");
 $("#q").addEventListener("input",drawFaces); $("#f-pres").addEventListener("change",drawFaces); $("#f-casa")?.addEventListener("change",drawFaces);
-document.addEventListener("keydown",e=>{if(e.key==="Escape"){$("#ficha").hidden=true;closeLectern();closeMenu()}});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){if(typeof fichaCerrar==="function")fichaCerrar();else $("#ficha").hidden=true;if(typeof cerrarGuiaHab==="function")cerrarGuiaHab();closeLectern();closeMenu()}});
 {const h0=parseHash(); if(h0.mode)entrar(h0.mode,h0.view); else show("portada");}
