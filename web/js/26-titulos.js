@@ -192,10 +192,20 @@ function openFichaTitulo(id,reset=false){
     const sup=t.superior_id?TITULO_BY_ID[t.superior_id]:null;
     const subs=subordinadosDe(t);
     const coord=(t.lat!=null&&t.lon!=null)?`${t.lat.toFixed(2)}° N, ${t.lon.toFixed(2)}° E`:"Por verificar";
+    const creacion=t.creacion;
+    const fechaCreacion=creacion?.fecha?el("div",{},
+      el("strong",{},creacion.fecha),
+      creacion.confianza==="confirmado"?null:el("span",{class:"note"}," · "+(CONF_TIT[creacion.confianza]||"Por verificar")),
+      creacion.detalle?el("div",{class:"note"},creacion.detalle):null,
+      creacion.fuentes?.length?el("div",{class:"note"},...creacion.fuentes.flatMap(({nombre,url},i)=>[
+        i?" · ":"",el("a",{href:url,target:"_blank",rel:"noopener noreferrer"},nombre)
+      ])):null
+    ):"Por verificar";
     const dl=el("dl",{});
     [
       ["Tipo",tipoBtn(t.tipo_id,false)],
       ["Categoría",(CAT_TIT[t.categoria]||t.categoria)+(t.es_tecnico?" · Técnico":"")],
+      ["Fecha de creación",fechaCreacion],
       ["Portador",portadorBtn(t)],
       ["Casa",t.casa||"—"],
       ["Localización",t.provincia||"Por verificar"],

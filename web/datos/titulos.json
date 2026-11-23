@@ -242,6 +242,21 @@
       "tipo_id": "corona",
       "categoria": "soberano",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Sin fecha única de creación",
+        "detalle": "La Francia occidental surgió del reparto de Verdún en 843. La dinastía capeta comenzó en 987 y la titulatura de rey de Francia se afianzó en tiempos de Felipe Augusto.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Guézais, Universidad de St Andrews",
+            "url": "https://research-repository.st-andrews.ac.uk/bitstream/handle/10023/30089/Thesis-Cl%C3%A9ment-Gu%C3%A9zais-complete-version.pdf?isAllowed=y&sequence=2"
+          },
+          {
+            "nombre": "Leguai, estudio sobre el poder real",
+            "url": "https://journals.ub.uni-heidelberg.de/index.php/vuf/article/download/16440/10280"
+          }
+        ]
+      },
       "titular_id": "luis-xv",
       "titular_nombre": "Luis XV (menor de edad; Regencia de Felipe II de Orleans)",
       "casa": "Casa de Borbón (Casa Real de Francia)",
@@ -275,6 +290,21 @@
       "tipo_id": "ducado-paria-eclesiastico",
       "categoria": "eclesiastico",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Paría documentada en 1216",
+        "detalle": "El arzobispo de Reims figura entre los pares que juzgaron la sucesión de Champaña. La tradición atribuye su dignidad ducal a Luis VII.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Arbois de Jubainville, historia de Champaña",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Histoire_des_ducs_et_des_comtes_de_Champagne_%28IA_gri_33125007792811%29.pdf"
+          },
+          {
+            "nombre": "BnF, memoria sobre los pares",
+            "url": "https://ccfr.bnf.fr/portailccfr/ark:/16871/004D36E10149"
+          }
+        ]
+      },
       "titular_id": "armand-jules-rohan",
       "titular_nombre": "Armand-Jules de Rohan-Guémené",
       "casa": "Casa de Rohan-Guémené (Iglesia)",
@@ -307,6 +337,21 @@
       "tipo_id": "ducado-paria-eclesiastico",
       "categoria": "eclesiastico",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Siglo XIII (atestiguado)",
+        "detalle": "El obispo de Laon aparece como duque y par en la tradición escrita del siglo XIII. La fecha de creación de la dignidad es incierta.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Historia de la ciudad de Laon",
+            "url": "https://sahs-soissons.org/wp-content/uploads/2024/11/Histoire_de_la_ville_de_Laon_et_de_ses_i.pdf"
+          },
+          {
+            "nombre": "Estudio sobre los pares en el sacre",
+            "url": "https://www.persee.fr/doc/bsnaf_0081-1181_1990_num_1988_1_9426"
+          }
+        ]
+      },
       "titular_id": null,
       "titular_nombre": "Charles de Saint-Albin",
       "casa": "Casa de Orleans (hijo natural del Regente)",
@@ -338,6 +383,21 @@
       "tipo_id": "ducado-paria-eclesiastico",
       "categoria": "eclesiastico",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Paría documentada en 1216",
+        "detalle": "El obispo ya tenía el condado de Langres en 1179 y se documenta como par en 1216. La fecha exacta del título ducal es incierta.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Estudio del Centre de castellologie de Bourgogne",
+            "url": "https://www.cecab-chateaux-bourgogne.fr/Documents/Articles/Chastels-4/Prie.pdf"
+          },
+          {
+            "nombre": "Arbois de Jubainville, historia de Champaña",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Histoire_des_ducs_et_des_comtes_de_Champagne_%28IA_gri_33125007792811%29.pdf"
+          }
+        ]
+      },
       "titular_id": null,
       "titular_nombre": "François-Louis de Clermont-Tonnerre",
       "casa": "Casa de Clermont-Tonnerre (Iglesia)",
@@ -369,6 +429,21 @@
       "tipo_id": "condado-paria-eclesiastico",
       "categoria": "eclesiastico",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Paría documentada en 1216",
+        "detalle": "Un diploma de 1015 ya concedía al obispo parte de los derechos condales. Su condición de par está atestiguada en 1216.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "École nationale des chartes, estudio sobre Beauvais",
+            "url": "https://raw.githubusercontent.com/chartes/encpos/metadata/data/ENCPOS_1981/ENCPOS_1981_13.PDF"
+          },
+          {
+            "nombre": "Arbois de Jubainville, historia de Champaña",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Histoire_des_ducs_et_des_comtes_de_Champagne_%28IA_gri_33125007792811%29.pdf"
+          }
+        ]
+      },
       "titular_id": null,
       "titular_nombre": "François-Honoré-Antoine de Beauvilliers de Saint-Aignan",
       "casa": "Casa de Beauvilliers (Iglesia)",
@@ -400,6 +475,21 @@
       "tipo_id": "condado-paria-eclesiastico",
       "categoria": "eclesiastico",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Paría documentada en 1216",
+        "detalle": "El obispo de Châlons figura entre los pares que juzgaron la sucesión de Champaña. La fecha de creación de la paría es incierta.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Arbois de Jubainville, historia de Champaña",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Histoire_des_ducs_et_des_comtes_de_Champagne_%28IA_gri_33125007792811%29.pdf"
+          },
+          {
+            "nombre": "Estudio sobre los pares en el sacre",
+            "url": "https://www.persee.fr/doc/bsnaf_0081-1181_1990_num_1988_1_9426"
+          }
+        ]
+      },
       "titular_id": null,
       "titular_nombre": "Nicolas-Charles de Saulx-Tavannes",
       "casa": "Casa de Saulx-Tavannes (Iglesia)",
@@ -431,6 +521,21 @@
       "tipo_id": "condado-paria-eclesiastico",
       "categoria": "eclesiastico",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Paría documentada en 1216",
+        "detalle": "Étienne de Nemours, obispo de Noyon, consta como par en el juicio sobre la sucesión de Champaña. La fecha de creación de la paría es incierta.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Arbois de Jubainville, historia de Champaña",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Histoire_des_ducs_et_des_comtes_de_Champagne_%28IA_gri_33125007792811%29.pdf"
+          },
+          {
+            "nombre": "Estudio sobre los pares en el sacre",
+            "url": "https://www.persee.fr/doc/bsnaf_0081-1181_1990_num_1988_1_9426"
+          }
+        ]
+      },
       "titular_id": null,
       "titular_nombre": "Charles-François de Châteauneuf de Rochebonne",
       "casa": "Casa de Châteauneuf de Rochebonne (Iglesia)",
@@ -462,6 +567,25 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "1545 (ducado) · 1612 (paría)",
+        "detalle": "Las letras de paría de la rama de Lorena se registraron en 1627. En diciembre de 1667 se erigió un ducado simple para Charles-Honoré d’Albert.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Diccionario de Moréri",
+            "url": "https://www.e-rara.ch/download/pdf/28397118.pdf"
+          },
+          {
+            "nombre": "Memorias de Saint-Simon",
+            "url": "https://fr.wikisource.org/wiki/M%C3%A9moires_(Saint-Simon)/Tome_9/9"
+          },
+          {
+            "nombre": "Nobiliaire universel de France",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Nobiliaire_universel_de_France%2C_1872-1877%2C_volume_4.pdf"
+          }
+        ]
+      },
       "titular_id": "charles-philippe-luynes",
       "titular_nombre": "Charles-Philippe d'Albert, IV Duque de Luynes",
       "casa": "Casa d'Albert de Luynes",
@@ -492,6 +616,17 @@
       "tipo_id": "condado",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "1224",
+        "detalle": "Amaury de Montfort figura como señor en febrero y ya como conde el 9 de junio de 1224. Entre ambas menciones se sitúa la erección.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Cartulario de Joyenval, acto n.º 23",
+            "url": "https://www.academia.edu/130488340/La_Banniere_de_la_Shary"
+          }
+        ]
+      },
       "titular_id": "charles-philippe-luynes",
       "titular_nombre": "Charles-Philippe d'Albert, IV Duque de Luynes",
       "casa": "Casa d'Albert de Luynes",
@@ -522,6 +657,17 @@
       "tipo_id": "condado",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Principios del siglo XI",
+        "detalle": "Manassès, fallecido en 1037, es el primer conde conocido. La fecha exacta de creación del condado es incierta.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Municipio de Dammartin-en-Goële",
+            "url": "https://www.dammartin-en-goele.fr/cadre-de-vie/patrimoine/culture-patrimoine"
+          }
+        ]
+      },
       "titular_id": "luis-enrique-borbon",
       "titular_nombre": "Luis Enrique de Borbón-Condé («Monsieur le Duc»)",
       "casa": "Casa de Borbón-Condé",
@@ -552,6 +698,21 @@
       "tipo_id": "marquesado",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Mayo de 1688 (erección para d’Aubigné)",
+        "detalle": "La casa d’Angennes ya usaba el título antes de la venta de 1674. Françoise d’Aubigné recibió un brevet en 1675 y las letras de mayo de 1688 se registraron el 23 de agosto.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Inventario histórico de marquesados",
+            "url": "https://fr.wikipedia.org/wiki/Liste_historique_des_marquisats_de_France"
+          },
+          {
+            "nombre": "Boletín de la Société de l’histoire du protestantisme français",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Bulletin_de_la_Soci%C3%A9t%C3%A9_de_l%27histoire_du_protestantisme_fran%C3%A7ais_%28IA_bulletindelasoci318soci%29.pdf"
+          }
+        ]
+      },
       "titular_id": "noailles",
       "titular_nombre": "Adrien-Maurice, III Duque de Noailles (por su esposa Françoise-Charlotte d'Aubigné)",
       "casa": "Casa de Noailles",
@@ -582,6 +743,17 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Mayo de 1711",
+        "detalle": "Luis XIV elevó el marquesado a ducado-paría para Louis-Alexandre de Bourbon, conde de Toulouse.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Devred, historia del dominio de Rambouillet",
+            "url": "https://www.centrale-canine.fr/sites/default/files/inline-files/Chasses_le_domaine_de_Rambouillet_1783-1995_DEVRED_Raphael_2019_0.pdf"
+          }
+        ]
+      },
       "titular_id": "comte-de-toulouse",
       "titular_nombre": "Luis Alejandro de Borbón, Conde de Toulouse",
       "casa": "Casa de Borbón-Toulouse",
@@ -612,6 +784,17 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Septiembre de 1651",
+        "detalle": "Letras de erección en ducado-paría para Nicolas de Neufville. Registradas en el Parlamento de París el 15 de diciembre de 1663.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Nobiliaire universel de France",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Nobiliaire_universel_de_France%2C_1872-1877%2C_volume_4.pdf"
+          }
+        ]
+      },
       "titular_id": "villeroy",
       "titular_nombre": "François de Neufville, II Duque y Mariscal de Villeroy",
       "casa": "Casa de Neufville de Villeroy",
@@ -642,6 +825,17 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "1581 (Rethel) · 1663 (Mazarin)",
+        "detalle": "Henri III erigió Rethel en ducado-paría en 1581. En 1663 se erigió con el nombre de Mazarin para Armand de La Porte.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Diccionario de Moréri",
+            "url": "https://www.e-rara.ch/download/pdf/28397118.pdf"
+          }
+        ]
+      },
       "titular_id": "paul-jules-mazarin",
       "titular_nombre": "Paul-Jules de La Porte, Duque de Rethel-Mazarin",
       "casa": "Casa de La Porte-Mazarin",
@@ -672,6 +866,21 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Mayo de 1400",
+        "detalle": "Primera erección en ducado-paría para Louis d’Orléans. Hubo nuevas letras en 1566 y, tras el intercambio de 1651, en febrero de 1652 para la casa de Bouillon.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Blary, cronología de Château-Thierry",
+            "url": "https://www.persee.fr/doc/pica_1272-6117_2013_hos_29_1_3552"
+          },
+          {
+            "nombre": "Repertorio histórico de l’Aisne",
+            "url": "https://sahs-soissons.org/wp-content/uploads/2021/11/Recherches-Bibliographiques-Aisne-Perrin-1.pdf"
+          }
+        ]
+      },
       "titular_id": "emmanuel-theodose-bouillon",
       "titular_nombre": "Emmanuel-Théodose de La Tour d'Auvergne, Duque de Bouillon",
       "casa": "Casa de La Tour d'Auvergne (Bouillon)",
@@ -702,6 +911,21 @@
       "tipo_id": "ducado",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Enero de 1539",
+        "detalle": "François I elevó el condado-paría a ducado-paría. Philippe-Jules Mancini obtuvo letras de continuación en 1720.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "BnF, manuscrito Français 5121",
+            "url": "https://iiif.biblissima.fr/collections/manifest/1039990662a8d7273ae151f829ee678cdb226840"
+          },
+          {
+            "nombre": "La Chesnaye des Bois, Diccionario de la nobleza",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Aubert_-_Dictionnaire_de_la_noblesse%2C_1863%2C_volume_13.pdf"
+          }
+        ]
+      },
       "titular_id": "philippe-jules-mancini",
       "titular_nombre": "Philippe-Jules-François Mancini, Duque de Nevers",
       "casa": "Casa Mancini-Mazarini",
@@ -732,6 +956,21 @@
       "tipo_id": "condado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "996 (condado) · 1458 (paría)",
+        "detalle": "La tradición sitúa en 996 la concesión del condado normando a Geoffroi. Charles VII lo erigió en paría en 1458 para Charles d’Artois. La paría se restableció en 1660.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Municipio de Eu, historia del territorio",
+            "url": "https://data.geopf.fr/annexes/gpu/documents/DU_76255/8c3d80aa3b3a636686951ab56f5d70b7/76255_rapport_1_20130628.pdf"
+          },
+          {
+            "nombre": "Diccionario de Moréri",
+            "url": "https://www.e-rara.ch/download/pdf/28397118.pdf"
+          }
+        ]
+      },
       "titular_id": "comte-d-eu",
       "titular_nombre": "Luis Carlos de Borbón, Conde de Eu (hijo del Duque del Maine)",
       "casa": "Casa de Borbón-Maine",
@@ -762,6 +1001,17 @@
       "tipo_id": "ducado",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Mayo de 1505",
+        "detalle": "Louis XII elevó el condado de Longueville a ducado por letras expedidas en Blois.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Musée neuchâtelois, historia de los Orléans-Longueville",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Mus%C3%A9e_neuch%C3%A2telois_%28IA_gri_33125006893818%29.pdf"
+          }
+        ]
+      },
       "titular_id": "charles-charolais",
       "titular_nombre": "En litigio sucesorio (Casas de Condé, Conti y Luynes; representado en el mapa por el Conde de Charolais como coheredero)",
       "casa": "Casas de Condé, Conti y Luynes (en litigio)",
@@ -792,6 +1042,21 @@
       "tipo_id": "condado",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Hacia 989",
+        "detalle": "Los archivos de Eure sitúan hacia 989 la atribución del condado a Robert, hijo de Richard I de Normandía. En 1316 se erigió en condado-paría.",
+        "confianza": "probable",
+        "fuentes": [
+          {
+            "nombre": "Archivos de Eure, dominio de Évreux",
+            "url": "https://archives.eure.fr/ark:/26335/wnq06d5pgrmv"
+          },
+          {
+            "nombre": "Cronología de las parías de Francia",
+            "url": "https://fr.wikipedia.org/wiki/Pairie_de_France_(Ancien_R%C3%A9gime)"
+          }
+        ]
+      },
       "titular_id": "henri-louis-evreux",
       "titular_nombre": "Henri-Louis de La Tour d'Auvergne, Conde de Évreux",
       "casa": "Casa de La Tour d'Auvergne (Bouillon)",
@@ -822,6 +1087,21 @@
       "tipo_id": "condado",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "1351–1352",
+        "detalle": "Jean II elevó el señorío de Tancarville a condado para Jean de Melun. Las fuentes discrepan entre 1351 y 1352.",
+        "confianza": "probable",
+        "fuentes": [
+          {
+            "nombre": "Bulletin de la Société historique et archéologique de l’Orne",
+            "url": "https://paintet.eu/_media/genealogie-de-la-famille-turgot.pdf"
+          },
+          {
+            "nombre": "Houard, costumbres de Normandía",
+            "url": "https://static1.squarespace.com/static/5d76821bfaead41de7563f36/t/5f03196404cf460c9ad44aab/1594039215680/Houard_Vol1_Part1.pdf"
+          }
+        ]
+      },
       "titular_id": "henri-louis-evreux",
       "titular_nombre": "Henri-Louis de La Tour d'Auvergne, Conde de Évreux",
       "casa": "Casa de La Tour d'Auvergne (Bouillon)",
@@ -852,6 +1132,17 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Noviembre de 1700 (ducado) · noviembre de 1709 (paría)",
+        "detalle": "Luis XIV erigió Thury como ducado de Harcourt para el mariscal Henri d’Harcourt y le concedió la paría en 1709.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "La Chesnaye des Bois, Diccionario de la nobleza",
+            "url": "https://www.blason-armoiries.org/heraldique/armoriaux/telechargement/aubert/aubert-vol10.pdf"
+          }
+        ]
+      },
       "titular_id": "francois-harcourt",
       "titular_nombre": "François d'Harcourt, II Duque de Harcourt",
       "casa": "Casa d'Harcourt",
@@ -882,6 +1173,21 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "1621 · restablecido en 1711",
+        "detalle": "El primer ducado-paría se registró el 6 de marzo de 1621 para Honoré d’Albert d’Ailly. La dignidad se restableció para Louis-Auguste d’Albert d’Ailly en 1711.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Municipio de Chaulnes, historia del primer duque",
+            "url": "https://www.mairiechaulnes.fr/wp-content/uploads/2024/01/BM97.pdf"
+          },
+          {
+            "nombre": "Diccionario de Moréri",
+            "url": "https://www.e-rara.ch/download/pdf/28397118.pdf"
+          }
+        ]
+      },
       "titular_id": "louis-auguste-chaulnes",
       "titular_nombre": "Louis-Auguste d'Albert d'Ailly, IV Duque de Chaulnes",
       "casa": "Casa d'Albert d'Ailly de Chaulnes",
@@ -912,6 +1218,17 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Enero de 1635",
+        "detalle": "Louis XIII erigió las tierras de Saint-Simon y otros señoríos en ducado-paría para Claude de Rouvroy.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Boislisle, letras de erección",
+            "url": "https://josilonus.fr/ixezede/pdf/Boislisle.pdf"
+          }
+        ]
+      },
       "titular_id": "saint-simon",
       "titular_nombre": "Louis de Rouvroy, II Duque de Saint-Simon",
       "casa": "Casa de Rouvroy de Saint-Simon",
@@ -942,6 +1259,21 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Abril de 1603 · restablecido en 1648",
+        "detalle": "Henri IV elevó el vizcondado a ducado-paría para Henri de Rohan. Las letras de 1648 restablecieron la dignidad para la casa de Rohan-Chabot.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Nobiliaire universel de France",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Nobiliaire_universel_de_France%2C_1872-1877%2C_volume_4.pdf"
+          },
+          {
+            "nombre": "BnF, letras de restablecimiento de 1648",
+            "url": "https://ccfr.bnf.fr/portailccfr/ark:/16871/004SEN014617A06"
+          }
+        ]
+      },
       "titular_id": "rohan-guemene",
       "titular_nombre": "Charles III de Rohan, Príncipe de Guémené (cabeza primogénita; paría vinculada a Montbazon / Rohan según rama — detalle de titularidad exacta entre Rohan-Chabot y Rohan-Guémené por verificar)",
       "casa": "Casa de Rohan",
@@ -972,6 +1304,21 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "1569 · nueva erección en 1697",
+        "detalle": "Charles IX creó el ducado-paría para Sébastien de Luxembourg. El conde de Toulouse obtuvo nuevas letras tras adquirir Penthièvre.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Encyclopédie, voz Penthièvre",
+            "url": "https://fr.wikisource.org/wiki/L%E2%80%99Encyclop%C3%A9die/1re_%C3%A9dition/PENTHIEVRE"
+          },
+          {
+            "nombre": "Archivos de Côtes-d’Armor",
+            "url": "https://archives.cotesdarmor.fr/sites/default/files/2024-02/DP_Arts_et_archives_2011_1.pdf"
+          }
+        ]
+      },
       "titular_id": "comte-de-toulouse",
       "titular_nombre": "Luis Alejandro de Borbón, Conde de Toulouse",
       "casa": "Casa de Borbón-Toulouse",
@@ -1002,6 +1349,17 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Julio de 1563 (ducado) · agosto de 1595 (paría)",
+        "detalle": "Charles IX elevó el vizcondado a ducado para Louis de La Trémoille. Henri IV le añadió la paría en 1595.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Nobiliaire universel de France",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Nobiliaire_universel_de_France%2C_1872-1877%2C_volume_4.pdf"
+          }
+        ]
+      },
       "titular_id": "la-tremoille",
       "titular_nombre": "Charles-Armand-René, Duque de La Trémoille y de Thouars",
       "casa": "Casa de La Trémoille",
@@ -1032,6 +1390,17 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Octubre de 1714",
+        "detalle": "La primera erección de Frontenay en julio de 1626 quedó sin registrar. La nueva, bajo el nombre de Rohan-Rohan, se registró el 18 de diciembre de 1714.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Nobiliaire universel de France",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Nobiliaire_universel_de_France%2C_1872-1877%2C_volume_4.pdf"
+          }
+        ]
+      },
       "titular_id": "hercule-meriadec-rohan",
       "titular_nombre": "Hercule-Mériadec de Rohan, Duque de Rohan-Rohan y Príncipe de Soubise",
       "casa": "Casa de Rohan-Soubise",
@@ -1062,6 +1431,17 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Diciembre de 1650",
+        "detalle": "Letras de erección en ducado-paría para Gabriel de Rochechouart. Registradas en París el 15 de diciembre de 1663.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Nobiliaire universel de France",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Nobiliaire_universel_de_France%2C_1872-1877%2C_volume_4.pdf"
+          }
+        ]
+      },
       "titular_id": "louis-mortemart",
       "titular_nombre": "Louis II de Rochechouart, IV Duque de Mortemart",
       "casa": "Casa de Rochechouart de Mortemart",
@@ -1092,6 +1472,17 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Abril de 1622",
+        "detalle": "Erección del condado en ducado-paría. Las letras se registraron el 4 de septiembre de 1631.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Nobiliaire universel de France",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Nobiliaire_universel_de_France%2C_1872-1877%2C_volume_4.pdf"
+          }
+        ]
+      },
       "titular_id": "francois-la-rochefoucauld",
       "titular_nombre": "François VIII, IV Duque de La Rochefoucauld",
       "casa": "Casa de La Rochefoucauld",
@@ -1122,6 +1513,21 @@
       "tipo_id": "ducado-apanaje",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "1344 · apanaje de marzo de 1661",
+        "detalle": "Philippe de Valois recibió el primer ducado de Orleans en apanaje en 1344. La rama que lo tenía en 1722 lo recibió por el edicto de Louis XIV para su hermano Philippe.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Larousse, casas de Orleans",
+            "url": "https://www.larousse.fr/encyclopedie/groupe-homonymes/maisons_d_Orl%C3%A9ans/136334"
+          },
+          {
+            "nombre": "FranceArchives, casa de Orleans",
+            "url": "https://francearchives.gouv.fr/fr/agent/173448531"
+          }
+        ]
+      },
       "titular_id": "felipe-ii-orleans",
       "titular_nombre": "Felipe II de Orleans, Duque de Orleans y Regente",
       "casa": "Casa de Orleans",
@@ -1153,6 +1559,21 @@
       "tipo_id": "ducado-apanaje",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "1528 · incorporado al apanaje en marzo de 1661",
+        "detalle": "François I elevó Chartres de condado a ducado para Renée de France. El edicto de marzo de 1661 lo incluyó en el apanaje de Philippe d’Orléans.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Médiathèque de Chartres, historia local",
+            "url": "https://mediatheque.chartres.fr/default/basicfilesdownload.ashx?itemGuid=1D48638E-B60A-41D3-87D0-67FB159DD4C4"
+          },
+          {
+            "nombre": "Edicto de apanaje de 1661, catálogo Amatteis",
+            "url": "https://77livres.com/wp-content/uploads/2022/03/1982-catalogue-livres-amatteis.pdf"
+          }
+        ]
+      },
       "titular_id": "luis-orleans-chartres",
       "titular_nombre": "Luis de Orleans, Duque de Chartres",
       "casa": "Casa de Orleans",
@@ -1183,6 +1604,17 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Diciembre de 1663",
+        "detalle": "Erección del condado en ducado-paría para François-Honorat de Beauvilliers.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Nobiliaire universel de France",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Nobiliaire_universel_de_France%2C_1872-1877%2C_volume_4.pdf"
+          }
+        ]
+      },
       "titular_id": "paul-hippolyte-st-aignan",
       "titular_nombre": "Paul-Hippolyte de Beauvilliers, Duque de Saint-Aignan",
       "casa": "Casa de Beauvilliers",
@@ -1213,6 +1645,17 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Marzo de 1672",
+        "detalle": "Las letras erigieron la tierra en ducado-paría de Béthune-Charost. Se registraron en agosto de 1690.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Nobiliaire universel de France",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Nobiliaire_universel_de_France%2C_1872-1877%2C_volume_4.pdf"
+          }
+        ]
+      },
       "titular_id": "charost",
       "titular_nombre": "Armand de Béthune, II Duque de Charost",
       "casa": "Casa de Béthune-Charost",
@@ -1243,6 +1686,21 @@
       "tipo_id": "condado",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Finales del siglo XIII o comienzos del XIV",
+        "detalle": "El Charolais se transmitía como castellanía en el siglo XIII. Las cronologías sitúan la aparición del condado entre 1270 y 1316, con fecha de erección incierta.",
+        "confianza": "probable",
+        "fuentes": [
+          {
+            "nombre": "Courtépée, Historia del Charolais",
+            "url": "https://brionnais.fr/pm/site/histoire_Charolais.htm"
+          },
+          {
+            "nombre": "Cronología de los condes de Charolais",
+            "url": "https://fr.wikipedia.org/wiki/Liste_des_comtes_de_Charolais"
+          }
+        ]
+      },
       "titular_id": "charles-charolais",
       "titular_nombre": "Carlos de Borbón-Condé, Conde de Charolais (en titularidad social/patrimonial de la casa Condé; detalle de partición entre Monsieur le Duc y su hermano por verificar)",
       "casa": "Casa de Borbón-Condé",
@@ -1273,6 +1731,21 @@
       "tipo_id": "ducado",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "27 de diciembre de 1327",
+        "detalle": "Letras de erección del señorío de Bourbon en ducado-paría para Louis I de Bourbon. El contrato de engagement con el príncipe de Condé se firmó el 26 de febrero de 1661.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Pradel, estudio sobre los señores de Bourbon",
+            "url": "https://www.persee.fr/doc/bulmo_0007-473x_1980_num_138_4_5930?pageId=T1_399"
+          },
+          {
+            "nombre": "État de la France, contrato de 1661",
+            "url": "https://www.e-rara.ch/download/pdf/12606207.pdf"
+          }
+        ]
+      },
       "titular_id": "luis-enrique-borbon",
       "titular_nombre": "Luis Enrique de Borbón-Condé («Monsieur le Duc»)",
       "casa": "Casa de Borbón-Condé",
@@ -1303,6 +1776,21 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "1705 (ducado) · noviembre de 1709 (paría)",
+        "detalle": "Luis XIV erigió Vaux como ducado para Claude-Louis-Hector de Villars y le añadió la paría en 1709. Esta se registró en abril de 1710.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Cronología de los ducados de Francia",
+            "url": "https://fr.wikipedia.org/wiki/Liste_des_duch%C3%A9s_de_France"
+          },
+          {
+            "nombre": "Memorias del duque de Villars",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/M%C3%A9moires_du_duc_de_Villars_-_pair_de_France%2C_mar%C3%A9chal_g%C3%A9n%C3%A9ral_des_armes_de_sa_majest%C3%A9_tres_chr%C3%A9tienne_.._%28IA_mmoiresduducde03vill%29.pdf"
+          }
+        ]
+      },
       "titular_id": "villars",
       "titular_nombre": "Claude-Louis-Hector, Duque y Mariscal de Villars",
       "casa": "Casa de Villars",
@@ -1333,6 +1821,21 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Septiembre de 1627 (ducado) · julio de 1652 (paría)",
+        "detalle": "El ducado provenzal de los Brancas obtuvo la paría para Georges de Brancas. El Parlamento de París registró las letras en 1716.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Études héraultaises, estudio sobre los duques y pares",
+            "url": "https://www.etudesheraultaises.fr/wp-content/uploads/1973-4-02-les-ducs-et-pairs-de-france-en-languedoc-et-en-provence.pdf"
+          },
+          {
+            "nombre": "Diccionario geográfico, histórico y crítico",
+            "url": "https://www.e-rara.ch/download/pdf/13630373.pdf"
+          }
+        ]
+      },
       "titular_id": null,
       "titular_nombre": "Louis-Antoine de Brancas, IV Duque de Villars-Brancas",
       "casa": "Casa de Brancas",
@@ -1363,6 +1866,21 @@
       "tipo_id": "condado",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "1346",
+        "detalle": "Philippe VI reunió las dos mitades del señorío en un condado para Humbert de Viennois. Un mandato real de abril de 1346 documenta la erección.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Universidad de Graz, mandato de Philippe VI",
+            "url": "https://gams.uni-graz.at/o:cord.b86038a8.5d68.331d.8f6a.35e1a873174c/sdef:Object/getDC"
+          },
+          {
+            "nombre": "Inventario de los archivos municipales de Alès",
+            "url": "https://ales.fr/wp-content/uploads/2018/01/archives-municipales-d-ales-inventaires-repertoire-1200-2006.pdf"
+          }
+        ]
+      },
       "titular_id": "louis-armand-conti",
       "titular_nombre": "Luis Armando II de Borbón, Príncipe de Conti",
       "casa": "Casa de Borbón-Conti",
@@ -1393,6 +1911,17 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Mayo de 1565 (ducado) · enero de 1572 (paría)",
+        "detalle": "Antoine de Crussol recibió el ducado. Las letras de paría se registraron en el Parlamento de París el 3 de marzo de 1572.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Nobiliaire universel de France",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Nobiliaire_universel_de_France%2C_1872-1877%2C_volume_4.pdf"
+          }
+        ]
+      },
       "titular_id": "jean-charles-uzes",
       "titular_nombre": "Jean-Charles de Crussol, VII Duque de Uzès",
       "casa": "Casa de Crussol d'Uzès",
@@ -1424,6 +1953,21 @@
       "tipo_id": "marquesado",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Marzo de 1645",
+        "detalle": "Louis XIV erigió la baronía de Castries en marquesado para René-Gaspard de La Croix.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Études héraultaises, historia local",
+            "url": "https://www.etudesheraultaises.fr/publi/les-comptes-des-hopitaux-de-baillargues-et-saint-bres-1649-1679/"
+          },
+          {
+            "nombre": "Les Seigneurs de Castries, letras patentes",
+            "url": "https://sf7738c660655a175.jimcontent.com/download/version/1528201290/module/13491674827/name/Les%2Bseigneurs%2Bde%2BCastries.pdf"
+          }
+        ]
+      },
       "titular_id": "joseph-castries",
       "titular_nombre": "Joseph-François de La Croix, Marqués de Castries",
       "casa": "Casa de La Croix de Castries",
@@ -1454,6 +1998,21 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Diciembre de 1556 (ducado-paría)",
+        "detalle": "Las letras de 1550 erigían un ducado simple y quedaron sin registrar. Las de 1556 crearon el ducado-paría para Antoine de Bourbon y Jeanne d’Albret. La dignidad se volvió a erigir para la casa de Bouillon tras el intercambio de 1651.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Estudio histórico sobre la casa de Albret",
+            "url": "https://una-editions.fr/peut-on-parler-dune-principaute-dalbret-a-la-fin-du-moyen-age/"
+          },
+          {
+            "nombre": "Letras y contrato de la casa de Bouillon",
+            "url": "https://www.e-rara.ch/download/pdf/13008102.pdf"
+          }
+        ]
+      },
       "titular_id": "emmanuel-theodose-bouillon",
       "titular_nombre": "Emmanuel-Théodose de La Tour d'Auvergne, Duque de Bouillon",
       "casa": "Casa de La Tour d'Auvergne (Bouillon)",
@@ -1484,6 +2043,21 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "1608 · nueva erección en julio de 1634",
+        "detalle": "Primera erección para François d’Orléans, conde de Saint-Pol. Las letras de 1634 conservaron el rango de la primera creación para el cardenal de Richelieu y sus sucesores.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Larousse, voz Fronsac",
+            "url": "https://fr.wikisource.org/wiki/Page:Larousse_-_Grand_dictionnaire_universel_du_XIXe_si%C3%A8cle_-_Tome_8,_part._3,_Frit-Gild.djvu/13"
+          },
+          {
+            "nombre": "Nobiliaire universel de France",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Nobiliaire_universel_de_France%2C_1872-1877%2C_volume_4.pdf"
+          }
+        ]
+      },
       "titular_id": "armand-richelieu",
       "titular_nombre": "Louis-François-Armand, III Duque de Richelieu y de Fronsac",
       "casa": "Casa de Vignerot du Plessis de Richelieu",
@@ -1514,6 +2088,17 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Agosto de 1631",
+        "detalle": "Louis XIII erigió las tierras de Richelieu en ducado-paría para el cardenal. Las letras de agosto se registraron en enero de 1632.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Nobiliaire universel de France",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Nobiliaire_universel_de_France%2C_1872-1877%2C_volume_4.pdf"
+          }
+        ]
+      },
       "titular_id": "armand-richelieu",
       "titular_nombre": "Louis-François-Armand, III Duque de Richelieu y de Fronsac",
       "casa": "Casa de Vignerot du Plessis de Richelieu",
@@ -1544,6 +2129,17 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Mayo de 1711",
+        "detalle": "Letras de erección del marquesado de Antin en ducado-paría para Louis-Antoine de Pardaillan de Gondrin.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Diccionario de Moréri, voz Antin",
+            "url": "https://www.e-rara.ch/download/pdf/27491209.pdf"
+          }
+        ]
+      },
       "titular_id": "antin",
       "titular_nombre": "Louis-Antoine de Pardaillan de Gondrin, I Duque de Antin",
       "casa": "Casa de Pardaillan de Gondrin",
@@ -1574,6 +2170,21 @@
       "tipo_id": "marquesado",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Agosto de 1612",
+        "detalle": "Letras de erección de la baronía en marquesado para los Pardaillan de Gondrin. Se registraron el 23 de julio de 1618.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Inventario histórico de marquesados",
+            "url": "https://fr.wikipedia.org/wiki/Liste_historique_des_marquisats_de_France"
+          },
+          {
+            "nombre": "Bouillet y Chassang, voz Montespan",
+            "url": "https://fr.wikisource.org/wiki/Page:Bouillet_-_Chassang_-_Dictionnaire_universel_d%27histoire-geo_-_1878_-_P2_-_H-P.djvu/463"
+          }
+        ]
+      },
       "titular_id": "antin",
       "titular_nombre": "Louis-Antoine de Pardaillan de Gondrin, I Duque de Antin",
       "casa": "Casa de Pardaillan de Gondrin",
@@ -1604,6 +2215,17 @@
       "tipo_id": "ducado-paria-laico",
       "categoria": "noble",
       "es_tecnico": false,
+      "creacion": {
+        "fecha": "Noviembre de 1648",
+        "detalle": "La dignidad de duque a brevet y par de 1643 precedió a las letras de erección territorial, que se registraron el 15 de diciembre de 1663.",
+        "confianza": "confirmado",
+        "fuentes": [
+          {
+            "nombre": "Château de Gramont, historia del ducado",
+            "url": "https://chateaudegramont.com/fr/le-duche/"
+          }
+        ]
+      },
       "titular_id": "antoine-gramont",
       "titular_nombre": "Antoine V de Gramont, IV Duque de Gramont",
       "casa": "Casa de Gramont",
