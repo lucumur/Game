@@ -197,7 +197,7 @@ function renderCasas(){
       if(g.ali.length)partes.push(g.ali.length+" al.");
       const sub=(partes.length?partes.join(" · "):"0 vínculos")+" · "+(Heraldica.ESTADOS[cas.escudo_estado]||cas.escudo_estado);
       grid.append(el("button",{type:"button",class:"casa-card",onclick:()=>openFichaCasa(cas.id)},
-        Heraldica.escudoEl(cas.id,{size:44}),
+        el("div",{class:"casa-emblema"},Heraldica.escudoEl(cas.id,{size:78})),
         el("div",{class:"casa-card-meta"},el("span",{class:"casa-card-nom"},cas.nombre),el("span",{class:"casa-card-sub"},sub))));
     });
     wrap.append(el("div",{class:"rama"},el("h3",{},(Heraldica.CATEGORIAS[cat]||cat)+" ",el("span",{class:"note"},items.length+" casas")),grid));
@@ -247,7 +247,7 @@ function openFichaCasa(cid,reset=false){
     const secGrupo=(tit,lista)=>{
       if(!lista.length)return;
       const g=el("div",{class:"sim-personas"});
-      lista.forEach(p=>g.append(el("button",{type:"button",class:"plate",onclick:()=>openFichaL(p)},retratoEl(p),el("span",{class:"nm"},p.nombre_nac||p.nombre))));
+      lista.forEach(p=>g.append(el("button",{type:"button",class:"plate",onclick:()=>openFichaL(p)},plateFaceEl(p,!esPartida()),el("span",{class:"nm"},p.nombre_nac||p.nombre))));
       f.append(el("span",{class:"label"},tit+" ("+lista.length+")"),g);
     };
     if(!grupos.todos.length)f.append(el("p",{class:"note"},esPartida()?"Aún no conoces a nadie de esta casa.":"Ningún personaje cargado está vinculado todavía a esta casa."));
@@ -374,7 +374,7 @@ function openFichaSimbolo(sid,reset=false){
     if(!port.length)f.append(el("span",{class:"label"},"Personajes (0)"),el("p",{class:"note"},"Ninguna ficha lleva este símbolo."));
     else{
       const g=el("div",{class:"sim-personas"});
-      port.forEach(c=>g.append(el("button",{type:"button",class:"plate",onclick:()=>openFichaL(c)},retratoEl(c),el("span",{class:"nm"},c.nombre_nac||c.nombre))));
+      port.forEach(c=>g.append(el("button",{type:"button",class:"plate",onclick:()=>openFichaL(c)},plateFaceEl(c,!esPartida()),el("span",{class:"nm"},c.nombre_nac||c.nombre))));
       f.append(el("span",{class:"label"},"Personajes ("+port.length+")"),g);
     }
     f.hidden=false; f.querySelector(".x")?.focus();

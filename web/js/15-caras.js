@@ -37,6 +37,10 @@ function modoCarasUI(){
 const libroDe=id=>LIBRO&&LIBRO.find(c=>c.escritorio_id===id);
 function refrescarFichaCasa(){if(typeof fichaActual==="function"&&fichaActual&&!$("#ficha").hidden)fichaActual();else if(curFichaL&&!$("#ficha").hidden)openFichaL(curFichaL)}
 function retratoEl(c){const s=RETR[c.id];if(!s)return bust();const i=el("img",{class:"pt",alt:"Retrato de "+(c.nombre_nac||c.nombre)});i.src=s;return i}
+function plateFaceEl(c,conEscudo=true){
+  const esc=(conEscudo&&typeof Heraldica!=="undefined"&&c.casa_id)?Heraldica.escudoEl(c.casa_id,{size:28,rol:"Casa paterna",cls:"esc-pat esc-sobre"}):null;
+  return el("div",{class:"plate-face"},retratoEl(c),esc);
+}
 function drawFaces(){
   modoCarasUI();
   if(LIBRO&&LIBRO.length)return drawFacesLibro();
@@ -50,7 +54,7 @@ function drawFaces(){
   const ramas={}; list.forEach(p=>(ramas[p.rama.split(" / ")[0]] ||= []).push(p));
   for(const[r,ps]of Object.entries(ramas)){
     const g=el("div",{class:"plates"});
-    ps.forEach(p=>g.append(el("button",{class:"plate"+(p.presencia_versalles==="ausente"?" away":""),onclick:()=>openFicha(p)},bust(),el("span",{class:"nm"},p.nombre),el("span",{class:"tt"},p.titulo),el("span",{class:"state ok"},"Identificado"))));
+    ps.forEach(p=>g.append(el("button",{class:"plate"+(p.presencia_versalles==="ausente"?" away":""),onclick:()=>openFicha(p)},el("div",{class:"plate-face"},bust()),el("span",{class:"nm"},p.nombre),el("span",{class:"tt"},p.titulo),el("span",{class:"state ok"},"Identificado"))));
     b.append(el("div",{class:"rama"},el("h3",{},"Casa de "+r.replace("Real","Francia")),g));
   }
   if(!list.length)b.append(el("p",{class:"note"},"Nadie coincide con la búsqueda."));
@@ -87,10 +91,9 @@ function drawFacesLibro(){
   const b=$("#faces"); b.innerHTML="";
   if(par&&!conocidos.size){b.append(el("p",{class:"note"},CARAS_VACIO));return}
   const renderCard=c=>{
-    const esc=typeof Heraldica!=="undefined"&&c.casa_id?Heraldica.parCasasEl(c,{size:20,onClick:par?null:cid=>openFichaCasa(cid)}):null;
     const valOrd=ord&&typeof ORD_VAL!=="undefined"&&ORD_VAL[ord]?el("span",{class:"cval"},ORD_VAL[ord](c)):null;
     return el("button",{class:"plate"+(c.presencia_versalles==="ausente"?" away":""),onclick:()=>openFichaL(c)},
-      retratoEl(c),el("span",{class:"nm"},c.nombre_nac||c.nombre),el("span",{class:"tt"},c.titulo_nob||c.titulo||""),el("span",{class:"tt"},c.puesto||c.cargo||""),valOrd,esc&&esc.childElementCount?esc:null,simbolosEl(c));
+      plateFaceEl(c,!par),el("span",{class:"nm"},c.nombre_nac||c.nombre),el("span",{class:"tt"},c.titulo_nob||c.titulo||""),el("span",{class:"tt"},c.puesto||c.cargo||""),valOrd,simbolosEl(c));
   };
   if(ord){
     const box=el("div",{class:"plates"}); list.forEach(c=>box.append(renderCard(c))); b.append(box);

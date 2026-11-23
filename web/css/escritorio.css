@@ -639,3 +639,21 @@ button.casa-chip:hover,button.casa-chip:focus-visible{border-color:var(--gilt);b
 .hab-list{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:.92rem}
 .hab-list li{display:grid;grid-template-columns:26px 1fr;gap:8px;padding:5px 0;border-bottom:1px solid var(--line)}
 .hab-list li.elite b{color:var(--gilt)}
+
+/* Tarjetas cuadradas más grandes (Personajes, Casas y Símbolos) y escudo paterno arriba a la izquierda */
+.plates{grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px}
+.plate{padding:10px;align-content:start}
+.plate-face{position:relative;width:100%;aspect-ratio:1;border:1px solid var(--gilt);background:var(--panel);overflow:hidden;display:grid;place-items:center}
+.plate-face img.pt{width:100%;height:100%;border:0;border-radius:0;object-fit:cover;object-position:center top;display:block}
+.plate-face>svg{width:72%;height:72%}
+.plate-face .esc-sobre{position:absolute;top:6px;left:6px;z-index:1;pointer-events:none;filter:drop-shadow(0 1px 2px rgb(0 0 0 / .45))}
+.casa-grid{grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:14px}
+.casa-card{grid-template-columns:1fr;justify-items:center;text-align:center;padding:12px;gap:10px;align-content:start}
+.casa-emblema{width:100%;max-width:124px;aspect-ratio:1;border:1px solid var(--gilt);background:var(--panel);display:grid;place-items:center;padding:10px}
+.sim-grid{grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:14px}
+.sim-open{grid-template-columns:1fr;justify-items:center;text-align:center;gap:10px}
+.sim-box{width:100%;max-width:124px;height:auto;aspect-ratio:1;border-color:var(--gilt);padding:16px}
+.sim-box .sim-ico{width:100%;height:100%}
+.sim-acts{justify-content:center}
+.sim-personas{grid-template-columns:repeat(auto-fill,minmax(122px,1fr));gap:10px}
+.sim-personas .plate{padding:8px}
