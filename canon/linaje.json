@@ -255,6 +255,54 @@
    "nacimiento": "1661",
    "muerte": "1685",
    "nota": "Hermano mayor del Gran Conti; primer esposo de Mademoiselle de Blois"
+  },
+  "francois-rohan-soubise": {
+   "nombre": "François de Rohan",
+   "nacimiento": "1630",
+   "muerte": "1712",
+   "nota": "Primer príncipe de Soubise, conde de Rochefort",
+   "conf": "confirmado",
+   "fuente": "https://bibale.irht.cnrs.fr/29381"
+  },
+  "anne-julie-rohan-chabot": {
+   "nombre": "Anne Julie de Rohan-Chabot",
+   "nacimiento": "1648",
+   "muerte": "1709",
+   "nota": "Dama de Soubise y princesa de Soubise por matrimonio",
+   "conf": "confirmado",
+   "fuente": "https://www.archives-nationales.culture.gouv.fr/lhotel-de-soubise"
+  },
+  "hercule-rohan-montbazon": {
+   "nombre": "Hercule de Rohan",
+   "nacimiento": "1568",
+   "muerte": "1654",
+   "nota": "Duque de Montbazon y par de Francia",
+   "conf": "confirmado",
+   "fuente": "https://data.bnf.fr/fr/ark:/12148/cb13496303f"
+  },
+  "marie-bretagne-avaugour": {
+   "nombre": "Marie de Bretagne d’Avaugour",
+   "nacimiento": "1610",
+   "muerte": "1657",
+   "nota": "Duquesa de Montbazon por matrimonio",
+   "conf": "confirmado",
+   "fuente": "https://siefar.org/gb/personnage/marie-davaugour/"
+  },
+  "henri-chabot": {
+   "nombre": "Henri de Chabot",
+   "nacimiento": "c. 1616",
+   "muerte": "1655",
+   "nota": "Duque de Rohan y par de Francia",
+   "conf": "confirmado",
+   "fuente": "https://ccfr.bnf.fr/portailccfr/ark:/16871/004D27012332"
+  },
+  "marguerite-rohan": {
+   "nombre": "Marguerite de Rohan",
+   "nacimiento": "1617",
+   "muerte": "1684",
+   "nota": "Duquesa de Rohan por derecho propio, princesa de Léon",
+   "conf": "confirmado",
+   "fuente": "https://patrimoines-archives.morbihan.fr/fileadmin/Archives/actualites/Fonds_d_archives/IR/FRAD056_00000027H.pdf"
   }
  },
  "padres": {
@@ -453,6 +501,18 @@
   "louis-armand-i-conti": [
    "armand-conti",
    "martinozzi"
+  ],
+  "cardenal-rohan": [
+   "francois-rohan-soubise",
+   "anne-julie-rohan-chabot"
+  ],
+  "francois-rohan-soubise": [
+   "hercule-rohan-montbazon",
+   "marie-bretagne-avaugour"
+  ],
+  "anne-julie-rohan-chabot": [
+   "henri-chabot",
+   "marguerite-rohan"
   ]
  },
  "consortes": [
