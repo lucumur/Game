@@ -1,16 +1,18 @@
 /* ---------- Modo estático (GitHub Pages / archivo local) ----------
    Fuera de Claude no hay base de datos en vivo: se cargan los personajes,
    retratos e imágenes de estancias desde la carpeta datos/. Edición desactivada. */
+const DATOS_V=(document.currentScript?.src?.match(/\?v=\d+/)||[""])[0];
+const fetchDato=u=>fetch(u+DATOS_V,{cache:"no-cache"});
 ready.then(async()=>{
   if(db)return;
   try{
     const [per,idx,sim,ocu,cas,tit]=await Promise.all([
-      fetch("datos/personajes.json").then(r=>r.json()),
-      fetch("datos/indice.json").then(r=>r.json()),
-      fetch("datos/simbolos.json").then(r=>r.ok?r.json():[]).catch(()=>[]),
-      fetch("datos/ocupantes.json").then(r=>r.ok?r.json():{}).catch(()=>({})),
-      fetch("datos/casas.json").then(r=>r.ok?r.json():[]).catch(()=>[]),
-      fetch("datos/titulos.json").then(r=>r.ok?r.json():null).catch(()=>null)
+      fetchDato("datos/personajes.json").then(r=>r.json()),
+      fetchDato("datos/indice.json").then(r=>r.json()),
+      fetchDato("datos/simbolos.json").then(r=>r.ok?r.json():[]).catch(()=>[]),
+      fetchDato("datos/ocupantes.json").then(r=>r.ok?r.json():{}).catch(()=>({})),
+      fetchDato("datos/casas.json").then(r=>r.ok?r.json():[]).catch(()=>[]),
+      fetchDato("datos/titulos.json").then(r=>r.ok?r.json():null).catch(()=>null)
     ]);
     LIBRO=per;
     SIMBOLOS=Array.isArray(sim)?sim:[];
@@ -21,7 +23,7 @@ ready.then(async()=>{
     ESTANCIAS={};(idx.estancias||[]).forEach(f=>{ESTANCIAS[f.replace(/\.\w+$/,"")]="datos/estancias/"+f});
     SIM_IMG={};(idx.simbolos||[]).forEach(f=>{SIM_IMG[f.replace(/\.\w+$/,"")]="datos/simbolos/"+f});
     try{drawFaces()}catch(e){}
-    fetch("datos/escudos.json").then(r=>r.ok?r.json():null).then(esc=>{
+    fetchDato("datos/escudos.json").then(r=>r.ok?r.json():null).then(esc=>{
       if(esc&&esc.files&&typeof Heraldica!=="undefined"){
         Heraldica.setEscudos(esc.files);
         try{if(!$("#game").hidden&&current==="personajes")drawFaces();if(typeof refrescarFichaCasa==="function")refrescarFichaCasa()}catch(e){}
