@@ -561,3 +561,5 @@ button.kin:hover{border-color:var(--gilt)}
 .jer-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .jer-subs{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
 .ficha-list{margin:0;padding-left:1.1rem;display:grid;gap:3px;font-size:.94rem}
+.conf-ok{display:inline-grid;place-items:center;font-size:.92rem;line-height:1;cursor:default}
+.tipo-fr{margin:-4px 0 0;color:var(--gilt);font-size:1.02rem}

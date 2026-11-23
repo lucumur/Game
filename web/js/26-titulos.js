@@ -9,6 +9,10 @@ const CAT_TIT={
   tecnico:"Técnico (clasificación)"
 };
 const CONF_TIT={confirmado:"Confirmado",probable:"Probable",dudoso:"Dudoso"};
+function confBadgeEl(conf){
+  if(conf==="confirmado")return el("span",{class:"conf-ok",title:"Confirmado","aria-label":"Confirmado"},"✅");
+  return el("span",{class:"tag"},CONF_TIT[conf]||conf||"Por verificar");
+}
 
 function setTitulosData(data){
   TIPOS_TITULO=Array.isArray(data?.tipos)?data.tipos:[];
@@ -120,8 +124,8 @@ function drawTitulos(){
     if(fc&&t.categoria!==fc)return false;
     if(ft&&t.tipo_id!==ft)return false;
     if(!words.length)return true;
-    const tp=TIPO_TITULO_BY_ID[t.tipo_id]?.nombre||"";
-    const hay=normTxt([t.nombre,tp,CAT_TIT[t.categoria],t.titular_nombre,t.casa,t.provincia,t.posesiones,t.otorga,t.nota].join(" "));
+    const tpObj=TIPO_TITULO_BY_ID[t.tipo_id];
+    const hay=normTxt([t.nombre,tpObj?.nombre,tpObj?.nombre_fr,CAT_TIT[t.categoria],t.titular_nombre,t.casa,t.provincia,t.posesiones,t.otorga,t.nota].join(" "));
     return words.every(w=>hay.includes(w));
   });
 
@@ -147,7 +151,7 @@ function drawTitulos(){
           el("td",{},portadorBtn(t)),
           el("td",{},t.provincia||"—"),
           el("td",{},sup?el("button",{type:"button",class:"btn sm link-ficha",onclick:()=>openFichaTitulo(sup.id)},sup.nombre):"—"),
-          el("td",{},el("span",{class:"tag"+(t.confianza==="confirmado"?" ej":"")},CONF_TIT[t.confianza]||t.confianza||"—"))
+          el("td",{},confBadgeEl(t.confianza))
         );
       }))
     );
@@ -163,7 +167,7 @@ function drawTitulos(){
       el("div",{class:"titulo-card-top"},emblemaTituloEl(t),
         el("div",{class:"titulo-card-tags"},tipoBtn(t.tipo_id),
           t.es_tecnico?el("span",{class:"tag ej"},"Técnico"):null,
-          el("span",{class:"tag"+(t.confianza==="confirmado"?" ej":"")},CONF_TIT[t.confianza]||t.confianza||"Por verificar"))),
+          confBadgeEl(t.confianza))),
       el("h3",{},t.nombre),
       el("p",{class:"titulo-card-port"},t.titular_nombre||"Por verificar"),
       el("p",{class:"note"},[t.provincia,t.casa].filter(Boolean).join(" · "))
@@ -212,7 +216,7 @@ function openFichaTitulo(id){
     el("div",{class:"ficha-emb"},emblemaTituloEl(t,true)),
     el("h2",{},t.nombre),
     el("div",{class:"row"},
-      el("span",{class:"tag"+(t.confianza==="confirmado"?" ej":"")},CONF_TIT[t.confianza]||t.confianza||"Por verificar"),
+      confBadgeEl(t.confianza),
       t.es_tecnico?el("span",{class:"tag ej"},"Técnico"):null,
       (t.feudo_id||t.dioc_id)?el("button",{type:"button",class:"btn sm",onclick:()=>{f.hidden=true;verEnMapaFrancia(t)}},"Ver en el mapa de Francia →"):null
     ),
@@ -241,10 +245,11 @@ function openFichaTipoTitulo(tipoId){
     el("button",{class:"x","aria-label":"Cerrar",onclick:()=>{f.hidden=true}},"×"),
     el("span",{class:"label"},"Tipo de título"),
     el("h2",{},tp.nombre),
+    tp.nombre_fr?el("p",{class:"tipo-fr"},el("em",{},tp.nombre_fr)):null,
     el("div",{class:"row"},
       el("span",{class:"tag"},CAT_TIT[tp.categoria]||tp.categoria),
       tp.es_tecnico?el("span",{class:"tag ej"},"Técnico (clasificatorio)"):null,
-      el("span",{class:"tag"+(tp.confianza==="confirmado"?" ej":"")},CONF_TIT[tp.confianza]||tp.confianza||"Por verificar")
+      confBadgeEl(tp.confianza)
     ),
     el("div",{class:"rule"}),
     el("span",{class:"label"},"Definición"),el("p",{},tp.definicion||"—"),

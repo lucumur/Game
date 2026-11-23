@@ -2,11 +2,11 @@
   "tipos": [
     {
       "id": "corona",
-      "nombre": "Corona real",
+      "nombre": "Reino",
       "categoria": "soberano",
       "es_tecnico": false,
-      "definicion": "Soberanía real de Francia (en 1722, Luis XV, rey menor de edad bajo la regencia de Felipe II de Orleans).",
-      "aclaraciones": "En este catálogo sirve de título raíz del reino: de la Corona dependen los ducados-parías, los apanajes reversibles y las demás dignidades feudales directas.",
+      "definicion": "Soberanía real sobre el Reino de Francia (en 1722, Luis XV, rey menor de edad bajo la regencia de Felipe II de Orleans).",
+      "aclaraciones": "En tercera persona se nombra Reino de Francia (aunque para el soberano pueda denominarse Corona de Francia). Sirve de título raíz del catálogo: de él dependen los ducados-parías, los apanajes reversibles y las demás dignidades feudales directas.",
       "historia": "La monarquía capeta y borbónica reunió progresivamente los grandes feudos medievales al dominio real, conservando las parías —seis eclesiásticas antiguas y un cuerpo creciente de parías laicas— como alta corte del reino.",
       "derechos_generales": [
         "Soberanía legislativa y judicial suprema (lecho de justicia en el Parlamento).",
@@ -18,7 +18,8 @@
         "Mantener el dominio de la Corona como inalienable salvo apanaje o empeño."
       ],
       "confianza": "confirmado",
-      "fuente": "Derecho público de la monarquía francesa (s. XVII–XVIII)."
+      "fuente": "Derecho público de la monarquía francesa (s. XVII–XVIII).",
+      "nombre_fr": "Royaume"
     },
     {
       "id": "ducado-paria-laico",
@@ -38,7 +39,8 @@
         "Servicio al rey y asistencia ceremonial cuando la Corona convoca a los pares."
       ],
       "confianza": "confirmado",
-      "fuente": "Père Anselme; Almanach royal 1722; memorias de Saint-Simon."
+      "fuente": "Père Anselme; Almanach royal 1722; memorias de Saint-Simon.",
+      "nombre_fr": "Duché-pairie laïc"
     },
     {
       "id": "ducado-paria-eclesiastico",
@@ -58,7 +60,8 @@
         "Asistencia ceremonial al rey y función litúrgica en la consagración de Reims."
       ],
       "confianza": "confirmado",
-      "fuente": "Gallia Christiana; Almanach royal 1722; Sacre de Louis XV (1722)."
+      "fuente": "Gallia Christiana; Almanach royal 1722; Sacre de Louis XV (1722).",
+      "nombre_fr": "Duché-pairie ecclésiastique"
     },
     {
       "id": "ducado-apanaje",
@@ -77,7 +80,8 @@
         "Reversión automática a la Corona al extinguirse la descendencia masculina legítima."
       ],
       "confianza": "confirmado",
-      "fuente": "Mapa 4 (Apanajes y Patrimonios) en 14-francia-mapa-de-provincias-a.js; REGLAS.md."
+      "fuente": "Mapa 4 (Apanajes y Patrimonios) en 14-francia-mapa-de-provincias-a.js; REGLAS.md.",
+      "nombre_fr": "Duché en apanage"
     },
     {
       "id": "ducado",
@@ -96,7 +100,8 @@
         "Respeto de las condiciones de reversión o rescate si se trata de un dominio engagiste."
       ],
       "confianza": "probable",
-      "fuente": "FEUDOS (Nevers, Longueville, Borbonés) y derecho nobiliario francés."
+      "fuente": "FEUDOS (Nevers, Longueville, Borbonés) y derecho nobiliario francés.",
+      "nombre_fr": "Duché (simple / engagiste)"
     },
     {
       "id": "marquesado",
@@ -115,7 +120,8 @@
         "Carga y conservación de las tierras según el edicto de erección."
       ],
       "confianza": "probable",
-      "fuente": "FEUDOS (Maintenon, Castries, Montespan); diccionarios nobiliarios de época."
+      "fuente": "FEUDOS (Maintenon, Castries, Montespan); diccionarios nobiliarios de época.",
+      "nombre_fr": "Marquisat"
     },
     {
       "id": "condado-paria-laico",
@@ -133,7 +139,8 @@
         "Recepción ante el Parlamento y asistencia ceremonial como Par."
       ],
       "confianza": "probable",
-      "fuente": "FEUDOS (eu)."
+      "fuente": "FEUDOS (eu).",
+      "nombre_fr": "Comté-pairie laïc"
     },
     {
       "id": "condado-paria-eclesiastico",
@@ -151,7 +158,8 @@
         "Gobierno de la diócesis y asistencia ceremonial al rey."
       ],
       "confianza": "confirmado",
-      "fuente": "Gallia Christiana; Almanach royal 1722; Sacre de Louis XV (1722)."
+      "fuente": "Gallia Christiana; Almanach royal 1722; Sacre de Louis XV (1722).",
+      "nombre_fr": "Comté-pairie ecclésiastique"
     },
     {
       "id": "condado",
@@ -169,7 +177,8 @@
         "Homenaje debido al rey o al señor feudo-superior correspondiente."
       ],
       "confianza": "confirmado",
-      "fuente": "FEUDOS."
+      "fuente": "FEUDOS.",
+      "nombre_fr": "Comté"
     },
     {
       "id": "cargo",
@@ -186,7 +195,8 @@
         "Desempeño del servicio o función ante el rey o el tribunal."
       ],
       "confianza": "confirmado",
-      "fuente": "REGLAS.md; COLABORAR.md."
+      "fuente": "REGLAS.md; COLABORAR.md.",
+      "nombre_fr": "Office / Charge de la Couronne"
     },
     {
       "id": "honorifico",
@@ -203,7 +213,8 @@
         "Lealtad y observancia de los estatutos de la orden o concesión."
       ],
       "confianza": "probable",
-      "fuente": "Diseño del sistema de títulos."
+      "fuente": "Diseño del sistema de títulos.",
+      "nombre_fr": "Titre honorifique / Brevet / Ordre"
     },
     {
       "id": "tecnico",
@@ -220,13 +231,14 @@
         "Debe permanecer claramente distinguido de los títulos históricos."
       ],
       "confianza": "confirmado",
-      "fuente": "Diseño del sistema de títulos."
+      "fuente": "Diseño del sistema de títulos.",
+      "nombre_fr": "Titre technique (classification interne)"
     }
   ],
   "titulos": [
     {
       "id": "corona-francia",
-      "nombre": "Corona de Francia",
+      "nombre": "Reino de Francia",
       "tipo_id": "corona",
       "categoria": "soberano",
       "es_tecnico": false,
@@ -255,7 +267,7 @@
       ],
       "confianza": "confirmado",
       "fuente": "Mapa 4 (ap-corona) y personajes.json (p01)",
-      "nota": "Título raíz del catálogo en junio de 1722; durante la minoría de Luis XV ejerce el poder el Regente Felipe II de Orleans."
+      "nota": "Título raíz del catálogo en junio de 1722 (para el monarca también referido como la Corona de Francia); durante la minoría de Luis XV ejerce el poder el Regente Felipe II de Orleans."
     },
     {
       "id": "ducado-reims",
@@ -426,7 +438,7 @@
       "feudo_id": null,
       "dioc_id": "dioc-noyon",
       "provincia": "Picardía",
-      "lon": 3.00,
+      "lon": 3.0,
       "lat": 49.58,
       "extension": "Diócesis de Noyon (extensión exacta por verificar)",
       "superior_id": "corona-francia",
@@ -667,7 +679,7 @@
       "feudo_id": "chateau-thierry",
       "dioc_id": null,
       "provincia": "Champaña",
-      "lon": 3.40,
+      "lon": 3.4,
       "lat": 49.05,
       "extension": "Bailía ducal de Château-Thierry en el valle del Marne (extensión exacta por verificar)",
       "superior_id": "corona-francia",
@@ -877,7 +889,7 @@
       "feudo_id": "chaulnes",
       "dioc_id": null,
       "provincia": "Picardía",
-      "lon": 2.80,
+      "lon": 2.8,
       "lat": 49.82,
       "extension": "Señoríos cerealistas en el Santerre (extensión exacta por verificar)",
       "superior_id": "corona-francia",
@@ -908,7 +920,7 @@
       "dioc_id": null,
       "provincia": "Picardía (Vermandois)",
       "lon": 3.18,
-      "lat": 49.70,
+      "lat": 49.7,
       "extension": "Señorío de Saint-Simon en Picardía (y La Ferté-Vidame en el Perche)",
       "superior_id": "corona-francia",
       "subordinados_ids": [],
@@ -1117,8 +1129,8 @@
       "feudo_id": "orleans-ap",
       "dioc_id": null,
       "provincia": "Orleanesado",
-      "lon": 1.90,
-      "lat": 47.90,
+      "lon": 1.9,
+      "lat": 47.9,
       "extension": "Orleanesado, bosques de Orleans, canal de Orleans y trigales de Beauce (núcleo del Gran Apanaje)",
       "superior_id": "corona-francia",
       "subordinados_ids": [],
@@ -1208,7 +1220,7 @@
       "feudo_id": "charost",
       "dioc_id": null,
       "provincia": "Berry",
-      "lon": 2.10,
+      "lon": 2.1,
       "lat": 46.99,
       "extension": "Señoríos en el Berry (extensión exacta por verificar)",
       "superior_id": "corona-francia",
