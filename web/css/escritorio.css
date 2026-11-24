@@ -659,3 +659,5 @@ button.casa-chip:hover,button.casa-chip:focus-visible{border-color:var(--gilt);b
 .sim-acts{justify-content:center}
 .sim-personas{grid-template-columns:repeat(auto-fill,minmax(122px,1fr));gap:10px}
 .sim-personas .plate{padding:8px}
+.plate .apodo{font-style:italic;font-weight:400;color:var(--gilt)}
+.plate .anio{font-weight:400;color:var(--muted);font-variant-numeric:tabular-nums}

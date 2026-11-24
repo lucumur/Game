@@ -59,6 +59,13 @@ function drawFaces(){
   }
   if(!list.length)b.append(el("p",{class:"note"},"Nadie coincide con la búsqueda."));
 }
+function nombreLibroCardEl(c){
+  const nm=el("span",{class:"nm"},c.nombre_nac||c.nombre);
+  (c.apodos||[]).forEach(a=>nm.append(el("span",{class:"apodo"}," «"+a+"»")));
+  if(c.anterior)nm.append(el("span",{class:"apodo"}," (anteriormente «"+c.anterior+"»)"));
+  if(c.anio)nm.append(el("span",{class:"anio"}," "+c.anio+(c.edad?" ("+c.edad+")":"")));
+  return nm;
+}
 function drawFacesLibro(){
   const par=esPartida();
   const q=($("#q")?.value||"").trim().toLowerCase(), fp=par?"":($("#f-pres")?.value||""), fc=par?"":($("#f-casa")?.value||"");
@@ -93,7 +100,7 @@ function drawFacesLibro(){
   const renderCard=c=>{
     const valOrd=ord&&typeof ORD_VAL!=="undefined"&&ORD_VAL[ord]?el("span",{class:"cval"},ORD_VAL[ord](c)):null;
     return el("button",{class:"plate"+(c.presencia_versalles==="ausente"?" away":""),onclick:()=>openFichaL(c)},
-      plateFaceEl(c,!par),el("span",{class:"nm"},c.nombre_nac||c.nombre),el("span",{class:"tt"},c.titulo_nob||c.titulo||""),el("span",{class:"tt"},c.puesto||c.cargo||""),valOrd,simbolosEl(c));
+      plateFaceEl(c,!par),nombreLibroCardEl(c),el("span",{class:"tt"},c.titulo_nob||c.titulo||""),el("span",{class:"tt"},c.puesto||c.cargo||""),valOrd,simbolosEl(c));
   };
   if(ord){
     const box=el("div",{class:"plates"}); list.forEach(c=>box.append(renderCard(c))); b.append(box);
