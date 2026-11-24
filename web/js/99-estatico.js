@@ -19,13 +19,13 @@ ready.then(async()=>{
     SIMBOLOS=Array.isArray(sim)?sim:[];
     OCUP_DB=ocu||{};
     if(tit&&typeof setTitulosData==="function"){setTitulosData(tit);if(!$("#game").hidden&&current==="titulos")drawTitulos()}
-    if(gab&&typeof setGabineteData==="function"){setGabineteData(gab);if(!$("#game").hidden&&current==="gabinete")drawGabinete()}
+    if(gab&&typeof setGabineteData==="function"){setGabineteData(gab)}
     if(typeof Heraldica!=="undefined"){Heraldica.setCasas(Array.isArray(cas)?cas:[]);if(typeof renderCasaFiltros==="function")renderCasaFiltros();else Heraldica.poblarSelect($("#f-casa"),LIBRO,"Toda casa")}
     if(typeof renderSimFilter==="function")renderSimFilter();
     RETR={};(idx.retratos||[]).forEach(f=>{RETR[f.replace(/\.\w+$/,"")]="datos/retratos/"+f});
     ESTANCIAS={};(idx.estancias||[]).forEach(f=>{ESTANCIAS[f.replace(/\.\w+$/,"")]="datos/estancias/"+f});
     SIM_IMG={};(idx.simbolos||[]).forEach(f=>{SIM_IMG[f.replace(/\.\w+$/,"")]="datos/simbolos/"+f});
-    try{drawFaces();if(!$("#game").hidden&&current==="personajes"&&typeof perSubVista!=="undefined"){if(perSubVista==="cas")renderCasas();if(perSubVista==="sim")renderSimbolos()}}catch(e){}
+    try{drawFaces();if(!$("#game").hidden&&current==="gabinete"&&typeof drawGabinete==="function")drawGabinete();if(!$("#game").hidden&&current==="personajes"&&typeof perSubVista!=="undefined"){if(perSubVista==="cas")renderCasas();if(perSubVista==="sim")renderSimbolos()}}catch(e){}
     fetchDato("datos/escudos.json").then(r=>r.ok?r.json():null).then(esc=>{
       if(esc&&esc.files&&typeof Heraldica!=="undefined"){
         Heraldica.setEscudos(esc.files);
@@ -54,7 +54,7 @@ async function activarEditorGH(){
   if(mapSel&&mapSel.id&&document.querySelector(".zone.sel"))showRoom(mapSel.id,mapSel.n,mapSel.d);
 }
 window.ghCambio=(col,id,d)=>{
-  if(col==="retratos"){if(d)RETR[id]=d.img;else delete RETR[id];try{drawFaces()}catch(e){}}
+  if(col==="retratos"){if(d)RETR[id]=d.img;else delete RETR[id];try{drawFaces();if(!$("#game").hidden&&current==="gabinete"&&typeof drawGabinete==="function")drawGabinete()}catch(e){}}
   if(col==="simbolos"){if(d)SIM_IMG[id]=d.img;else delete SIM_IMG[id];try{drawFaces();if(!$("#game").hidden&&current==="personajes"&&typeof perSubVista!=="undefined"&&perSubVista==="sim")renderSimbolos()}catch(e){}}
   if(col==="estancias"){if(d)ESTANCIAS[id]=d.img;else delete ESTANCIAS[id]}
   if(col==="ocupantes"){if(d)OCUP_DB[id]=d;else delete OCUP_DB[id]}

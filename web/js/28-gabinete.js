@@ -65,23 +65,36 @@ function gabConfBadge(conf){
   return el("span",{class:"tag"},lbl);
 }
 
-function gabPersonaBtn(id,nombre){
+function gabRetratoEl(id,nombre,grande=false){
+  const box=el("span",{class:"gab-av"+(grande?" grande":"")});
+  const src=typeof RETR!=="undefined"&&id?RETR[id]:null;
+  if(src){
+    box.append(el("img",{class:"pt",src:src,alt:"Retrato de "+(nombre||id)}));
+  }else if(typeof bust==="function"){
+    box.append(bust());
+  }
+  return box;
+}
+
+function gabPersonaBtn(id,nombre,grande=false){
   const L=typeof LIBRO!=="undefined"?LIBRO.find(c=>c.id===id||c.escritorio_id===id):null;
   const p=typeof PERSONAJES!=="undefined"?PERSONAJES.find(x=>x.id===id):null;
   const txt=nombre||L?.nombre||p?.nombre||id;
-  if(L&&typeof openFichaL==="function")return el("button",{type:"button",class:"btn sm link-ficha",onclick:e=>{e.stopPropagation();openFichaL(L)}},txt);
-  if(p&&typeof openFicha==="function")return el("button",{type:"button",class:"btn sm link-ficha",onclick:e=>{e.stopPropagation();openFicha(p)}},txt);
-  return el("span",{},txt);
+  const img=gabRetratoEl(L?.id||id,txt,grande);
+  if(L&&typeof openFichaL==="function")return el("button",{type:"button",class:"btn sm link-ficha gab-pers-btn",onclick:e=>{e.stopPropagation();openFichaL(L)}},img,el("span",{},txt));
+  if(p&&typeof openFicha==="function")return el("button",{type:"button",class:"btn sm link-ficha gab-pers-btn",onclick:e=>{e.stopPropagation();openFicha(p)}},img,el("span",{},txt));
+  return el("span",{class:"gab-pers-btn"},img,el("span",{},txt));
 }
 
 function gabPortadorEl(a,compacto=true){
   const tits=Array.isArray(a.titulares)?a.titulares:[];
+  const grande=!compacto;
   if(tits.length){
     const box=el("div",{class:"gab-titulares"});
     const mostrar=compacto?tits.slice(0,3):tits;
     mostrar.forEach(t=>{
       box.append(el("div",{class:"gab-tit-item"},
-        gabPersonaBtn(t.id,t.nombre),
+        gabPersonaBtn(t.id,t.nombre,grande),
         gabConfBadge(t.confianza),
         t.nota?el("span",{class:"gab-tit-nota"},t.nota):null
       ));
@@ -92,7 +105,7 @@ function gabPortadorEl(a,compacto=true){
     return box;
   }
   if(a.titular_id){
-    return el("div",{class:"gab-titulares"},el("div",{class:"gab-tit-item"},gabPersonaBtn(a.titular_id,a.titular_nombre)));
+    return el("div",{class:"gab-titulares"},el("div",{class:"gab-tit-item"},gabPersonaBtn(a.titular_id,a.titular_nombre,grande)));
   }
   if(a.tipo_asiento==="colectivo"){
     return el("span",{class:"gab-colectivo"},a.escalafon||a.plazas||"Cuerpo colectivo");
