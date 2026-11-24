@@ -14793,5 +14793,444 @@
     "casa_id": "thellusson",
     "casa_materna_id": "guiguer",
     "casa_alianza_id": null
+  },
+  {
+    "id": "p141",
+    "orden": 141,
+    "nombre": "Henri François d'Aguesseau",
+    "nombre_nac": "Henri François d'Aguesseau",
+    "sexo": "M",
+    "anio": 1668,
+    "edad": "53",
+    "nacimiento": "27/11/1668, Limoges",
+    "muerte": "09/02/1751, París",
+    "casa": "Aguesseau",
+    "titulo_nob": "Señor de Fresnes",
+    "cargo": "Canciller de Francia (exiliado en Fresnes desde febrero de 1722)",
+    "puesto": "Canciller titular inamovible; los sellos pasan en febrero de 1722 a Armenonville",
+    "faccion": "Parlamento y Toga",
+    "presencia_versalles": "ausente",
+    "residencia": [
+      "habitante_ile"
+    ],
+    "estatus": "verificado",
+    "rangos": [
+      "robe"
+    ],
+    "hitos": "Canciller de Francia desde 1717; apartado a sus tierras de Fresnes en febrero de 1722 por oponerse a Dubois, conservando la dignidad vitalicia [confirmado]"
+  },
+  {
+    "id": "p142",
+    "orden": 142,
+    "nombre": "Charles-Jean-Baptiste Fleuriau de Morville",
+    "nombre_nac": "Charles-Jean-Baptiste Fleuriau de Morville",
+    "sexo": "M",
+    "anio": 1686,
+    "edad": "35",
+    "nacimiento": "30/10/1686, París",
+    "muerte": "02/02/1732, París",
+    "casa": "Fleuriau",
+    "titulo_nob": "Conde de Morville",
+    "cargo": "Secretario de Estado de la Marina (desde marzo de 1722)",
+    "puesto": "Secretario de Estado de la Marina; hijo del Guardasellos Armenonville (p25)",
+    "faccion": "Regencia",
+    "presencia_versalles": "frecuenta",
+    "residencia": [
+      "habitante_paris"
+    ],
+    "estatus": "verificado",
+    "rangos": [
+      "robe"
+    ],
+    "hitos": "Ex embajador en La Haya; nombrado Secretario de Estado de la Marina en marzo de 1722 y luego de Asuntos Exteriores en 1723 [confirmado]"
+  },
+  {
+    "id": "p143",
+    "orden": 143,
+    "nombre": "Marc-Pierre de Voyer de Paulmy, conde d'Argenson",
+    "nombre_nac": "Marc-Pierre de Voyer de Paulmy",
+    "sexo": "M",
+    "anio": 1696,
+    "edad": "25",
+    "nacimiento": "16/08/1696, París",
+    "muerte": "22/08/1764, París",
+    "casa": "Voyer d'Argenson",
+    "titulo_nob": "Conde d'Argenson",
+    "cargo": "Teniente General de Policía de París (desde abril de 1722)",
+    "puesto": "Teniente General de Policía de París y consejero en el Châtelet",
+    "faccion": "Regencia",
+    "presencia_versalles": "ocasional",
+    "residencia": [
+      "habitante_paris"
+    ],
+    "estatus": "verificado",
+    "rangos": [
+      "robe"
+    ],
+    "hitos": "Asume en abril de 1722 la Tenencia General de Policía de París (hasta enero de 1724); futuro Secretario de Estado de la Guerra [confirmado]"
+  },
+  {
+    "id": "p144",
+    "orden": 144,
+    "nombre": "Guillaume-François Joly de Fleury",
+    "nombre_nac": "Guillaume-François Joly de Fleury",
+    "sexo": "M",
+    "anio": 1675,
+    "edad": "46",
+    "nacimiento": "11/11/1675, París",
+    "muerte": "25/03/1756, París",
+    "casa": "Joly de Fleury",
+    "titulo_nob": "Señor de Fleury",
+    "cargo": "Procurador General del Parlamento de París",
+    "puesto": "Jefe del Parquet (Gente del Rey) en el Parlamento de París (1717–1746)",
+    "faccion": "Parlamento y Toga",
+    "presencia_versalles": "ocasional",
+    "residencia": [
+      "habitante_paris"
+    ],
+    "estatus": "verificado",
+    "rangos": [
+      "robe"
+    ],
+    "hitos": "Magistrado galicano clave como enlace entre la Corona y el Parlamento de París durante toda la Regencia y el reinado de Luis XV [confirmado]"
+  },
+  {
+    "id": "p145",
+    "orden": 145,
+    "nombre": "Jean-Aymar de Nicolay",
+    "nombre_nac": "Jean-Aymar de Nicolay",
+    "sexo": "M",
+    "anio": 1658,
+    "edad": "64",
+    "nacimiento": "1658 (fecha exacta por verificar)",
+    "muerte": "1737 (fecha exacta por verificar)",
+    "casa": "Nicolay",
+    "titulo_nob": "Marqués de Goussainville",
+    "cargo": "Primer Presidente de la Cámara de Cuentas de París",
+    "puesto": "Primer Presidente de la Chambre des comptes de París",
+    "faccion": "Parlamento y Toga",
+    "presencia_versalles": "ocasional",
+    "residencia": [
+      "habitante_paris"
+    ],
+    "estatus": "probable",
+    "rangos": [
+      "robe"
+    ],
+    "hitos": "Cabeza de la dinastía togada Nicolay al frente de la Cámara de Cuentas hasta 1734 [confirmado en cargo; fechas probables]"
+  },
+  {
+    "id": "p146",
+    "orden": 146,
+    "nombre": "Pierre-Antoine de Castagnère, marqués de Châteauneuf",
+    "nombre_nac": "Pierre-Antoine de Castagnère de Châteauneuf",
+    "sexo": "M",
+    "anio": 1644,
+    "edad": "77",
+    "nacimiento": "1644 (fecha exacta por verificar)",
+    "muerte": "1728 (fecha exacta por verificar)",
+    "casa": "Castagnère de Châteauneuf",
+    "titulo_nob": "Marqués de Châteauneuf",
+    "cargo": "Preboste de los Mercaderes de París (1720–1725)",
+    "puesto": "Prévôt des marchands al frente del Hôtel de Ville de París",
+    "faccion": "Regencia",
+    "presencia_versalles": "ocasional",
+    "residencia": [
+      "habitante_paris"
+    ],
+    "estatus": "probable",
+    "rangos": [
+      "robe"
+    ],
+    "hitos": "Antiguo embajador en Constantinopla, Lisboa y La Haya; preboste de los mercaderes de París en 1720–1725 [confirmado en cargo; año 1644 probable]"
+  },
+  {
+    "id": "p147",
+    "orden": 147,
+    "nombre": "François de Franquetot, conde de Coigny",
+    "nombre_nac": "François de Franquetot de Coigny",
+    "sexo": "M",
+    "anio": 1670,
+    "edad": "52",
+    "nacimiento": "16/03/1670, Coigny",
+    "muerte": "18/12/1759, París",
+    "casa": "Franquetot de Coigny",
+    "titulo_nob": "Conde de Coigny",
+    "cargo": "Coronel General de Dragones",
+    "puesto": "Coronel General de Dragones (1704–1734) y teniente general",
+    "faccion": "Cortesanos",
+    "presencia_versalles": "frecuenta",
+    "residencia": [
+      "habitante_paris"
+    ],
+    "estatus": "verificado",
+    "rangos": [
+      "epee"
+    ],
+    "hitos": "Manda el arma de dragones desde 1704; futuro Mariscal de Francia (1734) y Duque de Coigny (1747) [confirmado]"
+  },
+  {
+    "id": "p148",
+    "orden": 148,
+    "nombre": "Claude François Bidal, marqués d'Asfeld",
+    "nombre_nac": "Claude François Bidal d'Asfeld",
+    "sexo": "M",
+    "anio": 1667,
+    "edad": "54",
+    "nacimiento": "02/07/1667, París",
+    "muerte": "07/03/1743, París",
+    "casa": "Bidal d'Asfeld",
+    "titulo_nob": "Marqués d'Asfeld",
+    "cargo": "Director General de las Fortificaciones de Francia",
+    "puesto": "Directeur général des fortifications (1715–1743) y teniente general",
+    "faccion": "Regencia",
+    "presencia_versalles": "frecuenta",
+    "residencia": [
+      "habitante_paris"
+    ],
+    "estatus": "verificado",
+    "rangos": [
+      "epee"
+    ],
+    "hitos": "Sucesor técnico de la administración de fortificaciones desde 1715; futuro Mariscal de Francia en 1734 [confirmado]"
+  },
+  {
+    "id": "p149",
+    "orden": 149,
+    "nombre": "Jean-Philippe d'Orléans, Chevalier d'Orléans",
+    "nombre_nac": "Jean-Philippe d'Orléans",
+    "sexo": "M",
+    "anio": 1702,
+    "edad": "19",
+    "nacimiento": "28/08/1702, Chilly-Mazarin",
+    "muerte": "16/06/1748, París",
+    "casa": "Orleans (bastardía)",
+    "titulo_nob": "Chevalier d'Orléans · Gran Prior de Francia (Malta)",
+    "cargo": "General de las Galeras de Francia",
+    "puesto": "Général des galères (desde 1716) e hijo legitimado del Regente",
+    "faccion": "Orleans",
+    "presencia_versalles": "frecuenta",
+    "residencia": [
+      "habitante_paris"
+    ],
+    "estatus": "verificado",
+    "rangos": [
+      "legitime",
+      "epee"
+    ],
+    "hitos": "Legitimado en 1706 por Luis XIV; General de las Galeras desde 1716 y Gran Prior de la Orden de Malta en Francia [confirmado]"
+  },
+  {
+    "id": "p150",
+    "orden": 150,
+    "nombre": "Louis d'Aumont, Duque de Aumont",
+    "nombre_nac": "Louis d'Aumont de Rochebaron",
+    "sexo": "M",
+    "anio": 1667,
+    "edad": "54",
+    "nacimiento": "19/06/1667, París",
+    "muerte": "06/04/1723, París",
+    "casa": "Aumont",
+    "titulo_nob": "III Duque de Aumont y Par de Francia",
+    "cargo": "Primer Gentilhombre de la Cámara del Rey",
+    "puesto": "Uno de los 4 Premiers Gentilshommes de la Chambre y Gobernador del Boulonnais",
+    "faccion": "Casa del Rey",
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio",
+      "habitante_paris"
+    ],
+    "estatus": "verificado",
+    "rangos": [
+      "pair",
+      "epee",
+      "service"
+    ],
+    "hitos": "Ex embajador en Londres tras Utrecht; en junio de 1722 ejerce como Primer Gentilhombre de la Cámara hasta su muerte en abril de 1723 [confirmado]"
+  },
+  {
+    "id": "p151",
+    "orden": 151,
+    "nombre": "François-Bernard Potier, Duque de Gesvres",
+    "nombre_nac": "François-Bernard Potier de Tresmes",
+    "sexo": "M",
+    "anio": 1655,
+    "edad": "66",
+    "nacimiento": "15/07/1655, París",
+    "muerte": "12/04/1739, París",
+    "casa": "Potier de Gesvres",
+    "titulo_nob": "II Duque de Tresmes / Gesvres y Par de Francia",
+    "cargo": "Primer Gentilhombre de la Cámara del Rey · Gobernador de París",
+    "puesto": "Uno de los 4 Premiers Gentilshommes de la Chambre y Gobernador de París",
+    "faccion": "Casa del Rey",
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio",
+      "habitante_paris"
+    ],
+    "estatus": "verificado",
+    "rangos": [
+      "pair",
+      "epee",
+      "service"
+    ],
+    "hitos": "Acumula el cargo de Primer Gentilhombre de la Cámara con el gobierno militar de París desde 1704 [confirmado]"
+  },
+  {
+    "id": "p152",
+    "orden": 152,
+    "nombre": "Louis Sanguin, marqués de Livry",
+    "nombre_nac": "Louis Sanguin de Livry",
+    "sexo": "M",
+    "anio": 1648,
+    "edad": "74",
+    "nacimiento": "1648 (fecha exacta por verificar)",
+    "muerte": "06/11/1723, Livry",
+    "casa": "Sanguin de Livry",
+    "titulo_nob": "Marqués de Livry",
+    "cargo": "Primer Maestre de Hotel del Rey",
+    "puesto": "Premier Maître d'hôtel du Roi (La Bouche)",
+    "faccion": "Casa del Rey",
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio"
+    ],
+    "estatus": "verificado",
+    "rangos": [
+      "epee",
+      "service"
+    ],
+    "hitos": "Dirige el servicio ordinario de la mesa real bajo el Gran Maestre de Francia hasta su muerte en noviembre de 1723 [confirmado]"
+  },
+  {
+    "id": "p153",
+    "orden": 153,
+    "nombre": "Jacques-Louis de Beringhen",
+    "nombre_nac": "Jacques-Louis de Beringhen",
+    "sexo": "M",
+    "anio": 1651,
+    "edad": "70",
+    "nacimiento": "20/10/1651, París",
+    "muerte": "01/05/1723, París",
+    "casa": "Beringhen",
+    "titulo_nob": "Marqués de Beringhen · Conde de Châteauneuf",
+    "cargo": "Primer Caballerizo del Rey (Monsieur le Premier)",
+    "puesto": "Premier Écuyer de France (Petite Écurie) y miembro de la Academia de Inscripciones",
+    "faccion": "Casa del Rey",
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio",
+      "habitante_paris"
+    ],
+    "estatus": "verificado",
+    "rangos": [
+      "epee",
+      "service"
+    ],
+    "hitos": "Dirige la Petite Écurie desde 1692; coleccionista célebre de grabados y oficial de caballería [confirmado]"
+  },
+  {
+    "id": "p154",
+    "orden": 154,
+    "nombre": "Thomas Dreux-Brézé, marqués de Brézé",
+    "nombre_nac": "Thomas Dreux-Brézé",
+    "sexo": "M",
+    "anio": 1677,
+    "edad": "45",
+    "nacimiento": "1677 (fecha exacta por verificar)",
+    "muerte": "07/05/1749",
+    "casa": "Dreux-Brézé",
+    "titulo_nob": "Marqués de Brézé",
+    "cargo": "Gran Maestro de Ceremonias de Francia",
+    "puesto": "Grand Maître des Cérémonies (1701–1749)",
+    "faccion": "Casa del Rey",
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio"
+    ],
+    "estatus": "verificado",
+    "rangos": [
+      "epee",
+      "service"
+    ],
+    "hitos": "Organiza las recepciones diplomáticas, lutos y el ceremonial de la consagración de Luis XV en Reims (octubre de 1722) [confirmado]"
+  },
+  {
+    "id": "p155",
+    "orden": 155,
+    "nombre": "Louis du Bouchet, marqués de Sourches",
+    "nombre_nac": "Louis du Bouchet de Sourches",
+    "sexo": "M",
+    "anio": 1666,
+    "edad": "56",
+    "nacimiento": "1666 (fecha exacta por verificar)",
+    "muerte": "04/05/1746",
+    "casa": "Du Bouchet de Sourches",
+    "titulo_nob": "Marqués de Sourches",
+    "cargo": "Gran Preboste de Francia / del Hôtel",
+    "puesto": "Grand Prévôt de l'Hôtel (1714–1746)",
+    "faccion": "Casa del Rey",
+    "presencia_versalles": "reside",
+    "residencia": [
+      "residente_palacio"
+    ],
+    "estatus": "verificado",
+    "rangos": [
+      "epee",
+      "service"
+    ],
+    "hitos": "Ejerce la jurisdicción policial y judicial sumaria sobre el recinto real de Versalles y la corte [confirmado]"
+  },
+  {
+    "id": "p156",
+    "orden": 156,
+    "nombre": "Joseph de Montesquiou, conde d'Artagnan",
+    "nombre_nac": "Joseph de Montesquiou d'Artagnan",
+    "sexo": "M",
+    "anio": 1651,
+    "edad": "71",
+    "nacimiento": "1651 (fecha exacta por verificar)",
+    "muerte": "04/01/1729, París",
+    "casa": "Montesquiou",
+    "titulo_nob": "Conde d'Artagnan",
+    "cargo": "Capitán-Teniente de la 1.ª Compañía de Mosqueteros (Grises)",
+    "puesto": "Capitaine-lieutenant des Mousquetaires gris (1716–1729)",
+    "faccion": "Casa del Rey",
+    "presencia_versalles": "frecuenta",
+    "residencia": [
+      "habitante_paris"
+    ],
+    "estatus": "verificado",
+    "rangos": [
+      "epee",
+      "service"
+    ],
+    "hitos": "Sobrino del célebre Charles de Batz-Castelmore; manda la 1.ª compañía de Mosqueteros de la Guardia desde 1716 [confirmado]"
+  },
+  {
+    "id": "p157",
+    "orden": 157,
+    "nombre": "Philippe-Claude de Montboissier-Canillac",
+    "nombre_nac": "Philippe-Claude de Montboissier-Beaufort-Canillac",
+    "sexo": "M",
+    "anio": 1673,
+    "edad": "49",
+    "nacimiento": "c. 1673 (por verificar)",
+    "muerte": "1765 (fecha exacta por verificar)",
+    "casa": "Montboissier-Canillac",
+    "titulo_nob": "Marqués de Canillac",
+    "cargo": "Capitán-Teniente de la 2.ª Compañía de Mosqueteros (Negros)",
+    "puesto": "Capitaine-lieutenant des Mousquetaires noirs (1716–1729)",
+    "faccion": "Casa del Rey",
+    "presencia_versalles": "frecuenta",
+    "residencia": [
+      "habitante_paris"
+    ],
+    "estatus": "probable",
+    "rangos": [
+      "epee",
+      "service"
+    ],
+    "hitos": "Oficial general al mando de la 2.ª compañía de Mosqueteros de la Guardia (Negros) desde 1716 [confirmado en cargo; año 1673 probable]"
   }
 ]

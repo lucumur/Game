@@ -58,15 +58,46 @@ function abrirGabinete(gabId){
   setGabRama(g.rama,g.id);
 }
 
-function gabPortadorEl(a){
-  if(a.titular_id){
-    const L=typeof LIBRO!=="undefined"?LIBRO.find(c=>c.id===a.titular_id||c.escritorio_id===a.titular_id):null;
-    const p=typeof PERSONAJES!=="undefined"?PERSONAJES.find(x=>x.id===a.titular_id):null;
-    const txt=a.titular_nombre||L?.nombre||p?.nombre||a.titular_id;
-    if(L&&typeof openFichaL==="function")return el("button",{type:"button",class:"btn sm link-ficha",onclick:e=>{e.stopPropagation();openFichaL(L)}},txt);
-    if(p&&typeof openFicha==="function")return el("button",{type:"button",class:"btn sm link-ficha",onclick:e=>{e.stopPropagation();openFicha(p)}},txt);
+function gabConfBadge(conf){
+  if(conf==="confirmado")return el("span",{class:"conf-ok",title:"Confirmado (1722)","aria-label":"Confirmado"},"✅");
+  if(!conf)return null;
+  const lbl=conf==="probable"?"Probable":conf==="dudoso"?"Dudoso":conf;
+  return el("span",{class:"tag"},lbl);
+}
+
+function gabPersonaBtn(id,nombre){
+  const L=typeof LIBRO!=="undefined"?LIBRO.find(c=>c.id===id||c.escritorio_id===id):null;
+  const p=typeof PERSONAJES!=="undefined"?PERSONAJES.find(x=>x.id===id):null;
+  const txt=nombre||L?.nombre||p?.nombre||id;
+  if(L&&typeof openFichaL==="function")return el("button",{type:"button",class:"btn sm link-ficha",onclick:e=>{e.stopPropagation();openFichaL(L)}},txt);
+  if(p&&typeof openFicha==="function")return el("button",{type:"button",class:"btn sm link-ficha",onclick:e=>{e.stopPropagation();openFicha(p)}},txt);
+  return el("span",{},txt);
+}
+
+function gabPortadorEl(a,compacto=true){
+  const tits=Array.isArray(a.titulares)?a.titulares:[];
+  if(tits.length){
+    const box=el("div",{class:"gab-titulares"});
+    const mostrar=compacto?tits.slice(0,3):tits;
+    mostrar.forEach(t=>{
+      box.append(el("div",{class:"gab-tit-item"},
+        gabPersonaBtn(t.id,t.nombre),
+        gabConfBadge(t.confianza),
+        t.nota?el("span",{class:"gab-tit-nota"},t.nota):null
+      ));
+    });
+    if(compacto&&tits.length>3){
+      box.append(el("span",{class:"note"},`y ${tits.length-3} más en Ficha…`));
+    }
+    return box;
   }
-  return el("span",{class:"gab-vacante"},a.titular_nombre||"Asiento sin asignar");
+  if(a.titular_id){
+    return el("div",{class:"gab-titulares"},el("div",{class:"gab-tit-item"},gabPersonaBtn(a.titular_id,a.titular_nombre)));
+  }
+  if(a.tipo_asiento==="colectivo"){
+    return el("span",{class:"gab-colectivo"},a.escalafon||a.plazas||"Cuerpo colectivo");
+  }
+  return el("span",{class:"gab-vacante"},a.titular_nombre||"Por verificar (1722)");
 }
 
 function irMapaDesdeGabinete(capa){
@@ -91,7 +122,7 @@ function tarjetaAsientoEl(g,a,rutaLabel=null){
     a.nombre_fr?el("p",{class:"gab-fr"},el("em",{},a.nombre_fr)):null,
     el("div",{class:"gab-meta"},
       a.plazas?el("span",{class:"note"},a.plazas):null,
-      gabPortadorEl(a)
+      gabPortadorEl(a,true)
     ),
     a.resumen?el("p",{class:"gab-desc"},a.resumen):null,
     el("div",{class:"gab-acts"},
@@ -164,7 +195,8 @@ function drawGabinete(){
       (g.asientos||[]).forEach(a=>{
         if(fnat&&a.naturaleza!==fnat)return;
         if(words.length){
-          const hayStr=[a.nombre,a.nombre_fr,natLabel(a.naturaleza),a.plazas,a.resumen,a.titular_nombre,g.nombre,g.codigo].join(" ");
+          const titTxt=(a.titulares||[]).map(t=>`${t.nombre} ${t.nota||""}`).join(" ");
+          const hayStr=[a.nombre,a.nombre_fr,natLabel(a.naturaleza),a.plazas,a.escalafon,a.resumen,a.titular_nombre,titTxt,g.nombre,g.codigo].join(" ");
           const hay=typeof normTxt==="function"?normTxt(hayStr):hayStr.toLowerCase();
           if(!words.every(w=>hay.includes(w)))return;
         }
@@ -261,7 +293,7 @@ function openFichaAsiento(gabId,asientoId,reset=false){
       ["Preside el gabinete",g.preside||"—"],
       ["Naturaleza",natLabel(a.naturaleza)],
       ["Plazas / alcance",a.plazas||"—"],
-      ["Titular (1722)",gabPortadorEl(a)]
+      [a.tipo_asiento==="colectivo"?"Escalafón / plazas":"Titular (1722)",gabPortadorEl(a,false)]
     ].forEach(([k,v])=>dl.append(el("dt",{},k),el("dd",{},v instanceof Node?v:String(v))));
 
     const rutaBtns=el("div",{class:"jer-subs"});
@@ -277,6 +309,7 @@ function openFichaAsiento(gabId,asientoId,reset=false){
       );
     }
 
+    const fuentes=[...new Set((a.titulares||[]).map(t=>t.fuente).filter(Boolean))];
     f.append(
       typeof fichaNavBar==="function"?fichaNavBar():el("button",{class:"x","aria-label":"Cerrar",onclick:()=>{f.hidden=true}},"×"),
       el("span",{class:"label"},`Asiento #${a.num} · Gabinete ${g.codigo}`),
@@ -293,7 +326,8 @@ function openFichaAsiento(gabId,asientoId,reset=false){
       el("span",{class:"label"},"Competencias y función"),el("p",{},a.resumen||"—"),
       el("span",{class:"label"},"Ruta jerárquica"),rutaBtns,
       sub?el("span",{class:"label"},`Subgabinete directo (${(sub.asientos||[]).length} asientos)`):null,
-      subBox
+      subBox,
+      fuentes.length?el("span",{class:"note"},"Fuente: "+fuentes.join(" · ")):null
     );
     f.hidden=false; f.querySelector(".x")?.focus();
   };

@@ -64,8 +64,19 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p07",
+          "titular_nombre": "Guillaume Dubois",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p07",
+              "nombre": "Guillaume Dubois",
+              "nota": "Vacante en junio de 1722; nombrado el 23/08/1722",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "c-canciller",
@@ -78,8 +89,26 @@
           "subgabinete_id": "gab-1a",
           "enlace_gabinete_id": "gab-2",
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p141",
+          "titular_nombre": "Henri François d'Aguesseau",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p141",
+              "nombre": "Henri François d'Aguesseau",
+              "nota": "Canciller titular (exiliado en Fresnes desde feb. 1722)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p25",
+              "nombre": "Joseph Fleuriau d'Armenonville",
+              "nota": "Guardasellos en ejercicio (desde feb. 1722)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "c-controleur-general",
@@ -92,8 +121,19 @@
           "subgabinete_id": "gab-1b",
           "enlace_gabinete_id": "gab-4b",
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p26",
+          "titular_nombre": "Charles Gaspard Dodun",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p26",
+              "nombre": "Charles Gaspard Dodun",
+              "nota": "Desde abril de 1722",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "c-sec-exteriores",
@@ -106,8 +146,19 @@
           "subgabinete_id": "gab-1c",
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p07",
+          "titular_nombre": "Guillaume Dubois",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p07",
+              "nombre": "Guillaume Dubois",
+              "nota": "Titular en junio de 1722",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "c-sec-guerra",
@@ -120,8 +171,19 @@
           "subgabinete_id": "gab-1d",
           "enlace_gabinete_id": "gab-3",
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p27",
+          "titular_nombre": "Claude Le Blanc",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p27",
+              "nombre": "Claude Le Blanc",
+              "nota": "Titular en junio de 1722",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "c-sec-marina",
@@ -134,8 +196,19 @@
           "subgabinete_id": "gab-1e",
           "enlace_gabinete_id": "gab-3f",
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p142",
+          "titular_nombre": "Charles-Jean-Baptiste Fleuriau de Morville",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p142",
+              "nombre": "Charles-Jean-Baptiste Fleuriau de Morville",
+              "nota": "Desde marzo de 1722",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "c-sec-maison",
@@ -148,8 +221,26 @@
           "subgabinete_id": "gab-1f",
           "enlace_gabinete_id": "gab-5",
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p28",
+          "titular_nombre": "Jean-Frédéric Phélypeaux (Maurepas)",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p28",
+              "nombre": "Jean-Frédéric Phélypeaux (Maurepas)",
+              "nota": "Secretario de Estado de la Casa del Rey",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p29",
+              "nombre": "Louis Phélypeaux (La Vrillière)",
+              "nota": "Secretario de Estado (asuntos generales y RPR)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "c-consejos-rey",
@@ -163,7 +254,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "7 consejos colegiados del Rey (Regencia, En haut, Despachos, Finanzas, Comercio, Conciencia, Privado)"
         },
         {
           "id": "c-policia-paris",
@@ -176,8 +270,19 @@
           "subgabinete_id": "gab-1h",
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p143",
+          "titular_nombre": "Marc-Pierre de Voyer de Paulmy, conde d'Argenson",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p143",
+              "nombre": "Marc-Pierre de Voyer de Paulmy, conde d'Argenson",
+              "nota": "Desde abril de 1722",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         }
       ]
     },
@@ -203,7 +308,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "por_verificar",
+          "titulares": [],
+          "escalafon": null
         },
         {
           "id": "c1a-maitres-requetes",
@@ -217,7 +325,10 @@
           "enlace_gabinete_id": "gab-4b",
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "~80–88 Maîtres des requêtes de l'Hôtel en servicio por cuartel"
         },
         {
           "id": "c1a-sello",
@@ -231,7 +342,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Colegio de la Gran Cancillería: Grands audienciers, Contrôleurs y Secrétaires du Roi"
         },
         {
           "id": "c1a-escribano",
@@ -245,7 +359,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "4 Greffiers en chef del Consejo Privado (rotación por cuartel)"
         }
       ]
     },
@@ -271,7 +388,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "~18–24 Conseillers d'État ordinaires (Toga, Espada e Iglesia)"
         },
         {
           "id": "c1a1-semestrales",
@@ -285,7 +405,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "2 turnos semestrales de Conseillers d'État"
         }
       ]
     },
@@ -311,7 +434,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "6 plazas de Intendants des finances restablecidas en 1722"
         },
         {
           "id": "c1b-int-comercio",
@@ -325,7 +451,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Cuerpo de Intendants du commerce por departamento"
         },
         {
           "id": "c1b-tesoro",
@@ -338,8 +467,26 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p100",
+          "titular_nombre": "Antoine Pâris",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p100",
+              "nombre": "Antoine Pâris",
+              "nota": "Guarda del Tesoro Real desde 1722",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p135",
+              "nombre": "Jean Pâris de Monmartel",
+              "nota": "Sucesor / ejercicio desde fines de 1722–1723",
+              "confianza": "probable",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "c1b-recaudacion",
@@ -353,7 +500,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "3 cuerpos: Ferme générale, 60 Receveurs généraux y Tesoreros extraordinarios"
         },
         {
           "id": "c1b-commis",
@@ -367,7 +517,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Premiers commis permanentes de las oficinas del Control General"
         }
       ]
     },
@@ -393,7 +546,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "~40 Fermiers généraux (arrendadores de impuestos indirectos)"
         },
         {
           "id": "c1b1-receveurs",
@@ -407,7 +563,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "2 Receveurs généraux alternos por cada una de las ~20 generalidades de élections"
         },
         {
           "id": "c1b1-monedas",
@@ -421,7 +580,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Directores de Casas de Moneda y Tesoreros del Extraordinario"
         }
       ]
     },
@@ -447,7 +609,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Premiers commis de Asuntos Exteriores y gabinete de cifras"
         },
         {
           "id": "c1c-embajadores",
@@ -461,7 +626,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Embajadores franceses ordinarios y extraordinarios ante potencias europeas"
         },
         {
           "id": "c1c-enviados",
@@ -475,7 +643,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Enviados extraordinarios y Residentes en cortes menores"
         },
         {
           "id": "c1c-agentes",
@@ -489,7 +660,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Corresponsales secretos y agentes reservados de Exteriores"
         }
       ]
     },
@@ -515,7 +689,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "1 Chargé d'affaires interino por legación sin embajador"
         },
         {
           "id": "c1c1-secretarios",
@@ -529,7 +706,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "1–2 Secretarios de embajada por corte acreditada"
         },
         {
           "id": "c1c1-consules",
@@ -543,7 +723,10 @@
           "enlace_gabinete_id": "gab-1e",
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Cónsules de Nación en puertos extranjeros y Levante"
         }
       ]
     },
@@ -569,7 +752,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Premiers commis de la Guerra (movimientos, disciplina, pensiones)"
         },
         {
           "id": "c1d-fortificaciones",
@@ -582,8 +768,19 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": "gab-3b",
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p148",
+          "titular_nombre": "Claude François Bidal, marqués d'Asfeld",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p148",
+              "nombre": "Claude François Bidal, marqués d'Asfeld",
+              "nota": "Director General de Fortificaciones",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "c1d-enlace-plume",
@@ -597,7 +794,10 @@
           "enlace_gabinete_id": "gab-3e",
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Intendentes de ejército y cuerpo de Commissaires des guerres"
         }
       ]
     },
@@ -623,7 +823,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Premiers commis de Marina (Ponant, Levant, Colonias, Fondos)"
         },
         {
           "id": "c1e-colonias",
@@ -637,7 +840,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Despacho de Colonias (Nueva Francia, Antillas, Luisiana, Índico)"
         },
         {
           "id": "c1e-consulados",
@@ -651,7 +857,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Échelles du Levant y red consular marítima"
         }
       ]
     },
@@ -677,7 +886,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Premiers commis de la Casa del Rey"
         },
         {
           "id": "c1f-paris-clero",
@@ -691,7 +903,10 @@
           "enlace_gabinete_id": "gab-1h",
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Despacho de París, Bastilla, Academias y Clero"
         },
         {
           "id": "c1f-provincias",
@@ -705,7 +920,10 @@
           "enlace_gabinete_id": "gab-4",
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Despacho de provincias del departamento de la Casa del Rey"
         },
         {
           "id": "c1f-edificios",
@@ -718,8 +936,19 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": "gab-5b5",
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p21",
+          "titular_nombre": "Louis-Antoine de Pardaillan (Duque de Antin)",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p21",
+              "nombre": "Louis-Antoine de Pardaillan (Duque de Antin)",
+              "nota": "Director General de los Edificios del Rey",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         }
       ]
     },
@@ -744,8 +973,61 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p03",
+          "titular_nombre": "Felipe II de Orleans",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p03",
+              "nombre": "Felipe II de Orleans",
+              "nota": "Regente de Francia (preside)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p12",
+              "nombre": "Luis Enrique de Borbón",
+              "nota": "Jefe del Consejo de Regencia",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p07",
+              "nombre": "Guillaume Dubois",
+              "nota": "Miembro y motor político",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p22",
+              "nombre": "Duque de Saint-Simon",
+              "nota": "Miembro del Consejo de Regencia",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p55",
+              "nombre": "Duque de Saint-Aignan",
+              "nota": "Miembro del Consejo de Regencia",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p23",
+              "nombre": "Mariscal de Villars",
+              "nota": "Apartado desde febrero de 1722",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p24",
+              "nombre": "Duque de Noailles",
+              "nota": "Apartado desde febrero de 1722; exiliado en mayo",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "c1g-en-haut",
@@ -758,8 +1040,26 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p03",
+          "titular_nombre": "Felipe II de Orleans",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p03",
+              "nombre": "Felipe II de Orleans",
+              "nota": "Regente",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p07",
+              "nombre": "Guillaume Dubois",
+              "nota": "Ministro de Estado y Exteriores",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "c1g-despachos",
@@ -772,8 +1072,61 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p03",
+          "titular_nombre": "Felipe II de Orleans",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p03",
+              "nombre": "Felipe II de Orleans",
+              "nota": "Preside",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p25",
+              "nombre": "Armenonville",
+              "nota": "Guardasellos",
+              "confianza": "probable",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p07",
+              "nombre": "Guillaume Dubois",
+              "nota": "Exteriores",
+              "confianza": "probable",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p27",
+              "nombre": "Claude Le Blanc",
+              "nota": "Guerra",
+              "confianza": "probable",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p142",
+              "nombre": "Fleuriau de Morville",
+              "nota": "Marina",
+              "confianza": "probable",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p28",
+              "nombre": "Maurepas",
+              "nota": "Casa del Rey",
+              "confianza": "probable",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p29",
+              "nombre": "La Vrillière",
+              "nota": "Secretario de Estado",
+              "confianza": "probable",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "c1g-finanzas",
@@ -786,8 +1139,26 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p26",
+          "titular_nombre": "Charles Gaspard Dodun",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p26",
+              "nombre": "Charles Gaspard Dodun",
+              "nota": "Interventor General de Finanzas",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p12",
+              "nombre": "Luis Enrique de Borbón",
+              "nota": "Jefe del Consejo",
+              "confianza": "probable",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "c1g-comercio",
@@ -800,8 +1171,26 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p26",
+          "titular_nombre": "Charles Gaspard Dodun",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p26",
+              "nombre": "Charles Gaspard Dodun",
+              "nota": "Finanzas",
+              "confianza": "probable",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p142",
+              "nombre": "Fleuriau de Morville",
+              "nota": "Marina y Comercio",
+              "confianza": "probable",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "c1g-conciencia",
@@ -816,8 +1205,33 @@
           "enlace_mapa": {
             "capa": "diocesis"
           },
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p75",
+          "titular_nombre": "Cardenal de Bissy",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p75",
+              "nombre": "Cardenal de Bissy",
+              "nota": "Miembro del Consejo de Conciencia",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p08",
+              "nombre": "André-Hercule de Fleury",
+              "nota": "Consejo de Conciencia",
+              "confianza": "probable",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p32",
+              "nombre": "Cardenal de Rohan",
+              "nota": "Gran Limosnero",
+              "confianza": "probable",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "c1g-privado",
@@ -830,8 +1244,19 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": "gab-1a",
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p25",
+          "titular_nombre": "Joseph Fleuriau d'Armenonville",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p25",
+              "nombre": "Joseph Fleuriau d'Armenonville",
+              "nota": "Preside en ausencia del Canciller",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         }
       ]
     },
@@ -857,7 +1282,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "48 Commissaires au Châtelet repartidos por los 20 barrios de París"
         },
         {
           "id": "c1h-inspectores",
@@ -871,7 +1299,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "~20–40 Inspecteurs de police de vigilancia urbana"
         },
         {
           "id": "c1h-guet",
@@ -885,7 +1316,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Chevalier du guet + compañías a pie y a caballo de la Garde de Paris"
         }
       ]
     },
@@ -911,7 +1345,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Corte soberana semestral: 1 Primer Presidente, 8 Presidentes y ~54 Consejeros"
         },
         {
           "id": "j-parlamento-paris",
@@ -926,8 +1363,19 @@
           "enlace_mapa": {
             "capa": "parlamentos"
           },
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p60",
+          "titular_nombre": "Primer Presidente de Mesmes",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p60",
+              "nombre": "Primer Presidente de Mesmes",
+              "nota": "Primer Presidente del Parlamento de París",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "j-parlamentos-prov",
@@ -943,7 +1391,10 @@
             "capa": "parlamentos"
           },
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "14 cortes territoriales (11 parlamentos provinciales + 1 consejo provincial + 2 consejos soberanos)"
         },
         {
           "id": "j-chambre-comptes",
@@ -956,8 +1407,19 @@
           "subgabinete_id": "gab-2c",
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p145",
+          "titular_nombre": "Jean-Aymar de Nicolay",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p145",
+              "nombre": "Jean-Aymar de Nicolay",
+              "nota": "Primer Presidente de la Cámara de Cuentas",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "j-aides-monnaies",
@@ -971,7 +1433,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "2 cortes soberanas especializadas: Cour des aides y Cour des monnaies"
         },
         {
           "id": "j-chatelet-ordinaria",
@@ -985,7 +1450,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "4 escalones: Châtelet de París → ~100 Présidiaux → ~400 Bailliages/Sénéchaussées → Prévôtés"
         }
       ]
     },
@@ -1010,8 +1478,19 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p60",
+          "titular_nombre": "Primer Presidente de Mesmes",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p60",
+              "nombre": "Primer Presidente de Mesmes",
+              "nota": "Titular en junio de 1722",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "j2a-mortier",
@@ -1025,7 +1504,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "9 Présidents à mortier de la Grand'Chambre"
         },
         {
           "id": "j2a-salas",
@@ -1039,7 +1521,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "4 salas: Grand'Chambre, 5 Enquêtes, 2 Requêtes y Tournelle"
         },
         {
           "id": "j2a-gens-du-roi",
@@ -1052,8 +1537,19 @@
           "subgabinete_id": "gab-2a2",
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p144",
+          "titular_nombre": "Guillaume-François Joly de Fleury",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p144",
+              "nombre": "Guillaume-François Joly de Fleury",
+              "nota": "Procurador General al frente del Parquet",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "j2a-greffiers",
@@ -1067,7 +1563,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Greffiers en chef (civil/criminal) y Premier huissier"
         }
       ]
     },
@@ -1093,7 +1592,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Consejeros decanos (laicos y clérigos) + Pares de Francia en sesiones solemnes"
         },
         {
           "id": "j2a1-enquetes",
@@ -1107,7 +1609,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "5 cámaras de Enquêtes (~150 consejeros instructores)"
         },
         {
           "id": "j2a1-requetes",
@@ -1121,7 +1626,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "2 cámaras de Requêtes del Palacio"
         },
         {
           "id": "j2a1-tournelle",
@@ -1135,7 +1643,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Turno rotatorio de consejeros laicos para causas criminales"
         }
       ]
     },
@@ -1160,8 +1671,19 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p144",
+          "titular_nombre": "Guillaume-François Joly de Fleury",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p144",
+              "nombre": "Guillaume-François Joly de Fleury",
+              "nota": "Procurador General (1717–1746)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "j2a2-avocats",
@@ -1175,7 +1697,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "3 Avocats généraux del Parlamento de París"
         }
       ]
     },
@@ -1189,20 +1714,375 @@
       "preside": "Cada corte tiene su Primer Presidente nombrado por el Rey",
       "nota": "Todos replican la estructura de Primer Presidente, Presidentes, Consejeros y Gens du roi.",
       "asientos": [
-        { "id": "j2b-toulouse", "num": 1, "nombre": "Parlamento de Toulouse", "nombre_fr": "Parlement de Toulouse", "naturaleza": "oficio_venal", "plazas": "Languedoc y parte de Guyena", "resumen": "Segundo parlamento más antiguo del reino; aplica derecho escrito romano en el Midi.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": { "capa": "parlamentos" }, "titular_id": null, "titular_nombre": null },
-        { "id": "j2b-grenoble", "num": 2, "nombre": "Parlamento de Grenoble", "nombre_fr": "Parlement du Dauphiné", "naturaleza": "oficio_venal", "plazas": "Delfinado", "resumen": "Corte soberana del Delfinado.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": { "capa": "parlamentos" }, "titular_id": null, "titular_nombre": null },
-        { "id": "j2b-burdeos", "num": 3, "nombre": "Parlamento de Burdeos", "nombre_fr": "Parlement de Bordeaux", "naturaleza": "oficio_venal", "plazas": "Guyena y Gascuña", "resumen": "Jurisdicción soberana sobre el sudoeste atlántico.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": { "capa": "parlamentos" }, "titular_id": null, "titular_nombre": null },
-        { "id": "j2b-dijon", "num": 4, "nombre": "Parlamento de Dijon", "nombre_fr": "Parlement de Bourgogne", "naturaleza": "oficio_venal", "plazas": "Borgoña", "resumen": "Corte soberana del ducado de Borgoña.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": { "capa": "parlamentos" }, "titular_id": null, "titular_nombre": null },
-        { "id": "j2b-ruan", "num": 5, "nombre": "Parlamento de Ruan", "nombre_fr": "Parlement de Normandie", "naturaleza": "oficio_venal", "plazas": "Normandía", "resumen": "Guardián de la costumbre normanda.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": { "capa": "parlamentos" }, "titular_id": null, "titular_nombre": null },
-        { "id": "j2b-aix", "num": 6, "nombre": "Parlamento de Aix", "nombre_fr": "Parlement de Provence", "naturaleza": "oficio_venal", "plazas": "Provenza", "resumen": "Corte soberana de Provenza, activa durante la recuperación tras la peste de 1720.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": { "capa": "parlamentos" }, "titular_id": null, "titular_nombre": null },
-        { "id": "j2b-rennes", "num": 7, "nombre": "Parlamento de Rennes", "nombre_fr": "Parlement de Bretagne", "naturaleza": "oficio_venal", "plazas": "Bretaña", "resumen": "Fuerte bastión de la nobleza y de las libertades bretonas.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": { "capa": "parlamentos" }, "titular_id": null, "titular_nombre": null },
-        { "id": "j2b-pau", "num": 8, "nombre": "Parlamento de Pau", "nombre_fr": "Parlement de Navarre", "naturaleza": "oficio_venal", "plazas": "Bearne y Baja Navarra", "resumen": "Corte soberana pirenaica de derecho foral propio.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": { "capa": "parlamentos" }, "titular_id": null, "titular_nombre": null },
-        { "id": "j2b-metz", "num": 9, "nombre": "Parlamento de Metz", "nombre_fr": "Parlement de Metz", "naturaleza": "oficio_venal", "plazas": "Tres Obispados (Metz, Toul, Verdún)", "resumen": "Jurisdicción de los enclaves franceses orientales.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": { "capa": "parlamentos" }, "titular_id": null, "titular_nombre": null },
-        { "id": "j2b-besanzon", "num": 10, "nombre": "Parlamento de Besanzón", "nombre_fr": "Parlement de Franche-Comté", "naturaleza": "oficio_venal", "plazas": "Franco Condado", "resumen": "Trasladado desde Dole tras la conquista francesa de 1674–1678.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": { "capa": "parlamentos" }, "titular_id": null, "titular_nombre": null },
-        { "id": "j2b-douai", "num": 11, "nombre": "Parlamento de Flandes (Douai)", "nombre_fr": "Parlement de Flandre", "naturaleza": "oficio_venal", "plazas": "Flandes y Henao", "resumen": "Establecido en Douai tras el tratado de Utrecht.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": { "capa": "parlamentos" }, "titular_id": null, "titular_nombre": null },
-        { "id": "j2b-artois", "num": 12, "nombre": "Consejo Provincial de Artois (Arras)", "nombre_fr": "Conseil provincial d'Artois", "naturaleza": "oficio_venal", "plazas": "Artois (apelación civil a París)", "resumen": "Soberano en lo criminal; subordinado a París en ciertas apelaciones civiles.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": { "capa": "parlamentos" }, "titular_id": null, "titular_nombre": null },
-        { "id": "j2b-colmar", "num": 13, "nombre": "Consejo Soberano de Alsacia (Colmar)", "nombre_fr": "Conseil souverain d'Alsace", "naturaleza": "oficio_venal", "plazas": "Alsacia", "resumen": "Corte soberana sin rango formal de parlamento.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": { "capa": "parlamentos" }, "titular_id": null, "titular_nombre": null },
-        { "id": "j2b-perpinan", "num": 14, "nombre": "Consejo Soberano de Rosellón (Perpiñán)", "nombre_fr": "Conseil souverain du Roussillon", "naturaleza": "oficio_venal", "plazas": "Rosellón", "resumen": "Corte soberana de la provincia incorporada por la Paz de los Pirineos (1659).", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": { "capa": "parlamentos" }, "titular_id": null, "titular_nombre": null }
+        {
+          "id": "j2b-toulouse",
+          "num": 1,
+          "nombre": "Parlamento de Toulouse",
+          "nombre_fr": "Parlement de Toulouse",
+          "naturaleza": "oficio_venal",
+          "plazas": "Languedoc y parte de Guyena",
+          "resumen": "Segundo parlamento más antiguo del reino; aplica derecho escrito romano en el Midi.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": {
+            "capa": "parlamentos"
+          },
+          "titular_id": "p63",
+          "titular_nombre": "Primer Presidente de Bertier",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p63",
+              "nombre": "Primer Presidente de Bertier",
+              "nota": "Parlamento de Toulouse",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "j2b-grenoble",
+          "num": 2,
+          "nombre": "Parlamento de Grenoble",
+          "nombre_fr": "Parlement du Dauphiné",
+          "naturaleza": "oficio_venal",
+          "plazas": "Delfinado",
+          "resumen": "Corte soberana del Delfinado.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": {
+            "capa": "parlamentos"
+          },
+          "titular_id": "p64",
+          "titular_nombre": "Primer Presidente de Grammont",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p64",
+              "nombre": "Primer Presidente de Grammont",
+              "nota": "Parlamento del Delfinado",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "j2b-burdeos",
+          "num": 3,
+          "nombre": "Parlamento de Burdeos",
+          "nombre_fr": "Parlement de Bordeaux",
+          "naturaleza": "oficio_venal",
+          "plazas": "Guyena y Gascuña",
+          "resumen": "Jurisdicción soberana sobre el sudoeste atlántico.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": {
+            "capa": "parlamentos"
+          },
+          "titular_id": "p62",
+          "titular_nombre": "Primer Presidente de La Caze",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p62",
+              "nombre": "Primer Presidente de La Caze",
+              "nota": "Primer Presidente",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p119",
+              "nombre": "Barón de Montesquieu",
+              "nota": "Presidente a mortero en Burdeos",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "j2b-dijon",
+          "num": 4,
+          "nombre": "Parlamento de Dijon",
+          "nombre_fr": "Parlement de Bourgogne",
+          "naturaleza": "oficio_venal",
+          "plazas": "Borgoña",
+          "resumen": "Corte soberana del ducado de Borgoña.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": {
+            "capa": "parlamentos"
+          },
+          "titular_id": "p65",
+          "titular_nombre": "Primer Presidente de Berbisey",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p65",
+              "nombre": "Primer Presidente de Berbisey",
+              "nota": "Parlamento de Borgoña",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "j2b-ruan",
+          "num": 5,
+          "nombre": "Parlamento de Ruan",
+          "nombre_fr": "Parlement de Normandie",
+          "naturaleza": "oficio_venal",
+          "plazas": "Normandía",
+          "resumen": "Guardián de la costumbre normanda.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": {
+            "capa": "parlamentos"
+          },
+          "titular_id": "p61",
+          "titular_nombre": "Primer Presidente de Pontcarré",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p61",
+              "nombre": "Primer Presidente de Pontcarré",
+              "nota": "Parlamento de Normandía",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "j2b-aix",
+          "num": 6,
+          "nombre": "Parlamento de Aix",
+          "nombre_fr": "Parlement de Provence",
+          "naturaleza": "oficio_venal",
+          "plazas": "Provenza",
+          "resumen": "Corte soberana de Provenza, activa durante la recuperación tras la peste de 1720.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": {
+            "capa": "parlamentos"
+          },
+          "titular_id": "p66",
+          "titular_nombre": "Primer Presidente Le Bret",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p66",
+              "nombre": "Primer Presidente Le Bret",
+              "nota": "Primer Presidente (e Intendente de Provenza)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "j2b-rennes",
+          "num": 7,
+          "nombre": "Parlamento de Rennes",
+          "nombre_fr": "Parlement de Bretagne",
+          "naturaleza": "oficio_venal",
+          "plazas": "Bretaña",
+          "resumen": "Fuerte bastión de la nobleza y de las libertades bretonas.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": {
+            "capa": "parlamentos"
+          },
+          "titular_id": "p67",
+          "titular_nombre": "Primer Presidente de Brilhac",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p67",
+              "nombre": "Primer Presidente de Brilhac",
+              "nota": "Parlamento de Bretaña",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "j2b-pau",
+          "num": 8,
+          "nombre": "Parlamento de Pau",
+          "nombre_fr": "Parlement de Navarre",
+          "naturaleza": "oficio_venal",
+          "plazas": "Bearne y Baja Navarra",
+          "resumen": "Corte soberana pirenaica de derecho foral propio.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": {
+            "capa": "parlamentos"
+          },
+          "titular_id": "p68",
+          "titular_nombre": "Primer Presidente de Fenoyl",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p68",
+              "nombre": "Primer Presidente de Fenoyl",
+              "nota": "Parlamento de Navarra y Bearn",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "j2b-metz",
+          "num": 9,
+          "nombre": "Parlamento de Metz",
+          "nombre_fr": "Parlement de Metz",
+          "naturaleza": "oficio_venal",
+          "plazas": "Tres Obispados (Metz, Toul, Verdún)",
+          "resumen": "Jurisdicción de los enclaves franceses orientales.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": {
+            "capa": "parlamentos"
+          },
+          "titular_id": "p70",
+          "titular_nombre": "Primer Presidente de Chasot",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p70",
+              "nombre": "Primer Presidente de Chasot",
+              "nota": "Parlamento de Metz",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "j2b-besanzon",
+          "num": 10,
+          "nombre": "Parlamento de Besanzón",
+          "nombre_fr": "Parlement de Franche-Comté",
+          "naturaleza": "oficio_venal",
+          "plazas": "Franco Condado",
+          "resumen": "Trasladado desde Dole tras la conquista francesa de 1674–1678.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": {
+            "capa": "parlamentos"
+          },
+          "titular_id": "p71",
+          "titular_nombre": "Primer Presidente Jobelot",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p71",
+              "nombre": "Primer Presidente Jobelot",
+              "nota": "Parlamento del Franco Condado",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "j2b-douai",
+          "num": 11,
+          "nombre": "Parlamento de Flandes (Douai)",
+          "nombre_fr": "Parlement de Flandre",
+          "naturaleza": "oficio_venal",
+          "plazas": "Flandes y Henao",
+          "resumen": "Establecido en Douai tras el tratado de Utrecht.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": {
+            "capa": "parlamentos"
+          },
+          "titular_id": "p69",
+          "titular_nombre": "Primer Presidente de Pollinchove",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p69",
+              "nombre": "Primer Presidente de Pollinchove",
+              "nota": "Parlamento de Flandes",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "j2b-artois",
+          "num": 12,
+          "nombre": "Consejo Provincial de Artois (Arras)",
+          "nombre_fr": "Conseil provincial d'Artois",
+          "naturaleza": "oficio_venal",
+          "plazas": "Artois (apelación civil a París)",
+          "resumen": "Soberano en lo criminal; subordinado a París en ciertas apelaciones civiles.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": {
+            "capa": "parlamentos"
+          },
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "por_verificar",
+          "titulares": [],
+          "escalafon": null
+        },
+        {
+          "id": "j2b-colmar",
+          "num": 13,
+          "nombre": "Consejo Soberano de Alsacia (Colmar)",
+          "nombre_fr": "Conseil souverain d'Alsace",
+          "naturaleza": "oficio_venal",
+          "plazas": "Alsacia",
+          "resumen": "Corte soberana sin rango formal de parlamento.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": {
+            "capa": "parlamentos"
+          },
+          "titular_id": "p72",
+          "titular_nombre": "Primer Presidente de Corberon",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p72",
+              "nombre": "Primer Presidente de Corberon",
+              "nota": "Consejo Soberano de Alsacia",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "j2b-perpinan",
+          "num": 14,
+          "nombre": "Consejo Soberano de Rosellón (Perpiñán)",
+          "nombre_fr": "Conseil souverain du Roussillon",
+          "naturaleza": "oficio_venal",
+          "plazas": "Rosellón",
+          "resumen": "Corte soberana de la provincia incorporada por la Paz de los Pirineos (1659).",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": {
+            "capa": "parlamentos"
+          },
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "por_verificar",
+          "titulares": [],
+          "escalafon": null
+        }
       ]
     },
     {
@@ -1226,8 +2106,19 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p145",
+          "titular_nombre": "Jean-Aymar de Nicolay",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p145",
+              "nombre": "Jean-Aymar de Nicolay",
+              "nota": "Primer Presidente (1686/1707–1734)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "j2c-maitres",
@@ -1241,7 +2132,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Presidentes y ~70 Maîtres des comptes de París"
         },
         {
           "id": "j2c-auditores",
@@ -1255,7 +2149,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Correcteurs y Auditeurs des comptes"
         }
       ]
     },
@@ -1280,8 +2177,19 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": "gab-1h",
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p143",
+          "titular_nombre": "Conde d'Argenson",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p143",
+              "nombre": "Conde d'Argenson",
+              "nota": "Teniente General de Policía en el Châtelet",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "j2d-presidiales",
@@ -1295,7 +2203,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "~100 tribunales presidiales en el Reino"
         },
         {
           "id": "j2d-bailliages",
@@ -1309,7 +2220,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "~400 Bailliages y Sénéchaussées reales"
         },
         {
           "id": "j2d-senoriales",
@@ -1323,7 +2237,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Prévôtés reales y miles de justicias señoriales (alta, media y baja)"
         }
       ]
     },
@@ -1348,8 +2265,40 @@
           "subgabinete_id": "gab-3a",
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p09",
+          "titular_nombre": "François de Neufville, Mariscal de Villeroy",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p09",
+              "nombre": "François de Neufville, Mariscal de Villeroy",
+              "nota": "Decano / Mariscal de Francia",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p23",
+              "nombre": "Claude Louis Hector de Villars",
+              "nota": "Mariscal de Francia",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p116",
+              "nombre": "Victor-Marie d'Estrées",
+              "nota": "Mariscal de Francia",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p117",
+              "nombre": "Duque de Berwick",
+              "nota": "Mariscal de Francia",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "e-artilleria",
@@ -1362,8 +2311,19 @@
           "subgabinete_id": "gab-3b",
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p18",
+          "titular_nombre": "Luis Augusto de Borbón, Duque de Maine",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p18",
+              "nombre": "Luis Augusto de Borbón, Duque de Maine",
+              "nota": "Gran Maestre de la Artillería",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "e-col-infanteria",
@@ -1376,8 +2336,19 @@
           "subgabinete_id": "gab-3c",
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p06",
+          "titular_nombre": "Luis de Orleans, Duque de Chartres",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p06",
+              "nombre": "Luis de Orleans, Duque de Chartres",
+              "nota": "Coronel General de la Infantería (desde 1721)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "e-col-caballeria",
@@ -1390,8 +2361,19 @@
           "subgabinete_id": "gab-3d",
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p49",
+          "titular_nombre": "Conde de Évreux",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p49",
+              "nombre": "Conde de Évreux",
+              "nota": "Coronel General de la Caballería Ligera",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "e-col-suizos",
@@ -1404,8 +2386,19 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": "gab-5c1",
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p18",
+          "titular_nombre": "Luis Augusto de Borbón, Duque de Maine",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p18",
+              "nombre": "Luis Augusto de Borbón, Duque de Maine",
+              "nota": "Coronel General de los Suizos y Grisones",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "e-plume-guerra",
@@ -1419,7 +2412,10 @@
           "enlace_gabinete_id": "gab-1d",
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Intendentes de ejército, Commissaires des guerres y 30 compañías de Maréchaussée"
         },
         {
           "id": "e-almirante",
@@ -1432,8 +2428,26 @@
           "subgabinete_id": "gab-3f",
           "enlace_gabinete_id": "gab-1e",
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p20",
+          "titular_nombre": "Luis Alejandro de Borbón, Conde de Toulouse",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p20",
+              "nombre": "Luis Alejandro de Borbón, Conde de Toulouse",
+              "nota": "Almirante de Francia",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p149",
+              "nombre": "Chevalier d'Orléans",
+              "nota": "General de las Galeras de Francia",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         }
       ]
     },
@@ -1458,8 +2472,40 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p09",
+          "titular_nombre": "Mariscal de Villeroy",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p09",
+              "nombre": "Mariscal de Villeroy",
+              "nota": "Colegio de Mariscales",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p23",
+              "nombre": "Mariscal de Villars",
+              "nota": "Colegio de Mariscales",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p116",
+              "nombre": "Mariscal d'Estrées",
+              "nota": "Colegio de Mariscales",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p117",
+              "nombre": "Mariscal de Berwick",
+              "nota": "Colegio de Mariscales",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "e3a-tenientes-gen",
@@ -1473,7 +2519,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Escalafón superior de oficiales generales (~100+ tenientes generales en lista)"
         },
         {
           "id": "e3a-mariscales-campo",
@@ -1487,7 +2536,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Escalafón intermedio de oficiales generales (Maréchaux de camp)"
         },
         {
           "id": "e3a-brigadiers",
@@ -1501,7 +2553,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Brigadieres de Infantería, Caballería y Dragones"
         }
       ]
     },
@@ -1527,7 +2582,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Tenientes generales, comisarios y oficiales del Real Cuerpo de Artillería"
         },
         {
           "id": "e3b-ingenieros",
@@ -1540,8 +2598,19 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p148",
+          "titular_nombre": "Marqués d'Asfeld",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p148",
+              "nombre": "Marqués d'Asfeld",
+              "nota": "Director General de las Fortificaciones e Ingenieros",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "e3b-arsenales",
@@ -1555,7 +2624,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Comisarios provinciales de artillería, parques, fundiciones y compañías de minadores"
         }
       ]
     },
@@ -1581,7 +2653,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "1 Coronel propietario por cada regimiento de infantería"
         },
         {
           "id": "e3c-ten-coroneles",
@@ -1595,7 +2670,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "1 Teniente Coronel táctico por regimiento de infantería"
         },
         {
           "id": "e3c-mayores",
@@ -1609,7 +2687,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "1 Mayor + Ayudantes mayores por regimiento de infantería"
         }
       ]
     },
@@ -1635,7 +2716,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "1 Capitán propietario por compañía (15–17 compañías por batallón típico)"
         },
         {
           "id": "e3c1-tenientes",
@@ -1649,7 +2733,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "1 Teniente + Subteniente/Enseigne por compañía de infantería"
         },
         {
           "id": "e3c1-sargentos",
@@ -1663,7 +2750,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "2 Sargentos por compañía (~30+ por batallón)"
         },
         {
           "id": "e3c1-cabos-tropa",
@@ -1677,7 +2767,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Cabos, Anspessades y ~40–50 Soldados/Granaderos por compañía"
         }
       ]
     },
@@ -1702,8 +2795,26 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p147",
+          "titular_nombre": "Conde de Coigny",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p147",
+              "nombre": "Conde de Coigny",
+              "nota": "Coronel General de Dragones",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p30",
+              "nombre": "Belle-Isle",
+              "nota": "Oficial general de dragones (en desgracia/vigilado)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "e3d-mestres",
@@ -1717,7 +2828,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "1 Mestre de camp por regimiento de caballería / 1 Coronel por regimiento de dragones"
         },
         {
           "id": "e3d-ten-may",
@@ -1731,7 +2845,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "1 Teniente Coronel y 1 Mayor por regimiento montado"
         }
       ]
     },
@@ -1757,7 +2874,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "1 Capitán por compañía de caballería o dragones (2–4 compañías por escuadrón)"
         },
         {
           "id": "e3d1-tenientes",
@@ -1771,7 +2891,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "1 Teniente + 1 Cornette por compañía montada"
         },
         {
           "id": "e3d1-marechaux-logis",
@@ -1785,7 +2908,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Maréchaux des logis (suboficiales por compañía montada)"
         },
         {
           "id": "e3d1-brigadiers-jinetes",
@@ -1799,7 +2925,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Brigadiers (cabos) y Jinetes / Dragones por escuadra"
         }
       ]
     },
@@ -1825,7 +2954,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Intendentes de ejército designados por campaña y frontera"
         },
         {
           "id": "e3e-commissaires",
@@ -1839,7 +2971,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Commissaires ordonnateurs y Commissaires des guerres por plazas y ejércitos"
         },
         {
           "id": "e3e-marechaussee",
@@ -1853,7 +2988,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "30 compañías territoriales de Maréchaussée (Prebostes generales → Exentos → Brigadiers → Arqueros)"
         }
       ]
     },
@@ -1878,8 +3016,19 @@
           "subgabinete_id": "gab-3f1",
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p116",
+          "titular_nombre": "Victor-Marie d'Estrées",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p116",
+              "nombre": "Victor-Marie d'Estrées",
+              "nota": "Vicealmirante de Ponant (flota atlántica)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "e3f-galeras",
@@ -1892,8 +3041,19 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p149",
+          "titular_nombre": "Chevalier d'Orléans",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p149",
+              "nombre": "Chevalier d'Orléans",
+              "nota": "General de las Galeras (Marsella)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "e3f-intendentes-marina",
@@ -1907,7 +3067,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Intendentes de Marina en Brest, Tolón, Rochefort (y Marsella)"
         },
         {
           "id": "e3f-amirautes",
@@ -1921,7 +3084,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Sedes de Almirantazgo en los puertos del litoral"
         }
       ]
     },
@@ -1947,7 +3113,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Tenientes Generales Navales y Chefs d'escadre"
         },
         {
           "id": "e3f1-capitanes",
@@ -1961,7 +3130,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Capitanes de Navío, de Fragata y de Brulote"
         },
         {
           "id": "e3f1-subalternos",
@@ -1975,7 +3147,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Tenientes, Alféreces y 3 compañías de Gardes de la Marine (Brest, Rochefort, Tolón)"
         },
         {
           "id": "e3f1-maestranza",
@@ -1989,7 +3164,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Officiers mariniers (pilotos, contramaestres, cañoneros) y marinería por sistema de classes"
         }
       ]
     },
@@ -2015,7 +3193,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Commissaires généraux y ordinaires de Marina en puertos y barrios de matrícula"
         },
         {
           "id": "e3f2-escrivains",
@@ -2029,7 +3210,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Écrivains du Roi en arsenales y buques armados"
         }
       ]
     },
@@ -2057,7 +3241,10 @@
             "capa": "gobiernos"
           },
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "32 Gobiernos Militares provinciales (ver lista completa en Mapa 5 de Francia)"
         },
         {
           "id": "p-intendentes",
@@ -2073,7 +3260,10 @@
             "capa": "intendencias"
           },
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "30 Intendencias reales / generalidades (ver lista completa en Mapa 6 de Francia)"
         },
         {
           "id": "p-municipales",
@@ -2087,7 +3277,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "París (Hôtel de Ville) y cuerpos municipales de las ciudades del Reino"
         }
       ]
     },
@@ -2115,7 +3308,10 @@
             "capa": "gobiernos"
           },
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "32 Gobernadores generales de provincia (ver Mapa 5 de Francia)"
         },
         {
           "id": "p4a-lieut-gen",
@@ -2131,7 +3327,10 @@
             "capa": "gobiernos"
           },
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Tenientes Generales de gobierno (1 o varios por provincia)"
         },
         {
           "id": "p4a-commandant",
@@ -2145,7 +3344,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Comandantes en Jefe extraordinarios (comisión cuando falta el Gobernador)"
         },
         {
           "id": "p4a-plazas",
@@ -2159,7 +3361,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Lieutenants de roi territoriales y estados mayores de ciudadelas y plazas fuertes"
         }
       ]
     },
@@ -2185,7 +3390,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Lieutenants de roi de subdistritos provinciales"
         },
         {
           "id": "p4a1-plazas",
@@ -2199,7 +3407,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Gobernadores particulares, Majors y Aides-major de plazas fuertes"
         }
       ]
     },
@@ -2227,7 +3438,10 @@
             "capa": "intendencias"
           },
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "30 Intendentes de justicia, policía y finanzas (ver Mapa 6 de Francia)"
         },
         {
           "id": "p4b-subdelegues",
@@ -2241,7 +3455,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Subdelegados generales y decenas de Subdelegados de distrito por intendencia"
         },
         {
           "id": "p4b-secretaria",
@@ -2255,7 +3472,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Secretarios y commis permanentes de cada Intendencia y Ponts et Chaussées"
         },
         {
           "id": "p4b-regimenes",
@@ -2271,7 +3491,10 @@
             "capa": "intendencias"
           },
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "3 regímenes fiscales: ~20 Pays d'élections, Pays d'États y Pays d'imposition"
         }
       ]
     },
@@ -2299,7 +3522,10 @@
             "capa": "intendencias"
           },
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Bureaux des Finances + tribunales de Élections (Élus) + colectores parroquiales"
         },
         {
           "id": "p4b1-etats",
@@ -2315,7 +3541,10 @@
             "capa": "intendencias"
           },
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Estados Provinciales (Clero, Nobleza, Tercer Estado), Syndics généraux y tesoreros propios"
         },
         {
           "id": "p4b1-imposition",
@@ -2331,7 +3560,10 @@
             "capa": "intendencias"
           },
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Reparto fiscal directo por el Intendente y sus subdelegados en provincias fronterizas"
         }
       ]
     },
@@ -2356,8 +3588,19 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": "gab-1h",
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p146",
+          "titular_nombre": "Marqués de Châteauneuf",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p146",
+              "nombre": "Marqués de Châteauneuf",
+              "nota": "Preboste de los Mercaderes de París (1720–1725)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "p4c-ciudades",
@@ -2371,7 +3614,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Maire y colegios de Échevins / Consuls / Capitols / Jurats según fuero urbano"
         }
       ]
     },
@@ -2396,8 +3642,19 @@
           "subgabinete_id": "gab-5a",
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p32",
+          "titular_nombre": "Cardenal Armand Gaston de Rohan",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p32",
+              "nombre": "Cardenal Armand Gaston de Rohan",
+              "nota": "Gran Limosnero de Francia",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "m-confesor",
@@ -2410,8 +3667,19 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p44",
+          "titular_nombre": "Padre de Linières",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p44",
+              "nombre": "Padre de Linières",
+              "nota": "Confesor jesuita del Rey desde 1722",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "m-gran-maestre",
@@ -2424,8 +3692,19 @@
           "subgabinete_id": "gab-5b1",
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p12",
+          "titular_nombre": "Luis Enrique de Borbón, Duque de Borbón",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p12",
+              "nombre": "Luis Enrique de Borbón, Duque de Borbón",
+              "nota": "Gran Maestre de Francia",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "m-gran-chambelan",
@@ -2438,8 +3717,19 @@
           "subgabinete_id": "gab-5b2",
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p47",
+          "titular_nombre": "Duque de Bouillon",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p47",
+              "nombre": "Duque de Bouillon",
+              "nota": "Gran Chambelán de Francia",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "m-gran-caballerizo",
@@ -2452,8 +3742,19 @@
           "subgabinete_id": "gab-5b3",
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p31",
+          "titular_nombre": "Carlos de Lorena",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p31",
+              "nombre": "Carlos de Lorena",
+              "nota": "Gran Caballerizo de Francia (Monsieur le Grand)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "m-ceremonias-preboste",
@@ -2466,8 +3767,26 @@
           "subgabinete_id": "gab-5b4",
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p154",
+          "titular_nombre": "Marqués de Brézé",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p154",
+              "nombre": "Marqués de Brézé",
+              "nota": "Gran Maestro de Ceremonias",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p155",
+              "nombre": "Marqués de Sourches",
+              "nota": "Gran Preboste del Hôtel",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "m-edificios-versalles",
@@ -2480,8 +3799,26 @@
           "subgabinete_id": "gab-5b5",
           "enlace_gabinete_id": "gab-1f",
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p21",
+          "titular_nombre": "Duque de Antin",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p21",
+              "nombre": "Duque de Antin",
+              "nota": "Director General de los Edificios del Rey",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p114",
+              "nombre": "Louis Blouin",
+              "nota": "Gobernador de Versalles y Marly",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "m-educacion",
@@ -2494,8 +3831,47 @@
           "subgabinete_id": "gab-5b6",
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p12",
+          "titular_nombre": "Luis Enrique de Borbón",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p12",
+              "nombre": "Luis Enrique de Borbón",
+              "nota": "Superintendente de la Educación",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p09",
+              "nombre": "Mariscal de Villeroy",
+              "nota": "Gobernador del Rey (hasta ago. 1722)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p10",
+              "nombre": "Duque de Charost",
+              "nota": "Gobernador del Rey (desde ago. 1722)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p08",
+              "nombre": "André-Hercule de Fleury",
+              "nota": "Preceptor del Rey",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p11",
+              "nombre": "Duquesa de Ventadour",
+              "nota": "Aya de los Hijos de Francia",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "m-guardia-interior",
@@ -2508,8 +3884,26 @@
           "subgabinete_id": "gab-5c1",
           "enlace_gabinete_id": "gab-3",
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p10",
+          "titular_nombre": "Duque de Charost",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p10",
+              "nombre": "Duque de Charost",
+              "nota": "Capitán de Guardias de Corps",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p50",
+              "nombre": "Duque de Harcourt",
+              "nota": "Capitán de Guardias de Corps",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "m-guardia-exterior",
@@ -2522,8 +3916,47 @@
           "subgabinete_id": "gab-5c2",
           "enlace_gabinete_id": "gab-3",
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p53",
+          "titular_nombre": "Duque de Gramont",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p53",
+              "nombre": "Duque de Gramont",
+              "nota": "Coronel de Guardias Francesas",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p54",
+              "nombre": "Príncipe de Soubise",
+              "nota": "Capitán-Teniente de Gendarmes",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p56",
+              "nombre": "Duque de Chaulnes",
+              "nota": "Capitán-Teniente de Caballos Ligeros",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p156",
+              "nombre": "Conde d'Artagnan",
+              "nota": "Mosqueteros Grises",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p157",
+              "nombre": "Marqués de Canillac",
+              "nota": "Mosqueteros Negros",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         }
       ]
     },
@@ -2549,7 +3982,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "por_verificar",
+          "titulares": [],
+          "escalafon": null
         },
         {
           "id": "m5a-oratorio",
@@ -2563,7 +3999,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "por_verificar",
+          "titulares": [],
+          "escalafon": null
         },
         {
           "id": "m5a-capellanes",
@@ -2577,7 +4016,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Capellanes y clérigos de servicio por cuartel trimestral"
         },
         {
           "id": "m5a-musica",
@@ -2590,8 +4032,26 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p37",
+          "titular_nombre": "Michel-Richard de Lalande",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p37",
+              "nombre": "Michel-Richard de Lalande",
+              "nota": "Superintendente de música de la Capilla y Cámara",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p38",
+              "nombre": "François Couperin",
+              "nota": "Organista de la Capilla Real",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         }
       ]
     },
@@ -2616,8 +4076,19 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p152",
+          "titular_nombre": "Louis Sanguin, marqués de Livry",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p152",
+              "nombre": "Louis Sanguin, marqués de Livry",
+              "nota": "Primer Maestre de Hotel",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "m5b1-ceremoniales",
@@ -2631,7 +4102,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "3 grandes oficios ceremoniales: Grand Panetier, Grand Échanson, Grand Écuyer tranchant"
         },
         {
           "id": "m5b1-bureau",
@@ -2645,7 +4119,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Bureau du Roi: Contrôleurs généraux y Tesorero general de la Casa"
         },
         {
           "id": "m5b1-sept-offices",
@@ -2659,7 +4136,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "7 oficinas (Gobelet, Bouche, Panneterie, Échansonnerie, Cuisine, Fruiterie, Fourrière)"
         }
       ]
     },
@@ -2673,13 +4153,125 @@
       "preside": "Primer Maestre de Hotel / Bureau du Roi",
       "nota": "Cada oficina tiene Chefs, Aides y Garçons que sirven por cuarteles trimestrales.",
       "asientos": [
-        { "id": "m5b1a-gobelet", "num": 1, "nombre": "Gobelet (Pan y Vino del Rey)", "nombre_fr": "Gobelet du Roi", "naturaleza": "oficio_venal", "plazas": "Panneterie-bouche y Échansonnerie-bouche", "resumen": "Prepara pan, frutas finas, vajilla de oro/plata y bebidas personales del Rey (con prueba contra veneno).", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b1a-bouche", "num": 2, "nombre": "Bouche (Cocina personal del Rey)", "nombre_fr": "Cuisine-bouche", "naturaleza": "oficio_venal", "plazas": "Écuyers de cuisine, maîtres queux, pâtissiers", "resumen": "Cocina reservada exclusivamente a los platos de Su Majestad.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b1a-panneterie", "num": 3, "nombre": "Panneterie-commun", "nombre_fr": "Panneterie-commun", "naturaleza": "oficio_venal", "plazas": "Servicio de mesa común", "resumen": "Pan y mantelería para las mesas del Gran Maestre, oficiales y comensales de la corte.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b1a-echansonnerie", "num": 4, "nombre": "Échansonnerie-commun", "nombre_fr": "Échansonnerie-commun", "naturaleza": "oficio_venal", "plazas": "Bodega común", "resumen": "Vinos, licores, hielo y bebidas para las mesas oficiales de la Casa.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b1a-cuisine", "num": 5, "nombre": "Cuisine-commun", "nombre_fr": "Cuisine-commun", "naturaleza": "oficio_venal", "plazas": "Grand Commun de Versalles", "resumen": "Cocina general que abastece diariamente las mesas de oficiales, chambelanes y servidumbre.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b1a-fruiterie", "num": 6, "nombre": "Fruiterie (Fruta y Cera)", "nombre_fr": "Fruiterie", "naturaleza": "oficio_venal", "plazas": "Oficiales de cera y fruta", "resumen": "Suministro de frutas frescas, bujías de cera blanca, hachones y candelabros del palacio.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b1a-fourriere", "num": 7, "nombre": "Fourrière (Leña y Transporte)", "nombre_fr": "Fourrière", "naturaleza": "oficio_venal", "plazas": "Oficiales de leña y bagaje", "resumen": "Carbón, leña para las chimeneas del palacio, forraje y acarreo de muebles en viajes reales.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null }
+        {
+          "id": "m5b1a-gobelet",
+          "num": 1,
+          "nombre": "Gobelet (Pan y Vino del Rey)",
+          "nombre_fr": "Gobelet du Roi",
+          "naturaleza": "oficio_venal",
+          "plazas": "Panneterie-bouche y Échansonnerie-bouche",
+          "resumen": "Prepara pan, frutas finas, vajilla de oro/plata y bebidas personales del Rey (con prueba contra veneno).",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Chefs, aides y sommeliers del Gobelet por cuartel"
+        },
+        {
+          "id": "m5b1a-bouche",
+          "num": 2,
+          "nombre": "Bouche (Cocina personal del Rey)",
+          "nombre_fr": "Cuisine-bouche",
+          "naturaleza": "oficio_venal",
+          "plazas": "Écuyers de cuisine, maîtres queux, pâtissiers",
+          "resumen": "Cocina reservada exclusivamente a los platos de Su Majestad.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Écuyers de cuisine, maîtres queux y pâtissiers de la Bouche"
+        },
+        {
+          "id": "m5b1a-panneterie",
+          "num": 3,
+          "nombre": "Panneterie-commun",
+          "nombre_fr": "Panneterie-commun",
+          "naturaleza": "oficio_venal",
+          "plazas": "Servicio de mesa común",
+          "resumen": "Pan y mantelería para las mesas del Gran Maestre, oficiales y comensales de la corte.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Oficiales y ayudas de Panneterie-commun por cuartel"
+        },
+        {
+          "id": "m5b1a-echansonnerie",
+          "num": 4,
+          "nombre": "Échansonnerie-commun",
+          "nombre_fr": "Échansonnerie-commun",
+          "naturaleza": "oficio_venal",
+          "plazas": "Bodega común",
+          "resumen": "Vinos, licores, hielo y bebidas para las mesas oficiales de la Casa.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Oficiales y sommeliers de Échansonnerie-commun por cuartel"
+        },
+        {
+          "id": "m5b1a-cuisine",
+          "num": 5,
+          "nombre": "Cuisine-commun",
+          "nombre_fr": "Cuisine-commun",
+          "naturaleza": "oficio_venal",
+          "plazas": "Grand Commun de Versalles",
+          "resumen": "Cocina general que abastece diariamente las mesas de oficiales, chambelanes y servidumbre.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Oficiales de cocina del Grand Commun por cuartel"
+        },
+        {
+          "id": "m5b1a-fruiterie",
+          "num": 6,
+          "nombre": "Fruiterie (Fruta y Cera)",
+          "nombre_fr": "Fruiterie",
+          "naturaleza": "oficio_venal",
+          "plazas": "Oficiales de cera y fruta",
+          "resumen": "Suministro de frutas frescas, bujías de cera blanca, hachones y candelabros del palacio.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Oficiales de fruta, cera blanca y luminarias por cuartel"
+        },
+        {
+          "id": "m5b1a-fourriere",
+          "num": 7,
+          "nombre": "Fourrière (Leña y Transporte)",
+          "nombre_fr": "Fourrière",
+          "naturaleza": "oficio_venal",
+          "plazas": "Oficiales de leña y bagaje",
+          "resumen": "Carbón, leña para las chimeneas del palacio, forraje y acarreo de muebles en viajes reales.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Oficiales de leña, carbón y acarreo por cuartel"
+        }
       ]
     },
     {
@@ -2703,8 +4295,40 @@
           "subgabinete_id": "gab-5b2a",
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p41",
+          "titular_nombre": "Duque de La Trémoille",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p41",
+              "nombre": "Duque de La Trémoille",
+              "nota": "Primer Gentilhombre (año en turno por verificar)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p57",
+              "nombre": "Duque de Mortemart",
+              "nota": "Primer Gentilhombre de la Cámara",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p150",
+              "nombre": "Duque de Aumont",
+              "nota": "Primer Gentilhombre de la Cámara",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p151",
+              "nombre": "Duque de Gesvres",
+              "nota": "Primer Gentilhombre de la Cámara",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "m5b2-guardarropa",
@@ -2717,8 +4341,19 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p58",
+          "titular_nombre": "Duque de La Rochefoucauld",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p58",
+              "nombre": "Duque de La Rochefoucauld",
+              "nota": "Gran Maestre del Guardarropa",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "m5b2-primeros-valets",
@@ -2731,8 +4366,19 @@
           "subgabinete_id": "gab-5b2b",
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p115",
+          "titular_nombre": "François-Gabriel Bachelier",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p115",
+              "nombre": "François-Gabriel Bachelier",
+              "nota": "Uno de los 4 Primeros Ayudas de Cámara en 1722",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "m5b2-facultad",
@@ -2745,8 +4391,26 @@
           "subgabinete_id": "gab-5b2c",
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p35",
+          "titular_nombre": "Claude Jean-Baptiste Dodart",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p35",
+              "nombre": "Claude Jean-Baptiste Dodart",
+              "nota": "Primer Médico del Rey",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p34",
+              "nombre": "Georges Mareschal",
+              "nota": "Primer Cirujano del Rey",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "m5b2-menus-plaisirs",
@@ -2759,8 +4423,19 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p37",
+          "titular_nombre": "Michel-Richard de Lalande",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p37",
+              "nombre": "Michel-Richard de Lalande",
+              "nota": "Superintendente de la Música de la Cámara",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         }
       ]
     },
@@ -2774,9 +4449,57 @@
       "preside": "Primer Gentilhombre de la Cámara en año de servicio",
       "nota": "Personal noble y artístico subordinado a los Primeros Gentilhombres.",
       "asientos": [
-        { "id": "m5b2a-gentil-ord", "num": 1, "nombre": "Gentilhombres ordinarios de la Cámara", "nombre_fr": "Gentilshommes ordinaires", "naturaleza": "oficio_venal", "plazas": "24 plazas (servicio por semestre)", "resumen": "Llevan mensajes reservados del Rey a provincias, parlamentos o príncipes extranjeros.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b2a-pages", "num": 2, "nombre": "Pajes de la Cámara", "nombre_fr": "Pages de la Chambre", "naturaleza": "empleo_militar", "plazas": "Jóvenes nobles bajo gobernador propio", "resumen": "Acompañan al Rey en desplazamientos y ceremonias portando antorchas o mensajes.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b2a-teatros", "num": 3, "nombre": "Gobernadores de Teatros y Comediantes del Rey", "nombre_fr": "Comédiens français et italiens / Opéra", "naturaleza": "comision", "plazas": "Compañías privilegiadas", "resumen": "Representaciones dramáticas y líricas en Versalles y París bajo tutela del Primer Gentilhombre.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null }
+        {
+          "id": "m5b2a-gentil-ord",
+          "num": 1,
+          "nombre": "Gentilhombres ordinarios de la Cámara",
+          "nombre_fr": "Gentilshommes ordinaires",
+          "naturaleza": "oficio_venal",
+          "plazas": "24 plazas (servicio por semestre)",
+          "resumen": "Llevan mensajes reservados del Rey a provincias, parlamentos o príncipes extranjeros.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "24 Gentilshommes ordinaires de la Cámara (12 por semestre)"
+        },
+        {
+          "id": "m5b2a-pages",
+          "num": 2,
+          "nombre": "Pajes de la Cámara",
+          "nombre_fr": "Pages de la Chambre",
+          "naturaleza": "empleo_militar",
+          "plazas": "Jóvenes nobles bajo gobernador propio",
+          "resumen": "Acompañan al Rey en desplazamientos y ceremonias portando antorchas o mensajes.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Pajes de la Cámara bajo gobernador propio"
+        },
+        {
+          "id": "m5b2a-teatros",
+          "num": 3,
+          "nombre": "Gobernadores de Teatros y Comediantes del Rey",
+          "nombre_fr": "Comédiens français et italiens / Opéra",
+          "naturaleza": "comision",
+          "plazas": "Compañías privilegiadas",
+          "resumen": "Representaciones dramáticas y líricas en Versalles y París bajo tutela del Primer Gentilhombre.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Comédiens français, Comédiens italiens y Académie royale de Musique (Opéra)"
+        }
       ]
     },
     {
@@ -2789,10 +4512,74 @@
       "preside": "Primer Ayuda de Cámara en cuartel",
       "nota": "Oficiales burgueses o ennoblecidos cuya cercanía física al Rey vale más que muchos títulos.",
       "asientos": [
-        { "id": "m5b2b-ujieres", "num": 1, "nombre": "Ujieres de Cámara y del Gabinete", "nombre_fr": "Huissiers de la Chambre / du Cabinet", "naturaleza": "oficio_venal", "plazas": "Controlan las puertas interiores", "resumen": "Verifican las entradas (grandes entradas, primeras entradas, cámara) y anuncian nombres al Rey.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b2b-valets", "num": 2, "nombre": "Ayudas de Cámara ordinarios", "nombre_fr": "Valets de chambre du Roi", "naturaleza": "oficio_venal", "plazas": "32 plazas (8 por cuartel)", "resumen": "Hacen la cama real, sirven en los aposentos interiores y ven todo lo que ocurre fuera de etiqueta.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b2b-portamantos", "num": 3, "nombre": "Portamantos, Portasillas y Barberos", "nombre_fr": "Porte-manteaux, Porte-chaise et Barbiers", "naturaleza": "oficio_venal", "plazas": "Oficios domésticos de cuartel", "resumen": "Llevan capa, espada o sombrero del Rey y asisten en el aseo diario.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b2b-tapiceros", "num": 4, "nombre": "Tapiceros, Relojeros y Guardarropa menor", "nombre_fr": "Tapissiers, Horlogers et Valets de garde-robe", "naturaleza": "oficio_venal", "plazas": "Oficios de mantenimiento y relojes", "resumen": "Mueven mobiliario de aposentos, regulan relojes del Rey y cuidan prendas diarias.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null }
+        {
+          "id": "m5b2b-ujieres",
+          "num": 1,
+          "nombre": "Ujieres de Cámara y del Gabinete",
+          "nombre_fr": "Huissiers de la Chambre / du Cabinet",
+          "naturaleza": "oficio_venal",
+          "plazas": "Controlan las puertas interiores",
+          "resumen": "Verifican las entradas (grandes entradas, primeras entradas, cámara) y anuncian nombres al Rey.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Huissiers de la Chambre y del Cabinet por cuartel"
+        },
+        {
+          "id": "m5b2b-valets",
+          "num": 2,
+          "nombre": "Ayudas de Cámara ordinarios",
+          "nombre_fr": "Valets de chambre du Roi",
+          "naturaleza": "oficio_venal",
+          "plazas": "32 plazas (8 por cuartel)",
+          "resumen": "Hacen la cama real, sirven en los aposentos interiores y ven todo lo que ocurre fuera de etiqueta.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "32 Valets de chambre ordinarios (8 por cuartel)"
+        },
+        {
+          "id": "m5b2b-portamantos",
+          "num": 3,
+          "nombre": "Portamantos, Portasillas y Barberos",
+          "nombre_fr": "Porte-manteaux, Porte-chaise et Barbiers",
+          "naturaleza": "oficio_venal",
+          "plazas": "Oficios domésticos de cuartel",
+          "resumen": "Llevan capa, espada o sombrero del Rey y asisten en el aseo diario.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "12 Porte-manteaux, Porte-chaise y Barberos de cuartel"
+        },
+        {
+          "id": "m5b2b-tapiceros",
+          "num": 4,
+          "nombre": "Tapiceros, Relojeros y Guardarropa menor",
+          "nombre_fr": "Tapissiers, Horlogers et Valets de garde-robe",
+          "naturaleza": "oficio_venal",
+          "plazas": "Oficios de mantenimiento y relojes",
+          "resumen": "Mueven mobiliario de aposentos, regulan relojes del Rey y cuidan prendas diarias.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Tapissiers, Horlogers y Valets de garde-robe"
+        }
       ]
     },
     {
@@ -2805,10 +4592,73 @@
       "preside": "Primer Médico del Rey",
       "nota": "En la Francia de 1722, el Primer Cirujano (ennoblecido y presente en todo momento) rivaliza en influencia con el Primer Médico.",
       "asientos": [
-        { "id": "m5b2c-medico", "num": 1, "nombre": "Primer Médico del Rey", "nombre_fr": "Premier Médecin du Roi", "naturaleza": "oficio_venal", "plazas": "1 asiento (con brevet de retenue)", "resumen": "Dirige la higiene, régimen y diagnósticos del Rey; supervisa además las aguas minerales y boticas del reino.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b2c-cirujano", "num": 2, "nombre": "Primer Cirujano del Rey", "nombre_fr": "Premier Chirurgien du Roi", "naturaleza": "oficio_venal", "plazas": "1 asiento (jefe de los cirujanos del reino)", "resumen": "Atiende heridas, sangrías e intervenciones y preside la comunidad de cirujanos de París.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b2c-cuartel", "num": 3, "nombre": "Médicos, Cirujanos y Boticarios por cuartel", "nombre_fr": "Médecins, Chirurgiens et Apothicaires par quartier", "naturaleza": "oficio_venal", "plazas": "Servicio rotatorio",
-          "resumen": "Asisten a la familia real, príncipes y servidumbre de la Maison en turno trimestral.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null }
+        {
+          "id": "m5b2c-medico",
+          "num": 1,
+          "nombre": "Primer Médico del Rey",
+          "nombre_fr": "Premier Médecin du Roi",
+          "naturaleza": "oficio_venal",
+          "plazas": "1 asiento (con brevet de retenue)",
+          "resumen": "Dirige la higiene, régimen y diagnósticos del Rey; supervisa además las aguas minerales y boticas del reino.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": "p35",
+          "titular_nombre": "Claude Jean-Baptiste Dodart",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p35",
+              "nombre": "Claude Jean-Baptiste Dodart",
+              "nota": "Primer Médico del Rey",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "m5b2c-cirujano",
+          "num": 2,
+          "nombre": "Primer Cirujano del Rey",
+          "nombre_fr": "Premier Chirurgien du Roi",
+          "naturaleza": "oficio_venal",
+          "plazas": "1 asiento (jefe de los cirujanos del reino)",
+          "resumen": "Atiende heridas, sangrías e intervenciones y preside la comunidad de cirujanos de París.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": "p34",
+          "titular_nombre": "Georges Mareschal",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p34",
+              "nombre": "Georges Mareschal",
+              "nota": "Primer Cirujano del Rey",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "m5b2c-cuartel",
+          "num": 3,
+          "nombre": "Médicos, Cirujanos y Boticarios por cuartel",
+          "nombre_fr": "Médecins, Chirurgiens et Apothicaires par quartier",
+          "naturaleza": "oficio_venal",
+          "plazas": "Servicio rotatorio",
+          "resumen": "Asisten a la familia real, príncipes y servidumbre de la Maison en turno trimestral.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Médicos ordinarios, cirujanos y boticarios por cuartel"
+        }
       ]
     },
     {
@@ -2821,10 +4671,98 @@
       "preside": "Gran Caballerizo de Francia (y Primer Caballerizo en la Petite Écurie)",
       "nota": "Grande y Petite Écurie ocupan los edificios gemelos de la Plaza de Armas frente al Palacio de Versalles.",
       "asientos": [
-        { "id": "m5b3-grande-ecurie", "num": 1, "nombre": "Grande Écurie", "nombre_fr": "Grande Écurie du Roi", "naturaleza": "gran_oficio", "plazas": "Bajo el Gran Caballerizo", "resumen": "Carruajes ceremoniales, caballos de guerra y parada, escuela de pajes nobles, correos y heraldos de armas.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b3-petite-ecurie", "num": 2, "nombre": "Primer Caballerizo — Petite Écurie", "nombre_fr": "Premier Écuyer (Monsieur le Premier) / Petite Écurie", "naturaleza": "oficio_venal", "plazas": "1 Primer Caballerizo + caballerizos ordinarios", "resumen": "Caballos de monta cotidianos del Rey, carrozas diarias, sillas de manos y postas.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b3-veneur", "num": 3, "nombre": "Gran Montero y Capitán de las Cazas", "nombre_fr": "Grand Veneur et Capitaines des chasses", "naturaleza": "oficio_venal", "plazas": "Vénerie royale y capitanías", "resumen": "Caza mayor del ciervo y jabalí, jaurías reales, picadores y guardabosques de bosques reales.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b3-halcon-lobo", "num": 4, "nombre": "Gran Halconero y Gran Lobero", "nombre_fr": "Grand Fauconnier et Grand Louvetier", "naturaleza": "oficio_venal", "plazas": "Fauconnerie y Louveterie", "resumen": "Cetrería real y batidas de lobos en bosques del dominio.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null }
+        {
+          "id": "m5b3-grande-ecurie",
+          "num": 1,
+          "nombre": "Grande Écurie",
+          "nombre_fr": "Grande Écurie du Roi",
+          "naturaleza": "gran_oficio",
+          "plazas": "Bajo el Gran Caballerizo",
+          "resumen": "Carruajes ceremoniales, caballos de guerra y parada, escuela de pajes nobles, correos y heraldos de armas.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": "p31",
+          "titular_nombre": "Carlos de Lorena",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p31",
+              "nombre": "Carlos de Lorena",
+              "nota": "Gran Caballerizo (Grande Écurie)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "m5b3-petite-ecurie",
+          "num": 2,
+          "nombre": "Primer Caballerizo — Petite Écurie",
+          "nombre_fr": "Premier Écuyer (Monsieur le Premier) / Petite Écurie",
+          "naturaleza": "oficio_venal",
+          "plazas": "1 Primer Caballerizo + caballerizos ordinarios",
+          "resumen": "Caballos de monta cotidianos del Rey, carrozas diarias, sillas de manos y postas.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": "p153",
+          "titular_nombre": "Jacques-Louis de Beringhen",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p153",
+              "nombre": "Jacques-Louis de Beringhen",
+              "nota": "Primer Caballerizo (Petite Écurie)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "m5b3-veneur",
+          "num": 3,
+          "nombre": "Gran Montero y Capitán de las Cazas",
+          "nombre_fr": "Grand Veneur et Capitaines des chasses",
+          "naturaleza": "oficio_venal",
+          "plazas": "Vénerie royale y capitanías",
+          "resumen": "Caza mayor del ciervo y jabalí, jaurías reales, picadores y guardabosques de bosques reales.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": "p58",
+          "titular_nombre": "Duque de La Rochefoucauld",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p58",
+              "nombre": "Duque de La Rochefoucauld",
+              "nota": "Gran Montero de Francia",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "m5b3-halcon-lobo",
+          "num": 4,
+          "nombre": "Gran Halconero y Gran Lobero",
+          "nombre_fr": "Grand Fauconnier et Grand Louvetier",
+          "naturaleza": "oficio_venal",
+          "plazas": "Fauconnerie y Louveterie",
+          "resumen": "Cetrería real y batidas de lobos en bosques del dominio.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "por_verificar",
+          "titulares": [],
+          "escalafon": null
+        }
       ]
     },
     {
@@ -2837,10 +4775,90 @@
       "preside": "Gran Maestro de Ceremonias / Gran Preboste del Hôtel",
       "nota": "Controlan precedencias diplomáticas, asignación física de cuartos en Versalles y orden interno.",
       "asientos": [
-        { "id": "m5b4-ceremonias", "num": 1, "nombre": "Gran Maestro, Maestro y Ayuda de Ceremonias", "nombre_fr": "Grand Maître des Cérémonies", "naturaleza": "oficio_venal", "plazas": "3 oficiales de etiqueta", "resumen": "Organizan consagración, bodas, funerales, Te Deum, recepciones y dirimen disputas de rango.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b4-introductores", "num": 2, "nombre": "Introductores de Embajadores", "nombre_fr": "Introducteurs des ambassadeurs", "naturaleza": "oficio_venal", "plazas": "2 titulares semestrales", "resumen": "Acompañan a enviados y embajadores extranjeros en sus audiencias formales ante el Rey y príncipes.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b4-alojamientos", "num": 3, "nombre": "Gran Mariscal de Alojamientos y Forriers", "nombre_fr": "Grand Maréchal des logis et Fourriers", "naturaleza": "oficio_venal", "plazas": "1 Gran Mariscal + Mariscales y Forriers", "resumen": "Reparten los aposentos del palacio y marcan con tiza las puertas en los viajes reales.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b4-preboste", "num": 4, "nombre": "Gran Preboste de Francia / del Hôtel", "nombre_fr": "Grand Prévôt de l'Hôtel", "naturaleza": "oficio_venal", "plazas": "Jurisdicción y policía de la Corte", "resumen": "Justicia civil/criminal sumaria dentro de las residencias reales y en un radio de diez leguas alrededor del Rey.", "subgabinete_id": null, "enlace_gabinete_id": "gab-5c1", "enlace_mapa": null, "titular_id": null, "titular_nombre": null }
+        {
+          "id": "m5b4-ceremonias",
+          "num": 1,
+          "nombre": "Gran Maestro, Maestro y Ayuda de Ceremonias",
+          "nombre_fr": "Grand Maître des Cérémonies",
+          "naturaleza": "oficio_venal",
+          "plazas": "3 oficiales de etiqueta",
+          "resumen": "Organizan consagración, bodas, funerales, Te Deum, recepciones y dirimen disputas de rango.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": "p154",
+          "titular_nombre": "Thomas Dreux-Brézé",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p154",
+              "nombre": "Thomas Dreux-Brézé",
+              "nota": "Gran Maestro de Ceremonias",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "m5b4-introductores",
+          "num": 2,
+          "nombre": "Introductores de Embajadores",
+          "nombre_fr": "Introducteurs des ambassadeurs",
+          "naturaleza": "oficio_venal",
+          "plazas": "2 titulares semestrales",
+          "resumen": "Acompañan a enviados y embajadores extranjeros en sus audiencias formales ante el Rey y príncipes.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "por_verificar",
+          "titulares": [],
+          "escalafon": null
+        },
+        {
+          "id": "m5b4-alojamientos",
+          "num": 3,
+          "nombre": "Gran Mariscal de Alojamientos y Forriers",
+          "nombre_fr": "Grand Maréchal des logis et Fourriers",
+          "naturaleza": "oficio_venal",
+          "plazas": "1 Gran Mariscal + Mariscales y Forriers",
+          "resumen": "Reparten los aposentos del palacio y marcan con tiza las puertas en los viajes reales.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "por_verificar",
+          "titulares": [],
+          "escalafon": null
+        },
+        {
+          "id": "m5b4-preboste",
+          "num": 4,
+          "nombre": "Gran Preboste de Francia / del Hôtel",
+          "nombre_fr": "Grand Prévôt de l'Hôtel",
+          "naturaleza": "oficio_venal",
+          "plazas": "Jurisdicción y policía de la Corte",
+          "resumen": "Justicia civil/criminal sumaria dentro de las residencias reales y en un radio de diez leguas alrededor del Rey.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": "gab-5c1",
+          "enlace_mapa": null,
+          "titular_id": "p155",
+          "titular_nombre": "Louis du Bouchet, marqués de Sourches",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p155",
+              "nombre": "Louis du Bouchet, marqués de Sourches",
+              "nota": "Gran Preboste del Hôtel",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        }
       ]
     },
     {
@@ -2864,8 +4882,19 @@
           "subgabinete_id": "gab-5b5a",
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p21",
+          "titular_nombre": "Louis-Antoine de Pardaillan (Duque de Antin)",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p21",
+              "nombre": "Louis-Antoine de Pardaillan (Duque de Antin)",
+              "nota": "Director General de los Edificios del Rey",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "m5b5-gob-versalles",
@@ -2878,8 +4907,19 @@
           "subgabinete_id": null,
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
-          "titular_id": null,
-          "titular_nombre": null
+          "titular_id": "p114",
+          "titular_nombre": "Louis Blouin",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p114",
+              "nombre": "Louis Blouin",
+              "nota": "Gobernador de Versalles y Marly",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
         },
         {
           "id": "m5b5-bailli-versalles",
@@ -2893,7 +4933,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "por_verificar",
+          "titulares": [],
+          "escalafon": null
         },
         {
           "id": "m5b5-conserje",
@@ -2907,7 +4950,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "por_verificar",
+          "titulares": [],
+          "escalafon": null
         },
         {
           "id": "m5b5-aguas-jardines",
@@ -2921,7 +4967,10 @@
           "enlace_gabinete_id": null,
           "enlace_mapa": null,
           "titular_id": null,
-          "titular_nombre": null
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Fontainiers de la Máquina de Marly, fuentes y jardineros de Versalles"
         }
       ]
     },
@@ -2935,9 +4984,65 @@
       "preside": "Director General de los Edificios del Rey",
       "nota": "Cuadro técnico de arquitectos, inspectores de obra y talleres reales.",
       "asientos": [
-        { "id": "m5b5a-arquitecto", "num": 1, "nombre": "Primer Arquitecto del Rey", "nombre_fr": "Premier Architecte du Roi", "naturaleza": "oficio_venal", "plazas": "1 asiento (+ Académie d'Architecture)", "resumen": "Traza proyectos y dirige la estética arquitectónica de Versalles y las residencias reales.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b5a-controleurs", "num": 2, "nombre": "Intendentes y Contrôleurs de Edificios", "nombre_fr": "Intendants et Contrôleurs des Bâtiments", "naturaleza": "oficio_venal", "plazas": "Inspectores por palacio (Versalles, Marly, París, Fontainebleau)", "resumen": "Supervisan obras diarias, contratas de albañiles y remodelación de apartamentos cortesanos.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b5a-manufacturas", "num": 3, "nombre": "Academias y Manufacturas Reales", "nombre_fr": "Académies royales, Gobelins et Savonnerie", "naturaleza": "comision", "plazas": "Pintura, Escultura, Tapices y Espejos", "resumen": "Talleres reales que producen mobiliario, tapicería y retratos oficiales para la Corona.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null }
+        {
+          "id": "m5b5a-arquitecto",
+          "num": 1,
+          "nombre": "Primer Arquitecto del Rey",
+          "nombre_fr": "Premier Architecte du Roi",
+          "naturaleza": "oficio_venal",
+          "plazas": "1 asiento (+ Académie d'Architecture)",
+          "resumen": "Traza proyectos y dirige la estética arquitectónica de Versalles y las residencias reales.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": "p36",
+          "titular_nombre": "Robert de Cotte",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p36",
+              "nombre": "Robert de Cotte",
+              "nota": "Primer Arquitecto del Rey",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "m5b5a-controleurs",
+          "num": 2,
+          "nombre": "Intendentes y Contrôleurs de Edificios",
+          "nombre_fr": "Intendants et Contrôleurs des Bâtiments",
+          "naturaleza": "oficio_venal",
+          "plazas": "Inspectores por palacio (Versalles, Marly, París, Fontainebleau)",
+          "resumen": "Supervisan obras diarias, contratas de albañiles y remodelación de apartamentos cortesanos.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Intendentes y Contrôleurs des Bâtiments por residencia real"
+        },
+        {
+          "id": "m5b5a-manufacturas",
+          "num": 3,
+          "nombre": "Academias y Manufacturas Reales",
+          "nombre_fr": "Académies royales, Gobelins et Savonnerie",
+          "naturaleza": "comision",
+          "plazas": "Pintura, Escultura, Tapices y Espejos",
+          "resumen": "Talleres reales que producen mobiliario, tapicería y retratos oficiales para la Corona.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "colectivo",
+          "titulares": [],
+          "escalafon": "Academias Reales (Pintura/Escultura/Arquitectura), Gobelins y Savonnerie"
+        }
       ]
     },
     {
@@ -2950,10 +5055,127 @@
       "preside": "Superintendente de la Educación / Regente del Reino",
       "nota": "Casa específica de la minoría de Luis XV en 1722; termina al declararse la mayoría de edad en febrero de 1723.",
       "asientos": [
-        { "id": "m5b6-superintendente", "num": 1, "nombre": "Superintendente de la Educación del Rey", "nombre_fr": "Surintendant de l'éducation du Roi", "naturaleza": "comision", "plazas": "1 asiento extraordinario", "resumen": "Alta tutela política sobre el séquito educativo del monarca niño.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b6-gobernador", "num": 2, "nombre": "Gobernador del Rey y Subgobernadores", "nombre_fr": "Gouverneur du Roi et Sous-gouverneurs", "naturaleza": "comision", "plazas": "1 Gobernador + Subgobernadores", "resumen": "Responden físicamente de la persona del Rey niño, sus paseos, etiqueta, armas y compañía diaria.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b6-preceptor", "num": 3, "nombre": "Preceptor del Rey, Subpreceptor y Lectores", "nombre_fr": "Précepteur du Roi", "naturaleza": "comision", "plazas": "Clérigos y eruditos designados", "resumen": "Instrucción intelectual, histórica y moral del joven Rey; acceso diario e íntimo a su confianza.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5b6-aya", "num": 4, "nombre": "Aya de los Hijos de Francia", "nombre_fr": "Gouvernante des Enfants de France", "naturaleza": "comision", "plazas": "1 Aya + Subayas y Casa de la Infanta-Reina", "resumen": "Cuida en 1722 a la joven Infanta-Reina prometida, su séquito femenino, educación y apartamentos.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null }
+        {
+          "id": "m5b6-superintendente",
+          "num": 1,
+          "nombre": "Superintendente de la Educación del Rey",
+          "nombre_fr": "Surintendant de l'éducation du Roi",
+          "naturaleza": "comision",
+          "plazas": "1 asiento extraordinario",
+          "resumen": "Alta tutela política sobre el séquito educativo del monarca niño.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": "p12",
+          "titular_nombre": "Luis Enrique de Borbón",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p12",
+              "nombre": "Luis Enrique de Borbón",
+              "nota": "Superintendente de la Educación del Rey",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "m5b6-gobernador",
+          "num": 2,
+          "nombre": "Gobernador del Rey y Subgobernadores",
+          "nombre_fr": "Gouverneur du Roi et Sous-gouverneurs",
+          "naturaleza": "comision",
+          "plazas": "1 Gobernador + Subgobernadores",
+          "resumen": "Responden físicamente de la persona del Rey niño, sus paseos, etiqueta, armas y compañía diaria.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": "p09",
+          "titular_nombre": "Mariscal de Villeroy",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p09",
+              "nombre": "Mariscal de Villeroy",
+              "nota": "Gobernador del Rey (hasta agosto de 1722)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p10",
+              "nombre": "Duque de Charost",
+              "nota": "Gobernador del Rey (desde agosto de 1722)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "m5b6-preceptor",
+          "num": 3,
+          "nombre": "Preceptor del Rey, Subpreceptor y Lectores",
+          "nombre_fr": "Précepteur du Roi",
+          "naturaleza": "comision",
+          "plazas": "Clérigos y eruditos designados",
+          "resumen": "Instrucción intelectual, histórica y moral del joven Rey; acceso diario e íntimo a su confianza.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": "p08",
+          "titular_nombre": "André-Hercule de Fleury",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p08",
+              "nombre": "André-Hercule de Fleury",
+              "nota": "Preceptor del Rey",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "m5b6-aya",
+          "num": 4,
+          "nombre": "Aya de los Hijos de Francia",
+          "nombre_fr": "Gouvernante des Enfants de France",
+          "naturaleza": "comision",
+          "plazas": "1 Aya + Subayas y Casa de la Infanta-Reina",
+          "resumen": "Cuida en 1722 a la joven Infanta-Reina prometida, su séquito femenino, educación y apartamentos.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": "p11",
+          "titular_nombre": "Duquesa de Ventadour",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p11",
+              "nombre": "Duquesa de Ventadour",
+              "nota": "Aya de los Hijos de Francia",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p122",
+              "nombre": "Princesa de Soubise",
+              "nota": "Sub-gobernanta de la Infanta",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p123",
+              "nombre": "Madame de La Lande",
+              "nota": "Sub-gobernanta de la Infanta",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        }
       ]
     },
     {
@@ -2966,11 +5188,97 @@
       "preside": "Capitanes de Guardias de Corps en cuartel",
       "nota": "Cuerpos armados encargados de la seguridad dentro del Palacio y alrededor inmediato de la persona real.",
       "asientos": [
-        { "id": "m5c1-gardes-corps", "num": 1, "nombre": "Guardias de Corps del Rey", "nombre_fr": "Gardes du corps du Roi", "naturaleza": "empleo_militar", "plazas": "4 compañías (Escocesa y 3 Francesas): Capitanes, Lugartenientes, Enseñas, Exentos", "resumen": "Guardia noble más cercana al Rey; custodian las salas de guardia, lo escoltan en carroza y no responden sino ante él.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5c1-cent-suisses", "num": 2, "nombre": "Cien Suizos de la Guardia", "nombre_fr": "Cent-Suisses de la Garde", "naturaleza": "empleo_militar", "plazas": "Capitaine-Colonel + Alabarderos", "resumen": "Guardia ceremonial e interior armada con alabardas; abre paso en procesiones y custodia escaleras reales.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5c1-porte", "num": 3, "nombre": "Guardias de la Puerta", "nombre_fr": "Gardes de la Porte", "naturaleza": "empleo_militar", "plazas": "Capitán + 50 guardias por cuartel", "resumen": "Custodian las rejas y puertas del palacio desde las 6 de la mañana hasta que entregan las llaves a los Guardias de Corps de noche.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5c1-prevote", "num": 4, "nombre": "Guardias de la Prebostía del Hôtel", "nombre_fr": "Gardes de la Prévôté de l'Hôtel", "naturaleza": "empleo_militar", "plazas": "Compañía armada del Gran Preboste", "resumen": "Brazo armado de policía interior en patios, galerías y ferias alrededor de Versalles.", "subgabinete_id": null, "enlace_gabinete_id": "gab-5b4",
-          "enlace_mapa": null, "titular_id": null, "titular_nombre": null }
+        {
+          "id": "m5c1-gardes-corps",
+          "num": 1,
+          "nombre": "Guardias de Corps del Rey",
+          "nombre_fr": "Gardes du corps du Roi",
+          "naturaleza": "empleo_militar",
+          "plazas": "4 compañías (Escocesa y 3 Francesas): Capitanes, Lugartenientes, Enseñas, Exentos",
+          "resumen": "Guardia noble más cercana al Rey; custodian las salas de guardia, lo escoltan en carroza y no responden sino ante él.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": "p10",
+          "titular_nombre": "Duque de Charost",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p10",
+              "nombre": "Duque de Charost",
+              "nota": "Capitán de compañía de Guardias de Corps",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p50",
+              "nombre": "Duque de Harcourt",
+              "nota": "Capitán de compañía de Guardias de Corps",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "m5c1-cent-suisses",
+          "num": 2,
+          "nombre": "Cien Suizos de la Guardia",
+          "nombre_fr": "Cent-Suisses de la Garde",
+          "naturaleza": "empleo_militar",
+          "plazas": "Capitaine-Colonel + Alabarderos",
+          "resumen": "Guardia ceremonial e interior armada con alabardas; abre paso en procesiones y custodia escaleras reales.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "por_verificar",
+          "titulares": [],
+          "escalafon": null
+        },
+        {
+          "id": "m5c1-porte",
+          "num": 3,
+          "nombre": "Guardias de la Puerta",
+          "nombre_fr": "Gardes de la Porte",
+          "naturaleza": "empleo_militar",
+          "plazas": "Capitán + 50 guardias por cuartel",
+          "resumen": "Custodian las rejas y puertas del palacio desde las 6 de la mañana hasta que entregan las llaves a los Guardias de Corps de noche.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "por_verificar",
+          "titulares": [],
+          "escalafon": null
+        },
+        {
+          "id": "m5c1-prevote",
+          "num": 4,
+          "nombre": "Guardias de la Prebostía del Hôtel",
+          "nombre_fr": "Gardes de la Prévôté de l'Hôtel",
+          "naturaleza": "empleo_militar",
+          "plazas": "Compañía armada del Gran Preboste",
+          "resumen": "Brazo armado de policía interior en patios, galerías y ferias alrededor de Versalles.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": "gab-5b4",
+          "enlace_mapa": null,
+          "titular_id": "p155",
+          "titular_nombre": "Marqués de Sourches",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p155",
+              "nombre": "Marqués de Sourches",
+              "nota": "Gran Preboste (mando superior de la compañía)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        }
       ]
     },
     {
@@ -2983,12 +5291,137 @@
       "preside": "Capitanes-Lugartenientes y Coroneles de la Maison Militaire",
       "nota": "Combaten en campaña junto al Ejército de Tierra (Ejército 3), pero pertenecen administrativamente a la Casa del Rey.",
       "asientos": [
-        { "id": "m5c2-mosqueteros", "num": 1, "nombre": "Mosqueteros de la Guardia", "nombre_fr": "Mousquetaires de la Garde (Gris y Noirs)", "naturaleza": "empleo_militar", "plazas": "1.ª Compañía (Grises) y 2.ª (Negros)", "resumen": "Cuerpo montado de élite y escuela militar habitual de la joven nobleza de corte.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5c2-gendarmes", "num": 2, "nombre": "Gendarmes de la Guardia", "nombre_fr": "Gendarmes de la Garde", "naturaleza": "empleo_militar", "plazas": "1 compañía de caballería pesada", "resumen": "Escuadrón selecto de caballería pesada de la Casa Militar.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5c2-chevau-legers", "num": 3, "nombre": "Caballos Ligeros de la Guardia", "nombre_fr": "Chevau-légers de la Garde", "naturaleza": "empleo_militar", "plazas": "1 compañía montada", "resumen": "Escolta montada noble alojada en Versalles (Hôtel des Chevau-légers).", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5c2-granaderos", "num": 4, "nombre": "Granaderos a Caballo", "nombre_fr": "Grenadiers à cheval de la Garde", "naturaleza": "empleo_militar", "plazas": "1 compañía selecta", "resumen": "Tropas montadas de choque veteranas agregadas a la Maison Militaire.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null },
-        { "id": "m5c2-gardes-fr-su", "num": 5, "nombre": "Regimientos de Guardias Francesas y Guardias Suizos", "nombre_fr": "Gardes-Françaises et Gardes-Suisses", "naturaleza": "empleo_militar", "plazas": "2 regimientos de infantería de élite",
-          "resumen": "Infantería que cubre las guardias exteriores del palacio, patios exteriores y cuarteles entre París y Versalles.", "subgabinete_id": null, "enlace_gabinete_id": null, "enlace_mapa": null, "titular_id": null, "titular_nombre": null }
+        {
+          "id": "m5c2-mosqueteros",
+          "num": 1,
+          "nombre": "Mosqueteros de la Guardia",
+          "nombre_fr": "Mousquetaires de la Garde (Gris y Noirs)",
+          "naturaleza": "empleo_militar",
+          "plazas": "1.ª Compañía (Grises) y 2.ª (Negros)",
+          "resumen": "Cuerpo montado de élite y escuela militar habitual de la joven nobleza de corte.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": "p156",
+          "titular_nombre": "Joseph de Montesquiou, conde d'Artagnan",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p156",
+              "nombre": "Joseph de Montesquiou, conde d'Artagnan",
+              "nota": "Capitán-Teniente, 1.ª Cía. (Grises)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p157",
+              "nombre": "Marqués de Canillac",
+              "nota": "Capitán-Teniente, 2.ª Cía. (Negros)",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "m5c2-gendarmes",
+          "num": 2,
+          "nombre": "Gendarmes de la Guardia",
+          "nombre_fr": "Gendarmes de la Garde",
+          "naturaleza": "empleo_militar",
+          "plazas": "1 compañía de caballería pesada",
+          "resumen": "Escuadrón selecto de caballería pesada de la Casa Militar.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": "p54",
+          "titular_nombre": "Príncipe de Soubise",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p54",
+              "nombre": "Príncipe de Soubise",
+              "nota": "Capitán-Teniente de los Gendarmes de la Guardia",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "m5c2-chevau-legers",
+          "num": 3,
+          "nombre": "Caballos Ligeros de la Guardia",
+          "nombre_fr": "Chevau-légers de la Garde",
+          "naturaleza": "empleo_militar",
+          "plazas": "1 compañía montada",
+          "resumen": "Escolta montada noble alojada en Versalles (Hôtel des Chevau-légers).",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": "p56",
+          "titular_nombre": "Duque de Chaulnes",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p56",
+              "nombre": "Duque de Chaulnes",
+              "nota": "Capitán-Teniente de los Caballos Ligeros",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        },
+        {
+          "id": "m5c2-granaderos",
+          "num": 4,
+          "nombre": "Granaderos a Caballo",
+          "nombre_fr": "Grenadiers à cheval de la Garde",
+          "naturaleza": "empleo_militar",
+          "plazas": "1 compañía selecta",
+          "resumen": "Tropas montadas de choque veteranas agregadas a la Maison Militaire.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": null,
+          "titular_nombre": null,
+          "tipo_asiento": "por_verificar",
+          "titulares": [],
+          "escalafon": null
+        },
+        {
+          "id": "m5c2-gardes-fr-su",
+          "num": 5,
+          "nombre": "Regimientos de Guardias Francesas y Guardias Suizos",
+          "nombre_fr": "Gardes-Françaises et Gardes-Suisses",
+          "naturaleza": "empleo_militar",
+          "plazas": "2 regimientos de infantería de élite",
+          "resumen": "Infantería que cubre las guardias exteriores del palacio, patios exteriores y cuarteles entre París y Versalles.",
+          "subgabinete_id": null,
+          "enlace_gabinete_id": null,
+          "enlace_mapa": null,
+          "titular_id": "p53",
+          "titular_nombre": "Duque de Gramont (Guiche)",
+          "tipo_asiento": "titular",
+          "titulares": [
+            {
+              "id": "p53",
+              "nombre": "Duque de Gramont (Guiche)",
+              "nota": "Coronel del Regimiento de Guardias Francesas",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            },
+            {
+              "id": "p18",
+              "nombre": "Duque de Maine",
+              "nota": "Coronel General de los Suizos",
+              "confianza": "confirmado",
+              "fuente": "Base de personajes / Almanach royal 1722"
+            }
+          ],
+          "escalafon": null
+        }
       ]
     }
   ]
