@@ -4,8 +4,8 @@
   --paper:#eceee8; --panel:#f7f7f3; --ink:#1c2333; --muted:#5b6270; --line:#c8cabf;
   --gilt:#8d6a22; --accent:#2b3d78; --seal:#8a2e2e; --chip:#e1e4dc;
   --desk:#44564a; --desk-edge:#33433a; --sheet:#f5f3ea; --sheet-ink:#1f2430; --sheet-muted:#646a74;
-  --f-display:"IM Fell French Canon","Iowan Old Style","Palatino Linotype",Georgia,serif;
-  --f-body:"EB Garamond",Garamond,"Times New Roman",serif;
+  --f-display:"Cinzel Decorative","Cinzel",Georgia,serif;
+  --f-body:"Cinzel",Georgia,serif;
   --f-hand:"Pinyon Script","Snell Roundhand","Apple Chancery",cursive;
   --r:4px;
 }
@@ -20,8 +20,9 @@
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html,body{height:100%}
-body{background:var(--paper);color:var(--ink);font:17px/1.45 var(--f-body);padding-inline:16px;padding-block:0 84px}
-h1,h2,h3{font-family:var(--f-display);font-weight:400;text-wrap:balance;margin:0}
+body{background:var(--paper);color:var(--ink);font:15px/1.5 var(--f-body);padding-inline:16px;padding-block:0 84px}
+h1,h2{font-family:var(--f-display);font-weight:700;text-wrap:balance;margin:0}
+h3{font-family:var(--f-body);font-weight:600;text-wrap:balance;margin:0}
 h2{font-size:1.35rem}
 p{margin:0}
 .label{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
@@ -681,14 +682,17 @@ button.casa-chip:hover,button.casa-chip:focus-visible{border-color:var(--gilt);b
 .gab-card h3{font-size:1.08rem;line-height:1.2}
 .gab-fr{font-size:.88rem;color:var(--gilt);margin-top:-3px}
 .gab-meta{display:grid;gap:6px}
-.gab-titulares{display:grid;gap:6px;width:100%}
-.gab-tit-item{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-.gab-pers-btn{display:inline-flex;align-items:center;gap:7px;padding:3px 9px 3px 4px;line-height:1.2}
-.gab-av{width:34px;height:34px;flex:none;border:1px solid var(--gilt);border-radius:3px;overflow:hidden;background:var(--panel);display:grid;place-items:center}
-.gab-av.grande{width:50px;height:50px}
+.gab-titulares{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:8px;width:100%}
+#ficha .gab-titulares{grid-template-columns:repeat(auto-fill,minmax(132px,1fr))}
+.gab-tit-item{display:grid;justify-items:center;text-align:center;align-content:start;gap:4px;padding:7px;border:1px solid var(--line);border-radius:var(--r);background:var(--panel)}
+.gab-tit-item:hover{border-color:var(--gilt);background:var(--chip)}
+.gab-pers-btn{display:grid;justify-items:center;gap:5px;width:100%;padding:0;border:0;background:none;text-align:center;line-height:1.2;font-size:.88rem;font-weight:500}
+.gab-pers-btn:hover .gab-av,.gab-pers-btn:focus-visible .gab-av{border-color:var(--ink)}
+.gab-av{width:100%;max-width:104px;aspect-ratio:1;flex:none;border:1px solid var(--gilt);border-radius:var(--r);overflow:hidden;background:var(--paper);display:grid;place-items:center}
+.gab-av.grande{max-width:128px}
 .gab-av img.pt{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
-.gab-av svg{width:82%;height:82%}
-.gab-tit-nota{font-size:.8rem;color:var(--muted)}
+.gab-av svg{width:76%;height:76%}
+.gab-tit-nota{font-size:.76rem;color:var(--muted);line-height:1.25}
 .gab-colectivo{font-size:.82rem;color:var(--ink);background:var(--chip);border:1px solid var(--line);border-radius:var(--r);padding:4px 8px;line-height:1.3}
 .gab-vacante{font-size:.8rem;color:var(--muted);border:1px dashed var(--line);border-radius:999px;padding:1px 8px;justify-self:start}
 .gab-desc{font-size:.88rem;color:var(--muted);line-height:1.35}
