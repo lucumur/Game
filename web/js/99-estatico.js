@@ -6,18 +6,20 @@ const fetchDato=u=>fetch(u+DATOS_V,{cache:"no-cache"});
 ready.then(async()=>{
   if(db)return;
   try{
-    const [per,idx,sim,ocu,cas,tit]=await Promise.all([
+    const [per,idx,sim,ocu,cas,tit,gab]=await Promise.all([
       fetchDato("datos/personajes.json").then(r=>r.json()),
       fetchDato("datos/indice.json").then(r=>r.json()),
       fetchDato("datos/simbolos.json").then(r=>r.ok?r.json():[]).catch(()=>[]),
       fetchDato("datos/ocupantes.json").then(r=>r.ok?r.json():{}).catch(()=>({})),
       fetchDato("datos/casas.json").then(r=>r.ok?r.json():[]).catch(()=>[]),
-      fetchDato("datos/titulos.json").then(r=>r.ok?r.json():null).catch(()=>null)
+      fetchDato("datos/titulos.json").then(r=>r.ok?r.json():null).catch(()=>null),
+      fetchDato("datos/gabinete.json").then(r=>r.ok?r.json():null).catch(()=>null)
     ]);
     LIBRO=per;
     SIMBOLOS=Array.isArray(sim)?sim:[];
     OCUP_DB=ocu||{};
     if(tit&&typeof setTitulosData==="function"){setTitulosData(tit);if(!$("#game").hidden&&current==="titulos")drawTitulos()}
+    if(gab&&typeof setGabineteData==="function"){setGabineteData(gab);if(!$("#game").hidden&&current==="gabinete")drawGabinete()}
     if(typeof Heraldica!=="undefined"){Heraldica.setCasas(Array.isArray(cas)?cas:[]);if(typeof renderCasaFiltros==="function")renderCasaFiltros();else Heraldica.poblarSelect($("#f-casa"),LIBRO,"Toda casa")}
     if(typeof renderSimFilter==="function")renderSimFilter();
     RETR={};(idx.retratos||[]).forEach(f=>{RETR[f.replace(/\.\w+$/,"")]="datos/retratos/"+f});

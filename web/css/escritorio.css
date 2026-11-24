@@ -661,3 +661,37 @@ button.casa-chip:hover,button.casa-chip:focus-visible{border-color:var(--gilt);b
 .sim-personas .plate{padding:8px}
 .plate .apodo{font-style:italic;font-weight:400;color:var(--gilt)}
 .plate .anio{font-weight:400;color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* ---------- Gabinete (compartimental) ---------- */
+.gab-crumb{display:flex;flex-wrap:wrap;gap:4px;align-items:center;font-size:.86rem}
+.gab-crumb-btn{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:2px 10px;color:var(--muted)}
+.gab-crumb-btn:hover{border-color:var(--gilt);color:var(--ink)}
+.gab-crumb-btn.cur{border-color:var(--gilt);background:var(--chip);color:var(--ink);font-weight:500;cursor:default}
+.gab-sep{color:var(--muted);padding-inline:2px}
+.gab-head{background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--gilt);border-radius:var(--r);padding:12px 14px;display:grid;gap:6px}
+.gab-head-top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.gab-head-tags{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.gab-preside{font-size:.94rem}
+.gab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(265px,1fr));gap:12px}
+.gab-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:12px;display:grid;gap:7px;align-content:start;cursor:pointer;min-width:0}
+.gab-card:hover,.gab-card:focus-visible{border-color:var(--gilt);background:var(--chip)}
+.gab-card-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.gab-num{font-family:var(--f-display);color:var(--gilt);font-size:1.05rem}
+.gab-ruta-tag{font-size:.76rem;color:var(--accent);letter-spacing:.02em}
+.gab-card h3{font-size:1.08rem;line-height:1.2}
+.gab-fr{font-size:.88rem;color:var(--gilt);margin-top:-3px}
+.gab-meta{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:space-between}
+.gab-vacante{font-size:.8rem;color:var(--muted);border:1px dashed var(--line);border-radius:999px;padding:1px 8px}
+.gab-desc{font-size:.88rem;color:var(--muted);line-height:1.35}
+.gab-acts{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.gab-btn-sub{border-color:var(--gilt);color:var(--gilt);font-weight:500}
+.gab-btn-sub:hover{background:var(--gilt);color:var(--paper)}
+.gab-indice-list{display:grid;gap:4px;margin-top:8px;padding-top:8px;border-top:1px solid var(--line)}
+.gab-idx-btn{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;text-align:left;border:1px solid transparent;background:none;border-radius:var(--r);padding:4px 8px}
+.gab-idx-btn:hover{border-color:var(--line);background:var(--chip)}
+.gab-idx-btn.cur{border-color:var(--gilt);background:var(--chip)}
+.gab-idx-btn[data-nivel="2"]{padding-left:22px}
+.gab-idx-btn[data-nivel="3"]{padding-left:38px}
+.gab-idx-cod{font-family:var(--f-display);color:var(--gilt);min-width:3.2em}
+.gab-idx-nom{font-weight:500}
+
