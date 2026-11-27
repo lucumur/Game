@@ -585,8 +585,11 @@ button.casa-chip:hover,button.casa-chip:focus-visible{border-color:var(--gilt);b
 .cval{font-size:.78rem;color:var(--gilt)}
 .chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .casa-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
-.casa-card{display:grid;grid-template-columns:46px minmax(0,1fr);gap:10px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:var(--r);background:var(--paper);text-align:left;cursor:pointer}
-.casa-card:hover,.casa-card:focus-visible{border-color:var(--gilt);background:var(--chip)}
+.casa-card{display:grid;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:var(--r);background:var(--paper)}
+.casa-open{all:unset;display:grid;grid-template-columns:46px minmax(0,1fr);gap:10px;align-items:center;text-align:left;cursor:pointer}
+.casa-open:hover .casa-emblema,.casa-open:focus-visible .casa-emblema{border-color:var(--gilt);background:var(--chip)}
+.casa-acts,.fr-escudo-acts{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.fr-escudo-acts{margin:4px 0 8px}
 .casa-card-meta{display:grid;gap:2px;min-width:0}
 .casa-card-nom{font-size:.96rem;font-weight:600;line-height:1.2}
 .casa-card-sub{font-size:.82rem;color:var(--muted);line-height:1.25}
@@ -653,7 +656,9 @@ button.casa-chip:hover,button.casa-chip:focus-visible{border-color:var(--gilt);b
 .plate-face>svg{width:72%;height:72%}
 .plate-face .esc-sobre{position:absolute;top:6px;left:6px;z-index:1;pointer-events:none;filter:drop-shadow(0 1px 2px rgb(0 0 0 / .45))}
 .casa-grid{grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:14px}
-.casa-card{grid-template-columns:1fr;justify-items:center;text-align:center;padding:12px;gap:10px;align-content:start}
+.casa-card{padding:12px;gap:10px;align-content:start}
+.casa-open{grid-template-columns:1fr;justify-items:center;text-align:center;gap:10px}
+.casa-acts{justify-content:center}
 .casa-emblema{width:100%;max-width:124px;aspect-ratio:1;border:1px solid var(--gilt);background:var(--panel);display:grid;place-items:center;padding:10px}
 .sim-grid{grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:14px}
 .sim-open{grid-template-columns:1fr;justify-items:center;text-align:center;gap:10px}

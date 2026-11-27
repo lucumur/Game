@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="115" viewBox="0 0 100 115" role="img">
+<title>Chapitre Saint-Just de Narbonne</title>
+<defs>
+<clipPath id="ecu"><path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/></clipPath>
+</defs>
+<g clip-path="url(#ecu)">
+<path fill="#f0ede4" d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/>
+<path d="M50 0V115M0 44H100" fill="none" stroke="#ac2636" stroke-width="16"/>
+</g>
+<path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z" fill="none" stroke="#342c25" stroke-width="2"/>
+</svg>

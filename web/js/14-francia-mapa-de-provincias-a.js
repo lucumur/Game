@@ -1035,7 +1035,7 @@ function liderCard(pid, titularFallback, cargoFallback, extraRef=null){
 const ARMAS_SEDES = {
   "dioc-boulogne": {
     "denominacion": "Motif du chapitre cathédral Notre-Dame de Boulogne",
-    "blason": "El folio 118 del Armorial général de France (Picardía) documenta la Virgen con el Niño en una barca de plata como motivo del cabildo. La versión de Gemini elegida para el mapa representa la barca en oro y añade la cruz y el capelo verde con seis borlas por lado.",
+    "blason": "El folio 118 del Armorial général de France (Picardía) documenta la Virgen con el Niño en una barca de plata sobre ondas de mar como motivo del cabildo. Para el mapa se representa la barca en oro sobre mar de plata en campo de azur, bajo el timbre uniforme de la sede.",
     "conf": "a",
     "fuente": "https://armorialdefrance.fr/documents/DH/BRUNEMBERT-62-02.JPG"
   },
@@ -1050,6 +1050,72 @@ const ARMAS_SEDES = {
     "fuente": "https://commons.wikimedia.org/wiki/File:Blason_de_l%27archev%C3%AAch%C3%A9_de_Reims.svg",
     "autor": "Euryrel",
     "licencia": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "dioc-sens": {
+    "denominacion": "Armas del Arzobispado de Sens",
+    "blason": "De azur, un cabrio de plata acompañado de tres estrellas de espuela (molettes) de oro. Registrado en el Armorial général de France (1696) y en el fondo del arzobispado (AD Yonne, G 176).",
+    "conf": "a",
+    "fuente": "https://archives.yonne.fr/"
+  },
+  "dioc-tours": {
+    "denominacion": "Armas del Cabildo catedralicio de Saint-Gatien de Tours",
+    "blason": "De gules, una cruz patada de plata. Documentado en la heráldica monumental del cabildo metropolitano (claustro de la Psalette).",
+    "conf": "a",
+    "fuente": "https://saprat.fr/"
+  },
+  "dioc-lyon": {
+    "denominacion": "Armas del Cabildo primacial (Canónigos-Condes de Lyon)",
+    "blason": "De gules, un grifo de plata y un león de oro afrontados.",
+    "conf": "a",
+    "fuente": "https://fr.wikipedia.org/wiki/Chapitre_de_Lyon"
+  },
+  "dioc-besancon": {
+    "denominacion": "Armas históricas de la ciudad y sede imperial de Besanzón",
+    "blason": "De oro, un águila de sable sosteniendo en sus garras dos columnas de gules brochant sobre las alas. Registrado para Besanzón en el Armorial général de France (vol. VII, 1696) y asociado a la dignidad de príncipe del Sacro Imperio de su arzobispado.",
+    "conf": "m",
+    "fuente": "https://armorialdefrance.fr/page_blason.php?ville=1617"
+  },
+  "dioc-auch": {
+    "denominacion": "Cuartel arzobispal de las armas históricas de Auch",
+    "blason": "De gules, un cordero pascual de plata con la cabeza vuelta, llevando una bandera de azur cargada de una crucecita de plata (mitad eclesiástica del partido compartido con los condes de Armagnac).",
+    "conf": "a",
+    "fuente": "https://fr.wikipedia.org/wiki/Armorial_des_communes_du_Gers"
+  },
+  "dioc-toulouse": {
+    "denominacion": "Armas del Cabildo catedralicio de Saint-Étienne de Toulouse",
+    "blason": "Medio partido: 1.º de púrpura, cruz trebolada de plata cantonnée de doce piedras de oro; 2.º de gules, cruz de Tolosa vaciada y pometada de doce piezas de oro.",
+    "conf": "a",
+    "fuente": "https://www.lavieb-aile.com/"
+  },
+  "dioc-albi": {
+    "denominacion": "Armas de la ciudad arzobispal de Albi",
+    "blason": "De gules, castillo almenado de cuatro piezas de plata mazonado de sable y sumado de un leopardo de oro, brochant sobre una cruz arzobispal de oro en palo adestrada de un sol de oro y siniestrada de una luna menguante de plata. Registrado en el Armorial général de France (Languedoc, vol. XIV, fol. 305).",
+    "conf": "a",
+    "fuente": "https://armorialdefrance.fr/page_blason.php?ville=466"
+  },
+  "dioc-narbonne": {
+    "denominacion": "Armas del Cabildo catedralicio de Saint-Just de Narbona",
+    "blason": "De plata, una cruz de gules.",
+    "conf": "a",
+    "fuente": "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Saint-Just-et-Saint-Pasteur_de_Narbonne"
+  },
+  "dioc-aix": {
+    "denominacion": "Armas del Cabildo catedralicio de Saint-Sauveur de Aix-en-Provence",
+    "blason": "De gules, un cordero pascual de plata con nimbo de oro, sosteniendo una cruz larga de oro con estandarte de plata cargado de una crucecita de gules.",
+    "conf": "a",
+    "fuente": "https://sigilla.irht.cnrs.fr/"
+  },
+  "dioc-arles": {
+    "denominacion": "Armas del Cabildo catedralicio de Saint-Trophime de Arlés",
+    "blason": "De oro, un águila de sable al vuelo bajado y coronada de gules.",
+    "conf": "a",
+    "fuente": "https://commons.wikimedia.org/wiki/Category:Coats_of_arms_of_dioceses_of_France"
+  },
+  "dioc-embrun": {
+    "denominacion": "Armas del Cabildo catedralicio de Embrun",
+    "blason": "De gules, palio de plata cargado de cinco crucecitas de sable, acompañado a la diestra de una mitra de plata y a la siniestra de un báculo de oro.",
+    "conf": "a",
+    "fuente": "http://vexil.prov.free.fr/hautes%20alpes/embrun.html"
   },
   "dioc-laon": {
     "blason": "Escudo partido. A la derecha heráldica, dos llaves de plata y un escudete con lis. A la izquierda, una cruz de plata con báculo rojo sobre un sembrado de lises.",
@@ -1111,18 +1177,205 @@ const ARMAS_SEDES = {
     "autor": "Thom.Lanaud (colores adaptados)",
     "original": "https://commons.wikimedia.org/wiki/File:Blason_pays_fr_Cambresis.svg",
     "licencia": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "dioc-meaux": {
+    "denominacion": "Armas del Cabildo catedralicio de Saint-Étienne de Meaux",
+    "blason": "De azur, una flor de lis de oro.",
+    "conf": "a",
+    "fuente": "https://www.geneanet.org/"
+  },
+  "dioc-auxerre": {
+    "denominacion": "Armas del Cabildo catedralicio de Saint-Étienne de Auxerre",
+    "blason": "De azur, tres piedras (cailloux) de plata en alusión al martirio de san Esteban.",
+    "conf": "a",
+    "fuente": "https://archives.yonne.fr/"
+  },
+  "dioc-nantes": {
+    "denominacion": "Armas del Cabildo catedralicio de Saint-Pierre-et-Saint-Paul de Nantes",
+    "blason": "De azur, una llave de oro y una espada de plata guarnecida de oro pasadas en aspa.",
+    "conf": "a",
+    "fuente": "https://fr.wikipedia.org/wiki/Dioc%C3%A8se_de_Nantes"
+  },
+  "dioc-rennes": {
+    "denominacion": "Armas del Cabildo catedralicio de Saint-Pierre de Rennes",
+    "blason": "De azur, dos llaves de plata pasadas en aspa.",
+    "conf": "a",
+    "fuente": "https://www.infobretagne.com/"
+  },
+  "dioc-metz": {
+    "denominacion": "Armas del Principado-Obispado y diócesis de Metz",
+    "blason": "De gules, un dextróquero de carnación vestido de azur moviente de una nube de plata empuñando una espada alta de plata guarnecida de oro, acostada de dos piedras (cailloux) de oro.",
+    "conf": "a",
+    "fuente": "https://fr.wikipedia.org/wiki/Principaut%C3%A9_%C3%A9piscopale_de_Metz"
+  },
+  "dioc-mirepoix": {
+    "denominacion": "Armas del Cabildo catedralicio de Mirepoix",
+    "blason": "De azur, tres peces de plata puestos en faja uno sobre otro. Registrado en el armorial de 1697.",
+    "conf": "a",
+    "fuente": "https://www.histariege.com/"
   }
 };
 
+const SEDES_RANGO_PAR = {
+  "dioc-reims": "duque",
+  "dioc-paris": "duque",
+  "dioc-laon": "duque",
+  "dioc-langres": "duque",
+  "dioc-beauvais": "conde",
+  "dioc-chalons": "conde",
+  "dioc-noyon": "conde"
+};
+
+function renderSedeConCapelo(d, imgSrc, alt){
+  const met = !!d.metropoli;
+  const rango = SEDES_RANGO_PAR[d.id] || null;
+  const borla = (bx, by) => `<g transform="translate(${bx} ${by})"><circle cx="0" cy="0" r="1.8" fill="#1f7a38" stroke="#134420" stroke-width="0.65"/><path d="M-1.3 1.4L-3.6 8.2H3.6L1.3 1.4Z" fill="#1f7a38" stroke="#134420" stroke-width="0.65" stroke-linejoin="round"/><line x1="-1.5" y1="8.2" x2="-1.8" y2="10.8" stroke="#134420" stroke-width="0.7"/><line x1="0" y1="8.2" x2="0" y2="11.1" stroke="#134420" stroke-width="0.7"/><line x1="1.5" y1="8.2" x2="1.8" y2="10.8" stroke="#134420" stroke-width="0.7"/></g>`;
+  const borlas = met ? [
+    [32,74],[24,95],[38,95],[16,116],[28,116],[40,116],[8,137],[19,137],[30,137],[41,137],
+    [148,74],[142,95],[156,95],[140,116],[152,116],[164,116],[139,137],[150,137],[161,137],[172,137]
+  ] : [
+    [32,78],[23,102],[37,102],[14,126],[27,126],[40,126],
+    [148,78],[143,102],[157,102],[140,126],[153,126],[166,126]
+  ];
+  const cordones = met
+    ? `<path d="M58 49C44 58 35 64 32 74M32 74C28 84 25 89 24 95M32 74C35 84 37 89 38 95M24 95C20 105 17 110 16 116M24 95C27 105 28 110 28 116M38 95C39 105 40 110 40 116M16 116C12 126 9 131 8 137M16 116C18 126 19 131 19 137M28 116C29 126 30 131 30 137M40 116C41 126 41 131 41 137" fill="none" stroke="#1f7a38" stroke-width="1.35" stroke-linecap="round"/>
+       <path d="M122 49C136 58 145 64 148 74M148 74C145 84 143 89 142 95M148 74C152 84 155 89 156 95M142 95C141 105 140 110 140 116M156 95C153 105 152 110 152 116M156 95C160 105 163 110 164 116M140 116C139 126 139 131 139 137M152 116C151 126 150 131 150 137M164 116C162 126 161 131 161 137M164 116C168 126 171 131 172 137" fill="none" stroke="#1f7a38" stroke-width="1.35" stroke-linecap="round"/>`
+    : `<path d="M58 49C44 58 35 66 32 78M32 78C27 89 24 96 23 102M32 78C35 89 37 96 37 102M23 102C18 113 15 120 14 126M23 102C26 113 27 120 27 126M37 102C39 113 40 120 40 126" fill="none" stroke="#1f7a38" stroke-width="1.4" stroke-linecap="round"/>
+       <path d="M122 49C136 58 145 66 148 78M148 78C145 89 143 96 143 102M148 78C153 89 156 96 157 102M143 102C141 113 140 120 140 126M157 102C154 113 153 120 153 126M157 102C162 113 165 120 166 126" fill="none" stroke="#1f7a38" stroke-width="1.4" stroke-linecap="round"/>`;
+  const cruz = `<g fill="#d8ae42" stroke="#5c4512" stroke-width="1.05" stroke-linejoin="round">
+    <rect x="87.5" y="7" width="5" height="72"/>
+    <circle cx="90" cy="6.5" r="3.2"/>
+    ${met ? `<rect x="74" y="15" width="32" height="4.4"/><circle cx="73.5" cy="17.2" r="2.6"/><circle cx="106.5" cy="17.2" r="2.6"/>
+             <rect x="67" y="25" width="46" height="4.8"/><circle cx="66.5" cy="27.4" r="2.8"/><circle cx="113.5" cy="27.4" r="2.8"/>`
+          : `<rect x="69" y="21" width="42" height="4.8"/><circle cx="68.5" cy="23.4" r="2.8"/><circle cx="111.5" cy="23.4" r="2.8"/>`}
+  </g>`;
+  const corona = rango === "duque"
+    ? `<g fill="#e0ba54" stroke="#5c4512" stroke-width="1" stroke-linejoin="round">
+        <path d="M62 69L59 58L66 63L74 55L81 63L90 54L99 63L106 55L114 63L121 58L118 69Z"/>
+        <rect x="61" y="68" width="58" height="5.5" rx="1.4"/>
+      </g>`
+    : rango === "conde"
+    ? `<g fill="#e0ba54" stroke="#5c4512" stroke-width="0.95" stroke-linejoin="round">
+        <path d="M65 68L63 60M76 68L75 59M90 68V58M104 68L105 59M115 68L117 60" stroke="#5c4512" stroke-width="1.6"/>
+        <circle cx="63" cy="59" r="2.5"/><circle cx="75" cy="58" r="2.5"/><circle cx="90" cy="57" r="2.7"/><circle cx="105" cy="58" r="2.5"/><circle cx="117" cy="59" r="2.5"/>
+        <rect x="63" y="67.5" width="54" height="5.5" rx="1.4"/>
+      </g>`
+    : "";
+  const capelo = `<g fill="#1f7a38" stroke="#134420" stroke-width="1.25" stroke-linejoin="round">
+    <path d="M71 45C71 30 109 30 109 45Z"/>
+    <path d="M43 45Q90 38 137 45C141 46 140 50 135 50Q90 45 45 50C40 50 39 46 43 45Z"/>
+    <path d="M71 42Q90 40 109 42" fill="none" stroke="#134420" stroke-width="1.6"/>
+  </g>`;
+  const wrap = el("div", {class:"escudo-svg-wrap sede-timbre-wrap", style:"padding:4px"});
+  const box = el("div", {style:"position:relative;width:90px;height:102px"});
+  box.innerHTML = `<svg viewBox="0 0 180 185" width="90" height="102" style="position:absolute;inset:0;width:100%;height:100%" aria-hidden="true">
+    ${cruz}
+    ${cordones}
+    ${borlas.map(([bx,by])=>borla(bx,by)).join("")}
+    ${capelo}
+    ${corona}
+  </svg>`;
+  const shieldBox = el("div", {style:"position:absolute;left:26.7%;top:40%;width:46.7%;height:52.4%;display:grid;place-items:center"});
+  shieldBox.append(el("img", {src:imgSrc, alt}));
+  box.append(shieldBox);
+  wrap.append(box);
+  return wrap;
+}
+
 let ESCUDOS_DB = {src:{}, commons:{}, imgs:{}};
 const imagenesSedes = {};
+const ESCUDOS_DUCADOS = {}, ESCUDOS_DUCADOS_IMG = {}, ESCUDOS_DUCADOS_LOCAL = {};
+const SEDES_PROPIOS = {}, SEDES_LOCAL = {};
 let cargaSedes;
+async function cargarImgObj(src){
+  if(!src)return null;
+  const img=new Image();
+  img.src=src;
+  try{await img.decode();return img}
+  catch(e){
+    return new Promise(res=>{
+      if(img.complete&&img.naturalWidth)return res(img);
+      img.onload=()=>res(img);
+      img.onerror=()=>res(null);
+    });
+  }
+}
+function refrescarFranciaUI(){
+  const cv=document.querySelector("#map-box canvas");
+  if(cv&&typeof current!=="undefined"&&current==="francia"&&!$("#game")?.hidden){
+    renderProvinces(cv);
+    showFranciaSelection();
+  }
+  if(typeof current!=="undefined"&&current==="titulos"&&!$("#game")?.hidden&&typeof drawTitulos==="function"){
+    drawTitulos();
+  }
+  if(typeof refrescarFichaCasa==="function"&&!$("#ficha")?.hidden){
+    refrescarFichaCasa();
+  }
+}
+async function setEscudosDucados(mapObj){
+  for(const k of Object.keys(ESCUDOS_DUCADOS)){delete ESCUDOS_DUCADOS[k];delete ESCUDOS_DUCADOS_IMG[k]}
+  if(mapObj&&typeof mapObj==="object"){
+    await Promise.all(Object.entries(mapObj).map(async([k,src])=>{
+      if(!src)return;
+      ESCUDOS_DUCADOS[k]=src;
+      const im=await cargarImgObj(src);
+      if(im&&ESCUDOS_DUCADOS[k]===src)ESCUDOS_DUCADOS_IMG[k]=im;
+    }));
+  }
+  refrescarFranciaUI();
+}
+async function setEscudoDucadoPropio(id,src){
+  if(!id)return;
+  if(src){
+    ESCUDOS_DUCADOS[id]=src;
+    const im=await cargarImgObj(src);
+    if(im&&ESCUDOS_DUCADOS[id]===src)ESCUDOS_DUCADOS_IMG[id]=im;
+  }else{
+    delete ESCUDOS_DUCADOS[id];
+    delete ESCUDOS_DUCADOS_IMG[id];
+  }
+  refrescarFranciaUI();
+}
+async function setEscudosSedesPropios(mapObj){
+  for(const k of Object.keys(SEDES_PROPIOS))delete SEDES_PROPIOS[k];
+  if(mapObj&&typeof mapObj==="object"){
+    await Promise.all(Object.entries(mapObj).map(async([slug,src])=>{
+      if(!src)return;
+      SEDES_PROPIOS[slug]=src;
+      const im=await cargarImgObj(src);
+      if(im&&SEDES_PROPIOS[slug]===src)imagenesSedes["dioc-"+slug]=im;
+    }));
+  }
+  refrescarFranciaUI();
+}
+async function setEscudoSedePropio(slug,src){
+  if(!slug)return;
+  const fullId="dioc-"+slug;
+  if(src){
+    SEDES_PROPIOS[slug]=src;
+    const im=await cargarImgObj(src);
+    if(im&&SEDES_PROPIOS[slug]===src)imagenesSedes[fullId]=im;
+  }else{
+    delete SEDES_PROPIOS[slug];
+    if(ARMAS_SEDES[fullId]){
+      const im=await cargarImgObj("datos/sedes/"+slug+".svg");
+      if(im&&!SEDES_PROPIOS[slug])imagenesSedes[fullId]=im;
+      else if(!SEDES_PROPIOS[slug])delete imagenesSedes[fullId];
+    }else{
+      delete imagenesSedes[fullId];
+    }
+  }
+  refrescarFranciaUI();
+}
 function cargarArmasSedes(){
   if(cargaSedes)return cargaSedes;
   cargaSedes=Promise.all([...Object.keys(ARMAS_SEDES), "dioc-pendiente"].map(async id=>{
+    const slug=id.slice(5);
+    if(SEDES_PROPIOS[slug])return;
     const img=new Image();
-    img.src="datos/sedes/"+id.slice(5)+".svg";
-    try{await img.decode();imagenesSedes[id]=img}
+    img.src="datos/sedes/"+slug+".svg";
+    try{await img.decode();if(!SEDES_PROPIOS[slug])imagenesSedes[id]=img}
     catch(e){console.warn("No se pudo cargar el escudo de la sede",id)}
   }));
   return cargaSedes;
@@ -1165,6 +1418,11 @@ function intEmblem(it){
 }
 
 function renderEscudoSVG(esc, tipoMapa="ducados", entityId=""){
+  if(entityId && ESCUDOS_DUCADOS[entityId]){
+    const wrap=el("div",{class:"escudo-svg-wrap"});
+    wrap.append(el("img",{src:ESCUDOS_DUCADOS[entityId],alt:"Escudo propio de "+entityId,title:"Escudo propio (subido)",style:"width:68px;height:76px;object-fit:contain;display:block"}));
+    return wrap;
+  }
   if(entityId && ESCUDOS_DB.src[entityId]){
     const wrap=el("div",{class:"escudo-svg-wrap"});
     const cname=ESCUDOS_DB.commons[entityId]||"";
@@ -1263,9 +1521,68 @@ function drawEmblemCanvas(ctx, x, y, esc, tipoMapa, isSel, entityId=""){
     ctx.strokeStyle="#9e2a28"; ctx.lineWidth=2.4; ctx.stroke();
   }
 
-  const wikiImg = tipoMapa==="diocesis" ? (imagenesSedes[entityId]||imagenesSedes["dioc-pendiente"]) : ESCUDOS_DB.imgs[entityId];
+  const wikiImg = tipoMapa==="diocesis" ? (imagenesSedes[entityId]||imagenesSedes["dioc-pendiente"]) : (ESCUDOS_DUCADOS_IMG[entityId]||ESCUDOS_DB.imgs[entityId]);
   if(wikiImg){
     const iw=wikiImg.naturalWidth||100, ih=wikiImg.naturalHeight||115;
+    if(tipoMapa==="diocesis"){
+      const met=!!esc?.metropoli, rango=esc?.rangoPar||null;
+      const targetH=25, targetW=Math.round(targetH*(iw/ih));
+      const sy=3.5;
+      // Cruz procesional dorada detrás del capelo y escudo
+      ctx.strokeStyle="#5c4512"; ctx.fillStyle="#d8ae42";
+      ctx.lineWidth=2.2; ctx.beginPath(); ctx.moveTo(0,-21); ctx.lineTo(0,-8); ctx.stroke();
+      ctx.strokeStyle="#d8ae42"; ctx.lineWidth=1.4;
+      ctx.beginPath(); ctx.moveTo(0,-21); ctx.lineTo(0,-8);
+      if(met){
+        ctx.moveTo(-4,-18.8); ctx.lineTo(4,-18.8);
+        ctx.moveTo(-5.5,-16.4); ctx.lineTo(5.5,-16.4);
+      }else{
+        ctx.moveTo(-4.6,-17.6); ctx.lineTo(4.6,-17.6);
+      }
+      ctx.stroke();
+      // Corona ducal o condal para los 7 Pares Eclesiásticos
+      if(rango){
+        ctx.fillStyle="#e0ba54"; ctx.strokeStyle="#4b380f"; ctx.lineWidth=0.65;
+        ctx.fillRect(-7.5,-11.2,15,2.3); ctx.strokeRect(-7.5,-11.2,15,2.3);
+        if(rango==="duque"){
+          ctx.beginPath();
+          ctx.moveTo(-7,-11.2); ctx.lineTo(-7.5,-13.8); ctx.lineTo(-4.5,-12.2);
+          ctx.lineTo(0,-14.3); ctx.lineTo(4.5,-12.2); ctx.lineTo(7.5,-13.8); ctx.lineTo(7,-11.2);
+          ctx.closePath(); ctx.fill(); ctx.stroke();
+        }else{
+          [-5.8,-2.9,0,2.9,5.8].forEach(px=>{
+            ctx.beginPath(); ctx.arc(px,-12.4,1.15,0,7); ctx.fill(); ctx.stroke();
+          });
+        }
+      }
+      // Capelo verde y borlas (20 en arzobispados, 12 en obispados)
+      const gy=rango?-15.2:-12.8;
+      ctx.strokeStyle="#1f7a38"; ctx.lineWidth=0.95;
+      ctx.beginPath();
+      ctx.moveTo(-7.5,gy+0.8); ctx.quadraticCurveTo(-13,gy+4,-14.2,gy+9);
+      ctx.moveTo(7.5,gy+0.8); ctx.quadraticCurveTo(13,gy+4,14.2,gy+9);
+      ctx.stroke();
+      const tiers=met?[-5.5,-2.3,0.9,4.1]:[-4.5,-0.8,2.9];
+      ctx.fillStyle="#1f7a38";
+      tiers.forEach((ty,ti)=>{
+        const count=ti===0?1:ti===1?2:ti===2?2:3;
+        for(let k=0;k<count;k++){
+          const dx=12.2+(k-(count-1)/2)*2.3;
+          ctx.beginPath(); ctx.arc(-dx,ty,1.05,0,7); ctx.fill();
+          ctx.beginPath(); ctx.arc(dx,ty,1.05,0,7); ctx.fill();
+        }
+      });
+      ctx.fillStyle="#1f7a38"; ctx.strokeStyle="#134420"; ctx.lineWidth=0.7;
+      ctx.beginPath(); ctx.ellipse(0,gy,11.2,2.1,0,0,7); ctx.fill(); ctx.stroke();
+      ctx.beginPath(); ctx.arc(0,gy-0.3,4.8,Math.PI,0); ctx.fill(); ctx.stroke();
+      // Escudo limpio debajo del timbre
+      ctx.shadowColor="rgba(0,0,0,0.38)";
+      ctx.shadowBlur=4;
+      ctx.shadowOffsetY=1.5;
+      ctx.drawImage(wikiImg, -targetW/2, -targetH/2+sy, targetW, targetH);
+      ctx.restore();
+      return;
+    }
     const targetH = tipoMapa==="ducados" ? 28 : 31;
     const targetW = Math.round(targetH * (iw / ih));
     ctx.shadowColor="rgba(0,0,0,0.38)";
@@ -1586,7 +1903,7 @@ function renderProvinces(canvas){
   } else if(capaFrancia==="diocesis"){
     paintMarkers(
       DIOCESIS_LIST, diocPts, i=>DIOCESIS_LIST[i].id===selDioc,
-      d=>({...d.emblema, sub:!d.metropoli}), d=>d.id, "diocesis", 11.5, 15.5, 14,
+      d=>({...d.emblema, sub:!d.metropoli, metropoli:!!d.metropoli, rangoPar:SEDES_RANGO_PAR[d.id]||null}), d=>d.id, "diocesis", 11.5, 15.5, 14,
       i=>DIOCESIS_LIST[i].metropoli?2:1
     );
   } else if(capaFrancia==="apanajes"){
@@ -1599,6 +1916,52 @@ function renderProvinces(canvas){
 }
 
 /* ---------- PANELES DE DETALLE CON ESCUDO/EMBLEMA Y LÍDER ---------- */
+function escudoFranciaActs(tipo,id){
+  const esSede=tipo==="sedes";
+  const tiene=esSede?Boolean(SEDES_PROPIOS[id]):Boolean(ESCUDOS_DUCADOS[id]);
+  const esLocal=esSede?Boolean(SEDES_LOCAL[id]):Boolean(ESCUDOS_DUCADOS_LOCAL[id]);
+  const puedeEditar=typeof OWNER!=="undefined"&&OWNER&&(db||GH?.tiene());
+  const msgEl=el("span",{class:"status","aria-live":"polite"});
+  const inp=el("input",{type:"file",accept:".svg,.png,image/svg+xml,image/png",hidden:""});
+  inp.onchange=async e=>{
+    const f=e.target.files[0];e.target.value="";if(!f)return;
+    try{
+      const img=await Heraldica.procesarArchivo(f);
+      if(puedeEditar){
+        msgEl.textContent="Subiendo escudo…";
+        await (db||GH).doc(tipo+"/"+id).set({img});
+        if(esSede){delete SEDES_LOCAL[id];await setEscudoSedePropio(id,img)}
+        else{delete ESCUDOS_DUCADOS_LOCAL[id];await setEscudoDucadoPropio(id,img)}
+      }else{
+        if(esSede){SEDES_LOCAL[id]=img;await setEscudoSedePropio(id,img)}
+        else{ESCUDOS_DUCADOS_LOCAL[id]=img;await setEscudoDucadoPropio(id,img)}
+      }
+    }catch(err){msgEl.textContent="No se pudo procesar: "+(err&&err.message||err)}
+  };
+  const row=el("div",{class:"fr-escudo-acts"},
+    inp,
+    el("button",{type:"button",class:"btn sm",onclick:()=>inp.click()},tiene?"Cambiar escudo (SVG/PNG)":"Subir escudo (SVG/PNG)")
+  );
+  if(tiene&&(esLocal||(typeof OWNER!=="undefined"&&OWNER))){
+    row.append(el("button",{type:"button",class:"btn sm danger",onclick:async()=>{
+      try{
+        if(esLocal&&!puedeEditar){
+          if(esSede){delete SEDES_LOCAL[id];await setEscudoSedePropio(id,null)}
+          else{delete ESCUDOS_DUCADOS_LOCAL[id];await setEscudoDucadoPropio(id,null)}
+        }else{
+          msgEl.textContent="Quitando escudo…";
+          await (db||GH).doc(tipo+"/"+id).delete();
+          if(esSede){delete SEDES_LOCAL[id];await setEscudoSedePropio(id,null)}
+          else{delete ESCUDOS_DUCADOS_LOCAL[id];await setEscudoDucadoPropio(id,null)}
+        }
+      }catch(err){msgEl.textContent="No se pudo quitar: "+(err&&err.message||err)}
+    }},"Quitar escudo propio"));
+  }
+  if(esLocal&&!puedeEditar)msgEl.textContent="Vista previa local (sin llave activa: se perderá al recargar).";
+  else if(!tiene&&!puedeEditar)msgEl.textContent="Sin llave de GitHub: vista previa local.";
+  row.append(msgEl);
+  return row;
+}
 function showFranciaSelection(){
   const wrap=el("div",{class:"fr-info-wrap"});
   if(capaFrancia==="ducados"){
@@ -1614,6 +1977,7 @@ function showFranciaSelection(){
           el("div",{class:"note blason-txt"},el("b",{},"Blasón histórico: "),f.escudo.blason)
         )
       ),
+      escudoFranciaActs("ducados",f.id),
       liderCard(f.pid, f.titular, f.rango+" · "+f.casa),
       el("span",{class:"label"},"Rentas, tierras y privilegios en 1722"),
       el("p",{},f.rentas),
@@ -1659,7 +2023,7 @@ function showFranciaSelection(){
     }
     wrap.append(
       el("div",{class:"emblema-header"},
-        escudo?el("img",{src:escudo.src,width:68,height:76,style:"object-fit:contain",alt:imagenesSedes[d.id]?denominacion+" · "+d.corto:"Marcador genérico de diócesis"}):null,
+        escudo?renderSedeConCapelo(d,escudo.src,imagenesSedes[d.id]?denominacion+" · "+d.corto:"Marcador genérico de diócesis"):null,
         el("div",{class:"emblema-meta"},
           el("div",{style:"display:flex;flex-wrap:wrap;gap:6px"},
             el("span",{class:"tag"},part?part.n:"Diócesis del Reino"),
@@ -1675,6 +2039,7 @@ function showFranciaSelection(){
           ):el("div",{class:"note blason-txt"},"Armas de la sede pendientes de identificación.")
         )
       ),
+      escudoFranciaActs("sedes",d.id.replace(/^dioc-/,"")),
       titular,
       el("span",{class:"label"},"Rentas y beneficios eclesiásticos"),
       el("p",{},d.rentas),

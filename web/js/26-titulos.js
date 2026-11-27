@@ -32,11 +32,20 @@ function setTitulosData(data){
 /* Reutiliza SVG de sedes, escudos.json (ESCUDOS_DB) o renderEscudoSVG del mapa de Francia. */
 function emblemaTituloEl(t,grande=false){
   const box=el("div",{class:"titulo-emb"+(grande?" grande":"")});
+  const sSlug=t.dioc_id?t.dioc_id.replace(/^dioc-/,""):"";
+  if(sSlug&&typeof SEDES_PROPIOS!=="undefined"&&SEDES_PROPIOS[sSlug]){
+    box.append(el("img",{class:"titulo-emb-img",src:SEDES_PROPIOS[sSlug],alt:"Escudo de "+t.nombre}));
+    return box;
+  }
+  const eid=t.escudo_key||t.feudo_id||"";
+  if(typeof ESCUDOS_DUCADOS!=="undefined"&&eid&&ESCUDOS_DUCADOS[eid]){
+    box.append(el("img",{class:"titulo-emb-img",src:ESCUDOS_DUCADOS[eid],alt:"Escudo de "+t.nombre}));
+    return box;
+  }
   if(t.emblema){
     box.append(el("img",{class:"titulo-emb-img",src:t.emblema,alt:"Emblema de "+t.nombre}));
     return box;
   }
-  const eid=t.escudo_key||t.feudo_id||"";
   if(typeof ESCUDOS_DB!=="undefined"&&eid&&ESCUDOS_DB.src?.[eid]){
     box.append(el("img",{class:"titulo-emb-img",src:ESCUDOS_DB.src[eid],alt:"Escudo de "+t.nombre,title:ESCUDOS_DB.commons?.[eid]||""}));
     return box;

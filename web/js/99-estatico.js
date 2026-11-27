@@ -25,6 +25,12 @@ ready.then(async()=>{
     RETR={};(idx.retratos||[]).forEach(f=>{RETR[f.replace(/\.\w+$/,"")]="datos/retratos/"+f});
     ESTANCIAS={};(idx.estancias||[]).forEach(f=>{ESTANCIAS[f.replace(/\.\w+$/,"")]="datos/estancias/"+f});
     SIM_IMG={};(idx.simbolos||[]).forEach(f=>{SIM_IMG[f.replace(/\.\w+$/,"")]="datos/simbolos/"+f});
+    ESCUDOS_IMG={};(idx.escudos||[]).forEach(f=>{ESCUDOS_IMG[f.replace(/\.\w+$/,"")]="datos/escudos/"+f});
+    if(typeof Heraldica!=="undefined")Heraldica.setEscudosPropios(ESCUDOS_IMG);
+    const ducMap={};(idx.ducados||[]).forEach(f=>{ducMap[f.replace(/\.\w+$/,"")]="datos/ducados/"+f});
+    if(typeof setEscudosDucados==="function")setEscudosDucados(ducMap);
+    const sedMap={};(idx.sedes||[]).forEach(f=>{sedMap[f.replace(/\.\w+$/,"")]="datos/sedes/"+f});
+    if(typeof setEscudosSedesPropios==="function")setEscudosSedesPropios(sedMap);
     try{drawFaces();if(!$("#game").hidden&&current==="gabinete"&&typeof drawGabinete==="function")drawGabinete();if(!$("#game").hidden&&current==="personajes"&&typeof perSubVista!=="undefined"){if(perSubVista==="cas")renderCasas();if(perSubVista==="sim")renderSimbolos()}}catch(e){}
     fetchDato("datos/escudos.json").then(r=>r.ok?r.json():null).then(esc=>{
       if(esc&&esc.files&&typeof Heraldica!=="undefined"){
@@ -52,13 +58,24 @@ async function activarEditorGH(){
   GH_OK=OWNER=await GH.comprobar();
   st.textContent=GH_OK?"Llave válida: puedes subir imágenes y asignar ocupantes. Los cambios tardan unos minutos en verse en otros dispositivos.":GH.error();
   if(mapSel&&mapSel.id&&document.querySelector(".zone.sel"))showRoom(mapSel.id,mapSel.n,mapSel.d);
+  try{
+    if(!$("#game").hidden&&current==="personajes"&&typeof perSubVista!=="undefined"){
+      if(perSubVista==="cas"&&typeof renderCasas==="function")renderCasas();
+      if(perSubVista==="sim"&&typeof renderSimbolos==="function")renderSimbolos();
+    }
+    if(!$("#game").hidden&&current==="francia"&&typeof showFranciaSelection==="function")showFranciaSelection();
+    if(typeof refrescarFichaCasa==="function")refrescarFichaCasa();
+  }catch(e){}
 }
 window.ghCambio=(col,id,d)=>{
   if(col==="retratos"){if(d)RETR[id]=d.img;else delete RETR[id];try{drawFaces();if(!$("#game").hidden&&current==="gabinete"&&typeof drawGabinete==="function")drawGabinete()}catch(e){}}
   if(col==="simbolos"){if(d)SIM_IMG[id]=d.img;else delete SIM_IMG[id];try{drawFaces();if(!$("#game").hidden&&current==="personajes"&&typeof perSubVista!=="undefined"&&perSubVista==="sim")renderSimbolos()}catch(e){}}
+  if(col==="escudos"){if(d)ESCUDOS_IMG[id]=d.img;else delete ESCUDOS_IMG[id];if(typeof Heraldica!=="undefined")Heraldica.setEscudoPropio(id,d?d.img:null);try{drawFaces();if(!$("#game").hidden&&current==="personajes"&&typeof perSubVista!=="undefined"&&perSubVista==="cas")renderCasas();if(typeof refrescarFichaCasa==="function")refrescarFichaCasa()}catch(e){}}
+  if(col==="ducados"){if(typeof setEscudoDucadoPropio==="function")setEscudoDucadoPropio(id,d?d.img:null)}
+  if(col==="sedes"){if(typeof setEscudoSedePropio==="function")setEscudoSedePropio(id,d?d.img:null)}
   if(col==="estancias"){if(d)ESTANCIAS[id]=d.img;else delete ESTANCIAS[id]}
   if(col==="ocupantes"){if(d)OCUP_DB[id]=d;else delete OCUP_DB[id]}
-  if(col!=="retratos"&&!$("#game").hidden&&!$("#map-view").hidden&&$("#map-box .zone.sel")){
+  if((col==="estancias"||col==="ocupantes")&&!$("#game").hidden&&!$("#map-view").hidden&&$("#map-box .zone.sel")){
     if(col==="ocupantes"&&current==="palacio")goRoom(mapSel.id);
     else showRoom(mapSel.id,mapSel.n,mapSel.d);
   }

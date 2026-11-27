@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="115" viewBox="0 0 100 115" role="img">
+<title>Chapitre cathédral d'Embrun</title>
+<defs>
+<clipPath id="ecu"><path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/></clipPath>
+<g id="cr">
+  <path fill="#22201e" d="M-2.2 -3.6H2.2L1 -1L3.6 -2.2V2.2L1 1L2.2 3.6H-2.2L-1 1L-3.6 2.2V-2.2L-1 -1Z"/>
+</g>
+</defs>
+<g clip-path="url(#ecu)">
+<path fill="#ac2636" d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/>
+<!-- Pallium de plata en Y cargado de 5 crucecitas de sable -->
+<path d="M22 14L31 11L46 43L54 43L69 11L78 14L56 54V97H44V54Z" fill="#f0ede4" stroke="#342c25" stroke-width="1.2" stroke-linejoin="round"/>
+<use href="#cr" transform="translate(31 23) scale(0.95)"/>
+<use href="#cr" transform="translate(69 23) scale(0.95)"/>
+<use href="#cr" transform="translate(50 48) scale(0.95)"/>
+<use href="#cr" transform="translate(50 67) scale(0.95)"/>
+<use href="#cr" transform="translate(50 86) scale(0.95)"/>
+<!-- Mitra de plata a la izquierda -->
+<g fill="#f0ede4" stroke="#342c25" stroke-width="1.1" stroke-linejoin="round">
+  <path d="M12 72L10 53L22 41L34 53L32 72Z"/>
+  <path d="M12 68H32M22 41V68" fill="none" stroke="#ac2636" stroke-width="1.4"/>
+  <path d="M15 72L11 85L16 84L19 72M29 72L33 85L28 84L25 72"/>
+</g>
+<!-- Báculo de oro a la derecha -->
+<g fill="#edbb52" stroke="#342c25" stroke-width="1.1" stroke-linejoin="round">
+  <rect x="75.5" y="45" width="4" height="47" rx="1"/>
+  <path d="M77.5 45C77.5 34 66 34 66 44C66 50 72 52 74 47C72 47 70 46 70 43C70 39 74 39 74 45Z"/>
+  <rect x="73" y="51" width="9" height="4" rx="1"/>
+</g>
+</g>
+<path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z" fill="none" stroke="#342c25" stroke-width="2"/>
+</svg>

@@ -1,6 +1,6 @@
 /* ---------- Libro de caras unificado (Casas, Símbolos, Habilidades, Ficha con 5 pestañas e historial) ---------- */
 const fichaHist=[];
-let fichaActual=null, perSubVista="per", facFiltro="Todas", fichaTab="resumen", guiaHab="erudicion", SIM_LOCAL={};
+let fichaActual=null, perSubVista="per", facFiltro="Todas", fichaTab="resumen", guiaHab="erudicion", SIM_LOCAL={}, ESCUDOS_IMG={}, ESCUDOS_LOCAL={};
 
 function fichaIr(renderFn,reset=false){
   const f=$("#ficha");
@@ -174,13 +174,50 @@ function renderCasaFiltros(){
   if(cc&&cc.options.length<=1&&typeof Heraldica!=="undefined")Object.entries(Heraldica.CATEGORIAS).forEach(([k,v])=>cc.append(el("option",{value:k},v)));
   if(ce&&ce.options.length<=1&&typeof Heraldica!=="undefined")Object.entries(Heraldica.ESTADOS).forEach(([k,v])=>ce.append(el("option",{value:k},v)));
 }
+function setCasaMsg(txt,statusEl){
+  if($("#cmsg"))$("#cmsg").textContent=txt;
+  if(statusEl)statusEl.textContent=txt;
+}
+async function subirEscudoCasa(id,f,statusEl){
+  if(!f)return;
+  try{
+    const img=await Heraldica.procesarArchivo(f);
+    if(OWNER&&(db||GH?.tiene())){
+      setCasaMsg("Subiendo escudo de "+id+"…",statusEl);
+      await (db||GH).doc("escudos/"+id).set({img});
+      delete ESCUDOS_LOCAL[id]; ESCUDOS_IMG[id]=img;
+      Heraldica.setEscudoPropio(id,img);
+      setCasaMsg("Escudo de "+id+" guardado.",statusEl);
+    }else{
+      ESCUDOS_LOCAL[id]=img;
+      Heraldica.setEscudoPropio(id,img);
+      setCasaMsg("Vista previa local para "+id+" (sin llave activa: se perderá al recargar).",statusEl);
+    }
+    renderCasas(); drawFaces(); refrescarFichaCasa();
+  }catch(err){setCasaMsg("No se pudo procesar: "+(err&&err.message||err),statusEl)}
+}
+async function quitarEscudoCasa(id,statusEl){
+  try{
+    if(ESCUDOS_LOCAL[id]&&!(OWNER&&ESCUDOS_IMG[id])){
+      delete ESCUDOS_LOCAL[id];
+    }else{
+      setCasaMsg("Quitando escudo de "+id+"…",statusEl);
+      await (db||GH).doc("escudos/"+id).delete();
+      delete ESCUDOS_IMG[id]; delete ESCUDOS_LOCAL[id];
+    }
+    Heraldica.setEscudoPropio(id,null);
+    setCasaMsg("Escudo propio de "+id+" quitado.",statusEl);
+    renderCasas(); drawFaces(); refrescarFichaCasa();
+  }catch(err){setCasaMsg("No se pudo quitar: "+(err&&err.message||err),statusEl)}
+}
 function renderCasas(){
   const wrap=$("#cas-wrap"); if(!wrap)return; wrap.innerHTML="";
+  if($("#cas-gh-st"))$("#cas-gh-st").textContent=db?"Conectado con Claude.":OWNER?"Llave de GitHub activa: los escudos se guardan en el repositorio.":"Sin llave activa: solo consulta y vista previa local.";
   if(typeof Heraldica==="undefined"){wrap.append(el("p",{class:"note"},"Cargando catálogo de casas…"));return}
   const all=Heraldica.all(), chars=LIBRO||[];
   if(!all.length){$("#ccount").textContent="";wrap.append(el("p",{class:"note"},"Cargando catálogo de casas…"));return}
   const q=normTxt($("#qc")?.value||"").trim(), ccat=$("#ccat")?.value||"", cest=$("#cest")?.value||"";
-  const vis=all.filter(c=>(!ccat||c.categoria===ccat)&&(!cest||c.escudo_estado===cest)&&(!q||normTxt([c.nombre,c.id,c.rama_de||"",c.blason||"",c.fuente||""].join(" ")).includes(q)));
+  const vis=all.filter(c=>(!ccat||c.categoria===ccat)&&(!cest||Heraldica.estadoEfectivo(c)===cest)&&(!q||normTxt([c.nombre,c.id,c.rama_de||"",c.blason||"",c.fuente||""].join(" ")).includes(q)));
   $("#ccount").textContent=`${vis.length} de ${all.length} casas`;
   const ordenCat=["real","principe_extranjero","noble_alta","noble_espada","toga","finanzas","servicio_ennoblecido","extranjera","plebeya"];
   ordenCat.forEach(cat=>{
@@ -195,10 +232,20 @@ function renderCasas(){
       if(g.pat.length)partes.push(g.pat.length+" pat.");
       if(g.mat.length)partes.push(g.mat.length+" mat.");
       if(g.ali.length)partes.push(g.ali.length+" al.");
-      const sub=(partes.length?partes.join(" · "):"0 vínculos")+" · "+(Heraldica.ESTADOS[cas.escudo_estado]||cas.escudo_estado);
-      grid.append(el("button",{type:"button",class:"casa-card",onclick:()=>openFichaCasa(cas.id)},
+      const est=Heraldica.estadoEfectivo(cas);
+      const sub=(partes.length?partes.join(" · "):"0 vínculos")+" · "+(Heraldica.ESTADOS[est]||est);
+      const tienePropio=Heraldica.tieneEscudoPropio(cas.id);
+      const inp=el("input",{type:"file",accept:".svg,.png,image/svg+xml,image/png",hidden:""});
+      inp.onchange=e=>{const f=e.target.files[0];e.target.value="";if(f)subirEscudoCasa(cas.id,f)};
+      const openBtn=el("button",{type:"button",class:"casa-open",onclick:()=>openFichaCasa(cas.id)},
         el("div",{class:"casa-emblema"},Heraldica.escudoEl(cas.id,{size:78})),
-        el("div",{class:"casa-card-meta"},el("span",{class:"casa-card-nom"},cas.nombre),el("span",{class:"casa-card-sub"},sub))));
+        el("div",{class:"casa-card-meta"},el("span",{class:"casa-card-nom"},cas.nombre),el("span",{class:"casa-card-sub"},sub)));
+      const acts=el("div",{class:"casa-acts"},
+        el("button",{type:"button",class:"btn sm",onclick:()=>inp.click()},tienePropio?"Cambiar escudo":"Subir escudo"));
+      if(ESCUDOS_LOCAL[cas.id]||(OWNER&&ESCUDOS_IMG[cas.id])){
+        acts.append(el("button",{type:"button",class:"btn sm danger",onclick:()=>quitarEscudoCasa(cas.id)},"Quitar"));
+      }
+      grid.append(el("div",{class:"casa-card"},openBtn,inp,acts));
     });
     wrap.append(el("div",{class:"rama"},el("h3",{},(Heraldica.CATEGORIAS[cat]||cat)+" ",el("span",{class:"note"},items.length+" casas")),grid));
   });
@@ -213,15 +260,24 @@ function openFichaCasa(cid,reset=false){
     const chars=esPartida()?(LIBRO||[]).filter(caraConocida):(LIBRO||[]);
     const subCat=Heraldica.CATEGORIAS[cas.categoria]||cas.categoria||"Casa";
     const metaTop=subCat+(cas.rama_de?" · "+Heraldica.ramaNombre(cas.rama_de):"");
+    const estEf=Heraldica.estadoEfectivo(cas);
     const dl=el("dl",{});
     if(cas.blason)dlPair(dl,"Blasonamiento",el("p",{class:"casa-blason"},cas.blason));
-    dlPair(dl,"Estado del escudo",Heraldica.ESTADOS[cas.escudo_estado]||cas.escudo_estado||"");
+    dlPair(dl,"Estado del escudo",Heraldica.ESTADOS[estEf]||estEf||"");
     if(cas.escudo_estado==="plebeya_generico"&&cas.plebeya_diseno){
       const PAT_LAB={partido_horizontal:"partido horizontal",partido_vertical:"partido vertical",grid_2x2:"grid 2×2",rayas_horizontales:"rayas horizontales",rayas_verticales:"rayas verticales",moteado:"moteado",grid_2x2_tricolor:"grid 2×2 (dos oscuros)",tres_bandas:"tres bandas"};
       dlPair(dl,"Diseño",PAT_LAB[cas.plebeya_diseno.patron]||cas.plebeya_diseno.patron.replace(/_/g," "));
       if(cas.plebeya_diseno.lectura)dlPair(dl,"Lectura del emblema",cas.plebeya_diseno.lectura);
     }
     dlPair(dl,"Fuente",cas.fuente);
+
+    const fichaMsg=el("div",{class:"status","aria-live":"polite"});
+    if(ESCUDOS_LOCAL[cas.id]&&!(OWNER&&ESCUDOS_IMG[cas.id])){
+      fichaMsg.textContent="Vista previa local (sin llave activa: se perderá al recargar).";
+    }
+    const tienePropio=Heraldica.tieneEscudoPropio(cas.id);
+    const inp=el("input",{type:"file",accept:".svg,.png,image/svg+xml,image/png",hidden:""});
+    inp.onchange=e=>{const file=e.target.files[0];e.target.value="";if(file)subirEscudoCasa(cas.id,file,fichaMsg)};
 
     f.append(
       fichaNavBar(),
@@ -230,7 +286,11 @@ function openFichaCasa(cid,reset=false){
         el("div",{},el("h2",{},cas.nombre),
           el("div",{class:"row"},
             typeof confBadgeEl==="function"?confBadgeEl(cas.confianza):null,
-            !esPartida()?el("button",{type:"button",class:"btn sm",onclick:()=>{fichaCerrar();$("#f-casa").value=cas.id;setPerSubVista("per")}},"Filtrar en Personajes →"):null))),
+            !esPartida()?el("button",{type:"button",class:"btn sm",onclick:()=>{fichaCerrar();$("#f-casa").value=cas.id;setPerSubVista("per")}},"Filtrar en Personajes →"):null,
+            inp,
+            el("button",{type:"button",class:"btn sm",onclick:()=>inp.click()},tienePropio?"Cambiar escudo (SVG/PNG)":"Subir escudo (SVG/PNG)"),
+            (ESCUDOS_LOCAL[cas.id]||(OWNER&&ESCUDOS_IMG[cas.id]))?el("button",{type:"button",class:"btn sm danger",onclick:()=>quitarEscudoCasa(cas.id,fichaMsg)},"Quitar escudo propio"):null))),
+      fichaMsg,
       el("div",{class:"rule"}),
       dl
     );

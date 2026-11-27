@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="115" viewBox="0 0 100 115" role="img">
+<title>Chapitre cathédral de Nantes</title>
+<defs>
+<clipPath id="ecu"><path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/></clipPath>
+</defs>
+<g clip-path="url(#ecu)">
+<path fill="#18447a" d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/>
+<!-- Espada en banda (hoja de plata, guarnición de oro) -->
+<g transform="translate(50 54) rotate(-40)" stroke="#342c25" stroke-width="1.1" stroke-linejoin="round">
+  <polygon points="-3.8,18 -2.8,-32 0,-42 2.8,-32 3.8,18" fill="#f0ede4"/>
+  <line x1="0" y1="-34" x2="0" y2="18" stroke="#8a8f96" stroke-width="0.9"/>
+  <path d="M-12 18Q0 21 12 18V22Q0 24 -12 22Z" fill="#edbb52"/>
+  <rect x="-2.4" y="22" width="4.8" height="12" fill="#edbb52"/>
+  <circle cx="0" cy="37" r="4" fill="#edbb52"/>
+</g>
+<!-- Llave de oro en barra -->
+<g transform="translate(50 54) rotate(40)" fill="#edbb52" stroke="#342c25" stroke-width="1.1" stroke-linejoin="round">
+  <path d="M-3 -33H-13V-29H-8V-25H-13V-21H-3Z"/>
+  <rect x="-2.5" y="-37" width="5" height="60"/>
+  <rect x="-5" y="13" width="10" height="3.5" rx="1"/>
+  <path d="M0 22A9.5 9.5 0 1 0 0.1 22ZM0 26.5A5 5 0 1 1 -0.1 26.5Z" fill-rule="evenodd"/>
+</g>
+</g>
+<path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z" fill="none" stroke="#342c25" stroke-width="2"/>
+</svg>

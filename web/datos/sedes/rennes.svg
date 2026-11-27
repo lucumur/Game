@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="115" viewBox="0 0 100 115" role="img">
+<title>Chapitre cathédral Saint-Pierre de Rennes</title>
+<defs>
+<clipPath id="ecu"><path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/></clipPath>
+<g id="clef" fill="#f0ede4" stroke="#342c25" stroke-width="1.1" stroke-linejoin="round">
+  <path d="M2.5 -34H13V-29.5H7.5V-25.5H13V-21H2.5Z"/>
+  <rect x="-2.5" y="-38" width="5" height="61"/>
+  <rect x="-5" y="13" width="10" height="3.5" rx="1"/>
+  <path d="M0 22A9.5 9.5 0 1 0 0.1 22ZM0 26.5A5 5 0 1 1 -0.1 26.5Z" fill-rule="evenodd"/>
+</g>
+</defs>
+<g clip-path="url(#ecu)">
+<path fill="#18447a" d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/>
+<use xlink:href="#clef" transform="translate(50 54) rotate(40)"/>
+<use xlink:href="#clef" transform="translate(50 54) scale(-1 1) rotate(40)"/>
+</g>
+<path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z" fill="none" stroke="#342c25" stroke-width="2"/>
+</svg>

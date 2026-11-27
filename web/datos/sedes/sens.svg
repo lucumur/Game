@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="115" viewBox="0 0 100 115" role="img">
+<title>Archevêché de Sens</title>
+<defs>
+<clipPath id="ecu"><path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/></clipPath>
+<g id="molette">
+  <path fill="#edbb52" stroke="#342c25" stroke-width="1" stroke-linejoin="round" d="M0 -13L3 -4.5L11.3 -6.5L5.2 0L11.3 6.5L3 4.5L0 13L-3 4.5L-11.3 6.5L-5.2 0L-11.3 -6.5L-3 -4.5Z"/>
+  <circle cx="0" cy="0" r="2.7" fill="#18447a" stroke="#342c25" stroke-width="0.8"/>
+</g>
+</defs>
+<g clip-path="url(#ecu)">
+<path fill="#18447a" d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/>
+<path d="M-2 71L50 28L102 71V51L50 8L-2 51Z" fill="#f0ede4" stroke="#342c25" stroke-width="1.2" stroke-linejoin="round"/>
+<use xlink:href="#molette" transform="translate(23 22) scale(0.95)"/>
+<use xlink:href="#molette" transform="translate(77 22) scale(0.95)"/>
+<use xlink:href="#molette" transform="translate(50 79) scale(0.95)"/>
+</g>
+<path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z" fill="none" stroke="#342c25" stroke-width="2"/>
+</svg>

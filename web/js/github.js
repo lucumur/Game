@@ -28,18 +28,27 @@ const GH=(()=>{
       throw new Error("GitHub "+r.status)}}
   let cola=Promise.resolve(); const enCola=f=>(cola=cola.then(f,f));
   const avisar=(c,id,d)=>{try{window.ghCambio&&window.ghCambio(c,id,d)}catch(e){}};
+  const IMG_COLS={
+    retratos:"retrato ",
+    estancias:"imagen de estancia ",
+    simbolos:"símbolo ",
+    escudos:"escudo de casa ",
+    ducados:"escudo de ducado ",
+    sedes:"escudo de diócesis "
+  };
   function doc(path){const [col,id]=path.split("/");
     return {
       set:data=>enCola(async()=>{
-        if(col==="retratos"||col==="estancias"||col==="simbolos"){const ext=/^data:image\/png/.test(data.img)?"png":"jpg",f=id+"."+ext;
-          const lbl=col==="retratos"?"retrato ":col==="simbolos"?"símbolo ":"imagen de estancia ";
-          await escritor(RAIZ+col+"/"+f,data.img.split(",")[1],"Subir "+lbl+id);
-          await json(RAIZ+"indice.json",v=>{v[col]=(v[col]||[]).filter(x=>x.replace(/\.\w+$/,"")!==id);v[col].push(f);v[col].sort()},"Índice: "+col+"/"+f)}
+        if(IMG_COLS[col]){const ext=/^data:image\/svg\+xml/i.test(data.img)?"svg":/^data:image\/png/i.test(data.img)?"png":"jpg",f=id+"."+ext;
+          await escritor(RAIZ+col+"/"+f,data.img.split(",")[1],"Subir "+IMG_COLS[col]+id);
+          let prevF=null;
+          await json(RAIZ+"indice.json",v=>{prevF=(v[col]||[]).find(x=>x.replace(/\.\w+$/,"")===id);v[col]=(v[col]||[]).filter(x=>x.replace(/\.\w+$/,"")!==id);v[col].push(f);v[col].sort()},"Índice: "+col+"/"+f);
+          if(prevF&&prevF!==f)await borrar(RAIZ+col+"/"+prevF,"Limpiar "+col+"/"+prevF)}
         else if(col==="ocupantes")await json(RAIZ+"ocupantes.json",v=>{v[id]=data},"Ocupantes de "+id);
         else throw new Error("Colección no editable: "+col);
         avisar(col,id,data)}),
       delete:()=>enCola(async()=>{
-        if(col==="retratos"||col==="estancias"||col==="simbolos"){let f=null;
+        if(IMG_COLS[col]){let f=null;
           await json(RAIZ+"indice.json",v=>{f=(v[col]||[]).find(x=>x.replace(/\.\w+$/,"")===id);v[col]=(v[col]||[]).filter(x=>x!==f)},"Índice: quitar "+col+"/"+id);
           if(f)await borrar(RAIZ+col+"/"+f,"Quitar "+col+"/"+f)}
         else if(col==="ocupantes")await json(RAIZ+"ocupantes.json",v=>{delete v[id]},"Ocupantes: quitar "+id);

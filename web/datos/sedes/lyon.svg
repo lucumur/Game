@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="115" viewBox="0 0 100 115" role="img">
+<title>Chapitre primatial des chanoines-comtes de Lyon</title>
+<defs>
+<clipPath id="ecu"><path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/></clipPath>
+</defs>
+<g clip-path="url(#ecu)">
+<path fill="#ac2636" d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/>
+<!-- Grifo de plata a la diestra (izquierda), mirando hacia el centro -->
+<g fill="#f0ede4" stroke="#342c25" stroke-width="1.15" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M27 33C20 26 14 23 11 25C13 30 16 35 20 39C14 38 11 38 10 41C13 44 18 46 23 47C17 48 14 50 13 53C17 55 22 55 26 53Z"/>
+  <path d="M29 22L25 14L32 20L36 14L35 23C40 24 44 26 47 28L42 30L46 33L38 33C36 37 36 42 38 47L45 45L47 43L48 45L45 49L39 51L44 55L47 54L47 57L43 59L35 55C34 62 35 69 39 76L44 82L41 85L35 80L31 69L27 77L29 88L24 91L21 88L24 76C22 70 22 62 24 54C21 61 17 65 13 64C10 62 11 56 15 54C13 57 14 60 17 59C20 58 23 50 24 43C25 36 27 28 29 22Z"/>
+  <circle cx="35.5" cy="25.5" r="1" fill="#342c25" stroke="none"/>
+</g>
+<!-- León de oro a la siniestra (derecha), afrontado mirando hacia la izquierda -->
+<g fill="#edbb52" stroke="#342c25" stroke-width="1.15" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M71 21C68 18 63 18 60 21C58 23 57 25 53 26L57 28L54 31L60 32C62 36 62 41 60 46L54 44L52 42L51 45L54 49L60 50L55 55L52 54L52 57L56 59L64 55C65 62 64 69 60 76L55 82L58 85L64 80L68 69L72 77L70 88L75 91L78 88L75 76C77 68 77 59 75 50C79 58 83 64 87 60C90 56 89 45 84 39C81 36 83 30 87 30C84 26 80 28 79 34C78 39 83 44 84 49C85 53 84 56 82 55C78 52 76 44 75 36C74 28 73 23 71 21Z"/>
+  <path d="M68 23C73 24 75 29 73 36C71 31 69 27 67 24" fill="none" stroke="#342c25" stroke-width="1"/>
+  <circle cx="62.5" cy="24.5" r="1" fill="#342c25" stroke="none"/>
+</g>
+</g>
+<path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z" fill="none" stroke="#342c25" stroke-width="2"/>
+</svg>

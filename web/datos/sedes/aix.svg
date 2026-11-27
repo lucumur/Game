@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="115" viewBox="0 0 100 115" role="img">
+<title>Chapitre Saint-Sauveur d'Aix-en-Provence</title>
+<defs>
+<clipPath id="ecu"><path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/></clipPath>
+</defs>
+<g clip-path="url(#ecu)">
+<path fill="#ac2636" d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/>
+<!-- Larga cruz de oro con banderín de plata y crucecita de gules -->
+<g stroke="#342c25" stroke-width="1" stroke-linejoin="round">
+  <path d="M40 72L68 18" stroke="#edbb52" stroke-width="2.8" stroke-linecap="round"/>
+  <path d="M63 16L73 20M69 13L67 23" stroke="#edbb52" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M62 28L28 21L33 30L26 38L57 38Z" fill="#f0ede4"/>
+  <path d="M43 25V34M38.5 29.5H47.5" stroke="#ac2636" stroke-width="2.2"/>
+</g>
+<!-- Cordero pascual de plata con gloria de oro -->
+<g fill="#f0ede4" stroke="#342c25" stroke-width="1.15" stroke-linejoin="round">
+  <circle cx="59" cy="49" r="9.5" fill="none" stroke="#edbb52" stroke-width="2.6"/>
+  <path d="M35 61C31 61 28 65 29 70C27 72 28 76 32 76L29 88H34L38 77H54L58 88H63L60 76C65 76 68 72 67 66C66 61 61 59 56 60C50 58 41 58 35 61Z"/>
+  <path d="M46 67L40 58L45 55L50 64" fill="#f0ede4"/>
+  <path d="M55 45C58 42 64 43 67 46L71 48L68 52L61 53C57 54 53 50 55 45Z"/>
+  <circle cx="64" cy="47" r="1" fill="#342c25" stroke="none"/>
+</g>
+</g>
+<path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z" fill="none" stroke="#342c25" stroke-width="2"/>
+</svg>

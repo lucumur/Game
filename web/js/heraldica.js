@@ -23,6 +23,7 @@
     plebeya: "Casa plebeya",
   };
   const ESTADO_NOMBRES = {
+    escudo_propio: "Escudo propio (subido)",
     wikimedia_local: "Escudo histórico (Wikimedia)",
     wikimedia_pendiente: "Armas históricas (pendiente H2)",
     blason_manual: "Blasón documentado (dibujo pendiente H2)",
@@ -66,6 +67,7 @@
   let casas = [];
   let byId = Object.create(null);
   let escudos = Object.create(null);
+  let escudosPropios = Object.create(null);
   let uid = 0;
 
   const safeHex = (v, fb) => /^#[0-9a-fA-F]{6}$/.test(String(v || "")) ? v : fb;
@@ -294,6 +296,88 @@
     escudos = filesObj && typeof filesObj === "object" ? filesObj : Object.create(null);
   }
 
+  function setEscudosPropios(filesObj) {
+    escudosPropios = Object.create(null);
+    if (filesObj && typeof filesObj === "object") {
+      for (const [k, v] of Object.entries(filesObj)) {
+        if (v) escudosPropios[k] = v;
+      }
+    }
+  }
+
+  function setEscudoPropio(id, src) {
+    if (!id) return;
+    if (src) escudosPropios[id] = src;
+    else delete escudosPropios[id];
+  }
+
+  function tieneEscudoPropio(id) {
+    return Boolean(id && escudosPropios[id]);
+  }
+
+  function estadoEfectivo(casa) {
+    if (!casa) return "";
+    return tieneEscudoPropio(casa.id) ? "escudo_propio" : (casa.escudo_estado || "");
+  }
+
+  function bytesToBase64(bytes) {
+    let bin = "";
+    for (let i = 0; i < bytes.length; i += 0x8000) {
+      bin += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
+    }
+    return btoa(bin);
+  }
+
+  async function procesarArchivo(file) {
+    if (!file) throw new Error("No se seleccionó ningún archivo.");
+    const name = file.name || "";
+    const isSvg = file.type === "image/svg+xml" || /\.svg$/i.test(name);
+    const isPng = file.type === "image/png" || /\.png$/i.test(name);
+    if (!isSvg && !isPng) {
+      throw new Error("Solo se admiten archivos SVG o PNG.");
+    }
+    if (isSvg) {
+      if (file.size > 2 * 1024 * 1024) {
+        throw new Error("El SVG pesa demasiado (máximo 2 MB).");
+      }
+      const txt = await file.text();
+      const doc = new DOMParser().parseFromString(txt, "image/svg+xml");
+      if (doc.querySelector("parsererror") || !doc.documentElement || doc.documentElement.tagName.toLowerCase() !== "svg") {
+        throw new Error("El archivo SVG no es válido.");
+      }
+      const bytes = new TextEncoder().encode(txt);
+      return "data:image/svg+xml;base64," + bytesToBase64(bytes);
+    }
+    if (file.size > 10 * 1024 * 1024) {
+      throw new Error("El PNG pesa demasiado (máximo 10 MB).");
+    }
+    return new Promise((ok, ko) => {
+      const u = URL.createObjectURL(file);
+      const im = new Image();
+      im.onload = () => {
+        try {
+          const nw = im.naturalWidth || 1, nh = im.naturalHeight || 1;
+          const m = Math.max(nw, nh), scale = m > 512 ? 512 / m : 1;
+          const tw = Math.max(1, Math.round(nw * scale)), th = Math.max(1, Math.round(nh * scale));
+          const c = document.createElement("canvas");
+          c.width = tw;
+          c.height = th;
+          c.getContext("2d").drawImage(im, 0, 0, tw, th);
+          URL.revokeObjectURL(u);
+          ok(c.toDataURL("image/png"));
+        } catch (err) {
+          URL.revokeObjectURL(u);
+          ko(err);
+        }
+      };
+      im.onerror = () => {
+        URL.revokeObjectURL(u);
+        ko(new Error("No se pudo leer la imagen PNG."));
+      };
+      im.src = u;
+    });
+  }
+
   function get(id) {
     return (id && byId[id]) || null;
   }
@@ -409,10 +493,18 @@
       return wrap;
     }
 
-    const estadoNom = ESTADO_NOMBRES[casa.escudo_estado] || "";
+    const estEf = estadoEfectivo(casa);
+    const estadoNom = ESTADO_NOMBRES[estEf] || "";
     wrap.title = (o.rol ? o.rol + ": " : "") + casa.nombre + (estadoNom ? " · " + estadoNom : "");
 
-    if (casa.escudo_estado === "wikimedia_local" && casa.escudo_ref && escudos[casa.escudo_ref]) {
+    if (escudosPropios[casaId]) {
+      const img = new Image();
+      img.className = "esc-img";
+      img.src = escudosPropios[casaId];
+      img.alt = "Escudo de " + casa.nombre;
+      img.loading = "lazy";
+      wrap.append(img);
+    } else if (casa.escudo_estado === "wikimedia_local" && casa.escudo_ref && escudos[casa.escudo_ref]) {
       const img = new Image();
       img.className = "esc-img";
       img.src = escudos[casa.escudo_ref];
@@ -475,6 +567,11 @@
     generarPlebeyoUnico,
     setCasas,
     setEscudos,
+    setEscudosPropios,
+    setEscudoPropio,
+    tieneEscudoPropio,
+    estadoEfectivo,
+    procesarArchivo,
     get,
     all,
     nombre,

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="115" viewBox="0 0 100 115" role="img">
+<title>Chapitre Saint-Trophime d'Arles</title>
+<defs>
+<clipPath id="ecu"><path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/></clipPath>
+</defs>
+<g clip-path="url(#ecu)">
+<path fill="#edbb52" d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/>
+<!-- Águila de sable al vuelo bajado -->
+<g fill="#22201e" stroke="#111" stroke-width="1" stroke-linejoin="round">
+  <path d="M50 22C46 22 43 25 43 29C40 30 38 29 36 31C39 33 41 33 44 33C45 36 44 39 42 42C33 34 21 36 16 46C13 53 14 64 16 74L21 63L23 75L28 63L30 73L35 61L40 69C41 74 42 78 42 82L36 93L44 90L47 99L50 104L53 99L56 90L64 93L58 82C58 78 59 74 60 69L65 61L70 73L72 63L77 75L79 63L84 74C86 64 87 53 84 46C79 36 67 34 58 42C56 39 55 36 56 33C58 32 59 29 57 25C55 23 53 22 50 22Z"/>
+  <path d="M40 72L33 83M36 78L39 85M60 72L67 83M64 78L61 85" fill="none" stroke="#22201e" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="47.5" cy="27" r="1.1" fill="#edbb52" stroke="none"/>
+</g>
+<!-- Corona de gules -->
+<path d="M40 23L38 14L44 18L50 12L56 18L62 14L60 23Z" fill="#ac2636" stroke="#342c25" stroke-width="1" stroke-linejoin="round"/>
+</g>
+<path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z" fill="none" stroke="#342c25" stroke-width="2"/>
+</svg>
