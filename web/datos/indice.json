@@ -100,7 +100,9 @@
   "salon-letras.png",
   "versalles.png"
  ],
- "escudos": [],
+ "escudos": [
+  "la-motte-houdancourt.svg"
+ ],
  "ducados": [],
  "sedes": []
 }
