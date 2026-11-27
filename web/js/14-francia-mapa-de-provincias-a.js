@@ -1070,10 +1070,12 @@ const ARMAS_SEDES = {
     "fuente": "https://fr.wikipedia.org/wiki/Chapitre_de_Lyon"
   },
   "dioc-besancon": {
-    "denominacion": "Armas históricas de la ciudad y sede imperial de Besanzón",
-    "blason": "De oro, un águila de sable sosteniendo en sus garras dos columnas de gules brochant sobre las alas. Registrado para Besanzón en el Armorial général de France (vol. VII, 1696) y asociado a la dignidad de príncipe del Sacro Imperio de su arzobispado.",
-    "conf": "m",
-    "fuente": "https://armorialdefrance.fr/page_blason.php?ville=1617"
+    "denominacion": "Armas del Arzobispado y Cabildo metropolitano de Besanzón",
+    "blason": "De azur, un antebrazo relicario de oro con la mano bendiciendo sobre un pedestal escalonado de lo mismo (San Esteban), adiestrado de un águila azorante contornada de oro sosteniendo una filacteria de plata con la inscripción SANCTUS IOANNES en letras de sable (San Juan). Recreación fiel del diseño de Wikimedia Commons basado en René Surugue (1931).",
+    "conf": "a",
+    "fuente": "https://commons.wikimedia.org/wiki/File:Blason-dioc%C3%A8se-Besan%C3%A7on.svg",
+    "autor": "Barsupilami1512 (recreación vectorial)",
+    "licencia": "https://creativecommons.org/licenses/by-sa/3.0/"
   },
   "dioc-auch": {
     "denominacion": "Cuartel arzobispal de las armas históricas de Auch",

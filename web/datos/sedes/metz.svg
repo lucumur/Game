@@ -1,33 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="115" viewBox="0 0 100 115" role="img">
-<title>Principauté épiscopale et diocèse de Metz</title>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="230" viewBox="0 0 200 230" role="img">
+<title>Blason de l'évêché et de la principauté épiscopale de Metz</title>
 <defs>
-<clipPath id="ecu"><path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/></clipPath>
-<g id="caillou-or">
-  <polygon points="-9,-3 -3,-9 5,-8 10,-1 8,7 -1,10 -9,5" fill="#edbb52" stroke="#342c25" stroke-width="1" stroke-linejoin="round"/>
-  <polygon points="-3,-9 5,-8 1,-1 -5,-1" fill="#fae29c" opacity="0.65"/>
-  <polygon points="10,-1 8,7 -1,10 1,-1 5,-8" fill="#c9952b"/>
-  <path d="M-9,-3L-5,-1L1,-1L5,-8M-5,-1L-1,10M1,-1L10,-1" fill="none" stroke="#5c4512" stroke-width="0.75"/>
+<radialGradient id="gules-grad" cx="42%" cy="35%" r="72%">
+  <stop offset="0%" stop-color="#da2e38"/>
+  <stop offset="100%" stop-color="#961922"/>
+</radialGradient>
+<clipPath id="ecu"><path d="M6 6H194V108Q194 186 100 224Q6 186 6 108Z"/></clipPath>
+<g id="caillou-or" stroke="#181818" stroke-width="1.35" stroke-linejoin="round">
+  <polygon points="-20,-6 -7,-20 11,-17 22,-3 16,15 -3,21 -19,11" fill="#edbb52"/>
+  <polygon points="-7,-20 11,-17 3,-3 -11,-2" fill="#fae696"/>
+  <polygon points="-20,-6 -7,-20 -11,-2 -19,11" fill="#f3cf68"/>
+  <polygon points="22,-3 16,15 -3,21 3,-3 11,-17" fill="#c79124"/>
+  <polygon points="-19,11 -11,-2 3,-3 -3,21" fill="#d9a638"/>
 </g>
 </defs>
 <g clip-path="url(#ecu)">
-<path fill="#ac2636" d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/>
-<!-- Dos piedras de oro -->
-<use xlink:href="#caillou-or" transform="translate(24 34)"/>
-<use xlink:href="#caillou-or" transform="translate(76 34) scale(-1 1)"/>
+<path fill="url(#gules-grad)" d="M6 6H194V108Q194 186 100 224Q6 186 6 108Z"/>
+
+<!-- Dos cailloux de oro -->
+<use xlink:href="#caillou-or" transform="translate(47 72)"/>
+<use xlink:href="#caillou-or" transform="translate(153 72) scale(-1 1)"/>
+
 <!-- Espada alta de plata con guarnición de oro -->
-<g stroke="#342c25" stroke-width="1.05" stroke-linejoin="round">
-  <polygon points="46,72 47,20 50,10 53,20 54,72" fill="#f0ede4"/>
-  <line x1="50" y1="18" x2="50" y2="72" stroke="#8a8f96" stroke-width="0.85"/>
-  <path d="M38 72Q50 75 62 72V76Q50 78 38 76Z" fill="#edbb52"/>
-  <rect x="47.8" y="76" width="4.4" height="12" fill="#edbb52"/>
-  <circle cx="50" cy="91" r="3.8" fill="#edbb52"/>
+<g stroke="#181818" stroke-width="1.35" stroke-linejoin="round">
+  <polygon points="92,148 94,40 100,20 106,40 108,148" fill="#ffffff"/>
+  <polygon points="100,20 106,40 108,148 100,148" fill="#d0d5dd"/>
+  <line x1="100" y1="36" x2="100" y2="148" stroke="#7c828d" stroke-width="1.2"/>
+  <!-- Empuñadura y pomo de oro -->
+  <rect x="94.5" y="152" width="11" height="24" fill="#edbb52"/>
+  <path d="M95 157H105M95 163H105M95 169H105" stroke="#855e14" stroke-width="1.1"/>
+  <polygon points="100,174 109,181 105,190 95,190 91,181" fill="#edbb52"/>
+  <polygon points="100,174 109,181 105,190 100,190" fill="#c79124"/>
+  <!-- Guarda curva de oro -->
+  <path d="M71 142C75 151 86 154 100 154C114 154 125 151 129 142C125 145 113 147 100 147C87 147 75 145 71 142Z" fill="#edbb52"/>
+  <circle cx="71" cy="142" r="3" fill="#edbb52"/>
+  <circle cx="129" cy="142" r="3" fill="#edbb52"/>
 </g>
+
 <!-- Dextróquero vestido de azur moviente de nube de plata -->
-<path d="M58 56C65 55 72 54 78 52V69C72 67 65 66 57 66Z" fill="#18447a" stroke="#342c25" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M57 55C59 55 60 67 57 67H54C55 63 55 59 54 55Z" fill="#f0ede4" stroke="#342c25" stroke-width="0.9"/>
-<path d="M55 56C51 55 46 55 44 58C43 60 44 65 46 66C49 67 53 66 55 65Z" fill="#f2ccb0" stroke="#342c25" stroke-width="1"/>
-<path d="M45 59H52M45 62H52M45 64.5H51" stroke="#8a5b44" stroke-width="0.8"/>
-<path d="M99 44C91 42 86 45 84 49C79 48 75 52 77 56C73 58 73 63 77 65C75 69 79 73 84 72C86 76 92 77 99 75Z" fill="#f0ede4" stroke="#342c25" stroke-width="1.1" stroke-linejoin="round"/>
+<g stroke="#181818" stroke-width="1.35" stroke-linejoin="round">
+  <!-- Manga de azur -->
+  <path d="M115 113C130 111 144 108 158 102V140C144 136 129 135 114 135Z" fill="#1e53c6"/>
+  <path d="M124 120L150 116M120 128L153 128" fill="none" stroke="#103282" stroke-width="1.5"/>
+  <!-- Puño blanco con ribete dorado -->
+  <path d="M113 111C118 111 119 137 113 137H106C109 128 109 119 106 111Z" fill="#f4f4f2"/>
+  <line x1="115" y1="112" x2="115" y2="136" stroke="#edbb52" stroke-width="2"/>
+  <!-- Mano de carnación empuñando la espada -->
+  <path d="M108 113C101 110 92 110 88 115C86 118 87 123 90 125C87 128 88 134 93 135C98 136 104 134 109 133Z" fill="#f3ccb0"/>
+  <path d="M89 117H103M89 122H103M89 127H103M91 131H103" fill="none" stroke="#9b6a4c" stroke-width="1.2"/>
+  <path d="M107 114C102 114 99 118 102 122C105 123 108 121 109 118" fill="#eac0a2"/>
+  <!-- Nube de plata moviente del flanco siniestro -->
+  <path d="M196 87C185 83 175 88 172 95C163 91 153 98 156 106C146 108 144 120 153 125C145 130 148 142 158 143C156 151 166 158 176 153C181 158 190 157 196 152Z" fill="#f4f4f2"/>
+  <path d="M174 96C167 99 167 107 173 110M161 115C157 120 159 128 166 130M176 133C170 138 172 146 179 147" fill="none" stroke="#9ea6b2" stroke-width="1.35"/>
 </g>
-<path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z" fill="none" stroke="#342c25" stroke-width="2"/>
+</g>
+<path d="M6 6H194V108Q194 186 100 224Q6 186 6 108Z" fill="none" stroke="#181818" stroke-width="3"/>
 </svg>

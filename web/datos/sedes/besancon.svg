@@ -1,29 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100" height="115" viewBox="0 0 100 115" role="img">
-<title>Archevêché et cité impériale de Besançon</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="230" viewBox="0 0 200 230" role="img">
+<title>Blason de l'archevêché et du chapitre métropolitain de Besançon</title>
 <defs>
-<clipPath id="ecu"><path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/></clipPath>
+<radialGradient id="azur-grad" cx="42%" cy="35%" r="72%">
+  <stop offset="0%" stop-color="#3c73f2"/>
+  <stop offset="100%" stop-color="#1942b8"/>
+</radialGradient>
+<clipPath id="ecu"><path d="M6 6H194V108Q194 186 100 224Q6 186 6 108Z"/></clipPath>
 </defs>
 <g clip-path="url(#ecu)">
-<path fill="#edbb52" d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z"/>
-<!-- Águila desplegada de sable -->
-<g fill="#22201e" stroke="#111" stroke-width="0.9" stroke-linejoin="round">
-  <!-- Cabeza, cuello y cuerpo -->
-  <path d="M50 14C46 14 43 17 43 21C41 22 39 21 37 22C39 24 41 25 44 25C45 31 44 37 42 42C36 33 25 25 13 24C11 29 14 35 18 39C14 38 11 40 12 44C15 47 20 48 25 48C19 50 16 52 17 56C22 57 27 56 32 54C27 57 25 60 27 63C32 63 36 60 40 57C42 64 43 70 43 76L36 88L43 85L46 95L50 100L54 95L57 85L64 88L57 76C57 70 58 64 60 57C64 60 68 63 73 63C75 60 73 57 68 54C73 56 78 57 83 56C84 52 81 50 75 48C80 48 85 47 88 44C89 40 86 38 82 39C86 35 89 29 87 24C75 25 64 33 58 42C56 37 55 31 56 25C58 25 60 22 57 18C55 15 53 14 50 14Z"/>
-  <!-- Garras -->
-  <path d="M41 68L30 75L26 73M30 75L27 79M30 75L32 80" fill="none" stroke="#22201e" stroke-width="2" stroke-linecap="round"/>
-  <path d="M59 68L70 75L74 73M70 75L73 79M70 75L68 80" fill="none" stroke="#22201e" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="47.5" cy="19.5" r="1.2" fill="#edbb52" stroke="none"/>
-  <path d="M39 23.5L43 23" stroke="#ac2636" stroke-width="1.3"/>
+<path fill="url(#azur-grad)" d="M6 6H194V108Q194 186 100 224Q6 186 6 108Z"/>
+
+<!-- Águila de San Juan (contornada, de oro, con filacteria de plata) -->
+<g id="aigle-saint-jean" stroke="#141414" stroke-width="1.35" stroke-linejoin="round" stroke-linecap="round">
+  <!-- Cola en abanico -->
+  <path d="M44 134L22 162L29 166L47 141L36 167L43 169L54 143L48 168L55 168L63 142Z" fill="#e6cf3a"/>
+  <!-- Cuerpo, cuello y cabeza mirando a la diestra del observador -->
+  <path d="M56 64C62 56 69 49 69 43C66 43 65 40 68 38C64 38 64 34 70 33C75 30 84 29 90 33C95 36 96 39 95 40C91 39 87 39 84 41C89 41 93 43 95 45C91 46 86 45 81 44C82 47 84 52 80 56L84 58L77 61L82 65L75 68L82 74L77 77L86 83L80 86L88 94L84 98C88 106 87 118 80 128L66 138L52 135Z" fill="#f6e34f"/>
+  <!-- Lengua y ojo -->
+  <path d="M84 42C89 42 93 40 96 38" fill="none" stroke="#141414" stroke-width="1.2"/>
+  <path d="M77 35C79 34 81 35 81 36.5C79 37 77 36.5 77 35Z" fill="#141414" stroke="none"/>
+  <!-- Plumas del cuello y pecho -->
+  <path d="M72 48L67 52M75 54L69 58M74 62L69 66M76 70L71 74M77 79L72 83" fill="none" stroke="#141414" stroke-width="1.1"/>
+  <!-- Pata y garra delantera apoyada en la filacteria -->
+  <path d="M76 105L93 105L98 109M93 105L95 113M86 112L91 118" fill="none" stroke="#141414" stroke-width="1.6"/>
+  <!-- Ala derecha alzada con hileras de plumas -->
+  <path d="M40 34C32 46 28 72 30 100C32 122 36 138 42 148L46 112L49 144L54 108L57 139L62 104L66 134L72 95C71 74 63 50 48 34C45 31 42 31 40 34Z" fill="#f6e34f"/>
+  <path d="M44 37C39 48 36 68 37 92M49 42C45 55 43 76 44 98M55 49C52 63 51 82 52 101" fill="none" stroke="#141414" stroke-width="1.1"/>
+  <path d="M36 68C42 74 52 76 62 72M34 86C42 92 54 93 66 88M34 103C42 108 54 109 67 104" fill="none" stroke="#141414" stroke-width="1.1"/>
+  <!-- Garra trasera agarrando el rollo inferior -->
+  <path d="M44 152L39 159L45 161M45 155L49 162" fill="none" stroke="#141414" stroke-width="1.5"/>
 </g>
-<!-- Dos columnas de gules sostenidas por las garras sobre las alas -->
-<g fill="#ac2636" stroke="#342c25" stroke-width="1" stroke-linejoin="round">
-  <rect x="23" y="34" width="11" height="4" rx="0.6"/>
-  <rect x="25" y="38" width="7" height="39"/>
-  <rect x="23" y="77" width="11" height="4" rx="0.6"/>
-  <rect x="66" y="34" width="11" height="4" rx="0.6"/>
-  <rect x="68" y="38" width="7" height="39"/>
-  <rect x="66" y="77" width="11" height="4" rx="0.6"/>
+
+<!-- Filacteria de plata con SANCTUS IOANNES -->
+<g id="phylactere">
+  <path d="M43 176C41 171 45 166 51 168L54 171L103 100L100 96C98 92 103 87 108 90C114 93 118 99 113 105L64 176C66 181 62 187 55 186C49 185 45 181 43 176Z" fill="#f2f2ef" stroke="#141414" stroke-width="1.35" stroke-linejoin="round"/>
+  <path d="M48 175C50 172 54 173 54 177C54 180 51 182 48 180" fill="#d8dadf" stroke="#141414" stroke-width="1.1"/>
+  <path d="M107 95C109 93 113 95 112 98C111 101 108 101 106 99" fill="#d8dadf" stroke="#141414" stroke-width="1.1"/>
+  <text x="0" y="0" transform="translate(57 177) rotate(-55.5)" font-family="Georgia, 'Times New Roman', serif" font-size="9.4" font-weight="700" letter-spacing="0.4" fill="#141414">SANCTUS IOANNES</text>
+</g>
+
+<!-- Antebrazo relicario de San Esteban sobre pedestal escalonado (de oro) -->
+<g id="bras-saint-etienne" stroke="#141414" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round">
+  <!-- Pedestal -->
+  <polygon points="111,192 175,192 178,197 108,197" fill="#e6cf3a"/>
+  <polygon points="116,187 170,187 174,192 112,192" fill="#f6e34f"/>
+  <rect x="120" y="160" width="46" height="27" fill="#f6e34f"/>
+  <rect x="126" y="165" width="34" height="17" fill="#e6cf3a"/>
+  <polygon points="113,154 173,154 167,160 119,160" fill="#f6e34f"/>
+  <!-- Manga vertical del relicario -->
+  <path d="M124 94H160L162 154H122Z" fill="#f6e34f"/>
+  <path d="M124 118L134 121M160 135L148 139M123 142L136 146" fill="none" stroke="#141414" stroke-width="1.15"/>
+  <!-- Cenefa ornamentada del puño -->
+  <rect x="123" y="94" width="38" height="11" fill="#e6cf3a"/>
+  <path d="M124 99.5L129 94.5L135 104.5L142 94.5L149 104.5L155 94.5L160 99.5L155 104.5L149 94.5L142 104.5L135 94.5L129 104.5Z" fill="none" stroke="#141414" stroke-width="1"/>
+  <circle cx="132" cy="99.5" r="2.2" fill="none" stroke="#141414" stroke-width="0.95"/>
+  <circle cx="142" cy="99.5" r="2.2" fill="none" stroke="#141414" stroke-width="0.95"/>
+  <circle cx="152" cy="99.5" r="2.2" fill="none" stroke="#141414" stroke-width="0.95"/>
+  <!-- Muñeca y mano derecha bendiciendo -->
+  <path d="M130 94V82C123 78 119 71 119 63C119 56 125 53 130 56V32C130 27 137 27 137 32V52C138 27 146 27 146 32V56C149 56 151 58 151 62L157 52C160 47 166 50 163 56L154 75C153 81 151 86 150 94Z" fill="#f6e34f"/>
+  <!-- Dedos doblados y pliegues de la palma -->
+  <path d="M125 56C128 56 130 59 130 64C130 68 127 70 124 68C121 66 121 58 125 56Z" fill="#e6cf3a"/>
+  <path d="M131 58C134 58 136 61 136 66C136 70 133 72 130 70C128 68 128 60 131 58Z" fill="#e6cf3a"/>
+  <path d="M137 33V56M130 42H136M139 42H145M130 49H136M139 49H145M128 76C134 74 142 75 147 78M133 84C138 82 144 83 148 85" fill="none" stroke="#141414" stroke-width="1.1"/>
 </g>
 </g>
-<path d="M3 3H97V54Q97 93 50 112Q3 93 3 54Z" fill="none" stroke="#342c25" stroke-width="2"/>
+<path d="M6 6H194V108Q194 186 100 224Q6 186 6 108Z" fill="none" stroke="#181818" stroke-width="3"/>
 </svg>
